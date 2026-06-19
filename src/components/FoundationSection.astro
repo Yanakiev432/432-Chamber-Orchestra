@@ -1,0 +1,26 @@
+---
+import Section from "./Section.astro";
+import type { Language, siteContent } from "../content/siteContent";
+import { foundationData } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg.foundation;
+const { section, lang } = Astro.props as { section: Copy; lang: Language };
+const legal = foundationData[lang];
+---
+
+<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.subheading} tone="dark">
+  <div class="space-y-6 text-lg leading-9 text-ivory/80">
+    {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+  <ul class="mt-10 grid gap-3 sm:grid-cols-2">
+    {section.responsibilities.map((item) => (
+      <li class="border border-ivory/20 p-5 font-serif text-xl text-ivory">{item}</li>
+    ))}
+  </ul>
+  <dl class="mt-10 grid gap-4 border-t border-ivory/20 pt-8 text-sm text-ivory/80 sm:grid-cols-2">
+    <div><dt class="text-gold">{lang === "bg" ? "Правна форма" : "Legal form"}</dt><dd>{legal.legalForm}</dd></div>
+    <div><dt class="text-gold">{lang === "bg" ? "Статут" : "Status"}</dt><dd>{legal.status}</dd></div>
+    <div><dt class="text-gold">{legal.eikLabel}</dt><dd>{legal.eik}</dd></div>
+    <div><dt class="text-gold">{lang === "bg" ? "Година на регистрация" : "Registration year"}</dt><dd>{legal.registrationYear}</dd></div>
+  </dl>
+</Section>

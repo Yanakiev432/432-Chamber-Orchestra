@@ -1,0 +1,36 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import type { Language, siteContent } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg;
+
+type Props = {
+  content: Copy;
+  lang: Language;
+};
+
+const { content, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={content.htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{content.meta.title}</title>
+    <meta name="description" content={content.meta.description} />
+    <link rel="canonical" href={lang === "bg" ? "/bg/" : "/en/"} />
+    <link rel="alternate" hreflang="bg" href="/bg/" />
+    <link rel="alternate" hreflang="en" href="/en/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <Header lang={lang} nav={content.nav} alternateLang={content.alternateLang} alternateHref={content.alternateHref} />
+    <main>
+      <slot />
+    </main>
+    <Footer footer={content.footer} />
+  </body>
+</html>

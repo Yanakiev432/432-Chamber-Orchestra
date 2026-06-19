@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f5f0e6;
+  color: #11100e;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(90deg, rgba(17, 16, 14, 0.035) 1px, transparent 1px) 0 0 / 72px 72px,
+    #f5f0e6;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid #a9833f;
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #5b1f2b;
+  color: #f5f0e6;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}

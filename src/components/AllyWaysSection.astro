@@ -1,0 +1,20 @@
+---
+import Section from "./Section.astro";
+import CTAButton from "./CTAButton.astro";
+import type { siteContent } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg.allyWays;
+const { section } = Astro.props as { section: Copy };
+---
+
+<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.intro} tone="ruled">
+  <div class="grid gap-4 md:grid-cols-3">
+    {section.cards.map((card) => (
+      <article class="flex min-h-full flex-col border border-ink/15 bg-ivory p-6">
+        <h3 class="font-serif text-2xl">{card.title}</h3>
+        <p class="mt-5 flex-1 text-base leading-8 text-graphite">{card.description}</p>
+        {card.cta && card.href && <div class="mt-6"><CTAButton href={card.href} label={card.cta} variant="text" /></div>}
+      </article>
+    ))}
+  </div>
+</Section>

@@ -1,0 +1,39 @@
+---
+import Hero from "./Hero.astro";
+import Section from "./Section.astro";
+import VisionSection from "./VisionSection.astro";
+import MissionSection from "./MissionSection.astro";
+import ListeningCommunitySection from "./ListeningCommunitySection.astro";
+import FoundationSection from "./FoundationSection.astro";
+import CampaignSection from "./CampaignSection.astro";
+import AllyWaysSection from "./AllyWaysSection.astro";
+import ArtisticIdentitySection from "./ArtisticIdentitySection.astro";
+import ProgramsSection from "./ProgramsSection.astro";
+import ArchiveSection from "./ArchiveSection.astro";
+import SupportSection from "./SupportSection.astro";
+import ContactSection from "./ContactSection.astro";
+import type { Language, siteContent } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg;
+const { content, lang } = Astro.props as { content: Copy; lang: Language };
+---
+
+<Hero hero={content.hero} />
+
+<Section id={content.core.id} eyebrow={content.core.eyebrow} heading={content.core.heading}>
+  <div class="space-y-6 text-lg leading-9 text-graphite">
+    {content.core.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+</Section>
+
+<VisionSection section={content.vision} />
+<MissionSection section={content.mission} />
+<ListeningCommunitySection section={content.listening} />
+<FoundationSection section={content.foundation} lang={lang} />
+<CampaignSection section={content.campaign} />
+<AllyWaysSection section={content.allyWays} />
+<ArtisticIdentitySection section={content.artisticIdentity} />
+<ProgramsSection section={content.programs} />
+<ArchiveSection section={content.archive} />
+<SupportSection section={content.support} lang={lang} />
+<ContactSection section={content.contact} />

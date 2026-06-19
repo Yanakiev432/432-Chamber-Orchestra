@@ -1,0 +1,18 @@
+---
+import Section from "./Section.astro";
+import type { siteContent } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg.programs;
+const { section } = Astro.props as { section: Copy };
+---
+
+<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.intro}>
+  <div class="grid gap-4 sm:grid-cols-2">
+    {section.cards.map((card) => (
+      <article class="border-l-2 border-gold bg-warm/25 p-6">
+        <h3 class="font-serif text-2xl">{card.title}</h3>
+        <p class="mt-4 text-base leading-8 text-graphite">{card.description}</p>
+      </article>
+    ))}
+  </div>
+</Section>
