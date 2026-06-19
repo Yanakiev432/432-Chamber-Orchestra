@@ -1,4 +1,4 @@
-export type Language = "bg" | "en";
+﻿export type Language = "bg" | "en";
 
 type NavItem = {
   label: string;
@@ -171,9 +171,9 @@ export const siteContent: Record<Language, SiteCopy> = {
     alternateLang: "en",
     alternateHref: "/en/",
     meta: {
-      title: "432 Chamber Orchestra · Независим струнен оркестър в София",
+      title: "432 Chamber Orchestra · Независим струнен оркестър · София",
       description:
-        "432 Chamber Orchestra е независим струнен оркестър в София, който изгражда слушателска общност около класически репертоар, нови струнни преображения, записи, архив и отчетен патронат."
+        "432 Chamber Orchestra е независим струнен оркестър с основа в София, който изгражда слушателска общност около класически струнен репертоар, вокални и хорови преображения, сакрална и модална памет, съвременни поръчки, записи, архив и публична документация."
     },
     nav: [
       { label: "Оркестър", href: sharedAnchors.orchestra },
@@ -211,7 +211,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Визия",
       heading: "Устойчива независима струнна платформа",
       paragraphs: [
-        "432 Chamber Orchestra съществува, за да изгради устойчива независима струнно-оркестрова платформа в България.",
+        "432 Chamber Orchestra съществува, за да изгради устойчива независима струнно-оркестрова платформа със седалище в София.",
         "Оркестърът създава съсредоточено пространство за слушане: пространство, в което струнният оркестър не е фон или украса, а живо артистично тяло, способно да носи памет, форма, тишина, напрежение, красота и духовна дълбочина.",
         "Дългосрочната визия е да се изпълнява стандартният струнен репертоар, да се създават нови струнни версии на вокални и хорови произведения, да се поръчва нова музика и работата да се документира чрез записи, партитури и публичен архив — извън логиката на случайните проекти и институционалната зависимост."
       ]
@@ -227,7 +227,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       ],
       directions: [
         "Класически струнно-оркестров репертоар",
-        "Българска и европейска музикална памет",
+        "Музикална памет и пренебрегван репертоар",
         "Хорови и вокални преображения",
         "Източното песнопение като артистична линия",
         "Нова музика и млади автори",
@@ -411,9 +411,9 @@ export const siteContent: Record<Language, SiteCopy> = {
     alternateLang: "bg",
     alternateHref: "/bg/",
     meta: {
-      title: "432 Chamber Orchestra · Independent String Orchestra in Sofia",
+      title: "432 Chamber Orchestra · Independent String Orchestra · Sofia",
       description:
-        "432 Chamber Orchestra is an independent string orchestra in Sofia building a listening community around classical repertoire, new string transformations, recordings, archive, and accountable patronage."
+        "432 Chamber Orchestra is an independent string orchestra based in Sofia, building a listening community around classical string repertoire, vocal and choral transfigurations, sacred and modal memory, contemporary commissions, recordings, archive, and public documentation."
     },
     nav: [
       { label: "Orchestra", href: sharedAnchors.orchestra },
@@ -451,7 +451,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Vision",
       heading: "A sustainable independent string platform",
       paragraphs: [
-        "432 Chamber Orchestra exists to build a sustainable independent string-orchestra platform in Bulgaria.",
+        "432 Chamber Orchestra exists to build a sustainable independent string-orchestra platform based in Sofia.",
         "The orchestra creates a focused space for listening: one in which the string orchestra is not treated as background or decoration, but as a living artistic body capable of carrying memory, form, silence, tension, beauty, and spiritual depth.",
         "The long-term vision is to perform the standard string repertoire, develop new string versions of vocal and choral works, commission new music, and document the work through recordings, scores, and public archive — outside the logic of occasional projects and institutional dependency."
       ]
@@ -467,7 +467,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       ],
       directions: [
         "Classical string-orchestra repertoire",
-        "Bulgarian and European musical memory",
+        "Musical memory and neglected repertoire",
         "Choral and vocal transfigurations",
         "Eastern chant as an artistic line",
         "New music and young authors",
