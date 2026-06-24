@@ -1,4 +1,4 @@
----
+﻿---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
@@ -9,9 +9,13 @@ type Copy = typeof siteContent.bg;
 type Props = {
   content: Copy;
   lang: Language;
+  canonicalHref?: string;
+  alternateHref?: string;
 };
 
-const { content, lang } = Astro.props;
+const { content, lang, canonicalHref, alternateHref } = Astro.props;
+const canonical = canonicalHref ?? (lang === "bg" ? "/bg/" : "/en/");
+const alternate = alternateHref ?? content.alternateHref;
 ---
 
 <!doctype html>
@@ -21,13 +25,13 @@ const { content, lang } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{content.meta.title}</title>
     <meta name="description" content={content.meta.description} />
-    <link rel="canonical" href={lang === "bg" ? "/bg/" : "/en/"} />
-    <link rel="alternate" hreflang="bg" href="/bg/" />
-    <link rel="alternate" hreflang="en" href="/en/" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="bg" href={lang === "bg" ? canonical : alternate} />
+    <link rel="alternate" hreflang="en" href={lang === "en" ? canonical : alternate} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <Header lang={lang} nav={content.nav} alternateLang={content.alternateLang} alternateHref={content.alternateHref} />
+    <Header lang={lang} nav={content.nav} alternateLang={content.alternateLang} alternateHref={alternate} />
     <main>
       <slot />
     </main>

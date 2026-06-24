@@ -1,0 +1,13 @@
+﻿---
+import type { Language, campaignLandingContent } from "../content/siteContent";
+
+type GoalCopy = (typeof campaignLandingContent)[Language]["goal"];
+const { goal } = Astro.props as { goal: GoalCopy };
+---
+
+<aside class="border border-gold/35 bg-ivory p-6 text-ink md:p-8" aria-labelledby="campaign-goal-heading">
+  <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-burgundy">Handraiser</p>
+  <h2 id="campaign-goal-heading" class="font-serif text-3xl leading-tight md:text-4xl">{goal.heading}</h2>
+  <p class="mt-5 text-lg leading-8 text-graphite">{goal.text}</p>
+  <p class="mt-6 border-t border-ink/10 pt-5 text-sm leading-6 text-graphite">{goal.counterNote}</p>
+</aside>

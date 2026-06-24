@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -16,9 +16,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    linear-gradient(90deg, rgba(17, 16, 14, 0.035) 1px, transparent 1px) 0 0 / 72px 72px,
-    #f5f0e6;
+  background: #f5f0e6;
 }
 
 a {

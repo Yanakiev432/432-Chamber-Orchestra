@@ -1,0 +1,16 @@
+﻿---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import CampaignLanding from "../../../components/CampaignLanding.astro";
+import { campaignLandingContent, siteContent } from "../../../content/siteContent";
+
+const campaign = campaignLandingContent.bg;
+const content = {
+  ...siteContent.bg,
+  meta: campaign.meta,
+  nav: siteContent.bg.nav.map((item) => ({ ...item, href: `/bg/${item.href}` }))
+};
+---
+
+<BaseLayout content={content} lang="bg" canonicalHref={campaign.canonicalHref} alternateHref={campaign.alternateHref}>
+  <CampaignLanding campaign={campaign} lang="bg" />
+</BaseLayout>

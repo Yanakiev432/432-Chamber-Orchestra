@@ -1,0 +1,10 @@
+﻿---
+import ListeningCircleForm from "./forms/ListeningCircleForm.astro";
+import type { Language, campaignLandingContent } from "../content/siteContent";
+
+type FormCopy = (typeof campaignLandingContent)[Language]["form"];
+const { form, lang } = Astro.props as { form: FormCopy; lang: Language };
+const source = lang === "bg" ? "first_sound_bg" : "first_sound_en";
+---
+
+<ListeningCircleForm lang={lang} source={source} heading={form.heading} />

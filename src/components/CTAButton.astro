@@ -1,4 +1,4 @@
----
+﻿---
 type Props = {
   href: string;
   variant?: "primary" | "secondary" | "text";
@@ -9,11 +9,11 @@ const { href, variant = "primary", label } = Astro.props;
 
 const classes = {
   primary:
-    "inline-flex min-h-11 items-center justify-center border border-ink bg-ink px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ivory transition hover:bg-burgundy focus-visible:outline-gold",
+    "inline-flex min-h-11 items-center justify-center border border-ink bg-ink px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-ivory transition hover:border-burgundy hover:bg-burgundy focus-visible:outline-gold",
   secondary:
-    "inline-flex min-h-11 items-center justify-center border border-gold px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink transition hover:border-burgundy hover:text-burgundy focus-visible:outline-gold",
+    "inline-flex min-h-11 items-center justify-center border border-ink/25 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-ink transition hover:border-burgundy hover:text-burgundy focus-visible:outline-gold",
   text:
-    "inline-flex items-center text-sm font-semibold uppercase tracking-[0.12em] text-burgundy underline decoration-gold underline-offset-4 transition hover:text-ink focus-visible:outline-gold"
+    "inline-flex items-center text-sm font-semibold uppercase tracking-[0.1em] text-burgundy underline decoration-gold/70 underline-offset-4 transition hover:text-ink focus-visible:outline-gold"
 };
 ---
 

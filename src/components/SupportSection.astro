@@ -1,5 +1,9 @@
----
+﻿---
 import Section from "./Section.astro";
+import ExpertiseOfferBlock from "./forms/ExpertiseOfferBlock.astro";
+import HostSuggestionBlock from "./forms/HostSuggestionBlock.astro";
+import ListeningCircleForm from "./forms/ListeningCircleForm.astro";
+import SponsorReferralBlock from "./forms/SponsorReferralBlock.astro";
 import type { Language, siteContent } from "../content/siteContent";
 import { getBankRows } from "../content/siteContent";
 
@@ -7,92 +11,47 @@ type Copy = typeof siteContent.bg.support;
 
 const { section, lang } = Astro.props as { section: Copy; lang: Language };
 const rows = getBankRows(lang);
-const endpoint = import.meta.env.PUBLIC_FORMS_ENDPOINT;
-const hasEndpoint = Boolean(endpoint);
+const source = lang === "bg" ? "support_bg" : "support_en";
 ---
 
 <Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.intro} tone="dark">
-  <div class="space-y-8">
-    <form
-      class="grid gap-5 border border-ivory/20 p-6"
-      method={hasEndpoint ? "post" : undefined}
-      action={hasEndpoint ? endpoint : undefined}
-      aria-describedby="form-status"
-    >
-      <div class="grid gap-5 sm:grid-cols-2">
-        <label class="grid gap-2 text-sm text-ivory/80">
-          {section.form.firstName}
-          <input class="min-h-11 border border-ivory/20 bg-ivory px-3 text-ink" type="text" name="firstName" autocomplete="given-name" />
-        </label>
-        <label class="grid gap-2 text-sm text-ivory/80">
-          {section.form.lastName}
-          <input class="min-h-11 border border-ivory/20 bg-ivory px-3 text-ink" type="text" name="lastName" autocomplete="family-name" />
-        </label>
-      </div>
-      <label class="grid gap-2 text-sm text-ivory/80">
-        {section.form.email}
-        <input class="min-h-11 border border-ivory/20 bg-ivory px-3 text-ink" type="email" name="email" autocomplete="email" />
-      </label>
-      <div class="grid gap-5 sm:grid-cols-2">
-        <label class="grid gap-2 text-sm text-ivory/80">
-          {section.form.languagePreference}
-          <select class="min-h-11 border border-ivory/20 bg-ivory px-3 text-ink" name="languagePreference">
-            <option value="bg">Български</option>
-            <option value="en">English</option>
-          </select>
-        </label>
-        <label class="grid gap-2 text-sm text-ivory/80">
-          {section.form.helpType}
-          <select class="min-h-11 border border-ivory/20 bg-ivory px-3 text-ink" name="helpType">
-            {section.form.options.map((option) => <option value={option}>{option}</option>)}
-          </select>
-        </label>
-      </div>
-      <label class="grid gap-2 text-sm text-ivory/80">
-        {section.form.message}
-        <textarea class="min-h-32 border border-ivory/20 bg-ivory p-3 text-ink" name="message"></textarea>
-      </label>
-      <label class="flex gap-3 text-sm leading-6 text-ivory/80">
-        <input class="mt-1 size-4" type="checkbox" name="privacy" required />
-        <span>{section.form.privacy}</span>
-      </label>
-      <p id="form-status" class="border border-gold/40 bg-gold/10 p-4 text-sm leading-6 text-ivory/85">{section.formNote}</p>
-      <button
-        class="min-h-11 border border-ivory/25 px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ivory/70"
-        type={hasEndpoint ? "submit" : "button"}
-        aria-disabled={hasEndpoint ? "false" : "true"}
-      >
-        {hasEndpoint ? (lang === "bg" ? "Изпрати" : "Submit") : section.form.submit}
-      </button>
-    </form>
+  <div class="space-y-10">
+    <ListeningCircleForm lang={lang} source={source} tone="dark" />
 
     <div class="grid gap-4 md:grid-cols-2">
-      <article class="border border-ivory/20 p-6">
-        <h3 class="font-serif text-2xl">{section.expertiseHeading}</h3>
-        <p class="mt-4 text-base leading-8 text-ivory/75">{section.expertiseText}</p>
-      </article>
-      <article class="border border-ivory/20 p-6">
-        <h3 class="font-serif text-2xl">{section.patronHeading}</h3>
-        <p class="mt-4 text-base leading-8 text-ivory/75">{section.patronText}</p>
-      </article>
+      <ExpertiseOfferBlock lang={lang} />
+      <HostSuggestionBlock lang={lang} />
     </div>
 
-    <article class="border border-gold/50 bg-ivory p-6 text-ink">
+    <SponsorReferralBlock lang={lang} />
+
+    <article class="border border-gold/35 bg-ivory p-6 text-ink md:p-8">
       <h3 class="font-serif text-3xl">{section.bankHeading}</h3>
       <p class="mt-4 max-w-2xl text-base leading-8 text-graphite">{section.bankText}</p>
       <dl class="mt-8 grid gap-4">
         {rows.map((row) => (
-          <div class="grid gap-2 border-t border-ink/15 pt-4 sm:grid-cols-[180px_1fr]">
-            <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-burgundy">{row.label}</dt>
+          <div class="grid gap-2 border-t border-ink/10 pt-4 sm:grid-cols-[180px_1fr]">
+            <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-burgundy">{row.label}</dt>
             <dd class="break-words font-mono text-sm">{row.value}</dd>
           </div>
         ))}
       </dl>
     </article>
 
-    <article class="border border-ivory/20 p-6">
+    <article class="border border-ivory/15 p-6">
       <h3 class="font-serif text-2xl">{section.paymentPlaceholderHeading}</h3>
       <p class="mt-4 text-base leading-8 text-ivory/75">{section.paymentPlaceholder}</p>
+    </article>
+
+    <article class="border border-ivory/15 p-6">
+      <h3 class="font-serif text-2xl">{section.patronHeading}</h3>
+      <p class="mt-4 text-base leading-8 text-ivory/75">{section.patronText}</p>
+      <a
+        class="mt-6 inline-flex min-h-11 items-center border border-ivory/60 px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] transition hover:border-gold hover:text-gold"
+        href="mailto:info@432hz-foundation.com"
+      >
+        info@432hz-foundation.com
+      </a>
     </article>
   </div>
 </Section>

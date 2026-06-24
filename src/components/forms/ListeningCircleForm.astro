@@ -1,0 +1,109 @@
+---
+import CRMIntegrationNotice from "./CRMIntegrationNotice.astro";
+import { listeningCircleCopy, type FormSource } from "../../content/crmConfig";
+import type { Language } from "../../content/siteContent";
+
+const {
+  lang,
+  source,
+  tone = "light",
+  heading
+} = Astro.props as {
+  lang: Language;
+  source: FormSource;
+  tone?: "light" | "dark";
+  heading?: string;
+};
+
+const copy = listeningCircleCopy[lang];
+const endpoint =
+  import.meta.env.PUBLIC_BREVO_LISTENING_FORM_ACTION || import.meta.env.PUBLIC_FORMS_ENDPOINT;
+const hasEndpoint = Boolean(endpoint);
+const statusId = `crm-form-status-${source}`;
+const borderClass = tone === "dark" ? "border-ivory/15" : "border-ink/10";
+const labelClass = tone === "dark" ? "text-ivory/80" : "text-graphite";
+const fieldClass =
+  tone === "dark"
+    ? "min-h-11 border border-ivory/20 bg-ivory px-3 text-ink"
+    : "min-h-11 border border-ink/15 bg-white px-3 text-ink";
+const buttonClass = hasEndpoint
+  ? tone === "dark"
+    ? "min-h-11 border border-ivory/70 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-ivory transition hover:border-gold hover:text-gold"
+    : "min-h-11 border border-ink bg-ink px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-ivory transition hover:bg-burgundy"
+  : tone === "dark"
+    ? "min-h-11 cursor-not-allowed border border-ivory/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-ivory/45"
+    : "min-h-11 cursor-not-allowed border border-ink/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-graphite/55";
+---
+
+<form
+  class={`grid gap-5 border ${borderClass} p-6 md:p-8`}
+  method={hasEndpoint ? "post" : undefined}
+  action={hasEndpoint ? endpoint : undefined}
+  aria-describedby={statusId}
+>
+  <h2 class="font-serif text-3xl leading-tight md:text-4xl">{heading ?? copy.heading}</h2>
+  <input type="hidden" name="SOURCE" value={source} />
+  <input type="hidden" name="LEAD_TYPE" value="listener" />
+  <input type="hidden" name="CONSENT_SOURCE" value="website_form" />
+
+  <div class="grid gap-5 sm:grid-cols-2">
+    <label class={`grid gap-2 text-sm ${labelClass}`}>
+      {copy.firstName}
+      <input class={fieldClass} type="text" name="FIRSTNAME" autocomplete="given-name" required />
+    </label>
+    <label class={`grid gap-2 text-sm ${labelClass}`}>
+      {copy.lastName}
+      <input class={fieldClass} type="text" name="LASTNAME" autocomplete="family-name" />
+    </label>
+  </div>
+
+  <label class={`grid gap-2 text-sm ${labelClass}`}>
+    {copy.email}
+    <input class={fieldClass} type="email" name="EMAIL" autocomplete="email" required />
+  </label>
+
+  <div class="grid gap-5 sm:grid-cols-2">
+    <label class={`grid gap-2 text-sm ${labelClass}`}>
+      {copy.language}
+      <select class={fieldClass} name="LANGUAGE">
+        <option value="bg" selected={lang === "bg"}>Български</option>
+        <option value="en" selected={lang === "en"}>English</option>
+      </select>
+    </label>
+    <label class={`grid gap-2 text-sm ${labelClass}`}>
+      {copy.helpType}
+      <select class={fieldClass} name="HELP_TYPE">
+        {copy.options.map((option) => <option value={option.value}>{option.label}</option>)}
+      </select>
+    </label>
+  </div>
+
+  <label class={`grid gap-2 text-sm ${labelClass}`}>
+    {copy.message}
+    <textarea
+      class={`${fieldClass} min-h-32 py-3`}
+      name="MESSAGE"
+      maxlength="1500"
+    ></textarea>
+  </label>
+
+  <label class={`flex gap-3 text-sm leading-6 ${labelClass}`}>
+    <input class="mt-1 size-4 shrink-0" type="checkbox" name="CONSENT" value="yes" required />
+    <span>{copy.privacy}</span>
+  </label>
+
+  <CRMIntegrationNotice
+    id={statusId}
+    tone={tone}
+    message={hasEndpoint ? copy.activeStatus : copy.inactiveStatus}
+  />
+
+  <button
+    class={buttonClass}
+    type={hasEndpoint ? "submit" : "button"}
+    disabled={!hasEndpoint}
+    aria-disabled={!hasEndpoint}
+  >
+    {copy.submit}
+  </button>
+</form>

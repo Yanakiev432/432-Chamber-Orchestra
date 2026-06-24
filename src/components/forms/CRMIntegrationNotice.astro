@@ -1,0 +1,14 @@
+---
+const { message, tone = "light", id } = Astro.props as {
+  message: string;
+  tone?: "light" | "dark";
+  id?: string;
+};
+
+const classes =
+  tone === "dark"
+    ? "border border-gold/35 bg-gold/10 p-4 text-sm leading-6 text-ivory/85"
+    : "border border-gold/35 bg-gold/10 p-4 text-sm leading-6 text-graphite";
+---
+
+<p id={id} class={classes} role="status">{message}</p>

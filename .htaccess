@@ -1,0 +1,17 @@
+﻿# Conservative Apache rules for static Astro output.
+# Upload this file with the contents of dist/ if the host supports .htaccess.
+
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Preserve existing files and directories, including Astro assets.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Prefer the Bulgarian home page at the root on Apache hosts.
+  RewriteRule ^$ /bg/ [R=302,L]
+</IfModule>

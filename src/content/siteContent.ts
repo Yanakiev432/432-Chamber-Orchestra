@@ -659,3 +659,122 @@ export function getBankRows(lang: Language) {
     }
   ];
 }
+
+export const campaignLandingContent = {
+  bg: {
+    lang: "bg" as const,
+    alternateLang: "en" as const,
+    alternateHref: "/en/first-sound/",
+    canonicalHref: "/bg/first-sound/",
+    meta: {
+      title: "Първият звук отново · 432 Chamber Orchestra",
+      description:
+        "Влезте в първия слушателски кръг около 432 Chamber Orchestra: независим струнен оркестър със седалище в София, който изгражда записи, архив, документация и следваща стъпка."
+    },
+    hero: {
+      eyebrow: "Кампания · Първият звук отново",
+      headline: "Живата музика не трябва да изчезва след една вечер.",
+      subheadline:
+        "432 Chamber Orchestra изгражда слушателска общност около струнен звук, който оставя следа: записи, партитури, архив, документация и следваща стъпка.",
+      primaryCta: "Влезте в слушателския кръг",
+      secondaryCta: "Подкрепете първия звук"
+    },
+    mainCopy: [
+      "432 Chamber Orchestra не търси еднократна публика. Той изгражда слушателска общност.",
+      "Не концерт за отчет. Не участие за exposure. Не култура като фон.",
+      "Оркестърът се завръща чрез дисциплинирана последователност от камерни и оркестрови стъпки: слушателски кръг, камерен preview формат, запис, архив, отчет и следваща оркестрова фаза.",
+      "Първата форма на подкрепа е вниманието. Влезте в слушателския кръг, ако вярвате, че независимата класическа музика трябва да бъде чута, документирана и съхранена."
+    ],
+    goal: {
+      heading: "Първи слушателски кръг",
+      text: "Цел: 100 души, които искат да следят, слушат и подкрепят завръщането на 432 Chamber Orchestra.",
+      counterNote: "Броячът ще бъде активиран след свързване на формата."
+    },
+    form: {
+      heading: "Влезте в първия слушателски кръг",
+      firstName: "Име",
+      lastName: "Фамилия",
+      email: "Имейл",
+      languagePreference: "Предпочитан език",
+      helpType: "Как бихте искали да помогнете?",
+      message: "Кратко съобщение",
+      privacy:
+        "Съгласявам се да получавам имейли от Фондация 432 Херца / 432 Chamber Orchestra относно слушателския кръг, концерти, записи, архив, кампании и възможности за подкрепа. Мога да се отпиша по всяко време.",
+      submit: "Влизам в слушателския кръг",
+      inactiveNote:
+        "Формата е подготвена за свързване. До активиране можете да пишете на info@432hz-foundation.com.",
+      options: [
+        "Само да следя",
+        "С време/експертиза",
+        "Със средства",
+        "С глас/препоръка",
+        "Мога да предложа компания, домакин или патрон"
+      ]
+    },
+    afterSignup: {
+      heading: "Благодарим. Вече сте част от първия слушателски кръг.",
+      copy: "Следващата стъпка е проста: чуйте първия откъс и започнете от слушането.",
+      cta: "Чуйте първия звук",
+      noAudio: "Първият откъс ще бъде добавен след подготовка на официалния материал."
+    }
+  },
+  en: {
+    lang: "en" as const,
+    alternateLang: "bg" as const,
+    alternateHref: "/bg/first-sound/",
+    canonicalHref: "/en/first-sound/",
+    meta: {
+      title: "The First Sound Again · 432 Chamber Orchestra",
+      description:
+        "Join the first Listening Circle around 432 Chamber Orchestra: an independent string orchestra based in Sofia, building recordings, archive, documentation, and a next step."
+    },
+    hero: {
+      eyebrow: "Campaign · The First Sound Again",
+      headline: "Live music should not disappear after one evening.",
+      subheadline:
+        "432 Chamber Orchestra is building a listening community around string sound that leaves a trace: recordings, scores, archive, documentation, and a next step.",
+      primaryCta: "Join the Listening Circle",
+      secondaryCta: "Support the First Sound"
+    },
+    mainCopy: [
+      "432 Chamber Orchestra does not seek a one-time audience. It builds a listening community.",
+      "Not a concert for a report. Not performance for exposure. Not culture as background.",
+      "The orchestra is returning through a disciplined sequence of chamber and orchestral steps: listening circle, chamber preview, recording, archive, report, and the next orchestral phase.",
+      "The first form of support is attention. Join the Listening Circle if you believe independent classical music should be heard, documented, and preserved."
+    ],
+    goal: {
+      heading: "First Listening Circle",
+      text: "Goal: 100 people who want to follow, listen to, and support the return of 432 Chamber Orchestra.",
+      counterNote: "The counter will be activated after the form is connected."
+    },
+    form: {
+      heading: "Join the First Listening Circle",
+      firstName: "First name",
+      lastName: "Last name",
+      email: "Email",
+      languagePreference: "Preferred language",
+      helpType: "How would you like to help?",
+      message: "Short message",
+      privacy:
+        "I agree to receive emails from Foundation 432 Hertz / 432 Chamber Orchestra about the Listening Circle, concerts, recordings, archive, campaigns, and ways to support the work. I can unsubscribe at any time.",
+      submit: "Join the Listening Circle",
+      inactiveNote:
+        "The form is prepared for integration. Until activation, you can write to info@432hz-foundation.com.",
+      options: [
+        "Follow only",
+        "Time / Expertise",
+        "Money",
+        "Voice / Recommendation",
+        "I can suggest a company, host, or patron"
+      ]
+    },
+    afterSignup: {
+      heading: "Thank you. You are now part of the first Listening Circle.",
+      copy: "The next step is simple: hear the first excerpt and begin with listening.",
+      cta: "Listen to the First Sound",
+      noAudio: "The first excerpt will be added after the official material is prepared."
+    }
+  }
+} as const;
+
+export type CampaignLandingCopy = (typeof campaignLandingContent)[Language];
