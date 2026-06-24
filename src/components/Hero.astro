@@ -11,23 +11,23 @@ type Props = {
 const { hero } = Astro.props;
 ---
 
-<section class="relative overflow-hidden border-b border-ink/15 bg-ivory py-16 md:py-24">
+<section class="relative z-0 overflow-hidden border-b border-brand-border bg-brand-surface py-14 md:py-20">
   <div class="container grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
     <div>
-      <p class="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-gold">{hero.eyebrow}</p>
-      <h1 class="font-serif text-5xl leading-[0.95] md:text-7xl lg:text-8xl">{hero.title}</h1>
-      <p class="mt-8 max-w-2xl text-xl leading-9 text-graphite">{hero.text}</p>
+      <p class="mb-5 text-xs font-semibold uppercase tracking-[0.1em] text-brand-accent">{hero.eyebrow}</p>
+      <h1 class="max-w-[11ch] break-words font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.95] text-brand-primary">{hero.title}</h1>
+      <p class="mt-8 max-w-2xl text-xl leading-9 text-brand-muted">{hero.text}</p>
       <div class="mt-8 flex flex-wrap gap-3">
         <CTAButton href="#support" label={hero.primaryCta} />
         <CTAButton href="#support" label={hero.secondaryCta} variant="secondary" />
       </div>
     </div>
-    <aside class="border-y border-ink/20 py-8">
-      <p class="text-xs font-semibold uppercase tracking-[0.22em] text-burgundy">{hero.campaignLabel}</p>
+    <aside class="border-y border-brand-borderWarm bg-brand-warm px-6 py-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.08em] text-brand-primary">{hero.campaignLabel}</p>
       <ul class="mt-8 space-y-5 font-serif text-2xl leading-snug">
-        {hero.positioning.map((line) => <li class="border-b border-ink/15 pb-4">{line}</li>)}
+        {hero.positioning.map((line) => <li class="border-b border-brand-borderWarm pb-4 text-brand-primary">{line}</li>)}
       </ul>
-      <p class="mt-8 text-base leading-8 text-graphite">{hero.finalLine}</p>
+      <p class="mt-8 text-base leading-8 text-brand-muted">{hero.finalLine}</p>
     </aside>
   </div>
 </section>

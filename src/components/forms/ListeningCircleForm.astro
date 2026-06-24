@@ -20,19 +20,19 @@ const endpoint =
   import.meta.env.PUBLIC_BREVO_LISTENING_FORM_ACTION || import.meta.env.PUBLIC_FORMS_ENDPOINT;
 const hasEndpoint = Boolean(endpoint);
 const statusId = `crm-form-status-${source}`;
-const borderClass = tone === "dark" ? "border-ivory/15" : "border-ink/10";
-const labelClass = tone === "dark" ? "text-ivory/80" : "text-graphite";
+const borderClass = tone === "dark" ? "border-white/30" : "border-brand-border";
+const labelClass = tone === "dark" ? "text-white/80" : "text-brand-muted";
 const fieldClass =
   tone === "dark"
-    ? "min-h-11 border border-ivory/20 bg-ivory px-3 text-ink"
-    : "min-h-11 border border-ink/15 bg-white px-3 text-ink";
+    ? "min-h-11 border border-brand-border bg-brand-surface px-3 text-brand-text"
+    : "min-h-11 border border-brand-border bg-brand-surface px-3 text-brand-text";
 const buttonClass = hasEndpoint
   ? tone === "dark"
-    ? "min-h-11 border border-ivory/70 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-ivory transition hover:border-gold hover:text-gold"
-    : "min-h-11 border border-ink bg-ink px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-ivory transition hover:bg-burgundy"
+    ? "min-h-11 border border-white bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-brand-primary transition hover:border-brand-borderWarm hover:bg-brand-bg"
+    : "min-h-11 border border-brand-primary bg-brand-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-white transition hover:border-brand-primaryHover hover:bg-brand-primaryHover"
   : tone === "dark"
-    ? "min-h-11 cursor-not-allowed border border-ivory/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-ivory/45"
-    : "min-h-11 cursor-not-allowed border border-ink/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-graphite/55";
+    ? "min-h-11 cursor-not-allowed border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-white/50"
+    : "min-h-11 cursor-not-allowed border border-brand-border px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-brand-muted";
 ---
 
 <form
@@ -41,7 +41,7 @@ const buttonClass = hasEndpoint
   action={hasEndpoint ? endpoint : undefined}
   aria-describedby={statusId}
 >
-  <h2 class="font-serif text-3xl leading-tight md:text-4xl">{heading ?? copy.heading}</h2>
+  <h2 class={tone === "dark" ? "font-serif text-3xl leading-tight text-white md:text-4xl" : "font-serif text-3xl leading-tight text-brand-primary md:text-4xl"}>{heading ?? copy.heading}</h2>
   <input type="hidden" name="SOURCE" value={source} />
   <input type="hidden" name="LEAD_TYPE" value="listener" />
   <input type="hidden" name="CONSENT_SOURCE" value="website_form" />

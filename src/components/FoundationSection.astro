@@ -9,18 +9,18 @@ const legal = foundationData[lang];
 ---
 
 <Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.subheading} tone="dark">
-  <div class="space-y-6 text-lg leading-9 text-ivory/80">
+  <div class="space-y-6 text-lg leading-9 text-white/80">
     {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
   </div>
   <ul class="mt-10 grid gap-3 sm:grid-cols-2">
     {section.responsibilities.map((item) => (
-      <li class="border border-ivory/20 p-5 font-serif text-xl text-ivory">{item}</li>
+      <li class="border border-white/30 p-5 font-serif text-xl text-white">{item}</li>
     ))}
   </ul>
-  <dl class="mt-10 grid gap-4 border-t border-ivory/20 pt-8 text-sm text-ivory/80 sm:grid-cols-2">
-    <div><dt class="text-gold">{lang === "bg" ? "Правна форма" : "Legal form"}</dt><dd>{legal.legalForm}</dd></div>
-    <div><dt class="text-gold">{lang === "bg" ? "Статут" : "Status"}</dt><dd>{legal.status}</dd></div>
-    <div><dt class="text-gold">{legal.eikLabel}</dt><dd>{legal.eik}</dd></div>
-    <div><dt class="text-gold">{lang === "bg" ? "Година на регистрация" : "Registration year"}</dt><dd>{legal.registrationYear}</dd></div>
+  <dl class="mt-10 grid gap-4 border-t border-white/30 pt-8 text-sm text-white/80 sm:grid-cols-2">
+    <div><dt class="text-brand-accent">{lang === "bg" ? "Правна форма" : "Legal form"}</dt><dd>{legal.legalForm}</dd></div>
+    <div><dt class="text-brand-accent">{lang === "bg" ? "Статут" : "Status"}</dt><dd>{legal.status}</dd></div>
+    <div><dt class="text-brand-accent">{legal.eikLabel}</dt><dd>{legal.eik}</dd></div>
+    <div><dt class="text-brand-accent">{lang === "bg" ? "Година на регистрация" : "Registration year"}</dt><dd>{legal.registrationYear}</dd></div>
   </dl>
 </Section>

@@ -21,7 +21,7 @@ const { content, lang } = Astro.props as { content: Copy; lang: Language };
 <Hero hero={content.hero} />
 
 <Section id={content.core.id} eyebrow={content.core.eyebrow} heading={content.core.heading}>
-  <div class="space-y-6 text-lg leading-9 text-graphite">
+  <div class="space-y-6 text-lg leading-9 text-brand-muted">
     {content.core.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
   </div>
 </Section>

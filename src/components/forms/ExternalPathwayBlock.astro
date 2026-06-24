@@ -12,13 +12,13 @@ const { heading, text, button, fallback, url } = Astro.props as {
 const isActive = Boolean(url);
 ---
 
-<article class="flex min-h-full flex-col border border-ivory/15 p-6">
-  <h3 class="font-serif text-2xl">{heading}</h3>
-  <p class="mt-4 flex-1 text-base leading-8 text-ivory/75">{text}</p>
+<article class="flex min-h-full flex-col border border-white/30 p-6">
+  <h3 class="font-serif text-2xl text-white">{heading}</h3>
+  <p class="mt-4 flex-1 text-base leading-8 text-white/80">{text}</p>
   {
     isActive ? (
       <a
-        class="mt-6 inline-flex min-h-11 w-fit items-center border border-ivory/60 px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] transition hover:border-gold hover:text-gold"
+        class="mt-6 inline-flex min-h-11 w-fit items-center border border-white px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-brand-accent hover:text-brand-accent"
         href={url}
         target="_blank"
         rel="noopener noreferrer"

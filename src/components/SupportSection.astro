@@ -1,4 +1,4 @@
-﻿---
+---
 import Section from "./Section.astro";
 import ExpertiseOfferBlock from "./forms/ExpertiseOfferBlock.astro";
 import HostSuggestionBlock from "./forms/HostSuggestionBlock.astro";
@@ -25,29 +25,29 @@ const source = lang === "bg" ? "support_bg" : "support_en";
 
     <SponsorReferralBlock lang={lang} />
 
-    <article class="border border-gold/35 bg-ivory p-6 text-ink md:p-8">
-      <h3 class="font-serif text-3xl">{section.bankHeading}</h3>
-      <p class="mt-4 max-w-2xl text-base leading-8 text-graphite">{section.bankText}</p>
+    <article class="border border-brand-borderWarm bg-brand-warm p-6 text-brand-text md:p-8">
+      <h3 class="font-serif text-3xl text-brand-primary">{section.bankHeading}</h3>
+      <p class="mt-4 max-w-2xl text-base leading-8 text-brand-muted">{section.bankText}</p>
       <dl class="mt-8 grid gap-4">
         {rows.map((row) => (
-          <div class="grid gap-2 border-t border-ink/10 pt-4 sm:grid-cols-[180px_1fr]">
-            <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-burgundy">{row.label}</dt>
+          <div class="grid gap-2 border-t border-brand-borderWarm pt-4 sm:grid-cols-[180px_1fr]">
+            <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-primary">{row.label}</dt>
             <dd class="break-words font-mono text-sm">{row.value}</dd>
           </div>
         ))}
       </dl>
     </article>
 
-    <article class="border border-ivory/15 p-6">
-      <h3 class="font-serif text-2xl">{section.paymentPlaceholderHeading}</h3>
-      <p class="mt-4 text-base leading-8 text-ivory/75">{section.paymentPlaceholder}</p>
+    <article class="border border-white/30 p-6">
+      <h3 class="font-serif text-2xl text-white">{section.paymentPlaceholderHeading}</h3>
+      <p class="mt-4 text-base leading-8 text-white/80">{section.paymentPlaceholder}</p>
     </article>
 
-    <article class="border border-ivory/15 p-6">
-      <h3 class="font-serif text-2xl">{section.patronHeading}</h3>
-      <p class="mt-4 text-base leading-8 text-ivory/75">{section.patronText}</p>
+    <article class="border border-white/30 p-6">
+      <h3 class="font-serif text-2xl text-white">{section.patronHeading}</h3>
+      <p class="mt-4 text-base leading-8 text-white/80">{section.patronText}</p>
       <a
-        class="mt-6 inline-flex min-h-11 items-center border border-ivory/60 px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] transition hover:border-gold hover:text-gold"
+        class="mt-6 inline-flex min-h-11 items-center border border-white px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-brand-accent hover:text-brand-accent"
         href="mailto:info@432hz-foundation.com"
       >
         info@432hz-foundation.com

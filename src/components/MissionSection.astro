@@ -7,18 +7,18 @@ const { section } = Astro.props as { section: Copy };
 ---
 
 <Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} tone="ruled">
-  <div class="space-y-6 text-lg leading-9 text-graphite">
+  <div class="space-y-6 text-lg leading-9 text-brand-muted">
     {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
   </div>
   <ol class="mt-10 grid gap-3 sm:grid-cols-2">
     {section.directions.map((direction, index) => (
-      <li class="border border-ink/15 bg-ivory p-5">
-        <span class="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-gold">{String(index + 1).padStart(2, "0")}</span>
-        <span class="font-serif text-xl">{direction}</span>
+      <li class="border border-brand-border bg-brand-surface p-5">
+        <span class="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">{String(index + 1).padStart(2, "0")}</span>
+        <span class="font-serif text-xl text-brand-primary">{direction}</span>
       </li>
     ))}
   </ol>
-  <div class="mt-10 space-y-4 border-l-2 border-burgundy pl-6 text-lg leading-8">
+  <div class="mt-10 space-y-4 border-l-2 border-brand-primary pl-6 text-lg leading-8">
     {section.closing.map((line) => <p>{line}</p>)}
   </div>
 </Section>

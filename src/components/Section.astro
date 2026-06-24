@@ -1,4 +1,4 @@
-﻿---
+---
 type Props = {
   id?: string;
   eyebrow?: string;
@@ -10,18 +10,18 @@ type Props = {
 const { id, eyebrow, heading, intro, tone = "light" } = Astro.props;
 
 const toneClass = {
-  light: "bg-ivory text-ink",
-  ruled: "bg-warm/25 text-ink",
-  dark: "bg-ink text-ivory"
+  light: "bg-brand-bg text-brand-text",
+  ruled: "bg-brand-surface text-brand-text",
+  dark: "bg-brand-primary text-white"
 };
 ---
 
-<section id={id} class={`${toneClass[tone]} border-t border-ink/10 py-20 md:py-28`}>
+<section id={id} class={`${toneClass[tone]} border-t border-brand-border py-20 md:py-28`}>
   <div class="container">
     <div class="grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
       <header>
-        {eyebrow && <p class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">{eyebrow}</p>}
-        <h2 class="font-serif text-3xl leading-tight md:text-5xl">{heading}</h2>
+        {eyebrow && <p class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">{eyebrow}</p>}
+        <h2 class={tone === "dark" ? "font-serif text-3xl leading-tight text-white md:text-5xl" : "font-serif text-3xl leading-tight text-brand-primary md:text-5xl"}>{heading}</h2>
         {intro && <p class="mt-6 max-w-xl text-base leading-8 opacity-75">{intro}</p>}
       </header>
       <div class="min-w-0">

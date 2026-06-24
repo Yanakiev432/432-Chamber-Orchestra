@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="432 Chamber Orchestra">
-  <rect width="64" height="64" fill="#11100e"/>
-  <path d="M14 43h36M18 33h28M22 23h20" stroke="#d8d0c3" stroke-width="2" stroke-linecap="round"/>
-  <text x="32" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#a9833f">432</text>
+  <rect width="64" height="64" fill="#123c3c"/>
+  <path d="M14 43h36M18 33h28M22 23h20" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+  <text x="32" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#ffffcc">432</text>
 </svg>

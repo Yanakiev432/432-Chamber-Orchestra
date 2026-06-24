@@ -30,7 +30,7 @@ const alternate = alternateHref ?? content.alternateHref;
     <link rel="alternate" hreflang="en" href={lang === "en" ? canonical : alternate} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body>
+  <body class="bg-brand-bg text-brand-text">
     <Header lang={lang} nav={content.nav} alternateLang={content.alternateLang} alternateHref={alternate} />
     <main>
       <slot />

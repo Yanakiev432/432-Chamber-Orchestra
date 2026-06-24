@@ -11,7 +11,7 @@ const { section } = Astro.props as { section: Copy };
     <ul class="space-y-3 text-xl leading-8">
       {section.lines.map((line) => (
         <li>
-          {line.includes("@") ? <a class="underline decoration-gold underline-offset-4" href={`mailto:${line}`}>{line}</a> : line}
+          {line.includes("@") ? <a class="text-brand-primary underline decoration-brand-accent underline-offset-4 hover:text-brand-accent" href={`mailto:${line}`}>{line}</a> : line}
         </li>
       ))}
     </ul>

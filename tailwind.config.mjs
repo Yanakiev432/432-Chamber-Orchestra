@@ -4,12 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        ivory: "#f5f0e6",
-        ink: "#11100e",
-        graphite: "#2c2b28",
-        warm: "#d8d0c3",
-        gold: "#a9833f",
-        burgundy: "#5b1f2b"
+        brand: {
+          bg: "var(--color-brand-bg)",
+          warm: "var(--color-brand-warm)",
+          surface: "var(--color-brand-surface)",
+          text: "var(--color-brand-text)",
+          muted: "var(--color-brand-muted)",
+          primary: "var(--color-brand-primary)",
+          primaryHover: "var(--color-brand-primary-hover)",
+          accent: "var(--color-brand-accent)",
+          border: "var(--color-brand-border)",
+          borderWarm: "var(--color-brand-border-warm)"
+        }
       },
       fontFamily: {
         serif: ["Georgia", "Cambria", "Times New Roman", "serif"],

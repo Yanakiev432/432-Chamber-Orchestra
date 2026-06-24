@@ -11,7 +11,7 @@ const { lang, alternateLang, alternateHref } = Astro.props;
 ---
 
 <a
-  class="inline-flex min-h-10 items-center border border-ink/20 px-3 text-xs font-semibold uppercase tracking-[0.16em] transition hover:border-burgundy hover:text-burgundy"
+  class="inline-flex min-h-10 items-center border border-brand-primary bg-brand-surface px-3 text-sm font-semibold uppercase tracking-[0.06em] text-brand-primary transition hover:bg-brand-bg"
   href={alternateHref}
   hreflang={alternateLang}
   aria-label={lang === "bg" ? "Switch to English" : "Превключи на български"}
