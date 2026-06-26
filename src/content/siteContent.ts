@@ -40,6 +40,9 @@ type SiteCopy = {
     campaignLabel: string;
   };
   core: TextSection;
+  firstOutput: TextSection & {
+    items: string[];
+  };
   vision: TextSection;
   mission: TextSection & {
     directions: string[];
@@ -49,6 +52,11 @@ type SiteCopy = {
   foundation: TextSection & {
     subheading: string;
     responsibilities: string[];
+    accountability: {
+      heading: string;
+      text: string;
+      items: string[];
+    };
   };
   campaign: TextSection;
   allyWays: {
@@ -206,6 +214,21 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Този сайт прави ясно разграничение между художествената работа и структурата, която я подкрепя, документира и съхранява."
       ]
     },
+    firstOutput: {
+      id: "first-documented-output",
+      eyebrow: "Първа фаза",
+      heading: "Първият документиран резултат",
+      paragraphs: [
+        "Завръщането започва с фокусиран камерен preview формат — не като изолирано събитие, а като първата видима стъпка на работеща артистична структура."
+      ],
+      items: [
+        "камерен preview",
+        "записан откъс",
+        "публична архивна страница",
+        "кратък отчет",
+        "ясна следваща стъпка към по-голяма струнно-оркестрова фаза"
+      ]
+    },
     vision: {
       id: "vision",
       eyebrow: "Визия",
@@ -264,7 +287,18 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Юридическа и финансова рамка",
         "Архив и документация",
         "Общност и патронат"
-      ]
+      ],
+      accountability: {
+        heading: "Обещание за отчетност",
+        text: "Подкрепата трябва да води до определен артистичен резултат.",
+        items: [
+          "определен обхват на проекта",
+          "ясна бюджетна линия или цел на подкрепата",
+          "документация на артистичната работа",
+          "архивна или проектна страница, когато е приложимо",
+          "кратък отчет към подкрепилите и партньорите"
+        ]
+      }
     },
     campaign: {
       id: "campaign",
@@ -446,6 +480,21 @@ export const siteContent: Record<Language, SiteCopy> = {
         "This site clearly distinguishes the artistic work from the structure that supports, documents, and preserves it."
       ]
     },
+    firstOutput: {
+      id: "first-documented-output",
+      eyebrow: "First phase",
+      heading: "The first documented output",
+      paragraphs: [
+        "The restart begins with a focused chamber preview — not as an isolated event, but as the first visible step of a working artistic structure."
+      ],
+      items: [
+        "a chamber preview",
+        "a recorded excerpt",
+        "a public archive page",
+        "a short report",
+        "a clear next step toward the larger string-orchestra phase"
+      ]
+    },
     vision: {
       id: "vision",
       eyebrow: "Vision",
@@ -499,7 +548,18 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Its role is to provide the organisational framework for concerts, recordings, commissions, contracts, donations, reporting, archive, educational activity, and long-term cultural continuity.",
         "The foundation exists so that the orchestra does not remain a one-person project or a sequence of isolated concerts. It creates the structure through which artistic work can be supported, documented, and preserved."
       ],
-      responsibilities: ["Artistic production", "Legal and financial structure", "Archive and documentation", "Community and patronage"]
+      responsibilities: ["Artistic production", "Legal and financial structure", "Archive and documentation", "Community and patronage"],
+      accountability: {
+        heading: "Accountability promise",
+        text: "Support should lead to a defined artistic result.",
+        items: [
+          "a defined project scope",
+          "a clear budget line or support purpose",
+          "documentation of the artistic work",
+          "an archive or project page where appropriate",
+          "a short post-project report for supporters and partners"
+        ]
+      }
     },
     campaign: {
       id: "campaign",
