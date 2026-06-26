@@ -10,6 +10,7 @@ import AllyWaysSection from "./AllyWaysSection.astro";
 import ArtisticIdentitySection from "./ArtisticIdentitySection.astro";
 import ProgramsSection from "./ProgramsSection.astro";
 import ArchiveSection from "./ArchiveSection.astro";
+import MediaArchiveSection from "./MediaArchiveSection.astro";
 import SupportSection from "./SupportSection.astro";
 import ContactSection from "./ContactSection.astro";
 import type { Language, siteContent } from "../content/siteContent";
@@ -48,5 +49,6 @@ const { content, lang } = Astro.props as { content: Copy; lang: Language };
 <ArtisticIdentitySection section={content.artisticIdentity} />
 <ProgramsSection section={content.programs} />
 <ArchiveSection section={content.archive} />
+<MediaArchiveSection lang={lang} />
 <SupportSection section={content.support} lang={lang} />
 <ContactSection section={content.contact} />

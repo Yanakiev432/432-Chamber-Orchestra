@@ -1,0 +1,31 @@
+---
+const { item, label, sourceLabel } = Astro.props as {
+  item: {
+    title: string;
+    url: string;
+    year?: string;
+    published?: string;
+    description?: string;
+    type?: string;
+  };
+  label: string;
+  sourceLabel: string;
+};
+---
+
+<article class="flex min-h-full flex-col border border-brand-border bg-brand-surface p-5">
+  <div class="flex items-center justify-between gap-4">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">{item.type ?? sourceLabel}</p>
+    {(item.year || item.published) && <p class="font-mono text-xs text-brand-muted">{item.year ?? item.published}</p>}
+  </div>
+  <h4 class="mt-4 font-serif text-xl leading-snug text-brand-primary">{item.title}</h4>
+  {item.description && <p class="mt-4 flex-1 text-sm leading-6 text-brand-muted">{item.description}</p>}
+  <a
+    class="mt-6 inline-flex min-h-10 w-fit items-center border border-brand-primary px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
+    href={item.url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {label}
+  </a>
+</article>

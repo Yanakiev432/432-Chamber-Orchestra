@@ -1,0 +1,21 @@
+---
+const { photos } = Astro.props as {
+  photos: { src: string; width: number; height: number; alt: string }[];
+};
+---
+
+<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {photos.map((photo) => (
+    <figure class="border border-brand-border bg-brand-surface p-2">
+      <img
+        class="aspect-[4/3] w-full object-cover"
+        src={photo.src}
+        width={photo.width}
+        height={photo.height}
+        alt={photo.alt}
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  ))}
+</div>
