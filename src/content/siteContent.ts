@@ -19,6 +19,12 @@ type Card = {
   href?: string;
 };
 
+type SupportLevel = {
+  title: string;
+  amount: string;
+  description: string;
+};
+
 type SiteCopy = {
   lang: Language;
   htmlLang: string;
@@ -96,6 +102,43 @@ type SiteCopy = {
     };
     expertiseHeading: string;
     expertiseText: string;
+    fundraising: {
+      preview: {
+        heading: string;
+        intro: string;
+        formatHeading: string;
+        formatItems: string[];
+        outputsHeading: string;
+        outputItems: string[];
+        facts: { label: string; value: string }[];
+      };
+      useOfFunds: {
+        heading: string;
+        intro: string;
+        label: string;
+        items: string[];
+      };
+      supportLevels: {
+        heading: string;
+        items: SupportLevel[];
+        ctas: {
+          sponsor: string;
+          bank: string;
+          listening: string;
+        };
+      };
+      patronPathway: {
+        heading: string;
+        intro: string;
+        items: string[];
+        askLabel: string;
+        askText: string;
+        cta: string;
+        briefCta: string;
+        mailSubject: string;
+        briefSubject: string;
+      };
+    };
     bankHeading: string;
     bankText: string;
     bankLabels: {
@@ -406,6 +449,86 @@ export const siteContent: Record<Language, SiteCopy> = {
       expertiseHeading: "Време / експертиза",
       expertiseText:
         "Ако можете да помогнете с професионални умения, връзки, домакинство или сериозен разговор, пишете директно на фондацията.",
+      fundraising: {
+        preview: {
+          heading: "Първи камерен preview",
+          intro:
+            "Първата готова за подкрепа стъпка е фокусиран камерен preview формат: малко, сериозно струнно събитие, което трябва да произведе повече от една вечер.",
+          formatHeading: "Работен формат",
+          formatItems: [
+            "струнен квартет или малка струнна формация",
+            "35-45 минути музика и кратко контекстуално въведение",
+            "30-80 поканени слушатели според пространството",
+            "подходящо за компания, частен домакин, галерия, фондация или културно пространство"
+          ],
+          outputsHeading: "Очаквани резултати",
+          outputItems: [
+            "жив камерен preview",
+            "записан откъс, ако бюджетът позволява",
+            "фото документация",
+            "архивна/проектна страница",
+            "кратък отчет към подкрепилите",
+            "ясна следваща стъпка към по-голямата оркестрова фаза"
+          ],
+          facts: [
+            { label: "Дата", value: "предстои уточняване" },
+            { label: "Място", value: "предстои уточняване" },
+            { label: "Програма", value: "предстои уточняване" }
+          ]
+        },
+        useOfFunds: {
+          heading: "Как ще се използва подкрепата",
+          intro:
+            "Първата фаза трябва да финансира определена артистична работа, а не неясна дейност.",
+          label: "Ориентировъчно използване на средствата",
+          items: [
+            "хонорари за музиканти",
+            "репетиционно време",
+            "зала или домакинска логистика",
+            "аудио запис и обработка",
+            "фото/видео документация",
+            "програмен текст и превод",
+            "архивна/проектна страница",
+            "администрация, счетоводство и отчетност"
+          ]
+        },
+        supportLevels: {
+          heading: "Ориентировъчни нива на подкрепа",
+          items: [
+            { title: "Listener Supporter", amount: "50-150 EUR", description: "Подкрепя слушателския кръг и комуникационната инфраструктура." },
+            { title: "First Sound Supporter", amount: "150-300 EUR", description: "Подкрепя първите документирани стъпки на завръщането." },
+            { title: "Recording Supporter", amount: "300-500 EUR", description: "Подкрепя запис, обработка и архивна подготовка." },
+            { title: "Musician Fee Patron", amount: "500-1 000 EUR", description: "Подкрепя музикантски хонорари и репетиционна работа." },
+            { title: "Chamber Preview Partner", amount: "2 500-3 500 EUR", description: "Подкрепя първия камерен preview като определен културен резултат." },
+            { title: "Founding Patron", amount: "5 000-10 000 EUR", description: "Подкрепя preview формата, документацията, архива и развитието към следваща фаза." },
+            { title: "Archive / Season Partner", amount: "10 000+ EUR", description: "Подкрепя по-голяма документирана програма от работа." }
+          ],
+          ctas: {
+            sponsor: "Заявете разговор за партньорство",
+            bank: "Използвайте банков превод",
+            listening: "Влезте в слушателския кръг"
+          }
+        },
+        patronPathway: {
+          heading: "За компании и патрони",
+          intro:
+            "Най-полезната първа стъпка не е поставяне на лого. Тя е сериозен разговор за определен културен резултат.",
+          items: [
+            "домакинство на камерен preview",
+            "подкрепа за първия запис",
+            "финансиране на музикантски хонорари",
+            "предоставяне на подходящо пространство",
+            "свързване с един релевантен човек, който взема решения",
+            "подкрепа за документация и архив"
+          ],
+          askLabel: "Първа конкретна молба",
+          askText: "Отворете 20-минутен разговор за първия камерен preview.",
+          cta: "Заявете разговор за партньорство",
+          briefCta: "Заявете спонсорско резюме",
+          mailSubject: "Разговор за първия камерен preview",
+          briefSubject: "Заявка за спонсорско резюме"
+        }
+      },
       bankHeading: "Банков превод",
       bankText:
         "Можете да подкрепите дейността на Фондация 432 Херца чрез банков превод. Моля използвайте посоченото основание.",
@@ -667,6 +790,86 @@ export const siteContent: Record<Language, SiteCopy> = {
       expertiseHeading: "Time / Expertise",
       expertiseText:
         "If you can help with professional skills, introductions, hosting, or a serious conversation, write directly to the foundation.",
+      fundraising: {
+        preview: {
+          heading: "First Chamber Preview",
+          intro:
+            "The first sponsor-ready step is a focused chamber preview: a small, serious string-format event designed to produce more than one evening.",
+          formatHeading: "Working format",
+          formatItems: [
+            "string quartet or small string formation",
+            "35-45 minutes of music and short contextual introduction",
+            "30-80 invited listeners, depending on the room",
+            "suitable for a company, private host, gallery, foundation, or cultural space"
+          ],
+          outputsHeading: "Expected outputs",
+          outputItems: [
+            "live chamber preview",
+            "recorded excerpt if the budget allows",
+            "photo documentation",
+            "archive/project page",
+            "short report to supporters",
+            "clear next step toward the larger orchestral phase"
+          ],
+          facts: [
+            { label: "Date", value: "to be confirmed" },
+            { label: "Venue", value: "to be confirmed" },
+            { label: "Programme", value: "to be confirmed" }
+          ]
+        },
+        useOfFunds: {
+          heading: "How support will be used",
+          intro:
+            "The first phase should fund defined artistic work, not vague activity.",
+          label: "Indicative use of funds",
+          items: [
+            "musician fees",
+            "rehearsal time",
+            "venue or host logistics",
+            "audio recording and editing",
+            "photo/video documentation",
+            "programme note and translation",
+            "archive/project page",
+            "administration, accounting, and reporting"
+          ]
+        },
+        supportLevels: {
+          heading: "Indicative support levels",
+          items: [
+            { title: "Listener Supporter", amount: "EUR 50-150", description: "Helps the Listening Circle and communication infrastructure." },
+            { title: "First Sound Supporter", amount: "EUR 150-300", description: "Supports the first documented steps of the restart." },
+            { title: "Recording Supporter", amount: "EUR 300-500", description: "Supports recording, editing, and archive preparation." },
+            { title: "Musician Fee Patron", amount: "EUR 500-1,000", description: "Supports musician fees and rehearsal work." },
+            { title: "Chamber Preview Partner", amount: "EUR 2,500-3,500", description: "Supports the first chamber preview as a defined cultural output." },
+            { title: "Founding Patron", amount: "EUR 5,000-10,000", description: "Supports the preview, documentation, archive, and next-phase development." },
+            { title: "Archive / Season Partner", amount: "EUR 10,000+", description: "Supports a larger documented programme of work." }
+          ],
+          ctas: {
+            sponsor: "Request a sponsor conversation",
+            bank: "Use bank transfer",
+            listening: "Join the Listening Circle"
+          }
+        },
+        patronPathway: {
+          heading: "For companies and patrons",
+          intro:
+            "The most useful first step is not a logo placement. It is a serious conversation about a defined cultural result.",
+          items: [
+            "hosting a chamber preview",
+            "supporting the first recording",
+            "funding musician fees",
+            "offering a suitable space",
+            "introducing one relevant decision-maker",
+            "supporting documentation and archive work"
+          ],
+          askLabel: "First ask",
+          askText: "Open a 20-minute conversation about the first chamber preview.",
+          cta: "Request a sponsor conversation",
+          briefCta: "Request the sponsor brief",
+          mailSubject: "Sponsor conversation for the first chamber preview",
+          briefSubject: "Sponsor brief request"
+        }
+      },
       bankHeading: "Bank transfer",
       bankText:
         "You can support the work of Foundation 432 Hertz by bank transfer. Please use the payment reference below.",
