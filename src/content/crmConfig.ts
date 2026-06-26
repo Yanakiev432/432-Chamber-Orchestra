@@ -51,8 +51,12 @@ export const listeningCircleCopy = {
       "Съгласявам се да получавам имейли от Фондация 432 Херца / 432 Chamber Orchestra относно слушателския кръг, концерти, записи, архив, кампании и възможности за подкрепа. Мога да се отпиша по всяко време.",
     submit: "Влизам в слушателския кръг",
     activeStatus: "Формата ще бъде изпратена към конфигурираната CRM интеграция.",
+    externalStatus: "Формата за слушателския кръг е свързана към външна страница за записване.",
     inactiveStatus:
-      "Формата е подготвена за CRM свързване. До активиране можете да пишете на info@432hz-foundation.com.",
+      "Формата за слушателския кръг се свързва. До активирането ѝ пишете на info@432hz-foundation.com с тема „Слушателски кръг“.",
+    emailCta: "Пишете за слушателския кръг",
+    externalCta: "Отворете формата",
+    emailSubject: "Слушателски кръг",
     options: [
       { value: "follow_only", label: "Само да следя" },
       { value: "time_expertise", label: "С време/експертиза" },
@@ -76,8 +80,12 @@ export const listeningCircleCopy = {
       "I agree to receive emails from Foundation 432 Hertz / 432 Chamber Orchestra about the Listening Circle, concerts, recordings, archive, campaigns, and ways to support the work. I can unsubscribe at any time.",
     submit: "Join the Listening Circle",
     activeStatus: "The form will submit to the configured CRM integration.",
+    externalStatus: "The Listening Circle form is connected through an external signup page.",
     inactiveStatus:
-      "The form is prepared for CRM integration. Until activation, you can write to info@432hz-foundation.com.",
+      "The Listening Circle form is being connected. Until activation, write to info@432hz-foundation.com with “Listening Circle” in the subject.",
+    emailCta: "Write about the Listening Circle",
+    externalCta: "Open the form",
+    emailSubject: "Listening Circle",
     options: [
       { value: "follow_only", label: "Follow only" },
       { value: "time_expertise", label: "Time / Expertise" },
@@ -98,24 +106,30 @@ export const pathwayCopy = {
       text:
         "432 има нужда не само от средства. Нужни са маркетинг, дизайн, PR, фотография, видео, звук, уеб разработка, copywriting, превод, правна, счетоводна, събитийна и fundraising експертиза.",
       button: "Предложете експертиза",
+      fallbackButton: "Предложете експертиза",
+      fallbackSubject: "Предложение за експертиза",
       fallback:
-        "Формата за експертиза ще бъде активирана скоро. Засега пишете на info@432hz-foundation.com."
+        "До свързване на външната форма можете да изпратите предложение за експертиза по имейл."
     },
     host: {
       heading: "Предложете компания, домакин или патрон",
       text:
         "Ако познавате компания, фондация, частен домакин, културно пространство или човек, който би разбрал проекта, предложете един контакт. Това е една от най-ценните форми на подкрепа.",
       button: "Предложете контакт",
+      fallbackButton: "Предложете компания или домакин",
+      fallbackSubject: "Предложение за компания или домакин",
       fallback:
-        "Формата за предложения ще бъде активирана скоро. Засега пишете на info@432hz-foundation.com."
+        "До свързване на външната форма можете да изпратите предложение по имейл."
     },
     sponsor: {
       heading: "Свържете ни с правилния човек",
       text:
         "Първата практическа цел е да отворим 3-5 сериозни разговора с компании, домакини или патрони, които могат да подкрепят първия камерен preview формат.",
       button: "Свържете ни",
+      fallbackButton: "Свържете ни с правилния човек",
+      fallbackSubject: "Въведение към 432 Chamber Orchestra",
       fallback:
-        "Формата за представяне ще бъде активирана скоро. Засега пишете на info@432hz-foundation.com."
+        "До свързване на външната форма можете да изпратите въведение по имейл."
     }
   },
   en: {
@@ -124,24 +138,30 @@ export const pathwayCopy = {
       text:
         "432 needs more than money. The project needs marketing, design, PR, photography, video, sound, web development, copywriting, translation, legal, accounting, event and fundraising expertise.",
       button: "Offer expertise",
+      fallbackButton: "Offer expertise",
+      fallbackSubject: "Expertise offer",
       fallback:
-        "The expertise form will be activated soon. For now, write to info@432hz-foundation.com."
+        "Until the external form is connected, you can send an expertise offer by email."
     },
     host: {
       heading: "Suggest a company, host, or patron",
       text:
         "If you know a company, foundation, private host, cultural space, or person who could understand the project, suggest one contact. This is one of the most valuable forms of support.",
       button: "Suggest a contact",
+      fallbackButton: "Suggest a company or host",
+      fallbackSubject: "Host or company suggestion",
       fallback:
-        "The suggestion form will be activated soon. For now, write to info@432hz-foundation.com."
+        "Until the external form is connected, you can send a host or company suggestion by email."
     },
     sponsor: {
       heading: "Connect us with the right person",
       text:
         "The first practical goal is to open 3-5 serious conversations with companies, hosts, or patrons who could support the first chamber preview.",
       button: "Make an introduction",
+      fallbackButton: "Make an introduction",
+      fallbackSubject: "Introduction for 432 Chamber Orchestra",
       fallback:
-        "The introduction form will be activated soon. For now, write to info@432hz-foundation.com."
+        "Until the external form is connected, you can make an introduction by email."
     }
   }
 } as const satisfies Record<Language, unknown>;

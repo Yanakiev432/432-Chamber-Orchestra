@@ -16,10 +16,14 @@ const {
 };
 
 const copy = listeningCircleCopy[lang];
-const endpoint =
+const actionEndpoint =
   import.meta.env.PUBLIC_BREVO_LISTENING_FORM_ACTION || import.meta.env.PUBLIC_FORMS_ENDPOINT;
-const hasEndpoint = Boolean(endpoint);
+const externalFormUrl = import.meta.env.PUBLIC_BREVO_LISTENING_FORM_URL;
+const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL || "info@432hz-foundation.com";
+const hasActionEndpoint = Boolean(actionEndpoint);
+const hasExternalFormUrl = Boolean(externalFormUrl);
 const statusId = `crm-form-status-${source}`;
+const emailHref = `mailto:${contactEmail}?subject=${encodeURIComponent(copy.emailSubject)}`;
 const borderClass = tone === "dark" ? "border-white/30" : "border-brand-border";
 const surfaceClass = tone === "dark" ? "" : "bg-brand-surface";
 const labelClass = tone === "dark" ? "text-white/80" : "text-brand-muted";
@@ -27,19 +31,26 @@ const fieldClass =
   tone === "dark"
     ? "min-h-11 border border-brand-border bg-brand-surface px-3 text-brand-text"
     : "min-h-11 border border-brand-border bg-brand-surface px-3 text-brand-text";
-const buttonClass = hasEndpoint
+const primaryButtonClass = tone === "dark"
+  ? "inline-flex min-h-11 items-center justify-center border border-white bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-brand-primary transition hover:border-brand-borderWarm hover:bg-brand-bg"
+  : "inline-flex min-h-11 items-center justify-center border border-brand-primary bg-brand-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-white transition hover:border-brand-primaryHover hover:bg-brand-primaryHover";
+const secondaryButtonClass = tone === "dark"
+  ? "inline-flex min-h-11 items-center justify-center border border-white/40 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-white transition hover:border-white"
+  : "inline-flex min-h-11 items-center justify-center border border-brand-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent";
+const buttonClass = hasActionEndpoint
   ? tone === "dark"
-    ? "min-h-11 border border-white bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-brand-primary transition hover:border-brand-borderWarm hover:bg-brand-bg"
-    : "min-h-11 border border-brand-primary bg-brand-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-white transition hover:border-brand-primaryHover hover:bg-brand-primaryHover"
-  : tone === "dark"
-    ? "min-h-11 cursor-not-allowed border border-white/30 px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-white/50"
-    : "min-h-11 cursor-not-allowed border border-brand-border px-5 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-brand-muted";
+    ? primaryButtonClass
+    : primaryButtonClass
+  : hasExternalFormUrl
+    ? primaryButtonClass
+    : secondaryButtonClass;
+const statusMessage = hasActionEndpoint ? copy.activeStatus : hasExternalFormUrl ? copy.externalStatus : copy.inactiveStatus;
 ---
 
 <form
   class={`grid gap-5 border ${borderClass} ${surfaceClass} p-6 md:p-8`}
-  method={hasEndpoint ? "post" : undefined}
-  action={hasEndpoint ? endpoint : undefined}
+  method={hasActionEndpoint ? "post" : undefined}
+  action={hasActionEndpoint ? actionEndpoint : undefined}
   aria-describedby={statusId}
 >
   <h2 class={tone === "dark" ? "font-serif text-3xl leading-tight text-white md:text-4xl" : "font-serif text-3xl leading-tight text-brand-primary md:text-4xl"}>{heading ?? copy.heading}</h2>
@@ -96,15 +107,16 @@ const buttonClass = hasEndpoint
   <CRMIntegrationNotice
     id={statusId}
     tone={tone}
-    message={hasEndpoint ? copy.activeStatus : copy.inactiveStatus}
+    message={statusMessage}
   />
 
-  <button
-    class={buttonClass}
-    type={hasEndpoint ? "submit" : "button"}
-    disabled={!hasEndpoint}
-    aria-disabled={!hasEndpoint}
-  >
-    {copy.submit}
-  </button>
+  {
+    hasActionEndpoint ? (
+      <button class={buttonClass} type="submit">{copy.submit}</button>
+    ) : hasExternalFormUrl ? (
+      <a class={buttonClass} href={externalFormUrl} target="_blank" rel="noopener noreferrer">{copy.externalCta}</a>
+    ) : (
+      <a class={buttonClass} href={emailHref}>{copy.emailCta}</a>
+    )
+  }
 </form>

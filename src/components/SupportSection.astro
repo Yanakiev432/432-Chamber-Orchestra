@@ -13,8 +13,11 @@ type Copy = typeof siteContent.bg.support;
 const { section, lang } = Astro.props as { section: Copy; lang: Language };
 const rows = getBankRows(lang);
 const source = lang === "bg" ? "support_bg" : "support_en";
-const sponsorHref = `mailto:info@432hz-foundation.com?subject=${encodeURIComponent(section.fundraising.patronPathway.mailSubject)}`;
-const briefHref = `mailto:info@432hz-foundation.com?subject=${encodeURIComponent(section.fundraising.patronPathway.briefSubject)}`;
+const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL || "info@432hz-foundation.com";
+const sponsorHref = `mailto:${contactEmail}?subject=${encodeURIComponent(section.fundraising.patronPathway.mailSubject)}`;
+const sponsorBriefUrl = import.meta.env.PUBLIC_SPONSOR_BRIEF_REQUEST_URL;
+const hasSponsorBriefUrl = Boolean(sponsorBriefUrl);
+const briefHref = sponsorBriefUrl || `mailto:${contactEmail}?subject=${encodeURIComponent(section.fundraising.patronPathway.briefSubject)}`;
 ---
 
 <Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.intro} tone="ruled">
@@ -80,7 +83,7 @@ const briefHref = `mailto:info@432hz-foundation.com?subject=${encodeURIComponent
             <a class="inline-flex min-h-11 items-center border border-brand-primary bg-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-brand-primaryHover hover:bg-brand-primaryHover" href={sponsorHref}>
               {section.fundraising.patronPathway.cta}
             </a>
-            <a class="inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent" href={briefHref}>
+            <a class="inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent" href={briefHref} target={hasSponsorBriefUrl ? "_blank" : undefined} rel={hasSponsorBriefUrl ? "noopener noreferrer" : undefined}>
               {section.fundraising.patronPathway.briefCta}
             </a>
           </div>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const content = siteContent.en;
+---
+
+<BaseLayout content={content} lang="en" canonicalHref="/en/thank-you/" alternateHref="/bg/thank-you/">
+  <section class="border-t border-brand-border bg-brand-bg py-20 md:py-28">
+    <div class="container grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
+      <header>
+        <p class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">Listening Circle</p>
+        <h1 class="font-serif text-4xl leading-tight text-brand-primary md:text-6xl">Thank you for joining the Listening Circle.</h1>
+      </header>
+      <article class="border border-brand-border border-l-4 border-l-brand-borderWarm bg-brand-surface p-6 md:p-8">
+        <p class="text-lg leading-9 text-brand-muted">The next step is simple: listen, reply, or introduce one relevant person.</p>
+        <p class="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">You can</p>
+        <ul class="mt-4 grid gap-3 text-sm leading-6 text-brand-muted">
+          <li class="border-t border-brand-border pt-3">share the project with one person</li>
+          <li class="border-t border-brand-border pt-3">suggest a company, host, or patron</li>
+          <li class="border-t border-brand-border pt-3">offer time or expertise</li>
+          <li class="border-t border-brand-border pt-3">support the first documented output</li>
+        </ul>
+        <a class="mt-8 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent" href="/en/#support">Return to support</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

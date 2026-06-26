@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const content = siteContent.bg;
+---
+
+<BaseLayout content={content} lang="bg" canonicalHref="/bg/thank-you/" alternateHref="/en/thank-you/">
+  <section class="border-t border-brand-border bg-brand-bg py-20 md:py-28">
+    <div class="container grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
+      <header>
+        <p class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">Слушателски кръг</p>
+        <h1 class="font-serif text-4xl leading-tight text-brand-primary md:text-6xl">Благодарим Ви, че влизате в слушателския кръг.</h1>
+      </header>
+      <article class="border border-brand-border border-l-4 border-l-brand-borderWarm bg-brand-surface p-6 md:p-8">
+        <p class="text-lg leading-9 text-brand-muted">Следващата стъпка е проста: слушайте, отговорете или свържете проекта с един релевантен човек.</p>
+        <p class="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">Можете да</p>
+        <ul class="mt-4 grid gap-3 text-sm leading-6 text-brand-muted">
+          <li class="border-t border-brand-border pt-3">споделите проекта с един човек</li>
+          <li class="border-t border-brand-border pt-3">предложите компания, домакин или патрон</li>
+          <li class="border-t border-brand-border pt-3">предложите време или експертиза</li>
+          <li class="border-t border-brand-border pt-3">подкрепите първия документиран резултат</li>
+        </ul>
+        <a class="mt-8 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent" href="/bg/#support">Обратно към подкрепа</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

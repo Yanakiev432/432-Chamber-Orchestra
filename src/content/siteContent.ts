@@ -427,7 +427,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       intro:
         "Първата покана е за слушателска общност. Подкрепата със средства е важна, но не води сайта и не замества вниманието към работата.",
       formNote:
-        "Формата е подготвена за бъдеща интеграция. Онлайн изпращането още не е активно. За контакт използвайте info@432hz-foundation.com.",
+        "Формата за слушателския кръг се свързва. До активирането ѝ пишете на info@432hz-foundation.com с тема „Слушателски кръг“.",
       form: {
         firstName: "Име",
         lastName: "Фамилия",
@@ -768,7 +768,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       intro:
         "The first invitation is to a listening community. Financial support matters, but it does not lead the site or replace attention to the work.",
       formNote:
-        "The form is prepared for future integration. Online submission is not active yet. Please use info@432hz-foundation.com for contact.",
+        "The Listening Circle form is being connected. Until activation, write to info@432hz-foundation.com with “Listening Circle” in the subject.",
       form: {
         firstName: "First name",
         lastName: "Last name",
@@ -965,7 +965,7 @@ export const campaignLandingContent = {
         "Съгласявам се да получавам имейли от Фондация 432 Херца / 432 Chamber Orchestra относно слушателския кръг, концерти, записи, архив, кампании и възможности за подкрепа. Мога да се отпиша по всяко време.",
       submit: "Влизам в слушателския кръг",
       inactiveNote:
-        "Формата е подготвена за свързване. До активиране можете да пишете на info@432hz-foundation.com.",
+        "Формата за слушателския кръг се свързва. До активирането ѝ пишете на info@432hz-foundation.com с тема „Слушателски кръг“.",
       options: [
         "Само да следя",
         "С време/експертиза",
@@ -1022,7 +1022,7 @@ export const campaignLandingContent = {
         "I agree to receive emails from Foundation 432 Hertz / 432 Chamber Orchestra about the Listening Circle, concerts, recordings, archive, campaigns, and ways to support the work. I can unsubscribe at any time.",
       submit: "Join the Listening Circle",
       inactiveNote:
-        "The form is prepared for integration. Until activation, you can write to info@432hz-foundation.com.",
+        "The Listening Circle form is being connected. Until activation, write to info@432hz-foundation.com with “Listening Circle” in the subject.",
       options: [
         "Follow only",
         "Time / Expertise",

@@ -1,15 +1,19 @@
 ---
 import CRMIntegrationNotice from "./CRMIntegrationNotice.astro";
 
-const { heading, text, button, fallback, url } = Astro.props as {
+const { heading, text, button, fallback, fallbackButton, fallbackSubject, url } = Astro.props as {
   heading: string;
   text: string;
   button: string;
   fallback: string;
+  fallbackButton: string;
+  fallbackSubject: string;
   url?: string;
 };
 
 const isActive = Boolean(url);
+const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL || "info@432hz-foundation.com";
+const fallbackHref = `mailto:${contactEmail}?subject=${encodeURIComponent(fallbackSubject)}`;
 ---
 
 <article class="flex min-h-full flex-col border border-brand-border bg-brand-surface p-6">
@@ -26,8 +30,14 @@ const isActive = Boolean(url);
         {button}
       </a>
     ) : (
-      <div class="mt-6">
+      <div class="mt-6 grid gap-4">
         <CRMIntegrationNotice message={fallback} />
+        <a
+          class="inline-flex min-h-11 w-fit items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
+          href={fallbackHref}
+        >
+          {fallbackButton}
+        </a>
       </div>
     )
   }
