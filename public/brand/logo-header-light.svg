@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="80" viewBox="0 0 456 80" role="img" aria-labelledby="logoHeaderTitle logoHeaderDesc">
+  <title id="logoHeaderTitle">432 Chamber Orchestra</title>
+  <desc id="logoHeaderDesc">Horizontal identity lockup for 432 Chamber Orchestra on a light background.</desc>
+  <style>
+    .serif{font-family:"Cormorant Garamond","Libre Baskerville",Georgia,serif}.sans{font-family:Inter,"Avenir Next","Helvetica Neue",Arial,sans-serif}.num{font-feature-settings:"tnum" 1}
+  </style>
+  <text x="0" y="62" class="serif num" font-size="74" font-weight="400" fill="#123c3c">432</text>
+  <line x1="145" y1="0" x2="145" y2="80" stroke="#a16207" stroke-width="2"/>
+  <text x="180" y="34" class="sans" font-size="18" font-weight="500" letter-spacing="9" fill="#1f2937">CHAMBER</text>
+  <text x="180" y="72" class="sans" font-size="18" font-weight="500" letter-spacing="8" fill="#1f2937">ORCHESTRA</text>
+</svg>

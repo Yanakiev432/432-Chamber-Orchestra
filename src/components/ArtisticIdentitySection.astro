@@ -10,7 +10,7 @@ const { section } = Astro.props as { section: Copy };
   <div class="space-y-6 text-lg leading-9 text-brand-muted">
     {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
   </div>
-  <p class="mt-10 border border-brand-borderWarm bg-brand-warm p-6 text-base font-semibold leading-8 text-brand-primary">
+  <p class="mt-10 max-w-3xl border-l-2 border-brand-borderWarm pl-5 text-[0.92rem] leading-7 text-brand-muted">
     {section.disclaimer}
   </p>
 </Section>

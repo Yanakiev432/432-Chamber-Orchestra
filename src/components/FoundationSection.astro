@@ -1,6 +1,7 @@
 ---
 import Section from "./Section.astro";
 import type { Language, siteContent } from "../content/siteContent";
+import { brandAssets } from "../content/brandAssets";
 import { foundationData } from "../content/siteContent";
 
 type Copy = typeof siteContent.bg.foundation;
@@ -8,16 +9,27 @@ const { section, lang } = Astro.props as { section: Copy; lang: Language };
 const legal = foundationData[lang];
 ---
 
-<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.subheading} tone="dark">
-  <div class="space-y-6 text-lg leading-9 text-white/80">
+<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.subheading} tone="ruled">
+  <div class="mb-10 border-l-2 border-brand-borderWarm pl-5">
+    <img
+      class="h-auto w-[190px] max-w-full sm:w-[230px]"
+      src={brandAssets.foundation.logoHorizontal}
+      width="230"
+      height="40"
+      alt={lang === "bg" ? "Фондация 432 Херца" : "Foundation 432 Hertz"}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <div class="space-y-6 text-lg leading-9 text-brand-muted">
     {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
   </div>
   <ul class="mt-10 grid gap-3 sm:grid-cols-2">
     {section.responsibilities.map((item) => (
-      <li class="border border-white/30 p-5 font-serif text-xl text-white">{item}</li>
+      <li class="border border-brand-border bg-brand-surface p-5 font-serif text-xl text-brand-primary">{item}</li>
     ))}
   </ul>
-  <dl class="mt-10 grid gap-4 border-t border-white/30 pt-8 text-sm text-white/80 sm:grid-cols-2">
+  <dl class="mt-10 grid gap-4 border-t border-brand-border pt-8 text-sm text-brand-muted sm:grid-cols-2">
     <div><dt class="text-brand-accent">{lang === "bg" ? "Правна форма" : "Legal form"}</dt><dd>{legal.legalForm}</dd></div>
     <div><dt class="text-brand-accent">{lang === "bg" ? "Статут" : "Status"}</dt><dd>{legal.status}</dd></div>
     <div><dt class="text-brand-accent">{legal.eikLabel}</dt><dd>{legal.eik}</dd></div>

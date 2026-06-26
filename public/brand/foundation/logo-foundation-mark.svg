@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="52 52 336 336" role="img" aria-labelledby="foundationMarkTitle foundationMarkDesc">
+  <title id="foundationMarkTitle">432 Hertz Foundation seal</title>
+  <desc id="foundationMarkDesc">Circular secondary identity seal for Foundation 432 Hertz.</desc>
+  <defs>
+    <style><![CDATA[
+      .serif { font-family: Georgia, 'Times New Roman', serif; }
+      .sans { font-family: Inter, Avenir, Helvetica, Arial, sans-serif; }
+      .teal { fill: #123c3c; }
+      .slate { fill: #334155; }
+      .charcoal { fill: #1f2937; }
+      .copper-stroke { stroke: #a16207; }
+      .teal-stroke { stroke: #123c3c; }
+      text { dominant-baseline: alphabetic; }
+    ]]></style>
+  </defs>
+  <g transform="translate(220 220)" text-anchor="middle">
+    <circle cx="0" cy="0" r="168" fill="none" class="teal-stroke" stroke-width="4"/>
+    <circle cx="0" cy="0" r="138" fill="none" class="copper-stroke" stroke-width="1.8" opacity="0.9"/>
+    <text x="0" y="30" class="serif teal" font-size="118" letter-spacing="-2">432</text>
+    <line x1="-55" y1="64" x2="55" y2="64" class="copper-stroke" stroke-width="2"/>
+    <text x="0" y="104" class="sans slate" font-size="19" letter-spacing="7" font-weight="600">FOUNDATION</text>
+    <text x="0" y="-108" class="sans charcoal" font-size="16" letter-spacing="7" font-weight="600">432 HERTZ FOUNDATION</text>
+    <circle cx="-112" cy="105" r="4" fill="#a16207"/>
+    <circle cx="112" cy="105" r="4" fill="#a16207"/>
+  </g>
+</svg>

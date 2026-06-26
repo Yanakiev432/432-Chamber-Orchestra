@@ -7,7 +7,7 @@ import type { CampaignLandingCopy, Language } from "../content/siteContent";
 const { campaign, lang } = Astro.props as { campaign: CampaignLandingCopy; lang: Language };
 ---
 
-<section class="relative z-0 border-b border-brand-border bg-brand-surface py-16 md:py-24">
+<section class="relative z-0 border-b border-brand-border bg-brand-bg py-16 md:py-24">
   <div class="container grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
     <div>
       <p class="mb-5 text-xs font-semibold uppercase tracking-[0.1em] text-brand-accent">{campaign.hero.eyebrow}</p>

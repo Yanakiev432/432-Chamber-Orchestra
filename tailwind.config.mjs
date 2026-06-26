@@ -5,16 +5,16 @@ export default {
     extend: {
       colors: {
         brand: {
-          bg: "var(--color-brand-bg)",
-          warm: "var(--color-brand-warm)",
-          surface: "var(--color-brand-surface)",
-          text: "var(--color-brand-text)",
-          muted: "var(--color-brand-muted)",
-          primary: "var(--color-brand-primary)",
-          primaryHover: "var(--color-brand-primary-hover)",
-          accent: "var(--color-brand-accent)",
-          border: "var(--color-brand-border)",
-          borderWarm: "var(--color-brand-border-warm)"
+          bg: "#f8fafc",
+          warm: "#ffffcc",
+          surface: "#ffffff",
+          text: "#1f2937",
+          muted: "#334155",
+          primary: "#123c3c",
+          primaryHover: "#0b2f2f",
+          accent: "#a16207",
+          border: "#cbd5e1",
+          borderWarm: "#d8c99b"
         }
       },
       fontFamily: {

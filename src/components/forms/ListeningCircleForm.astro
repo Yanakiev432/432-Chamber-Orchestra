@@ -21,6 +21,7 @@ const endpoint =
 const hasEndpoint = Boolean(endpoint);
 const statusId = `crm-form-status-${source}`;
 const borderClass = tone === "dark" ? "border-white/30" : "border-brand-border";
+const surfaceClass = tone === "dark" ? "" : "bg-brand-surface";
 const labelClass = tone === "dark" ? "text-white/80" : "text-brand-muted";
 const fieldClass =
   tone === "dark"
@@ -36,7 +37,7 @@ const buttonClass = hasEndpoint
 ---
 
 <form
-  class={`grid gap-5 border ${borderClass} p-6 md:p-8`}
+  class={`grid gap-5 border ${borderClass} ${surfaceClass} p-6 md:p-8`}
   method={hasEndpoint ? "post" : undefined}
   action={hasEndpoint ? endpoint : undefined}
   aria-describedby={statusId}

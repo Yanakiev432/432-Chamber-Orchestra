@@ -12,13 +12,13 @@ const { heading, text, button, fallback, url } = Astro.props as {
 const isActive = Boolean(url);
 ---
 
-<article class="flex min-h-full flex-col border border-white/30 p-6">
-  <h3 class="font-serif text-2xl text-white">{heading}</h3>
-  <p class="mt-4 flex-1 text-base leading-8 text-white/80">{text}</p>
+<article class="flex min-h-full flex-col border border-brand-border bg-brand-surface p-6">
+  <h3 class="font-serif text-2xl text-brand-primary">{heading}</h3>
+  <p class="mt-4 flex-1 text-base leading-8 text-brand-muted">{text}</p>
   {
     isActive ? (
       <a
-        class="mt-6 inline-flex min-h-11 w-fit items-center border border-white px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-brand-accent hover:text-brand-accent"
+        class="mt-6 inline-flex min-h-11 w-fit items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
         href={url}
         target="_blank"
         rel="noopener noreferrer"
@@ -27,7 +27,7 @@ const isActive = Boolean(url);
       </a>
     ) : (
       <div class="mt-6">
-        <CRMIntegrationNotice message={fallback} tone="dark" />
+        <CRMIntegrationNotice message={fallback} />
       </div>
     )
   }

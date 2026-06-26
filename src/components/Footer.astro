@@ -1,5 +1,6 @@
 ---
 import type { siteContent } from "../content/siteContent";
+import { brandAssets } from "../content/brandAssets";
 
 type FooterCopy = typeof siteContent.bg.footer;
 
@@ -13,11 +14,12 @@ const { footer } = Astro.props;
 <footer class="border-t border-brand-primary bg-brand-primary py-12 text-white">
   <div class="container grid gap-10 md:grid-cols-3">
     <div>
-      <p class="font-serif text-2xl">{footer.orchestraName}</p>
+      <img class="h-auto w-[190px] max-w-full" src={brandAssets.footerLogo} width="190" height="33" alt="432 Chamber Orchestra" loading="lazy" decoding="async" />
       <p class="mt-3 text-sm leading-6 text-white/75">{footer.orchestraLine}</p>
     </div>
     <div>
-      <p class="font-serif text-xl">{footer.foundationName}</p>
+      <img class="h-auto w-[150px] max-w-full opacity-95" src={brandAssets.foundation.logoDark} width="150" height="25" alt="Foundation 432 Hertz" loading="lazy" decoding="async" />
+      <p class="sr-only">{footer.foundationName}</p>
       <p class="mt-3 text-sm leading-6 text-white/75">{footer.foundationLine}</p>
     </div>
     <div>

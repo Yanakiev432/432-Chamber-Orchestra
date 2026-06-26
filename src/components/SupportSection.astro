@@ -5,6 +5,7 @@ import HostSuggestionBlock from "./forms/HostSuggestionBlock.astro";
 import ListeningCircleForm from "./forms/ListeningCircleForm.astro";
 import SponsorReferralBlock from "./forms/SponsorReferralBlock.astro";
 import type { Language, siteContent } from "../content/siteContent";
+import { brandAssets } from "../content/brandAssets";
 import { getBankRows } from "../content/siteContent";
 
 type Copy = typeof siteContent.bg.support;
@@ -14,9 +15,9 @@ const rows = getBankRows(lang);
 const source = lang === "bg" ? "support_bg" : "support_en";
 ---
 
-<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.intro} tone="dark">
+<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} intro={section.intro} tone="ruled">
   <div class="space-y-10">
-    <ListeningCircleForm lang={lang} source={source} tone="dark" />
+    <ListeningCircleForm lang={lang} source={source} />
 
     <div class="grid gap-4 md:grid-cols-2">
       <ExpertiseOfferBlock lang={lang} />
@@ -25,12 +26,23 @@ const source = lang === "bg" ? "support_bg" : "support_en";
 
     <SponsorReferralBlock lang={lang} />
 
-    <article class="border border-brand-borderWarm bg-brand-warm p-6 text-brand-text md:p-8">
-      <h3 class="font-serif text-3xl text-brand-primary">{section.bankHeading}</h3>
+    <article class="border border-brand-border border-t-4 border-t-brand-borderWarm bg-brand-surface p-6 text-brand-text md:p-8">
+      <div class="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+        <h3 class="font-serif text-3xl text-brand-primary">{section.bankHeading}</h3>
+        <img
+          class="h-auto w-[150px] max-w-full opacity-90 sm:w-[175px]"
+          src={brandAssets.foundation.logoLight}
+          width="175"
+          height="30"
+          alt={lang === "bg" ? "Фондация 432 Херца" : "Foundation 432 Hertz"}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
       <p class="mt-4 max-w-2xl text-base leading-8 text-brand-muted">{section.bankText}</p>
       <dl class="mt-8 grid gap-4">
         {rows.map((row) => (
-          <div class="grid gap-2 border-t border-brand-borderWarm pt-4 sm:grid-cols-[180px_1fr]">
+          <div class="grid gap-2 border-t border-brand-border pt-4 sm:grid-cols-[180px_1fr]">
             <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-brand-primary">{row.label}</dt>
             <dd class="break-words font-mono text-sm">{row.value}</dd>
           </div>
@@ -38,16 +50,16 @@ const source = lang === "bg" ? "support_bg" : "support_en";
       </dl>
     </article>
 
-    <article class="border border-white/30 p-6">
-      <h3 class="font-serif text-2xl text-white">{section.paymentPlaceholderHeading}</h3>
-      <p class="mt-4 text-base leading-8 text-white/80">{section.paymentPlaceholder}</p>
+    <article class="border border-brand-border bg-brand-surface p-6">
+      <h3 class="font-serif text-2xl text-brand-primary">{section.paymentPlaceholderHeading}</h3>
+      <p class="mt-4 text-base leading-8 text-brand-muted">{section.paymentPlaceholder}</p>
     </article>
 
-    <article class="border border-white/30 p-6">
-      <h3 class="font-serif text-2xl text-white">{section.patronHeading}</h3>
-      <p class="mt-4 text-base leading-8 text-white/80">{section.patronText}</p>
+    <article class="border border-brand-border bg-brand-surface p-6">
+      <h3 class="font-serif text-2xl text-brand-primary">{section.patronHeading}</h3>
+      <p class="mt-4 text-base leading-8 text-brand-muted">{section.patronText}</p>
       <a
-        class="mt-6 inline-flex min-h-11 items-center border border-white px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-brand-accent hover:text-brand-accent"
+        class="mt-6 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
         href="mailto:info@432hz-foundation.com"
       >
         info@432hz-foundation.com

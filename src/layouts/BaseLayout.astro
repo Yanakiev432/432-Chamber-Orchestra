@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import { brandAssets } from "../content/brandAssets";
 import type { Language, siteContent } from "../content/siteContent";
 
 type Copy = typeof siteContent.bg;
@@ -28,11 +29,11 @@ const alternate = alternateHref ?? content.alternateHref;
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="bg" href={lang === "bg" ? canonical : alternate} />
     <link rel="alternate" hreflang="en" href={lang === "en" ? canonical : alternate} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={brandAssets.favicon} type="image/svg+xml" />
   </head>
   <body class="bg-brand-bg text-brand-text">
     <Header lang={lang} nav={content.nav} alternateLang={content.alternateLang} alternateHref={alternate} />
-    <main>
+    <main class="bg-brand-bg">
       <slot />
     </main>
     <Footer footer={content.footer} />
