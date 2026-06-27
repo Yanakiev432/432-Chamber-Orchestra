@@ -125,3 +125,57 @@ Brevo SMTP settings are for future server-side or internal automation only.
 - Do not use SMTP from browser JavaScript.
 - Do not expose SMTP credentials through `PUBLIC_` variables.
 
+## Local Setup Automation
+
+Run these commands locally from the project root:
+
+```bash
+pnpm run crm:brevo:setup
+pnpm run crm:sheets:templates
+pnpm run crm:check
+```
+
+`crm:brevo:setup` requires `BREVO_API_KEY` in `.env.local`. It creates or reuses the Brevo folder, lists, and contact attributes described above. It writes a safe local result file to `generated/brevo-crm-setup-result.json` with IDs and names, but no secrets.
+
+Optional Brevo API smoke test:
+
+```bash
+pnpm run crm:brevo:setup -- --smoke
+```
+
+This verifies that the API key can reach Brevo, but does not create folders, lists, or attributes.
+
+`crm:sheets:templates` creates CSV templates in `generated/crm-sheets/` for the Google Sheets backup structure.
+
+`crm:check` checks whether local CRM environment variables are present and warns if server-side secrets appear in public/frontend code.
+
+These scripts are local maintainer tools. They do not add frontend Brevo API calls, SMTP sending, fake endpoints, or browser-side automation.
+
+## What Remains Manual
+
+Manual in Brevo:
+
+- Create the Listening Circle signup form.
+- Set the GDPR/consent field.
+- Map form fields to contact attributes.
+- Attach the form to `01 Listening Circle`.
+- Create the 5-email welcome automation.
+- Test a real signup.
+
+Manual in Tally:
+
+- Create the Expertise form.
+- Create the Host Suggestion form.
+- Create the Sponsor Referral form.
+- Connect each form to Google Sheets.
+- Copy public form URLs into `.env.local`.
+
+Manual in Google Sheets:
+
+- Import the generated CSV templates.
+- Add dropdown validation if desired.
+- Protect important columns if desired.
+
+Tally to Google Sheets can be connected through Tally's own integration after the forms and target spreadsheet tabs exist.
+
+No secrets should be committed. `.env.local` and `generated/` are ignored by git.
