@@ -4,6 +4,7 @@ import Section from "./Section.astro";
 import VisionSection from "./VisionSection.astro";
 import MissionSection from "./MissionSection.astro";
 import ListeningCommunitySection from "./ListeningCommunitySection.astro";
+import FounderSection from "./FounderSection.astro";
 import FoundationSection from "./FoundationSection.astro";
 import CampaignSection from "./CampaignSection.astro";
 import AllyWaysSection from "./AllyWaysSection.astro";
@@ -43,6 +44,7 @@ const { content, lang } = Astro.props as { content: Copy; lang: Language };
 <VisionSection section={content.vision} />
 <MissionSection section={content.mission} />
 <ListeningCommunitySection section={content.listening} />
+<FounderSection section={content.founder} />
 <FoundationSection section={content.foundation} lang={lang} />
 <CampaignSection section={content.campaign} />
 <AllyWaysSection section={content.allyWays} />

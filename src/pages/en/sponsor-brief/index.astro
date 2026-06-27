@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SponsorBriefPage from "../../../components/SponsorBriefPage.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const content = {
+  ...siteContent.en,
+  meta: {
+    title: "Sponsor brief · 432 Chamber Orchestra",
+    description: "A concise print-ready sponsor brief for 432 Chamber Orchestra and Foundation 432 Hertz."
+  }
+};
+---
+
+<BaseLayout content={content} lang="en" canonicalHref="/en/sponsor-brief/" alternateHref="/bg/sponsor-brief/">
+  <SponsorBriefPage lang="en" />
+</BaseLayout>

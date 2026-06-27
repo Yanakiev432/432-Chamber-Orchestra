@@ -1,6 +1,6 @@
 ---
 import CRMIntegrationNotice from "./CRMIntegrationNotice.astro";
-import { listeningCircleCopy, type FormSource } from "../../content/crmConfig";
+import { crmConfig, listeningCircleCopy, type FormSource } from "../../content/crmConfig";
 import type { Language } from "../../content/siteContent";
 
 const {
@@ -16,10 +16,9 @@ const {
 };
 
 const copy = listeningCircleCopy[lang];
-const actionEndpoint =
-  import.meta.env.PUBLIC_BREVO_LISTENING_FORM_ACTION || import.meta.env.PUBLIC_FORMS_ENDPOINT;
-const externalFormUrl = import.meta.env.PUBLIC_BREVO_LISTENING_FORM_URL;
-const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL || "info@432hz-foundation.com";
+const actionEndpoint = crmConfig.brevo.listeningFormAction;
+const externalFormUrl = crmConfig.brevo.listeningFormUrl;
+const contactEmail = crmConfig.contactEmail;
 const hasActionEndpoint = Boolean(actionEndpoint);
 const hasExternalFormUrl = Boolean(externalFormUrl);
 const statusId = `crm-form-status-${source}`;

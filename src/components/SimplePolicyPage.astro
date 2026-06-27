@@ -1,0 +1,39 @@
+---
+import Section from "./Section.astro";
+import type { Language } from "../content/siteContent";
+
+type PageSection = {
+  title: string;
+  body: string[];
+  list?: string[];
+};
+
+const { lang, title, intro, sections } = Astro.props as {
+  lang: Language;
+  title: string;
+  intro: string[];
+  sections: PageSection[];
+};
+---
+
+<Section id="policy-page" eyebrow={lang === "bg" ? "Информация" : "Information"} heading={title} tone="ruled">
+  <div class="space-y-6 text-lg leading-9 text-brand-muted">
+    {intro.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+
+  <div class="mt-10 grid gap-6">
+    {sections.map((section) => (
+      <article class="border border-brand-border bg-white p-6 md:p-8">
+        <h2 class="font-serif text-2xl text-brand-primary">{section.title}</h2>
+        <div class="mt-4 space-y-4 text-base leading-8 text-brand-muted">
+          {section.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+        {section.list && (
+          <ul class="mt-5 grid gap-3 text-sm leading-6 text-brand-muted">
+            {section.list.map((item) => <li class="border-t border-brand-border pt-3">{item}</li>)}
+          </ul>
+        )}
+      </article>
+    ))}
+  </div>
+</Section>

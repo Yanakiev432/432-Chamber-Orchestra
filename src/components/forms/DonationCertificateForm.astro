@@ -1,0 +1,93 @@
+---
+import type { Language } from "../../content/siteContent";
+
+const { lang } = Astro.props as { lang: Language };
+const isBg = lang === "bg";
+const email = import.meta.env.PUBLIC_CONTACT_EMAIL || "info@432hz-foundation.com";
+const labels = isBg
+  ? {
+      name: "Име на дарителя",
+      email: "Имейл",
+      date: "Дата на дарението",
+      amount: "Сума",
+      currency: "Валута",
+      reference: "Основание / бележка към плащането",
+      message: "Съобщение",
+      button: "Подгответе имейл заявка",
+      note: "Няма активна backend интеграция. Бутонът подготвя имейл до фондацията."
+    }
+  : {
+      name: "Donor name",
+      email: "Email",
+      date: "Donation date",
+      amount: "Donation amount",
+      currency: "Currency",
+      reference: "Payment reference / note",
+      message: "Message",
+      button: "Prepare email request",
+      note: "No backend integration is active. The button prepares an email to the foundation."
+    };
+---
+
+<form class="border border-brand-border bg-white p-6 md:p-8" data-certificate-form data-lang={lang} data-email={email}>
+  <p class="mb-6 text-sm leading-7 text-brand-muted">{labels.note}</p>
+  <div class="grid gap-4 md:grid-cols-2">
+    <label class="grid gap-2 text-sm font-semibold text-brand-primary">
+      {labels.name}
+      <input class="border border-brand-border bg-brand-bg px-3 py-3 font-normal text-brand-text" name="donorName" type="text" />
+    </label>
+    <label class="grid gap-2 text-sm font-semibold text-brand-primary">
+      {labels.email}
+      <input class="border border-brand-border bg-brand-bg px-3 py-3 font-normal text-brand-text" name="email" type="email" />
+    </label>
+    <label class="grid gap-2 text-sm font-semibold text-brand-primary">
+      {labels.date}
+      <input class="border border-brand-border bg-brand-bg px-3 py-3 font-normal text-brand-text" name="donationDate" type="date" />
+    </label>
+    <label class="grid gap-2 text-sm font-semibold text-brand-primary">
+      {labels.amount}
+      <input class="border border-brand-border bg-brand-bg px-3 py-3 font-normal text-brand-text" name="amount" type="text" />
+    </label>
+    <label class="grid gap-2 text-sm font-semibold text-brand-primary">
+      {labels.currency}
+      <input class="border border-brand-border bg-brand-bg px-3 py-3 font-normal text-brand-text" name="currency" type="text" value="EUR" />
+    </label>
+    <label class="grid gap-2 text-sm font-semibold text-brand-primary">
+      {labels.reference}
+      <input class="border border-brand-border bg-brand-bg px-3 py-3 font-normal text-brand-text" name="reference" type="text" />
+    </label>
+    <label class="grid gap-2 text-sm font-semibold text-brand-primary md:col-span-2">
+      {labels.message}
+      <textarea class="min-h-28 border border-brand-border bg-brand-bg px-3 py-3 font-normal text-brand-text" name="message"></textarea>
+    </label>
+  </div>
+  <button class="mt-6 inline-flex min-h-11 items-center border border-brand-primary bg-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white" type="submit">
+    {labels.button}
+  </button>
+</form>
+
+<script>
+  document.querySelectorAll("[data-certificate-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const currentForm = event.currentTarget;
+      if (!(currentForm instanceof HTMLFormElement)) return;
+      const data = new FormData(currentForm);
+      const isBg = currentForm.dataset.lang === "bg";
+      const recipient = currentForm.dataset.email || "info@432hz-foundation.com";
+      const subject = isBg ? "Заявка за сертификат за дарение" : "Donation certificate request";
+      const lines = [
+        subject,
+        "",
+        `${isBg ? "Име на дарителя" : "Donor name"}: ${data.get("donorName") || ""}`,
+        `${isBg ? "Имейл" : "Email"}: ${data.get("email") || ""}`,
+        `${isBg ? "Дата на дарението" : "Donation date"}: ${data.get("donationDate") || ""}`,
+        `${isBg ? "Сума" : "Amount"}: ${data.get("amount") || ""}`,
+        `${isBg ? "Валута" : "Currency"}: ${data.get("currency") || "EUR"}`,
+        `${isBg ? "Основание / бележка" : "Payment reference / note"}: ${data.get("reference") || ""}`,
+        `${isBg ? "Съобщение" : "Message"}: ${data.get("message") || ""}`
+      ];
+      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    });
+  });
+</script>

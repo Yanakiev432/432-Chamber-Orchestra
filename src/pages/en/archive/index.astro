@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PhotoArchiveSection from "../../../components/PhotoArchiveSection.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const content = {
+  ...siteContent.en,
+  meta: {
+    title: "Photo archive · 432 Chamber Orchestra",
+    description:
+      "Selected archival photographs from the earlier life of 432 Chamber Orchestra, including conductor, quartet formation, and whole-orchestra concert images."
+  }
+};
+---
+
+<BaseLayout content={content} lang="en" canonicalHref="/en/archive/" alternateHref="/bg/archive/">
+  <PhotoArchiveSection lang="en" />
+</BaseLayout>

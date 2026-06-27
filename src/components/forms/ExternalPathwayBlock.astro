@@ -1,5 +1,6 @@
 ---
 import CRMIntegrationNotice from "./CRMIntegrationNotice.astro";
+import { crmConfig } from "../../content/crmConfig";
 
 const { heading, text, button, fallback, fallbackButton, fallbackSubject, url } = Astro.props as {
   heading: string;
@@ -12,7 +13,7 @@ const { heading, text, button, fallback, fallbackButton, fallbackSubject, url } 
 };
 
 const isActive = Boolean(url);
-const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL || "info@432hz-foundation.com";
+const contactEmail = crmConfig.contactEmail;
 const fallbackHref = `mailto:${contactEmail}?subject=${encodeURIComponent(fallbackSubject)}`;
 ---
 

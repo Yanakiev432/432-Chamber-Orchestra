@@ -1,6 +1,7 @@
 ﻿---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Seo from "../components/Seo.astro";
 import "../styles/global.css";
 import { brandAssets } from "../content/brandAssets";
 import type { Language, siteContent } from "../content/siteContent";
@@ -24,11 +25,7 @@ const alternate = alternateHref ?? content.alternateHref;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{content.meta.title}</title>
-    <meta name="description" content={content.meta.description} />
-    <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="bg" href={lang === "bg" ? canonical : alternate} />
-    <link rel="alternate" hreflang="en" href={lang === "en" ? canonical : alternate} />
+    <Seo title={content.meta.title} description={content.meta.description} canonicalHref={canonical} alternateHref={alternate} lang={lang} />
     <link rel="icon" href={brandAssets.favicon} type="image/svg+xml" />
   </head>
   <body class="bg-brand-bg text-brand-text">

@@ -1,4 +1,4 @@
-# 432 Hertz Foundation — Brand Assets v2
+﻿# 432 Hertz Foundation — Brand Assets v2
 
 Corrected naming and logo system.
 
@@ -11,10 +11,10 @@ Corrected naming and logo system.
 
 ## Forbidden names
 
-- `Hertz 432 Foundation`
-- `432H`
+- `deprecated foundation-name order`
+- `deprecated short abbreviation`
 
-`432H` is intentionally excluded because it does not communicate anything meaningful to a new viewer.
+`deprecated short abbreviation` is intentionally excluded because it does not communicate anything meaningful to a new viewer.
 
 ## Recommended use
 

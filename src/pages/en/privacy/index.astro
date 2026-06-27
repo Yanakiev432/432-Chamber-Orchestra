@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SimplePolicyPage from "../../../components/SimplePolicyPage.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const sections = [
+  { title: "Data controller", body: ["The data controller is Foundation 432 Hertz, UIC/EIK 204925949. Contact: info@432hz-foundation.com."] },
+  { title: "What data is collected", body: ["The site may collect information you choose to provide, such as name, email address, language preference, support interest, message content, and donation certificate request details."] },
+  { title: "Why data is collected", body: ["Information is used for Listening Circle communication, concerts, recordings, archive updates, campaigns, support communication, and donation certificate requests."] },
+  { title: "Consent and unsubscribe", body: ["You can unsubscribe or ask to stop receiving communication at any time by writing to info@432hz-foundation.com."] },
+  { title: "Tools and processors", body: ["CRM/form integrations are prepared but not live. When connected, the site may use form and CRM tools such as Brevo, Tally, or Google Sheets to process supporter information."] },
+  { title: "Retention", body: ["Information is kept only as long as needed for communication, support administration, documentation, or legal/accounting context. No fixed retention period is claimed here."] },
+  { title: "Rights and contact", body: ["You may contact the foundation to ask about access, correction, deletion, or restriction of personal data at info@432hz-foundation.com."] },
+  { title: "Updates to this policy", body: ["This page may be updated when form and CRM integrations are activated or when the website support flow changes."] }
+];
+---
+
+<BaseLayout content={{ ...siteContent.en, meta: { title: "Privacy · 432 Chamber Orchestra", description: "Privacy and GDPR information for 432 Chamber Orchestra and Foundation 432 Hertz." } }} lang="en" canonicalHref="/en/privacy/" alternateHref="/bg/privacy/">
+  <SimplePolicyPage lang="en" title="Privacy / GDPR" intro={["This page explains how Foundation 432 Hertz handles supporter information submitted through the website."]} sections={sections} />
+</BaseLayout>

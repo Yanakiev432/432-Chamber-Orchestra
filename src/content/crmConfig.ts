@@ -1,6 +1,27 @@
 import type { Language } from "./siteContent";
 
+const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL || "info@432hz-foundation.com";
+const listeningFormUrl = import.meta.env.PUBLIC_BREVO_LISTENING_FORM_URL || "";
+const listeningFormAction = import.meta.env.PUBLIC_BREVO_LISTENING_FORM_ACTION || "";
+const expertiseUrl = import.meta.env.PUBLIC_TALLY_EXPERTISE_URL || "";
+const hostSuggestionUrl = import.meta.env.PUBLIC_TALLY_HOST_SUGGESTION_URL || "";
+const sponsorReferralUrl = import.meta.env.PUBLIC_TALLY_SPONSOR_REFERRAL_URL || "";
+
 export const crmConfig = {
+  contactEmail,
+  brevo: {
+    listeningFormUrl,
+    listeningFormAction,
+    isListeningFormConfigured: Boolean(listeningFormUrl || listeningFormAction)
+  },
+  tally: {
+    expertiseUrl,
+    hostSuggestionUrl,
+    sponsorReferralUrl,
+    isExpertiseConfigured: Boolean(expertiseUrl),
+    isHostSuggestionConfigured: Boolean(hostSuggestionUrl),
+    isSponsorReferralConfigured: Boolean(sponsorReferralUrl)
+  },
   helpTypes: [
     "follow_only",
     "time_expertise",

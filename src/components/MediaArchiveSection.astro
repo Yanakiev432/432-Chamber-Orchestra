@@ -2,8 +2,9 @@
 import Section from "./Section.astro";
 import AudioEmbedCard from "./AudioEmbedCard.astro";
 import PhotoGrid from "./PhotoGrid.astro";
+import SoundCloudEmbed from "./SoundCloudEmbed.astro";
 import { audioArchive, mediaArchiveCopy } from "../content/audioArchive";
-import { photoArchive } from "../content/photoArchive";
+import { homepagePhotoPreview } from "../content/photoArchive";
 import type { Language } from "../content/siteContent";
 
 const { lang } = Astro.props as { lang: Language };
@@ -16,73 +17,110 @@ const copy = mediaArchiveCopy[lang];
       {copy.intro.map((paragraph) => <p>{paragraph}</p>)}
     </div>
 
-    <article class="border border-brand-border border-l-4 border-l-brand-borderWarm bg-brand-surface p-6 md:p-8">
-      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">{copy.featuredLabel}</p>
-      <h3 class="mt-4 font-serif text-3xl leading-tight text-brand-primary">{audioArchive.featuredBandcamp.title}</h3>
-      <p class="mt-4 text-base leading-8 text-brand-muted">{audioArchive.featuredBandcamp.description}</p>
-      <p class="mt-3 text-sm leading-6 text-brand-muted">{audioArchive.featuredBandcamp.credits}</p>
-      <div class="mt-6 grid gap-3 text-sm leading-6 text-brand-muted sm:grid-cols-2">
-        {audioArchive.featuredBandcamp.tracks.map((track) => (
-          <div class="flex justify-between gap-4 border-t border-brand-border pt-3">
-            <span>{track.title}</span>
-            <span class="font-mono text-xs text-brand-accent">{track.duration}</span>
-          </div>
-        ))}
+    <section aria-labelledby="soundcloud-archive-heading" class="space-y-8">
+      <div class="max-w-4xl">
+        <h3 id="soundcloud-archive-heading" class="font-serif text-3xl text-brand-primary">
+          {copy.soundcloudHeading}
+        </h3>
+        <div class="mt-4 space-y-4 text-base leading-8 text-brand-muted">
+          {copy.soundcloudText.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
       </div>
+
+      <article class="border border-brand-border border-l-4 border-l-brand-borderWarm bg-white p-5 md:p-7">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">{copy.holbergLabel}</p>
+        <h4 class="mt-3 font-serif text-2xl leading-tight text-brand-primary">{copy.holbergHeading}</h4>
+        <p class="mt-3 max-w-3xl text-base leading-8 text-brand-muted">{copy.holbergText}</p>
+        <div class="mt-6 border border-brand-border bg-brand-surface p-4">
+          <h5 class="mb-4 font-serif text-xl leading-tight text-brand-primary">
+            {lang === "bg" ? audioArchive.soundcloud.featured.titleBg : audioArchive.soundcloud.featured.title}
+          </h5>
+          <SoundCloudEmbed
+            url={audioArchive.soundcloud.featured.url}
+            title={lang === "bg" ? audioArchive.soundcloud.featured.titleBg : audioArchive.soundcloud.featured.title}
+            type={audioArchive.soundcloud.featured.type}
+          />
+        </div>
+      </article>
+
+      <article class="border border-brand-border bg-white p-5 md:p-7">
+        <h4 class="font-serif text-2xl leading-tight text-brand-primary">
+          {lang === "bg" ? audioArchive.soundcloud.comparison.titleBg : audioArchive.soundcloud.comparison.title}
+        </h4>
+        <p class="mt-3 text-sm leading-7 text-brand-muted">{audioArchive.soundcloud.comparison.note[lang]}</p>
+        <div class="mt-6 border border-brand-border bg-brand-surface p-4">
+          <SoundCloudEmbed
+            url={audioArchive.soundcloud.comparison.url}
+            title={lang === "bg" ? audioArchive.soundcloud.comparison.titleBg : audioArchive.soundcloud.comparison.title}
+            type={audioArchive.soundcloud.comparison.type}
+          />
+        </div>
+      </article>
+
       <a
-        class="mt-8 inline-flex min-h-11 items-center border border-brand-primary bg-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-brand-primaryHover hover:bg-brand-primaryHover"
-        href={audioArchive.featuredBandcamp.url}
+        class="inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
+        href={audioArchive.soundcloud.profileUrl}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {copy.listenOnBandcamp}
+        {copy.openSoundCloud}
       </a>
-    </article>
+    </section>
 
-    <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-      <section aria-labelledby="bandcamp-archive-heading">
-        <h3 id="bandcamp-archive-heading" class="font-serif text-3xl text-brand-primary">{copy.bandcampHeading}</h3>
-        <p class="mt-4 text-base leading-8 text-brand-muted">{copy.bandcampText}</p>
-        <div class="mt-6 grid gap-4 sm:grid-cols-2">
-          {audioArchive.bandcamp.map((item) => (
-            <AudioEmbedCard item={item} label={copy.listenOnBandcamp} sourceLabel={copy.sourceLabel} />
+    <section aria-labelledby="bandcamp-archive-heading">
+      <h3 id="bandcamp-archive-heading" class="font-serif text-3xl text-brand-primary">{copy.bandcampHeading}</h3>
+      <p class="mt-4 max-w-4xl text-base leading-8 text-brand-muted">{copy.bandcampText}</p>
+
+      <article class="mt-6 border border-brand-border border-l-4 border-l-brand-borderWarm bg-white p-6 md:p-8">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">{copy.featuredLabel}</p>
+        <h4 class="mt-4 font-serif text-3xl leading-tight text-brand-primary">{audioArchive.featuredBandcamp.title}</h4>
+        <p class="mt-4 text-base leading-8 text-brand-muted">{audioArchive.featuredBandcamp.description}</p>
+        <p class="mt-3 text-sm leading-6 text-brand-muted">{audioArchive.featuredBandcamp.credits}</p>
+        <div class="mt-6 grid gap-3 text-sm leading-6 text-brand-muted sm:grid-cols-2">
+          {audioArchive.featuredBandcamp.tracks.map((track) => (
+            <div class="flex justify-between gap-4 border-t border-brand-border pt-3">
+              <span>{track.title}</span>
+              <span class="font-mono text-xs text-brand-accent">{track.duration}</span>
+            </div>
           ))}
         </div>
         <a
-          class="mt-6 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
-          href={audioArchive.bandcampProfile}
+          class="mt-8 inline-flex min-h-11 items-center border border-brand-primary bg-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-brand-primaryHover hover:bg-brand-primaryHover"
+          href={audioArchive.featuredBandcamp.url}
           target="_blank"
           rel="noopener noreferrer"
         >
-          {copy.openBandcamp}
+          {copy.listenOnBandcamp}
         </a>
-      </section>
+      </article>
 
-      <section aria-labelledby="soundcloud-archive-heading">
-        <h3 id="soundcloud-archive-heading" class="font-serif text-3xl text-brand-primary">{copy.soundcloudHeading}</h3>
-        <p class="mt-4 text-base leading-8 text-brand-muted">{copy.soundcloudText}</p>
-        <div class="mt-6">
-          {audioArchive.soundcloud.map((item) => (
-            <AudioEmbedCard item={item} label={copy.listenOnSoundCloud} sourceLabel={copy.sourceLabel} />
-          ))}
-        </div>
-        <a
-          class="mt-6 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
-          href={audioArchive.soundcloudProfile}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {copy.openSoundCloud}
-        </a>
-      </section>
-    </div>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {audioArchive.bandcamp.map((item) => (
+          <AudioEmbedCard item={item} label={copy.listenOnBandcamp} sourceLabel={copy.sourceLabel} />
+        ))}
+      </div>
+      <a
+        class="mt-6 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
+        href={audioArchive.bandcampProfile}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {copy.openBandcamp}
+      </a>
+    </section>
 
     <section aria-labelledby="legacy-photo-archive-heading">
       <h3 id="legacy-photo-archive-heading" class="font-serif text-3xl text-brand-primary">{copy.photosHeading}</h3>
       <p class="mt-4 max-w-3xl text-base leading-8 text-brand-muted">{copy.photosText}</p>
       <div class="mt-6">
-        <PhotoGrid photos={photoArchive.photos} />
+        <PhotoGrid photos={homepagePhotoPreview} lang={lang} />
       </div>
+      <a
+        class="mt-6 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent"
+        href={lang === "bg" ? "/bg/archive/" : "/en/archive/"}
+      >
+        {copy.viewFullPhotoArchive}
+      </a>
     </section>
   </div>
 </Section>

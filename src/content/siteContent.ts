@@ -55,6 +55,16 @@ type SiteCopy = {
     closing: string[];
   };
   listening: TextSection;
+  founder: TextSection & {
+    role: string;
+    name: string;
+    photo: {
+      src: string;
+      width: number;
+      height: number;
+      alt: string;
+    };
+  };
   foundation: TextSection & {
     subheading: string;
     responsibilities: string[];
@@ -118,6 +128,28 @@ type SiteCopy = {
         label: string;
         items: string[];
       };
+      returnProgramme: {
+        heading: string;
+        paragraphs: string[];
+        programmeHeading: string;
+        programmeItems: string[];
+        supportHeading: string;
+        supportItems: string[];
+        confirmationNote: string;
+        archiveNote: string;
+      };
+      fundingTarget: {
+        heading: string;
+        intro: string;
+        breakdownHeading: string;
+        breakdownItems: string[];
+        disciplineNote: string;
+        items: {
+          title: string;
+          amount: string;
+          description: string;
+        }[];
+      };
       supportLevels: {
         heading: string;
         items: SupportLevel[];
@@ -166,6 +198,7 @@ type SiteCopy = {
     foundationName: string;
     foundationLine: string;
     legalLines: string[];
+    links: NavItem[];
     motto: string;
   };
 };
@@ -315,6 +348,25 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Целта не е музиката да бъде обяснена до сухота. Целта е хората да започнат да чуват по-дълбоко."
       ]
     },
+    founder: {
+      id: "founder",
+      eyebrow: "Хора",
+      heading: "Основател",
+      role: "Founder",
+      name: "д-р Иван К. Янакиев",
+      photo: {
+        src: "/archive/photos/656785796_26236839085965093_6169334625520283925_n.jpg",
+        width: 2048,
+        height: 1425,
+        alt: "Диригентът на 432 Chamber Orchestra"
+      },
+      paragraphs: [
+        "д-р Иван К. Янакиев е основател на 432 Chamber Orchestra.",
+        "Работата му съчетава диригентска практика, струнно-оркестрова дисциплина, изследване, документация и дългосрочната задача да бъде изградена слушателска общност около сериозен струнен звук.",
+        "Той е доктор и е свързан с Института по механика към БАН. По-ранният му академичен и артистичен път включва работа, свързана с Института за изследване на изкуствата към БАН и предишната история на 432 Chamber Orchestra.",
+        "Завръщането не се представя като лична история на завръщане, а като възстановяване на артистично тяло, архив и отчетна структура около оркестъра."
+      ]
+    },
     foundation: {
       id: "foundation",
       eyebrow: "Структура",
@@ -349,10 +401,10 @@ export const siteContent: Record<Language, SiteCopy> = {
       heading: "Първият звук отново",
       paragraphs: [
         "„Първият звук отново“ е първата мобилизационна кампания за завръщането на 432 Chamber Orchestra.",
-        "Целта ѝ не е да определя цялата мисия на оркестъра. Целта ѝ е да създаде първата документирана стъпка на рестарта: камерен preview формат, запис, архивна страница и ясен път към следващата оркестрова фаза.",
+        "Целта ѝ не е да определя цялата мисия на оркестъра. Целта ѝ е да създаде първата документирана стъпка на рестарта: работен формат, запис, архивна страница и ясен път към следващата оркестрова фаза.",
         "Кампанията започва със слушателска общност.",
         "От тази общност хората могат да помогнат по три начина: с време/експертиза, със средства или с глас.",
-        "Първата практическа цел е да се отворят първите три сериозни разговора с компании, домакини или патрони, които биха могли да подкрепят камерния preview формат.",
+        "Първата практическа цел е да се отворят първите три сериозни разговора с компании, домакини или патрони, които биха могли да подкрепят първата документирана стъпка и следващата оркестрова фаза.",
         "Кампанията е мост, не крайна цел."
       ]
     },
@@ -373,7 +425,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         {
           title: "Дайте средства",
           description:
-            "Подкрепете първия запис, хонорар на музикант, нова обработка, камерен preview формат или архивна документация. Подкрепата трябва да води до конкретен документиран резултат.",
+            "Подкрепете първия запис, хонорар на музикант, нова обработка, първа документирана стъпка или архивна документация. Подкрепата трябва да води до конкретен документиран резултат.",
           cta: "Подкрепете първия звук",
           href: "#support"
         },
@@ -451,19 +503,19 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Ако можете да помогнете с професионални умения, връзки, домакинство или сериозен разговор, пишете директно на фондацията.",
       fundraising: {
         preview: {
-          heading: "Първи камерен preview",
+          heading: "Първа документирана стъпка",
           intro:
-            "Първата готова за подкрепа стъпка е фокусиран камерен preview формат: малко, сериозно струнно събитие, което трябва да произведе повече от една вечер.",
+            "Първата готова за подкрепа стъпка е компактна, документирана работна фаза, която трябва да произведе повече от едно събитие.",
           formatHeading: "Работен формат",
           formatItems: [
-            "струнен квартет или малка струнна формация",
-            "35-45 минути музика и кратко контекстуално въведение",
+            "компактен струнен формат или фокусирана работна сесия",
+            "музика, репетиционна работа и кратко контекстуално въведение",
             "30-80 поканени слушатели според пространството",
             "подходящо за компания, частен домакин, галерия, фондация или културно пространство"
           ],
           outputsHeading: "Очаквани резултати",
           outputItems: [
-            "жив камерен preview",
+            "жив документиран първи формат",
             "записан откъс, ако бюджетът позволява",
             "фото документация",
             "архивна/проектна страница",
@@ -492,16 +544,95 @@ export const siteContent: Record<Language, SiteCopy> = {
             "администрация, счетоводство и отчетност"
           ]
         },
+        returnProgramme: {
+          heading: "Първа програма за завръщане на целия оркестър",
+          paragraphs: [
+            "По-голямата фаза на завръщането е замислена като програма за цял струнен оркестър с продължителност 60+ минути.",
+            "Това още не е потвърдено концертно обявление. Това е работна репертоарна рамка за първото съществено оркестрово завръщане на 432 Chamber Orchestra.",
+            "Програмата трябва да представи сериозна артистична теза: съвременен български звук, класическа солистична форма, английска струнно-оркестрова дисциплина и българска модерна камерна памет, поставени в контекста на възстановено струнно-оркестрово тяло."
+          ],
+          programmeHeading: "Работна репертоарна рамка",
+          programmeItems: [
+            "Георги Арнаудов — Gates of Dream II",
+            "Йозеф Хайдн — Концерт за виолончело в до мажор; солист: предстои покана / предстои потвърждение",
+            "Едуард Елгар — Сюита „Свети Павел“",
+            "Любомир Пипков — Струнен квартет №1; оркестров формат / статус на обработка: предстои уточняване"
+          ],
+          supportHeading: "Подкрепата може да помогне за",
+          supportItems: [
+            "покана към силен солист",
+            "музикантски хонорари",
+            "репетиционна работа",
+            "подготовка на партитури и обработки, където е необходимо",
+            "запис и обработка",
+            "фото/видео документация",
+            "архивна/проектна страница",
+            "кратък отчет след проекта"
+          ],
+          confirmationNote:
+            "Финална програма, ред, продължителност, място, дата, състав, солист, права и статус на обработките предстоят да бъдат потвърдени.",
+          archiveNote:
+            "Архивна бележка: Gates of Dream II присъства в документираната по-ранна дейност на 432 Chamber Orchestra."
+        },
+        fundingTarget: {
+          heading: "Цел за финансиране",
+          intro:
+            "Завръщането трябва да бъде финансирано като определен артистичен резултат, а не като неясен апел.",
+          breakdownHeading: "Какво включва професионалната цел",
+          breakdownItems: [
+            "13 инструменталисти",
+            "покана към солист",
+            "диригент / артистична подготовка",
+            "концертмайстор и водаческа отговорност",
+            "оркестров мениджър / нототекар / production assistant",
+            "репетиционна работа",
+            "зала и продукционна логистика",
+            "права, лицензиране, партитури и обработки",
+            "професионален аудиозапис, монтаж и мастеринг",
+            "multi-camera видео документация",
+            "фотография",
+            "PR стратегия и медийна работа",
+            "дизайн, copywriting, превод, програмен текст",
+            "платена реклама, когато е уместно",
+            "афиши, печат и разпространение",
+            "уеб/архивна страница и отчет след проекта",
+            "договори, счетоводство, администрация",
+            "резерв"
+          ],
+          disciplineNote:
+            "Проектът не трябва да се бюджетира като „един концерт“. Той трябва да се бюджетира като документирана артистична продукция: репетиции, изпълнение, права, запис, документация, PR, архив и отчетност.",
+          items: [
+            {
+              title: "Минимална първа фаза",
+              amount: "30 000 EUR",
+              description:
+                "Покрива пестелива, но професионална документирана стъпка на завръщането, с ограничена документация и ограничен PR. Въпреки това трябва да пази музикантските хонорари, основната репетиционна работа, необходимите проверки за права/лицензиране, базов запис, архивна страница и отчетност."
+            },
+            {
+              title: "Професионална цел",
+              amount: "55 000 EUR",
+              description:
+                "Покрива препоръчителната 60+ минутна програма за цял струнен оркестър с покана към солист, коректни музикантски хонорари, репетиционна работа, подготовка на партитури/обработки, права/лицензиране, професионален аудиозапис, multi-camera документация, фотография, PR, архивна/проектна страница, администрация и отчетност."
+            },
+            {
+              title: "Пълна фаза на завръщане",
+              amount: "90 000 EUR",
+              description:
+                "Покрива по-силна публична продукция с разширена документация, по-силна PR/медийна кампания, по-високо ниво на условия за солист, по-сериозни условия за зала, по-силна постпродукция, по-широка публична видимост и по-силна институционална отчетност."
+            }
+          ]
+        },
         supportLevels: {
           heading: "Ориентировъчни нива на подкрепа",
           items: [
-            { title: "Listener Supporter", amount: "50-150 EUR", description: "Подкрепя слушателския кръг и комуникационната инфраструктура." },
-            { title: "First Sound Supporter", amount: "150-300 EUR", description: "Подкрепя първите документирани стъпки на завръщането." },
-            { title: "Recording Supporter", amount: "300-500 EUR", description: "Подкрепя запис, обработка и архивна подготовка." },
-            { title: "Musician Fee Patron", amount: "500-1 000 EUR", description: "Подкрепя музикантски хонорари и репетиционна работа." },
-            { title: "Chamber Preview Partner", amount: "2 500-3 500 EUR", description: "Подкрепя първия камерен preview като определен културен резултат." },
-            { title: "Founding Patron", amount: "5 000-10 000 EUR", description: "Подкрепя preview формата, документацията, архива и развитието към следваща фаза." },
-            { title: "Archive / Season Partner", amount: "10 000+ EUR", description: "Подкрепя по-голяма документирана програма от работа." }
+            { title: "Патрон на музикантски хонорар", amount: "500–1 000 EUR", description: "Подкрепя коректни музикантски хонорари и репетиционна работа." },
+            { title: "Патрон на запис", amount: "1 500–3 500 EUR", description: "Подкрепя аудиозапис, монтаж, мастеринг и архивна подготовка." },
+            { title: "Патрон на покана към солист", amount: "3 000–5 000 EUR", description: "Подкрепя поканата и условията за солист, който предстои да бъде потвърден." },
+            { title: "Патрон на партитури и права", amount: "2 000–4 000 EUR", description: "Подкрепя партитури, обработки, права и лицензиране, където е необходимо." },
+            { title: "Партньор за пълна документация", amount: "7 500–12 000 EUR", description: "Подкрепя професионален запис, видео документация, фотография и архивна страница." },
+            { title: "Основен концертен партньор", amount: "15 000–25 000 EUR", description: "Подкрепя съществена част от продукцията, репетициите, комуникацията и документацията." },
+            { title: "Основен патрон на завръщането", amount: "50 000–55 000 EUR", description: "Подкрепя професионалната цел и препоръчителната 60+ минутна програма за цял струнен оркестър." },
+            { title: "Партньор на пълната фаза на завръщането", amount: "85 000–90 000 EUR", description: "Подкрепя пълната фаза на завръщане с по-силна продукция, документация, видимост и отчетност." }
           ],
           ctas: {
             sponsor: "Заявете разговор за партньорство",
@@ -514,7 +645,7 @@ export const siteContent: Record<Language, SiteCopy> = {
           intro:
             "Най-полезната първа стъпка не е поставяне на лого. Тя е сериозен разговор за определен културен резултат.",
           items: [
-            "домакинство на камерен preview",
+            "домакинство на първа документирана стъпка",
             "подкрепа за първия запис",
             "финансиране на музикантски хонорари",
             "предоставяне на подходящо пространство",
@@ -522,10 +653,10 @@ export const siteContent: Record<Language, SiteCopy> = {
             "подкрепа за документация и архив"
           ],
           askLabel: "Първа конкретна молба",
-          askText: "Отворете 20-минутен разговор за първия камерен preview.",
+          askText: "Отворете 20-минутен разговор за първата документирана стъпка.",
           cta: "Заявете разговор за партньорство",
-          briefCta: "Заявете спонсорско резюме",
-          mailSubject: "Разговор за първия камерен preview",
+          briefCta: "Вижте спонсорското резюме",
+          mailSubject: "Разговор за първата документирана стъпка",
           briefSubject: "Заявка за спонсорско резюме"
         }
       },
@@ -545,7 +676,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Картови плащания и други официални начини за подкрепа ще бъдат добавени след потвърждение. Засега можете да оставите имейл или да използвате банков превод.",
       patronHeading: "Компании и патрони",
       patronText:
-        "За компании, домакини и патрони: първата практическа цел е да се отворят сериозни разговори за камерен preview формат и документиран резултат."
+        "За компании, домакини и патрони: първата практическа цел е да се отворят сериозни разговори за документиран първи резултат и следваща оркестрова фаза."
     },
     contact: {
       id: "contact",
@@ -559,6 +690,12 @@ export const siteContent: Record<Language, SiteCopy> = {
       foundationName: "Фондация 432 Херца",
       foundationLine: "Юридическа и организационна структура зад оркестъра.",
       legalLines: ["ЮЛНЦ в обществена полза", "ЕИК: 204925949", "София, България", "info@432hz-foundation.com"],
+      links: [
+        { label: "Поверителност", href: "/bg/privacy/" },
+        { label: "Политика за дарения", href: "/bg/donation-policy/" },
+        { label: "Преса / Медии", href: "/bg/press/" },
+        { label: "Спонсорско резюме", href: "/bg/sponsor-brief/" }
+      ],
       motto: "Независим · Документиран · Отчетен"
     }
   },
@@ -661,6 +798,25 @@ export const siteContent: Record<Language, SiteCopy> = {
         "The goal is not to explain music until it becomes dry. The goal is to help people hear more deeply."
       ]
     },
+    founder: {
+      id: "founder",
+      eyebrow: "People",
+      heading: "Founder",
+      role: "Founder",
+      name: "Ivan K. Yanakiev, PhD",
+      photo: {
+        src: "/archive/photos/656785796_26236839085965093_6169334625520283925_n.jpg",
+        width: 2048,
+        height: 1425,
+        alt: "Conductor of 432 Chamber Orchestra"
+      },
+      paragraphs: [
+        "Ivan K. Yanakiev, PhD is the founder of 432 Chamber Orchestra.",
+        "His work brings together conducting, string-orchestra discipline, research, documentation, and the long-term task of rebuilding a listening community around serious string sound.",
+        "He holds a PhD and is associated with the BAS Institute of Mechanics. His earlier academic and artistic background includes work connected with the BAS Institute of Art Studies and the previous history of 432 Chamber Orchestra.",
+        "The restart is not presented as a personal comeback story, but as the rebuilding of an artistic body, archive, and accountable structure around the orchestra."
+      ]
+    },
     foundation: {
       id: "foundation",
       eyebrow: "Structure",
@@ -690,10 +846,10 @@ export const siteContent: Record<Language, SiteCopy> = {
       heading: "The First Sound Again",
       paragraphs: [
         "The First Sound Again is the first mobilisation campaign for the return of 432 Chamber Orchestra.",
-        "Its purpose is not to define the orchestra’s entire mission. Its purpose is to create the first documented step of the restart: a chamber preview, a recording, an archive page, and a clear path toward the next orchestral phase.",
+        "Its purpose is not to define the orchestra’s entire mission. Its purpose is to create the first documented step of the restart: a working format, a recording, an archive page, and a clear path toward the next orchestral phase.",
         "The campaign begins with a listening community.",
         "From that community, people can help in three ways: time/expertise, money, or voice.",
-        "The first practical goal is to open the first three serious conversations with companies, hosts, or patrons who could support the chamber preview.",
+        "The first practical goal is to open the first three serious conversations with companies, hosts, or patrons who could support the first documented step and the next orchestral phase.",
         "The campaign is a bridge, not the destination."
       ]
     },
@@ -714,7 +870,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         {
           title: "Give Money",
           description:
-            "Support the first recording, a musician’s fee, a new arrangement, a chamber preview, or archive documentation. Support should lead to a specific documented result.",
+            "Support the first recording, a musician’s fee, a new arrangement, a first documented step, or archive documentation. Support should lead to a specific documented result.",
           cta: "Support the First Sound",
           href: "#support"
         },
@@ -792,19 +948,19 @@ export const siteContent: Record<Language, SiteCopy> = {
         "If you can help with professional skills, introductions, hosting, or a serious conversation, write directly to the foundation.",
       fundraising: {
         preview: {
-          heading: "First Chamber Preview",
+          heading: "First documented step",
           intro:
-            "The first sponsor-ready step is a focused chamber preview: a small, serious string-format event designed to produce more than one evening.",
+            "The first sponsor-ready step is a compact documented working phase designed to produce more than one event.",
           formatHeading: "Working format",
           formatItems: [
-            "string quartet or small string formation",
-            "35-45 minutes of music and short contextual introduction",
+            "compact string format or focused working session",
+            "music, rehearsal work, and short contextual introduction",
             "30-80 invited listeners, depending on the room",
             "suitable for a company, private host, gallery, foundation, or cultural space"
           ],
           outputsHeading: "Expected outputs",
           outputItems: [
-            "live chamber preview",
+            "live documented first format",
             "recorded excerpt if the budget allows",
             "photo documentation",
             "archive/project page",
@@ -833,16 +989,95 @@ export const siteContent: Record<Language, SiteCopy> = {
             "administration, accounting, and reporting"
           ]
         },
+        returnProgramme: {
+          heading: "Full orchestra return programme",
+          paragraphs: [
+            "The larger return phase is conceived as a full string-orchestra programme of 60+ minutes.",
+            "This is not a confirmed concert announcement yet. It is a working programme frame for the first substantial orchestral return of 432 Chamber Orchestra.",
+            "The programme should make a serious artistic argument: Bulgarian contemporary sound, classical solo form, English string-orchestra discipline, and Bulgarian modern chamber memory brought into the context of a restored string-orchestra body."
+          ],
+          programmeHeading: "Working programme frame",
+          programmeItems: [
+            "Gheorghi Arnaoudov — Gates of Dream II",
+            "Joseph Haydn — Cello Concerto in C major; soloist to be invited / to be confirmed",
+            "Edward Elgar — St Paul’s Suite",
+            "Lyubomir Pipkov — String Quartet No. 1; orchestral format / arrangement status to be confirmed"
+          ],
+          supportHeading: "Support may help fund",
+          supportItems: [
+            "invitation of a strong soloist",
+            "musician fees",
+            "rehearsal work",
+            "score and arrangement preparation where needed",
+            "recording and editing",
+            "photo/video documentation",
+            "archive/project page",
+            "short post-project report"
+          ],
+          confirmationNote:
+            "Final programme, order, duration, venue, date, instrumentation, soloist, rights, and arrangement status remain to be confirmed.",
+          archiveNote:
+            "Archive note: Gates of Dream II appears in the documented earlier activity of 432 Chamber Orchestra."
+        },
+        fundingTarget: {
+          heading: "Funding target",
+          intro:
+            "The return should be funded as a defined artistic output, not as a vague appeal.",
+          breakdownHeading: "What the professional target includes",
+          breakdownItems: [
+            "13 instrumentalists",
+            "soloist invitation",
+            "conductor / artistic preparation",
+            "concertmaster and section responsibility",
+            "orchestra manager / librarian / production assistant",
+            "rehearsal work",
+            "venue and production logistics",
+            "rights, licensing, scores, and arrangements",
+            "professional audio recording, editing, and mastering",
+            "multi-camera video documentation",
+            "photography",
+            "PR strategy and media outreach",
+            "design, copywriting, translation, programme note",
+            "paid promotion where appropriate",
+            "posters, print, and distribution",
+            "website/archive page and post-project report",
+            "contracts, accounting, administration",
+            "contingency"
+          ],
+          disciplineNote:
+            "The project should not be budgeted as “a concert”. It should be budgeted as a documented artistic production: rehearsal, performance, rights, recording, documentation, PR, archive, and reporting.",
+          items: [
+            {
+              title: "Minimum first phase",
+              amount: "30,000 EUR",
+              description:
+                "Covers a lean but professional documented return step, with constrained documentation and limited PR. It should still protect musician fees, core rehearsal work, essential rights/licensing checks, basic recording, archive page, and reporting."
+            },
+            {
+              title: "Professional target",
+              amount: "55,000 EUR",
+              description:
+                "Covers the recommended 60+ minute full string-orchestra return programme with soloist invitation, fair musician fees, rehearsal work, score/arrangement preparation, rights/licensing, professional audio, multi-camera documentation, photography, PR, archive/project page, administration, and reporting."
+            },
+            {
+              title: "Full return phase",
+              amount: "90,000 EUR",
+              description:
+                "Covers a stronger public production with extended documentation, stronger PR/media campaign, higher-level soloist conditions, larger venue conditions, stronger post-production, broader campaign visibility, and stronger institutional reporting."
+            }
+          ]
+        },
         supportLevels: {
           heading: "Indicative support levels",
           items: [
-            { title: "Listener Supporter", amount: "EUR 50-150", description: "Helps the Listening Circle and communication infrastructure." },
-            { title: "First Sound Supporter", amount: "EUR 150-300", description: "Supports the first documented steps of the restart." },
-            { title: "Recording Supporter", amount: "EUR 300-500", description: "Supports recording, editing, and archive preparation." },
-            { title: "Musician Fee Patron", amount: "EUR 500-1,000", description: "Supports musician fees and rehearsal work." },
-            { title: "Chamber Preview Partner", amount: "EUR 2,500-3,500", description: "Supports the first chamber preview as a defined cultural output." },
-            { title: "Founding Patron", amount: "EUR 5,000-10,000", description: "Supports the preview, documentation, archive, and next-phase development." },
-            { title: "Archive / Season Partner", amount: "EUR 10,000+", description: "Supports a larger documented programme of work." }
+            { title: "Musician Fee Patron", amount: "500–1,000 EUR", description: "Supports fair musician fees and rehearsal work." },
+            { title: "Recording Patron", amount: "1,500–3,500 EUR", description: "Supports audio recording, editing, mastering, and archive preparation." },
+            { title: "Soloist Invitation Patron", amount: "3,000–5,000 EUR", description: "Supports soloist invitation and conditions; the soloist remains to be confirmed." },
+            { title: "Score & Rights Patron", amount: "2,000–4,000 EUR", description: "Supports scores, arrangements, rights, and licensing where needed." },
+            { title: "Full Documentation Partner", amount: "7,500–12,000 EUR", description: "Supports professional audio, video documentation, photography, and archive page." },
+            { title: "Principal Concert Partner", amount: "15,000–25,000 EUR", description: "Supports a substantial part of production, rehearsals, communication, and documentation." },
+            { title: "Founding Return Patron", amount: "50,000–55,000 EUR", description: "Supports the professional target and the recommended 60+ minute full string-orchestra programme." },
+            { title: "Full Return Partner", amount: "85,000–90,000 EUR", description: "Supports the full return phase with stronger production, documentation, visibility, and reporting." }
           ],
           ctas: {
             sponsor: "Request a sponsor conversation",
@@ -855,7 +1090,7 @@ export const siteContent: Record<Language, SiteCopy> = {
           intro:
             "The most useful first step is not a logo placement. It is a serious conversation about a defined cultural result.",
           items: [
-            "hosting a chamber preview",
+            "hosting a first documented step",
             "supporting the first recording",
             "funding musician fees",
             "offering a suitable space",
@@ -863,10 +1098,10 @@ export const siteContent: Record<Language, SiteCopy> = {
             "supporting documentation and archive work"
           ],
           askLabel: "First ask",
-          askText: "Open a 20-minute conversation about the first chamber preview.",
+          askText: "Open a 20-minute conversation about the first documented step.",
           cta: "Request a sponsor conversation",
-          briefCta: "Request the sponsor brief",
-          mailSubject: "Sponsor conversation for the first chamber preview",
+          briefCta: "View sponsor brief",
+          mailSubject: "Sponsor conversation for the first documented step",
           briefSubject: "Sponsor brief request"
         }
       },
@@ -886,7 +1121,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Card payments and other official support options will be added after confirmation. For now, you can leave your email or use bank transfer.",
       patronHeading: "Companies and patrons",
       patronText:
-        "For companies, hosts, and patrons: the first practical goal is to open serious conversations around a chamber preview format and a documented result."
+        "For companies, hosts, and patrons: the first practical goal is to open serious conversations around a documented first result and the next orchestral phase."
     },
     contact: {
       id: "contact",
@@ -900,6 +1135,12 @@ export const siteContent: Record<Language, SiteCopy> = {
       foundationName: "Foundation 432 Hertz",
       foundationLine: "Legal and organisational structure behind the orchestra.",
       legalLines: ["Public-benefit non-profit legal entity", "UIC/EIK: 204925949", "Sofia, Bulgaria", "info@432hz-foundation.com"],
+      links: [
+        { label: "Privacy", href: "/en/privacy/" },
+        { label: "Donation policy", href: "/en/donation-policy/" },
+        { label: "Press / Media", href: "/en/press/" },
+        { label: "Sponsor brief", href: "/en/sponsor-brief/" }
+      ],
       motto: "Independent · Documented · Accountable"
     }
   }
@@ -945,7 +1186,7 @@ export const campaignLandingContent = {
     mainCopy: [
       "432 Chamber Orchestra не търси еднократна публика. Той изгражда слушателска общност.",
       "Не концерт за отчет. Не участие за exposure. Не култура като фон.",
-      "Оркестърът се завръща чрез дисциплинирана последователност от камерни и оркестрови стъпки: слушателски кръг, камерен preview формат, запис, архив, отчет и следваща оркестрова фаза.",
+      "Оркестърът се завръща чрез дисциплинирана последователност от работни и оркестрови стъпки: слушателски кръг, първи документиран формат, запис, архив, отчет и следваща оркестрова фаза.",
       "Първата форма на подкрепа е вниманието. Влезте в слушателския кръг, ако вярвате, че независимата класическа музика трябва да бъде чута, документирана и съхранена."
     ],
     goal: {
@@ -1002,7 +1243,7 @@ export const campaignLandingContent = {
     mainCopy: [
       "432 Chamber Orchestra does not seek a one-time audience. It builds a listening community.",
       "Not a concert for a report. Not performance for exposure. Not culture as background.",
-      "The orchestra is returning through a disciplined sequence of chamber and orchestral steps: listening circle, chamber preview, recording, archive, report, and the next orchestral phase.",
+      "The orchestra is returning through a disciplined sequence of working and orchestral steps: listening circle, first documented format, recording, archive, report, and the next orchestral phase.",
       "The first form of support is attention. Join the Listening Circle if you believe independent classical music should be heard, documented, and preserved."
     ],
     goal: {
