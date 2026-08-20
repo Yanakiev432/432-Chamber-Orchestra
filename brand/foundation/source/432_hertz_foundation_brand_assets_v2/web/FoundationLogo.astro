@@ -1,0 +1,69 @@
+---
+type Variant = 'primary' | 'stacked' | 'foundation-432-hz' | 'bg' | 'bilingual' | 'compact' | 'dark';
+interface Props {
+  variant?: Variant;
+  href?: string;
+  class?: string;
+}
+const { variant = 'primary', href = '/', class: className = '' } = Astro.props;
+const isDark = variant === 'dark';
+const textColor = isDark ? 'text-white' : 'text-[#123c3c]';
+const mutedColor = isDark ? 'text-[#f8fafc]' : 'text-[#334155]';
+const secondaryColor = isDark ? 'text-white' : 'text-[#1f2937]';
+const logo = (
+  <span class:list={['inline-flex items-center', className]} aria-label="432 Hertz Foundation">
+    {variant === 'stacked' && (
+      <span class="inline-flex flex-col items-center text-center">
+        <span class:list={['font-serif text-6xl leading-none tracking-[-0.04em]', textColor]}>432</span>
+        <span class="mt-3 h-px w-32 bg-[#a16207]"></span>
+        <span class:list={['mt-3 text-xs font-semibold uppercase tracking-[0.36em]', secondaryColor]}>Hertz Foundation</span>
+      </span>
+    )}
+    {variant === 'foundation-432-hz' && (
+      <span class="inline-flex flex-col">
+        <span class:list={['text-xs font-semibold uppercase tracking-[0.42em]', mutedColor]}>Foundation</span>
+        <span class:list={['font-serif text-5xl leading-none tracking-[-0.02em]', textColor]}>432 Hz</span>
+        <span class="mt-3 h-px w-full bg-[#a16207]"></span>
+      </span>
+    )}
+    {variant === 'bg' && (
+      <span class="inline-flex items-center gap-7">
+        <span class:list={['font-serif text-5xl leading-none tracking-[-0.04em]', textColor]}>432</span>
+        <span class="h-16 w-px bg-[#a16207]"></span>
+        <span class="flex flex-col gap-1">
+          <span class:list={['text-sm font-semibold uppercase tracking-[0.34em]', mutedColor]}>Фондация</span>
+          <span class:list={['text-sm font-semibold uppercase tracking-[0.34em]', secondaryColor]}>432 Херца</span>
+        </span>
+      </span>
+    )}
+    {variant === 'bilingual' && (
+      <span class="inline-flex items-center gap-7">
+        <span class:list={['font-serif text-5xl leading-none tracking-[-0.04em]', textColor]}>432</span>
+        <span class="h-16 w-px bg-[#a16207]"></span>
+        <span class="flex flex-col gap-2">
+          <span class:list={['text-xs font-semibold uppercase tracking-[0.28em]', mutedColor]}>Фондация 432 Херца</span>
+          <span class="h-px w-full bg-[#a16207]"></span>
+          <span class:list={['text-xs font-semibold uppercase tracking-[0.28em]', secondaryColor]}>432 Hertz Foundation</span>
+        </span>
+      </span>
+    )}
+    {variant === 'compact' && (
+      <span class="inline-flex items-baseline gap-2">
+        <span class:list={['font-serif text-4xl leading-none tracking-[-0.04em]', textColor]}>432</span>
+        <span class:list={['text-sm font-semibold tracking-[0.18em]', mutedColor]}>Hz</span>
+      </span>
+    )}
+    {(variant === 'primary' || variant === 'dark') && (
+      <span class="inline-flex items-center gap-7">
+        <span class:list={['font-serif text-5xl leading-none tracking-[-0.04em]', textColor]}>432</span>
+        <span class="h-16 w-px bg-[#a16207]"></span>
+        <span class="flex flex-col gap-1">
+          <span class:list={['text-sm font-semibold uppercase tracking-[0.42em]', mutedColor]}>Hertz</span>
+          <span class:list={['text-sm font-semibold uppercase tracking-[0.32em]', secondaryColor]}>Foundation</span>
+        </span>
+      </span>
+    )}
+  </span>
+);
+---
+{href ? <a href={href} aria-label="432 Hertz Foundation home">{logo}</a> : logo}
