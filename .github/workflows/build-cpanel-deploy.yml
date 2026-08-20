@@ -1,0 +1,72 @@
+name: Build cPanel deployment branch
+
+on:
+  push:
+    branches:
+      - feature/432-website-v1
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.34.0
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Build static site
+        run: pnpm run build
+
+      - name: Prepare cPanel deployment tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .cpanel-deploy
+          mkdir -p .cpanel-deploy
+          cp -a dist/. .cpanel-deploy/
+          cp .htaccess .cpanel-deploy/.htaccess
+          cat > .cpanel-deploy/.cpanel.yml <<'YAML'
+          ---
+          deployment:
+            tasks:
+              - export DEPLOYPATH=/home/hzorche/public_html/
+              - /bin/mkdir -p $DEPLOYPATH
+              - /bin/cp -R ./* $DEPLOYPATH
+              - /bin/cp -f ./.htaccess $DEPLOYPATH/.htaccess
+          YAML
+
+      - name: Publish cpanel-deploy branch
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cd .cpanel-deploy
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b cpanel-deploy
+          git add -A
+          git commit -m "Build cPanel deployment for ${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin cpanel-deploy
