@@ -50,6 +50,12 @@ const selectedReleases = [
       ))}
     </div>
     <a
+      class="mt-7 mr-3 inline-flex min-h-11 items-center border border-brand-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.06em] text-brand-primary hover:bg-brand-bg"
+      href={lang === "bg" ? "/bg/recordings/" : "/en/recordings/"}
+    >
+      {isBg ? "Вижте всички 12 издания" : "Browse all 12 releases"}
+    </a>
+    <a
       class="mt-7 inline-flex min-h-11 items-center border border-brand-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.06em] text-brand-primary hover:bg-brand-bg"
       href={audioArchive.bandcampProfile}
       target="_blank"
