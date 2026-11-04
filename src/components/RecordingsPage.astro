@@ -1,0 +1,51 @@
+---
+import { bandcampCatalog, bandcampCatalogTrackCount, bandcampCatalogueUrl } from "../content/bandcampCatalog";
+import type { Language } from "../content/siteContent";
+
+const { lang } = Astro.props as { lang: Language };
+const bg = lang === "bg";
+---
+<section class="border-b border-brand-border bg-brand-bg py-16 md:py-24" aria-labelledby="complete-recordings-heading">
+  <div class="container">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">{bg ? "Дискография" : "Discography"}</p>
+    <h1 id="complete-recordings-heading" class="mt-5 max-w-4xl font-serif text-4xl leading-tight text-brand-primary md:text-6xl">
+      {bg ? "Записи на Камерен оркестър 432" : "432 Chamber Orchestra Recordings"}
+    </h1>
+    <p class="mt-6 max-w-4xl text-lg leading-9 text-brand-muted">
+      {bg
+        ? "Открийте всички 12 издания от публичния каталог в Bandcamp. Заедно те съдържат 53 позиции с песни, много от които могат да бъдат закупени и поотделно. Покупката се извършва директно в Bandcamp."
+        : "Explore all 12 releases from our public Bandcamp catalogue. Together they contain 53 listed track positions, many of which can also be bought individually. Checkout takes place directly on Bandcamp."}
+    </p>
+    <p class="mt-3 max-w-4xl text-sm leading-6 text-brand-muted">
+      {bg
+        ? "Някои произведения се срещат в различни записи, а един от концертните албуми има две позиции с еднакво заглавие. Затова 53 не означава 53 различни композиции."
+        : "Some works appear in different recordings, and one live album contains two entries with the same title. Therefore 53 does not mean 53 distinct compositions."}
+    </p>
+    <a class="mt-7 inline-flex min-h-11 items-center border border-brand-primary bg-brand-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.06em] text-white hover:bg-brand-primaryHover" href={bandcampCatalogueUrl} target="_blank" rel="noopener noreferrer">
+      {bg ? "Вижте целия каталог в Bandcamp" : "Open full Bandcamp catalogue"}
+    </a>
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+      {bandcampCatalog.map((release) => (
+        <article class="flex min-h-full flex-col justify-between border border-brand-border bg-brand-surface p-6">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent">
+              {release.kind === "album" ? (bg ? "Албум" : "Album") : (bg ? "Сингъл" : "Single")} · {release.year}
+            </p>
+            <h2 class="mt-4 font-serif text-xl leading-snug text-brand-primary">{release.title}</h2>
+            <p class="mt-4 text-sm text-brand-muted">
+              {release.trackCount} {bg ? (release.trackCount === 1 ? "песен" : "песни") : (release.trackCount === 1 ? "track" : "tracks")}
+            </p>
+          </div>
+          <a class="mt-6 inline-flex min-h-11 items-center justify-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.06em] text-brand-primary transition hover:bg-brand-bg" href={release.url} target="_blank" rel="noopener noreferrer">
+            {bg ? "Слушайте и купете" : "Listen & buy"}
+          </a>
+        </article>
+      ))}
+    </div>
+    <p class="mt-8 text-sm leading-6 text-brand-muted">
+      {bg
+        ? `Проверен каталог: ${bandcampCatalog.length} издания, ${bandcampCatalogTrackCount} позиции. Цените и наличността се определят от Bandcamp.`
+        : `Catalogued: ${bandcampCatalog.length} releases, ${bandcampCatalogTrackCount} track positions. Pricing and availability are determined by Bandcamp.`}
+    </p>
+  </div>
+</section>
