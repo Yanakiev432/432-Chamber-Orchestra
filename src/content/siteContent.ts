@@ -244,6 +244,7 @@ const sharedAnchors = {
   identity: "#artistic-identity",
   programs: "#programs",
   archive: "#archive",
+  recordings: "#recordings",
   support: "#support",
   contact: "#contact"
 };
@@ -255,15 +256,16 @@ export const siteContent: Record<Language, SiteCopy> = {
     alternateLang: "en",
     alternateHref: "/en/",
     meta: {
-      title: "432 Chamber Orchestra · Независим струнен оркестър · София",
+      title: "Камерен оркестър 432 | Струнна музика и записи в Bandcamp",
       description:
-        "432 Chamber Orchestra е независим струнен оркестър с основа в София, който изгражда слушателска общност около класически струнен репертоар, вокални и хорови преображения, сакрална и модална памет, съвременни поръчки, записи, архив и публична документация."
+        "Камерен оркестър 432 е независим струнен оркестър от София. Слушайте и купете архивни записи в Bandcamp и подкрепете неговото завръщане."
     },
     nav: [
       { label: "Оркестър", href: sharedAnchors.orchestra },
       { label: "Фондация", href: sharedAnchors.foundation },
       { label: "Артистична идентичност", href: sharedAnchors.identity },
       { label: "Програми", href: sharedAnchors.programs },
+      { label: "Записи", href: sharedAnchors.recordings },
       { label: "Концерти / Архив", href: sharedAnchors.archive },
       { label: "Подкрепа", href: sharedAnchors.support },
       { label: "Контакт", href: sharedAnchors.contact }
@@ -705,15 +707,16 @@ export const siteContent: Record<Language, SiteCopy> = {
     alternateLang: "bg",
     alternateHref: "/bg/",
     meta: {
-      title: "432 Chamber Orchestra · Independent String Orchestra · Sofia",
+      title: "432 Chamber Orchestra | String Music & Bandcamp Recordings"
       description:
-        "432 Chamber Orchestra is an independent string orchestra based in Sofia, building a listening community around classical string repertoire, vocal and choral transfigurations, sacred and modal memory, contemporary commissions, recordings, archive, and public documentation."
+        "432 Chamber Orchestra is an independent string orchestra from Sofia. Listen to and buy archival recordings on Bandcamp and support its return."
     },
     nav: [
       { label: "Orchestra", href: sharedAnchors.orchestra },
       { label: "Foundation", href: sharedAnchors.foundation },
       { label: "Artistic Identity", href: sharedAnchors.identity },
       { label: "Programs", href: sharedAnchors.programs },
+      { label: "Recordings", href: sharedAnchors.recordings },
       { label: "Concerts / Archive", href: sharedAnchors.archive },
       { label: "Support", href: sharedAnchors.support },
       { label: "Contact", href: sharedAnchors.contact }
