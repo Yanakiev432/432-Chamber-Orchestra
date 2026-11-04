@@ -3,7 +3,7 @@
 Scope: Astro 432 Chamber Orchestra staging site, branch `agent/bandcamp-seo-conversion-20261104`.
 
 ## Delivered in this branch
-- Correct the Listening Circle hero button to `#listening-circle` rather than `#support`.
+- Point the Listening Circle hero button to the actual `#listening-circle-form-support_bg` / `#listening-circle-form-support_en` signup form, instead of the generic `#support` heading.
 - Make the primary hero action lead to the official Bandcamp catalogue.
 - Add a short recording purchase section directly below the hero with two verified album links.
 - Add BG/EN navigation to `#recordings`; clarify purchase wording on Bandcamp cards.
