@@ -1,14 +1,16 @@
 ---
 import CTAButton from "./CTAButton.astro";
+import { audioArchive } from "../content/audioArchive";
 import type { siteContent } from "../content/siteContent";
 
 type HeroCopy = typeof siteContent.bg.hero;
 
 type Props = {
   hero: HeroCopy;
+  lang: "bg" | "en";
 };
 
-const { hero } = Astro.props;
+const { hero, lang } = Astro.props;
 ---
 
 <section class="relative z-0 overflow-hidden border-b border-brand-border bg-brand-bg py-14 md:py-20">
@@ -18,8 +20,9 @@ const { hero } = Astro.props;
       <h1 class="max-w-[11ch] break-words font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.95] text-brand-primary">{hero.title}</h1>
       <p class="mt-8 max-w-xl text-xl leading-9 text-brand-muted">{hero.text}</p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <CTAButton href="#support" label={hero.primaryCta} />
-        <CTAButton href="#support" label={hero.secondaryCta} variant="secondary" />
+        <CTAButton href={audioArchive.bandcampProfile} label={lang === "bg" ? "Слушайте и купете записи" : "Listen & buy recordings"} external />
+        <CTAButton href="#listening-circle" label={hero.primaryCta} variant="secondary" />
+        <CTAButton href="#support" label={hero.secondaryCta} variant="text" />
       </div>
     </div>
     <aside class="border border-brand-border border-l-4 border-l-brand-borderWarm bg-brand-surface px-6 py-8">
