@@ -6,6 +6,8 @@ const routes = [
   "/en/",
   "/bg/archive/",
   "/en/archive/",
+  "/bg/recordings/",
+  "/en/recordings/",
   "/bg/donation-certificate/",
   "/en/donation-certificate/",
   "/bg/donation-policy/",
