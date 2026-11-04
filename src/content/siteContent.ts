@@ -707,7 +707,7 @@ export const siteContent: Record<Language, SiteCopy> = {
     alternateLang: "bg",
     alternateHref: "/bg/",
     meta: {
-      title: "432 Chamber Orchestra | String Music & Bandcamp Recordings"
+      title: "432 Chamber Orchestra | String Music & Bandcamp Recordings",
       description:
         "432 Chamber Orchestra is an independent string orchestra from Sofia. Listen to and buy archival recordings on Bandcamp and support its return."
     },
