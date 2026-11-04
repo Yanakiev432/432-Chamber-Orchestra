@@ -47,6 +47,7 @@ const statusMessage = hasActionEndpoint ? copy.activeStatus : hasExternalFormUrl
 ---
 
 <form
+  id={`listening-circle-form-${source}`}
   class={`grid gap-5 border ${borderClass} ${surfaceClass} p-6 md:p-8`}
   method={hasActionEndpoint ? "post" : undefined}
   action={hasActionEndpoint ? actionEndpoint : undefined}
