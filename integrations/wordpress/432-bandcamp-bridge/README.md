@@ -18,7 +18,7 @@ Offer direct Bandcamp purchases on all 23 works in the old WooCommerce shop (46 
 
 ```bash
 php -l wordpress/432-bandcamp-bridge/432-bandcamp-bridge.php
-php wordpress/432-bandcamp-bridge/tests/test-bridge.php
+php wordpress/tests/test-bridge.php
 ```
 
 ## Deployment gate — DO NOT SKIP
