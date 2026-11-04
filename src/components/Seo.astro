@@ -31,9 +31,10 @@ const alternate = toUrl(alternateHref);
 const ogImage = toUrl(image);
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "MusicGroup",
   name: "432 Chamber Orchestra",
-  alternateName: "Foundation 432 Hertz",
+  alternateName: "Камерен оркестър 432",
+  sameAs: ["https://432orchestra.bandcamp.com/", "https://432hz-orchestra.com/en/"],
   url: siteUrl || undefined,
   logo: siteUrl ? toUrl(brandAssets.headerLogo) : undefined,
   email: "info@432hz-foundation.com",
