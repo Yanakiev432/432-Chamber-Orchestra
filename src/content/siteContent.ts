@@ -244,7 +244,6 @@ const sharedAnchors = {
   identity: "#artistic-identity",
   programs: "#programs",
   archive: "#archive",
-  recordings: "#recordings",
   support: "#support",
   contact: "#contact"
 };
@@ -265,7 +264,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       { label: "Фондация", href: sharedAnchors.foundation },
       { label: "Артистична идентичност", href: sharedAnchors.identity },
       { label: "Програми", href: sharedAnchors.programs },
-      { label: "Записи", href: sharedAnchors.recordings },
+      { label: "Записи", href: "/bg/recordings/" },
       { label: "Концерти / Архив", href: sharedAnchors.archive },
       { label: "Подкрепа", href: sharedAnchors.support },
       { label: "Контакт", href: sharedAnchors.contact }
@@ -716,7 +715,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       { label: "Foundation", href: sharedAnchors.foundation },
       { label: "Artistic Identity", href: sharedAnchors.identity },
       { label: "Programs", href: sharedAnchors.programs },
-      { label: "Recordings", href: sharedAnchors.recordings },
+      { label: "Recordings", href: "/en/recordings/" },
       { label: "Concerts / Archive", href: sharedAnchors.archive },
       { label: "Support", href: sharedAnchors.support },
       { label: "Contact", href: sharedAnchors.contact }
