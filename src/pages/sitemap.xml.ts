@@ -6,6 +6,8 @@ const routes = [
   "/en/",
   "/bg/archive/",
   "/en/archive/",
+  "/bg/recordings/",
+  "/en/recordings/",
   "/bg/donation-certificate/",
   "/en/donation-certificate/",
   "/bg/donation-policy/",
@@ -22,13 +24,14 @@ const routes = [
   "/en/thank-you/"
 ];
 
-export const GET: APIRoute = () => {
-  const siteUrl = import.meta.env.PUBLIC_SITE_URL?.replace(/\/$/, "");
-  const body = siteUrl
-    ? `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes
-        .map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`)
-        .join("\n")}\n</urlset>`
-    : `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><!-- Set PUBLIC_SITE_URL to emit absolute sitemap URLs. --></urlset>`;
+export const GET: APIRoute = ({ site }) => {
+  const base = site ?? new URL("https://432hz-orchestra.com/");
+  const body = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...routes.map((route) => `  <url><loc>${new URL(route, base).toString()}</loc></url>`),
+    "</urlset>"
+  ].join("\n");
 
   return new Response(body, {
     headers: {

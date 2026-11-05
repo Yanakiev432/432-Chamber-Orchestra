@@ -1,5 +1,6 @@
 ---
 import Hero from "./Hero.astro";
+import RecordingsSpotlight from "./RecordingsSpotlight.astro";
 import Section from "./Section.astro";
 import VisionSection from "./VisionSection.astro";
 import MissionSection from "./MissionSection.astro";
@@ -20,7 +21,8 @@ type Copy = typeof siteContent.bg;
 const { content, lang } = Astro.props as { content: Copy; lang: Language };
 ---
 
-<Hero hero={content.hero} />
+<Hero hero={content.hero} lang={lang} />
+<RecordingsSpotlight lang={lang} />
 
 <Section id={content.core.id} eyebrow={content.core.eyebrow} heading={content.core.heading}>
   <div class="space-y-6 text-lg leading-9 text-brand-muted">

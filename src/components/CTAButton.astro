@@ -3,9 +3,10 @@ type Props = {
   href: string;
   variant?: "primary" | "secondary" | "text";
   label: string;
+  external?: boolean;
 };
 
-const { href, variant = "primary", label } = Astro.props;
+const { href, variant = "primary", label, external = false } = Astro.props;
 
 const classes = {
   primary:
@@ -17,4 +18,4 @@ const classes = {
 };
 ---
 
-<a class={classes[variant]} href={href}>{label}</a>
+<a class={classes[variant]} href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{label}</a>

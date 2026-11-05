@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import RecordingsPage from "../../../components/RecordingsPage.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const content = { ...siteContent.en, meta: {
+  title: "Recordings & Albums | 432 Chamber Orchestra | Bandcamp",
+  description: "Explore 432 Chamber Orchestra's complete Bandcamp discography: 12 releases and 53 track listings. Listen and buy albums or individual recordings."
+} };
+---
+<BaseLayout content={content} lang="en" canonicalHref="/en/recordings/" alternateHref="/bg/recordings/">
+  <RecordingsPage lang="en" />
+</BaseLayout>

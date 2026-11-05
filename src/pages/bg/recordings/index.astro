@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import RecordingsPage from "../../../components/RecordingsPage.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const content = { ...siteContent.bg, meta: {
+  title: "Записи и албуми | Камерен оркестър 432 | Bandcamp",
+  description: "Пълна дискография на Камерен оркестър 432: 12 издания, 53 песни в Bandcamp. Слушайте и купете албуми и отделни записи."
+} };
+---
+<BaseLayout content={content} lang="bg" canonicalHref="/bg/recordings/" alternateHref="/en/recordings/">
+  <RecordingsPage lang="bg" />
+</BaseLayout>

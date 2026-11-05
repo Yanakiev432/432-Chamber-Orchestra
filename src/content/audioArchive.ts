@@ -18,9 +18,9 @@ export const mediaArchiveCopy = {
     photosText:
       "Избрани архивни фотографии от предишната дейност на 432 Chamber Orchestra. Тези изображения подкрепят доверието и паметта, без да заменят нуждата от нова документация.",
     viewFullPhotoArchive: "Вижте пълния фотоархив",
-    openBandcamp: "Отворете Bandcamp архива",
+    openBandcamp: "Вижте всички записи в Bandcamp",
     openSoundCloud: "Отворете SoundCloud архива",
-    listenOnBandcamp: "Слушайте в Bandcamp",
+    listenOnBandcamp: "Слушайте и купете в Bandcamp",
     listenOnSoundCloud: "Слушайте в SoundCloud",
     sourceLabel: "Източник",
     featuredLabel: "Водещ Bandcamp запис",
@@ -51,9 +51,9 @@ export const mediaArchiveCopy = {
     photosText:
       "Selected archival photographs from previous activity of 432 Chamber Orchestra. These images should support credibility and memory without replacing the need for new documentation.",
     viewFullPhotoArchive: "View full photo archive",
-    openBandcamp: "Open full Bandcamp archive",
+    openBandcamp: "Browse all releases on Bandcamp",
     openSoundCloud: "Open SoundCloud archive",
-    listenOnBandcamp: "Listen on Bandcamp",
+    listenOnBandcamp: "Listen & buy on Bandcamp",
     listenOnSoundCloud: "Listen on SoundCloud",
     sourceLabel: "Source",
     featuredLabel: "Featured Bandcamp recording",
@@ -68,7 +68,7 @@ export const mediaArchiveCopy = {
 } as const;
 
 export const audioArchive = {
-  bandcampProfile: "https://432orchestra.bandcamp.com/",
+  bandcampProfile: "https://432orchestra.bandcamp.com/music",
   soundcloudProfile: "https://soundcloud.com/ivan-yanakiev",
   soundcloud: {
     profileUrl: "https://soundcloud.com/ivan-yanakiev",
@@ -109,6 +109,13 @@ export const audioArchive = {
     ]
   },
   bandcamp: [
+    {
+      title: "432 Hz Quartet Music",
+      url: "https://432orchestra.bandcamp.com/album/432-hz-quartet-music",
+      type: "album",
+      year: "2017",
+      description: "A 16-track legacy string quartet release."
+    },
     {
       title: "432 Hz Quartet Music part 2",
       url: "https://432orchestra.bandcamp.com/album/432-hz-quartet-music-part-2",
