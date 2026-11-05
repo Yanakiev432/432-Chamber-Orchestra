@@ -20,7 +20,8 @@ const {
   image?: string;
 };
 
-// Configured Astro site is always absolute, even without PUBLIC_SITE_URL.\nconst siteUrl = (Astro.site ?? new URL("https://432hz-orchestra.com/")).toString().replace(/\/$/, "");
+// Configured Astro site is always absolute, even without PUBLIC_SITE_URL.
+const siteUrl = (Astro.site ?? new URL("https://432hz-orchestra.com/")).toString().replace(/\/$/, "");
 const toUrl = (path: string) => {
   if (/^https?:\/\//.test(path)) return path;
   return siteUrl ? `${siteUrl}${path.startsWith("/") ? path : `/${path}`}` : path;
