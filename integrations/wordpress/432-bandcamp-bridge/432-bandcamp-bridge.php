@@ -2,7 +2,7 @@
 /**
  * Plugin Name: 432 Bandcamp Purchase Links
  * Description: Clear, bilingual links from the legacy WooCommerce products to their official Bandcamp purchase pages. Does not change WordPress checkout or product data.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: 432 Chamber Orchestra
  * License: GPL-2.0-or-later
  * Text Domain: c432-bandcamp-bridge
@@ -187,11 +187,12 @@ function c432_bandcamp_shop_banner() {
  * Small, scoped stylesheet. No global theme, product, or checkout edits.
  */
 function c432_bandcamp_styles() {
-    wp_register_style( 'c432-bandcamp-bridge', false, array(), '1.0.0' );
+    wp_register_style( 'c432-bandcamp-bridge', false, array(), '1.0.1' );
     wp_enqueue_style( 'c432-bandcamp-bridge' );
     wp_add_inline_style(
         'c432-bandcamp-bridge',
-        '.c432-bandcamp-single,.c432-bandcamp-shop{border:1px solid #b5b5b5;padding:14px;margin:14px 0;clear:both}.c432-bandcamp-button,.c432-bandcamp-loop-button{display:inline-block;box-sizing:border-box;background:#262626;color:#fff!important;border:2px solid #262626;border-radius:2px;padding:10px 15px;min-height:44px;text-decoration:none!important;font-size:14px;font-weight:700;line-height:21px}.c432-bandcamp-button:hover,.c432-bandcamp-loop-button:hover,.c432-bandcamp-button:focus,.c432-bandcamp-loop-button:focus{background:#444;color:#fff!important;border-color:#444;outline-offset:3px}.c432-bandcamp-loop-button{display:block;margin:8px 0 14px;text-align:center}.c432-bandcamp-note{margin:9px 0 0;font-size:13px;line-height:1.5;color:inherit}.c432-bandcamp-shop p{margin:0 0 12px}'
+        '.c432-bandcamp-single,.c432-bandcamp-shop{border:1px solid #b5b5b5;padding:14px;margin:14px 0;clear:both}.c432-bandcamp-button,.c432-bandcamp-loop-button{display:inline-block;box-sizing:border-box;background:#262626;color:#fff!important;border:2px solid #262626;border-radius:2px;padding:10px 15px;min-height:44px;text-decoration:none!important;font-size:14px;font-weight:700;line-height:21px}.c432-bandcamp-button:hover,.c432-bandcamp-loop-button:hover,.c432-bandcamp-button:focus,.c432-bandcamp-loop-button:focus{background:#444;color:#fff!important;border-color:#444;outline-offset:3px}.c432-bandcamp-loop-button{display:block;margin:8px 0 14px;text-align:center}.c432-bandcamp-note{margin:9px 0 0;font-size:13px;line-height:1.5;color:inherit}.c432-bandcamp-shop p{margin:0 0 12px}' .
+        '@media (max-width:600px){body.woocommerce-shop .woocommerce ul.products,body.page-id-997 .woocommerce ul.products{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:24px!important;padding:0!important}body.woocommerce-shop .woocommerce ul.products li.product,body.page-id-997 .woocommerce ul.products li.product{float:none!important;clear:none!important;width:100%!important;max-width:100%!important;margin:0!important;min-width:0!important}body.woocommerce-shop .woocommerce ul.products li.product img,body.page-id-997 .woocommerce ul.products li.product img{width:100%!important;max-width:420px;height:auto}body.woocommerce-shop .woocommerce ul.products li.product .woocommerce-loop-product__title,body.page-id-997 .woocommerce ul.products li.product .woocommerce-loop-product__title{font-size:16px;line-height:1.45;overflow-wrap:anywhere}body.woocommerce-shop .woocommerce ul.products li.product audio,body.page-id-997 .woocommerce ul.products li.product audio{display:block;width:100%;max-width:100%}.c432-bandcamp-single .c432-bandcamp-button,.c432-bandcamp-shop .c432-bandcamp-button,.c432-bandcamp-loop-button{display:block;width:100%;text-align:center;white-space:normal;overflow-wrap:anywhere}}'
     );
 }
 
