@@ -257,7 +257,7 @@ export const siteContent: Record<Language, SiteCopy> = {
     meta: {
       title: "Камерен оркестър 432 | Струнна музика и записи в Bandcamp",
       description:
-        "Камерен оркестър 432 е независим струнен оркестър от София. Слушайте и купете архивни записи в Bandcamp и подкрепете неговото завръщане."
+        "Камерен оркестър 432 — история, репертоар, концертни записи и изследвания върху музикалния строй. Независим струнен състав от София."
     },
     nav: [
       { label: "Оркестър", href: sharedAnchors.orchestra },
@@ -273,10 +273,10 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Независим струнен оркестър · София",
       title: "432 Chamber Orchestra",
       text:
-        "От концертната сцена до музикалните изследвания: оркестърът изследва концертния строй A=432 Hz чрез живи изпълнения и записи още преди защитата на дисертацията през 2020 г.",
-      positioning: ["Не концерт за отчет.", "Не участие за exposure.", "Не култура като фон."],
+        "Камерен оркестър 432 съчетава изпълнението на струнния репертоар с изследователски интерес към историческите концертни строеве и акустиката на музикалния звук.",
+      positioning: ["Камерна прецизност", "Историческа осведоменост", "Внимание към звученето"],
       finalLine:
-        "Жив струнен оркестър — с класическа дисциплина, камерна яснота, записи, архив и общност, която следва работата отвъд една вечер.",
+        "Концерти, звукозаписи и архивни свидетелства за последователно музикално търсене.",
       primaryCta: "Влезте в слушателския кръг",
       secondaryCta: "Подкрепете първия звук",
       campaignLabel: "Кампания: Първият звук отново"
@@ -284,20 +284,20 @@ export const siteContent: Record<Language, SiteCopy> = {
     core: {
       id: "orchestra",
       eyebrow: "История",
-      heading: "Оркестърът предхожда дисертацията",
+      heading: "История на оркестъра",
       paragraphs: [
-        "Камерен оркестър 432 възниква в София преди дисертационния труд на Иван К. Янакиев. Съставът вече изследва концертния строй A=432 Hz чрез реална изпълнителска и звукозаписна практика.",
-        "На 18 май 2015 г. оркестърът дебютира в Първо студио на Българското национално радио; отличен е в категория „Дебют“ на „Музикант на годината 2015“. На 13 юли 2017 г. изпълнява „Български съвременници в 432 Hz“ в Големия салон на БАН. Рецензия за концерта публикува Милена Божикова във вестник „Дума“.",
-        "Дисертацията от 2020 г. е по-късна научна систематизация на част от тази вече съществуваща практика. Тя разглежда исторически концертния строй, математически модели на темперации, сравнителни експерименти с музиканти и слушатели и възприятието на звука.",
-        "Концертните фотографии, рецензиите и архивните записи показват реализираната художествена работа на оркестъра."
+        "Камерен оркестър 432 възниква в София като независим струнен състав. Още в първите години от дейността му концертният строй A=432 Hz е предмет на изпълнителски опити, свързани с интерпретацията на музикални произведения.",
+        "На 18 май 2015 г. съставът изнася дебютния си концерт в Първо студио на Българското национално радио. Следва отличието в категория „Дебют“ на „Музикант на годината 2015“. На 13 юли 2017 г. в Големия салон на БАН е представена програмата „Български съвременници в 432 Hz“, за която Милена Божикова публикува рецензия във вестник „Дума“.",
+        "Защитената през 2020 г. дисертация на Иван К. Янакиев разглежда впоследствие част от натрупания опит в по-широка научна перспектива: история на концертния строй, модели на музикални темперации и изследвания на слуховото възприятие. Оркестровата дейност предхожда този труд и не произтича от него.",
+        "Концертните програми, рецензиите, фотографиите и записите образуват документалния архив на състава."
       ]
     },
     firstOutput: {
       id: "first-documented-output",
       eyebrow: "Първа фаза",
-      heading: "Първият документиран резултат",
+      heading: "Следващият концертен етап",
       paragraphs: [
-        "Завръщането започва с фокусиран камерен preview формат — не като изолирано събитие, а като първата видима стъпка на работеща артистична структура."
+        "Подготвя се камерна програма като начало на следващия концертен период. Изпълнението и съпътстващите го материали ще бъдат представени след потвърждаване на програмата и организационните условия."
       ],
       items: [
         "камерен preview",
@@ -310,21 +310,21 @@ export const siteContent: Record<Language, SiteCopy> = {
     vision: {
       id: "vision",
       eyebrow: "Визия",
-      heading: "Устойчива независима струнна платформа",
+      heading: "Художествени перспективи",
       paragraphs: [
-        "432 Chamber Orchestra съществува, за да изгради устойчива независима струнно-оркестрова платформа със седалище в София.",
-        "Оркестърът създава съсредоточено пространство за слушане: пространство, в което струнният оркестър не е фон или украса, а живо артистично тяло, способно да носи памет, форма, тишина, напрежение, красота и духовна дълбочина.",
-        "Дългосрочната визия е да се изпълнява стандартният струнен репертоар, да се създават нови струнни версии на вокални и хорови произведения, да се поръчва нова музика и работата да се документира чрез записи, партитури и публичен архив — извън логиката на случайните проекти и институционалната зависимост."
+        "Камерен оркестър 432 работи за продължителното присъствие на независим струнен състав в музикалния живот на София.",
+        "В основата на художествения му подход стоят вниманието към партитурата, съотношението между отделните гласове и нюансите на ансамбловото звучене. Камерният състав позволява непосредствен диалог между изпълнителите и прозрачност на музикалната фактура.",
+        "Предвиждат се програми от класическия и съвременния струнен репертоар, нови версии на вокални и хорови произведения за струнен състав, както и сътрудничество с композитори. Записите и архивната документация са съществена част от тази работа."
       ]
     },
     mission: {
       id: "mission",
       eyebrow: "Мисия",
-      heading: "Работа, която оставя следа",
+      heading: "Изпълнителска дейност",
       paragraphs: [
-        "432 Chamber Orchestra изпълнява, развива, записва и съхранява сериозна музика за струнен оркестър и камерни струнни формации.",
-        "Оркестърът не съществува само за да прави концерти. Той съществува, за да създава корпус от работа.",
-        "Всеки проект трябва да оставя следа: изпълнение, запис, партитура или обработка, архивна страница, слушателска общност и ясна следваща стъпка."
+        "Дейността на оркестъра обхваща подготовката и изпълнението на произведения за струнен оркестър и камерни ансамбли, създаването на записи и съхраняването на концертна документация.",
+        "Важна част от замисъла е приемствеността между отделните програми: интерпретационният опит от едно изпълнение да намира продължение в следващото.",
+        "Когато е възможно, концертите се съпровождат от звукозапис, програмни бележки, партитури или обработки и достъпни архивни материали."
       ],
       directions: [
         "Класически струнно-оркестров репертоар",
@@ -335,19 +335,19 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Запис и публичен архив"
       ],
       closing: [
-        "432 Chamber Orchestra не търси еднократна публика. Той изгражда слушателска общност.",
-        "Не концерт за отчет. Не участие за exposure. Не култура като фон. Струнен звук, който оставя следа."
+        "Оркестърът поддържа връзка с публиката и извън концертната зала чрез записи, архив и срещи, посветени на музиката.",
+        "Камерна прецизност Историческа осведоменост Внимание към звученето Струнен звук, който оставя следа."
       ]
     },
     listening: {
       id: "listening-circle",
       eyebrow: "Слушателска общност",
-      heading: "Хора, които чуват по-дълбоко",
+      heading: "Слушане и музикален диалог",
       paragraphs: [
-        "432 Chamber Orchestra не търси пасивна публика. Той изгражда слушателска общност.",
-        "Слушателят не е само човек, който присъства на концерт. Слушателят е човек, който постепенно развива внимание, памет, критерий и жива връзка със звука.",
-        "Във време, в което културният опит често е разпокъсан от екрани, институционални етикети и дигитален шум, 432 Chamber Orchestra работи за възстановяване на непосредствения досег с живата музика: камерни preview формати, бележки за слушане, контекст към репертоара, записи, архив и разговори около самата работа.",
-        "Целта не е музиката да бъде обяснена до сухота. Целта е хората да започнат да чуват по-дълбоко."
+        "Контактът с публиката е естествено продължение на концертната дейност.",
+        "Програмните бележки, историческият контекст и възможността за повторно слушане на записи предлагат различни пътища към по-задълбочено познаване на репертоара.",
+        "Предвиждат се камерни срещи с музика, представяния на произведения и разговори за интерпретацията, съпътствани от подбрани записи и архивни материали.",
+        "Тези форми допълват непосредственото възприятие на музиката, без да го заместват."
       ]
     },
     founder: {
@@ -364,9 +364,9 @@ export const siteContent: Record<Language, SiteCopy> = {
       },
       paragraphs: [
         "д-р Иван К. Янакиев е основател на 432 Chamber Orchestra.",
-        "Работата му съчетава диригентска практика, струнно-оркестрова дисциплина, изследване, документация и дългосрочната задача да бъде изградена слушателска общност около сериозен струнен звук.",
+        "Диригентската му работа е свързана с интерпретацията на струнния репертоар и с акустичните и музикално-теоретичните въпроси, които възникват в изпълнителската практика.",
         "Той е доктор и е свързан с Института по механика към БАН. По-ранният му академичен и артистичен път включва работа, свързана с Института за изследване на изкуствата към БАН и предишната история на 432 Chamber Orchestra.",
-        "Завръщането не се представя като лична история на завръщане, а като възстановяване на артистично тяло, архив и отчетна структура около оркестъра."
+        "Оркестърът е създаден преди защитата на дисертацията. Неговата история е засвидетелствана от концертни програми, записи и публикации от предходните години."
       ]
     },
     foundation: {
@@ -402,12 +402,12 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Кампания",
       heading: "Първият звук отново",
       paragraphs: [
-        "„Първият звук отново“ е първата мобилизационна кампания за завръщането на 432 Chamber Orchestra.",
-        "Целта ѝ не е да определя цялата мисия на оркестъра. Целта ѝ е да създаде първата документирана стъпка на рестарта: работен формат, запис, архивна страница и ясен път към следващата оркестрова фаза.",
-        "Кампанията започва със слушателска общност.",
-        "От тази общност хората могат да помогнат по три начина: с време/експертиза, със средства или с глас.",
+        "„Първият звук отново“ е инициатива в подкрепа на следващия концертен период на Камерен оркестър 432.",
+        "Инициативата предвижда подготовка на камерно представяне, звукозаписна документация и публикуване на материалите в архива на оркестъра.",
+        "Поканата е отправена към слушатели, културни институции и частни дарители.",
+        "Подкрепата може да бъде финансова, организационна или професионална.",
         "Първата практическа цел е да се отворят първите три сериозни разговора с компании, домакини или патрони, които биха могли да подкрепят първата документирана стъпка и следващата оркестрова фаза.",
-        "Кампанията е мост, не крайна цел."
+        "Конкретната програма и датите ще бъдат обявени след тяхното потвърждаване."
       ]
     },
     allyWays: {
@@ -468,10 +468,10 @@ export const siteContent: Record<Language, SiteCopy> = {
     archive: {
       id: "archive",
       eyebrow: "Концерти / Архив",
-      heading: "Публична памет, не изолирани събития",
+      heading: "Концертен архив",
       paragraphs: [
         "Архивът ще събира минали и бъдещи концерти, програми, записи, фотографии, партитури, отчети и проектни страници.",
-        "432 Chamber Orchestra не третира концертите като изолирани събития. Всеки проект трябва да стане част от публична памет."
+        "Тук се представят и съхраняват свидетелства за изпълнителската история на оркестъра."
       ]
     },
     support: {
@@ -709,7 +709,7 @@ export const siteContent: Record<Language, SiteCopy> = {
     meta: {
       title: "432 Chamber Orchestra | String Music & Bandcamp Recordings",
       description:
-        "432 Chamber Orchestra is an independent string orchestra from Sofia. Listen to and buy archival recordings on Bandcamp and support its return."
+        "432 Chamber Orchestra, Sofia: its history, repertoire, concert recordings and research into musical pitch and tuning."
     },
     nav: [
       { label: "Orchestra", href: sharedAnchors.orchestra },
@@ -725,10 +725,10 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Independent String Orchestra · Sofia",
       title: "432 Chamber Orchestra",
       text:
-        "From concert performance to music research: the orchestra explored A=432 Hz through live music and recordings well before the doctoral dissertation was defended in 2020.",
-      positioning: ["Not a concert for a report.", "Not performance for exposure.", "Not culture as background."],
+        "432 Chamber Orchestra brings together the interpretation of string repertoire and a sustained interest in historical pitch standards and the acoustics of musical sound.",
+      positioning: ["Chamber precision", "Historical perspective", "Attentive musicianship"],
       finalLine:
-        "A living string orchestra — with classical discipline, chamber clarity, recordings, archive, and a community that follows the work beyond one evening.",
+        "Concerts, recordings and archival testimony to a sustained musical enquiry.",
       primaryCta: "Join the Listening Circle",
       secondaryCta: "Support the First Sound",
       campaignLabel: "Campaign: The First Sound Again"
@@ -736,20 +736,20 @@ export const siteContent: Record<Language, SiteCopy> = {
     core: {
       id: "orchestra",
       eyebrow: "History",
-      heading: "The orchestra predates the dissertation",
+      heading: "History of the orchestra",
       paragraphs: [
-        "432 Chamber Orchestra existed in Sofia before Ivan K. Yanakiev's dissertation. The ensemble already explored A=432 Hz through actual concerts and recordings.",
-        "The orchestra debuted on 18 May 2015 in Studio 1 of Bulgarian National Radio and received the Debut distinction in Musician of the Year 2015. On 13 July 2017 it performed Bulgarian Contemporaries at 432 Hz in the Great Hall of the Bulgarian Academy of Sciences. Milena Bozhikova reviewed this concert in Duma.",
-        "The 2020 dissertation is a later scholarly examination of aspects of an already existing performance practice. It addresses the history of concert pitch, mathematical temperament models, comparative experiments with performers and listeners, and sound perception.",
-        "Concert photography, reviews and archival recordings document the artistic work already achieved by the orchestra."
+        "432 Chamber Orchestra was established in Sofia as an independent string ensemble. From its early years, the musicians explored the concert pitch A=432 Hz through the interpretation of individual musical works.",
+        "The ensemble made its debut on 18 May 2015 in Studio 1 of Bulgarian National Radio and subsequently received the Debut distinction at Musician of the Year 2015. On 13 July 2017, it presented Bulgarian Contemporaries at 432 Hz in the Great Hall of the Bulgarian Academy of Sciences; the concert was reviewed by Milena Bozhikova in Duma.",
+        "Ivan K. Yanakiev's dissertation, defended in 2020, subsequently placed aspects of this experience in a broader scholarly context: the history of concert pitch, models of musical temperament, and studies of auditory perception. The orchestra's activity preceded the dissertation and did not arise from it.",
+        "Concert programmes, reviews, photographs and recordings constitute the documentary record of the ensemble."
       ]
     },
     firstOutput: {
       id: "first-documented-output",
       eyebrow: "First phase",
-      heading: "The first documented output",
+      heading: "The next concert programme",
       paragraphs: [
-        "The restart begins with a focused chamber preview — not as an isolated event, but as the first visible step of a working artistic structure."
+        "A new chamber programme is in preparation as the opening stage of the ensemble's next concert period. Performance and accompanying documentation will be presented once the programme and arrangements are confirmed."
       ],
       items: [
         "a chamber preview",
@@ -762,21 +762,21 @@ export const siteContent: Record<Language, SiteCopy> = {
     vision: {
       id: "vision",
       eyebrow: "Vision",
-      heading: "A sustainable independent string platform",
+      heading: "Artistic perspectives",
       paragraphs: [
-        "432 Chamber Orchestra exists to build a sustainable independent string-orchestra platform based in Sofia.",
-        "The orchestra creates a focused space for listening: one in which the string orchestra is not treated as background or decoration, but as a living artistic body capable of carrying memory, form, silence, tension, beauty, and spiritual depth.",
-        "The long-term vision is to perform the standard string repertoire, develop new string versions of vocal and choral works, commission new music, and document the work through recordings, scores, and public archive — outside the logic of occasional projects and institutional dependency."
+        "432 Chamber Orchestra is committed to the continued presence of an independent string ensemble in Sofia's musical life.",
+        "Its artistic approach rests upon fidelity to the score, the relationships among instrumental lines, and the finer distinctions of ensemble sonority. Chamber forces allow for direct exchange among musicians and particular clarity of texture.",
+        "Future work envisages programmes drawn from the classical and contemporary string repertoire, new arrangements of vocal and choral music, and collaborations with composers. Recordings and archival documentation form an integral part of this activity."
       ]
     },
     mission: {
       id: "mission",
       eyebrow: "Mission",
-      heading: "Work that leaves a trace",
+      heading: "Performance and repertoire",
       paragraphs: [
-        "432 Chamber Orchestra performs, develops, records, and preserves serious music for string orchestra and chamber string formations.",
-        "The orchestra does not exist only to perform concerts. It exists to create a body of work.",
-        "Every project should leave a trace: a performance, a recording, a score or arrangement, an archive page, a community of listeners, and a clear next step."
+        "The orchestra's work encompasses the preparation and performance of music for string orchestra and smaller ensembles, together with recordings and the preservation of concert materials.",
+        "Continuity between programmes is an important part of this conception: interpretative insights developed in one performance may inform those that follow.",
+        "Where practicable, performances are accompanied by recordings, programme notes, scores or arrangements, and accessible archival materials."
       ],
       directions: [
         "Classical string-orchestra repertoire",
@@ -787,19 +787,19 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Recording and public archive"
       ],
       closing: [
-        "432 Chamber Orchestra does not seek a one-time audience. It builds a listening community.",
-        "Not a concert for a report. Not performance for exposure. Not culture as background. String sound that leaves a trace."
+        "The orchestra remains in contact with its audience beyond the concert hall through recordings, archival materials and musical discussions.",
+        "Chamber precision Historical perspective Attentive musicianship String sound that leaves a trace."
       ]
     },
     listening: {
       id: "listening-circle",
       eyebrow: "Listening Community",
-      heading: "People who hear more deeply",
+      heading: "Listening and musical dialogue",
       paragraphs: [
-        "432 Chamber Orchestra does not seek a passive audience. It builds a listening community.",
-        "A listener is not only someone who attends a concert. A listener is someone who gradually develops attention, memory, criteria, and a living relationship with sound.",
-        "In a time when cultural experience is often fragmented by screens, institutional labels, and digital noise, 432 Chamber Orchestra works to restore direct contact with live music: chamber previews, listening notes, repertoire context, recordings, archive, and conversations around the work.",
-        "The goal is not to explain music until it becomes dry. The goal is to help people hear more deeply."
+        "Engagement with listeners is a natural continuation of the orchestra's concert life.",
+        "Programme notes, historical context and opportunities to revisit recordings offer different approaches to a closer understanding of the repertoire.",
+        "Chamber performances, introductions to works and discussions of interpretation are envisaged, supported by selected recordings and archival materials.",
+        "These activities are intended to complement, rather than displace, the immediate experience of music."
       ]
     },
     founder: {
@@ -816,9 +816,9 @@ export const siteContent: Record<Language, SiteCopy> = {
       },
       paragraphs: [
         "Ivan K. Yanakiev, PhD is the founder of 432 Chamber Orchestra.",
-        "His work brings together conducting, string-orchestra discipline, research, documentation, and the long-term task of rebuilding a listening community around serious string sound.",
+        "His conducting centres on the interpretation of string repertoire and on the acoustic and theoretical questions arising from musical performance.",
         "He holds a PhD and is associated with the BAS Institute of Mechanics. His earlier academic and artistic background includes work connected with the BAS Institute of Art Studies and the previous history of 432 Chamber Orchestra.",
-        "The restart is not presented as a personal comeback story, but as the rebuilding of an artistic body, archive, and accountable structure around the orchestra."
+        "The orchestra was founded before the dissertation was completed. Its earlier history is documented through concert programmes, recordings and contemporary publications."
       ]
     },
     foundation: {
@@ -849,12 +849,12 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Campaign",
       heading: "The First Sound Again",
       paragraphs: [
-        "The First Sound Again is the first mobilisation campaign for the return of 432 Chamber Orchestra.",
-        "Its purpose is not to define the orchestra’s entire mission. Its purpose is to create the first documented step of the restart: a working format, a recording, an archive page, and a clear path toward the next orchestral phase.",
-        "The campaign begins with a listening community.",
-        "From that community, people can help in three ways: time/expertise, money, or voice.",
+        "The First Sound Again is an initiative supporting the next concert period of 432 Chamber Orchestra.",
+        "The initiative envisages the preparation of a chamber performance, its audio documentation and the publication of related materials in the orchestra's archive.",
+        "The invitation extends to listeners, cultural institutions and private supporters.",
+        "Support may take the form of financial, organisational or professional assistance.",
         "The first practical goal is to open the first three serious conversations with companies, hosts, or patrons who could support the first documented step and the next orchestral phase.",
-        "The campaign is a bridge, not the destination."
+        "Programme details and dates will be published when confirmed."
       ]
     },
     allyWays: {
@@ -915,10 +915,10 @@ export const siteContent: Record<Language, SiteCopy> = {
     archive: {
       id: "archive",
       eyebrow: "Concerts / Archive",
-      heading: "Public memory, not isolated events",
+      heading: "Concert archive",
       paragraphs: [
         "The archive will collect past and future concerts, programmes, recordings, photographs, scores, reports, and project pages.",
-        "432 Chamber Orchestra does not treat concerts as isolated events. Each project should become part of a public memory."
+        "This archive preserves and presents material documenting the orchestra's performing history."
       ]
     },
     support: {
@@ -1188,8 +1188,8 @@ export const campaignLandingContent = {
       secondaryCta: "Подкрепете първия звук"
     },
     mainCopy: [
-      "432 Chamber Orchestra не търси еднократна публика. Той изгражда слушателска общност.",
-      "Не концерт за отчет. Не участие за exposure. Не култура като фон.",
+      "Оркестърът поддържа връзка с публиката и извън концертната зала чрез записи, архив и срещи, посветени на музиката.",
+      "Камерна прецизност Историческа осведоменост Внимание към звученето",
       "Оркестърът се завръща чрез дисциплинирана последователност от работни и оркестрови стъпки: слушателски кръг, първи документиран формат, запис, архив, отчет и следваща оркестрова фаза.",
       "Първата форма на подкрепа е вниманието. Влезте в слушателския кръг, ако вярвате, че независимата класическа музика трябва да бъде чута, документирана и съхранена."
     ],
@@ -1245,8 +1245,8 @@ export const campaignLandingContent = {
       secondaryCta: "Support the First Sound"
     },
     mainCopy: [
-      "432 Chamber Orchestra does not seek a one-time audience. It builds a listening community.",
-      "Not a concert for a report. Not performance for exposure. Not culture as background.",
+      "The orchestra remains in contact with its audience beyond the concert hall through recordings, archival materials and musical discussions.",
+      "Chamber precision Historical perspective Attentive musicianship",
       "The orchestra is returning through a disciplined sequence of working and orchestral steps: listening circle, first documented format, recording, archive, report, and the next orchestral phase.",
       "The first form of support is attention. Join the Listening Circle if you believe independent classical music should be heard, documented, and preserved."
     ],
