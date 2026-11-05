@@ -90,15 +90,6 @@ export const photoArchive: PhotoArchiveItem[] = [
   galleryPhoto("VBAL6574.jpg", 1800, 1200, "wholeOrchestraConcert", wholeOrchestraText),
   galleryPhoto("VBAL6575.jpg", 1800, 1200, "wholeOrchestraConcert", wholeOrchestraText),
   galleryPhoto("VBAL6581.jpg", 1800, 1200, "conductor", conductorText),
-  galleryPhoto("Concert-1.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("Concert-3.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("Concert-4.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("Concert-6.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("Concert-10.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("Concert-14.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("Concert-18.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("Concert-21.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("Concert-22.jpg", 1800, 1013, "wholeOrchestraConcert", wholeOrchestraText)
 ];
 
 export const homepagePhotoPreview = photoArchive.filter((photo) => photo.src.startsWith("/orchestra/photos/")).slice(0, 8);
