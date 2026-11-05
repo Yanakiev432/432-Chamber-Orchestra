@@ -11,8 +11,8 @@ const sponsorBriefHref = isBg ? "/bg/sponsor-brief/" : "/en/sponsor-brief/";
 const photoArchiveHref = isBg ? "/bg/archive/" : "/en/archive/";
 const title = isBg ? "Преса / Медии" : "Press / Media";
 const intro = isBg
-  ? "432 Chamber Orchestra е струнен оркестър, основан в София през 2013 г. от диригента Иван К. Янакиев. На тази страница са събрани проверими рецензии, записи от медийното отразяване и първоизточници за свързаното научно изследване."
-  : "Founded in Sofia in 2013 by conductor Ivan K. Yanakiev, 432 Chamber Orchestra has documented concert performances, a Debut award, press coverage and a related musicological dissertation. This page links to the original sources.";
+  ? "432 Chamber Orchestra възниква преди докторското изследване на Иван К. Янакиев. Неговата концертна практика е документирана от 2015 г., а дисертацията от 2020 г. разглежда и систематизира част от вече натрупания изпълнителски и експериментален опит. Тук са събрани рецензии, медийни публикации и научни първоизточници."
+  : "432 Chamber Orchestra predates Ivan K. Yanakiev’s doctoral research. Its concerts are documented from 2015, while the 2020 dissertation examines and systematises aspects of an already established performance and experimental practice. This page links to concert reviews, press coverage and research sources.";
 const keyFacts = isBg
   ? [
       "Независим струнен оркестър със седалище в София",
@@ -53,10 +53,10 @@ const reviews = [
     englishTitle: "Contemporary Bulgarian music performed at the BAS Auditorium",
     source: "Вестник „Дума“",
     date: "02.08.2017",
-    author: "проф. Милена Божикова / Prof. Milena Bozhikova",
+    author: "Милена Божикова / Milena Bozhikova",
     href: "https://duma.bg/savremenna-balgarska-muzika-be-predstavena-s-kontsert-v-golemiya-salon-na-ban-n150173",
-    bgNote: "Рецензия за концерта от 13 юли 2017 г.; включва оценка на композитора Красимир Тасков за изпълнението на неговото Адажио. Авторката е и научен ръководител на дисертацията на диригента.",
-    enNote: "A review of the concert on 13 July 2017, including composer Krasimir Taskov's assessment of the performance of his Adagio. The author also supervised the conductor's PhD dissertation."
+    bgNote: "Рецензия за концерта от 13 юли 2017 г.; включва оценка на композитора Красимир Тасков за изпълнението на неговото Адажио.",
+    enNote: "A review of the concert on 13 July 2017, including composer Krasimir Taskov's assessment of the performance of his Adagio."
   }
 ] as const;
 
@@ -210,7 +210,7 @@ const usageNote = isBg
 
   <article class="mt-8 border border-brand-border bg-brand-surface p-6 md:p-8">
     <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Научна основа: първоизточници" : "Research background: primary sources"}</h2>
-    <p class="mt-3 max-w-4xl text-sm leading-7 text-brand-muted">{isBg ? "Дисертацията от 2020 г. разграничава концертен строй, темперация и интонация; анализира изпълнителски и слушателски сравнения и формулира хипотези за следващи изследвания. Тя не доказва универсално превъзходство или лечебни свойства на 432 Hz." : "The 2020 dissertation distinguishes concert pitch, temperament and intonation; analyses performance and listening comparisons; and proposes hypotheses for future research. It does not establish any universal superiority or healing property of 432 Hz."}</p>
+    <p class="mt-3 max-w-4xl text-sm leading-7 text-brand-muted">{isBg ? "Дисертацията от 2020 г. стъпва върху вече съществуващия оркестър и предходните акустични и изпълнителски експерименти. Трудът разграничава концертен строй, темперация и интонация, анализира сравнения и формулира хипотези за бъдещи изследвания; не доказва универсално превъзходство или лечебни свойства на 432 Hz." : "The 2020 dissertation draws on the already existing orchestra and earlier acoustic and performance experiments. It distinguishes concert pitch, temperament and intonation, analyses comparisons, and proposes hypotheses for future research; it does not establish universal superiority or healing properties of 432 Hz."}</p>
     <ul class="mt-6 grid gap-3 text-sm md:grid-cols-2">
       {researchLinks.map((item) => (
         <li class="border-t border-brand-border pt-3">
