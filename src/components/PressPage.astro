@@ -11,8 +11,8 @@ const sponsorBriefHref = isBg ? "/bg/sponsor-brief/" : "/en/sponsor-brief/";
 const photoArchiveHref = isBg ? "/bg/archive/" : "/en/archive/";
 const title = isBg ? "Преса / Медии" : "Press / Media";
 const intro = isBg
-  ? "432 Chamber Orchestra е независим струнен оркестър със седалище в София, който се завръща с модел, изграден около дисциплиниран струнен звук, записи, архив, публична документация и слушателска общност, която следва работата отвъд една вечер."
-  : "432 Chamber Orchestra is an independent string orchestra based in Sofia, returning with a model built around disciplined string sound, recordings, archive, public documentation, and a listening community that follows the work beyond one evening.";
+  ? "432 Chamber Orchestra е струнен оркестър, основан в София през 2013 г. от диригента Иван К. Янакиев. На тази страница са събрани проверими рецензии, записи от медийното отразяване и първоизточници за свързаното научно изследване."
+  : "Founded in Sofia in 2013 by conductor Ivan K. Yanakiev, 432 Chamber Orchestra has documented concert performances, a Debut award, press coverage and a related musicological dissertation. This page links to the original sources.";
 const keyFacts = isBg
   ? [
       "Независим струнен оркестър със седалище в София",
@@ -47,6 +47,106 @@ const resources = isBg
       { label: "Logos", href: brandAssets.headerLogo },
       { label: "Selected photos", href: photoArchive[0].src }
     ];
+const reviews = [
+  {
+    title: "Съвременна българска музика бе представена с концерт в големия салон на БАН",
+    englishTitle: "Contemporary Bulgarian music performed at the BAS Auditorium",
+    source: "Вестник „Дума“",
+    date: "02.08.2017",
+    author: "проф. Милена Божикова / Prof. Milena Bozhikova",
+    href: "https://duma.bg/savremenna-balgarska-muzika-be-predstavena-s-kontsert-v-golemiya-salon-na-ban-n150173",
+    bgNote: "Рецензия за концерта от 13 юли 2017 г.; включва оценка на композитора Красимир Тасков за изпълнението на неговото Адажио. Авторката е и научен ръководител на дисертацията на диригента.",
+    enNote: "A review of the concert on 13 July 2017, including composer Krasimir Taskov's assessment of the performance of his Adagio. The author also supervised the conductor's PhD dissertation."
+  }
+] as const;
+
+const coverage = [
+  {
+    bgTitle: "Връчиха отличията „Музикант на годината 2015“",
+    enTitle: "Musician of the Year 2015: Debut award",
+    source: "Дума / Duma",
+    date: "25.04.2016",
+    href: "https://www.duma.bg/vrachiha-otlichiyata-muzikant-na-godinata-2015-n122676",
+    bgNote: "Новина, удостоверяваща отличието „Дебют“ на оркестъра.",
+    enNote: "News coverage confirming the orchestra's Debut award."
+  },
+  {
+    bgTitle: "Новият оркестър „432“",
+    enTitle: "The new Orchestra 432",
+    source: "БНР / Bulgarian National Radio",
+    date: "20.05.2015",
+    href: "https://old-news.bnr.bg/horizont/post/100564873/noviat-orkestar-432",
+    bgNote: "Материал след дебюта от 18 май 2015 г. и интервю с основателя.",
+    enNote: "Post-debut report and interview with the founder, after 18 May 2015."
+  },
+  {
+    bgTitle: "Разлика от осем херца предоставя ново музикално изживяване",
+    enTitle: "An eight-hertz difference and a new musical experience",
+    source: "Радио България / Bulgarian National Radio",
+    date: "24.02.2015",
+    href: "https://bnr.bg/radiobulgaria/post/100524400/razlika-ot-osem-herca-predostava-novo-muzikalno-izjivavane",
+    bgNote: "Интервю с Иван Янакиев и концертмайстора Ивайло Данаилов.",
+    enNote: "Interview with Ivan Yanakiev and concertmaster Ivaylo Danailov."
+  },
+  {
+    bgTitle: "Камерен оркестър 432 и българските съвременници",
+    enTitle: "Bulgarian contemporaries: concert preview",
+    source: "БНР / Bulgarian National Radio",
+    date: "12.07.2017",
+    href: "https://old-news.bnr.bg/post/100852087/kameren-orkestar-432-i-ivan-anakiev-shte-predstavat-kancert-sas-savremenna-balgarska-muzika",
+    bgNote: "Анонс и интервю с пълна програма на концерта.",
+    enNote: "Concert announcement, interview and complete programme."
+  },
+  {
+    bgTitle: "Български съвременници в 432 Hz",
+    enTitle: "Bulgarian Contemporaries at 432 Hz",
+    source: "ИИИзк–БАН / Institute of Art Studies, BAS",
+    date: "03.07.2017",
+    href: "https://artstudies.bg/?p=7259",
+    bgNote: "Институционален източник за финансирания научен проект и концерта.",
+    enNote: "Institutional source for the research project and the concert."
+  },
+  {
+    bgTitle: "Камерен оркестър 432, нисък концертен строй и празнична класика",
+    enTitle: "Orchestra 432: the December 2015 concert",
+    source: "БНР / Bulgarian National Radio",
+    date: "18.12.2015",
+    href: "https://old-news.bnr.bg/post/100639338",
+    bgNote: "Анонс на концерт от поредицата „Мотив“ на 22 декември 2015 г.",
+    enNote: "Preview of the 22 December 2015 concert in the Motiv series."
+  },
+  {
+    bgTitle: "Концерт на квартет при Камерен оркестър 432",
+    enTitle: "Orchestra 432 quartet performance",
+    source: "ArtSofia",
+    date: "05.06.2018",
+    href: "https://artsofia.bg/bg/events/2018/06/05/koncert-na-kvartet-pri-kameren-orkestyr-432",
+    bgNote: "Представяне на квартета и състава му за участие в Банкя; не е рецензия.",
+    enNote: "A presentation of the orchestra's quartet and its Bankya performance; not a review."
+  }
+] as const;
+
+const researchLinks = [
+  {
+    bgTitle: "Дисертационен запис в НАЦИД № 68065",
+    enTitle: "NACID dissertation record No. 68065",
+    href: "https://ras.nacid.bg/dissertation-preview/68065",
+    year: "2020"
+  },
+  {
+    bgTitle: "Пълен текст на дисертацията — НАЦИД",
+    enTitle: "Full dissertation text — NACID",
+    href: "https://ras.nacid.bg/api/reg/FilesStorage?key=123bda6a-ab6b-493b-a7d8-c14d0737d72a&mimeType=application/pdf&fileName=IYanakiev_Disertacia.pdf&dbId=1",
+    year: "2020"
+  },
+  {
+    bgTitle: "Автореферат — Институт за изследване на изкуствата",
+    enTitle: "Dissertation abstract — Institute of Art Studies",
+    href: "https://artstudies.bg/wp-content/uploads/Zashtiti%3DFiles/IYanakiev/IYanakiev_Avtoreferat.pdf",
+    year: "2020"
+  }
+] as const;
+
 const assetLinks = [
   { label: "432 Chamber Orchestra logo", href: brandAssets.headerLogo },
   { label: "432 Chamber Orchestra seal", href: brandAssets.seal },
@@ -78,6 +178,47 @@ const usageNote = isBg
       </ul>
     </article>
   </div>
+
+  <div class="mt-8 grid gap-8 lg:grid-cols-2">
+    <article class="border border-brand-border bg-brand-surface p-6 md:p-8">
+      <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Концертни рецензии" : "Concert reviews"}</h2>
+      <p class="mt-3 text-sm leading-7 text-brand-muted">{isBg ? "Публикации с критическо разглеждане на реално изпълнени концерти, отделени от анонсите." : "Critical coverage of performances, distinguished from announcements."}</p>
+      <ul class="mt-6 space-y-5">
+        {reviews.map((item) => (
+          <li class="border-t border-brand-border pt-4">
+            <a class="font-semibold text-brand-primary underline-offset-4 hover:underline" href={item.href} target="_blank" rel="noopener noreferrer">{isBg ? item.title : item.englishTitle}</a>
+            <p class="mt-2 text-xs text-brand-muted">{item.source} · {item.date} · {item.author}</p>
+            <p class="mt-2 text-sm leading-7 text-brand-muted">{isBg ? item.bgNote : item.enNote}</p>
+          </li>
+        ))}
+      </ul>
+    </article>
+    <article class="border border-brand-border bg-brand-surface p-6 md:p-8">
+      <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Медийно отразяване и архив" : "Media coverage and archive"}</h2>
+      <p class="mt-3 text-sm leading-7 text-brand-muted">{isBg ? "Проверими новини, интервюта и концертни програми; не всички са рецензии." : "Verifiable news, interviews and programmes; these are not all reviews."}</p>
+      <ul class="mt-6 space-y-5">
+        {coverage.map((item) => (
+          <li class="border-t border-brand-border pt-4">
+            <a class="font-semibold text-brand-primary underline-offset-4 hover:underline" href={item.href} target="_blank" rel="noopener noreferrer">{isBg ? item.bgTitle : item.enTitle}</a>
+            <p class="mt-2 text-xs text-brand-muted">{item.source} · {item.date}</p>
+            <p class="mt-2 text-sm leading-7 text-brand-muted">{isBg ? item.bgNote : item.enNote}</p>
+          </li>
+        ))}
+      </ul>
+    </article>
+  </div>
+
+  <article class="mt-8 border border-brand-border bg-brand-surface p-6 md:p-8">
+    <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Научна основа: първоизточници" : "Research background: primary sources"}</h2>
+    <p class="mt-3 max-w-4xl text-sm leading-7 text-brand-muted">{isBg ? "Дисертацията от 2020 г. разграничава концертен строй, темперация и интонация; анализира изпълнителски и слушателски сравнения и формулира хипотези за следващи изследвания. Тя не доказва универсално превъзходство или лечебни свойства на 432 Hz." : "The 2020 dissertation distinguishes concert pitch, temperament and intonation; analyses performance and listening comparisons; and proposes hypotheses for future research. It does not establish any universal superiority or healing property of 432 Hz."}</p>
+    <ul class="mt-6 grid gap-3 text-sm md:grid-cols-2">
+      {researchLinks.map((item) => (
+        <li class="border-t border-brand-border pt-3">
+          <a class="text-brand-primary underline-offset-4 hover:underline" href={item.href} target="_blank" rel="noopener noreferrer">{isBg ? item.bgTitle : item.enTitle} ({item.year})</a>
+        </li>
+      ))}
+    </ul>
+  </article>
 
   <article class="mt-8 border border-brand-border bg-brand-surface p-6 md:p-8">
     <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Материали за изтегляне" : "Downloadable assets"}</h2>
