@@ -84,5 +84,7 @@ assert_c432( false !== strpos( $css, 'body.woocommerce-shop .woocommerce ul.prod
 assert_c432( false !== strpos( $css, 'body.page-id-997 .woocommerce ul.products' ), 'BG translated shop scoped CSS' );
 assert_c432( false !== strpos( $css, 'grid-template-columns:minmax(0,1fr)!important' ), 'mobile one-column grid' );
 assert_c432( false !== strpos( $css, '.c432-bandcamp-loop-button{display:block;width:100%' ), 'mobile full-width Bandcamp CTA' );
+assert_c432( false !== strpos( $css, 'background:#eadf9b;color:#202020!important' ), 'visible warm-gold CTA on dark theme' );
+assert_c432( false !== strpos( $css, 'background:#fff2c0;color:#202020!important' ), 'high-contrast hover CTA on dark theme' );
 
 echo "PASS: 46 posts / 23 pairs / CTA render / responsive mobile CSS / no external call / no Woo state change\n";
