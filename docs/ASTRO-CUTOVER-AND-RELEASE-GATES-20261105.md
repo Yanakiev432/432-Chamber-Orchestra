@@ -123,3 +123,52 @@ was terminated after screenshots.
 
 **Production remains unchanged**: WordPress main-site + Bandcamp Bridge v1.0.4,
 46 music products and 123 public URLs remain live.
+
+## Dedicated preview host — provisioning update, 2026-11-05
+
+**Subdomain provisioned:** `preview.432hz-orchestra.com`. cPanel `SubDomain::addsubdomain` confirmed success, with independent document root
+`/home/hzorche/preview.432hz-orchestra.com`, physically **outside**
+`/home/hzorche/public_html`. The existing Foundation staging site and
+`432project` WordPress site were not changed.
+
+- DNS authoritative servers `ns101.icndns.net` / `ns102.icndns.net` resolve
+  the new hostname to the account's existing `91.215.216.42`.
+- The cPanel AutoSSL operation was accepted and a certificate issued for
+  `preview.432hz-orchestra.com` and `www.preview.432hz-orchestra.com`.
+  A verified SNI/TLS connection now succeeds; initial server-default page
+  and self-signed certificate were transitional provisioning symptoms.
+- The validated 14,944,780-byte preview ZIP was uploaded **only** to protected
+  private staging. Extraction rejected direct use of the archive's `.htaccess`
+  because it contained production-style rewrite rules. That config was
+  excluded, leaving the isolated preview root's restrictive rules intact.
+- **136/136** extracted static files were copied into the new preview document
+  root and SHA-256-verified byte-for-byte after copying; **21 HTML pages**
+  are present. The static pages have `noindex,nofollow` and `robots.txt`
+  disallows all crawlers.
+- At the last verified check, an anonymous HTTPS request to the new host
+  returned **HTTP 403**. **This is not a released online preview.** The root
+  `.htaccess` was initially created with mode `0640`, so the 403 may reflect
+  Apache being unable to read the rule file; a further gate must verify proper
+  access-control behavior. The remote-tool backend rejected attempts to
+  change the rule-file permissions and install Basic Authentication.
+  No bypass was attempted, and no password was issued.
+
+**Required before sharing the preview URL as ready:** have an authorized
+hosting operation set readable Apache access-rule permissions, configure a
+separate private Basic Authentication user for this subdomain (do not reuse
+Foundation or WordPress credentials), keep AutoSSL challenge paths accessible,
+and verify the following: no-credential request returns HTTP 401 challenge,
+valid credential returns HTTP 200 for BG/EN home and discography, HTTP
+is redirected to HTTPS before credentials can be transmitted, all responses
+carry `X-Robots-Tag: noindex, nofollow, noarchive`, and no other sites'
+routes/assets are exposed. Re-run the 123 legacy live-route HEAD checks and
+verify WordPress Bridge v1.0.4 remains active.
+
+This staging deployment is **not a root migration** and does not authorize
+changing DNS or webroot of the live primary domain. No paid checkout was run.
+
+**Independent security hotfix merged:** PR #6 was squash-merged into
+`feature/432-website-v1` at commit `ea0b12466addbe35404cff98945280398295bc91`.
+A fresh repository fetch confirmed the feature branch's cPanel workflow now
+uses `contents: read`, has no `git push --force` and no
+`DEPLOYPATH=/home/hzorche/public_html/` deployment target.
