@@ -1,13 +1,13 @@
 # 432 Chamber Orchestra catalogue reconciliation (read-only)
 
-**Checked:** 2026-11-04. No source store items or existing Bandcamp releases modified.
+**Initial inventory:** 2026-11-04. **Live URL and purchase-CTA checks:** 2026-11-05. No source store items or existing Bandcamp releases modified.
 
 ## Counting correctly
 - **12 Bandcamp releases** on the /music page.
 - **53 listed track positions** across those releases: 6 + 7 + 12 + 1 + 3 + 16 + 1 + 1 + 1 + 1 + 1 + 3 = 53. Not necessarily unique musical works or separate Bandcamp *release* products.
 - 2018 Christmas album repeats one *Waltz of the Flowers* title in two adjacent track positions (8 and 9). Investigate whether the audio files themselves are duplicates before proposing correction.
 - **46 published WordPress WooCommerce product posts** from read-only SQL, consisting of **23 Polylang translation pairs**, one EN and one BG each.
-- Every pair can be assigned an identifiable Bandcamp destination by title, either a direct track or a source album; these are **mapping candidates** pending live HTTP and title/recording checks. The WordPress source permalinks and visitor metrics have NOT yet been exhaustively verified.
+- Every pair has an identified Bandcamp destination by source release or title. **All 23 Bandcamp destinations returned HTTP 200 with visible Buy Digital Track/Album controls on 2026-11-05. All 46 individual WordPress product URLs returned HTTP 200 and contained WooCommerce add-to-cart controls.** However, waveform-level recording identity, payment completion, and visitor metrics are not independently verified.
 
 ## Release inventory
 
@@ -38,7 +38,7 @@ Interpretation:
 
 ## Safety decisions
 - Do not delete or merge Polylang posts. Preserve all 46 source records and both languages.
-- Do not apply 301 redirects until actual WordPress permalinks and destination HTTP responses are tested individually; prefer first adding direct Bandcamp buttons to existing product pages.
+- Preserve all 46 established product permalinks and add direct Bandcamp purchase buttons on those pages. Even with HTTP verification now complete, **do not apply 301 redirects**: these pages have bilingual SEO and a functioning existing add-to-cart interface. Migrations and redirect policy require separate approval.
 - Do not silently correct old Bandcamp slugs; some contain misspellings and remain the official working destinations.
 - Do not treat 12 releases as 12 tracks or treat 53 track listings as 53 **distinct compositions**.
 - No actual Bandcamp artist-product write access is available through this task; storefront profile corrections need an authenticated admin action.
@@ -49,3 +49,11 @@ Interpretation:
 - https://432orchestra.bandcamp.com/album/432-hz-quartet-music-part-2
 - https://432orchestra.bandcamp.com/album/have-yourself-a-432-hz-christmas-live-concert
 - https://432orchestra.bandcamp.com/album/wolfgang-amadeus-mozart-six-notturni-canzonetti
+
+## 2026-11-05 verification limits
+- All **12 Bandcamp release-level URLs** returned HTTP 200 and exposed a Buy Digital Track/Album button.
+- All **23 mapped Bandcamp destinations** returned HTTP 200 with a visible digital purchase control and streaming/download text (21 tracks, two albums).
+- All **46 bilingual WooCommerce product pages** returned HTTP 200, with matching product IDs, titles, amounts, and WooCommerce buy-button markup.
+- The configured WordPress checkout page and gateway availability were inspected *read-only*. An empty cart redirects to `/en/cart/`; a completed checkout transaction has not been tested.
+- Actual visual QA on a mobile viewport, purchase completion, and semantic/audio identity checks remain separate gates.
+- Separate pre-existing SEO anomaly: `/bg/shop/` emits a canonical link to `/en/shop/`. Do not confuse that shop-archive issue with individual product permalinks.
