@@ -160,6 +160,10 @@ function c432_bandcamp_view_lang( $product_id = 0 ) {
     if ( function_exists( 'is_page' ) && is_page( 106 ) ) {
         return 'en';
     }
+    // WooCommerce renders its English shop as a product archive, not a page.
+    if ( function_exists( 'is_shop' ) && is_shop() ) {
+        return 'en';
+    }
     if ( $product_id ) {
         return c432_bandcamp_lang( $product_id );
     }
