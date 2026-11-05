@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: 432 Bandcamp Purchase Links
- * Description: Clear, bilingual links from the legacy WooCommerce products to their official Bandcamp purchase pages. Does not change WordPress checkout or product data.
- * Version: 1.0.3
+ * Description: Bandcamp-only sales for downloadable music. Keeps the historic WooCommerce catalogue and orders, disables new local sales and routes cart/checkout to Bandcamp.
+ * Version: 1.0.4
  * Author: 432 Chamber Orchestra
  * License: GPL-2.0-or-later
  * Text Domain: c432-bandcamp-bridge
@@ -137,8 +137,8 @@ function c432_bandcamp_single_button() {
     $bg = 'bg' === c432_bandcamp_lang( $id );
     $label = $bg ? 'Слушайте и купете в Bandcamp' : 'Listen & buy on Bandcamp';
     $note = $bg
-        ? 'Покупката се извършва в Bandcamp в нов раздел. Цената там може да се различава от тази в магазина.'
-        : 'Checkout opens on Bandcamp in a new tab. The price there may differ from the price shown here.';
+        ? 'Музиката се купува само през Bandcamp. Плащането и изтеглянето се извършват там.'
+        : 'Music is sold only through Bandcamp. Payment and downloads are handled there.';
 
     echo '<div class="c432-bandcamp-single">';
     echo '<a class="c432-bandcamp-button" href="' . esc_url( $url ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( $label ) . '</a>';
@@ -225,11 +225,12 @@ function c432_bandcamp_shop_banner() {
  * Small, scoped stylesheet. No global theme, product, or checkout edits.
  */
 function c432_bandcamp_styles() {
-    wp_register_style( 'c432-bandcamp-bridge', false, array(), '1.0.3' );
+    wp_register_style( 'c432-bandcamp-bridge', false, array(), '1.0.4' );
     wp_enqueue_style( 'c432-bandcamp-bridge' );
     wp_add_inline_style(
         'c432-bandcamp-bridge',
         '.c432-bandcamp-single,.c432-bandcamp-shop{border:1px solid #b5b5b5;padding:14px;margin:14px 0;clear:both}.c432-bandcamp-button,.c432-bandcamp-loop-button{display:inline-block;box-sizing:border-box;background:#eadf9b;color:#202020!important;border:2px solid #eadf9b;border-radius:2px;padding:10px 15px;min-height:44px;text-decoration:none!important;font-size:14px;font-weight:700;line-height:21px}.c432-bandcamp-button:hover,.c432-bandcamp-loop-button:hover,.c432-bandcamp-button:focus,.c432-bandcamp-loop-button:focus{background:#fff2c0;color:#202020!important;border-color:#fff2c0;outline-offset:3px}.c432-bandcamp-loop-button{display:block;margin:8px 0 14px;text-align:center}.c432-bandcamp-note{margin:9px 0 0;font-size:13px;line-height:1.5;color:inherit}.c432-bandcamp-shop p{margin:0 0 12px}' .
+        '.wpmenucartli,li.wpmenucartli,#wpmenucart{display:none!important}' .
         '@media (max-width:600px){body.woocommerce-shop .woocommerce ul.products,body.page-id-997 .woocommerce ul.products{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:24px!important;padding:0!important}body.woocommerce-shop .woocommerce ul.products li.product,body.page-id-997 .woocommerce ul.products li.product{float:none!important;clear:none!important;width:100%!important;max-width:100%!important;margin:0!important;min-width:0!important}body.woocommerce-shop .woocommerce ul.products li.product img,body.page-id-997 .woocommerce ul.products li.product img{width:100%!important;max-width:420px;height:auto}body.woocommerce-shop .woocommerce ul.products li.product .woocommerce-loop-product__title,body.page-id-997 .woocommerce ul.products li.product .woocommerce-loop-product__title{font-size:16px;line-height:1.45;overflow-wrap:anywhere}body.woocommerce-shop .woocommerce ul.products li.product audio,body.page-id-997 .woocommerce ul.products li.product audio{display:block;width:100%;max-width:100%}.c432-bandcamp-single .c432-bandcamp-button,.c432-bandcamp-shop .c432-bandcamp-button,.c432-bandcamp-loop-button{display:block;width:100%;text-align:center;white-space:normal;overflow-wrap:anywhere}}'
     );
 }
@@ -239,3 +240,137 @@ add_action( 'woocommerce_after_shop_loop_item', 'c432_bandcamp_loop_button', 11 
 add_action( 'woocommerce_before_shop_loop', 'c432_bandcamp_shop_banner', 5 );
 add_action( 'woocommerce_shortcode_before_products_loop', 'c432_bandcamp_shop_banner', 5 );
 add_action( 'wp_enqueue_scripts', 'c432_bandcamp_styles', 20 );
+
+
+/**
+ * Treat all published downloadable music as Bandcamp-only, including future
+ * products and the historical downloadable-yet-not-virtual Joplin product.
+ * Does not affect non-downloadable future merchandise.
+ *
+ * @param mixed $product A WooCommerce product or test double.
+ * @return bool
+ */
+function c432_bandcamp_only_music_product( $product ) {
+    if ( ! is_object( $product ) || ! method_exists( $product, 'get_id' ) ) {
+        return false;
+    }
+    $id = absint( $product->get_id() );
+    $map = c432_bandcamp_map();
+    if ( isset( $map[ $id ] ) ) {
+        return true;
+    }
+    return method_exists( $product, 'is_downloadable' ) && $product->is_downloadable();
+}
+
+/**
+ * Public links never fall back to a fake track URL. Unmapped downloadable
+ * music links to the official discography instead.
+ */
+function c432_bandcamp_checkout_destination( $product_id ) {
+    $mapped = c432_bandcamp_url( $product_id );
+    if ( '' !== $mapped ) {
+        return $mapped;
+    }
+    $product = function_exists( 'wc_get_product' ) ? wc_get_product( absint( $product_id ) ) : null;
+    return c432_bandcamp_only_music_product( $product )
+        ? 'https://432orchestra.bandcamp.com/music'
+        : '';
+}
+
+/** Keep music catalogue and product permalinks, remove Woo purchasability. */
+function c432_bandcamp_disable_local_purchase( $purchasable, $product ) {
+    return c432_bandcamp_only_music_product( $product ) ? false : $purchasable;
+}
+
+/** Suppress misleading legacy EUR prices: final prices live in Bandcamp. */
+function c432_bandcamp_suppress_local_price( $price_html, $product ) {
+    return c432_bandcamp_only_music_product( $product ) ? '' : $price_html;
+}
+
+/** Remove the original add-to-cart widget, including its "Read more" fallback. */
+function c432_bandcamp_suppress_loop_cart_button( $html, $product ) {
+    return c432_bandcamp_only_music_product( $product ) ? '' : $html;
+}
+
+/** Additional hard gate for direct ?add-to-cart and WooCommerce AJAX requests. */
+function c432_bandcamp_reject_add_to_cart( $passed, $product_id ) {
+    $product = function_exists( 'wc_get_product' ) ? wc_get_product( absint( $product_id ) ) : null;
+    if ( c432_bandcamp_only_music_product( $product ) ) {
+        if ( function_exists( 'wc_add_notice' ) ) {
+            wc_add_notice( 'Digital music is purchased exclusively on Bandcamp: https://432orchestra.bandcamp.com/music', 'notice' );
+        }
+        return false;
+    }
+    return $passed;
+}
+
+/** Do not publish phantom WooCommerce Offers for Bandcamp-only music. */
+function c432_bandcamp_remove_local_schema_offer( $markup, $product ) {
+    if ( is_array( $markup ) && c432_bandcamp_only_music_product( $product ) ) {
+        unset( $markup['offers'] );
+    }
+    return $markup;
+}
+
+/**
+ * Remove old basket and checkout entries from both EN and BG navigation.
+ * This does not delete pages, menus, orders or WooCommerce records.
+ */
+function c432_bandcamp_filter_legacy_cart_menu( $items ) {
+    $old_page_ids = array( 107, 108, 461, 965 );
+    foreach ( $items as $key => $item ) {
+        $id = isset( $item->object_id ) ? absint( $item->object_id ) : 0;
+        $url = isset( $item->url ) ? trim( (string) $item->url ) : '';
+        $path = (string) parse_url( $url, PHP_URL_PATH );
+        $host = (string) parse_url( $url, PHP_URL_HOST );
+        $menu_cart = '#wpmenucart' === $url || false !== strpos( $url, '#wpmenucart' );
+        $local = '' === $host || '432hz-orchestra.com' === strtolower( $host ) || 'www.432hz-orchestra.com' === strtolower( $host );
+        $old_route = $local && preg_match( '~/(?:cart|checkout|checkout-2|кошница)/?$~ui', rawurldecode( $path ) );
+        if ( in_array( $id, $old_page_ids, true ) || $menu_cart || $old_route ) {
+            unset( $items[ $key ] );
+        }
+    }
+    return $items;
+}
+
+/**
+ * Legacy cart and checkout URLs lead to Bandcamp. Historical order-pay and
+ * order-received endpoints stay available for already created orders.
+ * Fixed trusted redirect: no request parameters are forwarded.
+ */
+function c432_bandcamp_redirect_legacy_checkout() {
+    if ( is_admin() ) {
+        return;
+    }
+    if ( function_exists( 'is_wc_endpoint_url' ) && ( is_wc_endpoint_url( 'order-pay' ) || is_wc_endpoint_url( 'order-received' ) ) ) {
+        return;
+    }
+    $is_checkout = ( function_exists( 'is_cart' ) && is_cart() )
+        || ( function_exists( 'is_checkout' ) && is_checkout() )
+        || ( function_exists( 'is_page' ) && is_page( array( 107, 108, 461, 965 ) ) );
+    if ( $is_checkout ) {
+        wp_redirect( 'https://432orchestra.bandcamp.com/music', 302, '432 Chamber Orchestra' );
+        exit;
+    }
+}
+
+/** Preserve historic payment access; no gateways for a new local checkout. */
+function c432_bandcamp_disable_new_payment_gateways( $gateways ) {
+    if ( function_exists( 'is_admin' ) && is_admin() ) {
+        return $gateways;
+    }
+    if ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'order-pay' ) ) {
+        return $gateways;
+    }
+    return array();
+}
+
+add_filter( 'woocommerce_is_purchasable', 'c432_bandcamp_disable_local_purchase', 100, 2 );
+add_filter( 'woocommerce_variation_is_purchasable', 'c432_bandcamp_disable_local_purchase', 100, 2 );
+add_filter( 'woocommerce_loop_add_to_cart_link', 'c432_bandcamp_suppress_loop_cart_button', 100, 2 );
+add_filter( 'woocommerce_get_price_html', 'c432_bandcamp_suppress_local_price', 100, 2 );
+add_filter( 'woocommerce_add_to_cart_validation', 'c432_bandcamp_reject_add_to_cart', 100, 2 );
+add_filter( 'woocommerce_structured_data_product', 'c432_bandcamp_remove_local_schema_offer', 100, 2 );
+add_filter( 'woocommerce_available_payment_gateways', 'c432_bandcamp_disable_new_payment_gateways', 100, 1 );
+add_filter( 'wp_nav_menu_objects', 'c432_bandcamp_filter_legacy_cart_menu', 100, 1 );
+add_action( 'template_redirect', 'c432_bandcamp_redirect_legacy_checkout', 0 );
