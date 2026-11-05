@@ -2,7 +2,7 @@
 /**
  * Plugin Name: 432 Bandcamp Purchase Links
  * Description: Clear, bilingual links from the legacy WooCommerce products to their official Bandcamp purchase pages. Does not change WordPress checkout or product data.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: 432 Chamber Orchestra
  * License: GPL-2.0-or-later
  * Text Domain: c432-bandcamp-bridge
@@ -147,6 +147,40 @@ function c432_bandcamp_single_button() {
 }
 
 /**
+ * Identify the main language of the current shop, not the language of
+ * a product returned by a legacy mixed-language [products] shortcode.
+ *
+ * @param int $product_id Product ID for non-shop archive fallback.
+ * @return string
+ */
+function c432_bandcamp_view_lang( $product_id = 0 ) {
+    if ( function_exists( 'is_page' ) && is_page( 997 ) ) {
+        return 'bg';
+    }
+    if ( function_exists( 'is_page' ) && is_page( 106 ) ) {
+        return 'en';
+    }
+    if ( $product_id ) {
+        return c432_bandcamp_lang( $product_id );
+    }
+    $lang = function_exists( 'pll_current_language' ) ? pll_current_language() : '';
+    if ( 'bg' === $lang || 'en' === $lang ) {
+        return $lang;
+    }
+    return ( function_exists( 'get_locale' ) && 0 === strpos( get_locale(), 'bg' ) ) ? 'bg' : 'en';
+}
+
+/**
+ * Only add the catalogue banner to the two actual shop pages.
+ *
+ * @return bool
+ */
+function c432_bandcamp_is_shop_context() {
+    return ( function_exists( 'is_shop' ) && is_shop() )
+        || ( function_exists( 'is_page' ) && is_page( array( 106, 997 ) ) );
+}
+
+/**
  * Shop/product-grid CTA, after the standard Add to basket control.
  */
 function c432_bandcamp_loop_button() {
@@ -156,7 +190,7 @@ function c432_bandcamp_loop_button() {
         return;
     }
 
-    $label = 'bg' === c432_bandcamp_lang( $id )
+    $label = 'bg' === c432_bandcamp_view_lang( $id )
         ? 'Купете в Bandcamp'
         : 'Buy on Bandcamp';
     echo '<a class="c432-bandcamp-loop-button" href="' . esc_url( $url ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( $label ) . '</a>';
@@ -166,12 +200,12 @@ function c432_bandcamp_loop_button() {
  * Make the releases absent from WooCommerce discoverable on the shop page.
  */
 function c432_bandcamp_shop_banner() {
-    $lang = function_exists( 'pll_current_language' ) ? pll_current_language() : '';
-    if ( 'bg' !== $lang && 'en' !== $lang ) {
-        $lang = ( function_exists( 'get_locale' ) && 0 === strpos( get_locale(), 'bg' ) ) ? 'bg' : 'en';
+    static $shown = false;
+    if ( $shown || ! c432_bandcamp_is_shop_context() ) {
+        return;
     }
-
-    $bg = 'bg' === $lang;
+    $shown = true;
+    $bg = 'bg' === c432_bandcamp_view_lang();
     $label = $bg ? 'Всичките 12 издания в Bandcamp' : 'Browse all 12 releases on Bandcamp';
     $intro = $bg
         ? 'В Bandcamp има и издания, които не са представени като отделни продукти в този магазин.'
@@ -187,7 +221,7 @@ function c432_bandcamp_shop_banner() {
  * Small, scoped stylesheet. No global theme, product, or checkout edits.
  */
 function c432_bandcamp_styles() {
-    wp_register_style( 'c432-bandcamp-bridge', false, array(), '1.0.2' );
+    wp_register_style( 'c432-bandcamp-bridge', false, array(), '1.0.3' );
     wp_enqueue_style( 'c432-bandcamp-bridge' );
     wp_add_inline_style(
         'c432-bandcamp-bridge',
@@ -199,4 +233,5 @@ function c432_bandcamp_styles() {
 add_action( 'woocommerce_single_product_summary', 'c432_bandcamp_single_button', 29 );
 add_action( 'woocommerce_after_shop_loop_item', 'c432_bandcamp_loop_button', 11 );
 add_action( 'woocommerce_before_shop_loop', 'c432_bandcamp_shop_banner', 5 );
+add_action( 'woocommerce_shortcode_before_products_loop', 'c432_bandcamp_shop_banner', 5 );
 add_action( 'wp_enqueue_scripts', 'c432_bandcamp_styles', 20 );
