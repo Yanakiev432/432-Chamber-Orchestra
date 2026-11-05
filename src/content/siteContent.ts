@@ -277,7 +277,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       positioning: ["Камерна прецизност", "Историческа осведоменост", "Внимание към звученето"],
       finalLine:
         "Концерти, звукозаписи и архивни свидетелства за последователно музикално търсене.",
-      primaryCta: "Влезте в слушателския кръг",
+      primaryCta: "Присъединете се към слушателската общност",
       secondaryCta: "Подкрепете първия звук",
       campaignLabel: "Кампания: Първият звук отново"
     },
@@ -300,11 +300,11 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Подготвя се камерна програма като начало на следващия концертен период. Изпълнението и съпътстващите го материали ще бъдат представени след потвърждаване на програмата и организационните условия."
       ],
       items: [
-        "камерен preview",
+        "камерно изпълнение",
         "записан откъс",
         "публична архивна страница",
         "кратък отчет",
-        "ясна следваща стъпка към по-голяма струнно-оркестрова фаза"
+        "подготовка на следваща програма за разширен състав"
       ]
     },
     vision: {
@@ -329,14 +329,14 @@ export const siteContent: Record<Language, SiteCopy> = {
       directions: [
         "Класически струнно-оркестров репертоар",
         "Музикална памет и пренебрегван репертоар",
-        "Хорови и вокални преображения",
-        "Източното песнопение като артистична линия",
+        "Струнни обработки на вокална и хорова музика",
+        "Източноправославна певческа традиция и камерна интерпретация",
         "Нова музика и млади автори",
         "Запис и публичен архив"
       ],
       closing: [
         "Оркестърът поддържа връзка с публиката и извън концертната зала чрез записи, архив и срещи, посветени на музиката.",
-        "Камерна прецизност Историческа осведоменост Внимание към звученето Струнен звук, който оставя следа."
+        "В центъра на тази дейност остават музикалното произведение и отговорността към неговото изпълнение."
       ]
     },
     listening: {
@@ -415,26 +415,26 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Съюзници",
       heading: "Три начина да помогнете",
       intro:
-        "Не всеки съюзник помага по един и същи начин. Някои дават време и експертиза. Други дават средства. Трети дават глас и доверие. И трите са важни.",
+        "За осъществяването на следващите проекти са необходими сътрудничество, организационна подкрепа и средства.",
       cards: [
         {
-          title: "Дайте време/експертиза",
+          title: "Професионално съдействие",
           description:
-            "Помогнете с професионални умения, които могат да изградят проекта: маркетинг, дизайн, комуникации, фотография, видео, звук, уеб разработка, copywriting, превод, PR, събитийна организация, правна или счетоводна експертиза, партньорства, fundraising или връзки с подходящи компании и домакини.",
+            "Търси се съдействие за звукозапис, фотография, комуникация, превод, организация на събития, правни и счетоводни въпроси и връзки с културни партньори.",
           cta: "Предложете експертиза",
           href: "#support"
         },
         {
-          title: "Дайте средства",
+          title: "Дарителска подкрепа",
           description:
-            "Подкрепете първия запис, хонорар на музикант, нова обработка, първа документирана стъпка или архивна документация. Подкрепата трябва да води до конкретен документиран резултат.",
+            "Даренията могат да подпомогнат репетициите, музикантските възнаграждения, изработването на обработки, звукозаписа и съхраняването на архива.",
           cta: "Подкрепете първия звук",
           href: "#support"
         },
         {
-          title: "Дайте глас",
+          title: "Съдействие за партньорства",
           description:
-            "Препратете проекта към един подходящ човек, дайте кратка препоръка или помогнете оркестърът да достигне до хора, които разбират сериозния културен труд.",
+            "Съдействие за установяване на контакт с концертни зали, институции и потенциални партньори.",
           cta: "Препратете проекта",
           href: "mailto:info@432hz-foundation.com"
         }
@@ -454,15 +454,15 @@ export const siteContent: Record<Language, SiteCopy> = {
     programs: {
       id: "programs",
       eyebrow: "Програми",
-      heading: "Формати за първата работеща фаза",
+      heading: "Художествени направления",
       intro:
-        "Първата версия на сайта очертава програми като работни направления, без да измисля дати, записи или партньорства.",
+        "Представените направления очертават бъдещата работа на състава. Конкретните програми и дати ще се публикуват след потвърждение.",
       cards: [
         { title: "Слушателски кръг", description: "Общност около внимателно слушане, контекст, разговори и следване на работата във времето." },
-        { title: "Камерен preview формат", description: "Малък, фокусиран формат за първата документирана стъпка на рестарта." },
+        { title: "Камерен preview формат", description: "Камерна програма с ограничен състав, подходяща за концертно представяне и запис." },
         { title: "Запис и архив", description: "Документиране на работата чрез записи, партитури, бележки и публични архивни страници." },
-        { title: "Оркестрово завръщане", description: "Път към по-голяма струнно-оркестрова фаза, изградена върху реална общност и структура." },
-        { title: "Корпоративни и патронски формати", description: "Сериозни разговори с компании, домакини и патрони, които разбират културна отговорност." }
+        { title: "Оркестрово завръщане", description: "Подготовка на програма за пълен струнно-оркестров състав." },
+        { title: "Корпоративни и патронски формати", description: "Партньорства с културни организации и дарители в подкрепа на концертната дейност." }
       ]
     },
     archive: {
@@ -477,9 +477,9 @@ export const siteContent: Record<Language, SiteCopy> = {
     support: {
       id: "support",
       eyebrow: "Подкрепа",
-      heading: "Влезте в слушателския кръг",
+      heading: "Присъединете се към слушателската общност",
       intro:
-        "Първата покана е за слушателска общност. Подкрепата със средства е важна, но не води сайта и не замества вниманието към работата.",
+        "Можете да получавате известия за предстоящи програми и нови записи или да се свържете с фондацията във връзка с подкрепа за нейната дейност.",
       formNote:
         "Формата за слушателския кръг се свързва. До активирането ѝ пишете на info@432hz-foundation.com с тема „Слушателски кръг“.",
       form: {
@@ -507,7 +507,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         preview: {
           heading: "Първа документирана стъпка",
           intro:
-            "Първата готова за подкрепа стъпка е компактна, документирана работна фаза, която трябва да произведе повече от едно събитие.",
+            "Предвижда се камерно представяне, придружено от звукозаписна и фотографска документация. Програмата, датата и мястото предстои да бъдат уточнени.",
           formatHeading: "Работен формат",
           formatItems: [
             "компактен струнен формат или фокусирана работна сесия",
@@ -533,7 +533,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         useOfFunds: {
           heading: "Как ще се използва подкрепата",
           intro:
-            "Първата фаза трябва да финансира определена артистична работа, а не неясна дейност.",
+            "Средствата се предвиждат за подготовката, изпълнението и документирането на концертната програма.",
           label: "Ориентировъчно използване на средствата",
           items: [
             "хонорари за музиканти",
@@ -579,7 +579,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         fundingTarget: {
           heading: "Цел за финансиране",
           intro:
-            "Завръщането трябва да бъде финансирано като определен артистичен резултат, а не като неясен апел.",
+            "Представените суми са ориентировъчни бюджети за различен мащаб на концертна и звукозаписна дейност.",
           breakdownHeading: "Какво включва професионалната цел",
           breakdownItems: [
             "13 инструменталисти",
@@ -602,7 +602,7 @@ export const siteContent: Record<Language, SiteCopy> = {
             "резерв"
           ],
           disciplineNote:
-            "Проектът не трябва да се бюджетира като „един концерт“. Той трябва да се бюджетира като документирана артистична продукция: репетиции, изпълнение, права, запис, документация, PR, архив и отчетност.",
+            "Бюджетът включва не само публичното изпълнение, но и репетиции, музикантски хонорари, права, записи, архивиране и отчетност.",
           items: [
             {
               title: "Минимална първа фаза",
@@ -639,13 +639,13 @@ export const siteContent: Record<Language, SiteCopy> = {
           ctas: {
             sponsor: "Заявете разговор за партньорство",
             bank: "Използвайте банков превод",
-            listening: "Влезте в слушателския кръг"
+            listening: "Присъединете се към слушателската общност"
           }
         },
         patronPathway: {
           heading: "За компании и патрони",
           intro:
-            "Най-полезната първа стъпка не е поставяне на лого. Тя е сериозен разговор за определен културен резултат.",
+            "Партньорствата се обсъждат според художествената програма, необходимите ресурси и възможностите за съдействие.",
           items: [
             "домакинство на първа документирана стъпка",
             "подкрепа за първия запис",
@@ -655,7 +655,7 @@ export const siteContent: Record<Language, SiteCopy> = {
             "подкрепа за документация и архив"
           ],
           askLabel: "Първа конкретна молба",
-          askText: "Отворете 20-минутен разговор за първата документирана стъпка.",
+          askText: "Свържете се с фондацията за обсъждане на възможно партньорство.",
           cta: "Заявете разговор за партньорство",
           briefCta: "Вижте спонсорското резюме",
           mailSubject: "Разговор за първата документирана стъпка",
@@ -678,7 +678,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         "Картови плащания и други официални начини за подкрепа ще бъдат добавени след потвърждение. Засега можете да оставите имейл или да използвате банков превод.",
       patronHeading: "Компании и патрони",
       patronText:
-        "За компании, домакини и патрони: първата практическа цел е да се отворят сериозни разговори за документиран първи резултат и следваща оркестрова фаза."
+        "Фондацията приема предложения за подкрепа на предстоящи концертни програми, записи и архивни дейности."
     },
     contact: {
       id: "contact",
@@ -729,7 +729,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       positioning: ["Chamber precision", "Historical perspective", "Attentive musicianship"],
       finalLine:
         "Concerts, recordings and archival testimony to a sustained musical enquiry.",
-      primaryCta: "Join the Listening Circle",
+      primaryCta: "Join the listening community",
       secondaryCta: "Support the First Sound",
       campaignLabel: "Campaign: The First Sound Again"
     },
@@ -752,11 +752,11 @@ export const siteContent: Record<Language, SiteCopy> = {
         "A new chamber programme is in preparation as the opening stage of the ensemble's next concert period. Performance and accompanying documentation will be presented once the programme and arrangements are confirmed."
       ],
       items: [
-        "a chamber preview",
+        "a chamber performance",
         "a recorded excerpt",
         "a public archive page",
         "a short report",
-        "a clear next step toward the larger string-orchestra phase"
+        "preparation of a subsequent programme for an expanded ensemble"
       ]
     },
     vision: {
@@ -781,14 +781,14 @@ export const siteContent: Record<Language, SiteCopy> = {
       directions: [
         "Classical string-orchestra repertoire",
         "Musical memory and neglected repertoire",
-        "Choral and vocal transfigurations",
-        "Eastern chant as an artistic line",
+        "String arrangements of vocal and choral music",
+        "Eastern Orthodox chant and chamber interpretation",
         "New music and young authors",
         "Recording and public archive"
       ],
       closing: [
         "The orchestra remains in contact with its audience beyond the concert hall through recordings, archival materials and musical discussions.",
-        "Chamber precision Historical perspective Attentive musicianship String sound that leaves a trace."
+        "The musical work and the responsibility of its interpretation remain at the heart of this activity."
       ]
     },
     listening: {
@@ -862,26 +862,26 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Allies",
       heading: "Three ways to help",
       intro:
-        "Not every ally helps in the same way. Some give time and expertise. Some give money. Some give voice and credibility. All three matter.",
+        "The preparation of future projects calls for collaboration, organisational assistance and financial support.",
       cards: [
         {
-          title: "Give Time / Expertise",
+          title: "Professional assistance",
           description:
-            "Help with professional skills that can build the project: marketing, design, communications, photography, video, sound, web development, copywriting, translation, PR, event organisation, legal or accounting expertise, partnerships, fundraising, or introductions to suitable companies and hosts.",
+            "Assistance is welcome with sound recording, photography, communications, translation, event organisation, legal and accounting matters, and introductions to cultural partners.",
           cta: "Offer expertise",
           href: "#support"
         },
         {
-          title: "Give Money",
+          title: "Donations",
           description:
-            "Support the first recording, a musician’s fee, a new arrangement, a first documented step, or archive documentation. Support should lead to a specific documented result.",
+            "Donations may assist with rehearsals, musicians' remuneration, new arrangements, recordings and the preservation of the archive.",
           cta: "Support the First Sound",
           href: "#support"
         },
         {
-          title: "Give Voice",
+          title: "Partnership introductions",
           description:
-            "Forward the project to one relevant person, give a short endorsement, or help the orchestra reach people who understand serious cultural work.",
+            "Introductions to concert venues, institutions and prospective partners are welcome.",
           cta: "Forward the project",
           href: "mailto:info@432hz-foundation.com"
         }
@@ -901,15 +901,15 @@ export const siteContent: Record<Language, SiteCopy> = {
     programs: {
       id: "programs",
       eyebrow: "Programs",
-      heading: "Formats for the first working phase",
+      heading: "Artistic directions",
       intro:
-        "The first version of the site frames programs as working directions, without inventing dates, recordings, or partnerships.",
+        "These directions describe the ensemble's intended work. Specific programmes and dates will be published once confirmed.",
       cards: [
         { title: "Listening Circle", description: "A community around attentive listening, context, conversation, and following the work over time." },
-        { title: "Chamber Preview", description: "A small, focused format for the first documented step of the restart." },
+        { title: "Chamber Preview", description: "A chamber programme for a smaller ensemble, suitable for concert performance and recording." },
         { title: "Recording & Archive", description: "Documenting the work through recordings, scores, notes, and public archive pages." },
-        { title: "Full Orchestra Return", description: "A path toward a larger string-orchestra phase built on real community and structure." },
-        { title: "Corporate and Patron Formats", description: "Serious conversations with companies, hosts, and patrons who understand cultural responsibility." }
+        { title: "Full Orchestra Return", description: "Preparation of a programme for full string-orchestra forces." },
+        { title: "Corporate and Patron Formats", description: "Partnerships with cultural organisations and supporters of concert activity." }
       ]
     },
     archive: {
@@ -924,9 +924,9 @@ export const siteContent: Record<Language, SiteCopy> = {
     support: {
       id: "support",
       eyebrow: "Support",
-      heading: "Join the Listening Circle",
+      heading: "Join the listening community",
       intro:
-        "The first invitation is to a listening community. Financial support matters, but it does not lead the site or replace attention to the work.",
+        "Visitors may receive information about forthcoming programmes and recordings, or contact the foundation regarding support for its activities.",
       formNote:
         "The Listening Circle form is being connected. Until activation, write to info@432hz-foundation.com with “Listening Circle” in the subject.",
       form: {
@@ -939,10 +939,10 @@ export const siteContent: Record<Language, SiteCopy> = {
         privacy: "I agree that Foundation 432 Hertz may use this information only to contact me about the project.",
         submit: "Submission not active",
         options: [
-          "Join the Listening Circle",
-          "Give Time / Expertise",
-          "Give Money",
-          "Give Voice",
+          "Join the listening community",
+          "Professional assistance",
+          "Donations",
+          "Partnership introductions",
           "Suggest a company or host",
           "Updates only"
         ]
@@ -980,7 +980,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         useOfFunds: {
           heading: "How support will be used",
           intro:
-            "The first phase should fund defined artistic work, not vague activity.",
+            "Funds are intended for the preparation, performance and documentation of the concert programme.",
           label: "Indicative use of funds",
           items: [
             "musician fees",
@@ -1086,13 +1086,13 @@ export const siteContent: Record<Language, SiteCopy> = {
           ctas: {
             sponsor: "Request a sponsor conversation",
             bank: "Use bank transfer",
-            listening: "Join the Listening Circle"
+            listening: "Join the listening community"
           }
         },
         patronPathway: {
           heading: "For companies and patrons",
           intro:
-            "The most useful first step is not a logo placement. It is a serious conversation about a defined cultural result.",
+            "Partnerships are considered in relation to the artistic programme, required resources and the forms of support available.",
           items: [
             "hosting a first documented step",
             "supporting the first recording",
@@ -1102,7 +1102,7 @@ export const siteContent: Record<Language, SiteCopy> = {
             "supporting documentation and archive work"
           ],
           askLabel: "First ask",
-          askText: "Open a 20-minute conversation about the first documented step.",
+          askText: "Contact the foundation to discuss a possible partnership.",
           cta: "Request a sponsor conversation",
           briefCta: "View sponsor brief",
           mailSubject: "Sponsor conversation for the first documented step",
@@ -1184,14 +1184,14 @@ export const campaignLandingContent = {
       headline: "Живата музика не трябва да изчезва след една вечер.",
       subheadline:
         "432 Chamber Orchestra изгражда слушателска общност около струнен звук, който оставя следа: записи, партитури, архив, документация и следваща стъпка.",
-      primaryCta: "Влезте в слушателския кръг",
+      primaryCta: "Присъединете се към слушателската общност",
       secondaryCta: "Подкрепете първия звук"
     },
     mainCopy: [
       "Оркестърът поддържа връзка с публиката и извън концертната зала чрез записи, архив и срещи, посветени на музиката.",
       "Камерна прецизност Историческа осведоменост Внимание към звученето",
       "Оркестърът се завръща чрез дисциплинирана последователност от работни и оркестрови стъпки: слушателски кръг, първи документиран формат, запис, архив, отчет и следваща оркестрова фаза.",
-      "Първата форма на подкрепа е вниманието. Влезте в слушателския кръг, ако вярвате, че независимата класическа музика трябва да бъде чута, документирана и съхранена."
+      "Първата форма на подкрепа е вниманието. Присъединете се към слушателската общност, ако вярвате, че независимата класическа музика трябва да бъде чута, документирана и съхранена."
     ],
     goal: {
       heading: "Първи слушателски кръг",
@@ -1241,14 +1241,14 @@ export const campaignLandingContent = {
       headline: "Live music should not disappear after one evening.",
       subheadline:
         "432 Chamber Orchestra is building a listening community around string sound that leaves a trace: recordings, scores, archive, documentation, and a next step.",
-      primaryCta: "Join the Listening Circle",
+      primaryCta: "Join the listening community",
       secondaryCta: "Support the First Sound"
     },
     mainCopy: [
       "The orchestra remains in contact with its audience beyond the concert hall through recordings, archival materials and musical discussions.",
       "Chamber precision Historical perspective Attentive musicianship",
       "The orchestra is returning through a disciplined sequence of working and orchestral steps: listening circle, first documented format, recording, archive, report, and the next orchestral phase.",
-      "The first form of support is attention. Join the Listening Circle if you believe independent classical music should be heard, documented, and preserved."
+      "The first form of support is attention. Join the listening community if you believe independent classical music should be heard, documented, and preserved."
     ],
     goal: {
       heading: "First Listening Circle",
@@ -1265,7 +1265,7 @@ export const campaignLandingContent = {
       message: "Short message",
       privacy:
         "I agree to receive emails from Foundation 432 Hertz / 432 Chamber Orchestra about the Listening Circle, concerts, recordings, archive, campaigns, and ways to support the work. I can unsubscribe at any time.",
-      submit: "Join the Listening Circle",
+      submit: "Join the listening community",
       inactiveNote:
         "The Listening Circle form is being connected. Until activation, write to info@432hz-foundation.com with “Listening Circle” in the subject.",
       options: [
