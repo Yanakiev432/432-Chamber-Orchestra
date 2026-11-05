@@ -24,13 +24,11 @@ const routes = [
   "/en/thank-you/"
 ];
 
-export const GET: APIRoute = () => {
-  const siteUrl = import.meta.env.PUBLIC_SITE_URL?.replace(/\/$/, "");
-  const body = siteUrl
-    ? `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes
-        .map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`)
-        .join("\n")}\n</urlset>`
-    : `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><!-- Set PUBLIC_SITE_URL to emit absolute sitemap URLs. --></urlset>`;
+export const GET: APIRoute = ({ site }) => {
+  const siteUrl = (site ?? new URL("https://432hz-orchestra.com/")).toString().replace(/\\/$/, "");
+  const body = `<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n${routes
+    .map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`)
+    .join("\\n")}\\n</urlset>`;
 
   return new Response(body, {
     headers: {
