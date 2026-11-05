@@ -6,8 +6,7 @@ import { campaignLandingContent, siteContent } from "../../../content/siteConten
 const campaign = campaignLandingContent.bg;
 const content = {
   ...siteContent.bg,
-  meta: campaign.meta,
-  nav: siteContent.bg.nav.map((item) => ({ ...item, href: `/bg/${item.href}` }))
+  meta: campaign.meta
 };
 ---
 
