@@ -56,4 +56,5 @@ Interpretation:
 - All **46 bilingual WooCommerce product pages** returned HTTP 200, with matching product IDs, titles, amounts, and WooCommerce buy-button markup.
 - The configured WordPress checkout page and gateway availability were inspected *read-only*. An empty cart redirects to `/en/cart/`; a completed checkout transaction has not been tested.
 - Actual visual QA on a mobile viewport, purchase completion, and semantic/audio identity checks remain separate gates.
-- Separate pre-existing SEO anomaly: `/bg/shop/` emits a canonical link to `/en/shop/`. Do not confuse that shop-archive issue with individual product permalinks.
+- Polylang's actual Bulgarian shop permalink is `/bg/магазин/` (page ID 997), and its canonical points to itself. `/bg/shop/` is a noncanonical alternative route pointing to the English shop; **do not call this a defect in the actual Bulgarian shop**.
+- The Bulgarian cart is `/bg/кошница/` (page ID 965). No Bulgarian checkout Polylang translation was found for the configured checkout page (English page ID 108); a full localized purchase-flow test remains pending.
