@@ -288,7 +288,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       paragraphs: [
         "Камерен оркестър 432 възниква в София като независим струнен състав. Още в първите години от дейността му концертният строй A=432 Hz е предмет на изпълнителски опити, свързани с интерпретацията на музикални произведения.",
         "На 18 май 2015 г. съставът изнася дебютния си концерт в Първо студио на Българското национално радио. Следва отличието в категория „Дебют“ на „Музикант на годината 2015“. На 13 юли 2017 г. в Големия салон на БАН е представена програмата „Български съвременници в 432 Hz“, за която Милена Божикова публикува рецензия във вестник „Дума“.",
-        "Защитената през 2020 г. дисертация на Иван К. Янакиев разглежда впоследствие част от натрупания опит в по-широка научна перспектива: история на концертния строй, модели на музикални темперации и изследвания на слуховото възприятие. Оркестровата дейност предхожда този труд и не произтича от него.",
+        "Защитената през 2020 г. дисертация на Иван Янакиев разглежда впоследствие част от натрупания опит в по-широка научна перспектива: история на концертния строй, модели на музикални темперации и изследвания на слуховото възприятие. Оркестровата дейност предхожда този труд и не произтича от него.",
         "Концертните програми, рецензиите, фотографиите и записите образуват документалния архив на състава."
       ]
     },
@@ -355,7 +355,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Хора",
       heading: "Основател",
       role: "Founder",
-      name: "д-р Иван К. Янакиев",
+      name: "Иван Янакиев",
       photo: {
         src: "/archive/photos/656785796_26236839085965093_6169334625520283925_n.jpg",
         width: 2048,
@@ -363,9 +363,9 @@ export const siteContent: Record<Language, SiteCopy> = {
         alt: "Диригентът на 432 Chamber Orchestra"
       },
       paragraphs: [
-        "д-р Иван К. Янакиев е основател на 432 Chamber Orchestra.",
+        "Иван Янакиев е основател на 432 Chamber Orchestra.",
         "Диригентската му работа е свързана с интерпретацията на струнния репертоар и с акустичните и музикално-теоретичните въпроси, които възникват в изпълнителската практика.",
-        "Той е доктор и е свързан с Института по механика към БАН. По-ранният му академичен и артистичен път включва работа, свързана с Института за изследване на изкуствата към БАН и предишната история на 432 Chamber Orchestra.",
+        "Работи в Института по механика на БАН. Научните му занимания са свързани с музикалната теория и изследването на музикалния звук; през 2020 г. защитава дисертация за концертния строй A=432 Hz и отворените квинти.",
         "Оркестърът е създаден преди защитата на дисертацията. Неговата история е засвидетелствана от концертни програми, записи и публикации от предходните години."
       ]
     },
@@ -547,9 +547,9 @@ export const siteContent: Record<Language, SiteCopy> = {
           ]
         },
         returnProgramme: {
-          heading: "Първа програма за завръщане на целия оркестър",
+          heading: "Концерт на оркестъра",
           paragraphs: [
-            "По-голямата фаза на завръщането е замислена като програма за цял струнен оркестър с продължителност 60+ минути.",
+            "Предвижда се концерт на оркестъра с програма с продължителност над 60 минути.",
             "Това още не е потвърдено концертно обявление. Това е работна репертоарна рамка за първото съществено оркестрово завръщане на 432 Chamber Orchestra.",
             "Програмата трябва да представи сериозна артистична теза: съвременен български звук, класическа солистична форма, английска струнно-оркестрова дисциплина и българска модерна камерна памет, поставени в контекста на възстановено струнно-оркестрово тяло."
           ],
@@ -614,10 +614,10 @@ export const siteContent: Record<Language, SiteCopy> = {
               title: "Професионална цел",
               amount: "55 000 EUR",
               description:
-                "Покрива препоръчителната 60+ минутна програма за цял струнен оркестър с покана към солист, коректни музикантски хонорари, репетиционна работа, подготовка на партитури/обработки, права/лицензиране, професионален аудиозапис, multi-camera документация, фотография, PR, архивна/проектна страница, администрация и отчетност."
+                "Покрива предвидения концерт на оркестъра с програма над 60 минути с покана към солист, коректни музикантски хонорари, репетиционна работа, подготовка на партитури/обработки, права/лицензиране, професионален аудиозапис, multi-camera документация, фотография, PR, архивна/проектна страница, администрация и отчетност."
             },
             {
-              title: "Пълна фаза на завръщане",
+              title: "Разширен концертен проект",
               amount: "90 000 EUR",
               description:
                 "Покрива по-силна публична продукция с разширена документация, по-силна PR/медийна кампания, по-високо ниво на условия за солист, по-сериозни условия за зала, по-силна постпродукция, по-широка публична видимост и по-силна институционална отчетност."
@@ -633,8 +633,8 @@ export const siteContent: Record<Language, SiteCopy> = {
             { title: "Патрон на партитури и права", amount: "2 000–4 000 EUR", description: "Подкрепя партитури, обработки, права и лицензиране, където е необходимо." },
             { title: "Партньор за пълна документация", amount: "7 500–12 000 EUR", description: "Подкрепя професионален запис, видео документация, фотография и архивна страница." },
             { title: "Основен концертен партньор", amount: "15 000–25 000 EUR", description: "Подкрепя съществена част от продукцията, репетициите, комуникацията и документацията." },
-            { title: "Основен патрон на завръщането", amount: "50 000–55 000 EUR", description: "Подкрепя професионалната цел и препоръчителната 60+ минутна програма за цял струнен оркестър." },
-            { title: "Партньор на пълната фаза на завръщането", amount: "85 000–90 000 EUR", description: "Подкрепя пълната фаза на завръщане с по-силна продукция, документация, видимост и отчетност." }
+            { title: "Основен патрон на завръщането", amount: "50 000–55 000 EUR", description: "Подкрепя професионалната цел и предвидения концерт на оркестъра с програма над 60 минути." },
+            { title: "Партньор на разширения концертен проект", amount: "85 000–90 000 EUR", description: "Подкрепя разширения концертен проект с по-силна продукция, документация, видимост и отчетност." }
           ],
           ctas: {
             sponsor: "Заявете разговор за партньорство",
@@ -740,7 +740,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       paragraphs: [
         "432 Chamber Orchestra was established in Sofia as an independent string ensemble. From its early years, the musicians explored the concert pitch A=432 Hz through the interpretation of individual musical works.",
         "The ensemble made its debut on 18 May 2015 in Studio 1 of Bulgarian National Radio and subsequently received the Debut distinction at Musician of the Year 2015. On 13 July 2017, it presented Bulgarian Contemporaries at 432 Hz in the Great Hall of the Bulgarian Academy of Sciences; the concert was reviewed by Milena Bozhikova in Duma.",
-        "Ivan K. Yanakiev's dissertation, defended in 2020, subsequently placed aspects of this experience in a broader scholarly context: the history of concert pitch, models of musical temperament, and studies of auditory perception. The orchestra's activity preceded the dissertation and did not arise from it.",
+        "Ivan Yanakiev's dissertation, defended in 2020, subsequently placed aspects of this experience in a broader scholarly context: the history of concert pitch, models of musical temperament, and studies of auditory perception. The orchestra's activity preceded the dissertation and did not arise from it.",
         "Concert programmes, reviews, photographs and recordings constitute the documentary record of the ensemble."
       ]
     },
@@ -807,7 +807,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "People",
       heading: "Founder",
       role: "Founder",
-      name: "Ivan K. Yanakiev, PhD",
+      name: "Ivan Yanakiev",
       photo: {
         src: "/archive/photos/656785796_26236839085965093_6169334625520283925_n.jpg",
         width: 2048,
@@ -815,9 +815,9 @@ export const siteContent: Record<Language, SiteCopy> = {
         alt: "Conductor of 432 Chamber Orchestra"
       },
       paragraphs: [
-        "Ivan K. Yanakiev, PhD is the founder of 432 Chamber Orchestra.",
+        "Ivan Yanakiev is the founder of 432 Chamber Orchestra.",
         "His conducting centres on the interpretation of string repertoire and on the acoustic and theoretical questions arising from musical performance.",
-        "He holds a PhD and is associated with the BAS Institute of Mechanics. His earlier academic and artistic background includes work connected with the BAS Institute of Art Studies and the previous history of 432 Chamber Orchestra.",
+        "He works at the Institute of Mechanics of the Bulgarian Academy of Sciences. His research addresses music theory and musical acoustics; in 2020 he defended a dissertation on the concert pitch A=432 Hz and open fifths.",
         "The orchestra was founded before the dissertation was completed. Its earlier history is documented through concert programmes, recordings and contemporary publications."
       ]
     },
@@ -908,7 +908,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         { title: "Listening Circle", description: "A community around attentive listening, context, conversation, and following the work over time." },
         { title: "Chamber Preview", description: "A chamber programme for a smaller ensemble, suitable for concert performance and recording." },
         { title: "Recording & Archive", description: "Documenting the work through recordings, scores, notes, and public archive pages." },
-        { title: "Full Orchestra Return", description: "Preparation of a programme for full string-orchestra forces." },
+        { title: "Orchestra concert", description: "Preparation of a concert programme for the orchestra." },
         { title: "Corporate and Patron Formats", description: "Partnerships with cultural organisations and supporters of concert activity." }
       ]
     },
@@ -994,9 +994,9 @@ export const siteContent: Record<Language, SiteCopy> = {
           ]
         },
         returnProgramme: {
-          heading: "Full orchestra return programme",
+          heading: "Orchestra concert",
           paragraphs: [
-            "The larger return phase is conceived as a full string-orchestra programme of 60+ minutes.",
+            "An orchestra concert with a programme lasting more than 60 minutes is envisaged.",
             "This is not a confirmed concert announcement yet. It is a working programme frame for the first substantial orchestral return of 432 Chamber Orchestra.",
             "The programme should make a serious artistic argument: Bulgarian contemporary sound, classical solo form, English string-orchestra discipline, and Bulgarian modern chamber memory brought into the context of a restored string-orchestra body."
           ],
@@ -1061,10 +1061,10 @@ export const siteContent: Record<Language, SiteCopy> = {
               title: "Professional target",
               amount: "55,000 EUR",
               description:
-                "Covers the recommended 60+ minute full string-orchestra return programme with soloist invitation, fair musician fees, rehearsal work, score/arrangement preparation, rights/licensing, professional audio, multi-camera documentation, photography, PR, archive/project page, administration, and reporting."
+                "Covers the proposed orchestra concert programme of more than 60 minutes with soloist invitation, fair musician fees, rehearsal work, score/arrangement preparation, rights/licensing, professional audio, multi-camera documentation, photography, PR, archive/project page, administration, and reporting."
             },
             {
-              title: "Full return phase",
+              title: "Extended concert project",
               amount: "90,000 EUR",
               description:
                 "Covers a stronger public production with extended documentation, stronger PR/media campaign, higher-level soloist conditions, larger venue conditions, stronger post-production, broader campaign visibility, and stronger institutional reporting."
@@ -1080,8 +1080,8 @@ export const siteContent: Record<Language, SiteCopy> = {
             { title: "Score & Rights Patron", amount: "2,000–4,000 EUR", description: "Supports scores, arrangements, rights, and licensing where needed." },
             { title: "Full Documentation Partner", amount: "7,500–12,000 EUR", description: "Supports professional audio, video documentation, photography, and archive page." },
             { title: "Principal Concert Partner", amount: "15,000–25,000 EUR", description: "Supports a substantial part of production, rehearsals, communication, and documentation." },
-            { title: "Founding Return Patron", amount: "50,000–55,000 EUR", description: "Supports the professional target and the recommended 60+ minute full string-orchestra programme." },
-            { title: "Full Return Partner", amount: "85,000–90,000 EUR", description: "Supports the full return phase with stronger production, documentation, visibility, and reporting." }
+            { title: "Founding Return Patron", amount: "50,000–55,000 EUR", description: "Supports the professional target and the proposed orchestra concert programme of more than 60 minutes." },
+            { title: "Extended Concert Partner", amount: "85,000–90,000 EUR", description: "Supports the extended concert project with stronger production, documentation, visibility, and reporting." }
           ],
           ctas: {
             sponsor: "Request a sponsor conversation",
