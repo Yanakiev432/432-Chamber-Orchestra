@@ -18,7 +18,10 @@ const navHref = (href: string) => href.startsWith("#") && !isHome ? `/${lang}/${
 <header class="sticky top-0 z-50 border-b border-brand-border bg-brand-surface shadow-sm">
   <div class="container flex min-h-20 items-center justify-between gap-4">
     <a class="block shrink-0" href={lang === "bg" ? "/bg/" : "/en/"} aria-label="432 Chamber Orchestra home">
-      <img class="block h-auto w-[154px] sm:w-[190px] lg:w-[210px]" src={brandAssets.headerLogo} width="210" height="37" alt="432 Chamber Orchestra" decoding="async" />
+      <img class="block h-auto w-[154px] sm:w-[190px] lg:w-[210px]" src={brandAssets.headerLogo} width="210" height="36" alt="432 Hertz Foundation" decoding="async" />
+      <span class="mt-1 block text-[9px] font-semibold uppercase tracking-[0.10em] text-brand-primary sm:text-[11px]">
+        {lang === "bg" ? "Камерен оркестър 432" : "432 Chamber Orchestra"}
+      </span>
     </a>
     <nav class="hidden items-center gap-5 xl:flex" aria-label={lang === "bg" ? "Основна навигация" : "Main navigation"}>
       {nav.map((item) => (
