@@ -273,7 +273,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Независим струнен оркестър · София",
       title: "432 Chamber Orchestra",
       text:
-        "На сцената, в концертната зала и в записите — независим струнен оркестър от София. Открийте музикантите, концертните фотографии и архивните ни изпълнения.",
+        "От концертната сцена до музикалните изследвания: оркестърът изследва концертния строй A=432 Hz чрез живи изпълнения и записи още преди защитата на дисертацията през 2020 г.",
       positioning: ["Не концерт за отчет.", "Не участие за exposure.", "Не култура като фон."],
       finalLine:
         "Жив струнен оркестър — с класическа дисциплина, камерна яснота, записи, архив и общност, която следва работата отвъд една вечер.",
@@ -283,12 +283,13 @@ export const siteContent: Record<Language, SiteCopy> = {
     },
     core: {
       id: "orchestra",
-      eyebrow: "Позициониране",
-      heading: "Струнният оркестър, музикантите и музиката",
+      eyebrow: "История",
+      heading: "Оркестърът предхожда дисертацията",
       paragraphs: [
-        "432 Chamber Orchestra е независим струнен оркестър от София с концертна история, камерни формации и архив от записи.",
-        "Реалните фотографии в този сайт показват оркестъра на сцената, работата на диригента и срещата на музикантите с публиката.",
-        "Музиката и архивът са в центъра: разгледайте концертните кадри, слушайте записите и проследете историята на състава."
+        "Камерен оркестър 432 възниква в София преди дисертационния труд на Иван К. Янакиев. Съставът вече изследва концертния строй A=432 Hz чрез реална изпълнителска и звукозаписна практика.",
+        "На 18 май 2015 г. оркестърът дебютира в Първо студио на Българското национално радио; отличен е в категория „Дебют“ на „Музикант на годината 2015“. На 13 юли 2017 г. изпълнява „Български съвременници в 432 Hz“ в Големия салон на БАН. Рецензия за концерта публикува Милена Божикова във вестник „Дума“.",
+        "Дисертацията от 2020 г. е по-късна научна систематизация на част от тази вече съществуваща практика. Тя разглежда исторически концертния строй, математически модели на темперации, сравнителни експерименти с музиканти и слушатели и възприятието на звука.",
+        "Концертните фотографии, рецензиите и архивните записи показват реализираната художествена работа на оркестъра."
       ]
     },
     firstOutput: {
@@ -441,14 +442,14 @@ export const siteContent: Record<Language, SiteCopy> = {
     },
     artisticIdentity: {
       id: "artistic-identity",
-      eyebrow: "Артистична идентичност",
-      heading: "Не честота сама по себе си, а дисциплиниран струнен звук",
+      eyebrow: "Акустична концепция",
+      heading: "Концертен строй, темперация и интонация",
       paragraphs: [
-        "Артистичната идентичност на 432 Chamber Orchestra се изгражда върху дисциплиниран струнен звук, класически репертоар, нови струнни преображения на вокална и хорова музика, източното песнопение като една артистична линия, съвременни поръчки и публична документация.",
-        "A=432 е част от акустичния и естетическия избор на оркестъра, но не е заместител на художествена мисъл, репертоар, работа и отговорност."
+        "Референтната височина A=432 Hz не определя автоматично темперацията или интонацията в изпълнението. Това са различни понятия, разграничени и изследвани в дисертацията от 2020 г.",
+        "Практиката на оркестъра съществува отпреди изследването. В по-късната научна работа са разработени математически модели и сравнителни звукови примери, включително за темперациите на Мария Ренолд. Това не означава, че клавирната темперация „Отворени квинти“ е използвана във всеки оркестров концерт.",
+        "Участниците в някои експерименти описват осезаеми различия между A=432 Hz и A=440 Hz, но не показват единодушно предпочитание."
       ],
-      disclaimer:
-        "432 Chamber Orchestra третира A=432 като естетически и акустичен избор. Не правим научни, медицински, терапевтични или лечебни твърдения относно честотата."
+      disclaimer: "Не се твърдят универсални медицински, терапевтични или лечебни свойства на 432 Hz."
     },
     programs: {
       id: "programs",
@@ -724,7 +725,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Independent String Orchestra · Sofia",
       title: "432 Chamber Orchestra",
       text:
-        "On stage, in the concert hall and in our recordings — an independent string orchestra from Sofia. Discover the musicians, authentic concert photography and recordings from our archive.",
+        "From concert performance to music research: the orchestra explored A=432 Hz through live music and recordings well before the doctoral dissertation was defended in 2020.",
       positioning: ["Not a concert for a report.", "Not performance for exposure.", "Not culture as background."],
       finalLine:
         "A living string orchestra — with classical discipline, chamber clarity, recordings, archive, and a community that follows the work beyond one evening.",
@@ -734,12 +735,13 @@ export const siteContent: Record<Language, SiteCopy> = {
     },
     core: {
       id: "orchestra",
-      eyebrow: "Positioning",
-      heading: "The string orchestra, the musicians and the music",
+      eyebrow: "History",
+      heading: "The orchestra predates the dissertation",
       paragraphs: [
-        "432 Chamber Orchestra is an independent string orchestra from Sofia, with a concert history, chamber formations and recordings in its archive.",
-        "The real photographs on this site show the orchestra on stage, its conductor at work and the musicians engaging with an audience.",
-        "Music and the archive take centre stage: browse concert photographs, listen to recordings and explore the history of the ensemble."
+        "432 Chamber Orchestra existed in Sofia before Ivan K. Yanakiev's dissertation. The ensemble already explored A=432 Hz through actual concerts and recordings.",
+        "The orchestra debuted on 18 May 2015 in Studio 1 of Bulgarian National Radio and received the Debut distinction in Musician of the Year 2015. On 13 July 2017 it performed Bulgarian Contemporaries at 432 Hz in the Great Hall of the Bulgarian Academy of Sciences. Milena Bozhikova reviewed this concert in Duma.",
+        "The 2020 dissertation is a later scholarly examination of aspects of an already existing performance practice. It addresses the history of concert pitch, mathematical temperament models, comparative experiments with performers and listeners, and sound perception.",
+        "Concert photography, reviews and archival recordings document the artistic work already achieved by the orchestra."
       ]
     },
     firstOutput: {
@@ -887,14 +889,14 @@ export const siteContent: Record<Language, SiteCopy> = {
     },
     artisticIdentity: {
       id: "artistic-identity",
-      eyebrow: "Artistic Identity",
-      heading: "Not frequency alone, but disciplined string sound",
+      eyebrow: "Acoustic concept",
+      heading: "Concert pitch, temperament and intonation",
       paragraphs: [
-        "The artistic identity of 432 Chamber Orchestra is built on disciplined string sound, classical repertoire, new string transformations of vocal and choral music, Eastern chant as one artistic line, contemporary commissions, and public documentation.",
-        "A=432 is part of the orchestra’s acoustic and aesthetic choice, but it is not a substitute for artistic thought, repertoire, work, and accountability."
+        "A=432 Hz sets a reference pitch. It does not automatically determine the temperament or intonation of a performance. These concepts are distinguished in the 2020 dissertation.",
+        "The orchestra's practice existed before this research. The later dissertation develops mathematical models and comparative sound examples, including Maria Renold's temperaments. This does not mean that the Open Fifths keyboard temperament was applied to every orchestral concert.",
+        "Participants in some experiments reported perceptible differences between A=432 Hz and A=440 Hz, but not a unanimous preference."
       ],
-      disclaimer:
-        "432 Chamber Orchestra treats A=432 as an aesthetic and acoustic choice. We make no scientific, medical, therapeutic, or healing claims regarding frequency."
+      disclaimer: "No universal medical, therapeutic or healing properties of 432 Hz are claimed."
     },
     programs: {
       id: "programs",
