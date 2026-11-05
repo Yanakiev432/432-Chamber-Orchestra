@@ -1,4 +1,4 @@
-export type PhotoArchiveCategory = "conductor" | "oldQuartet" | "wholeOrchestraConcert";
+export type PhotoArchiveCategory = "conductor" | "quartet" | "orchestraConcert";
 
 export type PhotoArchiveItem = {
   filename: string;
@@ -27,25 +27,25 @@ const conductorText = {
   }
 };
 
-const oldQuartetText = {
+const quartetText = {
   alt: {
-    en: "Old quartet formation of 432 Chamber Orchestra",
-    bg: "Стара квартетна формация на 432 Chamber Orchestra"
+    en: "Quartet",
+    bg: "Квартет"
   },
   caption: {
-    en: "Old quartet formation of 432 Chamber Orchestra",
-    bg: "Стара квартетна формация на 432 Chamber Orchestra"
+    en: "Quartet",
+    bg: "Квартет"
   }
 };
 
-const wholeOrchestraText = {
+const orchestraConcertText = {
   alt: {
-    en: "432 Chamber Orchestra legacy concert photo",
-    bg: "Архивна концертна снимка на 432 Chamber Orchestra"
+    en: "Orchestra concert",
+    bg: "Концерт на оркестъра"
   },
   caption: {
-    en: "Legacy concert photo of 432 Chamber Orchestra",
-    bg: "Архивна концертна снимка на 432 Chamber Orchestra"
+    en: "Orchestra concert",
+    bg: "Концерт на оркестъра"
   }
 };
 
@@ -76,19 +76,19 @@ const galleryPhoto = (
   src: "/orchestra/photos/" + filename
 });
 export const photoArchive: PhotoArchiveItem[] = [
-  photo("95909082_2987898917952438_2967887277017006080_n.jpg", 2048, 1365, "wholeOrchestraConcert", wholeOrchestraText),
-  photo("655455302_26236839445965057_7444690092106440956_n.jpg", 2048, 1325, "wholeOrchestraConcert", wholeOrchestraText),
-  photo("655508192_26236824589299876_5705732827598277532_n.jpg", 780, 478, "wholeOrchestraConcert", wholeOrchestraText),
-  photo("656245078_26249685294680472_2006015205848097261_n.jpg", 2048, 1125, "oldQuartet", oldQuartetText),
+  photo("95909082_2987898917952438_2967887277017006080_n.jpg", 2048, 1365, "orchestraConcert", orchestraConcertText),
+  photo("655455302_26236839445965057_7444690092106440956_n.jpg", 2048, 1325, "orchestraConcert", orchestraConcertText),
+  photo("655508192_26236824589299876_5705732827598277532_n.jpg", 780, 478, "orchestraConcert", orchestraConcertText),
+  photo("656245078_26249685294680472_2006015205848097261_n.jpg", 2048, 1125, "quartet", quartetText),
   photo("656785796_26236839085965093_6169334625520283925_n.jpg", 2048, 1425, "conductor", conductorText),
-  photo("656847674_26236839372631731_8365722018291505197_n.jpg", 2048, 1487, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("cropped-VBAL6560-1.jpg", 1800, 1080, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("VBAL6537-1.jpg", 1800, 1200, "wholeOrchestraConcert", wholeOrchestraText),
+  photo("656847674_26236839372631731_8365722018291505197_n.jpg", 2048, 1487, "orchestraConcert", orchestraConcertText),
+  galleryPhoto("cropped-VBAL6560-1.jpg", 1800, 1080, "orchestraConcert", orchestraConcertText),
+  galleryPhoto("VBAL6537-1.jpg", 1800, 1200, "orchestraConcert", orchestraConcertText),
   galleryPhoto("VBAL6538-1.jpg", 1800, 1200, "conductor", conductorText),
-  galleryPhoto("VBAL6569.jpg", 1800, 1181, "oldQuartet", oldQuartetText),
-  galleryPhoto("VBAL6572.jpg", 1800, 1200, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("VBAL6574.jpg", 1800, 1200, "wholeOrchestraConcert", wholeOrchestraText),
-  galleryPhoto("VBAL6575.jpg", 1800, 1200, "wholeOrchestraConcert", wholeOrchestraText),
+  galleryPhoto("VBAL6569.jpg", 1800, 1181, "quartet", quartetText),
+  galleryPhoto("VBAL6572.jpg", 1800, 1200, "orchestraConcert", orchestraConcertText),
+  galleryPhoto("VBAL6574.jpg", 1800, 1200, "orchestraConcert", orchestraConcertText),
+  galleryPhoto("VBAL6575.jpg", 1800, 1200, "orchestraConcert", orchestraConcertText),
   galleryPhoto("VBAL6581.jpg", 1800, 1200, "conductor", conductorText),
 ];
 
@@ -102,23 +102,23 @@ export const photoArchiveCategories: {
   };
 }[] = [
   { key: "conductor", label: { en: "Conductor", bg: "Диригент" } },
-  { key: "oldQuartet", label: { en: "Old quartet formation", bg: "Стара квартетна формация" } },
-  { key: "wholeOrchestraConcert", label: { en: "Whole orchestra concert", bg: "Концерт на целия оркестър" } }
+  { key: "quartet", label: { en: "Quartet", bg: "Квартет" } },
+  { key: "orchestraConcert", label: { en: "Orchestra concert", bg: "Концерт на оркестъра" } }
 ];
 
 export const photoArchivePageCopy = {
   en: {
     title: "Photo archive",
     intro: [
-      "Selected archival photographs from the earlier life of 432 Chamber Orchestra. These images document the conductor, quartet formation, and concert activity of the whole orchestra.",
-      "Concert photography from the original 432 Chamber Orchestra WordPress gallery, preserved here as part of the living musical history of the ensemble."
+      "Selected photographs from the 432 Chamber Orchestra archive: conductor, quartet and orchestra concert.",
+      "Concert photographs from the orchestra's archive document its musical activity."
     ]
   },
   bg: {
     title: "Фотоархив",
     intro: [
-      "Избрани архивни фотографии от предишния живот на 432 Chamber Orchestra. Тези изображения документират диригента, квартетната формация и концертната дейност на целия оркестър.",
-      "Концертни фотографии от оригиналната WordPress галерия на 432 Chamber Orchestra, съхранени тук като част от музикалната история на състава."
+      "Подбрани фотографии от архива на 432 Chamber Orchestra: диригент, квартет и концерт на оркестъра.",
+      "Концертните фотографии са част от архива на оркестъра и свидетелстват за неговата дейност."
     ]
   }
 } as const;
