@@ -16,7 +16,8 @@
     "bandcamp:test": "node --test scripts/audit-bandcamp-live.test.mjs",
     "cutover:report": "node scripts/check-cutover-readiness.mjs --mode=report",
     "cutover:gate": "node scripts/check-cutover-readiness.mjs --mode=replace",
-    "preview:gate": "node scripts/check-cutover-readiness.mjs --mode=preview"
+    "preview:gate": "node scripts/check-cutover-readiness.mjs --mode=preview",
+    "links:validate": "node scripts/validate-static-links.mjs"
   },
   "dependencies": {
     "astro": "^5.13.8"
