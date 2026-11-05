@@ -13,7 +13,7 @@ function pll_get_post_language( $id ) { return in_array( $id, array( 796, 807, 8
 function pll_current_language() { return 'en'; }
 function wp_register_style() {}
 function wp_enqueue_style() {}
-function wp_add_inline_style() {}
+function wp_add_inline_style( $handle, $css ) { $GLOBALS['c432_styles'][ $handle ] = $css; }
 require __DIR__ . '/../432-bandcamp-bridge/432-bandcamp-bridge.php';
 
 function assert_c432( $condition, $message ) {
@@ -74,4 +74,15 @@ ob_start(); c432_bandcamp_single_button(); $unmapped = ob_get_clean();
 assert_c432( '' === $unmapped, 'unmapped posts unchanged' );
 ob_start(); c432_bandcamp_shop_banner(); $banner = ob_get_clean();
 assert_c432( false !== strpos( $banner, 'Browse all 12 releases on Bandcamp' ), 'full catalog shop banner' );
-echo "PASS: 46 posts / 23 pairs / CTA render / no external call / no Woo state change\n";
+
+// Mobile storefront regression: the English Woo archive and the Bulgarian
+// translated shortcode page must both collapse to one product per row.
+c432_bandcamp_styles();
+$css = $GLOBALS['c432_styles']['c432-bandcamp-bridge'] ?? '';
+assert_c432( false !== strpos( $css, '@media (max-width:600px)' ), 'mobile breakpoint exists' );
+assert_c432( false !== strpos( $css, 'body.woocommerce-shop .woocommerce ul.products' ), 'English archive scoped CSS' );
+assert_c432( false !== strpos( $css, 'body.page-id-997 .woocommerce ul.products' ), 'BG translated shop scoped CSS' );
+assert_c432( false !== strpos( $css, 'grid-template-columns:minmax(0,1fr)!important' ), 'mobile one-column grid' );
+assert_c432( false !== strpos( $css, '.c432-bandcamp-loop-button{display:block;width:100%' ), 'mobile full-width Bandcamp CTA' );
+
+echo "PASS: 46 posts / 23 pairs / CTA render / responsive mobile CSS / no external call / no Woo state change\n";
