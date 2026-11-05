@@ -9,6 +9,9 @@ function esc_url( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_S
 function esc_html( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
 function get_the_ID() { return isset( $GLOBALS['c432_id'] ) ? $GLOBALS['c432_id'] : 0; }
 function get_locale() { return 'en_US'; }
+function is_shop() { return false; }
+function is_page( $ids ) { return in_array( $GLOBALS['c432_test_page_id'] ?? 0, (array) $ids, true ); }
+
 function pll_get_post_language( $id ) { return in_array( $id, array( 796, 807, 811, 813, 815, 817, 819, 821, 823, 904, 921, 923, 930, 935, 940, 942, 944, 946, 948, 950, 952, 955, 957 ), true ) ? 'bg' : 'en'; }
 function pll_current_language() { return 'en'; }
 function wp_register_style() {}
@@ -53,7 +56,8 @@ assert_c432( c432_bandcamp_url(953) === c432_bandcamp_url(955), '953/955 transla
 assert_c432( c432_bandcamp_url(956) === c432_bandcamp_url(957), '956/957 translation pair' );
 assert_c432( 'bg' === c432_bandcamp_lang( 807 ), 'Polylang BG' );
 assert_c432( 'en' === c432_bandcamp_lang( 806 ), 'Polylang EN' );
-assert_c432( 4 === count( $GLOBALS['c432_hooks'] ), 'four expected WordPress hooks' );
+assert_c432( 5 === count( $GLOBALS['c432_hooks'] ), 'five expected WordPress hooks' );
+assert_c432( in_array( array( 'woocommerce_shortcode_before_products_loop', 'c432_bandcamp_shop_banner', 5 ), $GLOBALS['c432_hooks'], true ), 'nonpaginated shortcode shop hook registered' );
 
 class C432_Test_Product { private $id; public function __construct( $id ) { $this->id = $id; } public function get_id() { return $this->id; } }
 $GLOBALS['product'] = new C432_Test_Product( 806 );
@@ -72,8 +76,18 @@ assert_c432( false !== strpos( $loop, 'Buy on Bandcamp' ), 'loop CTA' );
 $GLOBALS['product'] = new C432_Test_Product( 999 );
 ob_start(); c432_bandcamp_single_button(); $unmapped = ob_get_clean();
 assert_c432( '' === $unmapped, 'unmapped posts unchanged' );
+$GLOBALS['c432_test_page_id'] = 106;
 ob_start(); c432_bandcamp_shop_banner(); $banner = ob_get_clean();
 assert_c432( false !== strpos( $banner, 'Browse all 12 releases on Bandcamp' ), 'full catalog shop banner' );
+ob_start(); c432_bandcamp_shop_banner(); $duplicate = ob_get_clean();
+assert_c432( '' === $duplicate, 'shop banner not duplicated' );
+$GLOBALS['c432_test_page_id'] = 997;
+$GLOBALS['product'] = new C432_Test_Product( 806 ); // Legacy BG shop shows some EN products.
+ob_start(); c432_bandcamp_loop_button(); $bg_shop_loop = ob_get_clean();
+assert_c432( false !== strpos( $bg_shop_loop, 'Купете в Bandcamp' ), 'BG shop context overrides EN product ID' );
+assert_c432( 'bg' === c432_bandcamp_view_lang( 806 ), 'BG page language wins over product language' );
+$GLOBALS['c432_test_page_id'] = 0;
+
 
 // Mobile storefront regression: the English Woo archive and the Bulgarian
 // translated shortcode page must both collapse to one product per row.
@@ -87,4 +101,4 @@ assert_c432( false !== strpos( $css, '.c432-bandcamp-loop-button{display:block;w
 assert_c432( false !== strpos( $css, 'background:#eadf9b;color:#202020!important' ), 'visible warm-gold CTA on dark theme' );
 assert_c432( false !== strpos( $css, 'background:#fff2c0;color:#202020!important' ), 'high-contrast hover CTA on dark theme' );
 
-echo "PASS: 46 posts / 23 pairs / CTA render / responsive mobile CSS / no external call / no Woo state change\n";
+echo "PASS: 46 posts / 23 pairs / CTA render / nonpaginated banner / BG context / mobile CSS / no Woo state change\n";
