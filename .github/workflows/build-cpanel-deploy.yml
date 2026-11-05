@@ -43,6 +43,9 @@ jobs:
       - name: Validate generated SEO when present
         run: pnpm run --if-present seo:validate
 
+      - name: Validate all built internal links and assets
+        run: pnpm run --if-present links:validate
+
       - name: Report WordPress cutover risks when guard is present
         run: pnpm run --if-present cutover:report
 
