@@ -21,6 +21,15 @@ php -l wordpress/432-bandcamp-bridge/432-bandcamp-bridge.php
 php wordpress/tests/test-bridge.php
 ```
 
+## Follow-up from actual live activation — 2026-11-05
+
+- The user explicitly approved and the original **v1.0.2** was activated on WordPress Multisite main blog ID 1 **only** (one site in the network); the network-wide active-plugin list stayed unchanged.
+- Immediately after activation, all seven public surfaces returned HTTP 200 and EN/BG individual product purchase links plus WooCommerce cart controls appeared.
+- The live [products] shortcode does **not** call `woocommerce_before_shop_loop` unless `paginate=true`. Because both shop pages use a nonpaginated shortcode, the catalogue banner from v1.0.2 did **not** appear. This is a feature gap, not an outage of existing sales.
+- The BG translated shop (page ID 997) displays some English-language product posts, so the v1.0.2 loop button inherited English from the product ID rather than Bulgarian from the page.
+- **v1.0.3 (separate staging patch, NOT ACTIVATED):** registers `woocommerce_shortcode_before_products_loop`, restricts the banner to the two real shop pages (IDs 106/997) and prevents double render. Shop-grid CTA language follows page context first, then the product language.
+- The original approved v1.0.2 remains unchanged in production until a separately authorized corrective release.
+
 ## Mobile storefront QA — 2026-11-05
 
 - A real public storefront screenshot was captured using headless Firefox at **390 × 844 px**. Both shops use a WooCommerce `[products limit="15" columns="5" orderby="popularity"]` shortcode; at 390 px the unmodified Twenty Seventeen storefront renders two narrow product columns.
