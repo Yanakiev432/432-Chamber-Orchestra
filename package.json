@@ -11,7 +11,12 @@
     "seo:validate": "node scripts/validate-seo-build.mjs",
     "crm:brevo:setup": "node scripts/setup-brevo-crm.mjs",
     "crm:sheets:templates": "node scripts/generate-crm-sheet-templates.mjs",
-    "crm:check": "node scripts/check-crm-config.mjs"
+    "crm:check": "node scripts/check-crm-config.mjs",
+    "bandcamp:audit": "node scripts/audit-bandcamp-live.mjs",
+    "bandcamp:test": "node --test scripts/audit-bandcamp-live.test.mjs",
+    "cutover:report": "node scripts/check-cutover-readiness.mjs --mode=report",
+    "cutover:gate": "node scripts/check-cutover-readiness.mjs --mode=replace",
+    "preview:gate": "node scripts/check-cutover-readiness.mjs --mode=preview"
   },
   "dependencies": {
     "astro": "^5.13.8"
