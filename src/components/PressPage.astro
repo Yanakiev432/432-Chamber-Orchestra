@@ -11,24 +11,24 @@ const sponsorBriefHref = isBg ? "/bg/sponsor-brief/" : "/en/sponsor-brief/";
 const photoArchiveHref = isBg ? "/bg/archive/" : "/en/archive/";
 const title = isBg ? "Преса / Медии" : "Press / Media";
 const intro = isBg
-  ? "432 Chamber Orchestra възниква преди докторското изследване на Иван К. Янакиев. Неговата концертна практика е документирана от 2015 г., а дисертацията от 2020 г. разглежда и систематизира част от вече натрупания изпълнителски и експериментален опит. Тук са събрани рецензии, медийни публикации и научни първоизточници."
-  : "432 Chamber Orchestra predates Ivan K. Yanakiev’s doctoral research. Its concerts are documented from 2015, while the 2020 dissertation examines and systematises aspects of an already established performance and experimental practice. This page links to concert reviews, press coverage and research sources.";
+  ? "Разделът представя свидетелства за концертната дейност на Камерен оркестър 432: рецензии, публикации в национални медии, концертни анонси и научни източници. Оркестърът изнася концерти преди защитата на дисертацията на Иван К. Янакиев през 2020 г.; научният труд разглежда впоследствие въпроси, възникнали и в изпълнителската практика."
+  : "This collection brings together documentation of the orchestra's concert history: reviews, national media coverage, concert announcements and primary research sources. The ensemble's activity precedes Ivan K. Yanakiev's dissertation of 2020, which subsequently examines questions also encountered in performance.";
 const keyFacts = isBg
   ? [
       "Независим струнен оркестър със седалище в София",
       "Юридическа и организационна структура: Фондация 432 Херца",
       "Основател: д-р Иван К. Янакиев",
-      "Текуща кампания: The First Sound Again",
-      "Първи документиран резултат: представяне, запис/документация, когато е възможно, архивна/проектна страница и кратък отчет",
-      "По-голяма рамка на завръщането: 60+ минутна програма за цял струнен оркестър"
+      "Текуща инициатива: „Първият звук отново“",
+      "Предвиждан следващ етап: камерно представяне, звукозапис и архивни материали",
+      "Перспектива: концертна програма за пълен струнен състав"
     ]
   : [
       "Independent string orchestra based in Sofia",
       "Legal and organisational structure: Foundation 432 Hertz",
       "Founder: Ivan K. Yanakiev, PhD",
-      "Current campaign: The First Sound Again",
-      "First documented output: presentation, recording/documentation where possible, archive/project page, and short report",
-      "Larger return frame: 60+ minute full string-orchestra programme"
+      "Current initiative: The First Sound Again",
+      "Planned next stage: a chamber performance, recording and archival documentation",
+      "Longer-term programme: a concert for full string-orchestra forces"
     ];
 const resources = isBg
   ? [
@@ -195,7 +195,7 @@ const usageNote = isBg
     </article>
     <article class="border border-brand-border bg-brand-surface p-6 md:p-8">
       <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Медийно отразяване и архив" : "Media coverage and archive"}</h2>
-      <p class="mt-3 text-sm leading-7 text-brand-muted">{isBg ? "Проверими новини, интервюта и концертни програми; не всички са рецензии." : "Verifiable news, interviews and programmes; these are not all reviews."}</p>
+      <p class="mt-3 text-sm leading-7 text-brand-muted">{isBg ? "Медийни свидетелства за концертите, включително интервюта, анонси и програми." : "Press reports, interviews, announcements and concert programmes."}</p>
       <ul class="mt-6 space-y-5">
         {coverage.map((item) => (
           <li class="border-t border-brand-border pt-4">
@@ -210,7 +210,7 @@ const usageNote = isBg
 
   <article class="mt-8 border border-brand-border bg-brand-surface p-6 md:p-8">
     <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Научна основа: първоизточници" : "Research background: primary sources"}</h2>
-    <p class="mt-3 max-w-4xl text-sm leading-7 text-brand-muted">{isBg ? "Дисертацията от 2020 г. стъпва върху вече съществуващия оркестър и предходните акустични и изпълнителски експерименти. Трудът разграничава концертен строй, темперация и интонация, анализира сравнения и формулира хипотези за бъдещи изследвания; не доказва универсално превъзходство или лечебни свойства на 432 Hz." : "The 2020 dissertation draws on the already existing orchestra and earlier acoustic and performance experiments. It distinguishes concert pitch, temperament and intonation, analyses comparisons, and proposes hypotheses for future research; it does not establish universal superiority or healing properties of 432 Hz."}</p>
+    <p class="mt-3 max-w-4xl text-sm leading-7 text-brand-muted">{isBg ? "Дисертацията от 2020 г. разглежда концертния строй, музикалните темперации и интонацията като отделни предмети на изследване. Представени са исторически сведения, математически модели и сравнителни експерименти. Резултатите не дават основание за твърдения относно универсално акустично превъзходство или лечебни свойства на A=432 Hz." : "The 2020 dissertation treats concert pitch, musical temperament and intonation as distinct subjects. It presents historical sources, mathematical models and comparative experiments. Its findings do not support claims of universal acoustic superiority or therapeutic effects associated with A=432 Hz."}</p>
     <ul class="mt-6 grid gap-3 text-sm md:grid-cols-2">
       {researchLinks.map((item) => (
         <li class="border-t border-brand-border pt-3">
