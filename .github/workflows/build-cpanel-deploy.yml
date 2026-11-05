@@ -1,16 +1,19 @@
-name: Build cPanel deployment branch
+name: Astro build and safe preview artifact (no production deployment)
 
 on:
   push:
     branches:
       - feature/432-website-v1
+  pull_request:
+    branches:
+      - feature/432-website-v1
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build-and-publish:
+  build-and-validate:
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
@@ -37,36 +40,23 @@ jobs:
       - name: Build static site
         run: pnpm run build
 
-      - name: Prepare cPanel deployment tree
-        shell: bash
-        run: |
-          set -euo pipefail
-          rm -rf .cpanel-deploy
-          mkdir -p .cpanel-deploy
-          cp -a dist/. .cpanel-deploy/
-          cp .htaccess .cpanel-deploy/.htaccess
-          cat > .cpanel-deploy/.cpanel.yml <<'YAML'
-          ---
-          deployment:
-            tasks:
-              - export DEPLOYPATH=/home/hzorche/public_html/
-              - /bin/mkdir -p $DEPLOYPATH
-              - /bin/cp -R ./* $DEPLOYPATH
-              - /bin/cp -f ./.htaccess $DEPLOYPATH/.htaccess
-          YAML
+      - name: Validate generated SEO when present
+        run: pnpm run --if-present seo:validate
 
-      - name: Publish cpanel-deploy branch
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          cd .cpanel-deploy
-          git init
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b cpanel-deploy
-          git add -A
-          git commit -m "Build cPanel deployment for ${GITHUB_SHA}"
-          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push --force origin cpanel-deploy
+      - name: Validate all built internal links and assets
+        run: pnpm run --if-present links:validate
+
+      - name: Report WordPress cutover risks when guard is present
+        run: pnpm run --if-present cutover:report
+
+      - name: Preserve read-only QA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: astro-static-qa-${{ github.run_number }}
+          path: dist/
+          retention-days: 7
+
+# SAFETY: Intentionally does not publish cpanel-deploy, touch SSH/SFTP,
+# generate .cpanel.yml, or write into /home/hzorche/public_html.
+# Existing WordPress + 46 product permalinks + historic orders remain live.
+# A separate explicitly approved cutover plan is required.
