@@ -64,3 +64,62 @@ Preview build emits `Disallow: /` in robots.txt without a sitemap advertisement 
 4. Set up and verify an isolated preview hostname and SSL, with `PUBLIC_PREVIEW_MODE=true`.
 5. Verify CRM action endpoints and donation disclosures, including data handling; test without submitting personal data without approval.
 6. Obtain explicit cutover approval and snapshot/rehearsed rollback before touching the existing site root.
+
+## Additional hard evidence and offline preview — 2026-11-05
+
+**Public WordPress routes verified beyond products:** The read-only full inventory in
+`docs/legacy-wordpress-published-routes-20261105.json` includes 35 published pages,
+46 published products, 13 published blog posts and 29 public category/tag archives:
+**123 unique public URLs**. The independent `scripts/audit-legacy-public-http.mjs`
+ran a bounded 3-concurrent `HEAD` audit on Lenovo: **123/123 PASS** —
+119 HTTP 200 responses and four expected HTTP 302 redirects from historical
+cart/checkout URLs to Bandcamp. No authentication, order access, checkout or payment was used.
+A private detailed JSON receipt is on Lenovo:
+`Documents\\432 Chamber Orchestra\\Backups\\WordPress-20261104\\QA-20261105\\legacy-route-http-123-20261105.json`
+(SHA-256 `3d327887746bc2f4dc187818b9b794613bdc8537d550b7ab7c34bdbb884a894f`).
+
+**Static route intersection:** The extended `cutover:report` found **121 of 123
+published routes missing in Astro** and **two shared paths** (`/bg/`, `/en/`),
+whose content would change. All 46 product routes are confirmed consistent across
+the original product inventory and new all-published inventory. Old routes cannot
+be discarded or replaced with blanket Bandcamp redirects: pages, press, blog,
+archives and historic orders have separate preservation requirements.
+
+**Built-site internal link audit:** A new `scripts/validate-static-links.mjs`
+checks links, page anchors and static assets across all 21 generated HTML pages.
+It initially detected **four broken links** from BG/EN `first-sound` navigation
+to `/bg//bg/recordings/` and `/en//en/recordings/`; those were fixed by removing
+redundant manual prefixes and letting the shared Header route resolver work.
+The full typecheck/build/SEO/links suite then passed:
+**85 Astro files, 0 errors/warnings; 746 href/src references checked,
+690 internal references, 154 static asset references, 0 broken links**.
+Read-only CI now runs this link validator.
+
+**Visual QA:** The Astro build was served only on Lenovo's loopback interface,
+not on a public host. Firefox headless screenshots at **390×844** and **1440×900**
+were captured for the BG homepage and EN discography. The tested viewport layout
+shows legible Foundation wordmark and Chamber Orchestra caption, single-column
+mobile content and responsive recording cards. A physical iPhone/Safari or full
+WCAG keyboard audit has not been completed. The temporary local preview server
+was terminated after screenshots.
+
+**Isolated preview package prepared, not deployed:**
+
+- Lenovo file: `C:\\Users\\User\\Documents\\432-Astro-Preview-Only-20261105.zip`
+- ZIP SHA-256: `6eec04efe76d9cfae2c1f6f820a17ca19e5974e39bf8c3877e1196443ae2650e`
+- Size: **14,944,780 bytes**, 137 entries, 21 noindex/nofollow static pages,
+  robots `Disallow: /`, dedicated preview canonical URLs, 0 broken local links.
+- Preview hostname in this build is a **placeholder**
+  `https://preview.432hz-orchestra.com`, not a configured/live DNS record.
+- cPanel inspection: `432project.432hz-orchestra.com` exists but serves an
+  **independent WordPress instance** (do not overwrite);
+  `staging.432hz-foundation.com` serves the **Foundation staging instance**
+  and currently returns HTTP 401 to unauthenticated requests (do not overwrite).
+  No unused isolated orchestra preview host was found. The new site must get
+  its own reviewed DNS/document root/SSL or another approved isolated hosting
+  location before an **online** preview is available.
+- Normal default-site `dist/` was rebuilt and passed SEO/link checks again after
+  creating the preview ZIP. None of the archive files were uploaded to cPanel.
+
+**Production remains unchanged**: WordPress main-site + Bandcamp Bridge v1.0.4,
+46 music products and 123 public URLs remain live.
