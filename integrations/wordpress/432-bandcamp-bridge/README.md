@@ -1,60 +1,39 @@
-# 432 Bandcamp Purchase Bridge — staging-only WordPress plugin
+# 432 Bandcamp Bridge v1.0.4 — Bandcamp-only digital music
 
-## Purpose
+## Production state — 2026-11-05
 
-Offer direct Bandcamp purchases on all 23 works in the old WooCommerce shop (46 Polylang source product posts), **without redirecting/deleting any existing URLs, changing prices, or disabling the existing WooCommerce checkout**. Also surfaces the five Bandcamp-only releases through a full-catalogue banner on the shop archive.
+**Owner-approved Bandcamp-only model is LIVE on the existing WordPress Multisite main site (blog 1), not network-wide.**
 
-## Scope
+- All 46 existing WooCommerce digital music posts remain published, paired in 23 BG/EN translations, and retain their historical URLs and downloadable files.
+- All new digital-music purchases go to the official Bandcamp artist shop. Each mapped product links directly to one of the 23 verified track/album purchase destinations. Future unmapped downloadable products link to the Bandcamp discography, without inventing a track.
+- WooCommerce **remains installed as an archive of posts, downloads and past orders**. It is no longer a digital-music sales channel.
+- Filters disable `is_purchasable`, Woo add-to-cart and AJAX add-to-cart validation, local product prices, and Woo product price offers in schema data for downloaded music. Future non-downloadable merchandise is not changed by the product-level filters.
+- The existing 12-release Bandcamp catalogue banner remains on both real shop pages (BG page ID 997, EN page ID 106); language is derived from current page, not the product's language where the old shortcode mixes EN/BG IDs.
+- EN/BG navigation omits legacy Cart/Basket/Checkout links, including the Woo menu-cart link. The old cart and checkout pages (IDs 107, 965, 108, 461) send an HTTP 302 to `https://432orchestra.bandcamp.com/music`. No query strings or private session tokens are forwarded.
+- New checkout payment methods are suppressed by runtime filter. **Historical `order-pay` and `order-received` endpoints remain available for existing orders.** Do not delete payment plugins or WooCommerce/order data.
+- Original PHP and database data are not edited by the new filters. Turning the bridge off returns the previous Woo purchase behavior; legacy downloads/orders remain intact.
 
-- `woocommerce_single_product_summary` priority 29: above the built-in WooCommerce add-to-basket form (priority 30).
-- `woocommerce_after_shop_loop_item` priority 11: add a Bandcamp purchase link after the built-in add-to-basket.
-- `woocommerce_before_shop_loop` priority 5: discovery of all 12 releases, including those not independently listed on WooCommerce.
-- CSS scoped under `c432-bandcamp-*`, with no global theme changes.
-- Links only to `https://432orchestra.bandcamp.com/` with `noopener noreferrer`.
-- Polylang BG/EN labels with fallback to known translation product IDs.
-- No JS, cookies, tracking, database writes, network calls, new paid API, redirects or admin pages.
+## Production QA
 
-## How to test
+- PHP **7.4.33** and **8.4.27** isolated integration tests PASS.
+- PHP 7.4 real WordPress runtime: 46/46 published products remain downloadable, non-purchasable in Woo, without old Woo price HTML, with a mapped Bandcamp URL (23 Bulgarian + 23 English).
+- Public HTTPS, read-only GET checks: 6/6 shop/product/home pages HTTP 200; no local add-to-cart links or cart navigation, all Bandcamp CTAs displayed; old two carts and two checkout URLs all return HTTP 302 to Bandcamp: **10/10 PASS**.
+- No payments, orders, account data migration or API service calls were made in the deployment.
+- Site-only network plugin activation, prior to this update, preserved 40 network-wide plugins. PHP file SHA-256 of v1.0.4: `96a853c5306315182bc0d4b9851eff6d151af780d2851d143dc060b33b02f8b6`.
+- Site received a **separate** branding change requested by owner: exact approved `432-Hertz-Foundation/public/brand/logo-foundation-dark.svg` rasterized to transparent PNG for the Twenty Seventeen WordPress custom logo. WordPress media attachment ID 3616 (previous logo ID 856), with minimal header contrast CSS. This branding change is independent of the Bandcamp bridge and has a separate protected rollback receipt.
 
-```bash
-php -l wordpress/432-bandcamp-bridge/432-bandcamp-bridge.php
-php wordpress/tests/test-bridge.php
-```
+## Rollback
 
-## Follow-up from actual live activation — 2026-11-05
+The exact v1.0.3 PHP file was preserved in non-public server staging:
+`/home/hzorche/ra-core-deploy-staging/432-bandcamp-v104-20261105/rollback-live-v103.php`
+(SHA-256 `3cbdc4e5f2c2fa6b6f98c9443a25f963025ae5e22222cb1bf4a4bef1169a7544`).
 
-- The user explicitly approved and the original **v1.0.2** was activated on WordPress Multisite main blog ID 1 **only** (one site in the network); the network-wide active-plugin list stayed unchanged.
-- Immediately after activation, all seven public surfaces returned HTTP 200 and EN/BG individual product purchase links plus WooCommerce cart controls appeared.
-- The live [products] shortcode does **not** call `woocommerce_before_shop_loop` unless `paginate=true`. Because both shop pages use a nonpaginated shortcode, the catalogue banner from v1.0.2 did **not** appear. This is a feature gap, not an outage of existing sales.
-- The BG translated shop (page ID 997) displays some English-language product posts, so the v1.0.2 loop button inherited English from the product ID rather than Bulgarian from the page.
-- **v1.0.3 (separate staging patch, NOT ACTIVATED):** registers `woocommerce_shortcode_before_products_loop`, restricts the banner to the two real shop pages (IDs 106/997) and prevents double render. Shop-grid CTA language follows page context first, then the product language.
-- The original approved v1.0.2 remains unchanged in production until a separately authorized corrective release.
+To roll back only v1.0.4, replace the public bridge PHP file atomically with this verified v1.0.3 original and verify the resulting version and 10 public surfaces. Do not roll back WordPress core, payment plugins, historical records or media files. Site logo rollback is independent: `custom_logo` was ID 856 before the new approved asset.
 
-## Mobile storefront QA — 2026-11-05
+A separate Nov 4/5 full private WordPress files+database backup is stored on Lenovo and the original validated server staging. Files were backed up sequentially on a live site, not as an atomic database+filesystem snapshot. Never publish archive contents (including `wp-config.php` and order/customer records).
 
-- A real public storefront screenshot was captured using headless Firefox at **390 × 844 px**. Both shops use a WooCommerce `[products limit="15" columns="5" orderby="popularity"]` shortcode; at 390 px the unmodified Twenty Seventeen storefront renders two narrow product columns.
-- v1.0.2 includes the **@media (max-width:600px)** override for precisely the English WooCommerce shop archive (`body.woocommerce-shop`) and the actual Bulgarian shop translated page (`body.page-id-997`), producing a single product per row, adequate space for headings and audio controls, and full-width Bandcamp CTAs.
-- The BG canonical shop URL is **/bg/магазин/**. The noncanonical alternative `/bg/shop/` must not be mistaken for it.
-- The purchase CTA now uses a **warm-gold background (#eadf9b) with dark text (#202020)** so the button remains visible against the current dark Twenty Seventeen storefront. Hover uses #fff2c0. These colors apply only to the plugin buttons, not the site's theme.\n- This CSS is loaded only when the plugin is active. It does not alter the desktop product-grid layout, site header/theme, checkout, product records or prices.
-- Captured real-site mobile reference screenshots are kept locally at `C:\Users\User\Documents\mobile432Firefox390.png` (BG shop), `mobile432ProductBG.png`, `mobile432ProductEN.png`, and `mobile432CartBG.png`. These are **before activation** and do not prove the staged CSS on the public site.
-- CSS regression checks run in the standalone `test-bridge.php`, on both PHP 7.4.33 and 8.4.27, in protected server staging.
-- Visual review of the plugin-enabled public site remains a post-approval deployment QA gate.
+## Long-term policy
 
-## Deployment gate — DO NOT SKIP
+Bandcamp collects payments through its own checkout. That **does not remove Bulgarian tax obligations for revenue**. Preserve the Bandcamp sales statements and any existing WooCommerce historical financial records for accounting. New digital releases should be published first to Bandcamp and then linked through the WordPress catalogue; they must not become locally purchasable through WooCommerce.
 
-1. Confirm current production WordPress shop and original 46 product posts and URLs.
-2. Confirm verified full restore point **including database and wp-content/uploads**. The Nov 4 Softaculous archive of 829 KiB is NOT sufficient evidence: live uploads is ~5.5 GiB.
-3. Confirm the 23 target Bandcamp URLs (this package uses canonical track/album hrefs from the public artist pages); check 200/redirect live and purchase availability.
-4. **Explicit approval required before production plugin activation.** Never run WordPress core/theme/WooCommerce updates as part of this change.
-5. Install package via WordPress admin as new plugin, or owner-approved guarded deployment. Record plugin SHA256, production screenshot, and rollback instructions.
-6. QA an EN and BG product, shop archive, first/home page, mobile and desktop, focus order, duplicate link output.
-7. Validate no checkout or payment behaviour changed and no errors in production PHP logs.
-8. Rollback: deactivate plugin; product posts and checkout are left unchanged. Remove the directory only after confirming site behaviour.
-
-### Important
-
-Observed production: WordPress 5.9.20 / WooCommerce 7.0.2 / PHP CLI 8.4.27. One WooCommerce product (943, Joplin EN) is **downloadable=yes virtual=no**; this package intentionally does not repair that separate data anomaly.
-
-## Source mapping
-
-Read-only WordPress SQL by product ID and the public Bandcamp catalogue/album/track links, checked 2026-11-04. This is separate from the Astro staging site. Product ID mappings must be refreshed if posts are deleted and recreated.
+No paid purchase transaction was attempted during technical QA.

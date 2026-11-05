@@ -3,13 +3,19 @@
 error_reporting( E_ALL );
 define( 'ABSPATH', __DIR__ . '/' );
 $GLOBALS['c432_hooks'] = array();
+$GLOBALS['c432_filters'] = array();
 function add_action( $hook, $callback, $priority = 10 ) { $GLOBALS['c432_hooks'][] = array($hook,$callback,$priority); }
+function add_filter( $hook, $callback, $priority = 10, $accepted_args = 1 ) { $GLOBALS['c432_filters'][] = array($hook,$callback,$priority,$accepted_args); }
 function absint( $value ) { return abs( (int) $value ); }
 function esc_url( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
 function esc_html( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
 function get_the_ID() { return isset( $GLOBALS['c432_id'] ) ? $GLOBALS['c432_id'] : 0; }
 function get_locale() { return 'en_US'; }
 function is_shop() { return ! empty( $GLOBALS['c432_test_is_shop'] ); }
+function is_admin() { return false; }
+function is_wc_endpoint_url( $endpoint ) { return ! empty( $GLOBALS['c432_test_endpoint'] ) && $GLOBALS['c432_test_endpoint'] === $endpoint; }
+function wc_get_product( $id ) { return isset($GLOBALS['c432_products'][$id]) ? $GLOBALS['c432_products'][$id] : null; }
+function wc_add_notice( $message, $type ) { $GLOBALS['c432_notices'][] = array($message,$type); }
 function is_page( $ids ) { return in_array( $GLOBALS['c432_test_page_id'] ?? 0, (array) $ids, true ); }
 
 function pll_get_post_language( $id ) { return in_array( $id, array( 796, 807, 811, 813, 815, 817, 819, 821, 823, 904, 921, 923, 930, 935, 940, 942, 944, 946, 948, 950, 952, 955, 957 ), true ) ? 'bg' : 'en'; }
@@ -56,17 +62,19 @@ assert_c432( c432_bandcamp_url(953) === c432_bandcamp_url(955), '953/955 transla
 assert_c432( c432_bandcamp_url(956) === c432_bandcamp_url(957), '956/957 translation pair' );
 assert_c432( 'bg' === c432_bandcamp_lang( 807 ), 'Polylang BG' );
 assert_c432( 'en' === c432_bandcamp_lang( 806 ), 'Polylang EN' );
-assert_c432( 5 === count( $GLOBALS['c432_hooks'] ), 'five expected WordPress hooks' );
+assert_c432( 6 === count( $GLOBALS['c432_hooks'] ), 'six expected WordPress actions' );
+assert_c432( 8 === count( $GLOBALS['c432_filters'] ), 'eight hardening filters for Bandcamp-only checkout' );
+assert_c432( in_array( array( 'template_redirect', 'c432_bandcamp_redirect_legacy_checkout', 0 ), $GLOBALS['c432_hooks'], true ), 'route legacy cart/checkout to Bandcamp' );
 assert_c432( in_array( array( 'woocommerce_shortcode_before_products_loop', 'c432_bandcamp_shop_banner', 5 ), $GLOBALS['c432_hooks'], true ), 'nonpaginated shortcode shop hook registered' );
 
-class C432_Test_Product { private $id; public function __construct( $id ) { $this->id = $id; } public function get_id() { return $this->id; } }
+class C432_Test_Product { private $id; private $downloadable; public function __construct( $id, $downloadable = false ) { $this->id = $id; $this->downloadable = $downloadable; } public function get_id() { return $this->id; } public function is_downloadable() { return $this->downloadable; } }
 $GLOBALS['product'] = new C432_Test_Product( 806 );
 ob_start();
 c432_bandcamp_single_button();
 $single_en = ob_get_clean();
 assert_c432( false !== strpos( $single_en, 'Listen &amp; buy on Bandcamp' ), 'EN single label' );
 assert_c432( false !== strpos( $single_en, 'target="_blank" rel="noopener noreferrer"' ), 'noopener' );
-assert_c432( false !== strpos( $single_en, 'The price there may differ' ), 'cross-checkout price note' );
+assert_c432( false !== strpos( $single_en, 'Payment and downloads are handled there' ), 'Bandcamp exclusive notice' );
 $GLOBALS['product'] = new C432_Test_Product( 807 );
 ob_start(); c432_bandcamp_single_button(); $single_bg = ob_get_clean();
 assert_c432( false !== strpos( $single_bg, 'Слушайте и купете в Bandcamp' ), 'BG single label' );
@@ -106,4 +114,40 @@ assert_c432( false !== strpos( $css, '.c432-bandcamp-loop-button{display:block;w
 assert_c432( false !== strpos( $css, 'background:#eadf9b;color:#202020!important' ), 'visible warm-gold CTA on dark theme' );
 assert_c432( false !== strpos( $css, 'background:#fff2c0;color:#202020!important' ), 'high-contrast hover CTA on dark theme' );
 
-echo "PASS: 46 posts / 23 pairs / CTA render / nonpaginated banner / BG context / mobile CSS / no Woo state change\n";
+// All legacy music products and any future downloadable music are Bandcamp-only.
+$productMapped = new C432_Test_Product( 943, true ); // historic English Joplin was non-virtual.
+$productNewDownload = new C432_Test_Product( 20000, true );
+$productMerchandise = new C432_Test_Product( 20001, false );
+$GLOBALS['c432_products'] = array(943=>$productMapped,20000=>$productNewDownload,20001=>$productMerchandise);
+assert_c432( c432_bandcamp_only_music_product( $productMapped ), 'mapped historic digital product identified' );
+assert_c432( c432_bandcamp_only_music_product( $productNewDownload ), 'future downloadable product identified' );
+assert_c432( ! c432_bandcamp_only_music_product( $productMerchandise ), 'physical merchandise excluded' );
+assert_c432( ! c432_bandcamp_disable_local_purchase( true, $productMapped ), 'mapped purchase blocked' );
+assert_c432( ! c432_bandcamp_disable_local_purchase( true, $productNewDownload ), 'future music blocked' );
+assert_c432( c432_bandcamp_disable_local_purchase( true, $productMerchandise ), 'unrelated merchandise not blocked' );
+assert_c432( '' === c432_bandcamp_suppress_local_price( '€5.00', $productMapped ), 'no obsolete local EUR price' );
+assert_c432( '€5.00' === c432_bandcamp_suppress_local_price( '€5.00', $productMerchandise ), 'nonmusic price unaffected' );
+assert_c432( '' === c432_bandcamp_suppress_loop_cart_button( '<a>Add to cart</a>', $productMapped ), 'legacy add cart removed' );
+assert_c432( '<a>More</a>' === c432_bandcamp_suppress_loop_cart_button( '<a>More</a>', $productMerchandise ), 'nonmusic loop unchanged' );
+assert_c432( ! c432_bandcamp_reject_add_to_cart( true, 943 ), 'direct add-to-cart blocked' );
+assert_c432( ! c432_bandcamp_reject_add_to_cart( true, 20000 ), 'new music direct add-to-cart blocked' );
+assert_c432( ! c432_bandcamp_reject_add_to_cart( true, 20001, 1, 20000 ), 'downloadable variation blocked' );
+assert_c432( c432_bandcamp_reject_add_to_cart( true, 20001 ), 'unrelated merch add-to-cart allowed' );
+assert_c432( 'https://432orchestra.bandcamp.com/music' === c432_bandcamp_checkout_destination(20000), 'unmapped digital album fallback' );
+assert_c432( '' === c432_bandcamp_checkout_destination(20001), 'nonmusic has no fake bandcamp destination' );
+assert_c432( ! isset( c432_bandcamp_remove_local_schema_offer( array('offers'=>'old-price'), $productMapped )['offers'] ), 'hide obsolete local structured offer' );
+assert_c432( c432_bandcamp_disable_new_payment_gateways( array('paypal'=>'active') ) === array(), 'new Woo payments disabled' );
+$GLOBALS['c432_test_endpoint'] = 'order-pay';
+assert_c432( count(c432_bandcamp_disable_new_payment_gateways(array('paypal'=>'old-order'))) === 1, 'historic order-pay access preserved' );
+$GLOBALS['c432_test_endpoint'] = '';
+$menu = array(
+  (object) array('object_id'=>107,'url'=>'https://432hz-orchestra.com/en/cart/'),
+  (object) array('object_id'=>461,'url'=>'https://432hz-orchestra.com/en/checkout-2/'),
+  (object) array('object_id'=>0,'url'=>'#wpmenucart'),
+  (object) array('object_id'=>0,'url'=>'https://432hz-orchestra.com/bg/кошница/'),
+  (object) array('object_id'=>0,'url'=>'https://432hz-orchestra.com/en/shop/')
+);
+assert_c432( count(c432_bandcamp_filter_legacy_cart_menu($menu))===1, 'cart/checkout links hidden in EN and BG menus' );
+assert_c432( false !== strpos( $css, '#wpmenucart{display:none!important}' ), 'plugin cart icon hidden' );
+assert_c432( in_array(array('woocommerce_add_to_cart_validation','c432_bandcamp_reject_add_to_cart',100,4),$GLOBALS['c432_filters'],true), 'server cart hard block registered' );
+echo "PASS: 46 mapped works / all downloads Bandcamp-only / local cart blocked / menu removed / historic orders untouched\n";
