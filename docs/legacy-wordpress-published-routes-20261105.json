@@ -1,0 +1,766 @@
+{
+  "captured": "2026-11-05",
+  "origin": "https://432hz-orchestra.com",
+  "source": "Read-only WordPress published permalink APIs",
+  "scope": "Public published page, product, post, and taxonomy routes only. Does not include uploads/private WooCommerce endpoints.",
+  "routes": [
+    {
+      "kind": "page",
+      "id": 47,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/"
+    },
+    {
+      "kind": "page",
+      "id": 50,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/contact-us/"
+    },
+    {
+      "kind": "page",
+      "id": 58,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d0%b8/"
+    },
+    {
+      "kind": "page",
+      "id": 61,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/"
+    },
+    {
+      "kind": "page",
+      "id": 78,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/about/"
+    },
+    {
+      "kind": "page",
+      "id": 80,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be/"
+    },
+    {
+      "kind": "page",
+      "id": 85,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/about/432-chamber-orchestra/"
+    },
+    {
+      "kind": "page",
+      "id": 87,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432/"
+    },
+    {
+      "kind": "page",
+      "id": 93,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/about/ivan-yanakiev/"
+    },
+    {
+      "kind": "page",
+      "id": 95,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be/%d0%b8%d0%b2%d0%b0%d0%bd-%d1%8f%d0%bd%d0%b0%d0%ba%d0%b8%d0%b5%d0%b2/"
+    },
+    {
+      "kind": "page",
+      "id": 106,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/shop/"
+    },
+    {
+      "kind": "page",
+      "id": 107,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/cart/"
+    },
+    {
+      "kind": "page",
+      "id": 108,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/checkout/"
+    },
+    {
+      "kind": "page",
+      "id": 109,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/my-account/"
+    },
+    {
+      "kind": "page",
+      "id": 136,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/concerts-and-tours/"
+    },
+    {
+      "kind": "page",
+      "id": 138,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/about/432-hz-concert-pitch/"
+    },
+    {
+      "kind": "page",
+      "id": 139,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d1%83%d1%80%d0%bd%d0%b5%d1%82%d0%b0/"
+    },
+    {
+      "kind": "page",
+      "id": 150,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be/%d0%bb%d0%b0-432-hz-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%b5%d0%bd-%d1%81%d1%82%d1%80%d0%be%d0%b9/"
+    },
+    {
+      "kind": "page",
+      "id": 334,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/news/"
+    },
+    {
+      "kind": "page",
+      "id": 336,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%bd%d0%be%d0%b2%d0%b8%d0%bd%d0%b8/"
+    },
+    {
+      "kind": "page",
+      "id": 461,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/checkout-2/"
+    },
+    {
+      "kind": "page",
+      "id": 462,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/checkout-2/purchase-confirmation/"
+    },
+    {
+      "kind": "page",
+      "id": 463,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/checkout-2/transaction-failed/"
+    },
+    {
+      "kind": "page",
+      "id": 464,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/checkout-2/purchase-history/"
+    },
+    {
+      "kind": "page",
+      "id": 626,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/gallery/"
+    },
+    {
+      "kind": "page",
+      "id": 628,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%b3%d0%b0%d0%bb%d0%b5%d1%80%d0%b8%d1%8f/"
+    },
+    {
+      "kind": "page",
+      "id": 633,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/ms-download-page/"
+    },
+    {
+      "kind": "page",
+      "id": 877,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/buy-our-music/"
+    },
+    {
+      "kind": "page",
+      "id": 891,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%ba%d1%83%d0%bf%d0%b5%d1%82%d0%b5-%d0%bd%d0%b0%d1%88%d0%b0%d1%82%d0%b0-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0/"
+    },
+    {
+      "kind": "page",
+      "id": 965,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%ba%d0%be%d1%88%d0%bd%d0%b8%d1%86%d0%b0/"
+    },
+    {
+      "kind": "page",
+      "id": 997,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%bc%d0%b0%d0%b3%d0%b0%d0%b7%d0%b8%d0%bd/"
+    },
+    {
+      "kind": "page",
+      "id": 1032,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/video/"
+    },
+    {
+      "kind": "page",
+      "id": 1034,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/%d0%b2%d0%b8%d0%b4%d0%b5%d0%be/"
+    },
+    {
+      "kind": "page",
+      "id": 1036,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/video-grid-gallery/"
+    },
+    {
+      "kind": "page",
+      "id": 1037,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/video-gallery/"
+    },
+    {
+      "kind": "post",
+      "id": 224,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/blog/2016/08/22/photos-concert-13-march-2016/"
+    },
+    {
+      "kind": "post",
+      "id": 227,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/blog/2016/08/22/%d1%81%d0%bd%d0%b8%d0%bc%d0%ba%d0%b8-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-13-%d0%bc%d0%b0%d1%80%d1%82-2016/"
+    },
+    {
+      "kind": "post",
+      "id": 286,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/blog/2016/12/05/%d0%b0%d0%bd%d0%ba%d0%b5%d1%82%d0%b0-%d0%b7%d0%b0-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b0/"
+    },
+    {
+      "kind": "post",
+      "id": 345,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/blog/2016/12/29/bach-air/"
+    },
+    {
+      "kind": "post",
+      "id": 347,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/blog/2016/12/29/%d0%b1%d0%b0%d1%85-%d0%b0%d1%80%d0%b8%d1%8f/"
+    },
+    {
+      "kind": "post",
+      "id": 361,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/blog/2016/12/30/schubert-moment-musicaux/"
+    },
+    {
+      "kind": "post",
+      "id": 363,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/blog/2016/12/30/%d1%88%d1%83%d0%b1%d0%b5%d1%80%d1%82-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0%d0%bb%d0%b5%d0%bd-%d0%bc%d0%be%d0%bc%d0%b5%d0%bd%d1%82/"
+    },
+    {
+      "kind": "post",
+      "id": 365,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/blog/2016/12/31/bizet-entracte-suite-carmen/"
+    },
+    {
+      "kind": "post",
+      "id": 367,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/blog/2016/12/31/%d0%b1%d0%b8%d0%b7%d0%b5-%d0%b0%d0%bd%d1%82%d1%80%d0%b0%d0%ba%d1%82-%d0%be%d1%82-%d1%81%d1%8e%d0%b8%d1%82%d0%b0-%d0%ba%d0%b0%d1%80%d0%bc%d0%b5%d0%bd/"
+    },
+    {
+      "kind": "post",
+      "id": 371,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/blog/2017/01/01/satie-gymnopedie-no-1/"
+    },
+    {
+      "kind": "post",
+      "id": 373,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/blog/2017/01/01/%d1%81%d0%b0%d1%82%d0%b8-%d1%85%d0%b8%d0%bc%d0%bd%d0%be%d0%bf%d0%b5%d0%b4%d0%b8%d1%8f-%e2%84%96-1/"
+    },
+    {
+      "kind": "post",
+      "id": 1067,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/blog/2018/04/11/concert-148-years-bulgarian-academy-of-sceiences/"
+    },
+    {
+      "kind": "post",
+      "id": 1070,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/blog/2018/04/11/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-%d0%bc%d0%be%d1%86%d0%b0%d1%80%d1%82-%d0%b7%d0%bb%d0%b0/"
+    },
+    {
+      "kind": "product",
+      "id": 769,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/432-chamber-orchestras-quartet-432-hz-music/"
+    },
+    {
+      "kind": "product",
+      "id": 796,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-%d0%bd%d0%b0-%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0-%d0%b2-43/"
+    },
+    {
+      "kind": "product",
+      "id": 806,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/mark-antonie-charpantier-te-deum-praelude-432-hz/"
+    },
+    {
+      "kind": "product",
+      "id": 807,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/mark-antonie-charpantier-te-deum-praelude-432-hz-2/"
+    },
+    {
+      "kind": "product",
+      "id": 810,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/georg-friedrich-handel-hornpie-watermusic-suite-d-dur-hw-349-part-ii/"
+    },
+    {
+      "kind": "product",
+      "id": 811,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/georg-friedrich-handel-hornpie-watermusic-suite-d-dur-hw-349-part-ii-2/"
+    },
+    {
+      "kind": "product",
+      "id": 812,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/georg-friedrich-handel-arrival-queen-sheba-solomon-hw-67/"
+    },
+    {
+      "kind": "product",
+      "id": 813,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/georg-friedrich-handel-arrival-queen-sheba-solomon-hw-67-2/"
+    },
+    {
+      "kind": "product",
+      "id": 814,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/caesar-frank-panis-angelicus-messe-solennelle/"
+    },
+    {
+      "kind": "product",
+      "id": 815,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/caesar-frank-panis-angelicus-messe-solennelle-2/"
+    },
+    {
+      "kind": "product",
+      "id": 816,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/alexander-borodin-notturno-string-quartet-no-2-part-iii/"
+    },
+    {
+      "kind": "product",
+      "id": 817,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/alexander-borodin-notturno-string-quartet-no-2-part-iii-2/"
+    },
+    {
+      "kind": "product",
+      "id": 818,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/modest-mussorgsky-gopak-sorochins-fair/"
+    },
+    {
+      "kind": "product",
+      "id": 819,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/modest-mussorgsky-gopak-sorochins-fair-2/"
+    },
+    {
+      "kind": "product",
+      "id": 820,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/p-tchaikovsky-trepak-nutkracker-suite/"
+    },
+    {
+      "kind": "product",
+      "id": 821,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/p-tchaikovsky-trepak-nutkracker-suite-2/"
+    },
+    {
+      "kind": "product",
+      "id": 822,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/claude-debussy-clair-de-lune/"
+    },
+    {
+      "kind": "product",
+      "id": 823,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/claude-debussy-clair-de-lune-2/"
+    },
+    {
+      "kind": "product",
+      "id": 898,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/bizet-entracte-suite-carmen-432-hz/"
+    },
+    {
+      "kind": "product",
+      "id": 904,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/bizet-entracte-suite-carmen-432-hz-2/"
+    },
+    {
+      "kind": "product",
+      "id": 919,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal/"
+    },
+    {
+      "kind": "product",
+      "id": 921,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal-2/"
+    },
+    {
+      "kind": "product",
+      "id": 922,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/432-chamber-orchestra-antonio-vivaldi-concerto-alla-rustica-g-rv-151-432-hz-yanakiev-recording-rehearsal/"
+    },
+    {
+      "kind": "product",
+      "id": 923,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/432-chamber-orchestra-antonio-vivaldi-concerto-alla-rustica-g-rv-151-432-hz-yanakiev-recording-rehearsal-2/"
+    },
+    {
+      "kind": "product",
+      "id": 924,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/432-chamber-orchestra-quartet-e-satie-gymnopedie-no-1-432-hz/"
+    },
+    {
+      "kind": "product",
+      "id": 930,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/432-chamber-orchestra-quartet-e-satie-gymnopedie-no-1-432-hz-2/"
+    },
+    {
+      "kind": "product",
+      "id": 931,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/432-chamber-orchestra-quartet-fr-schubert-moment-musicaux-no-3-432-hz/"
+    },
+    {
+      "kind": "product",
+      "id": 935,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/432-chamber-orchestra-quartet-fr-schubert-moment-musicaux-no-3-432-hz-2/"
+    },
+    {
+      "kind": "product",
+      "id": 937,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/bach-air-orchestral-sutite-no-3-d-dur-bwv-1068/"
+    },
+    {
+      "kind": "product",
+      "id": 940,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/bach-air-orchestral-sutite-no-3-d-dur-bwv-1068-2/"
+    },
+    {
+      "kind": "product",
+      "id": 941,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/pietro-mascagni-intermezzo-cavalleria-rusticana/"
+    },
+    {
+      "kind": "product",
+      "id": 942,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/pietro-mascagni-intermezzo-cavalleria-rusticana-2/"
+    },
+    {
+      "kind": "product",
+      "id": 943,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/scot-jopplinl-entertainer/"
+    },
+    {
+      "kind": "product",
+      "id": 944,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/scot-jopplinl-entertainer-2/"
+    },
+    {
+      "kind": "product",
+      "id": 945,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/carlos-gardel-por-una-cabeza/"
+    },
+    {
+      "kind": "product",
+      "id": 946,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/carlos-gardel-por-una-cabeza-2/"
+    },
+    {
+      "kind": "product",
+      "id": 947,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/giovanni-capurro-o-sole-mio/"
+    },
+    {
+      "kind": "product",
+      "id": 948,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/giovanni-capurro-o-sole-mio-2/"
+    },
+    {
+      "kind": "product",
+      "id": 949,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/armstrong-wonderful-world/"
+    },
+    {
+      "kind": "product",
+      "id": 950,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/armstrong-wonderful-world-2/"
+    },
+    {
+      "kind": "product",
+      "id": 951,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/the-beetles-yesterday/"
+    },
+    {
+      "kind": "product",
+      "id": 952,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/the-beetles-yesterday-2/"
+    },
+    {
+      "kind": "product",
+      "id": 953,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/matvey-blanter-katyusha/"
+    },
+    {
+      "kind": "product",
+      "id": 955,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/matvey-blanter-katyusha-2/"
+    },
+    {
+      "kind": "product",
+      "id": 956,
+      "lang": "en",
+      "url": "https://432hz-orchestra.com/en/product/vasily-solovyov-sedoi-podmoskovniye-vechera/"
+    },
+    {
+      "kind": "product",
+      "id": 957,
+      "lang": "bg",
+      "url": "https://432hz-orchestra.com/bg/product/vasily-solovyov-sedoi-podmoskovniye-vechera-2/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "category",
+      "id": 1,
+      "url": "https://432hz-orchestra.com/en/blog/category/uncategorized/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "post_tag",
+      "id": 61,
+      "url": "https://432hz-orchestra.com/en/blog/tag/432hz/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "post_tag",
+      "id": 63,
+      "url": "https://432hz-orchestra.com/en/blog/tag/432-music/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "post_tag",
+      "id": 65,
+      "url": "https://432hz-orchestra.com/en/blog/tag/432-chamber-orchestra/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "category",
+      "id": 70,
+      "url": "https://432hz-orchestra.com/en/blog/category/a-432-hz-concert-pitch/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "category",
+      "id": 76,
+      "url": "https://432hz-orchestra.com/en/blog/category/concert/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "category",
+      "id": 80,
+      "url": "https://432hz-orchestra.com/en/blog/category/gallery/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "post_tag",
+      "id": 87,
+      "url": "https://432hz-orchestra.com/en/blog/tag/ivan-yanakiev/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "post_tag",
+      "id": 89,
+      "url": "https://432hz-orchestra.com/en/blog/tag/miryana-kalushkova/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "category",
+      "id": 110,
+      "url": "https://432hz-orchestra.com/en/blog/category/music/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_cat",
+      "id": 198,
+      "url": "https://432hz-orchestra.com/en/product-category/audio/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 200,
+      "url": "https://432hz-orchestra.com/en/product-tag/string-quartet/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 208,
+      "url": "https://432hz-orchestra.com/en/product-tag/quartet/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 214,
+      "url": "https://432hz-orchestra.com/en/product-tag/string-orchestra/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 216,
+      "url": "https://432hz-orchestra.com/en/product-tag/solo-violin/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 220,
+      "url": "https://432hz-orchestra.com/en/product-tag/classical/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 228,
+      "url": "https://432hz-orchestra.com/en/product-tag/pop/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 230,
+      "url": "https://432hz-orchestra.com/en/product-tag/russian/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 236,
+      "url": "https://432hz-orchestra.com/en/product-tag/bulgarian/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 238,
+      "url": "https://432hz-orchestra.com/en/product-tag/baroque/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 244,
+      "url": "https://432hz-orchestra.com/en/product-tag/classicism/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 246,
+      "url": "https://432hz-orchestra.com/en/product-tag/romantic/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 252,
+      "url": "https://432hz-orchestra.com/en/product-tag/xx-century/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_tag",
+      "id": 260,
+      "url": "https://432hz-orchestra.com/en/product-tag/contemporary/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_cat",
+      "id": 299,
+      "url": "https://432hz-orchestra.com/en/product-category/audio/string-quartet-music/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_cat",
+      "id": 302,
+      "url": "https://432hz-orchestra.com/en/product-category/audio/string-orchestra/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "product_cat",
+      "id": 308,
+      "url": "https://432hz-orchestra.com/en/product-category/uncategorized/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "category",
+      "id": 312,
+      "url": "https://432hz-orchestra.com/en/blog/category/music/audio/"
+    },
+    {
+      "kind": "taxonomy",
+      "taxonomy": "category",
+      "id": 320,
+      "url": "https://432hz-orchestra.com/en/blog/category/music/video/"
+    }
+  ],
+  "protectedPrefixes": [
+    "/wp-admin/",
+    "/wp-login.php",
+    "/wp-json/",
+    "/wp-content/",
+    "/wp-includes/",
+    "/wp-cron.php",
+    "/wp-sitemap.xml"
+  ],
+  "specialRoutes": [
+    "/",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/en/my-account/",
+    "/en/cart/",
+    "/bg/кошница/",
+    "/en/checkout/",
+    "/en/checkout-2/"
+  ],
+  "sensitiveDataIncluded": false
+}
