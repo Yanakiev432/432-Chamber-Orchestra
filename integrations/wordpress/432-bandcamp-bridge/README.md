@@ -24,9 +24,9 @@ php wordpress/tests/test-bridge.php
 ## Mobile storefront QA — 2026-11-05
 
 - A real public storefront screenshot was captured using headless Firefox at **390 × 844 px**. Both shops use a WooCommerce `[products limit="15" columns="5" orderby="popularity"]` shortcode; at 390 px the unmodified Twenty Seventeen storefront renders two narrow product columns.
-- v1.0.1 adds an **@media (max-width:600px)** override for precisely the English WooCommerce shop archive (`body.woocommerce-shop`) and the actual Bulgarian shop translated page (`body.page-id-997`), producing a single product per row, adequate space for headings and audio controls, and full-width Bandcamp CTAs.
+- v1.0.2 includes the **@media (max-width:600px)** override for precisely the English WooCommerce shop archive (`body.woocommerce-shop`) and the actual Bulgarian shop translated page (`body.page-id-997`), producing a single product per row, adequate space for headings and audio controls, and full-width Bandcamp CTAs.
 - The BG canonical shop URL is **/bg/магазин/**. The noncanonical alternative `/bg/shop/` must not be mistaken for it.
-- This CSS is loaded only when the plugin is active. It does not alter desktop layout, site header/theme, checkout, product records or prices.
+- The purchase CTA now uses a **warm-gold background (#eadf9b) with dark text (#202020)** so the button remains visible against the current dark Twenty Seventeen storefront. Hover uses #fff2c0. These colors apply only to the plugin buttons, not the site's theme.\n- This CSS is loaded only when the plugin is active. It does not alter the desktop product-grid layout, site header/theme, checkout, product records or prices.
 - Captured real-site mobile reference screenshots are kept locally at `C:\Users\User\Documents\mobile432Firefox390.png` (BG shop), `mobile432ProductBG.png`, `mobile432ProductEN.png`, and `mobile432CartBG.png`. These are **before activation** and do not prove the staged CSS on the public site.
 - CSS regression checks run in the standalone `test-bridge.php`, on both PHP 7.4.33 and 8.4.27, in protected server staging.
 - Visual review of the plugin-enabled public site remains a post-approval deployment QA gate.
