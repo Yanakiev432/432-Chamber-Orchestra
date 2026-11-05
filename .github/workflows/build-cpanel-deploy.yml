@@ -46,6 +46,9 @@ jobs:
       - name: Validate all built internal links and assets
         run: pnpm run --if-present links:validate
 
+      - name: Reject disallowed guest-soloist photography
+        run: pnpm run --if-present photos:validate
+
       - name: Report WordPress cutover risks when guard is present
         run: pnpm run --if-present cutover:report
 

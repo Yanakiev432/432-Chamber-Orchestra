@@ -8,7 +8,7 @@ const { section } = Astro.props as { section: Copy };
 ---
 
 <Section id={section.id} eyebrow={section.eyebrow} heading={section.heading} tone="ruled">
-  <article class="grid gap-8 border border-brand-border bg-white p-6 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+  <article class="grid gap-8 border border-brand-border bg-brand-surface p-6 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
     <figure class="border border-brand-border bg-brand-surface p-2">
       <img
         class="aspect-[4/3] w-full object-cover"

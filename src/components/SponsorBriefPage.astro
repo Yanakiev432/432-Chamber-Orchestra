@@ -41,7 +41,7 @@ const sections = isBg
     ];
 ---
 
-<section class="print-brief bg-brand-bg py-10 text-brand-text print:bg-white print:py-0">
+<section class="print-brief bg-brand-bg py-10 text-brand-text print:bg-brand-surface print:py-0">
   <div class="container max-w-4xl">
     <div class="mb-6 flex flex-wrap gap-3 print:hidden">
       <button class="inline-flex min-h-11 items-center border border-brand-primary bg-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white" type="button" onclick="window.print()">
@@ -52,7 +52,7 @@ const sections = isBg
       </a>
     </div>
 
-    <article class="bg-white p-8 shadow-sm ring-1 ring-brand-border print:p-0 print:shadow-none print:ring-0">
+    <article class="bg-brand-surface p-8 shadow-sm ring-1 ring-brand-border print:p-0 print:shadow-none print:ring-0">
       <header class="border-b border-brand-border pb-6">
         <img class="h-auto w-[210px]" src={brandAssets.headerLogo} width="210" height="37" alt="432 Chamber Orchestra" />
         <p class="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">{isBg ? "Спонсорско резюме" : "Sponsor brief"}</p>

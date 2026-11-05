@@ -4,33 +4,43 @@ import { audioArchive } from "../content/audioArchive";
 import type { siteContent } from "../content/siteContent";
 
 type HeroCopy = typeof siteContent.bg.hero;
-
 type Props = {
   hero: HeroCopy;
   lang: "bg" | "en";
 };
-
 const { hero, lang } = Astro.props;
 ---
 
-<section class="relative z-0 overflow-hidden border-b border-brand-border bg-brand-bg py-14 md:py-20">
-  <div class="container grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
-    <div>
-      <p class="mb-5 text-xs font-semibold uppercase tracking-[0.1em] text-brand-accent">{hero.eyebrow}</p>
-      <h1 class="max-w-[11ch] break-words font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.95] text-brand-primary">{hero.title}</h1>
-      <p class="mt-8 max-w-xl text-xl leading-9 text-brand-muted">{hero.text}</p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <CTAButton href={audioArchive.bandcampProfile} label={lang === "bg" ? "Слушайте и купете записи" : "Listen & buy recordings"} external />
-        <CTAButton href={lang === "bg" ? "#listening-circle-form-support_bg" : "#listening-circle-form-support_en"} label={hero.primaryCta} variant="secondary" />
-        <CTAButton href="#support" label={hero.secondaryCta} variant="text" />
+<section class="relative isolate flex min-h-[690px] items-end overflow-hidden border-b border-brand-borderWarm/30 bg-[#091F19] md:min-h-[760px]" aria-labelledby="orchestra-hero-heading">
+  <img
+    class="absolute inset-0 h-full w-full object-cover object-[52%_35%] lg:object-[50%_48%]"
+    src="/orchestra/photos/cropped-VBAL6560-1.jpg"
+    width="1800"
+    height="1080"
+    alt={lang === "bg" ? "432 Chamber Orchestra на концерт — реална архивна снимка от галерията на оркестъра" : "432 Chamber Orchestra performing live — authentic photograph from the orchestra archive"}
+    fetchpriority="high"
+    loading="eager"
+    decoding="async"
+  />
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#091F19]/95 via-[#091F19]/55 to-[#091F19]/5"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#091F19] via-[#091F19]/20 to-transparent"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute left-0 top-0 h-[3px] w-full bg-gradient-to-r from-[#C7A76D] via-[#723A42] to-transparent"></div>
+
+  <div class="container relative z-10 pb-12 pt-24 sm:pb-16 lg:pb-20">
+    <div class="max-w-[800px]">
+      <p class="mb-5 inline-flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#E4C58D] before:h-px before:w-9 before:bg-[#C7A76D] sm:text-xs">{hero.eyebrow}</p>
+      <h1 id="orchestra-hero-heading" class="max-w-[15ch] font-serif text-[clamp(3.15rem,7.1vw,7.5rem)] leading-[0.95] tracking-[-0.035em] text-[#F0E8D9] drop-shadow-[0_3px_12px_rgba(0,0,0,0.42)]">
+        {hero.title}
+      </h1>
+      <p class="mt-6 max-w-xl border-l-2 border-[#C7A76D] pl-5 text-base leading-8 text-[#F0E8D9] sm:mt-8 sm:text-xl sm:leading-9">{hero.text}</p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <CTAButton href={lang === "bg" ? "/bg/recordings/" : "/en/recordings/"} label={lang === "bg" ? "Чуйте записите" : "Hear our recordings"} />
+        <CTAButton href={lang === "bg" ? "/bg/archive/" : "/en/archive/"} label={lang === "bg" ? "Фотоархив и концерти" : "Photos & concerts"} variant="secondary" />
+        <CTAButton href={audioArchive.bandcampProfile} label="Bandcamp" variant="text" external />
       </div>
     </div>
-    <aside class="border border-brand-border border-l-4 border-l-brand-borderWarm bg-brand-surface px-6 py-8">
-      <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent before:h-px before:w-8 before:bg-brand-borderWarm">{hero.campaignLabel}</p>
-      <ul class="mt-8 space-y-5 font-serif text-2xl leading-snug">
-        {hero.positioning.map((line) => <li class="border-b border-brand-border pb-4 text-brand-primary">{line}</li>)}
-      </ul>
-      <p class="mt-8 text-base leading-8 text-brand-muted">{hero.finalLine}</p>
-    </aside>
+    <p class="mt-12 max-w-lg text-xs leading-5 tracking-[0.04em] text-[#F0E8D9]/70">
+      {lang === "bg" ? "Реален концертен кадър от архивната галерия на 432 Chamber Orchestra." : "Authentic concert photograph from the 432 Chamber Orchestra archive."}
+    </p>
   </div>
 </section>

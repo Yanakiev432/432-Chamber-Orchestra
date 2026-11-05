@@ -4,8 +4,8 @@
   <style>
     .serif{font-family:"Cormorant Garamond","Libre Baskerville",Georgia,serif}.sans{font-family:Inter,"Avenir Next","Helvetica Neue",Arial,sans-serif}.num{font-feature-settings:"tnum" 1}
   </style>
-  <text x="0" y="62" class="serif num" font-size="74" font-weight="400" fill="#f8fafc">432</text>
-  <line x1="145" y1="0" x2="145" y2="80" stroke="#a16207" stroke-width="2"/>
-  <text x="180" y="34" class="sans" font-size="18" font-weight="500" letter-spacing="9" fill="#ffffff">CHAMBER</text>
-  <text x="180" y="72" class="sans" font-size="18" font-weight="500" letter-spacing="8" fill="#ffffff">ORCHESTRA</text>
+  <text x="0" y="62" class="serif num" font-size="74" font-weight="400" fill="#F0E8D9">432</text>
+  <line x1="145" y1="0" x2="145" y2="80" stroke="#C7A76D" stroke-width="2"/>
+  <text x="180" y="34" class="sans" font-size="18" font-weight="500" letter-spacing="9" fill="#F0E8D9">CHAMBER</text>
+  <text x="180" y="72" class="sans" font-size="18" font-weight="500" letter-spacing="8" fill="#F0E8D9">ORCHESTRA</text>
 </svg>

@@ -33,7 +33,7 @@ const selectedReleases = [
     </p>
     <div class="mt-8 grid gap-4 md:grid-cols-2">
       {selectedReleases.map((release) => (
-        <article class="flex flex-col justify-between border border-brand-border bg-white p-6">
+        <article class="flex flex-col justify-between border border-brand-border bg-brand-surface p-6">
           <div>
             <p class="text-xs font-semibold uppercase tracking-[0.1em] text-brand-accent">{isBg ? "Архивен албум" : "Archive album"} · {release.year}</p>
             <h3 class="mt-3 font-serif text-xl leading-snug text-brand-primary">{release.title}</h3>
