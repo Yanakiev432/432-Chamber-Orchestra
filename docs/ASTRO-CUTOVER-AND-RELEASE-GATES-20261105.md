@@ -172,3 +172,44 @@ changing DNS or webroot of the live primary domain. No paid checkout was run.
 A fresh repository fetch confirmed the feature branch's cPanel workflow now
 uses `contents: read`, has no `git push --force` and no
 `DEPLOYPATH=/home/hzorche/public_html/` deployment target.
+
+## Private HTTPS preview access — completed 2026-11-05
+
+**Previous 403 access blocker is resolved.** The isolated hostname remains
+`https://preview.432hz-orchestra.com/`; its document root is
+`/home/hzorche/preview.432hz-orchestra.com`, not the production WordPress root.
+
+- A distinct Basic Authentication user `orchestra_preview` was created.
+  The randomly generated password is not committed or logged; an Apache
+  APR1 password hash resides outside the webroot at
+  `/home/hzorche/.htpasswds/preview.432hz-orchestra.com/passwd`.
+- A private owner-readable credential receipt was copied to Lenovo:
+  `C:\\Users\\User\\Documents\\432 Chamber Orchestra\\Backups\\WordPress-20261104\\QA-20261105\\PREVIEW-CREDENTIALS-PRIVATE-20261105.txt`.
+  NTFS inherited permissions were disabled and access restricted to the user,
+  Windows SYSTEM and Administrators. The credential source remains 0600
+  on the host; no credentials appear in the GitHub repository.
+- Apache root `.htaccess` is now readable (0644), but only HTTPS requests
+  can authenticate. Anonymous HTTPS receives **HTTP 401** with
+  `WWW-Authenticate: Basic`; **HTTP receives HTTP 403** without a
+  Basic challenge, to avoid soliciting login data over plaintext HTTP.
+  Never enter the password on an HTTP URL.
+- Before HTTPS-only hardening, authenticated HTTPS successfully served
+  the home pages, discography and robots.txt (HTTP 200) with
+  `X-Robots-Tag: noindex, nofollow, noarchive`; after hardening,
+  **25/25 anonymous HTTPS routes/assets** still return HTTP 401, and
+  **4/4 HTTP probes** return 403 with no password prompt. A separate
+  local credential-to-APR1-hash verification passed. The final authenticated
+  browser check after hardening and physical iPhone/Safari QA remains to be
+  performed; do not claim it was completed.
+- The Apache `.well-known/acme-challenge/` and `pki-validation/`
+  directories are traversable for certificate renewal. A short-lived,
+  harmless challenge token was served over HTTP **200** with no Basic
+  challenge and deleted immediately. No other static routes were opened.
+- Existing preview static files still contain 21 pages and 136 byte-for-byte
+  verified files; no WordPress files, Bandcamp payment configuration, DNS
+  root or legacy order routes were changed by this authentication operation.
+
+**Next QA:** log in over the HTTPS preview address with the credentials in
+the private Lenovo receipt; verify all pages, cards, font and asset loading,
+mobile Safari, form behavior and keyboard navigation. The preview is private
+and non-indexed and is **not a replacement for the production WordPress**.
