@@ -3,7 +3,7 @@ export const mediaArchiveCopy = {
     eyebrow: "Архив",
     heading: "Слушайте архива",
     intro: [
-      "Завръщането не започва от нищото. 432 Chamber Orchestra има архивни записи, репетиционни откъси, квартетни записи и документирани репертоарни следи.",
+      "Завръщането не започва от нищото. 432 Chamber Orchestra има архивни записи, репетиционни откъси, записи на квартет и документирани репертоарни следи.",
       "Тези материали са представени като архивно свидетелство: не като завършен актуален каталог, а като доказателство за предишна работа и мост към първия нов документиран резултат."
     ],
     soundcloudHeading: "SoundCloud слушателски архив",
@@ -98,7 +98,7 @@ export const audioArchive = {
     year: "2019",
     releaseDate: "December 11, 2019",
     description: "Wolfgang Amadeus Mozart - Sechs Canzonetti (Notturni). Arrangement for string trio and trio singers.",
-    credits: "432 Chamber Orchestra Trio; Stefani Krasteva - Sopran; Elitsa Zheleva - Soprano; Valentin Ivanov - Tenor; Ivan K. Yanakiev - Conductor.",
+    credits: "432 Chamber Orchestra Trio; Stefani Krasteva - Sopran; Elitsa Zheleva - Soprano; Valentin Ivanov - Tenor; Ivan Yanakiev - Conductor.",
     tracks: [
       { title: "Wolfgang Amadeus Mozart - Sechs Notturni - 1. Due pupille amabili", duration: "01:07" },
       { title: "Wolfgang Amadeus Mozart - Sechs Notturni - 2. Se lontan ben mio tu sei", duration: "01:29" },
