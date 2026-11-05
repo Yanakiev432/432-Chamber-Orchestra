@@ -129,7 +129,7 @@ function c432_bandcamp_product_id() {
  */
 function c432_bandcamp_single_button() {
     $id = c432_bandcamp_product_id();
-    $url = c432_bandcamp_url( $id );
+    $url = c432_bandcamp_checkout_destination( $id );
     if ( '' === $url ) {
         return;
     }
@@ -189,7 +189,7 @@ function c432_bandcamp_is_shop_context() {
  */
 function c432_bandcamp_loop_button() {
     $id = c432_bandcamp_product_id();
-    $url = c432_bandcamp_url( $id );
+    $url = c432_bandcamp_checkout_destination( $id );
     if ( '' === $url ) {
         return;
     }
@@ -293,9 +293,10 @@ function c432_bandcamp_suppress_loop_cart_button( $html, $product ) {
 }
 
 /** Additional hard gate for direct ?add-to-cart and WooCommerce AJAX requests. */
-function c432_bandcamp_reject_add_to_cart( $passed, $product_id ) {
-    $product = function_exists( 'wc_get_product' ) ? wc_get_product( absint( $product_id ) ) : null;
-    if ( c432_bandcamp_only_music_product( $product ) ) {
+function c432_bandcamp_reject_add_to_cart( $passed, $product_id, $quantity = 1, $variation_id = 0 ) {
+    $product = function_exists( 'wc_get_product' ) ? wc_get_product( absint( $variation_id ? $variation_id : $product_id ) ) : null;
+    $parent  = function_exists( 'wc_get_product' ) ? wc_get_product( absint( $product_id ) ) : null;
+    if ( c432_bandcamp_only_music_product( $product ) || c432_bandcamp_only_music_product( $parent ) ) {
         if ( function_exists( 'wc_add_notice' ) ) {
             wc_add_notice( 'Digital music is purchased exclusively on Bandcamp: https://432orchestra.bandcamp.com/music', 'notice' );
         }
@@ -369,7 +370,7 @@ add_filter( 'woocommerce_is_purchasable', 'c432_bandcamp_disable_local_purchase'
 add_filter( 'woocommerce_variation_is_purchasable', 'c432_bandcamp_disable_local_purchase', 100, 2 );
 add_filter( 'woocommerce_loop_add_to_cart_link', 'c432_bandcamp_suppress_loop_cart_button', 100, 2 );
 add_filter( 'woocommerce_get_price_html', 'c432_bandcamp_suppress_local_price', 100, 2 );
-add_filter( 'woocommerce_add_to_cart_validation', 'c432_bandcamp_reject_add_to_cart', 100, 2 );
+add_filter( 'woocommerce_add_to_cart_validation', 'c432_bandcamp_reject_add_to_cart', 100, 4 );
 add_filter( 'woocommerce_structured_data_product', 'c432_bandcamp_remove_local_schema_offer', 100, 2 );
 add_filter( 'woocommerce_available_payment_gateways', 'c432_bandcamp_disable_new_payment_gateways', 100, 1 );
 add_filter( 'wp_nav_menu_objects', 'c432_bandcamp_filter_legacy_cart_menu', 100, 1 );
