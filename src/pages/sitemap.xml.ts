@@ -25,10 +25,13 @@ const routes = [
 ];
 
 export const GET: APIRoute = ({ site }) => {
-  const siteUrl = (site ?? new URL("https://432hz-orchestra.com/")).toString().replace(/\\/$/, "");
-  const body = `<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n${routes
-    .map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`)
-    .join("\\n")}\\n</urlset>`;
+  const base = site ?? new URL("https://432hz-orchestra.com/");
+  const body = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...routes.map((route) => `  <url><loc>${new URL(route, base).toString()}</loc></url>`),
+    "</urlset>"
+  ].join("\n");
 
   return new Response(body, {
     headers: {
