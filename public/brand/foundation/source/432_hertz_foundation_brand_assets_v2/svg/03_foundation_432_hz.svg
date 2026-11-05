@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="190" viewBox="0 0 460 190" role="img" aria-label="432 Hertz Foundation logo">
+  <defs>
+    <style><![CDATA[
+      .serif { font-family: Georgia, 'Times New Roman', serif; }
+      .sans { font-family: Inter, Avenir, Helvetica, Arial, sans-serif; }
+      .teal { fill: #123c3c; }
+      .slate { fill: #334155; }
+      .charcoal { fill: #1f2937; }
+      .copper { fill: #a16207; }
+      .mist { fill: #f8fafc; }
+      .white { fill: #ffffff; }
+      .line { stroke: #cbd5e1; }
+      .copper-stroke { stroke: #a16207; }
+      .teal-stroke { stroke: #123c3c; }
+      text { dominant-baseline: alphabetic; }
+    ]]></style>
+  </defs>
+  
+  
+  <g transform="translate(56 58)">
+    <text x="0" y="34" class="sans slate" font-size="22" letter-spacing="8" font-weight="600">FOUNDATION</text>
+    <text x="0" y="108" class="serif teal" font-size="74" letter-spacing="0">432 Hz</text>
+    <line x1="2" y1="132" x2="344" y2="132" class="copper-stroke" stroke-width="2"/>
+  </g>
+
+</svg>

@@ -1,0 +1,13 @@
+---
+import Section from "./Section.astro";
+import type { siteContent } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg.vision;
+const { section } = Astro.props as { section: Copy };
+---
+
+<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading}>
+  <div class="space-y-6 text-lg leading-9 text-brand-muted">
+    {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+</Section>

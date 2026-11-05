@@ -1,0 +1,74 @@
+---
+import { brandAssets } from "../content/brandAssets";
+import type { Language } from "../content/siteContent";
+
+const {
+  title,
+  description,
+  canonicalHref,
+  alternateHref,
+  lang,
+  type = "website",
+  image = brandAssets.seal
+} = Astro.props as {
+  title: string;
+  description: string;
+  canonicalHref: string;
+  alternateHref: string;
+  lang: Language;
+  type?: string;
+  image?: string;
+};
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL?.replace(/\/$/, "");
+const toUrl = (path: string) => {
+  if (/^https?:\/\//.test(path)) return path;
+  return siteUrl ? `${siteUrl}${path.startsWith("/") ? path : `/${path}`}` : path;
+};
+
+const canonical = toUrl(canonicalHref);
+const alternate = toUrl(alternateHref);
+const ogImage = toUrl(image);
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "432 Chamber Orchestra",
+  alternateName: "Foundation 432 Hertz",
+  url: siteUrl || undefined,
+  logo: siteUrl ? toUrl(brandAssets.headerLogo) : undefined,
+  email: "info@432hz-foundation.com",
+  location: {
+    "@type": "Place",
+    name: "Sofia, Bulgaria"
+  },
+  founder: {
+    "@type": "Person",
+    name: "Ivan K. Yanakiev, PhD"
+  },
+  parentOrganization: {
+    "@type": "NGO",
+    name: "Foundation 432 Hertz",
+    identifier: "204925949",
+    legalName: "Foundation 432 Hertz",
+    nonprofitStatus: "Public-benefit non-profit legal entity"
+  }
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<link rel="alternate" hreflang="bg" href={lang === "bg" ? canonical : alternate} />
+<link rel="alternate" hreflang="en" href={lang === "en" ? canonical : alternate} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:site_name" content="432 Chamber Orchestra" />
+<meta property="og:locale" content={lang === "bg" ? "bg_BG" : "en_US"} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />

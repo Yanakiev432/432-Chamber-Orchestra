@@ -1,0 +1,20 @@
+---
+import type { Language } from "../content/siteContent";
+
+type Props = {
+  lang: Language;
+  alternateLang: Language;
+  alternateHref: string;
+};
+
+const { lang, alternateLang, alternateHref } = Astro.props;
+---
+
+<a
+  class="inline-flex min-h-10 items-center border border-brand-primary bg-brand-surface px-3 text-sm font-semibold uppercase tracking-[0.06em] text-brand-primary transition hover:bg-brand-bg"
+  href={alternateHref}
+  hreflang={alternateLang}
+  aria-label={lang === "bg" ? "Switch to English" : "Превключи на български"}
+>
+  {alternateLang.toUpperCase()}
+</a>

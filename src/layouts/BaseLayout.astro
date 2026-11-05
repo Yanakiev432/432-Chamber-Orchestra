@@ -1,0 +1,38 @@
+﻿---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Seo from "../components/Seo.astro";
+import "../styles/global.css";
+import { brandAssets } from "../content/brandAssets";
+import type { Language, siteContent } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg;
+
+type Props = {
+  content: Copy;
+  lang: Language;
+  canonicalHref?: string;
+  alternateHref?: string;
+};
+
+const { content, lang, canonicalHref, alternateHref } = Astro.props;
+const canonical = canonicalHref ?? (lang === "bg" ? "/bg/" : "/en/");
+const alternate = alternateHref ?? content.alternateHref;
+---
+
+<!doctype html>
+<html lang={content.htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <Seo title={content.meta.title} description={content.meta.description} canonicalHref={canonical} alternateHref={alternate} lang={lang} />
+    <link rel="icon" href={brandAssets.favicon} type="image/svg+xml" />
+  </head>
+  <body class="bg-brand-bg text-brand-text">
+    <Header lang={lang} nav={content.nav} alternateLang={content.alternateLang} alternateHref={alternate} />
+    <main class="bg-brand-bg">
+      <slot />
+    </main>
+    <Footer footer={content.footer} />
+  </body>
+</html>

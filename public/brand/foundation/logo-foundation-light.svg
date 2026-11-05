@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="648" height="110" viewBox="56 50 648 110" role="img" aria-labelledby="foundationLightTitle foundationLightDesc">
+  <title id="foundationLightTitle">432 Hertz Foundation</title>
+  <desc id="foundationLightDesc">Horizontal 432 Hertz Foundation identity for light backgrounds.</desc>
+  <defs>
+    <style><![CDATA[
+      .serif { font-family: Georgia, 'Times New Roman', serif; }
+      .sans { font-family: Inter, Avenir, Helvetica, Arial, sans-serif; }
+      .teal { fill: #123c3c; }
+      .slate { fill: #334155; }
+      .charcoal { fill: #1f2937; }
+      .copper-stroke { stroke: #a16207; }
+      text { dominant-baseline: alphabetic; }
+    ]]></style>
+  </defs>
+  <g transform="translate(56 56)">
+    <text x="0" y="86" class="serif teal" font-size="92" letter-spacing="-2">432</text>
+    <line x1="220" y1="18" x2="220" y2="102" class="copper-stroke" stroke-width="3"/>
+    <text x="254" y="51" class="sans slate" font-size="28" letter-spacing="11" font-weight="500">HERTZ</text>
+    <text x="254" y="91" class="sans charcoal" font-size="24" letter-spacing="8" font-weight="600">FOUNDATION</text>
+  </g>
+</svg>

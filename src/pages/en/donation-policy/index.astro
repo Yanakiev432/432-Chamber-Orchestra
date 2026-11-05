@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SimplePolicyPage from "../../../components/SimplePolicyPage.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const sections = [
+  { title: "Who receives support", body: ["Support is received by Foundation 432 Hertz, UIC/EIK 204925949."] },
+  { title: "Bank transfer", body: ["Bank transfer is currently the official payment path. The confirmed currency is EUR."] },
+  { title: "Donation certificate", body: ["The foundation may issue donation certificates after verification. This is not an automatic tax receipt and no tax deductibility claim is made on this page."], list: ["Certificate request: /en/donation-certificate/"] },
+  { title: "Project-specific support", body: ["Where possible, support should lead to a defined artistic result with scope, purpose, and a reporting path."] },
+  { title: "Reporting promise", body: ["For supported project phases, the foundation aims to provide documentation, an archive or project page where appropriate, and a short post-project report."] },
+  { title: "What is not promised", body: ["No automatic receipts, tax deductibility, card payments, legally binding reporting deadline, confirmed date, venue, roster, ticket income, vendor quote, or final programme are promised here."] },
+  { title: "Contact", body: ["Contact Foundation 432 Hertz at info@432hz-foundation.com."] }
+];
+---
+
+<BaseLayout content={{ ...siteContent.en, meta: { title: "Donation and reporting policy · 432 Chamber Orchestra", description: "How support, bank transfers, certificates, and reporting are handled by Foundation 432 Hertz." } }} lang="en" canonicalHref="/en/donation-policy/" alternateHref="/bg/donation-policy/">
+  <SimplePolicyPage lang="en" title="Donation and reporting policy" intro={["This page explains how support is handled by Foundation 432 Hertz."]} sections={sections} />
+</BaseLayout>

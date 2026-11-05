@@ -1,0 +1,62 @@
+name: Astro build and safe preview artifact (no production deployment)
+
+on:
+  push:
+    branches:
+      - feature/432-website-v1
+  pull_request:
+    branches:
+      - feature/432-website-v1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.34.0
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Build static site
+        run: pnpm run build
+
+      - name: Validate generated SEO when present
+        run: pnpm run --if-present seo:validate
+
+      - name: Validate all built internal links and assets
+        run: pnpm run --if-present links:validate
+
+      - name: Report WordPress cutover risks when guard is present
+        run: pnpm run --if-present cutover:report
+
+      - name: Preserve read-only QA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: astro-static-qa-${{ github.run_number }}
+          path: dist/
+          retention-days: 7
+
+# SAFETY: Intentionally does not publish cpanel-deploy, touch SSH/SFTP,
+# generate .cpanel.yml, or write into /home/hzorche/public_html.
+# Existing WordPress + 46 product permalinks + historic orders remain live.
+# A separate explicitly approved cutover plan is required.

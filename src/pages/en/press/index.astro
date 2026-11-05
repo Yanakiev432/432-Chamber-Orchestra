@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PressPage from "../../../components/PressPage.astro";
+import { siteContent } from "../../../content/siteContent";
+
+const content = {
+  ...siteContent.en,
+  meta: {
+    title: "Press / Media · 432 Chamber Orchestra",
+    description:
+      "Press and media resources for 432 Chamber Orchestra and Foundation 432 Hertz, including key facts, sponsor brief, archives, logos, and selected photos."
+  }
+};
+---
+
+<BaseLayout content={content} lang="en" canonicalHref="/en/press/" alternateHref="/bg/press/">
+  <PressPage lang="en" />
+</BaseLayout>

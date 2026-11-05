@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180" role="img" aria-label="432 Hertz Foundation logo">
+  <defs>
+    <style><![CDATA[
+      .serif { font-family: Georgia, 'Times New Roman', serif; }
+      .sans { font-family: Inter, Avenir, Helvetica, Arial, sans-serif; }
+      .teal { fill: #123c3c; }
+      .slate { fill: #334155; }
+      .charcoal { fill: #1f2937; }
+      .copper { fill: #a16207; }
+      .mist { fill: #f8fafc; }
+      .white { fill: #ffffff; }
+      .line { stroke: #cbd5e1; }
+      .copper-stroke { stroke: #a16207; }
+      .teal-stroke { stroke: #123c3c; }
+      text { dominant-baseline: alphabetic; }
+    ]]></style>
+  </defs>
+  
+  
+  <g transform="translate(60 54)">
+    <text x="0" y="78" class="serif teal" font-size="92" letter-spacing="-2">432</text>
+    <line x1="205" y1="9" x2="205" y2="98" class="copper-stroke" stroke-width="3"/>
+    <text x="238" y="38" class="sans slate" font-size="20" letter-spacing="6" font-weight="600">ФОНДАЦИЯ 432 ХЕРЦА</text>
+    <line x1="238" y1="56" x2="630" y2="56" class="copper-stroke" stroke-width="1.5" opacity="0.85"/>
+    <text x="238" y="91" class="sans charcoal" font-size="21" letter-spacing="5" font-weight="600">432 HERTZ FOUNDATION</text>
+  </g>
+
+</svg>

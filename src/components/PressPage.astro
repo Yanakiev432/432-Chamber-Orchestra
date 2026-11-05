@@ -1,0 +1,106 @@
+---
+import Section from "./Section.astro";
+import { brandAssets } from "../content/brandAssets";
+import { audioArchive } from "../content/audioArchive";
+import { photoArchive } from "../content/photoArchive";
+import type { Language } from "../content/siteContent";
+
+const { lang } = Astro.props as { lang: Language };
+const isBg = lang === "bg";
+const sponsorBriefHref = isBg ? "/bg/sponsor-brief/" : "/en/sponsor-brief/";
+const photoArchiveHref = isBg ? "/bg/archive/" : "/en/archive/";
+const title = isBg ? "Преса / Медии" : "Press / Media";
+const intro = isBg
+  ? "432 Chamber Orchestra е независим струнен оркестър със седалище в София, който се завръща с модел, изграден около дисциплиниран струнен звук, записи, архив, публична документация и слушателска общност, която следва работата отвъд една вечер."
+  : "432 Chamber Orchestra is an independent string orchestra based in Sofia, returning with a model built around disciplined string sound, recordings, archive, public documentation, and a listening community that follows the work beyond one evening.";
+const keyFacts = isBg
+  ? [
+      "Независим струнен оркестър със седалище в София",
+      "Юридическа и организационна структура: Фондация 432 Херца",
+      "Основател: д-р Иван К. Янакиев",
+      "Текуща кампания: The First Sound Again",
+      "Първи документиран резултат: представяне, запис/документация, когато е възможно, архивна/проектна страница и кратък отчет",
+      "По-голяма рамка на завръщането: 60+ минутна програма за цял струнен оркестър"
+    ]
+  : [
+      "Independent string orchestra based in Sofia",
+      "Legal and organisational structure: Foundation 432 Hertz",
+      "Founder: Ivan K. Yanakiev, PhD",
+      "Current campaign: The First Sound Again",
+      "First documented output: presentation, recording/documentation where possible, archive/project page, and short report",
+      "Larger return frame: 60+ minute full string-orchestra programme"
+    ];
+const resources = isBg
+  ? [
+      { label: "Спонсорско резюме", href: sponsorBriefHref },
+      { label: "SoundCloud архив", href: audioArchive.soundcloud.profileUrl },
+      { label: "Bandcamp архив", href: audioArchive.bandcampProfile },
+      { label: "Фотоархив", href: photoArchiveHref },
+      { label: "Лога", href: brandAssets.headerLogo },
+      { label: "Избрани снимки", href: photoArchive[0].src }
+    ]
+  : [
+      { label: "Sponsor brief", href: sponsorBriefHref },
+      { label: "SoundCloud archive", href: audioArchive.soundcloud.profileUrl },
+      { label: "Bandcamp archive", href: audioArchive.bandcampProfile },
+      { label: "Photo archive", href: photoArchiveHref },
+      { label: "Logos", href: brandAssets.headerLogo },
+      { label: "Selected photos", href: photoArchive[0].src }
+    ];
+const assetLinks = [
+  { label: "432 Chamber Orchestra logo", href: brandAssets.headerLogo },
+  { label: "432 Chamber Orchestra seal", href: brandAssets.seal },
+  { label: isBg ? "Лого на Фондация 432 Херца" : "Foundation 432 Hertz logo", href: brandAssets.foundation.logoLight },
+  ...photoArchive.map((photo) => ({ label: photo.caption[lang], href: photo.src }))
+];
+const usageNote = isBg
+  ? "Тези материали могат да се използват за редакционна, партньорска и спонсорска комуникация относно 432 Chamber Orchestra и Фондация 432 Херца. Не променяйте имената, логата или юридическата идентичност."
+  : "These assets may be used for editorial, sponsor, and partner communication about 432 Chamber Orchestra and Foundation 432 Hertz. Do not alter the names, logos, or legal identity.";
+---
+
+<Section id="press" eyebrow={isBg ? "Материали" : "Resources"} heading={title} intro={intro} tone="ruled">
+  <div class="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
+    <article class="border border-brand-border bg-white p-6 md:p-8">
+      <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Основни факти" : "Key facts"}</h2>
+      <ul class="mt-6 grid gap-3 text-sm leading-6 text-brand-muted">
+        {keyFacts.map((item) => <li class="border-t border-brand-border pt-3">{item}</li>)}
+      </ul>
+    </article>
+
+    <article class="border border-brand-border bg-white p-6 md:p-8">
+      <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Материали за медии" : "Media resources"}</h2>
+      <ul class="mt-6 grid gap-3 text-sm leading-6 text-brand-muted">
+        {resources.map((item) => (
+          <li class="border-t border-brand-border pt-3">
+            <a class="text-brand-primary underline-offset-4 hover:underline" href={item.href}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </article>
+  </div>
+
+  <article class="mt-8 border border-brand-border bg-white p-6 md:p-8">
+    <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Материали за изтегляне" : "Downloadable assets"}</h2>
+    <div class="mt-6 grid gap-3 text-sm leading-6 text-brand-muted md:grid-cols-2">
+      {assetLinks.map((asset) => (
+        <a class="border-t border-brand-border pt-3 text-brand-primary underline-offset-4 hover:underline" href={asset.href} download>
+          {asset.label}
+        </a>
+      ))}
+    </div>
+  </article>
+
+  <div class="mt-8 grid gap-8 lg:grid-cols-2">
+    <article class="border border-brand-border bg-white p-6 md:p-8">
+      <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Бележка за употреба" : "Usage note"}</h2>
+      <p class="mt-4 text-base leading-8 text-brand-muted">{usageNote}</p>
+    </article>
+
+    <article class="border border-brand-border bg-white p-6 md:p-8">
+      <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Контакт" : "Contact"}</h2>
+      <a class="mt-4 inline-flex text-base leading-8 text-brand-primary underline-offset-4 hover:underline" href="mailto:info@432hz-foundation.com">
+        info@432hz-foundation.com
+      </a>
+    </article>
+  </div>
+</Section>

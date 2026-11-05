@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" role="img" aria-labelledby="logoSealTitle logoSealDesc">
+  <title id="logoSealTitle">432 Chamber Orchestra Cultural Seal</title>
+  <desc id="logoSealDesc">Secondary circular identity seal for 432 Chamber Orchestra.</desc>
+  <style>
+    .serif{font-family:"Cormorant Garamond","Libre Baskerville",Georgia,serif}.sans{font-family:Inter,"Avenir Next","Helvetica Neue",Arial,sans-serif}.num{font-feature-settings:"tnum" 1}
+  </style>
+  <circle cx="210" cy="210" r="160" fill="none" stroke="#123c3c" stroke-width="3"/>
+  <circle cx="210" cy="210" r="128" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+  <path id="sealArcTop" d="M70,210 A140,140 0 0,1 350,210" fill="none"/>
+  <text class="sans" font-size="17" font-weight="500" letter-spacing="8" fill="#1f2937">
+    <textPath href="#sealArcTop" startOffset="50%" text-anchor="middle">432 CHAMBER ORCHESTRA</textPath>
+  </text>
+  <text x="210" y="225" text-anchor="middle" class="serif num" font-size="94" font-weight="400" letter-spacing="-2" fill="#123c3c">432</text>
+  <line x1="162" y1="255" x2="258" y2="255" stroke="#a16207" stroke-width="2"/>
+  <circle cx="78" cy="260" r="4" fill="#a16207"/>
+  <circle cx="342" cy="260" r="4" fill="#a16207"/>
+  <text x="210" y="312" text-anchor="middle" class="sans" font-size="17" font-weight="500" letter-spacing="10" fill="#334155">SOFIA</text>
+</svg>

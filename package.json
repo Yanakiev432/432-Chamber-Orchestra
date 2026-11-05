@@ -1,0 +1,25 @@
+{
+  "name": "432-chamber-orchestra",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "typecheck": "astro check",
+    "crm:brevo:setup": "node scripts/setup-brevo-crm.mjs",
+    "crm:sheets:templates": "node scripts/generate-crm-sheet-templates.mjs",
+    "crm:check": "node scripts/check-crm-config.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.13.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "@astrojs/check": "^0.9.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.2"
+  }
+}

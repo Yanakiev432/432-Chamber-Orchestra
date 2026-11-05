@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SimplePolicyPage from "../../../components/SimplePolicyPage.astro";
+import DonationCertificateForm from "../../../components/forms/DonationCertificateForm.astro";
+import { siteContent } from "../../../content/siteContent";
+---
+
+<BaseLayout content={{ ...siteContent.bg, meta: { title: "Заявка за сертификат за дарение · 432 Chamber Orchestra", description: "Заявете сертификат за дарение от Фондация 432 Херца след проверка на банков превод." } }} lang="bg" canonicalHref="/bg/donation-certificate/" alternateHref="/en/donation-certificate/">
+  <SimplePolicyPage
+    lang="bg"
+    title="Заявка за сертификат за дарение"
+    intro={[
+      "Фондация 432 Херца може да издаде сертификат за дарение след получаване и проверка на банковия превод. Моля, посочете име на дарителя, дата на дарението, сума и имейл за контакт.",
+      "Тази форма е заявка за сертификат, а не автоматичен данъчен документ. Издаването и счетоводните детайли се обработват от фондацията."
+    ]}
+    sections={[
+      { title: "Преди да изпратите", body: ["Използвайте тази страница след банков превод. Тук не се прави твърдение за данъчно облекчение или автоматичен правен документ."] },
+      { title: "Политика за дарения и отчетност", body: ["Моля, прегледайте политиката за дарения и отчетност за начина, по който се обработва подкрепата."], list: ["Политика за дарения: /bg/donation-policy/"] }
+    ]}
+  />
+  <div class="container -mt-8 mb-16">
+    <DonationCertificateForm lang="bg" />
+    <a class="mt-6 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent" href="/bg/donation-policy/">
+      Политика за дарения и отчетност
+    </a>
+  </div>
+</BaseLayout>

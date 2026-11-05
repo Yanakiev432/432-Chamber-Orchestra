@@ -1,0 +1,99 @@
+---
+import { foundationData, getBankRows, siteContent, type Language } from "../content/siteContent";
+import { brandAssets } from "../content/brandAssets";
+
+const { lang } = Astro.props as { lang: Language };
+const content = siteContent[lang];
+const foundation = foundationData[lang];
+const bankRows = getBankRows(lang);
+const contactEmail = "info@432hz-foundation.com";
+const isBg = lang === "bg";
+const printLabel = isBg ? "Изтеглете / отпечатайте спонсорското резюме" : "Download / print sponsor brief";
+const conversationLabel = isBg ? "Заявете разговор за партньорство" : "Request sponsor conversation";
+const sections = isBg
+  ? [
+      { title: "Кои сме ние", body: ["432 Chamber Orchestra е независим струнен оркестър с основа в София. Фондация 432 Херца е юридическата и организационната структура зад оркестъра."] },
+      { title: "Основател", body: ["д-р Иван К. Янакиев е основател на 432 Chamber Orchestra. Работата му съчетава диригентска практика, струнно-оркестрова дисциплина, изследване, документация и предишната история на оркестъра."] },
+      { title: "Защо сега", body: ["Завръщането трябва да произведе документиран артистичен резултат: работа, запис, архивна следа, отчетност и следваща оркестрова фаза."] },
+      { title: "Първият звук отново", body: ["Първата мобилизационна кампания започва със слушателска общност и сериозни разговори с компании, домакини и патрони."] },
+      { title: "Първа документирана стъпка", body: ["Първата подкрепяема фаза е компактна работна стъпка с музикантски хонорари, репетиционна работа, документация и архивна/проектна страница."] },
+      { title: "Първа програма за завръщане на целия оркестър", body: content.support.fundraising.returnProgramme.paragraphs, list: content.support.fundraising.returnProgramme.programmeItems, note: content.support.fundraising.returnProgramme.confirmationNote },
+      { title: "Цел за финансиране", body: [content.support.fundraising.fundingTarget.intro, content.support.fundraising.fundingTarget.disciplineNote], list: content.support.fundraising.fundingTarget.items.map((item) => `${item.title} — ${item.amount}. ${item.description}`) },
+      { title: content.support.fundraising.fundingTarget.breakdownHeading, body: [], list: content.support.fundraising.fundingTarget.breakdownItems },
+      { title: "Какво финансира подкрепата", body: [], list: content.support.fundraising.returnProgramme.supportItems },
+      { title: "Нива на подкрепа", body: [], list: content.support.fundraising.supportLevels.items.map((item) => `${item.title} — ${item.amount}. ${item.description}`) },
+      { title: "Отчетност", body: [content.foundation.accountability.text], list: content.foundation.accountability.items },
+      { title: "Юридическо лице и контакт", body: [`${foundation.name}; ${foundation.eikLabel}: ${foundation.eik}; ${foundation.city}; валута: EUR; администратор на данни: ${foundation.name}; контакт: ${contactEmail}.`], list: bankRows.map((row) => `${row.label}: ${row.value}`) }
+    ]
+  : [
+      { title: "Who we are", body: ["432 Chamber Orchestra is an independent string orchestra based in Sofia. Foundation 432 Hertz is the legal and organisational structure behind the orchestra."] },
+      { title: "Founder", body: ["Ivan K. Yanakiev, PhD is the founder of 432 Chamber Orchestra. His work brings together conducting, string-orchestra discipline, research, documentation, and the previous history of the orchestra."] },
+      { title: "Why now", body: ["The return should produce a documented artistic result: work, recording, archive trace, accountability, and a next orchestral phase."] },
+      { title: "The First Sound Again", body: ["The first mobilisation campaign begins with a listening community and serious conversations with companies, hosts, and patrons."] },
+      { title: "First documented step", body: ["The first supportable phase is a compact working step with musician fees, rehearsal work, documentation, and an archive/project page."] },
+      { title: "Full orchestra return programme", body: content.support.fundraising.returnProgramme.paragraphs, list: content.support.fundraising.returnProgramme.programmeItems, note: content.support.fundraising.returnProgramme.confirmationNote },
+      { title: "Funding target", body: [content.support.fundraising.fundingTarget.intro, content.support.fundraising.fundingTarget.disciplineNote], list: content.support.fundraising.fundingTarget.items.map((item) => `${item.title} — ${item.amount}. ${item.description}`) },
+      { title: content.support.fundraising.fundingTarget.breakdownHeading, body: [], list: content.support.fundraising.fundingTarget.breakdownItems },
+      { title: "What support funds", body: [], list: content.support.fundraising.returnProgramme.supportItems },
+      { title: "Support levels", body: [], list: content.support.fundraising.supportLevels.items.map((item) => `${item.title} — ${item.amount}. ${item.description}`) },
+      { title: "Reporting and accountability", body: [content.foundation.accountability.text], list: content.foundation.accountability.items },
+      { title: "Legal entity and contact", body: [`${foundation.name}; ${foundation.eikLabel}: ${foundation.eik}; ${foundation.city}; currency: EUR; data controller: ${foundation.name}; contact: ${contactEmail}.`], list: bankRows.map((row) => `${row.label}: ${row.value}`) }
+    ];
+---
+
+<section class="print-brief bg-brand-bg py-10 text-brand-text print:bg-white print:py-0">
+  <div class="container max-w-4xl">
+    <div class="mb-6 flex flex-wrap gap-3 print:hidden">
+      <button class="inline-flex min-h-11 items-center border border-brand-primary bg-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white" type="button" onclick="window.print()">
+        {printLabel}
+      </button>
+      <a class="inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary" href={`mailto:${contactEmail}`}>
+        {conversationLabel}
+      </a>
+    </div>
+
+    <article class="bg-white p-8 shadow-sm ring-1 ring-brand-border print:p-0 print:shadow-none print:ring-0">
+      <header class="border-b border-brand-border pb-6">
+        <img class="h-auto w-[210px]" src={brandAssets.headerLogo} width="210" height="37" alt="432 Chamber Orchestra" />
+        <p class="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">{isBg ? "Спонсорско резюме" : "Sponsor brief"}</p>
+        <h1 class="mt-3 font-serif text-4xl leading-tight text-brand-primary">432 Chamber Orchestra</h1>
+        <p class="mt-3 text-base leading-7 text-brand-muted">
+          {isBg ? "Първият звук отново · документ за компании, патрони и партньори" : "The First Sound Again · brief for companies, patrons, and partners"}
+        </p>
+      </header>
+
+      <div class="mt-8 grid gap-7">
+        {sections.map((section) => (
+          <section class="break-inside-avoid border-t border-brand-border pt-5">
+            <h2 class="font-serif text-2xl text-brand-primary">{section.title}</h2>
+            {section.body.map((paragraph) => <p class="mt-3 text-sm leading-7 text-brand-muted">{paragraph}</p>)}
+            {section.list && (
+              <ul class="mt-3 grid gap-2 text-sm leading-6 text-brand-muted">
+                {section.list.map((item) => <li class="border-l-2 border-brand-borderWarm pl-3">{item}</li>)}
+              </ul>
+            )}
+            {section.note && <p class="mt-3 text-sm leading-7 text-brand-muted">{section.note}</p>}
+          </section>
+        ))}
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  @media print {
+    :global(header),
+    :global(footer) {
+      display: none !important;
+    }
+
+    .print-brief {
+      font-size: 10.5pt;
+    }
+
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import Section from "./Section.astro";
+import type { siteContent } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg.contact;
+const { section } = Astro.props as { section: Copy };
+---
+
+<Section id={section.id} eyebrow={section.eyebrow} heading={section.heading}>
+  <address class="not-italic">
+    <ul class="space-y-3 text-xl leading-8">
+      {section.lines.map((line) => (
+        <li>
+          {line.includes("@") ? <a class="text-brand-primary underline decoration-brand-accent underline-offset-4 hover:text-brand-accent" href={`mailto:${line}`}>{line}</a> : line}
+        </li>
+      ))}
+    </ul>
+  </address>
+</Section>

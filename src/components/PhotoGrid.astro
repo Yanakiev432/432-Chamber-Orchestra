@@ -1,0 +1,28 @@
+---
+import type { Language } from "../content/siteContent";
+import type { PhotoArchiveItem } from "../content/photoArchive";
+
+const { photos } = Astro.props as {
+  photos: PhotoArchiveItem[];
+  lang: Language;
+};
+
+const { lang } = Astro.props as { lang: Language };
+---
+
+<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {photos.map((photo) => (
+    <figure class="border border-brand-border bg-brand-surface p-2">
+      <img
+        class="aspect-[4/3] w-full object-cover"
+        src={photo.src}
+        width={photo.width}
+        height={photo.height}
+        alt={photo.alt[lang]}
+        loading="lazy"
+        decoding="async"
+      />
+      <figcaption class="px-2 py-3 text-sm leading-6 text-brand-muted">{photo.caption[lang]}</figcaption>
+    </figure>
+  ))}
+</div>

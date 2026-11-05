@@ -1,0 +1,56 @@
+---
+import Hero from "./Hero.astro";
+import Section from "./Section.astro";
+import VisionSection from "./VisionSection.astro";
+import MissionSection from "./MissionSection.astro";
+import ListeningCommunitySection from "./ListeningCommunitySection.astro";
+import FounderSection from "./FounderSection.astro";
+import FoundationSection from "./FoundationSection.astro";
+import CampaignSection from "./CampaignSection.astro";
+import AllyWaysSection from "./AllyWaysSection.astro";
+import ArtisticIdentitySection from "./ArtisticIdentitySection.astro";
+import ProgramsSection from "./ProgramsSection.astro";
+import ArchiveSection from "./ArchiveSection.astro";
+import MediaArchiveSection from "./MediaArchiveSection.astro";
+import SupportSection from "./SupportSection.astro";
+import ContactSection from "./ContactSection.astro";
+import type { Language, siteContent } from "../content/siteContent";
+
+type Copy = typeof siteContent.bg;
+const { content, lang } = Astro.props as { content: Copy; lang: Language };
+---
+
+<Hero hero={content.hero} />
+
+<Section id={content.core.id} eyebrow={content.core.eyebrow} heading={content.core.heading}>
+  <div class="space-y-6 text-lg leading-9 text-brand-muted">
+    {content.core.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+</Section>
+
+<Section id={content.firstOutput.id} eyebrow={content.firstOutput.eyebrow} heading={content.firstOutput.heading} tone="ruled">
+  <article class="border border-brand-border border-l-4 border-l-brand-borderWarm bg-brand-surface p-6 md:p-8">
+    <div class="space-y-6 text-lg leading-9 text-brand-muted">
+      {content.firstOutput.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <ul class="mt-8 grid gap-3 text-sm leading-6 text-brand-muted sm:grid-cols-2">
+      {content.firstOutput.items.map((item) => (
+        <li class="border-t border-brand-border pt-3">{item}</li>
+      ))}
+    </ul>
+  </article>
+</Section>
+
+<VisionSection section={content.vision} />
+<MissionSection section={content.mission} />
+<ListeningCommunitySection section={content.listening} />
+<FounderSection section={content.founder} />
+<FoundationSection section={content.foundation} lang={lang} />
+<CampaignSection section={content.campaign} />
+<AllyWaysSection section={content.allyWays} />
+<ArtisticIdentitySection section={content.artisticIdentity} />
+<ProgramsSection section={content.programs} />
+<ArchiveSection section={content.archive} />
+<MediaArchiveSection lang={lang} />
+<SupportSection section={content.support} lang={lang} />
+<ContactSection section={content.contact} />

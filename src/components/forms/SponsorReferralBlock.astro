@@ -1,0 +1,11 @@
+---
+import ExternalPathwayBlock from "./ExternalPathwayBlock.astro";
+import { crmConfig, pathwayCopy } from "../../content/crmConfig";
+import type { Language } from "../../content/siteContent";
+
+const { lang } = Astro.props as { lang: Language };
+const copy = pathwayCopy[lang].sponsor;
+const url = crmConfig.tally.sponsorReferralUrl;
+---
+
+<ExternalPathwayBlock {...copy} url={url} />

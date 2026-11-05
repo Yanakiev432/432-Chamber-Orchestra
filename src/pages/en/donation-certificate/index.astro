@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SimplePolicyPage from "../../../components/SimplePolicyPage.astro";
+import DonationCertificateForm from "../../../components/forms/DonationCertificateForm.astro";
+import { siteContent } from "../../../content/siteContent";
+---
+
+<BaseLayout content={{ ...siteContent.en, meta: { title: "Donation certificate request · 432 Chamber Orchestra", description: "Request a donation certificate from Foundation 432 Hertz after bank transfer verification." } }} lang="en" canonicalHref="/en/donation-certificate/" alternateHref="/bg/donation-certificate/">
+  <SimplePolicyPage
+    lang="en"
+    title="Donation certificate request"
+    intro={[
+      "Foundation 432 Hertz can issue a donation certificate after a bank transfer is received and verified. Please provide the donor name, donation date, amount, and contact email.",
+      "This form is a certificate request, not an automatic tax receipt. Issuance and accounting details are handled by the foundation."
+    ]}
+    sections={[
+      { title: "Before you send", body: ["Use this page after making a bank transfer. No tax deductibility claim or automatic legal receipt workflow is made here."] },
+      { title: "Donation and reporting policy", body: ["Please review the donation and reporting policy for how support is handled."], list: ["Donation policy: /en/donation-policy/"] }
+    ]}
+  />
+  <div class="container -mt-8 mb-16">
+    <DonationCertificateForm lang="en" />
+    <a class="mt-6 inline-flex min-h-11 items-center border border-brand-primary px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-brand-primary transition hover:bg-brand-bg hover:text-brand-accent" href="/en/donation-policy/">
+      Donation and reporting policy
+    </a>
+  </div>
+</BaseLayout>
