@@ -9,7 +9,7 @@ function esc_url( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_S
 function esc_html( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
 function get_the_ID() { return isset( $GLOBALS['c432_id'] ) ? $GLOBALS['c432_id'] : 0; }
 function get_locale() { return 'en_US'; }
-function is_shop() { return false; }
+function is_shop() { return ! empty( $GLOBALS['c432_test_is_shop'] ); }
 function is_page( $ids ) { return in_array( $GLOBALS['c432_test_page_id'] ?? 0, (array) $ids, true ); }
 
 function pll_get_post_language( $id ) { return in_array( $id, array( 796, 807, 811, 813, 815, 817, 819, 821, 823, 904, 921, 923, 930, 935, 940, 942, 944, 946, 948, 950, 952, 955, 957 ), true ) ? 'bg' : 'en'; }
@@ -87,7 +87,12 @@ ob_start(); c432_bandcamp_loop_button(); $bg_shop_loop = ob_get_clean();
 assert_c432( false !== strpos( $bg_shop_loop, 'Купете в Bandcamp' ), 'BG shop context overrides EN product ID' );
 assert_c432( 'bg' === c432_bandcamp_view_lang( 806 ), 'BG page language wins over product language' );
 $GLOBALS['c432_test_page_id'] = 0;
-
+$GLOBALS['c432_test_is_shop'] = true;
+$GLOBALS['product'] = new C432_Test_Product( 807 ); // Mixed-language product on EN archive.
+ob_start(); c432_bandcamp_loop_button(); $en_shop_loop = ob_get_clean();
+assert_c432( false !== strpos( $en_shop_loop, 'Buy on Bandcamp' ), 'English archive context overrides BG product ID' );
+assert_c432( 'en' === c432_bandcamp_view_lang( 807 ), 'EN shop archive wins over product language' );
+$GLOBALS['c432_test_is_shop'] = false;
 
 // Mobile storefront regression: the English Woo archive and the Bulgarian
 // translated shortcode page must both collapse to one product per row.
