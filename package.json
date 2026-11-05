@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "typecheck": "astro check",
+    "seo:validate": "node scripts/validate-seo-build.mjs",
     "crm:brevo:setup": "node scripts/setup-brevo-crm.mjs",
     "crm:sheets:templates": "node scripts/generate-crm-sheet-templates.mjs",
     "crm:check": "node scripts/check-crm-config.mjs"
