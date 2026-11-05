@@ -13,11 +13,11 @@ const conversationLabel = isBg ? "Заявете разговор за парт�
 const sections = isBg
   ? [
       { title: "Кои сме ние", body: ["432 Chamber Orchestra е независим струнен оркестър с основа в София. Фондация 432 Херца е юридическата и организационната структура зад оркестъра."] },
-      { title: "Основател", body: ["д-р Иван К. Янакиев е основател на 432 Chamber Orchestra. Работата му съчетава диригентска практика, струнно-оркестрова дисциплина, изследване, документация и предишната история на оркестъра."] },
+      { title: "Основател", body: ["Иван Янакиев е основател на 432 Chamber Orchestra. Работата му съчетава диригентска практика, струнно-оркестрова дисциплина, изследване, документация и предишната история на оркестъра."] },
       { title: "Защо сега", body: ["Завръщането трябва да произведе документиран артистичен резултат: работа, запис, архивна следа, отчетност и следваща оркестрова фаза."] },
       { title: "Първият звук отново", body: ["Първата мобилизационна кампания започва със слушателска общност и сериозни разговори с компании, домакини и патрони."] },
       { title: "Първа документирана стъпка", body: ["Първата подкрепяема фаза е компактна работна стъпка с музикантски хонорари, репетиционна работа, документация и архивна/проектна страница."] },
-      { title: "Първа програма за завръщане на целия оркестър", body: content.support.fundraising.returnProgramme.paragraphs, list: content.support.fundraising.returnProgramme.programmeItems, note: content.support.fundraising.returnProgramme.confirmationNote },
+      { title: "Концерт на оркестъра", body: content.support.fundraising.returnProgramme.paragraphs, list: content.support.fundraising.returnProgramme.programmeItems, note: content.support.fundraising.returnProgramme.confirmationNote },
       { title: "Цел за финансиране", body: [content.support.fundraising.fundingTarget.intro, content.support.fundraising.fundingTarget.disciplineNote], list: content.support.fundraising.fundingTarget.items.map((item) => `${item.title} — ${item.amount}. ${item.description}`) },
       { title: content.support.fundraising.fundingTarget.breakdownHeading, body: [], list: content.support.fundraising.fundingTarget.breakdownItems },
       { title: "Какво финансира подкрепата", body: [], list: content.support.fundraising.returnProgramme.supportItems },
@@ -27,11 +27,11 @@ const sections = isBg
     ]
   : [
       { title: "Who we are", body: ["432 Chamber Orchestra is an independent string orchestra based in Sofia. Foundation 432 Hertz is the legal and organisational structure behind the orchestra."] },
-      { title: "Founder", body: ["Ivan K. Yanakiev, PhD is the founder of 432 Chamber Orchestra. His work brings together conducting, string-orchestra discipline, research, documentation, and the previous history of the orchestra."] },
+      { title: "Founder", body: ["Ivan Yanakiev is the founder of 432 Chamber Orchestra. His work brings together conducting, string-orchestra discipline, research, documentation, and the previous history of the orchestra."] },
       { title: "Why now", body: ["The return should produce a documented artistic result: work, recording, archive trace, accountability, and a next orchestral phase."] },
       { title: "The First Sound Again", body: ["The first mobilisation campaign begins with a listening community and serious conversations with companies, hosts, and patrons."] },
       { title: "First documented step", body: ["The first supportable phase is a compact working step with musician fees, rehearsal work, documentation, and an archive/project page."] },
-      { title: "Full orchestra return programme", body: content.support.fundraising.returnProgramme.paragraphs, list: content.support.fundraising.returnProgramme.programmeItems, note: content.support.fundraising.returnProgramme.confirmationNote },
+      { title: "Orchestra concert", body: content.support.fundraising.returnProgramme.paragraphs, list: content.support.fundraising.returnProgramme.programmeItems, note: content.support.fundraising.returnProgramme.confirmationNote },
       { title: "Funding target", body: [content.support.fundraising.fundingTarget.intro, content.support.fundraising.fundingTarget.disciplineNote], list: content.support.fundraising.fundingTarget.items.map((item) => `${item.title} — ${item.amount}. ${item.description}`) },
       { title: content.support.fundraising.fundingTarget.breakdownHeading, body: [], list: content.support.fundraising.fundingTarget.breakdownItems },
       { title: "What support funds", body: [], list: content.support.fundraising.returnProgramme.supportItems },
