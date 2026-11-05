@@ -6,8 +6,7 @@ import { campaignLandingContent, siteContent } from "../../../content/siteConten
 const campaign = campaignLandingContent.en;
 const content = {
   ...siteContent.en,
-  meta: campaign.meta,
-  nav: siteContent.en.nav.map((item) => ({ ...item, href: `/en/${item.href}` }))
+  meta: campaign.meta
 };
 ---
 
