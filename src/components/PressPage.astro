@@ -60,14 +60,14 @@ const usageNote = isBg
 
 <Section id="press" eyebrow={isBg ? "Материали" : "Resources"} heading={title} intro={intro} tone="ruled">
   <div class="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
-    <article class="border border-brand-border bg-white p-6 md:p-8">
+    <article class="border border-brand-border bg-brand-surface p-6 md:p-8">
       <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Основни факти" : "Key facts"}</h2>
       <ul class="mt-6 grid gap-3 text-sm leading-6 text-brand-muted">
         {keyFacts.map((item) => <li class="border-t border-brand-border pt-3">{item}</li>)}
       </ul>
     </article>
 
-    <article class="border border-brand-border bg-white p-6 md:p-8">
+    <article class="border border-brand-border bg-brand-surface p-6 md:p-8">
       <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Материали за медии" : "Media resources"}</h2>
       <ul class="mt-6 grid gap-3 text-sm leading-6 text-brand-muted">
         {resources.map((item) => (
@@ -79,7 +79,7 @@ const usageNote = isBg
     </article>
   </div>
 
-  <article class="mt-8 border border-brand-border bg-white p-6 md:p-8">
+  <article class="mt-8 border border-brand-border bg-brand-surface p-6 md:p-8">
     <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Материали за изтегляне" : "Downloadable assets"}</h2>
     <div class="mt-6 grid gap-3 text-sm leading-6 text-brand-muted md:grid-cols-2">
       {assetLinks.map((asset) => (
@@ -91,12 +91,12 @@ const usageNote = isBg
   </article>
 
   <div class="mt-8 grid gap-8 lg:grid-cols-2">
-    <article class="border border-brand-border bg-white p-6 md:p-8">
+    <article class="border border-brand-border bg-brand-surface p-6 md:p-8">
       <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Бележка за употреба" : "Usage note"}</h2>
       <p class="mt-4 text-base leading-8 text-brand-muted">{usageNote}</p>
     </article>
 
-    <article class="border border-brand-border bg-white p-6 md:p-8">
+    <article class="border border-brand-border bg-brand-surface p-6 md:p-8">
       <h2 class="font-serif text-3xl text-brand-primary">{isBg ? "Контакт" : "Contact"}</h2>
       <a class="mt-4 inline-flex text-base leading-8 text-brand-primary underline-offset-4 hover:underline" href="mailto:info@432hz-foundation.com">
         info@432hz-foundation.com

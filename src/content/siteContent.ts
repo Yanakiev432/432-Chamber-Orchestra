@@ -1,4 +1,4 @@
-﻿export type Language = "bg" | "en";
+export type Language = "bg" | "en";
 
 type NavItem = {
   label: string;
@@ -261,7 +261,7 @@ export const siteContent: Record<Language, SiteCopy> = {
     },
     nav: [
       { label: "Оркестър", href: sharedAnchors.orchestra },
-      { label: "Фондация", href: sharedAnchors.foundation },
+      { label: "Снимки", href: "/bg/archive/" },
       { label: "Артистична идентичност", href: sharedAnchors.identity },
       { label: "Програми", href: sharedAnchors.programs },
       { label: "Записи", href: "/bg/recordings/" },
@@ -273,7 +273,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Независим струнен оркестър · София",
       title: "432 Chamber Orchestra",
       text:
-        "432 Chamber Orchestra се завръща като независим струнен оркестър със сериозна артистична мисия: да изгради слушателска общност около струнен звук, който оставя следа.",
+        "На сцената, в концертната зала и в записите — независим струнен оркестър от София. Открийте музикантите, концертните фотографии и архивните ни изпълнения.",
       positioning: ["Не концерт за отчет.", "Не участие за exposure.", "Не култура като фон."],
       finalLine:
         "Жив струнен оркестър — с класическа дисциплина, камерна яснота, записи, архив и общност, която следва работата отвъд една вечер.",
@@ -284,11 +284,11 @@ export const siteContent: Record<Language, SiteCopy> = {
     core: {
       id: "orchestra",
       eyebrow: "Позициониране",
-      heading: "Артистично тяло и структура за памет",
+      heading: "Струнният оркестър, музикантите и музиката",
       paragraphs: [
-        "432 Chamber Orchestra е артистичното тяло: независим струнен оркестър, създаден около дисциплина, камерна яснота и дългосрочна работа.",
-        "Фондация 432 Херца е юридическата, организационната, финансовата и отчетната структура зад оркестъра.",
-        "Този сайт прави ясно разграничение между художествената работа и структурата, която я подкрепя, документира и съхранява."
+        "432 Chamber Orchestra е независим струнен оркестър от София с концертна история, камерни формации и архив от записи.",
+        "Реалните фотографии в този сайт показват оркестъра на сцената, работата на диригента и срещата на музикантите с публиката.",
+        "Музиката и архивът са в центъра: разгледайте концертните кадри, слушайте записите и проследете историята на състава."
       ]
     },
     firstOutput: {
@@ -712,7 +712,7 @@ export const siteContent: Record<Language, SiteCopy> = {
     },
     nav: [
       { label: "Orchestra", href: sharedAnchors.orchestra },
-      { label: "Foundation", href: sharedAnchors.foundation },
+      { label: "Photos", href: "/en/archive/" },
       { label: "Artistic Identity", href: sharedAnchors.identity },
       { label: "Programs", href: sharedAnchors.programs },
       { label: "Recordings", href: "/en/recordings/" },
@@ -724,7 +724,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Independent String Orchestra · Sofia",
       title: "432 Chamber Orchestra",
       text:
-        "432 Chamber Orchestra is returning as an independent string orchestra with a serious artistic mission: to build a listening community around string sound that leaves a trace.",
+        "On stage, in the concert hall and in our recordings — an independent string orchestra from Sofia. Discover the musicians, authentic concert photography and recordings from our archive.",
       positioning: ["Not a concert for a report.", "Not performance for exposure.", "Not culture as background."],
       finalLine:
         "A living string orchestra — with classical discipline, chamber clarity, recordings, archive, and a community that follows the work beyond one evening.",
@@ -735,11 +735,11 @@ export const siteContent: Record<Language, SiteCopy> = {
     core: {
       id: "orchestra",
       eyebrow: "Positioning",
-      heading: "Artistic body and structure for memory",
+      heading: "The string orchestra, the musicians and the music",
       paragraphs: [
-        "432 Chamber Orchestra is the artistic body: an independent string orchestra built around discipline, chamber clarity, and long-term work.",
-        "Foundation 432 Hertz is the legal, organisational, financial, and reporting structure behind the orchestra.",
-        "This site clearly distinguishes the artistic work from the structure that supports, documents, and preserves it."
+        "432 Chamber Orchestra is an independent string orchestra from Sofia, with a concert history, chamber formations and recordings in its archive.",
+        "The real photographs on this site show the orchestra on stage, its conductor at work and the musicians engaging with an audience.",
+        "Music and the archive take centre stage: browse concert photographs, listen to recordings and explore the history of the ensemble."
       ]
     },
     firstOutput: {

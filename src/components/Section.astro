@@ -10,9 +10,9 @@ type Props = {
 const { id, eyebrow, heading, intro, tone = "light" } = Astro.props;
 
 const toneClass = {
-  light: "bg-brand-bg text-brand-text",
-  ruled: "bg-brand-bg text-brand-text",
-  dark: "bg-brand-primary text-white"
+  light: "bg-[#091F19] text-brand-text",
+  ruled: "bg-[#122B22] text-brand-text",
+  dark: "bg-[#17392C] text-brand-text"
 };
 ---
 
@@ -21,7 +21,7 @@ const toneClass = {
     <div class="grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
       <header>
         {eyebrow && <p class="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">{eyebrow}</p>}
-        <h2 class={tone === "dark" ? "font-serif text-3xl leading-tight text-white md:text-5xl" : "font-serif text-3xl leading-tight text-brand-primary md:text-5xl"}>{heading}</h2>
+        <h2 class={"font-serif text-3xl leading-tight text-brand-primary md:text-5xl"}>{heading}</h2>
         {intro && <p class="mt-6 max-w-xl text-base leading-8 opacity-75">{intro}</p>}
       </header>
       <div class="min-w-0">

@@ -1,5 +1,5 @@
 export const brandAssets = {
-  headerLogo: "/brand/foundation/logo-foundation-light.svg",
+  headerLogo: "/brand/logo-footer-dark.svg",
   footerLogo: "/brand/logo-footer-dark.svg",
   seal: "/brand/logo-seal.svg",
   favicon: "/brand/favicon.svg",

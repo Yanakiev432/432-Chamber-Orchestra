@@ -1,0 +1,55 @@
+---
+import type { Language } from "../content/siteContent";
+const { lang } = Astro.props as { lang: Language };
+const bg = lang === "bg";
+const photographs = [
+  {
+    src: "/orchestra/photos/Concert-14.jpg",
+    alt: bg ? "432 Chamber Orchestra на сцена с гост-солистка" : "432 Chamber Orchestra performing on stage with a guest soloist",
+    label: bg ? "Концертен състав" : "Concert performance",
+    classes: "md:col-span-2 md:row-span-2",
+  },
+  {
+    src: "/orchestra/photos/VBAL6574.jpg",
+    alt: bg ? "Диригент и струнни музиканти по време на концерт" : "Conductor and string players performing live",
+    label: bg ? "Струнен звук на живо" : "Strings in performance",
+    classes: "",
+  },
+  {
+    src: "/orchestra/photos/Concert-21.jpg",
+    alt: bg ? "Камерен оркестър и публика по време на концерт" : "Chamber orchestra and audience at a concert",
+    label: bg ? "Сцена и публика" : "Stage and audience",
+    classes: "",
+  }
+];
+---
+
+<section id="orchestra-on-stage" class="border-b border-[#C7A76D]/25 bg-[#122B22] py-16 md:py-24" aria-labelledby="orchestra-stage-title">
+  <div class="container">
+    <div class="mb-9 flex flex-wrap items-end justify-between gap-6">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#C7A76D]">{bg ? "Оркестърът в кадър" : "The orchestra on stage"}</p>
+        <h2 id="orchestra-stage-title" class="font-serif text-4xl leading-tight text-[#F0E8D9] md:text-6xl">{bg ? "Музиката е жива." : "The music is alive."}</h2>
+        <p class="mt-4 max-w-2xl text-base leading-8 text-[#D7CEBF]">{bg ? "Това са истински фотографии от концертите ни — не илюстрации и не снимки на други състави." : "Real images from our performances — not stock photographs or photographs of other orchestras."}</p>
+      </div>
+      <a href={bg ? "/bg/archive/" : "/en/archive/"} class="inline-flex min-h-11 items-center border-b-2 border-[#C7A76D] px-1 py-2 text-sm font-semibold uppercase tracking-[0.1em] text-[#F0E8D9] transition hover:text-[#C7A76D]">{bg ? "Още концертни снимки" : "Explore the photo archive"} <span aria-hidden="true" class="ml-3">↗</span></a>
+    </div>
+    <div class="grid gap-3 md:grid-cols-4 md:grid-rows-2 md:gap-4">
+      {photographs.map((photo) => (
+        <figure class={"group relative min-h-[240px] overflow-hidden border border-[#C7A76D]/25 bg-[#091F19] md:min-h-[270px] " + photo.classes}>
+          <img
+            class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
+            src={photo.src}
+            alt={photo.alt}
+            width="1800"
+            height="1013"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#091F19]/90 via-transparent to-transparent"></div>
+          <figcaption class="absolute bottom-0 left-0 p-5 text-sm font-semibold tracking-[0.06em] text-[#F0E8D9]">{photo.label}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

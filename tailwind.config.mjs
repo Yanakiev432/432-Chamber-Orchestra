@@ -5,16 +5,17 @@ export default {
     extend: {
       colors: {
         brand: {
-          bg: "#f8fafc",
-          warm: "#ffffcc",
-          surface: "#ffffff",
-          text: "#1f2937",
-          muted: "#334155",
-          primary: "#123c3c",
-          primaryHover: "#0b2f2f",
-          accent: "#a16207",
-          border: "#cbd5e1",
-          borderWarm: "#d8c99b"
+          bg: "#091F19",
+          warm: "#F0E8D9",
+          surface: "#234531",
+          text: "#F0E8D9",
+          muted: "#D7CEBF",
+          primary: "#F0E8D9",
+          primaryHover: "#D8B989",
+          accent: "#C7A76D",
+          burgundy: "#723A42",
+          border: "#345746",
+          borderWarm: "#C7A76D"
         }
       },
       fontFamily: {

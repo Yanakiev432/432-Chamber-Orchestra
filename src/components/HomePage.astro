@@ -1,5 +1,6 @@
 ---
 import Hero from "./Hero.astro";
+import OrchestraStageSection from "./OrchestraStageSection.astro";
 import RecordingsSpotlight from "./RecordingsSpotlight.astro";
 import Section from "./Section.astro";
 import VisionSection from "./VisionSection.astro";
@@ -22,6 +23,7 @@ const { content, lang } = Astro.props as { content: Copy; lang: Language };
 ---
 
 <Hero hero={content.hero} lang={lang} />
+<OrchestraStageSection lang={lang} />
 <RecordingsSpotlight lang={lang} />
 
 <Section id={content.core.id} eyebrow={content.core.eyebrow} heading={content.core.heading}>
@@ -43,16 +45,16 @@ const { content, lang } = Astro.props as { content: Copy; lang: Language };
   </article>
 </Section>
 
+<ArtisticIdentitySection section={content.artisticIdentity} />
+<ProgramsSection section={content.programs} />
+<FounderSection section={content.founder} />
+<ArchiveSection section={content.archive} />
+<MediaArchiveSection lang={lang} />
 <VisionSection section={content.vision} />
 <MissionSection section={content.mission} />
 <ListeningCommunitySection section={content.listening} />
-<FounderSection section={content.founder} />
-<FoundationSection section={content.foundation} lang={lang} />
 <CampaignSection section={content.campaign} />
 <AllyWaysSection section={content.allyWays} />
-<ArtisticIdentitySection section={content.artisticIdentity} />
-<ProgramsSection section={content.programs} />
-<ArchiveSection section={content.archive} />
-<MediaArchiveSection lang={lang} />
 <SupportSection section={content.support} lang={lang} />
+<FoundationSection section={content.foundation} lang={lang} />
 <ContactSection section={content.contact} />
