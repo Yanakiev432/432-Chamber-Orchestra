@@ -1,0 +1,41 @@
+name: Check Bandcamp catalogue for new or changed releases
+
+on:
+  schedule:
+    - cron: "23 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bandcamp-public-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read curated catalogue
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Compare live public Bandcamp releases with curated catalogue
+        run: |
+          set -o pipefail
+          node scripts/audit-bandcamp-live.mjs --output=bandcamp-audit-result.json
+
+      - name: Preserve the read-only audit result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bandcamp-catalogue-audit
+          path: bandcamp-audit-result.json
+          if-no-files-found: ignore
+          retention-days: 14
+
+# No Bandcamp admin credentials, no writes to WordPress, Bandcamp or cPanel.
+# The audit intentionally fails on newly discovered releases for human review.
+# Scheduled runs become active only once this file is on the repository's default
+# branch and GitHub Actions is enabled.
