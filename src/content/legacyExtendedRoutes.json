@@ -1206,27 +1206,9 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-21-jpg/",
-          "title": "Concert at Studio 5 · Photograph 6",
-          "thumbnail": "/legacy-gallery/Concert-21.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-3-jpg/",
           "title": "Concert at Studio 5 · Photograph 2",
           "thumbnail": "/legacy-gallery/Concert-3.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-2-jpg/",
-          "title": "Concert at Studio 5 · Photograph 3",
-          "thumbnail": "/legacy-gallery/Concert-2.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-4-jpg/",
-          "title": "Concert at Studio 5 · Photograph 1",
-          "thumbnail": "/legacy-gallery/Concert-4.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -1866,27 +1848,9 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-1-jpg/",
-          "title": "Concert at Studio 5 · Photograph 4",
-          "thumbnail": "/legacy-gallery/Concert-1.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-2-jpg/",
-          "title": "Concert at Studio 5 · Photograph 3",
-          "thumbnail": "/legacy-gallery/Concert-2.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-3-jpg/",
           "title": "Concert at Studio 5 · Photograph 2",
           "thumbnail": "/legacy-gallery/Concert-3.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-4-jpg/",
-          "title": "Concert at Studio 5 · Photograph 1",
-          "thumbnail": "/legacy-gallery/Concert-4.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -2076,27 +2040,9 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-1-jpg/",
-          "title": "Concert at Studio 5 · Photograph 4",
-          "thumbnail": "/legacy-gallery/Concert-1.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-2-jpg/",
-          "title": "Concert at Studio 5 · Photograph 3",
-          "thumbnail": "/legacy-gallery/Concert-2.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-3-jpg/",
           "title": "Concert at Studio 5 · Photograph 2",
           "thumbnail": "/legacy-gallery/Concert-3.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-4-jpg/",
-          "title": "Concert at Studio 5 · Photograph 1",
-          "thumbnail": "/legacy-gallery/Concert-4.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -2286,27 +2232,9 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-1-jpg/",
-          "title": "Concert at Studio 5 · Photograph 4",
-          "thumbnail": "/legacy-gallery/Concert-1.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-2-jpg/",
-          "title": "Concert at Studio 5 · Photograph 3",
-          "thumbnail": "/legacy-gallery/Concert-2.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-3-jpg/",
           "title": "Concert at Studio 5 · Photograph 2",
           "thumbnail": "/legacy-gallery/Concert-3.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-4-jpg/",
-          "title": "Concert at Studio 5 · Photograph 1",
-          "thumbnail": "/legacy-gallery/Concert-4.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -2844,22 +2772,10 @@
       "archiveArticlesCount": 10,
       "listingLinks": [
         {
-          "path": "/en/blog/gmedia/concert-12-jpg/",
-          "title": "Concert at Studio 5 · Photograph 15",
-          "thumbnail": "/legacy-gallery/Concert-12.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
           "title": "Concert at Studio 5 · 13 March 2016",
           "thumbnail": null,
           "kind": "gmedia_album"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-14-jpg/",
-          "title": "Concert at Studio 5 · Photograph 13",
-          "thumbnail": "/legacy-gallery/Concert-14.jpg",
-          "kind": "gmedia_photo"
         },
         {
           "path": "/en/blog/gmedia/concert-13-jpg/",
@@ -2868,45 +2784,9 @@
           "kind": "gmedia_photo"
         },
         {
-          "path": "/en/blog/gmedia/concert-17-jpg/",
-          "title": "Concert at Studio 5 · Photograph 10",
-          "thumbnail": "/legacy-gallery/Concert-17.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-16-jpg/",
           "title": "Concert at Studio 5 · Photograph 11",
           "thumbnail": "/legacy-gallery/Concert-16.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-15-jpg/",
-          "title": "Concert at Studio 5 · Photograph 12",
-          "thumbnail": "/legacy-gallery/Concert-15.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-20-jpg/",
-          "title": "Concert at Studio 5 · Photograph 7",
-          "thumbnail": "/legacy-gallery/Concert-20.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-19-jpg/",
-          "title": "Concert at Studio 5 · Photograph 8",
-          "thumbnail": "/legacy-gallery/Concert-19.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-18-jpg/",
-          "title": "Concert at Studio 5 · Photograph 9",
-          "thumbnail": "/legacy-gallery/Concert-18.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-1-jpg/",
-          "title": "Concert at Studio 5 · Photograph 4",
-          "thumbnail": "/legacy-gallery/Concert-1.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -2982,12 +2862,6 @@
           "kind": "gmedia_photo"
         },
         {
-          "path": "/en/blog/gmedia/concert-6-jpg/",
-          "title": "Concert at Studio 5 · Photograph 22",
-          "thumbnail": "/legacy-gallery/Concert-6.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
           "title": "Concert at Studio 5 · 13 March 2016",
           "thumbnail": null,
@@ -3009,18 +2883,6 @@
           "path": "/en/blog/gmedia/concert-7-jpg/",
           "title": "Concert at Studio 5 · Photograph 21",
           "thumbnail": "/legacy-gallery/Concert-7.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-9-jpg/",
-          "title": "Concert at Studio 5 · Photograph 19",
-          "thumbnail": "/legacy-gallery/Concert-9.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-12-jpg/",
-          "title": "Concert at Studio 5 · Photograph 15",
-          "thumbnail": "/legacy-gallery/Concert-12.jpg",
           "kind": "gmedia_photo"
         },
         {
@@ -3210,12 +3072,6 @@
       "archiveArticlesCount": 10,
       "listingLinks": [
         {
-          "path": "/en/blog/gmedia/concert-12-jpg/",
-          "title": "Concert at Studio 5 · Photograph 15",
-          "thumbnail": "/legacy-gallery/Concert-12.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
           "title": "Concert at Studio 5 · 13 March 2016",
           "thumbnail": null,
@@ -3228,51 +3084,9 @@
           "kind": "gmedia_photo"
         },
         {
-          "path": "/en/blog/gmedia/concert-14-jpg/",
-          "title": "Concert at Studio 5 · Photograph 13",
-          "thumbnail": "/legacy-gallery/Concert-14.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-15-jpg/",
-          "title": "Concert at Studio 5 · Photograph 12",
-          "thumbnail": "/legacy-gallery/Concert-15.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-16-jpg/",
           "title": "Concert at Studio 5 · Photograph 11",
           "thumbnail": "/legacy-gallery/Concert-16.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-17-jpg/",
-          "title": "Concert at Studio 5 · Photograph 10",
-          "thumbnail": "/legacy-gallery/Concert-17.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-18-jpg/",
-          "title": "Concert at Studio 5 · Photograph 9",
-          "thumbnail": "/legacy-gallery/Concert-18.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-19-jpg/",
-          "title": "Concert at Studio 5 · Photograph 8",
-          "thumbnail": "/legacy-gallery/Concert-19.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-20-jpg/",
-          "title": "Concert at Studio 5 · Photograph 7",
-          "thumbnail": "/legacy-gallery/Concert-20.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-21-jpg/",
-          "title": "Concert at Studio 5 · Photograph 6",
-          "thumbnail": "/legacy-gallery/Concert-21.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -3450,12 +3264,6 @@
       "archiveArticlesCount": 10,
       "listingLinks": [
         {
-          "path": "/en/blog/gmedia/concert-12-jpg/",
-          "title": "Concert at Studio 5 · Photograph 15",
-          "thumbnail": "/legacy-gallery/Concert-12.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
           "title": "Concert at Studio 5 · 13 March 2016",
           "thumbnail": null,
@@ -3468,51 +3276,9 @@
           "kind": "gmedia_photo"
         },
         {
-          "path": "/en/blog/gmedia/concert-14-jpg/",
-          "title": "Concert at Studio 5 · Photograph 13",
-          "thumbnail": "/legacy-gallery/Concert-14.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-15-jpg/",
-          "title": "Concert at Studio 5 · Photograph 12",
-          "thumbnail": "/legacy-gallery/Concert-15.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-16-jpg/",
           "title": "Concert at Studio 5 · Photograph 11",
           "thumbnail": "/legacy-gallery/Concert-16.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-17-jpg/",
-          "title": "Concert at Studio 5 · Photograph 10",
-          "thumbnail": "/legacy-gallery/Concert-17.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-18-jpg/",
-          "title": "Concert at Studio 5 · Photograph 9",
-          "thumbnail": "/legacy-gallery/Concert-18.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-19-jpg/",
-          "title": "Concert at Studio 5 · Photograph 8",
-          "thumbnail": "/legacy-gallery/Concert-19.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-20-jpg/",
-          "title": "Concert at Studio 5 · Photograph 7",
-          "thumbnail": "/legacy-gallery/Concert-20.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-21-jpg/",
-          "title": "Concert at Studio 5 · Photograph 6",
-          "thumbnail": "/legacy-gallery/Concert-21.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -3690,12 +3456,6 @@
       "archiveArticlesCount": 10,
       "listingLinks": [
         {
-          "path": "/en/blog/gmedia/concert-12-jpg/",
-          "title": "Concert at Studio 5 · Photograph 15",
-          "thumbnail": "/legacy-gallery/Concert-12.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
           "title": "Concert at Studio 5 · 13 March 2016",
           "thumbnail": null,
@@ -3708,51 +3468,9 @@
           "kind": "gmedia_photo"
         },
         {
-          "path": "/en/blog/gmedia/concert-14-jpg/",
-          "title": "Concert at Studio 5 · Photograph 13",
-          "thumbnail": "/legacy-gallery/Concert-14.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-15-jpg/",
-          "title": "Concert at Studio 5 · Photograph 12",
-          "thumbnail": "/legacy-gallery/Concert-15.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-16-jpg/",
           "title": "Concert at Studio 5 · Photograph 11",
           "thumbnail": "/legacy-gallery/Concert-16.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-17-jpg/",
-          "title": "Concert at Studio 5 · Photograph 10",
-          "thumbnail": "/legacy-gallery/Concert-17.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-18-jpg/",
-          "title": "Concert at Studio 5 · Photograph 9",
-          "thumbnail": "/legacy-gallery/Concert-18.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-19-jpg/",
-          "title": "Concert at Studio 5 · Photograph 8",
-          "thumbnail": "/legacy-gallery/Concert-19.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-20-jpg/",
-          "title": "Concert at Studio 5 · Photograph 7",
-          "thumbnail": "/legacy-gallery/Concert-20.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-21-jpg/",
-          "title": "Concert at Studio 5 · Photograph 6",
-          "thumbnail": "/legacy-gallery/Concert-21.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -3942,27 +3660,9 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-1-jpg/",
-          "title": "Concert at Studio 5 · Photograph 4",
-          "thumbnail": "/legacy-gallery/Concert-1.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-2-jpg/",
-          "title": "Concert at Studio 5 · Photograph 3",
-          "thumbnail": "/legacy-gallery/Concert-2.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-3-jpg/",
           "title": "Concert at Studio 5 · Photograph 2",
           "thumbnail": "/legacy-gallery/Concert-3.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-4-jpg/",
-          "title": "Concert at Studio 5 · Photograph 1",
-          "thumbnail": "/legacy-gallery/Concert-4.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -4152,27 +3852,9 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-1-jpg/",
-          "title": "Concert at Studio 5 · Photograph 4",
-          "thumbnail": "/legacy-gallery/Concert-1.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-2-jpg/",
-          "title": "Concert at Studio 5 · Photograph 3",
-          "thumbnail": "/legacy-gallery/Concert-2.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-3-jpg/",
           "title": "Concert at Studio 5 · Photograph 2",
           "thumbnail": "/legacy-gallery/Concert-3.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-4-jpg/",
-          "title": "Concert at Studio 5 · Photograph 1",
-          "thumbnail": "/legacy-gallery/Concert-4.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -4362,27 +4044,9 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-1-jpg/",
-          "title": "Concert at Studio 5 · Photograph 4",
-          "thumbnail": "/legacy-gallery/Concert-1.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-2-jpg/",
-          "title": "Concert at Studio 5 · Photograph 3",
-          "thumbnail": "/legacy-gallery/Concert-2.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-3-jpg/",
           "title": "Concert at Studio 5 · Photograph 2",
           "thumbnail": "/legacy-gallery/Concert-3.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-4-jpg/",
-          "title": "Concert at Studio 5 · Photograph 1",
-          "thumbnail": "/legacy-gallery/Concert-4.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -4470,12 +4134,6 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-6-jpg/",
-          "title": "Concert at Studio 5 · Photograph 22",
-          "thumbnail": "/legacy-gallery/Concert-6.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-7-jpg/",
           "title": "Concert at Studio 5 · Photograph 21",
           "thumbnail": "/legacy-gallery/Concert-7.jpg",
@@ -4485,12 +4143,6 @@
           "path": "/en/blog/gmedia/concert-8-jpg/",
           "title": "Concert at Studio 5 · Photograph 20",
           "thumbnail": "/legacy-gallery/Concert-8.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-9-jpg/",
-          "title": "Concert at Studio 5 · Photograph 19",
-          "thumbnail": "/legacy-gallery/Concert-9.jpg",
           "kind": "gmedia_photo"
         },
         {
@@ -4596,12 +4248,6 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-6-jpg/",
-          "title": "Concert at Studio 5 · Photograph 22",
-          "thumbnail": "/legacy-gallery/Concert-6.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-7-jpg/",
           "title": "Concert at Studio 5 · Photograph 21",
           "thumbnail": "/legacy-gallery/Concert-7.jpg",
@@ -4611,12 +4257,6 @@
           "path": "/en/blog/gmedia/concert-8-jpg/",
           "title": "Concert at Studio 5 · Photograph 20",
           "thumbnail": "/legacy-gallery/Concert-8.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-9-jpg/",
-          "title": "Concert at Studio 5 · Photograph 19",
-          "thumbnail": "/legacy-gallery/Concert-9.jpg",
           "kind": "gmedia_photo"
         },
         {
@@ -4722,12 +4362,6 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-6-jpg/",
-          "title": "Concert at Studio 5 · Photograph 22",
-          "thumbnail": "/legacy-gallery/Concert-6.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-7-jpg/",
           "title": "Concert at Studio 5 · Photograph 21",
           "thumbnail": "/legacy-gallery/Concert-7.jpg",
@@ -4737,12 +4371,6 @@
           "path": "/en/blog/gmedia/concert-8-jpg/",
           "title": "Concert at Studio 5 · Photograph 20",
           "thumbnail": "/legacy-gallery/Concert-8.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-9-jpg/",
-          "title": "Concert at Studio 5 · Photograph 19",
-          "thumbnail": "/legacy-gallery/Concert-9.jpg",
           "kind": "gmedia_photo"
         },
         {
@@ -4938,12 +4566,6 @@
       "archiveArticlesCount": 10,
       "listingLinks": [
         {
-          "path": "/en/blog/gmedia/concert-12-jpg/",
-          "title": "Concert at Studio 5 · Photograph 15",
-          "thumbnail": "/legacy-gallery/Concert-12.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
           "title": "Concert at Studio 5 · 13 March 2016",
           "thumbnail": null,
@@ -4956,51 +4578,9 @@
           "kind": "gmedia_photo"
         },
         {
-          "path": "/en/blog/gmedia/concert-14-jpg/",
-          "title": "Concert at Studio 5 · Photograph 13",
-          "thumbnail": "/legacy-gallery/Concert-14.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-15-jpg/",
-          "title": "Concert at Studio 5 · Photograph 12",
-          "thumbnail": "/legacy-gallery/Concert-15.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-16-jpg/",
           "title": "Concert at Studio 5 · Photograph 11",
           "thumbnail": "/legacy-gallery/Concert-16.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-17-jpg/",
-          "title": "Concert at Studio 5 · Photograph 10",
-          "thumbnail": "/legacy-gallery/Concert-17.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-18-jpg/",
-          "title": "Concert at Studio 5 · Photograph 9",
-          "thumbnail": "/legacy-gallery/Concert-18.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-19-jpg/",
-          "title": "Concert at Studio 5 · Photograph 8",
-          "thumbnail": "/legacy-gallery/Concert-19.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-20-jpg/",
-          "title": "Concert at Studio 5 · Photograph 7",
-          "thumbnail": "/legacy-gallery/Concert-20.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-21-jpg/",
-          "title": "Concert at Studio 5 · Photograph 6",
-          "thumbnail": "/legacy-gallery/Concert-21.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -5178,12 +4758,6 @@
       "archiveArticlesCount": 10,
       "listingLinks": [
         {
-          "path": "/en/blog/gmedia/concert-12-jpg/",
-          "title": "Concert at Studio 5 · Photograph 15",
-          "thumbnail": "/legacy-gallery/Concert-12.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
           "title": "Concert at Studio 5 · 13 March 2016",
           "thumbnail": null,
@@ -5196,51 +4770,9 @@
           "kind": "gmedia_photo"
         },
         {
-          "path": "/en/blog/gmedia/concert-14-jpg/",
-          "title": "Concert at Studio 5 · Photograph 13",
-          "thumbnail": "/legacy-gallery/Concert-14.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-15-jpg/",
-          "title": "Concert at Studio 5 · Photograph 12",
-          "thumbnail": "/legacy-gallery/Concert-15.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-16-jpg/",
           "title": "Concert at Studio 5 · Photograph 11",
           "thumbnail": "/legacy-gallery/Concert-16.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-17-jpg/",
-          "title": "Concert at Studio 5 · Photograph 10",
-          "thumbnail": "/legacy-gallery/Concert-17.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-18-jpg/",
-          "title": "Concert at Studio 5 · Photograph 9",
-          "thumbnail": "/legacy-gallery/Concert-18.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-19-jpg/",
-          "title": "Concert at Studio 5 · Photograph 8",
-          "thumbnail": "/legacy-gallery/Concert-19.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-20-jpg/",
-          "title": "Concert at Studio 5 · Photograph 7",
-          "thumbnail": "/legacy-gallery/Concert-20.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-21-jpg/",
-          "title": "Concert at Studio 5 · Photograph 6",
-          "thumbnail": "/legacy-gallery/Concert-21.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -5418,12 +4950,6 @@
       "archiveArticlesCount": 10,
       "listingLinks": [
         {
-          "path": "/en/blog/gmedia/concert-12-jpg/",
-          "title": "Concert at Studio 5 · Photograph 15",
-          "thumbnail": "/legacy-gallery/Concert-12.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
           "title": "Concert at Studio 5 · 13 March 2016",
           "thumbnail": null,
@@ -5436,51 +4962,9 @@
           "kind": "gmedia_photo"
         },
         {
-          "path": "/en/blog/gmedia/concert-14-jpg/",
-          "title": "Concert at Studio 5 · Photograph 13",
-          "thumbnail": "/legacy-gallery/Concert-14.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-15-jpg/",
-          "title": "Concert at Studio 5 · Photograph 12",
-          "thumbnail": "/legacy-gallery/Concert-15.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-16-jpg/",
           "title": "Concert at Studio 5 · Photograph 11",
           "thumbnail": "/legacy-gallery/Concert-16.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-17-jpg/",
-          "title": "Concert at Studio 5 · Photograph 10",
-          "thumbnail": "/legacy-gallery/Concert-17.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-18-jpg/",
-          "title": "Concert at Studio 5 · Photograph 9",
-          "thumbnail": "/legacy-gallery/Concert-18.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-19-jpg/",
-          "title": "Concert at Studio 5 · Photograph 8",
-          "thumbnail": "/legacy-gallery/Concert-19.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-20-jpg/",
-          "title": "Concert at Studio 5 · Photograph 7",
-          "thumbnail": "/legacy-gallery/Concert-20.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-21-jpg/",
-          "title": "Concert at Studio 5 · Photograph 6",
-          "thumbnail": "/legacy-gallery/Concert-21.jpg",
           "kind": "gmedia_photo"
         }
       ],
@@ -5568,12 +5052,6 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-6-jpg/",
-          "title": "Concert at Studio 5 · Photograph 22",
-          "thumbnail": "/legacy-gallery/Concert-6.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-7-jpg/",
           "title": "Concert at Studio 5 · Photograph 21",
           "thumbnail": "/legacy-gallery/Concert-7.jpg",
@@ -5583,12 +5061,6 @@
           "path": "/en/blog/gmedia/concert-8-jpg/",
           "title": "Concert at Studio 5 · Photograph 20",
           "thumbnail": "/legacy-gallery/Concert-8.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-9-jpg/",
-          "title": "Concert at Studio 5 · Photograph 19",
-          "thumbnail": "/legacy-gallery/Concert-9.jpg",
           "kind": "gmedia_photo"
         },
         {
@@ -5694,12 +5166,6 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-6-jpg/",
-          "title": "Concert at Studio 5 · Photograph 22",
-          "thumbnail": "/legacy-gallery/Concert-6.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-7-jpg/",
           "title": "Concert at Studio 5 · Photograph 21",
           "thumbnail": "/legacy-gallery/Concert-7.jpg",
@@ -5709,12 +5175,6 @@
           "path": "/en/blog/gmedia/concert-8-jpg/",
           "title": "Concert at Studio 5 · Photograph 20",
           "thumbnail": "/legacy-gallery/Concert-8.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-9-jpg/",
-          "title": "Concert at Studio 5 · Photograph 19",
-          "thumbnail": "/legacy-gallery/Concert-9.jpg",
           "kind": "gmedia_photo"
         },
         {
@@ -5820,12 +5280,6 @@
           "kind": "gmedia_album"
         },
         {
-          "path": "/en/blog/gmedia/concert-6-jpg/",
-          "title": "Concert at Studio 5 · Photograph 22",
-          "thumbnail": "/legacy-gallery/Concert-6.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
           "path": "/en/blog/gmedia/concert-7-jpg/",
           "title": "Concert at Studio 5 · Photograph 21",
           "thumbnail": "/legacy-gallery/Concert-7.jpg",
@@ -5835,12 +5289,6 @@
           "path": "/en/blog/gmedia/concert-8-jpg/",
           "title": "Concert at Studio 5 · Photograph 20",
           "thumbnail": "/legacy-gallery/Concert-8.jpg",
-          "kind": "gmedia_photo"
-        },
-        {
-          "path": "/en/blog/gmedia/concert-9-jpg/",
-          "title": "Concert at Studio 5 · Photograph 19",
-          "thumbnail": "/legacy-gallery/Concert-9.jpg",
           "kind": "gmedia_photo"
         },
         {

@@ -8,6 +8,7 @@ const manifest=read("docs/legacy-wordpress-published-routes-20261105.json");
 const addon=read("docs/wordpress-public-events-addendum-20261106.json");
 const imported=read("src/content/legacyArchive.json").items;
 const gallery=read("src/content/legacyGallery.json");
+const studio5=read("src/content/studio5PhotoSelection.json");
 const videos=read("src/content/legacyVideos.json");
 const productAssets=read("docs/wordpress-public-media-inventory-20261106.json");
 const galleryAssets=read("docs/wordpress-gmedia-media-inventory-20261106.json");
@@ -40,7 +41,28 @@ assert.equal(productAssets.images.length,32);
 assert.equal(galleryAssets.images.length,56);
 assert.equal(productAssets.failures.length,0);
 assert.equal(galleryAssets.errors.length,0);
-for(const a of [...productAssets.images,...galleryAssets.images]){
+const studio5Album=gallery.albums.find(a=>a.id===studio5.albumId);
+assert.ok(studio5Album);
+assert.equal(studio5Album.images.length,23);
+assert.deepEqual(studio5.keptPositions,[2,5,11,14,16,17,18,20,21,23]);
+const approvedStudio5=studio5.keptPositions.map((position,index)=>{
+ const photo=studio5Album.images[position-1];
+ assert.equal(photo.filename,studio5.keptFilenames[index],"Studio 5 source order changed at "+position);
+ return photo;
+});
+const approvedNames=new Set(approvedStudio5.map(x=>x.filename));
+const rejectedStudio5=studio5Album.images.filter(x=>!approvedNames.has(x.filename));
+assert.equal(rejectedStudio5.length,13);
+const rejectedNames=new Set(rejectedStudio5.map(x=>x.filename));
+for(const sourcePhoto of galleryAssets.images){
+ const path=resolve("public/legacy-gallery",sourcePhoto.filename);
+ assert.ok(existsSync(path),"Original photograph must remain in source backup: "+sourcePhoto.filename);
+ const bytes=readFileSync(path);
+ assert.equal(createHash("sha256").update(bytes).digest("hex"),sourcePhoto.sha256,"Source photograph differs: "+sourcePhoto.filename);
+}
+const visibleGalleryAssets=galleryAssets.images.filter(x=>!rejectedNames.has(x.filename));
+assert.equal(visibleGalleryAssets.length,43);
+for(const a of [...productAssets.images,...visibleGalleryAssets]){
  const assetPath = a.local ?? ("/legacy-gallery/" + a.filename);
  const file=join(root,assetPath.slice(1));
  assert.ok(existsSync(file),"Missing imported media "+a.local);
@@ -75,8 +97,9 @@ for (const file of allPages) {
     "Technical or withdrawn wording is visible to concert audiences: "+file);
 }
 const gmedia = read("src/content/legacyGmediaRoutes.json");
-assert.equal(gmedia.items.length,64,"Expected exactly 64 original Gmedia routes");
-assert.equal(new Set(gmedia.items.map(x=>x.path.toLowerCase())).size,64);
+assert.equal(gmedia.items.length,51,"Expected exactly 51 public Gmedia routes after Studio 5 curation");
+assert.equal(gmedia.items.filter(x=>x.kind==="gmedia_photo").length,43);
+assert.equal(new Set(gmedia.items.map(x=>x.path.toLowerCase())).size,51);
 assert.ok(gmedia.items.every(x=>!imported.some(i=>i.path.toLowerCase()===x.path.toLowerCase())), "Overlapping Gmedia and historical WordPress routes");
 for (const item of gmedia.items) {
  const file = join(root,item.path.slice(1),"index.html");
@@ -116,7 +139,24 @@ for(const item of extended.items){
  assert.ok(html.includes(item.originalUrl),"Original attribution missing: "+item.path);
  if(item.listingLinks.length) assert.ok(item.listingLinks.some(x=>html.includes(x.path)),"Archive list content missing: "+item.path);
 }
-assert.equal(allPages.length,316,"Expected 21 curated, 144 legacy, 64 Gmedia, 26 taxonomy and 61 collection pages");
+for(const photo of rejectedStudio5){
+ assert.ok(!existsSync(join(root,"legacy-gallery",photo.filename)),"Rejected photograph remains public: "+photo.filename);
+ const slug=photo.filename.toLowerCase().replace(/\.jpg$/,"-jpg");
+ assert.ok(!existsSync(join(root,"en","blog","gmedia",slug,"index.html")),"Rejected single-photo page remains public: "+slug);
+ assert.ok(!gmedia.items.some(x=>x.mediaSrc===photo.src));
+ for(const page of allPages){
+  const html=readFileSync(page,"utf8");
+  assert.ok(!html.includes(photo.src),"Rejected Studio 5 image referenced by page: "+page);
+ }
+}
+const selectedAlbumPage=readFileSync(join(root,"en/blog/gmedia-album/concert-on-23-03-2016/index.html"),"utf8");
+let lastIndex=-1;
+for(const photo of approvedStudio5){
+ const index=selectedAlbumPage.indexOf(photo.src);
+ assert.ok(index>lastIndex,"Studio 5 photograph missing or out of approved order: "+photo.filename);
+ lastIndex=index;
+}
+assert.equal(allPages.length,303,"Expected 21 curated, 144 legacy, 51 Gmedia, 26 taxonomy and 61 collection pages");
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],
   ["en", "/en/about/432-chamber-orchestra/", "History"]
@@ -132,7 +172,7 @@ for (const [lang, path, label] of [
 
 console.log(JSON.stringify({gate:"FULL_LEGACY_PUBLIC_ROUTE_PARITY_PASS",historicalRoutesVerified:hit,
   allStaticPages:allPages.length,sourcePosts:source.posts.length,archivePages:imported.length,
-  originalGalleryImages:galleryAssets.images.length,productImages:productAssets.images.length,
+  originalGalleryImages:galleryAssets.images.length,publicGalleryImages:visibleGalleryAssets.length,studio5ApprovedPositions:studio5.keptPositions,productImages:productAssets.images.length,
   originalVideoReferences:videos.items.length,historicAudioEmbeds:audioEmbeds.length,bandcampMappedProducts:46,
   sensitiveWordPressFunctionalRoutesRetainedExternally:9,
   caveat:"Static parity does not replace WordPress order and account backend; production cutover remains blocked"},null,2));

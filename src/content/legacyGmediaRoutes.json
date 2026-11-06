@@ -1,10 +1,12 @@
 {
-  "version": 1,
+  "version": 2,
   "origin": "https://432hz-orchestra.com",
   "galleryOriginalImageCount": 56,
+  "studio5PublishedImages": 10,
+  "studio5ExcludedImages": 13,
   "groups": {
     "gmedia_index": 2,
-    "gmedia_photo": 56,
+    "gmedia_photo": 43,
     "gmedia_album_index": 2,
     "gmedia_album": 3,
     "gmedia_gallery": 1
@@ -38,32 +40,6 @@
       "id": null,
       "kind": "gmedia_photo",
       "language": "en",
-      "path": "/en/blog/gmedia/concert-4-jpg/",
-      "title": "Concert at Studio 5 · Photograph 1",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-4-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-4.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-4.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
       "path": "/en/blog/gmedia/concert-3-jpg/",
       "title": "Concert at Studio 5 · Photograph 2",
       "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-3-jpg/",
@@ -85,58 +61,6 @@
       "albumId": 1,
       "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
       "mediaSrc": "/legacy-gallery/Concert-3.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-2-jpg/",
-      "title": "Concert at Studio 5 · Photograph 3",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-2-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-2.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-2.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-1-jpg/",
-      "title": "Concert at Studio 5 · Photograph 4",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-1-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-1.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-1.jpg"
     },
     {
       "id": null,
@@ -168,136 +92,6 @@
       "id": null,
       "kind": "gmedia_photo",
       "language": "en",
-      "path": "/en/blog/gmedia/concert-21-jpg/",
-      "title": "Concert at Studio 5 · Photograph 6",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-21-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-21.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-21.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-18-jpg/",
-      "title": "Concert at Studio 5 · Photograph 9",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-18-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-18.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-18.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-19-jpg/",
-      "title": "Concert at Studio 5 · Photograph 8",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-19-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-19.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-19.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-20-jpg/",
-      "title": "Concert at Studio 5 · Photograph 7",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-20-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-20.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-20.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-17-jpg/",
-      "title": "Concert at Studio 5 · Photograph 10",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-17-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-17.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-17.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
       "path": "/en/blog/gmedia/concert-16-jpg/",
       "title": "Concert at Studio 5 · Photograph 11",
       "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-16-jpg/",
@@ -319,58 +113,6 @@
       "albumId": 1,
       "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
       "mediaSrc": "/legacy-gallery/Concert-16.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-15-jpg/",
-      "title": "Concert at Studio 5 · Photograph 12",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-15-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-15.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-15.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-14-jpg/",
-      "title": "Concert at Studio 5 · Photograph 13",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-14-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-14.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-14.jpg"
     },
     {
       "id": null,
@@ -480,58 +222,6 @@
       "id": null,
       "kind": "gmedia_photo",
       "language": "en",
-      "path": "/en/blog/gmedia/concert-12-jpg/",
-      "title": "Concert at Studio 5 · Photograph 15",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-12-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-12.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-12.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-9-jpg/",
-      "title": "Concert at Studio 5 · Photograph 19",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-9-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-9.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-9.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
       "path": "/en/blog/gmedia/concert-8-jpg/",
       "title": "Concert at Studio 5 · Photograph 20",
       "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-8-jpg/",
@@ -605,32 +295,6 @@
       "albumId": 1,
       "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
       "mediaSrc": "/legacy-gallery/Concert-5.jpg"
-    },
-    {
-      "id": null,
-      "kind": "gmedia_photo",
-      "language": "en",
-      "path": "/en/blog/gmedia/concert-6-jpg/",
-      "title": "Concert at Studio 5 · Photograph 22",
-      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-6-jpg/",
-      "date": null,
-      "eventDate": null,
-      "paragraphs": [
-        "Photograph from the concert at Studio 5, Sofia."
-      ],
-      "sourceLinks": [],
-      "thumbnail": null,
-      "relatedIds": [],
-      "inlineImages": [
-        "/legacy-gallery/Concert-6.jpg"
-      ],
-      "audioEmbeds": [],
-      "bandcampUrl": null,
-      "dynamicWordPress": false,
-      "alternatePath": null,
-      "albumId": 1,
-      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
-      "mediaSrc": "/legacy-gallery/Concert-6.jpg"
     },
     {
       "id": null,

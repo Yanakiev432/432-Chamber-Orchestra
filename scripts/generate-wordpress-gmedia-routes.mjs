@@ -7,6 +7,22 @@ import {canonicalPitch} from "./concert-pitch-standard.mjs";
 const root=resolve(".");
 const sitemap=JSON.parse(readFileSync(resolve(root,"docs/wordpress-all-sitemaps-audit-20261106.json"),"utf8"));
 const gallery=JSON.parse(readFileSync(resolve(root,"src/content/legacyGallery.json"),"utf8"));
+const studio5=JSON.parse(readFileSync(resolve(root,"src/content/studio5PhotoSelection.json"),"utf8"));
+const studio5Album=gallery.albums.find(a=>a.id===studio5.albumId);
+if(!studio5Album || studio5Album.images.length!==23 || studio5.sourceImageCount!==23)
+ throw Error("STUDIO5_SOURCE_ORDER_CHANGED");
+if(JSON.stringify(studio5.keptPositions)!==JSON.stringify([2,5,11,14,16,17,18,20,21,23]))
+ throw Error("STUDIO5_APPROVED_PHOTO_POSITIONS_CHANGED");
+const selectedStudio5=studio5.keptPositions.map((position,index)=>{
+ const photo=studio5Album.images[position-1];
+ if(!photo || photo.filename!==studio5.keptFilenames[index])
+  throw Error("STUDIO5_PHOTO_FILENAME_POSITION_DRIFT "+position);
+ return photo;
+});
+const studio5SelectedIds=new Set(selectedStudio5.map(photo=>photo.id));
+const studio5RejectedImages=studio5Album.images.filter(image=>!studio5SelectedIds.has(image.id));
+if(studio5RejectedImages.length!==13 || studio5SelectedIds.size!==10)
+ throw Error("STUDIO5_CURATION_INVARIANT_FAILED");
 const existing=JSON.parse(readFileSync(resolve(root,"src/content/legacyArchive.json"),"utf8")).items;
 const byImageSlug=new Map();
 const albumForImage=new Map();
@@ -21,7 +37,7 @@ for(const image of images){
 }
 if(byImageSlug.size!==56)throw Error("EXPECTED_56_PHOTOGRAPHS");
 const albumsBySlug=new Map([
-  ["concert-on-23-03-2016",{id:1,title:"Concert at Studio 5 · 13 March 2016",bg:"Концерт в Студио 5 · 13 март 2016 г.",imageCount:23}],
+  ["concert-on-23-03-2016",{id:1,title:"Concert at Studio 5 · 13 March 2016",bg:"Концерт в Студио 5 · 13 март 2016 г.",imageCount:10}],
   ["contemporary-bulgaran-composers-in-432-hz",{id:6,title:"Contemporary Bulgarian Composers in 432 Hz",bg:"Български съвременници в 432 Hz",imageCount:32}],
   ["concert-148-years-bulgarian-academy-of-sciences",{id:null,title:"Concert marking 148 years of the Bulgarian Academy of Sciences",bg:"Концерт по случай 148 години БАН",imageCount:0}]
 ]);
@@ -70,6 +86,7 @@ for(const [kind,urls] of sourcePairs){
     const image=byImageSlug.get(slug);
     if(!image)throw Error("IMAGE_WITHOUT_SOURCE_FILE "+slug);
     const albumId=albumForImage.get(image.id)||null;
+    if(albumId===studio5.albumId && !studio5SelectedIds.has(image.id))continue;
     const albumPath=albumId===1?"/en/blog/gmedia-album/concert-on-23-03-2016/":
       albumId===6?"/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/":null;
     const album=gallery.albums.find(a=>a.id===albumId);
@@ -107,14 +124,17 @@ for(const [kind,urls] of sourcePairs){
   }
  }
 }
-if(items.length!==64 || originalURLs.length!==64)throw Error("PUBLIC_GMEDIA_64_INVARIANT "+items.length);
+if(items.length!==51 || originalURLs.length!==64)throw Error("PUBLIC_GMEDIA_CURATED_51_INVARIANT "+items.length);
 const groups=Object.fromEntries([...new Set(items.map(x=>x.kind))].map(k=>[k,items.filter(x=>x.kind===k).length]));
-if(groups.gmedia_photo!==56 || groups.gmedia_index!==2 || groups.gmedia_album!==3 ||
+if(groups.gmedia_photo!==43 || groups.gmedia_index!==2 || groups.gmedia_album!==3 ||
  groups.gmedia_album_index!==2 || groups.gmedia_gallery!==1)throw Error("UNEXPECTED_GMEDIA_GROUP_COUNTS "+JSON.stringify(groups));
 for(const row of items.filter(x=>x.kind==="gmedia_photo")){
  if(!row.mediaSrc.startsWith("/legacy-gallery/"))throw Error("PHOTO_NOT_LOCAL");
 }
-const result={version:1,origin:sitemap.origin,galleryOriginalImageCount:56,groups,items};
+for(const denied of studio5RejectedImages){
+ if(items.some(item=>item.mediaSrc===denied.src))throw Error("REJECTED_STUDIO5_PHOTO_PUBLISHED "+denied.filename);
+}
+const result={version:2,origin:sitemap.origin,galleryOriginalImageCount:56,studio5PublishedImages:10,studio5ExcludedImages:13,groups,items};
 writeFileSync(resolve(root,"src/content/legacyGmediaRoutes.json"),JSON.stringify(result,null,2)+"\n","utf8");
-console.log(JSON.stringify({gate:"GMEDIA_64_PUBLIC_ROUTES_MIGRATED",total:items.length,groups,
-  originalGalleryImages:56, populatedAlbums:2, zeroPhotoAlbums:1},null,2));
+console.log(JSON.stringify({gate:"GMEDIA_51_CURATED_PUBLIC_ROUTES",total:items.length,groups,
+  originalGalleryImages:56, studio5VisibleImages:10,studio5ExcludedImages:13,populatedAlbums:2,zeroPhotoAlbums:1},null,2));

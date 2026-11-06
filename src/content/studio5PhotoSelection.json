@@ -1,0 +1,29 @@
+{
+  "albumId": 1,
+  "sourceImageCount": 23,
+  "order": "row-major, left-to-right; positions start at 1",
+  "keptPositions": [
+    2,
+    5,
+    11,
+    14,
+    16,
+    17,
+    18,
+    20,
+    21,
+    23
+  ],
+  "keptFilenames": [
+    "Concert-3.jpg",
+    "Concert-22.jpg",
+    "Concert-16.jpg",
+    "Concert-13.jpg",
+    "Concert-11.jpg",
+    "Concert-10CYMK.jpg",
+    "Concert-10.jpg",
+    "Concert-8.jpg",
+    "Concert-7.jpg",
+    "Concert-5.jpg"
+  ]
+}

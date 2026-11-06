@@ -83,7 +83,7 @@ const pages=items.filter(x=>x.archivePage>1);
 const containedPhotos=items.reduce((acc,x)=>acc+x.listingLinks.filter(y=>y.kind==="gmedia_photo").length,0);
 const containedProducts=items.reduce((acc,x)=>acc+x.listingLinks.filter(y=>y.kind==="product").length,0);
 if(pages.length!==45)throw Error("PAGINATION_45_CHANGED "+pages.length);
-if(containedPhotos<300 || containedProducts<40)throw Error("COLLECTION_CONTENT_INCOMPLETE "+JSON.stringify({containedPhotos,containedProducts}));
+if(containedPhotos!==284 || containedProducts!==89)throw Error("STUDIO5_CURATED_COLLECTION_COUNTS_CHANGED "+JSON.stringify({containedPhotos,containedProducts}));
 const result={version:1,origin:evidence.origin,sourceVerification:"63 public routes HTTP200; restricted WordPress account workflow and public attachment handled separately",items};
 writeFileSync(resolve("src/content/legacyExtendedRoutes.json"),JSON.stringify(result,null,2)+"\n","utf8");
 console.log(JSON.stringify({gate:"VERIFIED_61_WORDPRESS_PUBLIC_ARCHIVES_IMPORTED",routes:items.length,

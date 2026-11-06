@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/render-concert-pitch-superscript.mjs",
+    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs",
     "pitch:validate": "node scripts/validate-concert-pitch.mjs",
     "preview": "astro preview",
     "typecheck": "astro check",
