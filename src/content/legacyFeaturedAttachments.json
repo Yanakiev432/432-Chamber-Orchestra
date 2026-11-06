@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "origin": "https://432hz-orchestra.com",
+  "mediaOrigin": "public legacy WordPress attachments (not paid WooCommerce)",
+  "items": [
+    {
+      "id": 254,
+      "kind": "audio_attachment",
+      "language": "en",
+      "path": "/en/about/432-hz-concert-pitch/01-liszt-liebestraume-440et/",
+      "title": "Franz Liszt — Liebesträume · a¹ = 440 Hz (ET)",
+      "originalUrl": "https://432hz-orchestra.com/en/about/432-hz-concert-pitch/01-liszt-liebestraume-440et/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Historic audio recording of Liebesträume, labelled a¹ = 440 Hz (ET)."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "mediaSrc": "/legacy-samples/liszt-liebestraume-440-et.wav",
+      "mediaMime": "audio/wav",
+      "mediaSha256": "82c6a5f48a4d1980efeecd980ce0409f555f7ba1106ba3e4d6bcba977d5e1aa2",
+      "mediaBytes": 39366700,
+      "parentPath": "/en/about/432-hz-concert-pitch/"
+    },
+    {
+      "id": 264,
+      "kind": "audio_attachment",
+      "language": "en",
+      "path": "/en/homepage/liebestraume-3/",
+      "title": "Franz Liszt — Liebesträume · a¹ = 432 Hz (OFT)",
+      "originalUrl": "https://432hz-orchestra.com/en/homepage/liebestraume-3/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Historic audio recording of Liebesträume, labelled a¹ = 432 Hz (OFT)."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "mediaSrc": "/legacy-samples/liszt-liebestraume-432-oft.mp3",
+      "mediaMime": "audio/mpeg",
+      "mediaSha256": "c28722b4c9168e7c0a80dd7b2acbf43626ed0707ea23c5463f2dda8d3c26b97c",
+      "mediaBytes": 8918969,
+      "parentPath": "/en/about/432-hz-concert-pitch/"
+    },
+    {
+      "id": 263,
+      "kind": "audio_attachment",
+      "language": "en",
+      "path": "/en/homepage/liebestraume-2/",
+      "title": "Franz Liszt — Liebesträume · a¹ = 432 Hz (ET)",
+      "originalUrl": "https://432hz-orchestra.com/en/homepage/liebestraume-2/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Historic audio recording of Liebesträume, labelled a¹ = 432 Hz (ET)."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "mediaSrc": "/legacy-samples/liszt-liebestraume-432-et.mp3",
+      "mediaMime": "audio/mpeg",
+      "mediaSha256": "b6c896c4b1d385e09e0f3a3d9a1b1dfd63b7b410596bb4726673507945b7323b",
+      "mediaBytes": 8918969,
+      "parentPath": "/en/about/432-hz-concert-pitch/"
+    },
+    {
+      "id": 262,
+      "kind": "audio_attachment",
+      "language": "en",
+      "path": "/en/homepage/liebestraume/",
+      "title": "Franz Liszt — Liebesträume · a¹ = 440 Hz (ET)",
+      "originalUrl": "https://432hz-orchestra.com/en/homepage/liebestraume/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Historic audio recording of Liebesträume, labelled a¹ = 440 Hz (ET)."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "mediaSrc": "/legacy-samples/liszt-liebestraume-440-et.mp3",
+      "mediaMime": "audio/mpeg",
+      "mediaSha256": "7466734ab5d05d4cb9fc667472c726d426761930a4c461858fa09d7d4b549824",
+      "mediaBytes": 8918969,
+      "parentPath": "/en/about/432-hz-concert-pitch/"
+    },
+    {
+      "id": 319,
+      "kind": "image_attachment",
+      "language": "bg",
+      "path": "/bg/event/концерт-на-квартет-от-камерен-оркестъ/афиш-чайната-fw-2/",
+      "title": "Афиш — концерт на квартет от Камерен оркестър 432",
+      "originalUrl": "https://432hz-orchestra.com/bg/event/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-%d0%be%d1%82-%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a/%d0%b0%d1%84%d0%b8%d1%88-%d1%87%d0%b0%d0%b9%d0%bd%d0%b0%d1%82%d0%b0-fw-2/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Афиш на квартетния концерт на Камерен оркестър 432."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-media/wp-event-fw.png"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "mediaSrc": "/legacy-media/wp-event-fw.png",
+      "mediaMime": "image/png",
+      "mediaSha256": "8378bd754641ba703be1be6e8769cb67ade2a1549a88ca3efde06dcf37b92beb",
+      "mediaBytes": 69078,
+      "parentPath": "/bg/event/концерт-на-квартет-от-камерен-оркестъ/"
+    },
+    {
+      "id": 404,
+      "kind": "image_attachment",
+      "language": "en",
+      "path": "/en/homepage/9629673-orig_2_orig1/",
+      "title": "Archive graphic",
+      "originalUrl": "https://432hz-orchestra.com/en/homepage/9629673-orig_2_orig1/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Graphic preserved from the orchestra's original homepage."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-media/wp-homepage-9629673.png"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "mediaSrc": "/legacy-media/wp-homepage-9629673.png",
+      "mediaMime": "image/png",
+      "mediaSha256": "5c9072361a280441a2c050a3136c46b8b1ac6f1b1c47419edb86d0e935474c04",
+      "mediaBytes": 7543,
+      "parentPath": "/en/"
+    }
+  ]
+}

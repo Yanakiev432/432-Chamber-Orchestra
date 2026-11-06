@@ -1,0 +1,31 @@
+---
+import type { Language } from "../content/siteContent";
+
+type Recording = {
+  title: string;
+  path: string;
+  mediaSrc: string;
+  mediaMime: string;
+};
+const { lang, items, heading = true } = Astro.props as {
+  lang: Language;
+  items: Recording[];
+  heading?: boolean;
+};
+const bg = lang === "bg";
+---
+<section aria-label={bg ? "Сравнение на концертни строеве" : "Concert pitch comparison"} class="space-y-6 border-t border-[#C7A76D]/25 pt-8">
+  {heading && <h2 class="font-serif text-2xl text-[#F0E8D9]">{bg ? "Сравнение на концертни строеве" : "Concert pitch comparison"}</h2>}
+  <div class="space-y-4">
+    {items.map((item) => (
+      <article class="border border-[#C7A76D]/25 bg-[#122B22] p-5">
+        <h3 class="mb-4 font-serif text-lg text-[#F0E8D9]">{item.title}</h3>
+        <audio class="w-full" controls preload="none">
+          <source src={item.mediaSrc} type={item.mediaMime} />
+          {bg ? "Браузърът не поддържа възпроизвеждането на този запис." : "Your browser does not support this audio recording."}
+        </audio>
+        {heading && <a class="mt-3 inline-block text-sm text-[#C7A76D] underline underline-offset-4" href={item.path}>{bg ? "Към записа" : "Recording details"}</a>}
+      </article>
+    ))}
+  </div>
+</section>

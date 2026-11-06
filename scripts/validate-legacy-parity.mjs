@@ -156,7 +156,34 @@ for(const photo of approvedStudio5){
  assert.ok(index>lastIndex,"Studio 5 photograph missing or out of approved order: "+photo.filename);
  lastIndex=index;
 }
-assert.equal(allPages.length,303,"Expected 21 curated, 144 legacy, 51 Gmedia, 26 taxonomy and 61 collection pages");
+const attachments = read("src/content/legacyFeaturedAttachments.json");
+assert.equal(attachments.items.length,6,"Expected six public attachment URLs from the original XML sitemap");
+assert.equal(new Set(attachments.items.map(x=>x.path.toLowerCase())).size,6);
+assert.equal(attachments.items.filter(x=>x.kind==="audio_attachment").length,4);
+assert.equal(attachments.items.filter(x=>x.kind==="image_attachment").length,2);
+const attachmentSitemap=read("docs/wordpress-all-sitemaps-audit-20261106.json").sitemaps.attachment.urls;
+assert.deepEqual(attachments.items.map(x=>x.originalUrl),attachmentSitemap);
+for(const item of attachments.items){
+ const file=join(root,item.path.slice(1),"index.html");
+ assert.ok(existsSync(file),"Legacy media page missing: "+item.path);
+ const html=readFileSync(file,"utf8");
+ assert.ok(html.includes(item.originalUrl),"Provenance not retained: "+item.path);
+ assert.ok(html.includes(item.mediaSrc),"Media file not linked: "+item.path);
+ assert.ok(html.includes(item.parentPath),"Context page not linked: "+item.path);
+ assert.ok(existsSync(join(root,item.parentPath.slice(1),"index.html")),"Media parent page missing: "+item.path);
+ const media=join(root,item.mediaSrc.slice(1));
+ assert.ok(existsSync(media),"Media file absent: "+item.mediaSrc);
+ const b=readFileSync(media);
+ assert.equal(b.length,item.mediaBytes,"Wrong public sample length: "+item.mediaSrc);
+ assert.equal(createHash("sha256").update(b).digest("hex"),item.mediaSha256,"Wrong public sample SHA: "+item.mediaSrc);
+}
+const comparison=readFileSync(join(root,"en/about/432-hz-concert-pitch/index.html"),"utf8");
+for(const item of attachments.items.filter(x=>x.mediaMime==="audio/mpeg")){
+ assert.ok(comparison.includes(item.mediaSrc),"Missing historical comparison sample: "+item.mediaSrc);
+}
+const posterPage=readFileSync(join(root,"bg/event/концерт-на-квартет-от-камерен-оркестъ/index.html"),"utf8");
+assert.ok(posterPage.includes("/bg/event/концерт-на-квартет-от-камерен-оркестъ/афиш-чайната-fw-2/"),"Poster must link to concert");
+assert.equal(allPages.length,309,"Expected 21 curated, 144 legacy, 51 Gmedia, 26 taxonomy, 61 collection and six public media pages");
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],
   ["en", "/en/about/432-chamber-orchestra/", "History"]

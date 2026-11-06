@@ -4,14 +4,14 @@
   "mode": "observed read-only public URL inventory; not exhaustive dynamic URL enumeration",
   "source": "WordPress sitemap + verified public HTML graph + attachment permalinks",
   "verifiedSourcePaths": 636,
-  "staticAstroPages": 303,
-  "sourcePathsMatched": 269,
-  "sourcePathsStillMissing": 367,
-  "newHistoricalRoutes": 138,
+  "staticAstroPages": 309,
+  "sourcePathsMatched": 275,
+  "sourcePathsStillMissing": 361,
+  "newHistoricalRoutes": 144,
   "all90VerifiedAgainstBaseline": true,
-  "remainingSitemapOnlyAttachments": 6,
+  "remainingSitemapOnlyAttachments": 0,
   "missingByFirstSource": {
-    "sitemap": 19,
+    "sitemap": 13,
     "links": 2,
     "attachments": 346
   },
@@ -23,8 +23,8 @@
   "verifiedExtraSourceAddresses": 63,
   "excludedPublicAccountWorkflow": "/en/my-account/lost-password/",
   "deferredPublicPosterAttachment": "/en/афиш-чайната-fw/",
-  "editorialCopy": "Curated bilingual audience-facing text; original source titles and URLs retained in audit records.",
-  "unaddressedSourcePaths": 354,
+  "editorialCopy": "Concise concert-specific public text; legacy audio comparisons are labelled a¹ = 440 Hz and a¹ = 432 Hz as in the publicly accessible source.",
+  "unaddressedSourcePaths": 348,
   "intentionallyExcludedSourcePaths": 13,
   "studio5AlbumSourcePhotos": 23,
   "studio5ApprovedPositions": [
@@ -41,5 +41,8 @@
   ],
   "studio5PublicPhotos": 10,
   "studio5RemovedPhotos": 13,
-  "publicGalleryImages": 43
+  "publicGalleryImages": 43,
+  "restoredVerifiedPublicMediaAttachments": 6,
+  "localPublicAudioExamples": 4,
+  "localPublicAudioBytes": 66123607
 }

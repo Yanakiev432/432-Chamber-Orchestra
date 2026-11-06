@@ -19,7 +19,8 @@ const importedCount = JSON.parse(readFileSync(resolve("src/content/legacyArchive
 const gmediaCount = JSON.parse(readFileSync(resolve("src/content/legacyGmediaRoutes.json"), "utf8")).items.length;
 const taxonomyCount = JSON.parse(readFileSync(resolve("src/content/legacyTaxonomyRoutes.json"), "utf8")).items.length;
 const extendedCount = JSON.parse(readFileSync(resolve("src/content/legacyExtendedRoutes.json"), "utf8")).items.length;
-assert.equal(sitemapUrls.length, 21 + importedCount + gmediaCount + taxonomyCount + extendedCount, "Sitemap must enumerate every curated and historical page.");
+const attachmentCount = JSON.parse(readFileSync(resolve("src/content/legacyFeaturedAttachments.json"), "utf8")).items.length;
+assert.equal(sitemapUrls.length, 21 + importedCount + gmediaCount + taxonomyCount + extendedCount + attachmentCount, "Sitemap must enumerate every curated and historical page.");
 assert.equal(new Set(sitemapUrls).size, sitemapUrls.length, "Duplicate sitemap URLs.");
 assert.ok(sitemapUrls.every((url) => url.startsWith(origin + "/")), "Sitemap URLs must be absolute and use the configured origin.");
 
