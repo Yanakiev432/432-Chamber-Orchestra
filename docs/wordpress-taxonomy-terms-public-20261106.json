@@ -1,0 +1,2436 @@
+{
+  "version": 1,
+  "source": "read-only WP SHORTINIT SQL; published post/product/events relationships only",
+  "terms": [
+    {
+      "term_id": "1",
+      "name": "Uncategorized",
+      "slug": "uncategorized",
+      "term_taxonomy_id": "1",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "9",
+      "name": "Uncategorized",
+      "slug": "uncategorized-bg",
+      "term_taxonomy_id": "9",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "41",
+      "name": "Concert",
+      "slug": "concert",
+      "term_taxonomy_id": "41",
+      "taxonomy": "tribe_events_cat",
+      "parent": "0",
+      "count": "1",
+      "description": "Concert "
+    },
+    {
+      "term_id": "43",
+      "name": "Tour",
+      "slug": "tour",
+      "term_taxonomy_id": "43",
+      "taxonomy": "tribe_events_cat",
+      "parent": "0",
+      "count": "0",
+      "description": "A concert tour"
+    },
+    {
+      "term_id": "45",
+      "name": "Presentation",
+      "slug": "presentation",
+      "term_taxonomy_id": "45",
+      "taxonomy": "tribe_events_cat",
+      "parent": "0",
+      "count": "0",
+      "description": "Presentation of the 432 Hz concert pitch"
+    },
+    {
+      "term_id": "47",
+      "name": "Chamber concert",
+      "slug": "chamber-concert",
+      "term_taxonomy_id": "47",
+      "taxonomy": "tribe_events_cat",
+      "parent": "41",
+      "count": "1",
+      "description": "A concert with a small ensemble from the 432 Chamber Orchestra"
+    },
+    {
+      "term_id": "49",
+      "name": "Orchestra's concert",
+      "slug": "orchestra-concert",
+      "term_taxonomy_id": "49",
+      "taxonomy": "tribe_events_cat",
+      "parent": "41",
+      "count": "0",
+      "description": "A concert with the whole 432 Chamber Orchestra"
+    },
+    {
+      "term_id": "51",
+      "name": "Scientific lecture",
+      "slug": "scientific-lecture",
+      "term_taxonomy_id": "51",
+      "taxonomy": "tribe_events_cat",
+      "parent": "45",
+      "count": "0",
+      "description": "Scientific lecture"
+    },
+    {
+      "term_id": "53",
+      "name": "Popular science presentation",
+      "slug": "popular-science-presentation",
+      "term_taxonomy_id": "53",
+      "taxonomy": "tribe_events_cat",
+      "parent": "45",
+      "count": "0",
+      "description": "Presentation, designed to be understood by non-professionals."
+    },
+    {
+      "term_id": "55",
+      "name": "Educational concert",
+      "slug": "educational-concert",
+      "term_taxonomy_id": "55",
+      "taxonomy": "tribe_events_cat",
+      "parent": "41",
+      "count": "0",
+      "description": "Concert for students and/or children."
+    },
+    {
+      "term_id": "57",
+      "name": "Bulgarian tour",
+      "slug": "bulgarian-tour",
+      "term_taxonomy_id": "57",
+      "taxonomy": "tribe_events_cat",
+      "parent": "43",
+      "count": "0",
+      "description": "A concert tour in Bulgaria"
+    },
+    {
+      "term_id": "59",
+      "name": "International tour",
+      "slug": "international-tour",
+      "term_taxonomy_id": "59",
+      "taxonomy": "tribe_events_cat",
+      "parent": "43",
+      "count": "0",
+      "description": "Tour outer the Bulgarian borders."
+    },
+    {
+      "term_id": "61",
+      "name": "432 Hz",
+      "slug": "432hz",
+      "term_taxonomy_id": "61",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "63",
+      "name": "432 music",
+      "slug": "432-music",
+      "term_taxonomy_id": "63",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "0",
+      "description": "Music played in 432 Hz"
+    },
+    {
+      "term_id": "65",
+      "name": "432 Chamber Orchestra",
+      "slug": "432-chamber-orchestra",
+      "term_taxonomy_id": "65",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "2",
+      "description": "432 Chamber Orchestra participated."
+    },
+    {
+      "term_id": "68",
+      "name": "Open rehearsal",
+      "slug": "open-rehearsal",
+      "term_taxonomy_id": "68",
+      "taxonomy": "tribe_events_cat",
+      "parent": "41",
+      "count": "0",
+      "description": "A rehearsal which is open for visitors."
+    },
+    {
+      "term_id": "70",
+      "name": "a = 432 Hz concert pitch",
+      "slug": "a-432-hz-concert-pitch",
+      "term_taxonomy_id": "70",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "0",
+      "description": "Concert pitch a = 432 Hz"
+    },
+    {
+      "term_id": "72",
+      "name": "Концертен строй ла = 432 Hz",
+      "slug": "%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%b5%d0%bd-%d1%81%d1%82%d1%80%d0%be%d0%b9-%d0%bb%d0%b0-432-hz",
+      "term_taxonomy_id": "72",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "0",
+      "description": "Концертен строй ла = 432 Hz"
+    },
+    {
+      "term_id": "75",
+      "name": "post-format-image",
+      "slug": "post-format-image",
+      "term_taxonomy_id": "75",
+      "taxonomy": "post_format",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "76",
+      "name": "Concert",
+      "slug": "concert",
+      "term_taxonomy_id": "76",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "80",
+      "name": "Gallery",
+      "slug": "gallery",
+      "term_taxonomy_id": "80",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "83",
+      "name": "Галерия",
+      "slug": "%d0%b3%d0%b0%d0%bb%d0%b5%d1%80%d0%b8%d1%8f",
+      "term_taxonomy_id": "83",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "87",
+      "name": "Ivan Yanakiev",
+      "slug": "ivan-yanakiev",
+      "term_taxonomy_id": "87",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "89",
+      "name": "Miryana Kalushkova",
+      "slug": "miryana-kalushkova",
+      "term_taxonomy_id": "89",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "91",
+      "name": "Иван Янакиев",
+      "slug": "%d0%b8%d0%b2%d0%b0%d0%bd-%d1%8f%d0%bd%d0%b0%d0%ba%d0%b8%d0%b5%d0%b2",
+      "term_taxonomy_id": "91",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "93",
+      "name": "Камерен оркестър 432",
+      "slug": "%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432",
+      "term_taxonomy_id": "93",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "95",
+      "name": "432 Хц",
+      "slug": "432-%d1%85%d1%86",
+      "term_taxonomy_id": "95",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "97",
+      "name": "Миряна Калушкова",
+      "slug": "%d0%bc%d0%b8%d1%80%d1%8f%d0%bd%d0%b0-%d0%ba%d0%b0%d0%bb%d1%83%d1%88%d0%ba%d0%be%d0%b2%d0%b0",
+      "term_taxonomy_id": "97",
+      "taxonomy": "post_tag",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "104",
+      "name": "Концерт",
+      "slug": "%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82",
+      "term_taxonomy_id": "104",
+      "taxonomy": "tribe_events_cat",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "106",
+      "name": "Камерен концерт",
+      "slug": "%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82",
+      "term_taxonomy_id": "106",
+      "taxonomy": "tribe_events_cat",
+      "parent": "104",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "110",
+      "name": "Music",
+      "slug": "music",
+      "term_taxonomy_id": "110",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "5",
+      "description": ""
+    },
+    {
+      "term_id": "112",
+      "name": "post-format-audio",
+      "slug": "post-format-audio",
+      "term_taxonomy_id": "112",
+      "taxonomy": "post_format",
+      "parent": "0",
+      "count": "8",
+      "description": ""
+    },
+    {
+      "term_id": "113",
+      "name": "Музика",
+      "slug": "%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0",
+      "term_taxonomy_id": "113",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "5",
+      "description": ""
+    },
+    {
+      "term_id": "196",
+      "name": "Аудио",
+      "slug": "%d0%b0%d1%83%d0%b4%d0%b8%d0%be",
+      "term_taxonomy_id": "196",
+      "taxonomy": "product_cat",
+      "parent": "0",
+      "count": "23",
+      "description": ""
+    },
+    {
+      "term_id": "198",
+      "name": "Audio",
+      "slug": "audio",
+      "term_taxonomy_id": "198",
+      "taxonomy": "product_cat",
+      "parent": "0",
+      "count": "23",
+      "description": ""
+    },
+    {
+      "term_id": "200",
+      "name": "String quartet",
+      "slug": "string-quartet",
+      "term_taxonomy_id": "200",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "21",
+      "description": ""
+    },
+    {
+      "term_id": "204",
+      "name": "Струнен квартет",
+      "slug": "%d1%81%d1%82%d1%80%d1%83%d0%bd%d0%b5%d0%bd-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-bg",
+      "term_taxonomy_id": "204",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "21",
+      "description": ""
+    },
+    {
+      "term_id": "208",
+      "name": "Quartet",
+      "slug": "quartet",
+      "term_taxonomy_id": "208",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "21",
+      "description": ""
+    },
+    {
+      "term_id": "210",
+      "name": "Квартет",
+      "slug": "%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-bg",
+      "term_taxonomy_id": "210",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "21",
+      "description": ""
+    },
+    {
+      "term_id": "212",
+      "name": "Струнен оркестър",
+      "slug": "%d1%81%d1%82%d1%80%d1%83%d0%bd%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80",
+      "term_taxonomy_id": "212",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "214",
+      "name": "String orchestra",
+      "slug": "string-orchestra",
+      "term_taxonomy_id": "214",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "216",
+      "name": "Solo violin",
+      "slug": "solo-violin",
+      "term_taxonomy_id": "216",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "218",
+      "name": "Соло цигулка",
+      "slug": "%d1%81%d0%be%d0%bb%d0%be-%d1%86%d0%b8%d0%b3%d1%83%d0%bb%d0%ba%d0%b0",
+      "term_taxonomy_id": "218",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "220",
+      "name": "Classical",
+      "slug": "classical",
+      "term_taxonomy_id": "220",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "224",
+      "name": "Класически",
+      "slug": "%d0%ba%d0%bb%d0%b0%d1%81%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8",
+      "term_taxonomy_id": "224",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "226",
+      "name": "Поп",
+      "slug": "%d0%bf%d0%be%d0%bf",
+      "term_taxonomy_id": "226",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "228",
+      "name": "Pop",
+      "slug": "pop",
+      "term_taxonomy_id": "228",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "230",
+      "name": "Russian",
+      "slug": "russian",
+      "term_taxonomy_id": "230",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "4",
+      "description": ""
+    },
+    {
+      "term_id": "232",
+      "name": "Руски",
+      "slug": "%d1%80%d1%83%d1%81%d0%ba%d0%b8",
+      "term_taxonomy_id": "232",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "4",
+      "description": ""
+    },
+    {
+      "term_id": "234",
+      "name": "Български",
+      "slug": "%d0%b1%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8",
+      "term_taxonomy_id": "234",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "236",
+      "name": "Bulgarian",
+      "slug": "bulgarian",
+      "term_taxonomy_id": "236",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "238",
+      "name": "Baroque",
+      "slug": "baroque",
+      "term_taxonomy_id": "238",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "5",
+      "description": ""
+    },
+    {
+      "term_id": "240",
+      "name": "Барок",
+      "slug": "%d0%b1%d0%b0%d1%80%d0%be%d0%ba",
+      "term_taxonomy_id": "240",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "5",
+      "description": ""
+    },
+    {
+      "term_id": "242",
+      "name": "Класицизъм",
+      "slug": "%d0%ba%d0%bb%d0%b0%d1%81%d0%b8%d1%86%d0%b8%d0%b7%d1%8a%d0%bc",
+      "term_taxonomy_id": "242",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "244",
+      "name": "Classicism",
+      "slug": "classicism",
+      "term_taxonomy_id": "244",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "246",
+      "name": "Romantic",
+      "slug": "romantic",
+      "term_taxonomy_id": "246",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "7",
+      "description": ""
+    },
+    {
+      "term_id": "248",
+      "name": "Романтизъм",
+      "slug": "%d1%80%d0%be%d0%bc%d0%b0%d0%bd%d1%82%d0%b8%d0%b7%d1%8a%d0%bc",
+      "term_taxonomy_id": "248",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "7",
+      "description": ""
+    },
+    {
+      "term_id": "250",
+      "name": "XX век",
+      "slug": "xx-%d0%b2%d0%b5%d0%ba",
+      "term_taxonomy_id": "250",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "7",
+      "description": ""
+    },
+    {
+      "term_id": "252",
+      "name": "XX Century",
+      "slug": "xx-century",
+      "term_taxonomy_id": "252",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "7",
+      "description": ""
+    },
+    {
+      "term_id": "258",
+      "name": "Съвременни",
+      "slug": "%d1%81%d1%8a%d0%b2%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d0%b8-bg",
+      "term_taxonomy_id": "258",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "260",
+      "name": "Contemporary",
+      "slug": "contemporary",
+      "term_taxonomy_id": "260",
+      "taxonomy": "product_tag",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "299",
+      "name": "String quartet music",
+      "slug": "string-quartet-music",
+      "term_taxonomy_id": "299",
+      "taxonomy": "product_cat",
+      "parent": "198",
+      "count": "21",
+      "description": ""
+    },
+    {
+      "term_id": "301",
+      "name": "Музика за струнен квартет",
+      "slug": "%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%81%d1%82%d1%80%d1%83%d0%bd%d0%b5%d0%bd-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82",
+      "term_taxonomy_id": "301",
+      "taxonomy": "product_cat",
+      "parent": "196",
+      "count": "21",
+      "description": ""
+    },
+    {
+      "term_id": "302",
+      "name": "String orchestra music",
+      "slug": "string-orchestra",
+      "term_taxonomy_id": "302",
+      "taxonomy": "product_cat",
+      "parent": "198",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "304",
+      "name": "Музика за струнен оркестър",
+      "slug": "%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%81%d1%82%d1%80%d1%83%d0%bd%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80",
+      "term_taxonomy_id": "304",
+      "taxonomy": "product_cat",
+      "parent": "196",
+      "count": "2",
+      "description": ""
+    },
+    {
+      "term_id": "308",
+      "name": "Uncategorized",
+      "slug": "uncategorized",
+      "term_taxonomy_id": "308",
+      "taxonomy": "product_cat",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "310",
+      "name": "Uncategorised",
+      "slug": "uncategorised",
+      "term_taxonomy_id": "310",
+      "taxonomy": "product_cat",
+      "parent": "0",
+      "count": "0",
+      "description": ""
+    },
+    {
+      "term_id": "312",
+      "name": "Audio",
+      "slug": "audio",
+      "term_taxonomy_id": "312",
+      "taxonomy": "category",
+      "parent": "110",
+      "count": "4",
+      "description": ""
+    },
+    {
+      "term_id": "314",
+      "name": "Концерт",
+      "slug": "%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-bg",
+      "term_taxonomy_id": "314",
+      "taxonomy": "category",
+      "parent": "0",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "316",
+      "name": "Звук",
+      "slug": "%d0%b7%d0%b2%d1%83%d0%ba",
+      "term_taxonomy_id": "316",
+      "taxonomy": "category",
+      "parent": "113",
+      "count": "4",
+      "description": ""
+    },
+    {
+      "term_id": "318",
+      "name": "Видео",
+      "slug": "%d0%b2%d0%b8%d0%b4%d0%b5%d0%be",
+      "term_taxonomy_id": "318",
+      "taxonomy": "category",
+      "parent": "113",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "320",
+      "name": "Video",
+      "slug": "video",
+      "term_taxonomy_id": "320",
+      "taxonomy": "category",
+      "parent": "110",
+      "count": "1",
+      "description": ""
+    },
+    {
+      "term_id": "322",
+      "name": "post-format-video",
+      "slug": "post-format-video",
+      "term_taxonomy_id": "322",
+      "taxonomy": "post_format",
+      "parent": "0",
+      "count": "2",
+      "description": ""
+    }
+  ],
+  "relationships": [
+    {
+      "term_taxonomy_id": "65",
+      "object_id": "224",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "75",
+      "object_id": "224",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "80",
+      "object_id": "224",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "87",
+      "object_id": "224",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "89",
+      "object_id": "224",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "75",
+      "object_id": "227",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "83",
+      "object_id": "227",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "91",
+      "object_id": "227",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "93",
+      "object_id": "227",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "97",
+      "object_id": "227",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "9",
+      "object_id": "286",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "110",
+      "object_id": "345",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "112",
+      "object_id": "345",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "312",
+      "object_id": "345",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "112",
+      "object_id": "347",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "113",
+      "object_id": "347",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "316",
+      "object_id": "347",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "110",
+      "object_id": "361",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "112",
+      "object_id": "361",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "312",
+      "object_id": "361",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "112",
+      "object_id": "363",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "113",
+      "object_id": "363",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "316",
+      "object_id": "363",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "110",
+      "object_id": "365",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "112",
+      "object_id": "365",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "312",
+      "object_id": "365",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "112",
+      "object_id": "367",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "113",
+      "object_id": "367",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "316",
+      "object_id": "367",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "110",
+      "object_id": "371",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "112",
+      "object_id": "371",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "312",
+      "object_id": "371",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "112",
+      "object_id": "373",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "113",
+      "object_id": "373",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "316",
+      "object_id": "373",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "65",
+      "object_id": "1067",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "76",
+      "object_id": "1067",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "87",
+      "object_id": "1067",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "110",
+      "object_id": "1067",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "320",
+      "object_id": "1067",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "322",
+      "object_id": "1067",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "91",
+      "object_id": "1070",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "93",
+      "object_id": "1070",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "113",
+      "object_id": "1070",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "314",
+      "object_id": "1070",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "318",
+      "object_id": "1070",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "322",
+      "object_id": "1070",
+      "post_type": "post",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "924",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "924",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "924",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "924",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "930",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "930",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "930",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "930",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "898",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "898",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "898",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "246",
+      "object_id": "898",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "898",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "904",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "904",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "904",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "248",
+      "object_id": "904",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "904",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "769",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "769",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "769",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "769",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "796",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "796",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "796",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "796",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "806",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "806",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "806",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "238",
+      "object_id": "806",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "806",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "807",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "807",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "807",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "240",
+      "object_id": "807",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "807",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "810",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "810",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "810",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "238",
+      "object_id": "810",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "810",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "811",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "811",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "811",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "240",
+      "object_id": "811",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "811",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "919",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "214",
+      "object_id": "919",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "220",
+      "object_id": "919",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "244",
+      "object_id": "919",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "302",
+      "object_id": "919",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "921",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "212",
+      "object_id": "921",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "224",
+      "object_id": "921",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "242",
+      "object_id": "921",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "304",
+      "object_id": "921",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "922",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "214",
+      "object_id": "922",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "220",
+      "object_id": "922",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "238",
+      "object_id": "922",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "302",
+      "object_id": "922",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "923",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "212",
+      "object_id": "923",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "224",
+      "object_id": "923",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "240",
+      "object_id": "923",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "304",
+      "object_id": "923",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "931",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "931",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "931",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "246",
+      "object_id": "931",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "931",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "935",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "935",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "935",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "248",
+      "object_id": "935",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "935",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "937",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "937",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "937",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "238",
+      "object_id": "937",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "937",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "940",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "940",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "940",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "240",
+      "object_id": "940",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "940",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "812",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "812",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "812",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "238",
+      "object_id": "812",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "812",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "813",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "813",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "813",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "240",
+      "object_id": "813",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "813",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "814",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "814",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "814",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "246",
+      "object_id": "814",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "814",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "815",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "815",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "815",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "248",
+      "object_id": "815",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "815",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "816",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "816",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "816",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "230",
+      "object_id": "816",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "246",
+      "object_id": "816",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "816",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "817",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "817",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "817",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "232",
+      "object_id": "817",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "248",
+      "object_id": "817",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "817",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "818",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "818",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "818",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "230",
+      "object_id": "818",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "246",
+      "object_id": "818",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "818",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "819",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "819",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "819",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "232",
+      "object_id": "819",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "248",
+      "object_id": "819",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "819",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "820",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "820",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "820",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "230",
+      "object_id": "820",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "246",
+      "object_id": "820",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "820",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "821",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "821",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "821",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "232",
+      "object_id": "821",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "248",
+      "object_id": "821",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "821",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "822",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "822",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "822",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "822",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "823",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "823",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "823",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "823",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "941",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "941",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "941",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "246",
+      "object_id": "941",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "941",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "942",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "942",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "942",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "248",
+      "object_id": "942",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "942",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "943",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "943",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "943",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "252",
+      "object_id": "943",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "943",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "944",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "944",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "944",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "250",
+      "object_id": "944",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "944",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "945",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "945",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "945",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "252",
+      "object_id": "945",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "945",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "946",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "946",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "946",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "250",
+      "object_id": "946",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "946",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "947",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "947",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "947",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "252",
+      "object_id": "947",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "947",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "948",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "948",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "948",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "250",
+      "object_id": "948",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "948",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "949",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "949",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "949",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "252",
+      "object_id": "949",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "949",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "950",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "950",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "950",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "250",
+      "object_id": "950",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "950",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "951",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "951",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "951",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "252",
+      "object_id": "951",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "951",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "952",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "952",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "952",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "250",
+      "object_id": "952",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "952",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "953",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "953",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "953",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "230",
+      "object_id": "953",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "252",
+      "object_id": "953",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "953",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "955",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "955",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "955",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "232",
+      "object_id": "955",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "250",
+      "object_id": "955",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "955",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "198",
+      "object_id": "956",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "200",
+      "object_id": "956",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "208",
+      "object_id": "956",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "252",
+      "object_id": "956",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "299",
+      "object_id": "956",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "196",
+      "object_id": "957",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "204",
+      "object_id": "957",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "210",
+      "object_id": "957",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "250",
+      "object_id": "957",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "301",
+      "object_id": "957",
+      "post_type": "product",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "104",
+      "object_id": "316",
+      "post_type": "tribe_events",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "106",
+      "object_id": "316",
+      "post_type": "tribe_events",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "41",
+      "object_id": "322",
+      "post_type": "tribe_events",
+      "post_status": "publish"
+    },
+    {
+      "term_taxonomy_id": "47",
+      "object_id": "322",
+      "post_type": "tribe_events",
+      "post_status": "publish"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "auditedUtc": "2026-11-06",
+  "mode": "observed read-only public URL inventory; not exhaustive dynamic URL enumeration",
+  "source": "WordPress sitemap + verified public HTML graph + attachment permalinks",
+  "verifiedSourcePaths": 636,
+  "staticAstroPages": 255,
+  "sourcePathsMatched": 221,
+  "sourcePathsStillMissing": 415,
+  "newHistoricalRoutes": 90,
+  "all90VerifiedAgainstBaseline": true,
+  "remainingSitemapOnlyAttachments": 6,
+  "missingByFirstSource": {
+    "sitemap": 6,
+    "links": 58,
+    "zeroCountTerms": 5,
+    "attachments": 346
+  },
+  "productionWordPressUnmodified": true,
+  "protectedWooMediaUnpublished": true,
+  "caveat": "Attachment permalinks are auto-generated WordPress pages; not all represent substantive editorial content. Query-param variants are not exhaustively enumerated."
+}

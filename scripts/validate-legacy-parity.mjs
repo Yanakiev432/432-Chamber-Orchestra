@@ -79,7 +79,24 @@ for (const item of gmedia.items) {
   assert.ok(existsSync(join(root,item.mediaSrc.slice(1))), "Missing local photo source file: "+item.mediaSrc);
  }
 }
-assert.equal(allPages.length,229,"Expected 21 curated, 144 prior archive and 64 Gmedia routes");
+const taxonomyAddon = read("src/content/legacyTaxonomyRoutes.json");
+assert.equal(taxonomyAddon.items.length,26,"Expected 26 public WordPress taxonomy routes");
+assert.equal(new Set(taxonomyAddon.items.map(x=>x.path.toLowerCase())).size,26);
+for (const item of taxonomyAddon.items) {
+  assert.ok(!imported.some(x=>x.path.toLowerCase()===item.path.toLowerCase()), "Taxonomy alias clashes with prior archive");
+  assert.ok(!gmedia.items.some(x=>x.path.toLowerCase()===item.path.toLowerCase()), "Taxonomy alias clashes with Gmedia");
+  const path=join(root,item.path.slice(1),"index.html");
+  assert.ok(existsSync(path),"Public category route missing: "+item.path);
+  const html=readFileSync(path,"utf8");
+  assert.ok(html.includes(item.originalUrl), "Public taxonomy source reference missing: "+item.path);
+  assert.ok(html.includes("<h1"), "Category heading missing: "+item.path);
+  if (item.relatedIds.length > 0) {
+    const related=imported.filter(x=>item.relatedIds.includes(x.id) && x.language===item.language && ["post","product","event"].includes(x.kind));
+    assert.ok(related.length>0,"Related public articles absent from taxonomy archive: "+item.path);
+    assert.ok(related.some(x=>html.includes(x.path)),"No related article link on public taxonomy page: "+item.path);
+  }
+}
+assert.equal(allPages.length,255,"Expected 21 curated, 144 prior archive, 64 Gmedia and 26 taxonomy routes");
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],
   ["en", "/en/about/432-chamber-orchestra/", "History"]

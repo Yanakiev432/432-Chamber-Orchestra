@@ -1,0 +1,703 @@
+{
+  "sourceSitemapEntries": 217,
+  "uniqueSitemapPaths": 216,
+  "publishedManifestPaths": 146,
+  "astroStaticPages": 165,
+  "mappedSitemapPaths": 120,
+  "distinctSitemapPathsMissingInAstro": 96,
+  "sitemapRowsMissingInAstro": 96,
+  "sitemapRowsNotInEarlier146": 96,
+  "verifiedHttp200": 217,
+  "categories": [
+    {
+      "kind": "post",
+      "total": 14,
+      "http200": 14,
+      "astro": 14,
+      "notInAstro": 0,
+      "notInPrevious146": 0
+    },
+    {
+      "kind": "page",
+      "total": 34,
+      "http200": 34,
+      "astro": 34,
+      "notInAstro": 0,
+      "notInPrevious146": 0
+    },
+    {
+      "kind": "attachment",
+      "total": 6,
+      "http200": 6,
+      "astro": 0,
+      "notInAstro": 6,
+      "notInPrevious146": 6
+    },
+    {
+      "kind": "gmedia",
+      "total": 58,
+      "http200": 58,
+      "astro": 0,
+      "notInAstro": 58,
+      "notInPrevious146": 58
+    },
+    {
+      "kind": "gmedia_album",
+      "total": 5,
+      "http200": 5,
+      "astro": 0,
+      "notInAstro": 5,
+      "notInPrevious146": 5
+    },
+    {
+      "kind": "gmedia_gallery",
+      "total": 1,
+      "http200": 1,
+      "astro": 0,
+      "notInAstro": 1,
+      "notInPrevious146": 1
+    },
+    {
+      "kind": "product",
+      "total": 47,
+      "http200": 47,
+      "astro": 47,
+      "notInAstro": 0,
+      "notInPrevious146": 0
+    },
+    {
+      "kind": "tribe_events",
+      "total": 4,
+      "http200": 4,
+      "astro": 4,
+      "notInAstro": 0,
+      "notInPrevious146": 0
+    },
+    {
+      "kind": "category",
+      "total": 11,
+      "http200": 11,
+      "astro": 5,
+      "notInAstro": 6,
+      "notInPrevious146": 6
+    },
+    {
+      "kind": "post_tag",
+      "total": 6,
+      "http200": 6,
+      "astro": 3,
+      "notInAstro": 3,
+      "notInPrevious146": 3
+    },
+    {
+      "kind": "post_format",
+      "total": 3,
+      "http200": 3,
+      "astro": 0,
+      "notInAstro": 3,
+      "notInPrevious146": 3
+    },
+    {
+      "kind": "product_cat",
+      "total": 6,
+      "http200": 6,
+      "astro": 3,
+      "notInAstro": 3,
+      "notInPrevious146": 3
+    },
+    {
+      "kind": "product_tag",
+      "total": 18,
+      "http200": 18,
+      "astro": 9,
+      "notInAstro": 9,
+      "notInPrevious146": 9
+    },
+    {
+      "kind": "tribe_events_cat",
+      "total": 4,
+      "http200": 4,
+      "astro": 2,
+      "notInAstro": 2,
+      "notInPrevious146": 2
+    }
+  ],
+  "missing": [
+    {
+      "kind": "attachment",
+      "url": "https://432hz-orchestra.com/en/about/432-hz-concert-pitch/01-liszt-liebestraume-440et/",
+      "path": "/en/about/432-hz-concert-pitch/01-liszt-liebestraume-440et/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "attachment",
+      "url": "https://432hz-orchestra.com/en/homepage/liebestraume-3/",
+      "path": "/en/homepage/liebestraume-3/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "attachment",
+      "url": "https://432hz-orchestra.com/en/homepage/liebestraume-2/",
+      "path": "/en/homepage/liebestraume-2/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "attachment",
+      "url": "https://432hz-orchestra.com/en/homepage/liebestraume/",
+      "path": "/en/homepage/liebestraume/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "attachment",
+      "url": "https://432hz-orchestra.com/bg/event/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-%d0%be%d1%82-%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a/%d0%b0%d1%84%d0%b8%d1%88-%d1%87%d0%b0%d0%b9%d0%bd%d0%b0%d1%82%d0%b0-fw-2/",
+      "path": "/bg/event/концерт-на-квартет-от-камерен-оркестъ/афиш-чайната-fw-2/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "attachment",
+      "url": "https://432hz-orchestra.com/en/homepage/9629673-orig_2_orig1/",
+      "path": "/en/homepage/9629673-orig_2_orig1/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/",
+      "path": "/en/blog/gmedia/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-4-jpg/",
+      "path": "/en/blog/gmedia/concert-4-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-3-jpg/",
+      "path": "/en/blog/gmedia/concert-3-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-2-jpg/",
+      "path": "/en/blog/gmedia/concert-2-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-1-jpg/",
+      "path": "/en/blog/gmedia/concert-1-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-22-jpg/",
+      "path": "/en/blog/gmedia/concert-22-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-21-jpg/",
+      "path": "/en/blog/gmedia/concert-21-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-18-jpg/",
+      "path": "/en/blog/gmedia/concert-18-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-19-jpg/",
+      "path": "/en/blog/gmedia/concert-19-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-20-jpg/",
+      "path": "/en/blog/gmedia/concert-20-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-17-jpg/",
+      "path": "/en/blog/gmedia/concert-17-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-16-jpg/",
+      "path": "/en/blog/gmedia/concert-16-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-15-jpg/",
+      "path": "/en/blog/gmedia/concert-15-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-14-jpg/",
+      "path": "/en/blog/gmedia/concert-14-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-13-jpg/",
+      "path": "/en/blog/gmedia/concert-13-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-10-jpg/",
+      "path": "/en/blog/gmedia/concert-10-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-10cymk-jpg/",
+      "path": "/en/blog/gmedia/concert-10cymk-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-11-jpg/",
+      "path": "/en/blog/gmedia/concert-11-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-12-jpg/",
+      "path": "/en/blog/gmedia/concert-12-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-9-jpg/",
+      "path": "/en/blog/gmedia/concert-9-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-8-jpg/",
+      "path": "/en/blog/gmedia/concert-8-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-7-jpg/",
+      "path": "/en/blog/gmedia/concert-7-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-5-jpg/",
+      "path": "/en/blog/gmedia/concert-5-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/concert-6-jpg/",
+      "path": "/en/blog/gmedia/concert-6-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6538-1-jpg/",
+      "path": "/en/blog/gmedia/vbal6538-1-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6537-1-jpg/",
+      "path": "/en/blog/gmedia/vbal6537-1-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6611-jpg/",
+      "path": "/en/blog/gmedia/vbal6611-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6610-jpg/",
+      "path": "/en/blog/gmedia/vbal6610-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6607-jpg/",
+      "path": "/en/blog/gmedia/vbal6607-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6605-jpg/",
+      "path": "/en/blog/gmedia/vbal6605-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6604-jpg/",
+      "path": "/en/blog/gmedia/vbal6604-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6603-jpg/",
+      "path": "/en/blog/gmedia/vbal6603-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6602-jpg/",
+      "path": "/en/blog/gmedia/vbal6602-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6600-jpg/",
+      "path": "/en/blog/gmedia/vbal6600-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6599-jpg/",
+      "path": "/en/blog/gmedia/vbal6599-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6598-jpg/",
+      "path": "/en/blog/gmedia/vbal6598-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6597-jpg/",
+      "path": "/en/blog/gmedia/vbal6597-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6596-jpg/",
+      "path": "/en/blog/gmedia/vbal6596-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6595-jpg/",
+      "path": "/en/blog/gmedia/vbal6595-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6594-jpg/",
+      "path": "/en/blog/gmedia/vbal6594-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6592-jpg/",
+      "path": "/en/blog/gmedia/vbal6592-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6591-jpg/",
+      "path": "/en/blog/gmedia/vbal6591-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6589-jpg/",
+      "path": "/en/blog/gmedia/vbal6589-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6582-jpg/",
+      "path": "/en/blog/gmedia/vbal6582-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6581-jpg/",
+      "path": "/en/blog/gmedia/vbal6581-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6579-jpg/",
+      "path": "/en/blog/gmedia/vbal6579-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6578-jpg/",
+      "path": "/en/blog/gmedia/vbal6578-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6577-jpg/",
+      "path": "/en/blog/gmedia/vbal6577-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6576-jpg/",
+      "path": "/en/blog/gmedia/vbal6576-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6575-jpg/",
+      "path": "/en/blog/gmedia/vbal6575-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6574-jpg/",
+      "path": "/en/blog/gmedia/vbal6574-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6573-jpg/",
+      "path": "/en/blog/gmedia/vbal6573-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6572-jpg/",
+      "path": "/en/blog/gmedia/vbal6572-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6571-jpg/",
+      "path": "/en/blog/gmedia/vbal6571-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6570-jpg/",
+      "path": "/en/blog/gmedia/vbal6570-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia/vbal6569-jpg/",
+      "path": "/en/blog/gmedia/vbal6569-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/blog/gmedia/vbal6567-jpg/",
+      "path": "/blog/gmedia/vbal6567-jpg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia",
+      "url": "https://432hz-orchestra.com/bg/blog/gmedia/",
+      "path": "/bg/blog/gmedia/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia_album",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia-album/",
+      "path": "/en/blog/gmedia-album/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia_album",
+      "url": "https://432hz-orchestra.com/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia_album",
+      "url": "https://432hz-orchestra.com/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "path": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia_album",
+      "url": "https://432hz-orchestra.com/blog/gmedia-album/concert-148-years-bulgarian-academy-of-sciences/",
+      "path": "/blog/gmedia-album/concert-148-years-bulgarian-academy-of-sciences/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia_album",
+      "url": "https://432hz-orchestra.com/bg/blog/gmedia-album/",
+      "path": "/bg/blog/gmedia-album/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "gmedia_gallery",
+      "url": "https://432hz-orchestra.com/blog/gmedia-gallery/432-chamber-orcehstra-gallery/",
+      "path": "/blog/gmedia-gallery/432-chamber-orcehstra-gallery/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "category",
+      "url": "https://432hz-orchestra.com/bg/blog/category/uncategorized-bg/",
+      "path": "/bg/blog/category/uncategorized-bg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "category",
+      "url": "https://432hz-orchestra.com/bg/blog/category/%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0/%d0%b2%d0%b8%d0%b4%d0%b5%d0%be/",
+      "path": "/bg/blog/category/музика/видео/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "category",
+      "url": "https://432hz-orchestra.com/bg/blog/category/%d0%b3%d0%b0%d0%bb%d0%b5%d1%80%d0%b8%d1%8f/",
+      "path": "/bg/blog/category/галерия/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "category",
+      "url": "https://432hz-orchestra.com/bg/blog/category/%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0/%d0%b7%d0%b2%d1%83%d0%ba/",
+      "path": "/bg/blog/category/музика/звук/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "category",
+      "url": "https://432hz-orchestra.com/bg/blog/category/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-bg/",
+      "path": "/bg/blog/category/концерт-bg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "category",
+      "url": "https://432hz-orchestra.com/bg/blog/category/%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0/",
+      "path": "/bg/blog/category/музика/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "post_tag",
+      "url": "https://432hz-orchestra.com/bg/blog/tag/%d0%b8%d0%b2%d0%b0%d0%bd-%d1%8f%d0%bd%d0%b0%d0%ba%d0%b8%d0%b5%d0%b2/",
+      "path": "/bg/blog/tag/иван-янакиев/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "post_tag",
+      "url": "https://432hz-orchestra.com/bg/blog/tag/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432/",
+      "path": "/bg/blog/tag/камерен-оркестър-432/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "post_tag",
+      "url": "https://432hz-orchestra.com/bg/blog/tag/%d0%bc%d0%b8%d1%80%d1%8f%d0%bd%d0%b0-%d0%ba%d0%b0%d0%bb%d1%83%d1%88%d0%ba%d0%be%d0%b2%d0%b0/",
+      "path": "/bg/blog/tag/миряна-калушкова/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "post_format",
+      "url": "https://432hz-orchestra.com/en/blog/type/audio/",
+      "path": "/en/blog/type/audio/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "post_format",
+      "url": "https://432hz-orchestra.com/en/blog/type/image/",
+      "path": "/en/blog/type/image/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "post_format",
+      "url": "https://432hz-orchestra.com/en/blog/type/video/",
+      "path": "/en/blog/type/video/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_cat",
+      "url": "https://432hz-orchestra.com/bg/product-category/%d0%b0%d1%83%d0%b4%d0%b8%d0%be/",
+      "path": "/bg/product-category/аудио/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_cat",
+      "url": "https://432hz-orchestra.com/bg/product-category/%d0%b0%d1%83%d0%b4%d0%b8%d0%be/%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%81%d1%82%d1%80%d1%83%d0%bd%d0%b5%d0%bd-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82/",
+      "path": "/bg/product-category/аудио/музика-за-струнен-квартет/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_cat",
+      "url": "https://432hz-orchestra.com/bg/product-category/%d0%b0%d1%83%d0%b4%d0%b8%d0%be/%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0-%d0%b7%d0%b0-%d1%81%d1%82%d1%80%d1%83%d0%bd%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80/",
+      "path": "/bg/product-category/аудио/музика-за-струнен-оркестър/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/xx-%d0%b2%d0%b5%d0%ba/",
+      "path": "/bg/product-tag/xx-век/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/%d0%b1%d0%b0%d1%80%d0%be%d0%ba/",
+      "path": "/bg/product-tag/барок/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-bg/",
+      "path": "/bg/product-tag/квартет-bg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/%d0%ba%d0%bb%d0%b0%d1%81%d0%b8%d1%86%d0%b8%d0%b7%d1%8a%d0%bc/",
+      "path": "/bg/product-tag/класицизъм/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/%d0%ba%d0%bb%d0%b0%d1%81%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8/",
+      "path": "/bg/product-tag/класически/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/%d1%80%d0%be%d0%bc%d0%b0%d0%bd%d1%82%d0%b8%d0%b7%d1%8a%d0%bc/",
+      "path": "/bg/product-tag/романтизъм/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/%d1%80%d1%83%d1%81%d0%ba%d0%b8/",
+      "path": "/bg/product-tag/руски/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/%d1%81%d1%82%d1%80%d1%83%d0%bd%d0%b5%d0%bd-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-bg/",
+      "path": "/bg/product-tag/струнен-квартет-bg/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "product_tag",
+      "url": "https://432hz-orchestra.com/bg/product-tag/%d1%81%d1%82%d1%80%d1%83%d0%bd%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80/",
+      "path": "/bg/product-tag/струнен-оркестър/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "tribe_events_cat",
+      "url": "https://432hz-orchestra.com/en/events/category/concert/chamber-concert/",
+      "path": "/en/events/category/concert/chamber-concert/",
+      "httpStatus": 200
+    },
+    {
+      "kind": "tribe_events_cat",
+      "url": "https://432hz-orchestra.com/bg/events/category/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82/",
+      "path": "/bg/events/category/концерт/камерен-концерт/",
+      "httpStatus": 200
+    }
+  ]
+}

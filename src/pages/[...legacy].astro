@@ -7,14 +7,15 @@ import LegacyAudioEmbeds from "../components/LegacyAudioEmbeds.astro";
 import { siteContent } from "../content/siteContent";
 import legacy from "../content/legacyArchive.json";
 import gmedia from "../content/legacyGmediaRoutes.json";
+import taxonomy from "../content/legacyTaxonomyRoutes.json";
 
 export function getStaticPaths() {
-  return [...legacy.items, ...gmedia.items].map((record) => ({
+  return [...legacy.items, ...gmedia.items, ...taxonomy.items].map((record) => ({
     params: { legacy: record.path.replace(/^\/|\/$/g, "") },
     props: { record }
   }));
 }
-const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] };
+const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] | (typeof taxonomy.items)[number] };
 const lang = record.language === "bg" ? "bg" as const : "en" as const;
 const bg = lang === "bg";
 const kind = bg

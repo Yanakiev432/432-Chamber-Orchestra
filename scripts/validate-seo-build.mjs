@@ -17,7 +17,8 @@ assert.ok(sitemap.includes("</urlset>"), "Missing sitemap closing element.");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 const importedCount = JSON.parse(readFileSync(resolve("src/content/legacyArchive.json"), "utf8")).items.length;
 const gmediaCount = JSON.parse(readFileSync(resolve("src/content/legacyGmediaRoutes.json"), "utf8")).items.length;
-assert.equal(sitemapUrls.length, 21 + importedCount + gmediaCount, "Sitemap must enumerate every curated and historical page.");
+const taxonomyCount = JSON.parse(readFileSync(resolve("src/content/legacyTaxonomyRoutes.json"), "utf8")).items.length;
+assert.equal(sitemapUrls.length, 21 + importedCount + gmediaCount + taxonomyCount, "Sitemap must enumerate every curated and historical page.");
 assert.equal(new Set(sitemapUrls).size, sitemapUrls.length, "Duplicate sitemap URLs.");
 assert.ok(sitemapUrls.every((url) => url.startsWith(origin + "/")), "Sitemap URLs must be absolute and use the configured origin.");
 
