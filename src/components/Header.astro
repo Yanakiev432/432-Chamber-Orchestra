@@ -20,7 +20,7 @@ const navHref = (href: string) => href.startsWith("#") && !isHome ? `/${lang}/${
     <a class="block shrink-0" href={lang === "bg" ? "/bg/" : "/en/"} aria-label="432 Chamber Orchestra home">
       <img class="block h-auto w-[154px] sm:w-[190px] lg:w-[210px]" src={brandAssets.headerLogo} width="210" height="37" alt="432 Chamber Orchestra" decoding="async" />
     </a>
-    <nav class="hidden items-center gap-5 xl:flex" aria-label={lang === "bg" ? "Основна навигация" : "Main navigation"}>
+    <nav class="hidden items-center gap-3 2xl:flex" aria-label={lang === "bg" ? "Основна навигация" : "Main navigation"}>
       {nav.map((item) => (
         <a class="text-xs font-semibold uppercase tracking-[0.06em] text-brand-muted transition hover:text-brand-accent focus-visible:text-brand-accent" href={navHref(item.href)}>
           {item.label}
@@ -28,11 +28,11 @@ const navHref = (href: string) => href.startsWith("#") && !isHome ? `/${lang}/${
       ))}
     </nav>
     <div class="flex items-center gap-3">
-      <details class="relative z-[60] xl:hidden">
+      <details class="relative z-[60] 2xl:hidden">
         <summary class="flex min-h-10 cursor-pointer list-none items-center border border-brand-accent bg-[#122B22] px-3 text-sm font-semibold uppercase tracking-[0.06em] text-brand-primary transition hover:bg-brand-bg">
           {lang === "bg" ? "Меню" : "Menu"}
         </summary>
-        <nav class="absolute right-0 z-[60] mt-2 grid w-64 max-w-[calc(100vw-2rem)] gap-0.5 border border-brand-border bg-brand-surface p-2 text-brand-text shadow-xl" aria-label={lang === "bg" ? "Мобилна навигация" : "Mobile navigation"}>
+        <nav class="absolute right-0 z-[60] mt-2 grid max-h-[calc(100dvh-7rem)] w-64 max-w-[calc(100vw-2rem)] gap-0.5 overflow-y-auto overscroll-contain border border-brand-border bg-brand-surface p-2 text-brand-text shadow-xl" aria-label={lang === "bg" ? "Мобилна навигация" : "Mobile navigation"}>
           {nav.map((item) => (
             <a class="px-3 py-2 text-sm font-medium leading-5 tracking-normal text-brand-text transition hover:bg-brand-bg hover:text-brand-primary" href={navHref(item.href)}>{item.label}</a>
           ))}

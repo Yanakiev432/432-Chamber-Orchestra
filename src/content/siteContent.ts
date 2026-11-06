@@ -261,6 +261,7 @@ export const siteContent: Record<Language, SiteCopy> = {
     },
     nav: [
       { label: "Оркестър", href: sharedAnchors.orchestra },
+      { label: "История", href: "/bg/относно/камерен-оркестър-432/" },
       { label: "Снимки", href: "/bg/archive/" },
       { label: "Артистична идентичност", href: sharedAnchors.identity },
       { label: "Програми", href: sharedAnchors.programs },
@@ -713,6 +714,7 @@ export const siteContent: Record<Language, SiteCopy> = {
     },
     nav: [
       { label: "Orchestra", href: sharedAnchors.orchestra },
+      { label: "History", href: "/en/about/432-chamber-orchestra/" },
       { label: "Photos", href: "/en/archive/" },
       { label: "Artistic Identity", href: sharedAnchors.identity },
       { label: "Programs", href: sharedAnchors.programs },

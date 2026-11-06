@@ -66,6 +66,19 @@ for(const rec of [...manifest.routes,...addon.routes]){
 }
 const allPages=(function walk(path){return readdirSync(path,{withFileTypes:true}).flatMap((e)=>e.isDirectory()?walk(join(path,e.name)):(e.name==="index.html"?[join(path,e.name)]:[]));})(root);
 assert.equal(allPages.length,165,"Expected 21 native and 144 legacy routes");
+for (const [lang, path, label] of [
+  ["bg", "/bg/относно/камерен-оркестър-432/", "История"],
+  ["en", "/en/about/432-chamber-orchestra/", "History"]
+]) {
+  assert.ok(existsSync(join(root, path.slice(1), "index.html")), "History destination missing: " + path);
+  for (const page of [join(root, lang, "index.html"), join(root, path.slice(1), "index.html")]) {
+    const html = readFileSync(page, "utf8");
+    const navLinks = [...html.matchAll(new RegExp('<a\\b[^>]*href="' + path + '"[^>]*>\\s*' + label + '\\s*</a>', "g"))];
+    assert.equal(navLinks.length, 2, "History must be linked in desktop and mobile menus: " + page);
+    assert.ok(html.includes('max-h-[calc(100dvh-7rem)]'), "Mobile menu scroll safety missing: " + page);
+  }
+}
+
 console.log(JSON.stringify({gate:"FULL_LEGACY_PUBLIC_ROUTE_PARITY_PASS",historicalRoutesVerified:hit,
   allStaticPages:allPages.length,sourcePosts:source.posts.length,archivePages:imported.length,
   originalGalleryImages:galleryAssets.images.length,productImages:productAssets.images.length,
