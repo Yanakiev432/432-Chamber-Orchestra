@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LegacyWordPressPhotoGallery from "./LegacyWordPressPhotoGallery.astro";
+import curated from "../content/concertArchiveCurated.json";
+import { siteContent } from "../content/siteContent";
+import type { Language } from "../content/siteContent";
+
+type Album = "studio5" | "composers" | "concert";
+const { lang, album } = Astro.props as { lang: Language; album: Album };
+const bg = lang === "bg";
+const albums = {
+  studio5: {
+    title: { bg: "Студио 5, София — 13 март 2016 г.", en: "Studio 5, Sofia — 13 March 2016" },
+    intro: { bg: "Десет подбрани фотографии от концерта в Студио 5.", en: "Ten selected photographs from the concert at Studio 5." },
+    id: 1,
+    slug: "studio-5"
+  },
+  composers: {
+    title: { bg: "Съвременни български композитори", en: "Contemporary Bulgarian composers" },
+    intro: { bg: "Тридесет и две фотографии от концерт с произведения на съвременни български композитори.", en: "Thirty-two photographs from a concert featuring works by contemporary Bulgarian composers." },
+    id: 6,
+    slug: "bulgarian-composers"
+  },
+  concert: {
+    title: { bg: "Концертни фотографии", en: "Concert photographs" },
+    intro: { bg: "Дванадесет фотографии от концертна изява на Камерен оркестър 432.", en: "Twelve photographs from a performance by 432 Chamber Orchestra." },
+    id: null,
+    slug: "orchestra-concert"
+  }
+} as const;
+const item = albums[album];
+const path = `/${lang}/gallery/${item.slug}/`;
+const other = lang === "bg" ? "en" : "bg";
+const otherPath = `/${other}/gallery/${item.slug}/`;
+const copy = {
+  ...siteContent[lang],
+  meta: {
+    title: `${item.title[lang]} · ${bg ? "Камерен оркестър 432" : "432 Chamber Orchestra"}`,
+    description: item.intro[lang]
+  }
+};
+---
+<BaseLayout content={copy} lang={lang} canonicalHref={path} alternateHref={otherPath}>
+  <section class="border-b border-[#C7A76D]/25 bg-[#122B22] py-12 md:py-20">
+    <div class="container max-w-6xl">
+      <a href={`/${lang}/archive/`} class="text-sm text-[#C7A76D] underline decoration-[#C7A76D]/50 underline-offset-4">
+        {bg ? "Към фотоархива" : "Photo archive"}
+      </a>
+      <p class="mt-7 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{bg ? "Кадри от концертите" : "Concert photographs"}</p>
+      <h1 class="mt-4 max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] sm:text-5xl">{item.title[lang]}</h1>
+      <p class="mt-5 max-w-3xl text-base leading-8 text-[#D7CEBF]">{item.intro[lang]}</p>
+    </div>
+  </section>
+  {album === "concert" ? (
+    <section class="bg-[#091F19] py-12 md:py-20" aria-label={bg ? "Концертни фотографии" : "Concert photographs"}>
+      <div class="container max-w-6xl">
+        <div class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5">
+          {curated.photos.map((photo, index) => (
+            <a href={photo.src} target="_blank" rel="noopener noreferrer"
+              class="group block overflow-hidden border border-[#C7A76D]/20 bg-[#122B22]"
+              title={bg ? `Фотография ${index + 1}` : `Photograph ${index + 1}`}>
+              <img src={photo.src}
+                alt={bg ? `Камерен оркестър 432 — концертна фотография ${index + 1}` : `432 Chamber Orchestra — concert photograph ${index + 1}`}
+                class="aspect-[4/3] w-full object-cover transition duration-300 group-hover:scale-[1.025]"
+                loading="lazy" decoding="async" width="1600" height="900" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : (
+    <LegacyWordPressPhotoGallery lang={lang} albumId={item.id!} />
+  )}
+</BaseLayout>

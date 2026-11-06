@@ -183,7 +183,36 @@ for(const item of attachments.items.filter(x=>x.mediaMime==="audio/mpeg")){
 }
 const posterPage=readFileSync(join(root,"bg/event/концерт-на-квартет-от-камерен-оркестъ/index.html"),"utf8");
 assert.ok(posterPage.includes("/bg/event/концерт-на-квартет-от-камерен-оркестъ/афиш-чайната-fw-2/"),"Poster must link to concert");
-assert.equal(allPages.length,309,"Expected 21 curated, 144 legacy, 51 Gmedia, 26 taxonomy, 61 collection and six public media pages");
+const englishArchiveDirectory=readFileSync(join(root,"en/archive/index.html"),"utf8");
+assert.ok(!englishArchiveDirectory.includes(">Miryana Kalushkova<"),"Withdrawn archive tag must not appear in the public photo directory");
+const curatedConcert=read("src/content/concertArchiveCurated.json");
+assert.equal(curatedConcert.photos.length,12,"Only twelve new concert photos should be featured");
+assert.equal(new Set(curatedConcert.photos.map(x=>x.filename)).size,12);
+for(const picture of curatedConcert.photos){
+ const file=join(root,picture.src.slice(1));
+ assert.ok(existsSync(file),"Curated concert photo missing: "+picture.src);
+ const bytes=readFileSync(file);
+ assert.equal(bytes.length,picture.optimizedBytes,"Curated photo length differs: "+picture.filename);
+ assert.equal(createHash("sha256").update(bytes).digest("hex"),picture.optimizedSha256,"Curated photo SHA differs: "+picture.filename);
+}
+for(const lang of ["bg","en"]){
+ const archive=readFileSync(join(root,lang,"archive","index.html"),"utf8");
+ for(const album of ["studio-5","bulgarian-composers","orchestra-concert"]){
+  const path="/"+lang+"/gallery/"+album+"/";
+  assert.ok(archive.includes('href="'+path+'"'),"Concert album not linked from archive: "+path);
+  const htmlFile=join(root,lang,"gallery",album,"index.html");
+  assert.ok(existsSync(htmlFile),"Localized album page is missing: "+path);
+  const html=readFileSync(htmlFile,"utf8");
+  assert.ok(html.includes('content="noindex,nofollow"'),"Curated album must not index preview: "+path);
+ }
+ const concert=readFileSync(join(root,lang,"gallery","orchestra-concert","index.html"),"utf8");
+ assert.equal(curatedConcert.photos.filter(x=>concert.includes('src="'+x.src+'"')).length,12,"Concert photos not all visible: "+lang);
+ const studio=readFileSync(join(root,lang,"gallery","studio-5","index.html"),"utf8");
+ for(const picture of approvedStudio5)assert.ok(studio.includes(picture.src),"Studio 5 approved photo missing: "+lang);
+ for(const picture of rejectedStudio5)assert.ok(!studio.includes(picture.src),"Studio 5 excluded photo reappeared: "+lang);
+}
+assert.equal(allPages.length,315,"Expected 27 native, 144 legacy, 51 Gmedia, 26 taxonomy, 61 collection and 6 media pages");
+
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],
   ["en", "/en/about/432-chamber-orchestra/", "History"]

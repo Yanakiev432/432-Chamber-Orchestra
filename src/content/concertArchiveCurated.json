@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "dateUtc": "2026-11-06T17:15:40.310350+00:00",
+  "source": "public WordPress photo attachments, uploaded December 2016; concert date and venue not verified",
+  "editorialCategory": "Concert photographs — unconfirmed event metadata",
+  "approvedSourceFiles": [
+    "DSC_0431.jpg",
+    "DSC_0439.jpg",
+    "DSC_0444.jpg",
+    "DSC_0452.jpg",
+    "DSC_0456.jpg",
+    "DSC_0460.jpg",
+    "DSC_0467.jpg",
+    "DSC_0470.jpg",
+    "DSC_0474.jpg",
+    "DSC_0478.jpg",
+    "DSC_0484.jpg",
+    "DSC_0488.jpg"
+  ],
+  "photos": [
+    {
+      "source": "DSC_0431.jpg",
+      "src": "/archive/concert-2016/concert-0431.jpg",
+      "filename": "concert-0431.jpg",
+      "originalSha256": "5607b632212596fe741b4096e430be891a682d215d0eccbc8dd341f6bb95abe7",
+      "optimizedSha256": "eca5beb441628cdceb2f9b2fe2184db13a263947f9ba4523aff9ee6be6ce0314",
+      "optimizedBytes": 143128,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0439.jpg",
+      "src": "/archive/concert-2016/concert-0439.jpg",
+      "filename": "concert-0439.jpg",
+      "originalSha256": "f92beb0c2fc75b935600df4dbf4607e0e073a4082215722027b0ccbc6b96f288",
+      "optimizedSha256": "f606108e0dbe78a694bffce20b8c4334573560863fab468a6e145f55ef9a7191",
+      "optimizedBytes": 184646,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0444.jpg",
+      "src": "/archive/concert-2016/concert-0444.jpg",
+      "filename": "concert-0444.jpg",
+      "originalSha256": "123a08874c6be7eefd13775af018e4a212ab3a1c94ca9119b84b17451b70dd53",
+      "optimizedSha256": "1be80d14d68f705daa6d4496d6f23a910cbdb8a76eb3682173dd7a22339419a9",
+      "optimizedBytes": 167678,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0452.jpg",
+      "src": "/archive/concert-2016/concert-0452.jpg",
+      "filename": "concert-0452.jpg",
+      "originalSha256": "0aff1f3f56f27946c31d70ce346dde01008c03231e683dbfe8b05569905d5722",
+      "optimizedSha256": "6c49583d970af773a0e0dad6616c2f9743a20414b926c081df0a32740440629f",
+      "optimizedBytes": 154099,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0456.jpg",
+      "src": "/archive/concert-2016/concert-0456.jpg",
+      "filename": "concert-0456.jpg",
+      "originalSha256": "e07da42450d37dc0f52ffd95d56339cb7540756d3ea9532f9463370611f5e485",
+      "optimizedSha256": "2cf67b315d0f42593eac3fabf76d664c36be7168e001bc307200ed879f2429fe",
+      "optimizedBytes": 136106,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0460.jpg",
+      "src": "/archive/concert-2016/concert-0460.jpg",
+      "filename": "concert-0460.jpg",
+      "originalSha256": "3f2507af3d3528eb282c937e42f3c3a26fc35f4a0a30c0452f5a2b0fd4b3e7de",
+      "optimizedSha256": "b0d84566f79c6e8a9ee9a0fb560deb4dfac54205b0cad2abac8793b65612767f",
+      "optimizedBytes": 146039,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0467.jpg",
+      "src": "/archive/concert-2016/concert-0467.jpg",
+      "filename": "concert-0467.jpg",
+      "originalSha256": "b45216a5c807a5fe23c4856badc3af889c6a5dce975dcde6486b0449765a7646",
+      "optimizedSha256": "89cae6cfc9eb1ce4e012b7f742e28769971eff119936c795c6b82c0d96060845",
+      "optimizedBytes": 153399,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0470.jpg",
+      "src": "/archive/concert-2016/concert-0470.jpg",
+      "filename": "concert-0470.jpg",
+      "originalSha256": "575c63b18bf57bffed11b273ab58a60f039802852910da7479f50c3afe3739dc",
+      "optimizedSha256": "acd7f13d7771caac46be70f96e4843d6188c4ca01aed6980d7d1ba76ad2392ea",
+      "optimizedBytes": 164916,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0474.jpg",
+      "src": "/archive/concert-2016/concert-0474.jpg",
+      "filename": "concert-0474.jpg",
+      "originalSha256": "a02fef7f91d3e11b7f03b3c952adc390e945740ad706cdaa290bf13eaf87956f",
+      "optimizedSha256": "224048b568b772c14f6266f248cfe3cadd777b20035e3ea09d87a6a733a16780",
+      "optimizedBytes": 160979,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0478.jpg",
+      "src": "/archive/concert-2016/concert-0478.jpg",
+      "filename": "concert-0478.jpg",
+      "originalSha256": "1c88270c38bf457e41f74e5b88f2f73f48f6ddbd2c08c357de6b6a3e2fd2bb79",
+      "optimizedSha256": "9f97501df9ad058305de0d635506b1748c1585148f8b6a4901fb06eac4323c43",
+      "optimizedBytes": 154564,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0484.jpg",
+      "src": "/archive/concert-2016/concert-0484.jpg",
+      "filename": "concert-0484.jpg",
+      "originalSha256": "22429f9a1209f2c9b392ba4eda91271ec28c18425b474d7cf35190568239d4ee",
+      "optimizedSha256": "f62ad71b73e93d817372c09f0480f8872fb3bf19bfa8237ecc2f557cb2dddb84",
+      "optimizedBytes": 154261,
+      "dimensions": "1600x900"
+    },
+    {
+      "source": "DSC_0488.jpg",
+      "src": "/archive/concert-2016/concert-0488.jpg",
+      "filename": "concert-0488.jpg",
+      "originalSha256": "4aa27bba1894740eb1865344ba853b4df6bb7e6505bb98dfd7b7296acb1f55c2",
+      "optimizedSha256": "f9272589e25788e19c77cbc45e484c572d96344d59580a254bef6931d4964a06",
+      "optimizedBytes": 131097,
+      "dimensions": "1600x900"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ const groups = [
   { kind: "page", name: bg ? "Страници и история" : "Pages and history", note: bg ? "Биографии, концертни програми, видео и документи" : "Biographies, concert programmes, video and documents" },
   { kind: "taxonomy", name: bg ? "Категории и тематични архиви" : "Categories and topical archives", note: bg ? "Каталогизиране по жанрове и репертоар" : "Catalogue classifications by repertoire and genre" }
 ] as const;
-const items = archive.items.filter((item) => item.language === lang && !item.dynamicWordPress && (item.kind !== "event_view" || item.path === "/"+lang+"/events/"));
+const items = archive.items.filter((item) => item.language === lang && !item.dynamicWordPress && !/\/blog\/tag\/miryana-kalushkova\/$/i.test(item.path) && (item.kind !== "event_view" || item.path === "/"+lang+"/events/"));
 const sections = groups.map((group) => ({...group, items: items.filter((item) => item.kind === group.kind)})).filter((group) => group.items.length);
 
 ---

@@ -4,7 +4,7 @@
   "mode": "observed read-only public URL inventory; not exhaustive dynamic URL enumeration",
   "source": "WordPress sitemap + verified public HTML graph + attachment permalinks",
   "verifiedSourcePaths": 636,
-  "staticAstroPages": 309,
+  "staticAstroPages": 315,
   "sourcePathsMatched": 275,
   "sourcePathsStillMissing": 361,
   "newHistoricalRoutes": 144,
@@ -44,5 +44,22 @@
   "publicGalleryImages": 43,
   "restoredVerifiedPublicMediaAttachments": 6,
   "localPublicAudioExamples": 4,
-  "localPublicAudioBytes": 66123607
+  "localPublicAudioBytes": 66123607,
+  "newNativeCuratedGalleryPages": 6,
+  "curatedAlbumPhotoCounts": {
+    "studio5": 10,
+    "bulgarianComposers": 32,
+    "concertDocumentary": 12
+  },
+  "newlyPublishedOptimizedConcertPhotos": 12,
+  "newConcertPhotoSource": "Original December 2016 WordPress DSC_* attachment series; event date and venue not confirmed",
+  "sourceWordPressMediaAudit": {
+    "total": 353,
+    "imageJpeg": 192,
+    "imagePng": 15,
+    "audioWav": 109,
+    "audioMp3": 37,
+    "withoutParent": 347
+  },
+  "curationCaveat": "Six new pages are editorial navigational pages, not additional legacy WordPress addresses. Public source route coverage therefore remains 275/636. A separate series of 12 concert photos is visually confirmed but its exact performance has not been identified."
 }

@@ -1,0 +1,55 @@
+---
+import gallery from "../content/legacyGallery.json";
+import studioSelection from "../content/studio5PhotoSelection.json";
+import concertArchive from "../content/concertArchiveCurated.json";
+import type { Language } from "../content/siteContent";
+
+const { lang } = Astro.props as { lang: Language };
+const bg = lang === "bg";
+const studio5 = gallery.albums.find((a) => a.id === studioSelection.albumId);
+const composers = gallery.albums.find((a) => a.id === 6);
+if (!studio5 || !composers || studio5.images.length !== 23 || composers.images.length !== 32) {
+  throw new Error("Historical archive photograph grouping changed");
+}
+const features = [
+  {
+    path: `/${lang}/gallery/studio-5/`,
+    image: studio5.images[studioSelection.keptPositions[0] - 1].src,
+    title: bg ? "Студио 5, София" : "Studio 5, Sofia",
+    detail: bg ? "13 март 2016 г. · 10 фотографии" : "13 March 2016 · 10 photographs",
+    alt: bg ? "Камерен оркестър 432 — концерт в Студио 5" : "432 Chamber Orchestra — Studio 5 concert"
+  },
+  {
+    path: `/${lang}/gallery/bulgarian-composers/`,
+    image: composers.images[0].src,
+    title: bg ? "Съвременни български композитори" : "Contemporary Bulgarian composers",
+    detail: bg ? "32 фотографии" : "32 photographs",
+    alt: bg ? "Камерен оркестър 432 — българска музика" : "432 Chamber Orchestra — Bulgarian music"
+  },
+  {
+    path: `/${lang}/gallery/orchestra-concert/`,
+    image: concertArchive.photos.find((p) => p.filename === "concert-0460.jpg")?.src,
+    title: bg ? "Концертни фотографии" : "Concert photographs",
+    detail: bg ? "12 фотографии" : "12 photographs",
+    alt: bg ? "Камерен оркестър 432 по време на концерт" : "432 Chamber Orchestra in concert"
+  }
+];
+if (features.some((x) => !x.image)) throw new Error("A curated album cover is missing");
+---
+<section id="concert-albums" class="border-t border-[#C7A76D]/25 bg-[#091F19] py-14 md:py-20">
+  <div class="container">
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{bg ? "Фотоархив" : "Photo archive"}</p>
+    <h2 class="mt-4 font-serif text-3xl text-[#F0E8D9] md:text-4xl">{bg ? "Концертни албуми" : "Concert albums"}</h2>
+    <div class="mt-9 grid gap-5 md:grid-cols-3">
+      {features.map((item) => (
+        <a href={item.path} class="group overflow-hidden border border-[#C7A76D]/25 bg-[#122B22] transition hover:border-[#C7A76D]">
+          <img src={item.image} alt={item.alt} class="aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async" />
+          <div class="p-5">
+            <h3 class="font-serif text-xl leading-7 text-[#F0E8D9]">{item.title}</h3>
+            <p class="mt-3 text-sm text-[#C7A76D]">{item.detail}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
