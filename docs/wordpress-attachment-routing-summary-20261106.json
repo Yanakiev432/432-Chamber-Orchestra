@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "asOf": "2026-11-06",
+  "origin": "432hz-orchestra.com",
+  "attachmentPermalinks": 353,
+  "alreadyRestoredExactRoutes": 6,
+  "notYetMigratedAttachmentPermalinks": 347,
+  "confidenceCounts": {
+    "high": 32,
+    "low": 194,
+    "verified": 6,
+    "medium": 121
+  },
+  "categoryCounts": {
+    "branding-asset": 8,
+    "other-unclassified-visual-asset": 13,
+    "uncurated-or-person-specific-archive-image": 39,
+    "studio5-selected-photo-album": 10,
+    "studio5-edited-photo-album": 14,
+    "restored-exact-historical-media-page": 6,
+    "audio-attachment-requires-rights-and-product-check": 142,
+    "new-curated-concert-photo": 12,
+    "other-photo-same-concert-series": 41,
+    "bulgarian-composer-concert-photo": 68
+  },
+  "sourceVerification": "All 353 WordPress attachment endpoints returned HTTP 200 during original read-only probe.",
+  "recommendation": "Do not publish hundreds of empty attachment pages. Use high-confidence redirects to curated albums when authorized for cutover; keep low-confidence audio and uncurated photos under review. Original WordPress production stays live.",
+  "noProductionChanges": true,
+  "userExcludedStudio5Photos": 13,
+  "additionalConcertPhotoPendingReview": 1,
+  "verifiedRedirectTargetsExisting": 353,
+  "proposalsDeployed": 0,
+  "reviewRequired": 249,
+  "automaticCutoverApproved": false
+}

@@ -61,5 +61,15 @@
     "audioMp3": 37,
     "withoutParent": 347
   },
-  "curationCaveat": "Six new pages are editorial navigational pages, not additional legacy WordPress addresses. Public source route coverage therefore remains 275/636. A separate series of 12 concert photos is visually confirmed but its exact performance has not been identified."
+  "curationCaveat": "Six new pages are editorial navigational pages, not additional legacy WordPress addresses. Public source route coverage therefore remains 275/636. A separate series of 12 concert photos is visually confirmed but its exact performance has not been identified.",
+  "attachmentRedirectPlanning": {
+    "sourcePermalinksVerified": 353,
+    "existingStaticAttachmentPages": 6,
+    "redirectCandidates": 347,
+    "targetsFoundInAstro": 353,
+    "humanReviewRequired": 249,
+    "redirectsDeployed": 0,
+    "productionCutoverAuthorized": false,
+    "privateAudit": "Stored in the restricted local audit directory; not published or committed."
+  }
 }
