@@ -35,7 +35,18 @@ const htmlUrls = htmlFiles.map((file) => {
   return new URL(path, origin).href;
 });
 assert.deepEqual(new Set(sitemapUrls), new Set(htmlUrls), "Sitemap must match the actual static pages.");
-assert.ok(robots.includes("Sitemap: " + origin + "/sitemap.xml"), "Robots must advertise an absolute sitemap URL.");
+const previewMode = process.env.PUBLIC_PREVIEW_MODE === "true";
+if (previewMode) {
+  assert.ok(robots.includes("Disallow: /"), "Preview robots must disallow crawling.");
+  assert.ok(!robots.includes("Sitemap:"), "Isolated preview must not advertise a sitemap.");
+  for (const file of htmlFiles) {
+    assert.ok(readFileSync(file, "utf8").includes('content="noindex,nofollow"'),
+      "Preview page is indexable: " + file);
+  }
+} else {
+  assert.ok(robots.includes("Sitemap: " + origin + "/sitemap.xml"),
+    "Production robots must advertise an absolute sitemap URL.");
+}
 
 for (const lang of ["bg", "en"]) {
   const other = lang === "bg" ? "en" : "bg";

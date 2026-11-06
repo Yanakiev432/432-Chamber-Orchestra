@@ -287,7 +287,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "История",
       heading: "История на оркестъра",
       paragraphs: [
-        "Камерен оркестър 432 възниква в София като независим струнен състав. Още в първите години от дейността му концертният строй A=432 Hz е предмет на изпълнителски опити, свързани с интерпретацията на музикални произведения.",
+        "Камерен оркестър 432 възниква в София като независим струнен състав. Още в първите години от дейността му концертният строй a¹ = 432 Hz е предмет на изпълнителски опити, свързани с интерпретацията на музикални произведения.",
         "На 18 май 2015 г. съставът изнася дебютния си концерт в Първо студио на Българското национално радио. Следва отличието в категория „Дебют“ на „Музикант на годината 2015“. На 13 юли 2017 г. в Големия салон на БАН е представена програмата „Български съвременници в 432 Hz“, за която Милена Божикова публикува рецензия във вестник „Дума“.",
         "Защитената през 2020 г. дисертация на Иван Янакиев разглежда впоследствие част от натрупания опит в по-широка научна перспектива: история на концертния строй, модели на музикални темперации и изследвания на слуховото възприятие. Оркестровата дейност предхожда този труд и не произтича от него.",
         "Концертните програми, рецензиите, фотографиите и записите образуват документалния архив на състава."
@@ -366,7 +366,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       paragraphs: [
         "Иван Янакиев е основател на 432 Chamber Orchestra.",
         "Диригентската му работа е свързана с интерпретацията на струнния репертоар и с акустичните и музикално-теоретичните въпроси, които възникват в изпълнителската практика.",
-        "Работи в Института по механика на БАН. Научните му занимания са свързани с музикалната теория и изследването на музикалния звук; през 2020 г. защитава дисертация за концертния строй A=432 Hz и отворените квинти.",
+        "Работи в Института по механика на БАН. Научните му занимания са свързани с музикалната теория и изследването на музикалния звук; през 2020 г. защитава дисертация за концертния строй a¹ = 432 Hz и отворените квинти.",
         "Оркестърът е създаден преди защитата на дисертацията. Неговата история е засвидетелствана от концертни програми, записи и публикации от предходните години."
       ]
     },
@@ -446,9 +446,9 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Акустична концепция",
       heading: "Концертен строй, темперация и интонация",
       paragraphs: [
-        "Референтната височина A=432 Hz не определя автоматично темперацията или интонацията в изпълнението. Това са различни понятия, разграничени и изследвани в дисертацията от 2020 г.",
+        "Референтната височина a¹ = 432 Hz не определя автоматично темперацията или интонацията в изпълнението. Това са различни понятия, разграничени и изследвани в дисертацията от 2020 г.",
         "Практиката на оркестъра съществува отпреди изследването. В по-късната научна работа са разработени математически модели и сравнителни звукови примери, включително за темперациите на Мария Ренолд. Това не означава, че клавирната темперация „Отворени квинти“ е използвана във всеки оркестров концерт.",
-        "Участниците в някои експерименти описват осезаеми различия между A=432 Hz и A=440 Hz, но не показват единодушно предпочитание."
+        "Участниците в някои експерименти описват осезаеми различия между a¹ = 432 Hz и a¹ = 440 Hz, но не показват единодушно предпочитание."
       ],
       disclaimer: "Не се твърдят универсални медицински, терапевтични или лечебни свойства на 432 Hz."
     },
@@ -740,7 +740,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "History",
       heading: "History of the orchestra",
       paragraphs: [
-        "432 Chamber Orchestra was established in Sofia as an independent string ensemble. From its early years, the musicians explored the concert pitch A=432 Hz through the interpretation of individual musical works.",
+        "432 Chamber Orchestra was established in Sofia as an independent string ensemble. From its early years, the musicians explored the concert pitch a¹ = 432 Hz through the interpretation of individual musical works.",
         "The ensemble made its debut on 18 May 2015 in Studio 1 of Bulgarian National Radio and subsequently received the Debut distinction at Musician of the Year 2015. On 13 July 2017, it presented Bulgarian Contemporaries at 432 Hz in the Great Hall of the Bulgarian Academy of Sciences; the concert was reviewed by Milena Bozhikova in Duma.",
         "Ivan Yanakiev's dissertation, defended in 2020, subsequently placed aspects of this experience in a broader scholarly context: the history of concert pitch, models of musical temperament, and studies of auditory perception. The orchestra's activity preceded the dissertation and did not arise from it.",
         "Concert programmes, reviews, photographs and recordings constitute the documentary record of the ensemble."
@@ -819,7 +819,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       paragraphs: [
         "Ivan Yanakiev is the founder of 432 Chamber Orchestra.",
         "His conducting centres on the interpretation of string repertoire and on the acoustic and theoretical questions arising from musical performance.",
-        "He works at the Institute of Mechanics of the Bulgarian Academy of Sciences. His research addresses music theory and musical acoustics; in 2020 he defended a dissertation on the concert pitch A=432 Hz and open fifths.",
+        "He works at the Institute of Mechanics of the Bulgarian Academy of Sciences. His research addresses music theory and musical acoustics; in 2020 he defended a dissertation on the concert pitch a¹ = 432 Hz and open fifths.",
         "The orchestra was founded before the dissertation was completed. Its earlier history is documented through concert programmes, recordings and contemporary publications."
       ]
     },
@@ -894,9 +894,9 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Acoustic concept",
       heading: "Concert pitch, temperament and intonation",
       paragraphs: [
-        "A=432 Hz sets a reference pitch. It does not automatically determine the temperament or intonation of a performance. These concepts are distinguished in the 2020 dissertation.",
+        "a¹ = 432 Hz sets a reference pitch. It does not automatically determine the temperament or intonation of a performance. These concepts are distinguished in the 2020 dissertation.",
         "The orchestra's practice existed before this research. The later dissertation develops mathematical models and comparative sound examples, including Maria Renold's temperaments. This does not mean that the Open Fifths keyboard temperament was applied to every orchestral concert.",
-        "Participants in some experiments reported perceptible differences between A=432 Hz and A=440 Hz, but not a unanimous preference."
+        "Participants in some experiments reported perceptible differences between a¹ = 432 Hz and a¹ = 440 Hz, but not a unanimous preference."
       ],
       disclaimer: "No universal medical, therapeutic or healing properties of 432 Hz are claimed."
     },

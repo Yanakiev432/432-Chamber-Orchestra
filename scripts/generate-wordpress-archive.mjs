@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from "node:fs";
+import { canonicalPitch } from "./concert-pitch-standard.mjs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 // Export contains exclusively public WordPress posts, products and taxonomy records.
@@ -199,6 +200,11 @@ for (const row of eventSource.routes) {
 }
 if (items.length !== 144 || new Set(items.map((r) => r.path.toLowerCase())).size !== 144)
   throw new Error("FULL_PUBLIC_ARCHIVE_ROUTE_PARITY_FAILED");
+// Normalization is applied to publication text, never to source snapshots or canonical URLs.
+for (const item of items) {
+  item.title = canonicalPitch(item.title);
+  item.paragraphs = item.paragraphs.map(canonicalPitch);
+}
 const target = resolve(base, "src/content/legacyArchive.json");
 writeFileSync(target, JSON.stringify({version:1, capturedUtc:snapshot.capturedUtc, items}, null, 2) + "\n", "utf8");
 const kinds = Object.fromEntries(["page","post","product","taxonomy"].map((k) => [k, items.filter((x) => x.kind === k).length]));

@@ -8,7 +8,7 @@ export const mediaArchiveCopy = {
     ],
     soundcloudHeading: "SoundCloud слушателски архив",
     soundcloudText: [
-      "Основният архив за слушане е в SoundCloud. Той включва сравнителните материали A=440 / A=432, Холберг сюитата, записи от концерти и репетиционни откъси от предишния живот на 432 Chamber Orchestra.",
+      "Основният архив за слушане е в SoundCloud. Той включва сравнителните материали a¹ = 440 Hz / a¹ = 432 Hz, Холберг сюитата, записи от концерти и репетиционни откъси от предишния живот на 432 Chamber Orchestra.",
       "Тези записи са представени като архивно свидетелство: начин да се чуе предишната работа на оркестъра преди първия нов документиран резултат."
     ],
     bandcampHeading: "Bandcamp архив и покупки",
@@ -24,7 +24,7 @@ export const mediaArchiveCopy = {
     listenOnSoundCloud: "Слушайте в SoundCloud",
     sourceLabel: "Източник",
     featuredLabel: "Водещ Bandcamp запис",
-    comparisonTitle: "Сравнение за слушане: A=440 / A=432",
+    comparisonTitle: "Сравнение за слушане: a¹ = 440 Hz / a¹ = 432 Hz",
     comparisonNote:
       "Това сравнение е представено като архивна слушателска референция. То не представлява научно, медицинско, терапевтично или лечебно твърдение.",
     holbergLabel: "Водещ архивен запис",
@@ -41,7 +41,7 @@ export const mediaArchiveCopy = {
     ],
     soundcloudHeading: "SoundCloud listening archive",
     soundcloudText: [
-      "The primary listening archive is on SoundCloud. It includes the A=440 / A=432 comparison material, the Holberg Suite, concert recordings, and rehearsal excerpts from the earlier life of 432 Chamber Orchestra.",
+      "The primary listening archive is on SoundCloud. It includes the a¹ = 440 Hz / a¹ = 432 Hz comparison material, the Holberg Suite, concert recordings, and rehearsal excerpts from the earlier life of 432 Chamber Orchestra.",
       "These recordings are presented as legacy evidence: a way to hear the orchestra's previous work before the first new documented output."
     ],
     bandcampHeading: "Bandcamp archive and purchases",
@@ -57,7 +57,7 @@ export const mediaArchiveCopy = {
     listenOnSoundCloud: "Listen on SoundCloud",
     sourceLabel: "Source",
     featuredLabel: "Featured Bandcamp recording",
-    comparisonTitle: "A=440 / A=432 listening comparison",
+    comparisonTitle: "a¹ = 440 Hz / a¹ = 432 Hz listening comparison",
     comparisonNote:
       "This comparison is presented as an archive listening reference. It is not a scientific, medical, therapeutic, or healing claim.",
     holbergLabel: "Featured legacy recording",
@@ -81,8 +81,8 @@ export const audioArchive = {
       url: "https://soundcloud.com/ivan-yanakiev/sets/grieg-edward-suite-aus-holbergs-zeit-op-40-432-chamber-orchestra-yanakiev"
     },
     comparison: {
-      title: "A=440 / A=432 listening comparison",
-      titleBg: "Сравнение за слушане: A=440 / A=432",
+      title: "a¹ = 440 Hz / a¹ = 432 Hz listening comparison",
+      titleBg: "Сравнение за слушане: a¹ = 440 Hz / a¹ = 432 Hz",
       type: "playlist",
       url: "https://soundcloud.com/ivan-yanakiev/sets/440-vs-432-432-research-project",
       note: {
