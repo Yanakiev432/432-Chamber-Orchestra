@@ -17,6 +17,7 @@ const routes = [
   "/en/gallery/bulgarian-composers/",
   "/bg/gallery/orchestra-concert/",
   "/en/gallery/orchestra-concert/",
+  "/en/афиш-чайната-fw/",
   "/bg/recordings/",
   "/en/recordings/",
   "/bg/donation-certificate/",

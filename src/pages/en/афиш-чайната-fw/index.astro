@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { siteContent } from "../../../content/siteContent";
+const content = {
+  ...siteContent.en,
+  meta: {
+    title: "Concert poster — Quartet of 432 Chamber Orchestra",
+    description: "Poster from the historical concert of a quartet from 432 Chamber Orchestra."
+  }
+};
+---
+<BaseLayout content={content} lang="en" canonicalHref="/en/афиш-чайната-fw/" alternateHref={null}>
+  <section class="bg-[#122B22] py-12 md:py-20">
+    <div class="container max-w-5xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">Concert archive</p>
+      <h1 class="mt-5 max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] sm:text-5xl">
+        Quartet of 432 Chamber Orchestra — concert poster
+      </h1>
+      <p class="mt-5 max-w-3xl text-base leading-8 text-[#D7CEBF]">
+        Poster from a concert featuring a quartet of 432 Chamber Orchestra.
+      </p>
+    </div>
+  </section>
+  <section class="bg-[#091F19] py-12 md:py-20">
+    <div class="container max-w-4xl">
+      <img src="/legacy-media/wp-event-fw.png" alt="Original concert poster for a quartet of 432 Chamber Orchestra" class="mx-auto block max-h-[850px] max-w-full object-contain" loading="eager" decoding="async" />
+      <a href="/en/event/concert-quartet-432-chamber-orcehstra/"
+        class="mt-8 inline-flex border-b border-[#C7A76D] pb-1 text-[#F0E8D9] hover:text-[#C7A76D]">
+        Concert information
+      </a>
+    </div>
+  </section>
+</BaseLayout>

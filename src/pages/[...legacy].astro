@@ -82,7 +82,7 @@ const historicConcertPoster = record.kind === "event" && record.id === 316;
           ) : (
             <>
               {displayed.map((paragraph) => <p class="whitespace-pre-line break-words text-base leading-8 text-[#D7CEBF]">{paragraph}</p>)}
-              {displayed.length === 0 && <p class="text-base leading-8 text-[#D7CEBF]">{bg
+              {displayed.length === 0 && !video && <p class="text-base leading-8 text-[#D7CEBF]">{bg
                 ? "Разгледайте свързаните публикации, фотографии и записи от историята на оркестъра."
                 : "Explore related articles, photographs and recordings from the orchestra’s history."}</p>}
             </>

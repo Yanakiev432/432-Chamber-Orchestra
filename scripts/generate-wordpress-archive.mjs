@@ -81,7 +81,7 @@ function paras(body) {
     .replace(/<style\b[\s\S]*?<\/style\s*>/gi, "")
     .replace(/<iframe\b[\s\S]*?<\/iframe\s*>/gi, "")
     .replace(/<form\b[\s\S]*?<\/form\s*>/gi, "")
-    .replace(/\[(?:\/)?(?:bandcamp|contact-form|contact-field|gmedia|products|gallery|woocommerce|product_page)[^\]]*\]/gi, "")
+    .replace(/\[(?:\/)?(?:bandcamp|soundcloud|caption|video_gallery|video_grid|contact-form|contact-field|gmedia|products|gallery|woocommerce|product_page|download_checkout|edd_receipt|purchase_history)[^\]]*\]/gi, "")
     .replace(/<br\s*\/?>/gi, "\n").replace(/<li\b[^>]*>/gi, "\n• ")
     .replace(/<\/(?:p|li|div|h[1-6]|blockquote|ul|ol|table|tr|section)\s*>/gi, "\n\n")
     .replace(/<[^>]*>/g, "").replace(/\r\n?/g, "\n"))).split(/\n{2,}/)

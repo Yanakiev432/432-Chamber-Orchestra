@@ -3,21 +3,21 @@
   "asOf": "2026-11-06",
   "origin": "432hz-orchestra.com",
   "attachmentPermalinks": 353,
-  "alreadyRestoredExactRoutes": 6,
-  "notYetMigratedAttachmentPermalinks": 347,
+  "alreadyRestoredExactRoutes": 7,
+  "notYetMigratedAttachmentPermalinks": 346,
   "confidenceCounts": {
     "high": 32,
-    "low": 194,
-    "verified": 6,
+    "low": 193,
+    "verified": 7,
     "medium": 121
   },
   "categoryCounts": {
     "branding-asset": 8,
-    "other-unclassified-visual-asset": 13,
+    "other-unclassified-visual-asset": 12,
     "uncurated-or-person-specific-archive-image": 39,
     "studio5-selected-photo-album": 10,
     "studio5-edited-photo-album": 14,
-    "restored-exact-historical-media-page": 6,
+    "restored-exact-historical-media-page": 7,
     "audio-attachment-requires-rights-and-product-check": 142,
     "new-curated-concert-photo": 12,
     "other-photo-same-concert-series": 41,
@@ -30,6 +30,7 @@
   "additionalConcertPhotoPendingReview": 1,
   "verifiedRedirectTargetsExisting": 353,
   "proposalsDeployed": 0,
-  "reviewRequired": 249,
-  "automaticCutoverApproved": false
+  "reviewRequired": 248,
+  "automaticCutoverApproved": false,
+  "lastRestoredHistoricPosterPath": "/en/афиш-чайната-fw/"
 }

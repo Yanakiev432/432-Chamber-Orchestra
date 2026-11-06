@@ -82,4 +82,4 @@ const gmediaCount = JSON.parse(readFileSync(resolve("src/content/legacyGmediaRou
 const taxonomyCount = JSON.parse(readFileSync(resolve("src/content/legacyTaxonomyRoutes.json"), "utf8")).items.length;
 const extendedCount = JSON.parse(readFileSync(resolve("src/content/legacyExtendedRoutes.json"), "utf8")).items.length;
 const attachmentCount = JSON.parse(readFileSync(resolve("src/content/legacyFeaturedAttachments.json"), "utf8")).items.length;
-if (pages.length !== 27 + migratedCount + gmediaCount + taxonomyCount + extendedCount + attachmentCount || failures.length) process.exitCode = 2;
+if (pages.length !== 28 + migratedCount + gmediaCount + taxonomyCount + extendedCount + attachmentCount || failures.length) process.exitCode = 2;

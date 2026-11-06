@@ -28,6 +28,11 @@ assert.equal(imported.filter((x)=>x.dynamicWordPress).length,9);
 const withdrawnMaterial = /until now soloists of the ensemble|до момента солисти на камерен оркестър\s*432|ivaylo donkov|ивайло донков|operamusica\.com\/artist\/miryana-?kalushkova/i;
 assert.ok(!withdrawnMaterial.test(JSON.stringify(imported)),
   "Withdrawn EN/BG historical soloists passage or its external source is present in the public archive");
+const bannedShortcode=/(?:\[|&#91;)(?:\/)?(?:bandcamp|soundcloud|caption|video_gallery|video_grid|contact-form|contact-field|gmedia|products|gallery|woocommerce|product_page|download_checkout|edd_receipt|purchase_history)\b/i;
+for(const item of imported){
+ assert.ok(!item.paragraphs.some(paragraph=>bannedShortcode.test(paragraph)),
+  "Unrendered WordPress shortcode in visible historical text: "+item.path);
+}
 const audioEmbeds=imported.flatMap((x)=>x.audioEmbeds || []);
 assert.equal(audioEmbeds.length,10,"Expected ten historical audio player embeds");
 assert.equal(audioEmbeds.filter((x)=>x.service==="bandcamp").length,8);
@@ -96,6 +101,19 @@ for (const file of allPages) {
   assert.ok(!/\bWordPress\b|\bplugin\b|\bmetadata\b|плъгин|метаданни|Until now soloists|До момента солисти/i.test(visible),
     "Technical or withdrawn wording is visible to concert audiences: "+file);
 }
+for(const pagePath of ["en/about/432-chamber-orchestra","bg/относно/камерен-оркестър-432"]){
+ const html=readFileSync(join(root,pagePath,"index.html"),"utf8");
+ assert.ok(!bannedShortcode.test(html),"Shortcode visible in historical orchestra presentation: "+pagePath);
+ assert.ok(html.includes("w.soundcloud.com/player/"),"Historic SoundCloud playlist missing: "+pagePath);
+}
+for(const pagePath of ["en/video-gallery","en/video-grid-gallery"]){
+ const html=readFileSync(join(root,pagePath,"index.html"),"utf8");
+ assert.ok(!bannedShortcode.test(html),"Video gallery shortcode visible: "+pagePath);
+ assert.ok(html.includes("youtube-nocookie.com/embed/"),"Historic video gallery is missing: "+pagePath);
+}
+const founderBio=readFileSync(join(root,"bg/относно/иван-янакиев/index.html"),"utf8");
+assert.ok(!bannedShortcode.test(founderBio),"Caption shortcode visible in founder biography");
+assert.ok(founderBio.includes("Основателят на Камерен оркестър 432"),"Historic founder photograph caption disappeared");
 const gmedia = read("src/content/legacyGmediaRoutes.json");
 assert.equal(gmedia.items.length,51,"Expected exactly 51 public Gmedia routes after Studio 5 curation");
 assert.equal(gmedia.items.filter(x=>x.kind==="gmedia_photo").length,43);
@@ -211,7 +229,12 @@ for(const lang of ["bg","en"]){
  for(const picture of approvedStudio5)assert.ok(studio.includes(picture.src),"Studio 5 approved photo missing: "+lang);
  for(const picture of rejectedStudio5)assert.ok(!studio.includes(picture.src),"Studio 5 excluded photo reappeared: "+lang);
 }
-assert.equal(allPages.length,315,"Expected 27 native, 144 legacy, 51 Gmedia, 26 taxonomy, 61 collection and 6 media pages");
+const historicEnglishPoster=join(root,"en/афиш-чайната-fw/index.html");
+assert.ok(existsSync(historicEnglishPoster),"Public historic concert poster page missing");
+const posterHtml=readFileSync(historicEnglishPoster,"utf8");
+assert.ok(posterHtml.includes("src=\"/legacy-media/wp-event-fw.png\""),"Concert poster image missing");
+assert.ok(posterHtml.includes('href="/en/event/concert-quartet-432-chamber-orcehstra/"'),"Poster not linked to English concert");
+assert.equal(allPages.length,316,"Expected 28 native, 144 legacy, 51 Gmedia, 26 taxonomy, 61 collection and 6 media pages");
 
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],
