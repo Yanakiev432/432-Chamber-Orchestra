@@ -12,12 +12,13 @@ type Props = {
   content: Copy;
   lang: Language;
   canonicalHref?: string;
-  alternateHref?: string;
+  alternateHref?: string | null;
 };
 
 const { content, lang, canonicalHref, alternateHref } = Astro.props;
 const canonical = canonicalHref ?? (lang === "bg" ? "/bg/" : "/en/");
 const alternate = alternateHref ?? content.alternateHref;
+const seoAlternate = alternateHref === null ? null : alternate;
 ---
 
 <!doctype html>
@@ -25,7 +26,7 @@ const alternate = alternateHref ?? content.alternateHref;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <Seo title={content.meta.title} description={content.meta.description} canonicalHref={canonical} alternateHref={alternate} lang={lang} />
+    <Seo title={content.meta.title} description={content.meta.description} canonicalHref={canonical} alternateHref={seoAlternate} lang={lang} />
     <link rel="icon" href={brandAssets.favicon} type="image/svg+xml" />
   </head>
   <body class="bg-brand-bg text-brand-text">

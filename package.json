@@ -18,7 +18,8 @@
     "cutover:gate": "node scripts/check-cutover-readiness.mjs --mode=replace",
     "preview:gate": "node scripts/check-cutover-readiness.mjs --mode=preview",
     "links:validate": "node scripts/validate-static-links.mjs",
-    "photos:validate": "node scripts/validate-photo-selection.mjs"
+    "photos:validate": "node scripts/validate-photo-selection.mjs",
+    "legacy:validate": "node scripts/validate-legacy-parity.mjs"
   },
   "dependencies": {
     "astro": "^5.13.8"

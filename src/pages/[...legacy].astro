@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LegacyWordPressPhotoGallery from "../components/LegacyWordPressPhotoGallery.astro";
+import LegacyWordPressVideoGallery from "../components/LegacyWordPressVideoGallery.astro";
+import { siteContent } from "../content/siteContent";
+import legacy from "../content/legacyArchive.json";
+
+export function getStaticPaths() {
+  return legacy.items.map((record) => ({
+    params: { legacy: record.path.replace(/^\/|\/$/g, "") },
+    props: { record }
+  }));
+}
+const { record } = Astro.props as { record: (typeof legacy.items)[number] };
+const lang = record.language === "bg" ? "bg" as const : "en" as const;
+const bg = lang === "bg";
+const kind = bg
+  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория" } as const)[record.kind]
+  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category" } as const)[record.kind];
+const copy = {
+  ...siteContent[lang],
+  meta: {
+    title: record.title + " · 432 Chamber Orchestra",
+    description: (record.paragraphs[0] || record.title).slice(0, 155)
+  }
+};
+const itemById = new Map(legacy.items.filter((r) => r.kind === "post" || r.kind === "product").map((r) => [r.id, r]));
+const related = record.relatedIds.map((id) => itemById.get(id)).filter((r): r is NonNullable<typeof r> => Boolean(r) && r?.language === lang);
+const gallery = record.kind === "page" && /\/(?:gallery|галерия)\/$/i.test(record.path);
+const concertPhotoPost = record.kind === "post" && /(?:photos-concert|снимки-концерт)/i.test(record.path);
+const musicIndex = record.kind === "page" && /(?:buy-our-music|купете-нашата-музика|магазин|shop)\/$/i.test(record.path);
+const video = record.kind === "page" && /(?:video|видео)/i.test(record.path);
+const contentLinks = record.sourceLinks.filter((u) => {
+  try {
+    return !(/432hz-orchestra\.com\/wp-content\//i.test(u));
+  } catch { return false; }
+});
+const displayed = record.paragraphs.filter((p) => p.trim().length);
+const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.date.slice(0, 10) : null;
+---
+<BaseLayout content={copy} lang={lang} canonicalHref={record.path} alternateHref={record.alternatePath}>
+  <section class="border-b border-brand-border bg-[#122B22] py-12 md:py-20">
+    <div class="container max-w-5xl">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{kind}</p>
+      <h1 class="max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] sm:text-5xl">{record.title}</h1>
+      {published && <p class="mt-5 text-sm text-[#D7CEBF]">{bg ? "Публикувано" : "Published"}: <time datetime={published}>{published}</time></p>}
+      <p class="mt-5 max-w-3xl text-sm leading-7 text-[#D7CEBF]">
+        {bg
+          ? "Материал от историческия архив на 432 Chamber Orchestra, съхранен при пренасянето от WordPress. Оригиналното съдържание е представено за документална справка."
+          : "A preserved item from the 432 Chamber Orchestra WordPress archive. Original material is retained here for historical reference."}
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-[#091F19] py-12 md:py-20">
+    <div class="container max-w-5xl">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(230px,0.6fr)]">
+        <article class="min-w-0 space-y-6">
+          {record.thumbnail && <img class="max-h-[500px] w-full object-contain" src={record.thumbnail} alt={record.title} loading="lazy" />}
+          {record.inlineImages.map((image) => <img class="max-h-[500px] w-full object-contain" src={image} alt={record.title} loading="lazy" />)}
+          {record.dynamicWordPress ? (
+            <div class="border-l-2 border-[#C7A76D] pl-6 text-base leading-8 text-[#D7CEBF]">
+              {bg
+                ? "Този адрес е част от историческата система за покупки, профили или изтегляния. Съответната функция остава в WordPress; архивното копие не обработва плащания, поръчки или лични данни."
+                : "This address belongs to the historical purchases, accounts or downloads system. The corresponding service remains in WordPress; this archival page does not process payments, orders or personal data."}
+            </div>
+          ) : (
+            <>
+              {displayed.map((paragraph) => <p class="whitespace-pre-line break-words text-base leading-8 text-[#D7CEBF]">{paragraph}</p>)}
+              {displayed.length === 0 && <p class="text-base leading-8 text-[#D7CEBF]">{bg
+                ? "Оригиналната страница съдържа вграден WordPress модул или динамичен архив, а не самостоятелен текст. Свързаните материали са достъпни в съответните архивни раздели."
+                : "The original page uses a WordPress plugin or a dynamic archive rather than a standalone text. Related material is available in the archive sections."}</p>}
+            </>
+          )}
+          {record.bandcampUrl && (
+            <a class="inline-flex border border-[#C7A76D] bg-[#C7A76D] px-6 py-3 font-semibold text-[#091F19] transition hover:bg-[#F0E8D9]" href={record.bandcampUrl} target="_blank" rel="noopener noreferrer">
+              {bg ? "Слушайте и купете в Bandcamp" : "Listen and buy on Bandcamp"}
+            </a>
+          )}
+          {related.length > 0 && (
+            <div class="border-t border-[#C7A76D]/30 pt-8">
+              <h2 class="mb-5 font-serif text-2xl text-[#F0E8D9]">{bg ? "Свързани архивни материали" : "Related archive items"}</h2>
+              <ul class="grid gap-3">
+                {related.map((item) => <li><a class="underline decoration-[#C7A76D]/70 underline-offset-4 hover:text-[#C7A76D]" href={item.path}>{item.title}</a></li>)}
+              </ul>
+            </div>
+          )}
+          {video && <p class="text-sm leading-7 text-[#D7CEBF]">{bg ? "Документирани видеоматериали са представени и в публикациите за концерти." : "Documented video material is also available in the concert publications."}</p>}
+          {musicIndex && <a class="inline-flex border-b border-[#C7A76D] py-2 text-[#F0E8D9]" href={bg ? "/bg/recordings/" : "/en/recordings/"}>{bg ? "Към дискографията" : "Visit the discography"}</a>}
+          {contentLinks.length > 0 && (
+            <div class="border-t border-[#C7A76D]/30 pt-8">
+              <h2 class="mb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Връзки от оригиналния материал" : "Links from the original source"}</h2>
+              <ul class="grid gap-2 break-all text-sm">
+                {contentLinks.map((link) => <li><a href={link} target="_blank" rel="noopener noreferrer" class="text-[#C7A76D] underline underline-offset-4">{link}</a></li>)}
+              </ul>
+            </div>
+          )}
+        </article>
+        <aside class="h-fit border border-[#C7A76D]/25 bg-[#122B22] p-6 text-sm leading-7 text-[#D7CEBF]">
+          <h2 class="mb-4 font-serif text-xl text-[#F0E8D9]">{bg ? "Архив и източник" : "Archive and source"}</h2>
+          <p>{bg ? "Първоначален публичен адрес в WordPress:" : "Original WordPress public address:"}</p>
+          <a class="mt-2 block break-all text-[#C7A76D] underline underline-offset-4" href={record.originalUrl} target="_blank" rel="noopener noreferrer">{record.originalUrl}</a>
+          <div class="mt-7 flex flex-col gap-3 border-t border-[#C7A76D]/25 pt-6">
+            <a href={bg ? "/bg/archive/" : "/en/archive/"} class="underline underline-offset-4 hover:text-[#C7A76D]">{bg ? "Фотоархив" : "Photo archive"}</a>
+            <a href={bg ? "/bg/recordings/" : "/en/recordings/"} class="underline underline-offset-4 hover:text-[#C7A76D]">{bg ? "Записи" : "Recordings"}</a>
+            <a href={bg ? "/bg/press/" : "/en/press/"} class="underline underline-offset-4 hover:text-[#C7A76D]">{bg ? "Преса и документи" : "Press and documents"}</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  {(gallery || concertPhotoPost) && <LegacyWordPressPhotoGallery lang={lang} albumId={concertPhotoPost ? 1 : undefined} />}
+  {video && <LegacyWordPressVideoGallery lang={lang} />}
+</BaseLayout>

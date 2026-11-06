@@ -1,0 +1,31 @@
+---
+import videos from "../content/legacyVideos.json";
+import type { Language } from "../content/siteContent";
+const { lang } = Astro.props as { lang: Language };
+const bg = lang === "bg";
+---
+<section id="wordpress-video-archive" class="border-t border-[#C7A76D]/25 bg-[#122B22] py-14 md:py-20">
+  <div class="container">
+    <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{bg ? "Исторически видеоархив" : "Historical video archive"}</p>
+    <h2 class="max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] md:text-5xl">
+      {bg ? "Видео и документирани концерти" : "Video and documented concerts"}
+    </h2>
+    <p class="mt-5 max-w-3xl text-base leading-8 text-[#D7CEBF]">
+      {bg ? "Пет оригинални видеовръзки, открити в публикациите и страниците на WordPress. Достъпността на видеата зависи от техните собственици в YouTube."
+        : "Five original video references recovered from WordPress pages and posts. Availability depends on the videos' owners on YouTube."}
+    </p>
+    <div class="mt-10 grid gap-8 md:grid-cols-2">
+      {videos.items.map((item) => (
+        <article class="min-w-0 overflow-hidden border border-[#C7A76D]/25 bg-[#091F19]">
+          <div class="aspect-video">
+            <iframe class="h-full w-full" src={item.embed} title={item.title[lang]} loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="space-y-3 p-5">
+            <h3 class="font-serif text-xl leading-7 text-[#F0E8D9]">{item.title[lang]}</h3>
+            <a href={item.original} target="_blank" rel="noopener noreferrer" class="text-sm text-[#C7A76D] underline underline-offset-4">{bg ? "Отворете в YouTube" : "Open on YouTube"}</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

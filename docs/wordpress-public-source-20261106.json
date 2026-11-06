@@ -1,0 +1,3545 @@
+{
+    "version": 1,
+    "source": "public WordPress published posts and public taxonomy only; server read-only DB snapshot",
+    "capturedUtc": "2026-11-05T23:12:16+00:00",
+    "sourceOrigin": "https://432hz-orchestra.com",
+    "posts": [
+        {
+            "ID": "47",
+            "post_type": "page",
+            "post_title": "Home",
+            "post_excerpt": "",
+            "post_content": "<h2>Welcome to the 432 Chamber Orchestra's webpage.</h2>\n\n<strong>We are happy to offer a permanent sale on our music. Be sure to check <a href=\"https://432hz-orchestra.com/en/buy-our-music/\" rel=\"noopener noreferrer\" target=\"_blank\">Our Recordings HERE</a></strong>\n\n<strong>Dear friends, </strong>\ntake a look at our new audio samples! If you like any of them we encourage you to buy them on Bandcamp. This way you will support us to make more and better recordings in <strong>432 Hz</strong>.\n\n[bandcamp width=100% height=120 track=789550373 size=large bgcol=333333 linkcol=0f91ff tracklist=false artwork=small]\n\n[bandcamp width=100% height=120 track=1823013299 size=large bgcol=333333 linkcol=0f91ff tracklist=false artwork=small]\n\n[bandcamp width=100% height=120 track=2953827234 size=large bgcol=333333 linkcol=0f91ff tracklist=false artwork=small]\n\n[bandcamp width=100% height=120 track=3481191004 size=large bgcol=333333 linkcol=0f91ff tracklist=false artwork=small]\n\n<strong>We would like to invite you to participate in a music comparison survey:</strong> <a href=\"http://432project.432hz-orchestra.com/en/blog/category/survey/\" target=\"_blank\" rel=\"noopener noreferrer\">Music Comparison Survey</a>\n<strong>Every input is of great importance.</strong>\n\nFor more information about the 432 Chamber Orchestra please browse our website.\n\nBest regards,\n<strong>432 Chamber Orchestra</strong>\n\n<p><strong>Support the orchestra through Foundation 432 Hz:</strong> <a href=\"https://432hz-foundation.com/en/support/\">Support the work</a></p>",
+            "post_date_gmt": "2016-08-01 00:31:47",
+            "post_modified_gmt": "2019-06-13 23:56:22",
+            "post_name": "homepage",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "50",
+            "post_type": "page",
+            "post_title": "Contact us",
+            "post_excerpt": "",
+            "post_content": "<h2><strong>We are happy to hear from you.</strong></h2>\n\n[contact-form][contact-field label='Name' type='name' required='1'/][contact-field label='Email' type='email' required='1'/][contact-field label='Website' type='url'/][contact-field label='Comment' type='textarea' required='1'/][/contact-form]",
+            "post_date_gmt": "2016-08-01 00:58:01",
+            "post_modified_gmt": "2016-08-01 00:36:30",
+            "post_name": "contact-us",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "58",
+            "post_type": "page",
+            "post_title": "Контакти",
+            "post_excerpt": "",
+            "post_content": "<h2><strong>Ще се радваме да ни пишете!</strong></h2>\n\n[contact-form][contact-field label='Име' type='name' required='1'/][contact-field label='Email' type='email' required='1'/][contact-field label='Website' type='url'/][contact-field label='Коментар' type='textarea' required='1'/][/contact-form]",
+            "post_date_gmt": "2016-08-01 00:58:01",
+            "post_modified_gmt": "2017-03-02 13:28:01",
+            "post_name": "%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d0%b8",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "61",
+            "post_type": "page",
+            "post_title": "Начало",
+            "post_excerpt": "",
+            "post_content": "<h2>Добре дошли на уеб страницата на Камерен оркестър 432.</h2>\n\n<h2><strong>Щастливи сме да Ви предложим постоянно намаление на музика в 432 Hz. Разгледайте <a href=\"https://432hz-orchestra.com/en/buy-our-music/\" rel=\"noopener\" target=\"_blank\">Нашите записи ТУК.</a></strong></h2>\n\n<strong>Скъпи приятели,</strong>\nразгледайте нашите най-нови аудио записи! Ако харесвате някой от тях Ви каним да го закупите от Bandcamp. Така ще ни подкрепите да направим още и все по-добри записи на  музика в <strong>432 Hz</strong>\n\n[bandcamp width=100% height=120 track=789550373 size=large bgcol=333333 linkcol=0f91ff tracklist=false artwork=small]\n\n[bandcamp width=100% height=120 track=1823013299 size=large bgcol=333333 linkcol=0f91ff tracklist=false artwork=small]\n\n[bandcamp width=100% height=120 track=2953827234 size=large bgcol=333333 linkcol=0f91ff tracklist=false artwork=small]\n\n[bandcamp width=100% height=120 track=3481191004 size=large bgcol=333333 linkcol=0f91ff tracklist=false artwork=small]\n\n<strong>Бихме искали да Ви поканим да участвате в музикално-сравнителна анкета:</strong> <a href=\"http://432project.432hz-orchestra.com/en/blog/category/survey/\" target=\"_blank\">Музикално-сравнителна анкета</a>\n<strong>Всеки отговор е от голямо значение.</strong>\n\nЗа българската аудитория сме подготвили специална анкета, в която търсим мнението на публиката ни за това, какво желаят да чуят на следващите  концерти, които Камерен оркестър 432 ще подготви. Всеки отговор ще ни помогне да изготвим таива програми, които ще остговорят на очакванията Ви. <a href=\"http://432hz-orchestra.com/bg/blog/2016/12/05/%d0%b0%d0%bd%d0%ba%d0%b5%d1%82%d0%b0-%d0%b7%d0%b0-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b0/\" target=\"_blank\"><strong>Анкета за избора на концертна програма</strong></a>\n\nЗа повече информация за Камерен оркестър 432, разгледайте нашия уебсайт\n\nПоздрави,\n<strong>Камерен оркестър 432</strong>\n\n<p><strong>Подкрепете оркестъра чрез Фондация „432 Херца“:</strong> <a href=\"https://432hz-foundation.com/bg/support/\">Подкрепете работата</a></p>",
+            "post_date_gmt": "2016-08-01 00:31:47",
+            "post_modified_gmt": "2018-03-22 23:19:28",
+            "post_name": "%d0%bd%d0%b0%d1%87%d0%b0%d0%bb%d0%be",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "78",
+            "post_type": "page",
+            "post_title": "More about",
+            "post_excerpt": "",
+            "post_content": "The 432 Chamber Orchestra is a chamber string orchestra of 13 string players and a conductor. It plays exclusively in a = 432 Hz concert pitch. It also tunes with so called by\nMaria Renold \"open fifths\".",
+            "post_date_gmt": "2016-08-07 15:26:19",
+            "post_modified_gmt": "2017-03-02 13:25:19",
+            "post_name": "about",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "80",
+            "post_type": "page",
+            "post_title": "Повече за",
+            "post_excerpt": "",
+            "post_content": "Камерен оркестър 432 е камерен струнен ансамбъл от 13 инструменталиста и 1 диригент. Оркестърът свири изключително в концертен строй ла = 432 Hz. Също така инструментите се настройват на т.нар. от Мария Ренолд \"отворени квинти\"",
+            "post_date_gmt": "2016-08-07 15:26:19",
+            "post_modified_gmt": "2016-08-08 16:21:30",
+            "post_name": "%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "85",
+            "post_type": "page",
+            "post_title": "432 Chamber Orchestra",
+            "post_excerpt": "",
+            "post_content": "<strong>432 Chamber Orchestra </strong>\n\n<strong><em>Presentation</em></strong>\n\n<strong><em> </em></strong>The <strong>432 Chamber Orchestra</strong> is Bulgaria’s newest chamber string orchestra. It has 13 players and 1 conductor. It was founded in November 2013 in Sofia as an experimental ensemble from the conductor Ivan K. Yanakiev. The Orchestra made its Debut on stage in Sofia in 2015. Since now it has given 3 concert performances. The 432 Chamber Orchestra is laureate to the Bulgarian National Radio’s award “<strong>Musician of the Year” – 2015 </strong>in “Debut”category.\n\nThe Orchestra can be distinguished among the numerous other string ensembles by its specific way of tuning – the 432 concert pitch and the application of the “open” fifth (Renold, 1985). The symbiosis of those two components create the so-called “432 Sound” – sound which evokes the feeling of freedom and breadth in the listeners and creates the impression that sound itself is coming not from the instruments themselves but out of the air around the them\n\n(the ambiеnce). In 2014, the prominent Bulgarian composer and conductor <strong>Academician Prof. Vassil Kazandzhiev </strong>after hearing the 432 Chamber Orchestra for the first time expressed his astonishment that even though the Orchestra consisted only of 13 players, it sounded as if a big string orchestra was playing.\n\n<strong>Studio recording of the 432 Chamber Orchestra in concert pitch <em>a<sup>1</sup></em> = 432 Hz and open fifths – Edvard Grieg – Suite “Aus Holbergs Zeit”: </strong>\n\n[soundcloud url=\"https://api.soundcloud.com/playlists/72673758\" params=\"auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true\" width=\"100%\" height=\"450\" iframe=\"true\" /]\n\n<strong>The mission</strong> of the 432 Chamber Orchestra is to guarantee the listener’s right to choose to experience music in the natural 432 concert pitch. The Orchestra exists as an option to the standardized (by ISO 16:1975 <strong><em>a<sup>1</sup></em> = 440 Hz</strong>) sound of the professional ensembles.\n\nWe can hear the <strong>432 concert pitch</strong>, the most prominent trait of the Orchestra, and its natural existence: in the songs of the birds; in the folklore music (worldwide) – by both singers and players; in the spiritual music – during Orthodox offices; and most importantly, in the melodious speech of the young children and toddlers. Yanakiev’s hypothesis is that 432 concert pitch may be considered a phenomenon, which is natural to the human being as a part of Nature.\n\nHis observations also show that the choice of temperament and the concert pitch can affect the attitude of the players and the listeners towards the process of music making. In a<sup>1</sup> = 432 Hz and “open fifths” temperament the essence of the music (i.e. the idea beyond the notes) can be clearly heard and felt by the listeners, while at the same time the personality of the player seems to melt and vanish away. Just the opposite happens in a<sup>1</sup> = 440 Hz (ISO 16:1975) – the personality of the player now overwhelms the entire music expression and the listeners receive not the pure musical essence of the piece, but the subjective, emotionally tainted experience of the player instead. In this regard, Yanakiev is preparing series of psychological and psychophysiological experiments in the <strong>Institute of Art Studies of the Bulgarian Academy of Sciences, Sofia.</strong>\n\nOn the website of the prject <a href=\"http://432project.432hz-orchestra.com/en/home/\" target=\"_blank\"><strong><em>“Intonation and Concert pitch а1 = 432 Hz, Bulgarian and Worldwide Praxis, Variations, effect and results.”</em></strong></a> you can find more information about aspects of the concert pitch а<sup>1</sup> = 432 Hz\n\nWe are inviting everybody who might have interest to participate in a music comparison survey by clicking on the following link: <a href=\"http://432project.432hz-orchestra.com/en/blog/category/survey/\" target=\"_blank\"><strong>Music Comparison Survey</strong></a>. Each reply is of great importance.\n\n<strong>Ivan Yanakiev’s interview on the subject of the 432 Concert pitch (in Bulgarian):  </strong>\n\nhttps://youtu.be/_smFTGfWfKI\n\n<strong><u>History of the 432 Chamber Orchestra</u></strong>\n\n<strong>23 April 2016 – received the award „Musician of the year“ – 2015 in „Debut“ Category By the Bulgarian National Radio (Video of the Awards Ceremony </strong>\nhttps://www.youtube.com/watch?v=R1bSsCbIEPI\n\n<strong>In 2016 – on 13. March the Orchestra gave a concert in “Studio 5”, National Palace of </strong><strong>Culture, Sofia </strong>\n\n<strong>In 2015</strong> – the 432 Chamber Orchestra made its debut on the Bulgarian concert stage. It gave two concerts – 18<sup>th</sup> May in “Studio 1” of the Bulgarian National Radio and on 22<sup>th</sup> December in “Dr. Long” Church, Sofia.\n\nUntil now soloists of the ensemble were the prima soprano Veliko Tarnovo’s Music Theater <strong>Miryana Kalushkova</strong> (more about her: <a href=\"https://www.operamusica.com/artist/miryana-kalushkova/%23\">https://www.operamusica.com/artist/miryana</a><a href=\"https://www.operamusica.com/artist/miryana-kalushkova/%23\">kalushkova/#</a><a href=\"https://www.operamusica.com/artist/miryana-kalushkova/%23\">)</a> and the tenor Ivaylo Donkov (Sofia Philharmonics), who has specialized Baroque singing with PhD Yanko Marinov (Catholic Cathedral, Sofia) and Emma Kirkby (Italy, 2015).",
+            "post_date_gmt": "2016-08-08 08:12:36",
+            "post_modified_gmt": "2017-03-02 13:26:45",
+            "post_name": "432-chamber-orchestra",
+            "post_parent": "78",
+            "menu_order": "0"
+        },
+        {
+            "ID": "87",
+            "post_type": "page",
+            "post_title": "Камерен оркестър 432",
+            "post_excerpt": "",
+            "post_content": "<strong>Камерен оркестър 432 </strong>\n\n<strong><em>Резюме </em></strong>\n\n<strong>Камерен оркестър 432</strong> е нов и иновативен български камерен струнен оркестър. Състои се от 13 инструменталисти и 1 диригент. Основан е през м. ноември 2013 г. в гр. София, като експериментален ансамбъл от диригента <strong>Иван К. Янакиев</strong>. Оркестърът дебютира на софийска сцена през 2015 г като до момента е реализирал три концерта. Съставът е носител на наградата <strong>„Музикант на годината“</strong> в категория „Дебют“ за <strong>2015 г</strong>.\n\nКамерният оркестър 432 може да бъде разпознат сред множеството други струнни ансамбли по неговия специфичен начин на настройване – концертния строй <strong><em>ла<sup>1</sup></em> = 432 </strong><strong>Hz</strong> и приложението на <strong>отворените квинти</strong>. Симбиозата между тези два компонента създава уникалния „432-звук“ на ансамбъла – звук, който събужда усещането за свобода и широта у слушателя и създава впечатлението, че звукът излиза не от самите инструменти, а от пространството около тях. През 2014 г. изтъкнатият български композитор и диригент <strong>акад.</strong> <strong>Васил Казанджиев</strong> сподели своето впечатление, че в оркестъра свирят само 13 души, но ансамбълът звучи като голям струнен оркестър).\n\n<strong>Студиен запис на оркестъра в строй <em>ла</em> = 432 Hz и отворени квинти– Едвард Григ – </strong><strong>„Холберг сюита“:</strong>\n\n[soundcloud url=\"https://api.soundcloud.com/playlists/72673758\" params=\"auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\" width=\"100%\" height=\"450\" iframe=\"true\" /]\n\n<strong>Мисията </strong>на Камерен оркестър 432 е да гарантира правото на избор на слушателя – избор да преживее музиката в естественото звучене на концертния строй <strong><em>ла</em> = 432 Hz</strong>. Оркестърът съществува като алтернатива на стандартизираното (с ISO 16:1975) звучене на професионалните ансамбли (<strong><em>ла</em> = 440 Hz)</strong>.\n\n<strong>Концертния строй <em>ла<sup>1</sup></em> = 432 </strong><strong>Hz</strong> е най-характерната особеност на оркестъра. Строят 432 Hz се среща в природата – при песните на птиците; във фолклорната музика – както при певци така и при инструменталисти; в духовната музика – по време на богослужение; и най-важно – при мелодичната реч на малките деца. Хипотеза на диригента Иван Янакиев е, че този строй е естествено присъщ за човека, като същество.\n\nНаблюденията му сочат също, че изборът на концертен строй и темперация влияят на отношението на изпълнителите и на слушателите към музиката, като процес. С избора на концертен строй <strong><em>ла<sup>1</sup> </em>= 432 </strong><strong>Hz</strong> и темперация „отворени квинти“ вместо  стандартизирания <strong><em>ла</em> = 440 </strong><strong>Hz</strong> (ISO 16:1975) Янакиев се стреми да предложи на публиката изпълнение в различно звучене. Често то бива определяно от слушатели и изпълнители като по-обемно и по-спокойно. Точно този иновативен звук на ансамбъла дава възможност музиката да се възприеме от слушателя като едно ново изживяване. Във връзка с това Янакиев провежда серия от изследвания към <strong>Института за изследване на изкуствата на БАН</strong>.\n\nНа сайта на изследователски проект <a href=\"http://432project.432hz-orchestra.com/\" target=\"_blank\"><strong><em>„Интониране и концертен строй а<sup>1</sup> = 432 Hz: българска и световна практика, вариантност, въздействия и резултати“</em></strong></a> може да намерите повече информация за аспекти на концертния строй а<sup>1</sup> = 432 Hz\n\nНай-настойчиво каним всеки, който проявява интерес, да участва в музикално-сравнителната анкета на следния линк:<a href=\"http://432project.432hz-orchestra.com/en/blog/category/survey/\" target=\"_blank\"><strong>Музикално-сравнителна анкета</strong></a>. Всеки Ваш отговор е от голямо значение.\n\n<strong>Интервю на Иван Янакиев по въпросите за строя 432 Hz в предаването „Анфас“ на ТВ1:  </strong>\n\nhttps://youtu.be/_smFTGfWfKI\n\n<strong><u>История на Камерен оркестър 432</u></strong>\n\n<strong>23 април 2016 – награден с приза „Музикант на годината“ в категория „Дебют“ за 2015 година в класацията на „Алегро виваче“ „Музикант на годината“ (видео от награждаването:</strong>\n\nhttps://www.youtube.com/watch?v=R1bSsCbIEPI\n\n<strong>През 2016 </strong>година на 13 март оркестърът реализира концерт в „Студио 5“ на НДК.\n\n<strong>През 2015 </strong>година Камерен оркестър 432 се появи за първи път на българската музикална сцена. Оркестърът изнесе два дебютни концерта – 18. май в „Първо студио“ на БНР и 22. декември в църквата „Доктор Лонг“, София.\n\nДо момента <strong>солисти</strong> на Камерен оркестър 432 са били <strong>Миряна Калушкова</strong>, позната на великотърновската публика с превъплъщенията си във всички главни роли на постановките на Музикално-драматичен театър „Константин Кисимов“ от 2012 година насам (повече на: <a href=\"https://www.operamusica.com/artist/miryana-kalushkova/%23\">https://www.operamusica.com/artist/miryana</a><a href=\"https://www.operamusica.com/artist/miryana-kalushkova/%23\">-</a><a href=\"https://www.operamusica.com/artist/miryana-kalushkova/%23\">kalushkova/#</a> ), и <strong>Ивайло Донков</strong> – тенор, специализирал бароково пеене при д-р Янко Маринов в католическата катедрала „Св. Йосиф“, гр. София и Ема Къркби (Италия, 2015).",
+            "post_date_gmt": "2016-08-08 08:12:36",
+            "post_modified_gmt": "2017-03-02 13:31:31",
+            "post_name": "%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432",
+            "post_parent": "80",
+            "menu_order": "0"
+        },
+        {
+            "ID": "93",
+            "post_type": "page",
+            "post_title": "Ivan K. Yanakiev - conductor",
+            "post_excerpt": "",
+            "post_content": "<strong>Resume</strong>\n\nThe conductor Ivan Yanakiev (b. Sofia, 1987) graduated from the National Academy of Music, Sofia with major in orchestral conducting (MA). In July 2014, he began a postgraduate PhD programme at the Institute of Art Studies at the Bulgarian Academy of Sciences. His PhD thesis is focused on how the 432 concert pitch and the “open fifth” temperament are affecting the perception of music.\n\nHe participated at the conferences: <strong>“Art Studies Readins” Sofia 2015, 2016</strong> – with a papers on the subject of piano temperaments (May, 2015) and the history of the concert pitch in the 20<sup>th</sup> century (April, 2016); <strong>Second Congress of the Society for Theory of Music in Moscow</strong> <strong>Conservatory</strong> <strong>(25-29 September 2015)</strong> with a paper on the Maria Renold’s innovative method for piano temperament; international conference <strong>“Balkan Identities” in Skopje </strong>\n\n<strong>(October 2014)</strong>, as a part of the project between <strong>Bulgarian Academy of Scientes</strong> and <strong>Macedonian Academy of Sciences and Arts</strong>, with a paper “Who owns the song?\n\nObservations of the musician.”.\n\nAs a conductor Yanakiev has been guest to Bulgarian “Dianopolis” Chamber Orchestra\n\n(2012), Music Theater “Konstantin Kissimov” (2013, 2014), Sofia “Classics” Orchestra\n\n(2015), and numerous church choirs. He was conductor of the male choir at the Patriarchal Cathedral “St. Alexander Nevsky” (September 2013 – June 2014). In 2013 (March-April) he conducted the male vocal ensemble “The Gregorian Voices” and gave 30 concerts in Germany.",
+            "post_date_gmt": "2016-08-08 16:08:13",
+            "post_modified_gmt": "2017-03-02 13:27:42",
+            "post_name": "ivan-yanakiev",
+            "post_parent": "78",
+            "menu_order": "0"
+        },
+        {
+            "ID": "95",
+            "post_type": "page",
+            "post_title": "Иван К. Янакиев - диригент",
+            "post_excerpt": "",
+            "post_content": "Резюме\n\n<strong>Иван Костадинов Янакиев</strong> (р. 1987 г.) е български диригент и музикален теоретик и основател на Камерен оркестър 432. През януари 2018 г. той учредява Фондация 432 Херца.\n\n[caption id=\"attachment_214\" align=\"alignnone\" width=\"300\"]<img src=\"https://432hz-foundation.com/wp-content/uploads/2018/03/VBAL6546-300x209.jpg\" alt=\"\" width=\"300\" height=\"209\" class=\"size-medium wp-image-214\" /> Основателят на Камерен оркестър 432 - Иван К. Янакиев[/caption]\n\nТой завършва висшето си образование в Националната Музикална Академия - София със специалност „Оперно-симфонично дирижиране“. Завършил е семестриално и “Хорово дирижиране”.\n\nПрез 2013 година основава Камерен оркестър 432. Мисията на оркестъра е да предложи избор на слушателя – избор да преживее музиката в естественото звучене на концертния строй a<sup>1</sup> = 432 Hz. Оркестърът успешно осъществява концерти, в които в концертен строй a<sup>1</sup> = 432 Hz звучи музика от автори, представители на Барока, Класицизма, Романтизма XX век и съвременността. През 2017 г. Янакиев реализира концерта „Български съвременници в 432 Hz”, който е част от ръководения от него изследователски проект \"Интониране и концертен строй а1 = 432 Hz: българска и световна практика, вариантност, въздействия и резултати\", по „Програма за подпомагане на младите учени в БАН“ 2016/2017г. В рамките на концерта бяха представени 7 произведения на живи автори, 6 от които български, като за 2 от тях – „Вратите на съня II“ на Георги Арнаудов и Симфония „Агрийкмънт“ на Корийн Морсинк изпълненията бяха премиерни. През 2016 г. Янакиев изнася с Камерен орекстър 432 два концерта – на 13 март в „Студио 5“, а на 27 декември концертна програма с квартет в „Чайната“. През 2015 година Янакиев представя за първи път на българската публика Камерен оркестър 432. Оркестърът изнася два концерта -  дебютен на 18. май в „Първо студио“ на БНР и коледен на 22. декември в църквата „Доктор Лонг“, София.\n\nЯнакиев е гостувал като диригент на Камерен оркестър „Дианополис“, Ямбол (2012), Музикално-драматичен театър „Константин Кисимов“, Велико Търново (2013, 2014), Камерен оркестър „Класика“, София (2015) множество църковни хорове в столицата, клиросните певци в Патриаршеския катедрален ставропигиален храм-паметник „Св. Александър Невски” (септември – юни, 2014, 2017).\n\n<strong>Научна дейност </strong>\n\nОт м. юли 2014 г. до юни 2017 г. Янакиев е редовен докторант в <strong>Института за изследване на изкуствата </strong>на <strong>Българската академия на науките </strong>с научен ръководител проф. д.изк. Милена Божикова. Дисертационната му тема <strong><em>„Концертния строй а<sup>1</sup> = 432 Hz и отворените квинти: опит за интегрално акустическо, психофизиологическо, когнитивно и практическо изследване“ </em></strong>е фокусирана върху това как концертния строй и темперацията влияят върху възприятието на музика.\n\n<strong>Публикации:</strong>\n\n<ul>\n    <li>Yanakiev, Ivan - <em>„The Categorical Perception of the Music Scale. A Challenge before the Microtonal Music“</em> https://accelerandobjmd.weebly.com/issue3/the-categorical-perception-of-the-music-scale</li>\n    <li>Yanakiev, Ivan - <em>„The Tacit Revolution: Pitch Standardization Effect on Musical Interpretation and Perception“</em> - in print as proceedings for MTS Moscow Conference</li>\n    <li>Yanakiev, Ivan - <em>„Role of the Golden Ratio in Perceiving Humanness by Random Generated Tones. An Empirical Study“</em></li>\n    <li>Янакиев, Иван – <strong><em>„Звукови трансфери. Песните на птиците и „There was a time“ (“Едно време”) от Корийн Морсинк“</em></strong></li>\n    <li>Янакиев, Иван – „Човешкият глас на виолите на Краля слънце“, <a href=\"http://artstudies.bg/platforma/?p=765\">http://artstudies.bg/platforma/?p=765</a></li>\n    <li>Янакиев, Иван - <strong><em>„Въпросът за концертния строй през XX век – генезис и история на проблематиката“</em></strong> на конференцията „Изкуствоведски четения“, под печат</li>\n    <li>Янакиев, Иван – <strong><em>„Втори конгрес на Обществото за теория на музиката“</em>, В: „Българско музикознание“</strong>, 2015, №4, сс.106-110. ISSN: 0204-823X</li>\n    <li>Yanakiev, Ivan. <strong><em>“Temperaments in the 20th Century. The theory of Maria Renold”</em></strong>, in print</li>\n    <li>Янакиев, Иван. <strong><em>„Какво чува този, който (не) чува. Компаративно осмисляне на темперациите.“</em></strong> В: „Изкуствоведски четения 2015. Изкуствата в Новото време: смесване на езиците“ София, Институт за изследване на изкуствата – БАН 2016, сс. 296-308, ISSN 1313-2342</li>\n    <li>Янакиев, Иван. <strong><em>„Чия е тази песен? – наблюденията на музиканта.”</em></strong> – В: Прилози. Балкански идентитет/и. Скопje, Македонска академиja на науките и уметностите 2015, XL 1-2, сс. 212-219. ISSN 0350-1914</li>\n    <li>Янакиев, Иван, Цокова, Антоанета. <strong><em>“ a1 = 440 Hz? Оркестър „432“ – другото възможно решение”</em></strong> - „Музикални хоризонти“ бр. 10, 2013</li>\n</ul>\n\n<strong> </strong>\n\n<strong>Участия в международни и национални научни конференции: </strong>\n\n<ul>\n    <li>Third Congress of the Socitey of Music Theory – Moscow (25-29 September 2017)</li>\n    <li>International Conference “Art Readings” Sofia 2017 (02 - 05 April 2017)</li>\n    <li>Международна конференция между БАН и МАНУ „Културна интеграция, трансфери, знаци на паметта\" (27-28 октомври 2016);</li>\n    <li>III Международен фестивал преглед на фолклорните колективи учредени в средното професионално и висшето образование „Вселиствен венец“ и V Междунардна научно-практическа конференция за ученици, студенти и докторанти „Етномузикология: история, теория, практика“ с доклад ”Bulgarian folk music, Orthodox chants and other examples and the role of the\nconcert pitch as an inherent attribute of the sound.“– 16-19 май 2016 г.;</li>\n    <li>“Изкуствоведски четения 2016” (април 2016);</li>\n    <li>“Изкуствоведски четения 2015” (май, 2015);</li>\n    <li>Втори конгрес на обществото за теория на музиката в Москва (25-29 септември 2015);</li>\n    <li>“Балканските идентитети” в Скопие като част от проект между БАН и МАНУ (ноември, 2014).</li>\n</ul>\n\n<strong>Проекти </strong>\n\n<strong><u>Ръководител </u></strong> проект <strong><em>„Системи на интониране и темпериране в ХХ-ХХI век - теория и практика“ (2017 - 2019)</em></strong> с 18-месечен грант \"Програма за подпомагане на младите учени в БАН\". Консултант е проф. д.изк. Милена Божикова.\n\n<strong><u>Участник</u></strong> е в прокет <strong>„Съвременна музикална композиция, теория и философия“</strong> на научен колектив в състав проф. дизк. Милена Божикова, проф. дизк. Кристина Япова, проф. д-р Ангелина Петрова, гл. ас. д-р Илия Граматиков и докторант Иван Янакиев. Проектът е със продължителност 24 месеца.\n\n<strong><u>Ръководи</u></strong> проект <strong><em>„Интониране и концертен строй а<sup>1</sup> = 432 Hz: българска и световна практика, вариантност, въздействия и резултати“ (2016 - 2017)</em></strong> с едногодишен грант по \"Програма за подпомагане на младите учени в БАН\". Консултант е проф. д.изк. Милена Божикова.\n\n<strong>Лекции </strong>\n\nЯнакиев е автор е на лекциите<strong><em>: </em></strong>\n\n<ul>\n    <li><strong><em>„432vs440“ </em></strong>изнесена на 19.03.2016 г. В гр. Русе в рамките на Международния музикален фестивал «Мартенски Музикални Дни»: <a href=\"http://www.ustream.tv/recorded/84634664\">http://www.ustream.tv/recorded/84634664</a></li>\n    <li><strong><em>„432vs440 честоти във форма и звук. научна и музикална емпирика“</em></strong><strong>, </strong>изнесена на 09.05.2016 г. в заседателната зала на Института за Изселдване на Изкуствата, гр. София 09.05.2016 г.:</li>\n</ul>\n\nhttps://www.youtube.com/watch?v=6lFHcBLpaq4\n\n<strong>Специализации</strong>\n\nПрез декември 2016 г. Янакиев завършва успешно организираната от Гьоте институт – София, Софийска община и фондация „Асоциация за развитие на София“ <strong>„Академия за културен мениджмънт“ (април - декември 2016 г.)</strong>.\n\n<strong>Награди </strong>\n\n<ul>\n    <li><strong>Музикант на годината за 2015 в категория „Дебют“ </strong></li>\n    <li>Лауреат на Диплом I степен от V Международен конкурс за научна работа на ученици, студенти и докторанти за доклада <em>”Bulgarian folk music, Orthodox chants and other examples and the role of the concert pitch as an inherent attribute of the sound.“</em></li>\n    <li>Награда за успешно отчетен първи етап на проект <strong><em>„Интониране и концертен строй а<sup>1</sup> = 432 Hz: българска и световна практика, вариантност, въздействия и резултати“</em></strong> по \"Програма за подпомагане на младите учени в БАН\".</li>\n</ul>\n\n<blockquote>\n  През 2013 (март-април) е диригент на мъжкия вокален ансамбъл “The Gregorian Voices” с 30 концерта в Германия.\n</blockquote>",
+            "post_date_gmt": "2016-08-08 16:08:13",
+            "post_modified_gmt": "2018-03-22 23:22:37",
+            "post_name": "%d0%b8%d0%b2%d0%b0%d0%bd-%d1%8f%d0%bd%d0%b0%d0%ba%d0%b8%d0%b5%d0%b2",
+            "post_parent": "80",
+            "menu_order": "0"
+        },
+        {
+            "ID": "106",
+            "post_type": "page",
+            "post_title": "Shop",
+            "post_excerpt": "",
+            "post_content": "[products limit=\"15\" columns=\"5\" orderby=\"popularity\" ]",
+            "post_date_gmt": "2016-08-12 07:44:53",
+            "post_modified_gmt": "2017-12-10 22:12:33",
+            "post_name": "shop",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "107",
+            "post_type": "page",
+            "post_title": "Basket",
+            "post_excerpt": "",
+            "post_content": "[woocommerce_cart]",
+            "post_date_gmt": "2016-08-12 07:44:53",
+            "post_modified_gmt": "2017-11-06 21:35:36",
+            "post_name": "cart",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "108",
+            "post_type": "page",
+            "post_title": "Checkout",
+            "post_excerpt": "",
+            "post_content": "[woocommerce_checkout]",
+            "post_date_gmt": "2016-08-12 07:44:53",
+            "post_modified_gmt": "2016-08-12 07:44:53",
+            "post_name": "checkout",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "109",
+            "post_type": "page",
+            "post_title": "My Account",
+            "post_excerpt": "",
+            "post_content": "[woocommerce_my_account]",
+            "post_date_gmt": "2016-08-12 07:44:53",
+            "post_modified_gmt": "2016-08-12 07:44:53",
+            "post_name": "my-account",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "136",
+            "post_type": "page",
+            "post_title": "Concerts and Tours",
+            "post_excerpt": "",
+            "post_content": "<h2>Concerts and Tours</h2>\n\nIn this section you can find information about 432 Chamber Orchestra's upcoming concerts and tours.",
+            "post_date_gmt": "2016-08-16 19:35:57",
+            "post_modified_gmt": "2016-08-16 19:29:42",
+            "post_name": "concerts-and-tours",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "138",
+            "post_type": "page",
+            "post_title": "a = 432 Hz concert pitch",
+            "post_excerpt": "",
+            "post_content": "",
+            "post_date_gmt": "2016-08-16 20:30:34",
+            "post_modified_gmt": "2017-03-02 13:27:07",
+            "post_name": "432-hz-concert-pitch",
+            "post_parent": "78",
+            "menu_order": "0"
+        },
+        {
+            "ID": "139",
+            "post_type": "page",
+            "post_title": "Концерти и турнета",
+            "post_excerpt": "",
+            "post_content": "<h2>Концерти и турнета</h2>\n\nВ тази секция можете да намерите информация за предстоящи концерти и турнета на Камерен оркестър 432.",
+            "post_date_gmt": "2016-08-16 19:35:57",
+            "post_modified_gmt": "2017-03-02 13:28:36",
+            "post_name": "%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d1%83%d1%80%d0%bd%d0%b5%d1%82%d0%b0",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "150",
+            "post_type": "page",
+            "post_title": "ла = 432 Hz концертен строй",
+            "post_excerpt": "",
+            "post_content": "<h2>А = 432 Hz</h2>\n\n<h2><strong>Бихме искали да Ви поканим да участвате в музикално-сравнителна анкета:</strong> <a href=\"http://432project.432hz-orchestra.com/en/blog/category/survey/\" target=\"_blank\">Музикално-сравнителна анкета</a>\n<strong>Всеки отговор е от голямо значение.</strong></h2>\n\n<h3><strong>Кратка история на концертния строй* от края на 19 век до сега.</strong></h3>\n\nКонцертният строй е варирал в широки граници във вековете. В миналото се е случвало по едно и също време, но в различни градове, да звучат концертни строеве с разлика цял тон. За да се уеднакви концертния строй във всички страни от Европа през 1885 във Виена се свиква конференция, на която се приема общ строй за целия европейски континент (Великобританците не присъстват). Тази стойност е 435 Hz (трептенията за секунда) за тонът ла от първа октава.\n\nПо това време този строй е вече в употреба във Франция и е познат под името „diapason normal”.\n\nЗащо тонът ла? Тонът ла е общ тон за всички струнни инструменти. Този факт го прави много удобен за настройване.\n\nА = 432 Hz е бил предложен за основен концертен строй в Италия от през 1884 година, преди Виенската конференция от 1885 г., когато в Европа се установява френското ла – “diapason normal” = 435 Hz.\n\nЗа първи път официално се въвежда употребата на А = 440 Hz в САЩ, през 1918 г., като опит да се унифицират едновременно битуващите различни концертни строеве по онова време. Причина да се приеме А = 440 Hz вместо А = 435 Hz, като основна честота за САЩ, са изчисленията на Диган, който изхожда от разликата в средната температура в концертните зали в Европа и САЩ. Според грешка в превода той приема, че стандарта от 1885 г. ла от първа октава трепти с 435 трептения за секунда при стайна температура (15 °C). Преизчислявайки разликата в средната температура в САЩ той предлага (спекулативно) 440 Hz като подходящия вариант на тона ла за САЩ (тъй като точните изчисленията би следвало да наведат везните в полза на 441-442 Hz).\n\nИдеята за преизчисляване на височината на тона не е измислена в САЩ. Великобританците са първите, които решават, поради същата грешка ав превода да преизчислят стойностите на тона ла от първа октава. Още през 1896 г. те приемат „Нов филхармоничен строй със стойност 439 Hz.\n\nСлед края на Втората световна война се свиква конференция във Франкфурт с идея да се финализира въпросът за унифициране на концертния строй в целия свят. Резултатът е, че учените излизат с официално решение, което е известно и като ISO 16, в което се утвърждава честотата на тона ла в САЩ и Великобритания, като стандартизирана. Множество френски музиканти подписват петиции срещу смяната на Виенското ла = 435 Hz. Те остават без траен ефект.\n\n<h2><strong>Строят А = 432 Hz</strong></h2>\n\nВ последните 20 години, в Италия се възражда идеята за връщане на по-нисък строй. Този път, обаче, става дума за строя А = 432 Hz. През 1988 година множество музиканти се събират и подписват петиция за приемане на строя ла = 432 Hz, като основен за Италия. Сред тях са Рената Тебалди, Пиеро Капучилли, диригента Джанандреа Гаваценни, Лучано Павароти, и други утвърдили се музиканти.\n\nДоводите са изведени от пракитката на певците – те изтъкват факта, че ла = 432 Hz щади гласовете им. Пиеро Капучилли демонстрира и промяната в регистрите и тембъра на певците, когато пеят в строя А = 432 Hz. От следното клипче ясно личи, че дори тази малка разлика от 8 херца има огромен ефект върху гласовия апарат на човека.\n\n<iframe id=\"cappuccilli\" src=\"http://www.youtube.com/embed/VKKQp5_5u-M\" width=\"420\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe>\n\nОт видеото бихме могли да направим заключение, че Верди е мислил операта \"Трубадур\" в 432 строй (фразата на Капучилли завучи много по-цялостно в този строй, защото ми бекарът остава в гръдния регистър, а в 440 тонът става по-висок и попада в т.нар преходни тонове, което налага и различна техника на пеене, докато в 432, няма нужда от промяна).\n\nВ своята статията <a href=\"http://omega432.com/432-music/the-importance-of-432hz-music\">“THE IMPORTANCE OF 432HZ MUSIC”</a>  Brian T. Collins, пише, че кохлеята в човешкото ухо (охлювът, който трансформира трептенето на въздуха (звука) в нервни импулси) е настроена върху честотата 128, 256, 512, 1024. Това са и честотите, които ото-рино-ларинголозите са използвали още от 19 век, за проверка на слуха.\n\nКакво ни говори това? Нека да видим къде би се наредил тон с честота 256 Hz, например. За целта сравняваме честотата 256 Hz с честотите на тоновете на пианото (в 440 строй с равномерна темперация) и виждаме, че най-близко до този тон е честотата на тона до от първа октава - 261.63 Hz. 256 Hz е с около 5 херца по-ниско от до на пианото.\n\nОт Питагор, обаче знаем, че голямата секста ла-до може да бъде описана математически като отношение между две числа – 27/16. Ако умножим по-ниското до 256 Hz с числовото отношение на интервала ще получим кореспондиращото му ла:\n\n256 * 27/16 = 16*27 = 432 Hz\n\nНародните инструменти в много култури – Китай, Афганистан, Турция и дори в България са настроени точно в този строй. Всеки може да провери гайдата на гайдаря Петър Бонев, който през топлите месеци свири в градинката пред Софийския университет, под зоркото око на Св. Климент Охридски. Изтегля си честотата 432 Hz от <a href=\"http://432hz-orchestra.com/http:/www.onlinetonegenerator.com/432Hz.html\">тук</a>, сваля си я на телефона, и когато минава покрай него си я пуска. Ако звучи хармонично – значи е в този строй.\n\nТова говoри, че нашите предци, настройвайки инструментите си, вероятно по вътрешния си слух и усещания, съвсем целенасочено са търсили най -„благия“ тон, на който инструментът да звучи най-близко до човешкия глас. А от физиката си никой не може да избяга, и естествено са попадали в строя А = 432 Hz.\n\nМного са и записите на автентична и обработена солова и хорова народна музика – българска, китайска, афганистанска – които потвърждават тези наблюдения. Всеки сам може да провери и да се убеди в това.\n\nСтроят A = 432 Hz се среща естествено сред малките деца. Оказва се, че характерният им напевен говор и песнички, които пеят, звучат точно в този строй, когато децата пеят сами, без съпровод (пиано, плейбек). При възръстните 432 строя е най-достъпен за наблюдаване по време на богослужение. Много често молитвите, които клириците изговарят <em>велегласно, </em>звучат именно в строя A = 432 Hz. Тези две наблюдения са направени от диригента на Камерния орекстър 432 – Иван К. Янакиев, който от юли 2014 г. пише докторска дисертация в Институте за изследване на изкуствата на Българската академия на науките върху тема свързана с 432 строя и влиянието му върху човека.\n\nИнтересен факт е, че усещанията, които слушането на музика в строя A = 432 Hz създава у слушателите съвпадат при по-голямата част от хората, които са споделили своите преживявания. Музиканти и неспециалисти говорят за изчезване на напрежението, което усещат при сторя 440/442. Друго характерно субективно преживяване, което се среща при повече хора е усещането за свобода и лекота на музиката. Това в никакъв случай не означава, че музика, изсвирена в строя 432 автоматично става по-добра. Във всеки строй може да се свири зле. Просто 432 строя спомага за по-лесно протичане на съвършената музикална идея, уловена за първи път от композитора.\n\nЕдинственият начин човек да преживее пълноценно който и да е музикален строй е да чуе музика на живо. Ззаписите са бегло копие - една студена и прецизна репродукция, лишена от същинския дух на живото изпълнение. Затова ние от Камерния оркестър 432 каним всеки да чуе за себе си това, за което говорим тук, на живо и да реши дали 432 строя има стойност за него. Колкото и думи да изпишем думите винаги ще изглеждат безсилни в сравнение дори с минута жива музика.\n\nЕстествено, всеки може да опита и сам да преживее 432 строя – с пеене (нещо толкова присъщо за малките деца). Тон ла = 432 Hz може да бъде изтеглен от <a href=\"http://432hz-orchestra.com/http:/www.onlinetonegenerator.com/432Hz.html\">тук</a>.\n\nДруг вариант е да се следите страницата ни или да се свържете с нас през <a href=\"http://432hz-orchestra.com/bg/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d0%b8/\"><em>формата ни за контакти</em></a> и да посетите наш концерт. Периодически ще правим и отворени репетиции и презентации. Всеки е добре дошъл.\n\n<strong><u>За любознателни</u></strong>\n*<em> Под думата строй в този уебсайт се има предвид абсолютната стойност на трептенията за секунда на тона ла от първа октава. Понятието, с което се следва да се описва целия набор от честоти в звучаща система от предварително дефинирани тонове е <strong>темперация</strong>. Т.е една и съща темепрация може да има различен концертен строй (например равномерна темперация в строй ла = 440 </em><em>Hz</em><em> и ла = 435 </em><em>Hz</em><em>) и в един и същи концертен строй да има повече от една темперация (в концетен строй ла = 432 </em><em>Hz</em> <em>равномерна темперация и темперация с отворени квинти).</em>",
+            "post_date_gmt": "2016-08-16 20:30:34",
+            "post_modified_gmt": "2017-03-02 13:33:36",
+            "post_name": "%d0%bb%d0%b0-432-hz-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%b5%d0%bd-%d1%81%d1%82%d1%80%d0%be%d0%b9",
+            "post_parent": "80",
+            "menu_order": "0"
+        },
+        {
+            "ID": "224",
+            "post_type": "post",
+            "post_title": "Photos Concert 13. March 2016",
+            "post_excerpt": "",
+            "post_content": "[gmedia id=5]",
+            "post_date_gmt": "2016-08-22 18:24:36",
+            "post_modified_gmt": "2016-08-22 18:32:22",
+            "post_name": "photos-concert-13-march-2016",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "227",
+            "post_type": "post",
+            "post_title": "Снимки концерт 13 март 2016",
+            "post_excerpt": "",
+            "post_content": "[gmedia id=5]",
+            "post_date_gmt": "2016-08-22 18:24:36",
+            "post_modified_gmt": "2016-08-22 18:24:36",
+            "post_name": "%d1%81%d0%bd%d0%b8%d0%bc%d0%ba%d0%b8-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-13-%d0%bc%d0%b0%d1%80%d1%82-2016",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "286",
+            "post_type": "post",
+            "post_title": "Анкета за концертната програма",
+            "post_excerpt": "",
+            "post_content": "<h2>Анкета - концертна програма</h2>\n\n<h2>Здравейте,</h2>\n\nспециално за българската аудитория на <strong>Камерен оркестър 432</strong> сме подготвили кратка анкета, с която целим да разберем към какви произведения нашата публика има най-голям интерес.\n\nЩе се радваме да дадете своя принос, за да можем да подготвим за следващите си концерти в България такива програми, които ще отговарят на интересите Ви.\n\n<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSf8iR4FL-DmhXoVNh3nXMIUdUuKWcalYB4XQ6Tvg5_bQcudvQ/viewform?embedded=true\" width=\"760\" height=\"4150\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\">Loading...</iframe>",
+            "post_date_gmt": "2016-12-04 22:33:55",
+            "post_modified_gmt": "2016-12-04 22:43:14",
+            "post_name": "%d0%b0%d0%bd%d0%ba%d0%b5%d1%82%d0%b0-%d0%b7%d0%b0-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b0",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "334",
+            "post_type": "page",
+            "post_title": "News",
+            "post_excerpt": "",
+            "post_content": "<h2>Current news</h2>",
+            "post_date_gmt": "2016-12-14 12:43:12",
+            "post_modified_gmt": "2017-03-02 13:29:37",
+            "post_name": "news",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "336",
+            "post_type": "page",
+            "post_title": "Новини",
+            "post_excerpt": "",
+            "post_content": "<h2>Новини</h2>",
+            "post_date_gmt": "2016-12-14 12:43:12",
+            "post_modified_gmt": "2017-03-02 13:29:07",
+            "post_name": "%d0%bd%d0%be%d0%b2%d0%b8%d0%bd%d0%b8",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "345",
+            "post_type": "post",
+            "post_title": "Bach - Air",
+            "post_excerpt": "",
+            "post_content": "<h2>Bach - Air in 432 Hz</h2>\n\n432 Chamber Orchestra's Quartet is playing \"Air\" from Orchestral Suite No. 3 by Johann Sebastian Bach.\n\n[bandcamp width=350 height=442 track=3481191004 size=large bgcol=333333 linkcol=0f91ff tracklist=false]",
+            "post_date_gmt": "2016-12-29 08:00:35",
+            "post_modified_gmt": "2016-12-30 11:26:06",
+            "post_name": "bach-air",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "347",
+            "post_type": "post",
+            "post_title": "Бах - \"Ария\"",
+            "post_excerpt": "",
+            "post_content": "<h2>Бах - \"Ария\" в 432 Hz</h2>\n\nКвартетът на Камерен оркестър 432 свири \"Ария\" от Баховата Оркестрова сюита №3.\n\n[bandcamp width=350 height=442 track=3481191004 size=large bgcol=333333 linkcol=0f91ff tracklist=false]",
+            "post_date_gmt": "2016-12-29 08:00:35",
+            "post_modified_gmt": "2018-04-11 19:49:16",
+            "post_name": "%d0%b1%d0%b0%d1%85-%d0%b0%d1%80%d0%b8%d1%8f",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "361",
+            "post_type": "post",
+            "post_title": "Schubert - Moment musicaux",
+            "post_excerpt": "",
+            "post_content": "<h2>Schubert - \"Moment Musicaux\" No. 3 played by the 432 Chamber Orchestra's Quartet.</h2>\n\n[bandcamp width=350 height=442 track=2953827234 size=large bgcol=333333 linkcol=0f91ff tracklist=false]",
+            "post_date_gmt": "2016-12-30 11:35:40",
+            "post_modified_gmt": "2018-04-11 19:48:45",
+            "post_name": "schubert-moment-musicaux",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "363",
+            "post_type": "post",
+            "post_title": "Шуберт - Музикален момент",
+            "post_excerpt": "",
+            "post_content": "<h2>Шуберт - \"Музикален момент\" No. 3 в изпълнение на Квартета на Камерен оркестър 432.</h2>\n\n[bandcamp width=350 height=442 track=2953827234 size=large bgcol=333333 linkcol=0f91ff tracklist=false]",
+            "post_date_gmt": "2016-12-30 11:35:40",
+            "post_modified_gmt": "2018-04-11 19:48:22",
+            "post_name": "%d1%88%d1%83%d0%b1%d0%b5%d1%80%d1%82-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0%d0%bb%d0%b5%d0%bd-%d0%bc%d0%be%d0%bc%d0%b5%d0%bd%d1%82",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "365",
+            "post_type": "post",
+            "post_title": "Bizet - \"Entr'acte\", Suite \"Carmen\"",
+            "post_excerpt": "",
+            "post_content": "<h2>The famous \"Entr'acte\" from George Bizet's suite \"Carmen\" played by the 432 Chamber Orchestra's Quartet.</h2>\n\n[bandcamp width=350 height=442 track=789550373 size=large bgcol=333333 linkcol=0f91ff tracklist=false]",
+            "post_date_gmt": "2016-12-31 08:00:50",
+            "post_modified_gmt": "2018-04-11 19:48:03",
+            "post_name": "bizet-entracte-suite-carmen",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "367",
+            "post_type": "post",
+            "post_title": "Бизе - \"Антракт\" от сюита \"Кармен\"",
+            "post_excerpt": "",
+            "post_content": "<h2>Известния \"Антракт\" от сюитата \"Кармен\" на Жорж Бизе в изпълнение на Квартета на Камерен оркестър 432.</h2>\n\n[bandcamp width=350 height=442 track=789550373 size=large bgcol=333333 linkcol=0f91ff tracklist=false]",
+            "post_date_gmt": "2016-12-31 08:00:50",
+            "post_modified_gmt": "2018-04-11 19:47:34",
+            "post_name": "%d0%b1%d0%b8%d0%b7%d0%b5-%d0%b0%d0%bd%d1%82%d1%80%d0%b0%d0%ba%d1%82-%d0%be%d1%82-%d1%81%d1%8e%d0%b8%d1%82%d0%b0-%d0%ba%d0%b0%d1%80%d0%bc%d0%b5%d0%bd",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "371",
+            "post_type": "post",
+            "post_title": "Satie - Gymnopedie No. 1",
+            "post_excerpt": "",
+            "post_content": "<h2>The 432 Chamber Orchestra's Quartet playing Eric Satie's Gymnopedie No. 1.</h2>\n\n[bandcamp width=350 height=442 track=1823013299 size=large bgcol=333333 linkcol=0f91ff tracklist=false]",
+            "post_date_gmt": "2017-01-01 08:30:19",
+            "post_modified_gmt": "2018-04-11 19:46:34",
+            "post_name": "satie-gymnopedie-no-1",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "373",
+            "post_type": "post",
+            "post_title": "Сати - Химнопедия № 1",
+            "post_excerpt": "",
+            "post_content": "<h2>Квартетът на Камерен оркестър 432 изпълнява \"Химнопедия\" № 1 от Ерик Сати</h2>\n\n[bandcamp width=350 height=442 track=1823013299 size=large bgcol=333333 linkcol=0f91ff tracklist=false]",
+            "post_date_gmt": "2017-01-01 08:30:19",
+            "post_modified_gmt": "2018-04-11 19:46:04",
+            "post_name": "%d1%81%d0%b0%d1%82%d0%b8-%d1%85%d0%b8%d0%bc%d0%bd%d0%be%d0%bf%d0%b5%d0%b4%d0%b8%d1%8f-%e2%84%96-1",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "461",
+            "post_type": "page",
+            "post_title": "Checkout",
+            "post_excerpt": "",
+            "post_content": "[download_checkout]",
+            "post_date_gmt": "2017-10-28 14:56:00",
+            "post_modified_gmt": "2017-10-28 14:56:00",
+            "post_name": "checkout-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "462",
+            "post_type": "page",
+            "post_title": "Purchase Confirmation",
+            "post_excerpt": "",
+            "post_content": "Thank you for your purchase! [edd_receipt]",
+            "post_date_gmt": "2017-10-28 14:56:00",
+            "post_modified_gmt": "2017-10-28 14:56:00",
+            "post_name": "purchase-confirmation",
+            "post_parent": "461",
+            "menu_order": "0"
+        },
+        {
+            "ID": "463",
+            "post_type": "page",
+            "post_title": "Transaction Failed",
+            "post_excerpt": "",
+            "post_content": "Your transaction failed, please try again or contact site support.",
+            "post_date_gmt": "2017-10-28 14:56:00",
+            "post_modified_gmt": "2017-10-28 14:56:00",
+            "post_name": "transaction-failed",
+            "post_parent": "461",
+            "menu_order": "0"
+        },
+        {
+            "ID": "464",
+            "post_type": "page",
+            "post_title": "Purchase History",
+            "post_excerpt": "",
+            "post_content": "[purchase_history]",
+            "post_date_gmt": "2017-10-28 14:56:00",
+            "post_modified_gmt": "2017-10-28 14:56:00",
+            "post_name": "purchase-history",
+            "post_parent": "461",
+            "menu_order": "0"
+        },
+        {
+            "ID": "626",
+            "post_type": "page",
+            "post_title": "Gallery",
+            "post_excerpt": "",
+            "post_content": "[gmedia id=5]",
+            "post_date_gmt": "2017-10-28 18:40:18",
+            "post_modified_gmt": "2017-10-28 18:40:18",
+            "post_name": "gallery",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "628",
+            "post_type": "page",
+            "post_title": "Галерия",
+            "post_excerpt": "",
+            "post_content": "[gmedia id=5]",
+            "post_date_gmt": "2017-10-28 18:40:18",
+            "post_modified_gmt": "2017-10-28 18:41:29",
+            "post_name": "%d0%b3%d0%b0%d0%bb%d0%b5%d1%80%d0%b8%d1%8f",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "633",
+            "post_type": "page",
+            "post_title": "Download Page",
+            "post_excerpt": "",
+            "post_content": "",
+            "post_date_gmt": "2017-10-28 21:26:37",
+            "post_modified_gmt": "2017-10-28 21:26:37",
+            "post_name": "ms-download-page",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "769",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra's Quartet - 432 Hz Music",
+            "post_excerpt": "Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\r\n",
+            "post_content": "Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\n\nreleased October 30, 2017\n\n<strong>432 Chamber Orchestra's Quartet </strong>\n\n<strong>01 - Marc-Antoine Charpentier - Te Deum - Praelude\n02 - Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)\n03 - Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)\n04 - Cesar Franck - Panis Angelicus (Messe solennelle)\n05 - Alexander Borodin - Notturno (String Quartet No. 2 - Part III)\n06 - Modest Mussorgsky - Gopak (Sorochins Fair)\n07 - P. I. Tchaikovsky - Trepak (Nutcracker Suite)\n08 - Claude Debussy - Clair de lune\n09 - Pietro Mascagni - Intermezzo (Cavalleria Rusticana)\n10 - Scott Joplin - The Entertainer\n11 - Carlos Gardel - Por Una Cabeza\n12 - Giovanni Capurro - O Sole Mio\n13 - Armstrong (Thiele and Weiss) - What a Wonderful World\n14 - The Beatles - Yesterday\n15 - Matvey Blanter - Katyusha\n16 - Vasily Solovyov-Sedoi - Podmoskovniye vechera</strong>\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\n<strong>Dietmar Fischler</strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-10-31 00:56:10",
+            "post_modified_gmt": "2019-11-05 10:19:32",
+            "post_name": "432-chamber-orchestras-quartet-432-hz-music",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "796",
+            "post_type": "product",
+            "post_title": "Квартет на Камерен оркестър 432 - Музика в 432 Hz",
+            "post_excerpt": "Иван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музика от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "Иван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музика от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\n<strong>Квартет на Камерен оркестър 432\n\n01 - Marc-Antoine Charpentier - Te Deum - Praelude\n02 - Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)\n03 - Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)\n04 - Cesar Franck - Panis Angelicus (Messe solennelle)\n05 - Alexander Borodin - Notturno (String Quartet No. 2 - Part III)\n06 - Modest Mussorgsky - Gopak (Sorochins Fair)\n07 - P. I. Tchaikovsky - Trepak (Nutcracker Suite)\n08 - Claude Debussy - Clair de lune\n09 - Pietro Mascagni - Intermezzo (Cavalleria Rusticana)\n10 - Scott Joplin - The Entertainer\n11 - Carlos Gardel - Por Una Cabeza\n12 - Giovanni Capurro - O Sole Mio\n13 - Armstrong (Thiele and Weiss) - What a Wonderful World\n14 - The Beatles - Yesterday\n15 - Matvey Blanter - Катюша\n16 - Vasily Solovyov-Sedoi - Подмосковньие вечера</strong>\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-10-31 00:56:10",
+            "post_modified_gmt": "2019-11-05 10:20:13",
+            "post_name": "%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-%d0%bd%d0%b0-%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0-%d0%b2-43",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "806",
+            "post_type": "product",
+            "post_title": "Marc-Antoine Charpentier - Te Deum - Praelude - 432 Hz",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Marc-Antoine Charpentier - Te Deum - Praelude - 432 Hz</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 18 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-01 08:00:59",
+            "post_modified_gmt": "2019-12-01 00:38:07",
+            "post_name": "mark-antonie-charpantier-te-deum-praelude-432-hz",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "807",
+            "post_type": "product",
+            "post_title": "Marc-Antoine Charpentier - Te Deum - Praelude - 432 Hz",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\r\n",
+            "post_content": "<strong>Marc-Antoine Charpentier - Te Deum - Praelude - 432 Hz</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-01 08:00:59",
+            "post_modified_gmt": "2019-11-05 10:17:05",
+            "post_name": "mark-antonie-charpantier-te-deum-praelude-432-hz-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "810",
+            "post_type": "product",
+            "post_title": "Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II) </strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-02 08:00:47",
+            "post_modified_gmt": "2019-11-05 10:16:56",
+            "post_name": "georg-friedrich-handel-hornpie-watermusic-suite-d-dur-hw-349-part-ii",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "811",
+            "post_type": "product",
+            "post_title": "Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-02 08:00:47",
+            "post_modified_gmt": "2019-11-05 10:16:48",
+            "post_name": "georg-friedrich-handel-hornpie-watermusic-suite-d-dur-hw-349-part-ii-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "812",
+            "post_type": "product",
+            "post_title": "Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-03 08:00:18",
+            "post_modified_gmt": "2019-11-05 10:15:22",
+            "post_name": "georg-friedrich-handel-arrival-queen-sheba-solomon-hw-67",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "813",
+            "post_type": "product",
+            "post_title": "Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\r\n",
+            "post_content": "<strong>Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-03 08:00:18",
+            "post_modified_gmt": "2019-11-05 10:15:14",
+            "post_name": "georg-friedrich-handel-arrival-queen-sheba-solomon-hw-67-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "814",
+            "post_type": "product",
+            "post_title": "Cesar Franck - Panis Angelicus (Messe solennelle)",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Cesar Franck - Panis Angelicus (Messe solennelle)</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-04 08:00:50",
+            "post_modified_gmt": "2019-11-05 10:14:48",
+            "post_name": "caesar-frank-panis-angelicus-messe-solennelle",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "815",
+            "post_type": "product",
+            "post_title": "Cesar Franck - Panis Angelicus (Messe solennelle)",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\r\n",
+            "post_content": "<strong>Cesar Franck - Panis Angelicus (Messe solennelle)</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-04 08:00:50",
+            "post_modified_gmt": "2019-11-05 10:14:59",
+            "post_name": "caesar-frank-panis-angelicus-messe-solennelle-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "816",
+            "post_type": "product",
+            "post_title": "Alexander Borodin - Notturno (String Quartet No. 2 - Part III)",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Alexander Borodin - Notturno (String Quartet No. 2 - Part III)</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-05 08:00:04",
+            "post_modified_gmt": "2019-11-05 10:14:25",
+            "post_name": "alexander-borodin-notturno-string-quartet-no-2-part-iii",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "817",
+            "post_type": "product",
+            "post_title": "Alexander Borodin - Notturno (String Quartet No. 2 - Part III)",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Alexander Borodin - Notturno (String Quartet No. 2 - Part III)</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-05 08:00:04",
+            "post_modified_gmt": "2019-11-05 10:14:35",
+            "post_name": "alexander-borodin-notturno-string-quartet-no-2-part-iii-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "818",
+            "post_type": "product",
+            "post_title": "Modest Mussorgsky - Gopak (Sorochins Fair)",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Modest Mussorgsky - Gopak (Sorochins Fair)</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-06 08:00:52",
+            "post_modified_gmt": "2019-11-05 10:14:08",
+            "post_name": "modest-mussorgsky-gopak-sorochins-fair",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "819",
+            "post_type": "product",
+            "post_title": "Modest Mussorgsky - Gopak (Sorochins Fair)",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Modest Mussorgsky - Gopak (Sorochins Fair)</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-06 08:00:52",
+            "post_modified_gmt": "2019-11-05 10:13:07",
+            "post_name": "modest-mussorgsky-gopak-sorochins-fair-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "820",
+            "post_type": "product",
+            "post_title": "P. I. Tchaikovsky - Trepak (Nutcracker Suite)",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>P. I. Tchaikovsky - Trepak (Nutcracker Suite)</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-07 08:00:30",
+            "post_modified_gmt": "2019-11-05 10:12:58",
+            "post_name": "p-tchaikovsky-trepak-nutkracker-suite",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "821",
+            "post_type": "product",
+            "post_title": "P. I. Tchaikovsky - Trepak (Nutcracker Suite)",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>P. I. Tchaikovsky - Trepak (Nutcracker Suite)</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-07 08:00:30",
+            "post_modified_gmt": "2019-11-05 10:08:33",
+            "post_name": "p-tchaikovsky-trepak-nutkracker-suite-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "822",
+            "post_type": "product",
+            "post_title": "Claude Debussy - Clair de lune",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Claude Debussy - Clair de lune</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-08 08:00:44",
+            "post_modified_gmt": "2019-11-05 10:08:58",
+            "post_name": "claude-debussy-clair-de-lune",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "823",
+            "post_type": "product",
+            "post_title": "Claude Debussy - Clair de lune",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\r\n",
+            "post_content": "<strong>Claude Debussy - Clair de lune</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-08 08:00:44",
+            "post_modified_gmt": "2019-11-05 10:08:47",
+            "post_name": "claude-debussy-clair-de-lune-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "877",
+            "post_type": "page",
+            "post_title": "Buy our Music",
+            "post_excerpt": "",
+            "post_content": "[products limit=\"15\" columns=\"5\" orderby=\"popularity\" ]",
+            "post_date_gmt": "2017-11-02 00:20:28",
+            "post_modified_gmt": "2017-12-10 21:37:30",
+            "post_name": "buy-our-music",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "891",
+            "post_type": "page",
+            "post_title": "Купете нашата музика",
+            "post_excerpt": "",
+            "post_content": "[products limit=\"15\" columns=\"5\" orderby=\"popularity\" ]",
+            "post_date_gmt": "2017-11-02 00:20:28",
+            "post_modified_gmt": "2017-12-10 21:49:59",
+            "post_name": "%d0%ba%d1%83%d0%bf%d0%b5%d1%82%d0%b5-%d0%bd%d0%b0%d1%88%d0%b0%d1%82%d0%b0-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "898",
+            "post_type": "product",
+            "post_title": "Bizet - Entr'acte - Carmen Suite - 432 Hz",
+            "post_excerpt": "Part of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.\r\n",
+            "post_content": "<strong>Georges Bizet - Entr'acte - Carmen Suite - 432 Hz</strong>\n\nThis recording is of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Svetlana Pencheva",
+            "post_date_gmt": "2016-12-26 08:00:15",
+            "post_modified_gmt": "2019-11-05 10:20:13",
+            "post_name": "bizet-entracte-suite-carmen-432-hz",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "904",
+            "post_type": "product",
+            "post_title": "Bizet - Entr'acte - Carmen Suite - 432 Hz",
+            "post_excerpt": "Част от записите, които квартетът на  Камерен оркестър 432 направи през декември 2016 г.",
+            "post_content": "<strong>Georges Bizet - Entr'acte - Carmen Suite - 432 Hz</strong>\n\nТози запис е част от записите, които квартетът на  Камерен оркестър 432 направи през декември 2016 г.\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело -  Светлана Пенчева",
+            "post_date_gmt": "2016-12-26 08:00:15",
+            "post_modified_gmt": "2019-11-05 10:20:10",
+            "post_name": "bizet-entracte-suite-carmen-432-hz-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "919",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra - W. A. Mozart - Divertimento in D dur KV 136 (Yanakiev) Recording from rehearsal",
+            "post_excerpt": " Recording from a dress rehearsal for a concert.",
+            "post_content": "<strong>432 Chamber Orchestra - W. A. Mozart - Divertimento in D dur KV 136</strong>\n\nThis recording was made during a dress rehearsal for a concert.\n\n432 Chamber Orchestra\n\nConductor Ivan K. Yanakiev\n\n12.10.2017",
+            "post_date_gmt": "2017-11-02 12:00:08",
+            "post_modified_gmt": "2019-11-05 10:16:39",
+            "post_name": "432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "921",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra - W. A. Mozart - Divertimento in D dur KV 136 (Yanakiev) Recording from rehearsal",
+            "post_excerpt": "Запис от генерална репетиция за концерт.",
+            "post_content": "<strong>432 Chamber Orchestra - W. A. Mozart - Divertimento in D dur KV 136</strong>\n\nЗапис от генерална репетиция за концерт.\n\nКамерен оркестър 432\n\nДиригент Иван К. Янакиев\n\n12.10.2017",
+            "post_date_gmt": "2017-11-02 12:00:08",
+            "post_modified_gmt": "2019-11-05 10:16:32",
+            "post_name": "432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "922",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra - Antonio Vivaldi - Concerto Alla Rustica in G RV 151 - 432 Hz (Yanakiev) - Recording from rehearsal",
+            "post_excerpt": "Recorded during a dress rehearsal for a concert.",
+            "post_content": "<strong>432 Chamber Orchestra - Antonio Vivaldi - Concerto Alla Rustica in G RV 151 - 432 Hz (Yanakiev) - Recording from rehearsal</strong>\n\nThese recordings were made during a dress rehearsal for a concert.\n\n432 Chamber Orchestra\n\nConductor Ivan K. Yanakiev\n\n12.10.2017",
+            "post_date_gmt": "2017-11-02 14:00:50",
+            "post_modified_gmt": "2019-11-05 10:16:17",
+            "post_name": "432-chamber-orchestra-antonio-vivaldi-concerto-alla-rustica-g-rv-151-432-hz-yanakiev-recording-rehearsal",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "923",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra - Antonio Vivaldi - Concerto Alla Rustica in G RV 151 - 432 Hz (Yanakiev) - Recording from rehearsal",
+            "post_excerpt": "Записи от генерална репетиция за концерт.",
+            "post_content": "<strong>432 Chamber Orchestra - Antonio Vivaldi - Concerto Alla Rustica in G RV 151 - 432 Hz (Yanakiev) - Recording from rehearsal</strong>\n\nЗаписи от генерална репетиция за концерт.\n\nКамерен оркестър 432\n\nДиригент Иван К. Янакиев\n\n12.10.2017",
+            "post_date_gmt": "2017-11-02 14:00:50",
+            "post_modified_gmt": "2019-11-05 10:16:24",
+            "post_name": "432-chamber-orchestra-antonio-vivaldi-concerto-alla-rustica-g-rv-151-432-hz-yanakiev-recording-rehearsal-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "924",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra Quartet - E. Satie - Gymnopedie No. 1 - 432 Hz",
+            "post_excerpt": "Part of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.\r\n",
+            "post_content": "This recording is part of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Svetlana Pencheva",
+            "post_date_gmt": "2016-12-26 08:00:05",
+            "post_modified_gmt": "2019-11-05 10:20:28",
+            "post_name": "432-chamber-orchestra-quartet-e-satie-gymnopedie-no-1-432-hz",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "930",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra Quartet - E. Satie - Gymnopedie No. 1 - 432 Hz",
+            "post_excerpt": "Част от записите, които квартетът на  Камерен оркестър 432 направи през декември 2016 г.",
+            "post_content": "<strong>432 Chamber Orchestra Quartet - E. Satie - Gymnopedie No. 1 - 432 Hz</strong>\n\nТози запис е част от записите, които квартетът на  Камерен оркестър 432 направи през декември 2016 г.\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело -  Светлана Пенчева",
+            "post_date_gmt": "2016-12-26 08:00:05",
+            "post_modified_gmt": "2019-11-05 10:20:20",
+            "post_name": "432-chamber-orchestra-quartet-e-satie-gymnopedie-no-1-432-hz-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "931",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra Quartet - Fr. Schubert - Moment musical No. 3 - 432 Hz",
+            "post_excerpt": "Part of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.",
+            "post_content": "<strong>432 Chamber Orchestra Quartet - Fr. Schubert - Moment musical No. 3 - 432 Hz</strong>\n\nThis recording is of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Svetlana Pencheva",
+            "post_date_gmt": "2017-11-02 14:14:18",
+            "post_modified_gmt": "2019-11-05 10:15:47",
+            "post_name": "432-chamber-orchestra-quartet-fr-schubert-moment-musicaux-no-3-432-hz",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "935",
+            "post_type": "product",
+            "post_title": "432 Chamber Orchestra Quartet - Fr. Schubert - Moment musical No. 3 - 432 Hz",
+            "post_excerpt": "Част от записите, които квартетът на  Камерен оркестър 432 направи през декември 2016 г.",
+            "post_content": "<strong>432 Chamber Orchestra Quartet - Fr. Schubert - Moment musical No. 3 - 432 Hz</strong>\n\nТози запис е част от записите, които квартетът на  Камерен оркестър 432 направи през декември 2016 г.\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело -  Светлана Пенчева",
+            "post_date_gmt": "2017-11-02 14:14:18",
+            "post_modified_gmt": "2019-11-05 10:15:54",
+            "post_name": "432-chamber-orchestra-quartet-fr-schubert-moment-musicaux-no-3-432-hz-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "937",
+            "post_type": "product",
+            "post_title": "Bach  - Air - Orchestral Suite No. 3 in D dur BWV 1068",
+            "post_excerpt": "Part of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.",
+            "post_content": "<strong>432 Chamber Orchestra Quartet - Bach - Air - Orchestral Suite No. 3 in D dur BWV 1068 - 432 Hz</strong>\n\nThis recording is part of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Svetlana Pencheva",
+            "post_date_gmt": "2017-11-02 15:51:53",
+            "post_modified_gmt": "2019-11-05 10:15:31",
+            "post_name": "bach-air-orchestral-sutite-no-3-d-dur-bwv-1068",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "940",
+            "post_type": "product",
+            "post_title": "Bach  - Air - Orchestral Suite No. 3 in D dur BWV 1068",
+            "post_excerpt": "",
+            "post_content": "<strong>432 Chamber Orchestra Quartet - Bach - Air - Orchestral Suite No. 3 in D dur BWV 1068 - 432 Hz</strong>\n\nТози запис е част от записите, които квартетът на  Камерен оркестър 432 направи през декември 2016 г.\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело -  Светлана Пенчева",
+            "post_date_gmt": "2017-11-02 15:51:53",
+            "post_modified_gmt": "2019-11-05 10:15:38",
+            "post_name": "bach-air-orchestral-sutite-no-3-d-dur-bwv-1068-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "941",
+            "post_type": "product",
+            "post_title": "Pietro Mascagni - Intermezzo (Cavalleria Rusticana)",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Pietro Mascagni - Intermezzo (Cavalleria Rusticana)</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-09 08:00:08",
+            "post_modified_gmt": "2019-11-05 10:09:23",
+            "post_name": "pietro-mascagni-intermezzo-cavalleria-rusticana",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "942",
+            "post_type": "product",
+            "post_title": "Pietro Mascagni - Intermezzo (Cavalleria Rusticana)",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\r\n",
+            "post_content": "<strong>Pietro Mascagni - Intermezzo (Cavalleria Rusticana)</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-09 08:00:08",
+            "post_modified_gmt": "2019-11-05 10:09:13",
+            "post_name": "pietro-mascagni-intermezzo-cavalleria-rusticana-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "943",
+            "post_type": "product",
+            "post_title": "Scott Joplin - The Entertainer",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Scott Joplin - The Entertainer</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-10 08:00:36",
+            "post_modified_gmt": "2024-07-11 13:01:43",
+            "post_name": "scot-jopplinl-entertainer",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "944",
+            "post_type": "product",
+            "post_title": "Scott Joplin - The Entertainer",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Scott Joplin - The Entertainer</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-10 08:00:36",
+            "post_modified_gmt": "2024-07-08 01:45:07",
+            "post_name": "scot-jopplinl-entertainer-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "945",
+            "post_type": "product",
+            "post_title": "Carlos Gardel - Por Una Cabeza",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Carlos Gardel - Por Una Cabeza</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-11 08:00:48",
+            "post_modified_gmt": "2019-11-05 10:10:08",
+            "post_name": "carlos-gardel-por-una-cabeza",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "946",
+            "post_type": "product",
+            "post_title": "Carlos Gardel - Por Una Cabeza",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Carlos Gardel - Por Una Cabeza</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-11 08:00:48",
+            "post_modified_gmt": "2019-11-05 10:09:58",
+            "post_name": "carlos-gardel-por-una-cabeza-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "947",
+            "post_type": "product",
+            "post_title": "Giovanni Capurro - O Sole Mio",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Giovanni Capurro - O Sole Mio</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-12 08:00:26",
+            "post_modified_gmt": "2019-11-05 10:10:19",
+            "post_name": "giovanni-capurro-o-sole-mio",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "948",
+            "post_type": "product",
+            "post_title": "Giovanni Capurro - O Sole Mio",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Giovanni Capurro - O Sole Mio</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-12 08:00:26",
+            "post_modified_gmt": "2019-11-05 10:10:33",
+            "post_name": "giovanni-capurro-o-sole-mio-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "949",
+            "post_type": "product",
+            "post_title": "Armstrong - What a Wonderful World",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Armstrong - What a Wonderful World</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-13 08:00:26",
+            "post_modified_gmt": "2019-11-05 10:10:51",
+            "post_name": "armstrong-wonderful-world",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "950",
+            "post_type": "product",
+            "post_title": "Armstrong - What a Wonderful World",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Armstrong - What a Wonderful World</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-13 08:00:26",
+            "post_modified_gmt": "2019-11-05 10:10:43",
+            "post_name": "armstrong-wonderful-world-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "951",
+            "post_type": "product",
+            "post_title": "The Beatles - Yesterday",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>The Beatles - Yesterday</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-14 08:00:59",
+            "post_modified_gmt": "2019-11-05 10:11:02",
+            "post_name": "the-beetles-yesterday",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "952",
+            "post_type": "product",
+            "post_title": "The Beatles - Yesterday",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>The Beatles - Yesterday</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-14 08:00:59",
+            "post_modified_gmt": "2019-11-05 10:11:12",
+            "post_name": "the-beetles-yesterday-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "953",
+            "post_type": "product",
+            "post_title": "Matvey Blanter - Katyusha",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Matvey Blanter - Katyusha</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-15 08:00:38",
+            "post_modified_gmt": "2019-11-05 10:05:14",
+            "post_name": "matvey-blanter-katyusha",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "955",
+            "post_type": "product",
+            "post_title": "Matvey Blanter - Katyusha",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Матвей Блантер - Катюша</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-15 08:00:38",
+            "post_modified_gmt": "2019-11-05 10:11:22",
+            "post_name": "matvey-blanter-katyusha-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "956",
+            "post_type": "product",
+            "post_title": "Vasily Solovyov-Sedoi - Podmoskovniye vechera",
+            "post_excerpt": "Part of the Album 432 Hz Quartet Music by Ivan Yanakiev and the 432 Chamber Orchestra&#039;s Quartet.  The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
+            "post_content": "<strong>Vasily Solovyov-Sedoi - Podmoskovniye vechera</strong>\n\nThis track is part of the Album \"432 Hz Quartet Music\"\n\nIvan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.\ncredits\nreleased October 30, 2017\n\n432 Chamber Orchestra's Quartet\n\nArtistic Director - Ivan K. Yanakiev\n\nViolin I - Videlin Djedvev \nViolin II - Yosif Yosifov \nViola - Tanya Spasova \nCello - Palmira Gribneva\n\nThe recordings are realised with the financial Support of our Patrons\n\nDietmar Fischler\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-16 08:00:01",
+            "post_modified_gmt": "2019-11-05 10:05:26",
+            "post_name": "vasily-solovyov-sedoi-podmoskovniye-vechera",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "957",
+            "post_type": "product",
+            "post_title": "Vasily Solovyov-Sedoi - Podmoskovniye vechera",
+            "post_excerpt": "Част от албума \"Музика за квартет в 432 Hz\" на Иван Янакиев и квартетът на Камерен оркестър 432. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
+            "post_content": "<strong>Василий Павлович Соловьёв-Седой - Подмосковные вечера</strong>\n\nТози запис е част от албума \"Музика за квартет в 432 Hz\"\n\nИван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музиа от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.\n\nПубликуван на 30 октомври 2017 г.\n\nКвартет на Камерен оркестър 432\n\nХудожествен ръководител - Иван К. Янакиев\n\nПърва цигулка - Виделин Джеджев\nВтора цигулка - Йосиф Йосифов \nВиола - Таня Спасова \nВолончело - Палмира Грибнева\n\nЗаписите се реализират с финансовата подкрепа на нашите Патрони.\n\n<strong>Dietmar Fischler </strong>\n\nVictor Frost\n\nDianna Bensch \nAstrid Kienpointner",
+            "post_date_gmt": "2017-11-16 08:00:01",
+            "post_modified_gmt": "2019-11-05 10:05:42",
+            "post_name": "vasily-solovyov-sedoi-podmoskovniye-vechera-2",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "965",
+            "post_type": "page",
+            "post_title": "Кошница",
+            "post_excerpt": "",
+            "post_content": "[woocommerce_cart]",
+            "post_date_gmt": "2016-08-12 07:44:53",
+            "post_modified_gmt": "2017-11-06 21:36:07",
+            "post_name": "%d0%ba%d0%be%d1%88%d0%bd%d0%b8%d1%86%d0%b0",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "997",
+            "post_type": "page",
+            "post_title": "Магазин",
+            "post_excerpt": "",
+            "post_content": "[products limit=\"15\" columns=\"5\" orderby=\"popularity\" ]",
+            "post_date_gmt": "2016-08-12 07:44:53",
+            "post_modified_gmt": "2017-12-10 22:13:04",
+            "post_name": "%d0%bc%d0%b0%d0%b3%d0%b0%d0%b7%d0%b8%d0%bd",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "1032",
+            "post_type": "page",
+            "post_title": "Video",
+            "post_excerpt": "",
+            "post_content": "",
+            "post_date_gmt": "2018-03-01 12:26:30",
+            "post_modified_gmt": "2018-03-01 12:26:30",
+            "post_name": "video",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "1034",
+            "post_type": "page",
+            "post_title": "Видео",
+            "post_excerpt": "",
+            "post_content": "",
+            "post_date_gmt": "2018-03-01 12:26:30",
+            "post_modified_gmt": "2018-03-01 12:41:12",
+            "post_name": "%d0%b2%d0%b8%d0%b4%d0%b5%d0%be",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "1036",
+            "post_type": "page",
+            "post_title": "Video Grid Gallery",
+            "post_excerpt": "",
+            "post_content": "[video_grid]",
+            "post_date_gmt": "2018-03-01 13:20:01",
+            "post_modified_gmt": "2018-03-01 13:20:01",
+            "post_name": "video-grid-gallery",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "1037",
+            "post_type": "page",
+            "post_title": "Video Gallery",
+            "post_excerpt": "",
+            "post_content": "[video_gallery]",
+            "post_date_gmt": "2018-03-01 13:20:01",
+            "post_modified_gmt": "2018-03-01 13:20:01",
+            "post_name": "video-gallery",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "1067",
+            "post_type": "post",
+            "post_title": "Concert 148 Years Bulgarian Academy of Sciences",
+            "post_excerpt": "",
+            "post_content": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/1Co8_24qnG0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>\n\nConcert 148 Years Bulgarian Academy of Sciences\nconductor Ivan K. Yanakiev\nsoloist Videlin Dzhedzhev - violin\n\n<ol>\n<li>Wolfgang Amadeus Mozart - Divertimento in D KV 136/125a</li>\n<li>Georgi Zlatev-Cherkin - \"Sevdana\", solo violin Videlin Dzhedzhev</li>\n<li>Antonio Vivaldi - Concerto for Strings \"Alla Rustica\", RV151</li>\n</ol>",
+            "post_date_gmt": "2018-04-11 20:06:17",
+            "post_modified_gmt": "2018-04-11 20:09:55",
+            "post_name": "concert-148-years-bulgarian-academy-of-sceiences",
+            "post_parent": "0",
+            "menu_order": "0"
+        },
+        {
+            "ID": "1070",
+            "post_type": "post",
+            "post_title": "Камерен оркестър 432 - Концерт - Моцарт - Златев-Черкин - Вивалди",
+            "post_excerpt": "",
+            "post_content": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/1Co8_24qnG0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>\n\nКонцерт по случай 148 години от основаването на Българската академия на науките\n\nКамерен оркестър 432\nдиригент Иван К. Янакиев\nсолист Виделин Джеджев - цигулка\n\n<ol>\n<li>Волфганг Амадеус Моцарт - Дивертименто в ре мажор - KV 136/125а (първа част)</li>\n<li>Георги Златев-Черкин - \"Севдана\" , соло цигулка Виделин Джеджев</li>\n<li>Антонио Вивалди - КОнцерт за струнни \"Ала рустика\" RV 151</li>\n</ol>",
+            "post_date_gmt": "2018-04-11 20:06:17",
+            "post_modified_gmt": "2018-04-11 20:09:23",
+            "post_name": "%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-%d0%bc%d0%be%d1%86%d0%b0%d1%80%d1%82-%d0%b7%d0%bb%d0%b0",
+            "post_parent": "0",
+            "menu_order": "0"
+        }
+    ],
+    "terms": [
+        {
+            "term_id": "1",
+            "name": "Uncategorized",
+            "slug": "uncategorized",
+            "term_taxonomy_id": "1",
+            "taxonomy": "category",
+            "description": "",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "61",
+            "name": "432 Hz",
+            "slug": "432hz",
+            "term_taxonomy_id": "61",
+            "taxonomy": "post_tag",
+            "description": "",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "63",
+            "name": "432 music",
+            "slug": "432-music",
+            "term_taxonomy_id": "63",
+            "taxonomy": "post_tag",
+            "description": "Music played in 432 Hz",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "65",
+            "name": "432 Chamber Orchestra",
+            "slug": "432-chamber-orchestra",
+            "term_taxonomy_id": "65",
+            "taxonomy": "post_tag",
+            "description": "432 Chamber Orchestra participated.",
+            "parent": "0",
+            "count": "2"
+        },
+        {
+            "term_id": "70",
+            "name": "a = 432 Hz concert pitch",
+            "slug": "a-432-hz-concert-pitch",
+            "term_taxonomy_id": "70",
+            "taxonomy": "category",
+            "description": "Concert pitch a = 432 Hz",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "76",
+            "name": "Concert",
+            "slug": "concert",
+            "term_taxonomy_id": "76",
+            "taxonomy": "category",
+            "description": "",
+            "parent": "0",
+            "count": "1"
+        },
+        {
+            "term_id": "80",
+            "name": "Gallery",
+            "slug": "gallery",
+            "term_taxonomy_id": "80",
+            "taxonomy": "category",
+            "description": "",
+            "parent": "0",
+            "count": "1"
+        },
+        {
+            "term_id": "87",
+            "name": "Ivan Yanakiev",
+            "slug": "ivan-yanakiev",
+            "term_taxonomy_id": "87",
+            "taxonomy": "post_tag",
+            "description": "",
+            "parent": "0",
+            "count": "2"
+        },
+        {
+            "term_id": "89",
+            "name": "Miryana Kalushkova",
+            "slug": "miryana-kalushkova",
+            "term_taxonomy_id": "89",
+            "taxonomy": "post_tag",
+            "description": "",
+            "parent": "0",
+            "count": "1"
+        },
+        {
+            "term_id": "110",
+            "name": "Music",
+            "slug": "music",
+            "term_taxonomy_id": "110",
+            "taxonomy": "category",
+            "description": "",
+            "parent": "0",
+            "count": "5"
+        },
+        {
+            "term_id": "198",
+            "name": "Audio",
+            "slug": "audio",
+            "term_taxonomy_id": "198",
+            "taxonomy": "product_cat",
+            "description": "",
+            "parent": "0",
+            "count": "23"
+        },
+        {
+            "term_id": "200",
+            "name": "String quartet",
+            "slug": "string-quartet",
+            "term_taxonomy_id": "200",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "21"
+        },
+        {
+            "term_id": "208",
+            "name": "Quartet",
+            "slug": "quartet",
+            "term_taxonomy_id": "208",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "21"
+        },
+        {
+            "term_id": "214",
+            "name": "String orchestra",
+            "slug": "string-orchestra",
+            "term_taxonomy_id": "214",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "2"
+        },
+        {
+            "term_id": "216",
+            "name": "Solo violin",
+            "slug": "solo-violin",
+            "term_taxonomy_id": "216",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "220",
+            "name": "Classical",
+            "slug": "classical",
+            "term_taxonomy_id": "220",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "2"
+        },
+        {
+            "term_id": "228",
+            "name": "Pop",
+            "slug": "pop",
+            "term_taxonomy_id": "228",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "230",
+            "name": "Russian",
+            "slug": "russian",
+            "term_taxonomy_id": "230",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "4"
+        },
+        {
+            "term_id": "236",
+            "name": "Bulgarian",
+            "slug": "bulgarian",
+            "term_taxonomy_id": "236",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "238",
+            "name": "Baroque",
+            "slug": "baroque",
+            "term_taxonomy_id": "238",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "5"
+        },
+        {
+            "term_id": "244",
+            "name": "Classicism",
+            "slug": "classicism",
+            "term_taxonomy_id": "244",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "1"
+        },
+        {
+            "term_id": "246",
+            "name": "Romantic",
+            "slug": "romantic",
+            "term_taxonomy_id": "246",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "7"
+        },
+        {
+            "term_id": "252",
+            "name": "XX Century",
+            "slug": "xx-century",
+            "term_taxonomy_id": "252",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "7"
+        },
+        {
+            "term_id": "260",
+            "name": "Contemporary",
+            "slug": "contemporary",
+            "term_taxonomy_id": "260",
+            "taxonomy": "product_tag",
+            "description": "",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "299",
+            "name": "String quartet music",
+            "slug": "string-quartet-music",
+            "term_taxonomy_id": "299",
+            "taxonomy": "product_cat",
+            "description": "",
+            "parent": "198",
+            "count": "21"
+        },
+        {
+            "term_id": "302",
+            "name": "String orchestra music",
+            "slug": "string-orchestra",
+            "term_taxonomy_id": "302",
+            "taxonomy": "product_cat",
+            "description": "",
+            "parent": "198",
+            "count": "2"
+        },
+        {
+            "term_id": "308",
+            "name": "Uncategorized",
+            "slug": "uncategorized",
+            "term_taxonomy_id": "308",
+            "taxonomy": "product_cat",
+            "description": "",
+            "parent": "0",
+            "count": "0"
+        },
+        {
+            "term_id": "312",
+            "name": "Audio",
+            "slug": "audio",
+            "term_taxonomy_id": "312",
+            "taxonomy": "category",
+            "description": "",
+            "parent": "110",
+            "count": "4"
+        },
+        {
+            "term_id": "320",
+            "name": "Video",
+            "slug": "video",
+            "term_taxonomy_id": "320",
+            "taxonomy": "category",
+            "description": "",
+            "parent": "110",
+            "count": "1"
+        }
+    ],
+    "relationships": [
+        {
+            "term_taxonomy_id": "65",
+            "object_id": "224"
+        },
+        {
+            "term_taxonomy_id": "65",
+            "object_id": "1067"
+        },
+        {
+            "term_taxonomy_id": "76",
+            "object_id": "1067"
+        },
+        {
+            "term_taxonomy_id": "80",
+            "object_id": "224"
+        },
+        {
+            "term_taxonomy_id": "87",
+            "object_id": "224"
+        },
+        {
+            "term_taxonomy_id": "87",
+            "object_id": "1067"
+        },
+        {
+            "term_taxonomy_id": "89",
+            "object_id": "224"
+        },
+        {
+            "term_taxonomy_id": "110",
+            "object_id": "345"
+        },
+        {
+            "term_taxonomy_id": "110",
+            "object_id": "361"
+        },
+        {
+            "term_taxonomy_id": "110",
+            "object_id": "365"
+        },
+        {
+            "term_taxonomy_id": "110",
+            "object_id": "371"
+        },
+        {
+            "term_taxonomy_id": "110",
+            "object_id": "1067"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "769"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "806"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "810"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "812"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "814"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "816"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "818"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "820"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "822"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "898"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "919"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "922"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "924"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "931"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "937"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "941"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "943"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "945"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "947"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "949"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "951"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "953"
+        },
+        {
+            "term_taxonomy_id": "198",
+            "object_id": "956"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "769"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "806"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "810"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "812"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "814"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "816"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "818"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "820"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "822"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "898"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "924"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "931"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "937"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "941"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "943"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "945"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "947"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "949"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "951"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "953"
+        },
+        {
+            "term_taxonomy_id": "200",
+            "object_id": "956"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "769"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "806"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "810"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "812"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "814"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "816"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "818"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "820"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "822"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "898"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "924"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "931"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "937"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "941"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "943"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "945"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "947"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "949"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "951"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "953"
+        },
+        {
+            "term_taxonomy_id": "208",
+            "object_id": "956"
+        },
+        {
+            "term_taxonomy_id": "214",
+            "object_id": "919"
+        },
+        {
+            "term_taxonomy_id": "214",
+            "object_id": "922"
+        },
+        {
+            "term_taxonomy_id": "220",
+            "object_id": "919"
+        },
+        {
+            "term_taxonomy_id": "220",
+            "object_id": "922"
+        },
+        {
+            "term_taxonomy_id": "230",
+            "object_id": "816"
+        },
+        {
+            "term_taxonomy_id": "230",
+            "object_id": "818"
+        },
+        {
+            "term_taxonomy_id": "230",
+            "object_id": "820"
+        },
+        {
+            "term_taxonomy_id": "230",
+            "object_id": "953"
+        },
+        {
+            "term_taxonomy_id": "238",
+            "object_id": "806"
+        },
+        {
+            "term_taxonomy_id": "238",
+            "object_id": "810"
+        },
+        {
+            "term_taxonomy_id": "238",
+            "object_id": "812"
+        },
+        {
+            "term_taxonomy_id": "238",
+            "object_id": "922"
+        },
+        {
+            "term_taxonomy_id": "238",
+            "object_id": "937"
+        },
+        {
+            "term_taxonomy_id": "244",
+            "object_id": "919"
+        },
+        {
+            "term_taxonomy_id": "246",
+            "object_id": "814"
+        },
+        {
+            "term_taxonomy_id": "246",
+            "object_id": "816"
+        },
+        {
+            "term_taxonomy_id": "246",
+            "object_id": "818"
+        },
+        {
+            "term_taxonomy_id": "246",
+            "object_id": "820"
+        },
+        {
+            "term_taxonomy_id": "246",
+            "object_id": "898"
+        },
+        {
+            "term_taxonomy_id": "246",
+            "object_id": "931"
+        },
+        {
+            "term_taxonomy_id": "246",
+            "object_id": "941"
+        },
+        {
+            "term_taxonomy_id": "252",
+            "object_id": "943"
+        },
+        {
+            "term_taxonomy_id": "252",
+            "object_id": "945"
+        },
+        {
+            "term_taxonomy_id": "252",
+            "object_id": "947"
+        },
+        {
+            "term_taxonomy_id": "252",
+            "object_id": "949"
+        },
+        {
+            "term_taxonomy_id": "252",
+            "object_id": "951"
+        },
+        {
+            "term_taxonomy_id": "252",
+            "object_id": "953"
+        },
+        {
+            "term_taxonomy_id": "252",
+            "object_id": "956"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "769"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "806"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "810"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "812"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "814"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "816"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "818"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "820"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "822"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "898"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "924"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "931"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "937"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "941"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "943"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "945"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "947"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "949"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "951"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "953"
+        },
+        {
+            "term_taxonomy_id": "299",
+            "object_id": "956"
+        },
+        {
+            "term_taxonomy_id": "302",
+            "object_id": "919"
+        },
+        {
+            "term_taxonomy_id": "302",
+            "object_id": "922"
+        },
+        {
+            "term_taxonomy_id": "312",
+            "object_id": "345"
+        },
+        {
+            "term_taxonomy_id": "312",
+            "object_id": "361"
+        },
+        {
+            "term_taxonomy_id": "312",
+            "object_id": "365"
+        },
+        {
+            "term_taxonomy_id": "312",
+            "object_id": "371"
+        },
+        {
+            "term_taxonomy_id": "320",
+            "object_id": "1067"
+        }
+    ],
+    "publicMeta": [
+        {
+            "post_id": "769",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "769",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "769",
+            "meta_key": "_regular_price",
+            "meta_value": "30"
+        },
+        {
+            "post_id": "769",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "769",
+            "meta_key": "_product_image_gallery",
+            "meta_value": "731,730,740,739,738,737,736,735,734,733,732"
+        },
+        {
+            "post_id": "769",
+            "meta_key": "_price",
+            "meta_value": "30"
+        },
+        {
+            "post_id": "796",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "796",
+            "meta_key": "_regular_price",
+            "meta_value": "30"
+        },
+        {
+            "post_id": "796",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "796",
+            "meta_key": "_product_image_gallery",
+            "meta_value": "764,765,766,762,761,763,759,758,760,757,756"
+        },
+        {
+            "post_id": "796",
+            "meta_key": "_price",
+            "meta_value": "30"
+        },
+        {
+            "post_id": "796",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "806",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "806",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "806",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "806",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "806",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "806",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "807",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "807",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "807",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "807",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "807",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "807",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "810",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "810",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "810",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "810",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "810",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "810",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "811",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "811",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "811",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "811",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "811",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "811",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "812",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "812",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "812",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "812",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "812",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "812",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "813",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "813",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "813",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "813",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "813",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "813",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "814",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "814",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "814",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "814",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "814",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "814",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "815",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "815",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "815",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "815",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "815",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "815",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "816",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "816",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "816",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "816",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "816",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "816",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "817",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "817",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "817",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "817",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "817",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "817",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "818",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "818",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "818",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "818",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "818",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "818",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "819",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "819",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "819",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "819",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "819",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "819",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "820",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "820",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "820",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "820",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "820",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "820",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "821",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "821",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "821",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "821",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "821",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "821",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "822",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "822",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "822",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "822",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "822",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "822",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "823",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "823",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "823",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "823",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "823",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "823",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "898",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "899"
+        },
+        {
+            "post_id": "898",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "898",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "898",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "898",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "898",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "904",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "905"
+        },
+        {
+            "post_id": "904",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "904",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "904",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "904",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "904",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "919",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "522"
+        },
+        {
+            "post_id": "919",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "919",
+            "meta_key": "_regular_price",
+            "meta_value": "4"
+        },
+        {
+            "post_id": "919",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "919",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "919",
+            "meta_key": "_price",
+            "meta_value": "4"
+        },
+        {
+            "post_id": "921",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "921",
+            "meta_key": "_price",
+            "meta_value": "4"
+        },
+        {
+            "post_id": "921",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "522"
+        },
+        {
+            "post_id": "921",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "921",
+            "meta_key": "_regular_price",
+            "meta_value": "4"
+        },
+        {
+            "post_id": "921",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "922",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "922",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "922",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "922",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "922",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "922",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "526"
+        },
+        {
+            "post_id": "923",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "923",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "923",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "923",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "923",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "923",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "526"
+        },
+        {
+            "post_id": "924",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "924",
+            "meta_key": "_price",
+            "meta_value": "4.5"
+        },
+        {
+            "post_id": "924",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "926"
+        },
+        {
+            "post_id": "924",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "924",
+            "meta_key": "_regular_price",
+            "meta_value": "4.5"
+        },
+        {
+            "post_id": "924",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "930",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "930",
+            "meta_key": "_regular_price",
+            "meta_value": "4.5"
+        },
+        {
+            "post_id": "930",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "930",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "930",
+            "meta_key": "_price",
+            "meta_value": "4.5"
+        },
+        {
+            "post_id": "930",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "927"
+        },
+        {
+            "post_id": "931",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "933"
+        },
+        {
+            "post_id": "931",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "931",
+            "meta_key": "_regular_price",
+            "meta_value": "4"
+        },
+        {
+            "post_id": "931",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "931",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "931",
+            "meta_key": "_price",
+            "meta_value": "4"
+        },
+        {
+            "post_id": "935",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "935",
+            "meta_key": "_regular_price",
+            "meta_value": "4"
+        },
+        {
+            "post_id": "935",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "935",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "935",
+            "meta_key": "_price",
+            "meta_value": "4"
+        },
+        {
+            "post_id": "935",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "934"
+        },
+        {
+            "post_id": "937",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "938"
+        },
+        {
+            "post_id": "937",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "937",
+            "meta_key": "_regular_price",
+            "meta_value": "2.5"
+        },
+        {
+            "post_id": "937",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "937",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "937",
+            "meta_key": "_price",
+            "meta_value": "2.5"
+        },
+        {
+            "post_id": "940",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "940",
+            "meta_key": "_regular_price",
+            "meta_value": "2.5"
+        },
+        {
+            "post_id": "940",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "940",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "940",
+            "meta_key": "_price",
+            "meta_value": "2.5"
+        },
+        {
+            "post_id": "940",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "939"
+        },
+        {
+            "post_id": "941",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "941",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "941",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "941",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "941",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "941",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "942",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "942",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "942",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "942",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "942",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "942",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "943",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "943",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "943",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "943",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "943",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "943",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "944",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "944",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "944",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "944",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "944",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "944",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "945",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "945",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "945",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "945",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "945",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "945",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "946",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "946",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "946",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "946",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "946",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "946",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "947",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "947",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "947",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "947",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "947",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "947",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "948",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "948",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "948",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "948",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "948",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "948",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "949",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "949",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "949",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "949",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "949",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "949",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "950",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "950",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "950",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "950",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "950",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "950",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "951",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "951",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "951",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "951",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "951",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "951",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "952",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "952",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "952",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "952",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "952",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "952",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "953",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "953",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "953",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "953",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "953",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "953",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "955",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "955",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "955",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "955",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "955",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "955",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "956",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "732"
+        },
+        {
+            "post_id": "956",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "956",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "956",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        },
+        {
+            "post_id": "956",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "956",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "957",
+            "meta_key": "_product_image_gallery",
+            "meta_value": ""
+        },
+        {
+            "post_id": "957",
+            "meta_key": "_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "957",
+            "meta_key": "_thumbnail_id",
+            "meta_value": "760"
+        },
+        {
+            "post_id": "957",
+            "meta_key": "_sku",
+            "meta_value": ""
+        },
+        {
+            "post_id": "957",
+            "meta_key": "_regular_price",
+            "meta_value": "5"
+        },
+        {
+            "post_id": "957",
+            "meta_key": "_sale_price",
+            "meta_value": ""
+        }
+    ],
+    "publicAttachments": [
+        {
+            "ID": "522",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/VBAL6540.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "VBAL6540"
+        },
+        {
+            "ID": "526",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/VBAL6544.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "VBAL6544"
+        },
+        {
+            "ID": "730",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8521web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8521web"
+        },
+        {
+            "ID": "731",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8490web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8490web"
+        },
+        {
+            "ID": "732",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8511web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8511web"
+        },
+        {
+            "ID": "733",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8377web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8377web"
+        },
+        {
+            "ID": "734",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8374web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8374web"
+        },
+        {
+            "ID": "735",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8387-1web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8387 1web"
+        },
+        {
+            "ID": "736",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8439web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8439web"
+        },
+        {
+            "ID": "737",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8521bwWeb.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8521bwWeb"
+        },
+        {
+            "ID": "738",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8490bwweb.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8490bwweb"
+        },
+        {
+            "ID": "739",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8511bwWeb.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8511bwWeb"
+        },
+        {
+            "ID": "740",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8433web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8433web"
+        },
+        {
+            "ID": "756",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8521web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8521web"
+        },
+        {
+            "ID": "757",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8490web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8490web"
+        },
+        {
+            "ID": "758",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8377web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8377web"
+        },
+        {
+            "ID": "759",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8374web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8374web"
+        },
+        {
+            "ID": "760",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8511web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8511web"
+        },
+        {
+            "ID": "761",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8439web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8439web"
+        },
+        {
+            "ID": "762",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8521bwWeb.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8521bwWeb"
+        },
+        {
+            "ID": "763",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8387-1web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8387 1web"
+        },
+        {
+            "ID": "764",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8433web.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8433web"
+        },
+        {
+            "ID": "765",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8511bwWeb.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8511bwWeb"
+        },
+        {
+            "ID": "766",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/MG_8490bwweb.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "_MG_8490bwweb"
+        },
+        {
+            "ID": "899",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2017/11/carmen-tall1.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "carmen-tall[1]"
+        },
+        {
+            "ID": "905",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2017/11/carmen-tall1.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "carmen-tall[1]"
+        },
+        {
+            "ID": "926",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/Gustave_Caillebotte_-_Paris_Street_Rainy_Day_-_Google_Art_Project1.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "Gustave_Caillebotte_-_Paris_Street_Rainy_Day_-_Google_Art_Project[1]"
+        },
+        {
+            "ID": "927",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/Gustave_Caillebotte_-_Paris_Street_Rainy_Day_-_Google_Art_Project1.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "Gustave_Caillebotte_-_Paris_Street_Rainy_Day_-_Google_Art_Project[1]"
+        },
+        {
+            "ID": "933",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/Schubertiade-980x5201.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "Schubertiade-980x520[1]"
+        },
+        {
+            "ID": "934",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/Schubertiade-980x5201.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "Schubertiade-980x520[1]"
+        },
+        {
+            "ID": "938",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/240px-Young_Bach21.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "240px-Young_Bach2[1]"
+        },
+        {
+            "ID": "939",
+            "guid": "http://432hz-orchestra.com/wp-content/uploads/2016/12/240px-Young_Bach21.jpg",
+            "post_mime_type": "image/jpeg",
+            "post_title": "240px-Young_Bach2[1]"
+        }
+    ],
+    "counts": {
+        "posts": 94,
+        "terms": 29,
+        "relationships": 133,
+        "publicMeta": 276,
+        "publicAttachments": 32
+    }
+}

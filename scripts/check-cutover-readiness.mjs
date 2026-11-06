@@ -24,7 +24,7 @@ const counts = Object.fromEntries(["page", "post", "product", "taxonomy"].map((k
 assert.deepEqual(counts, { page: 35, post: 13, product: 46, taxonomy: 29 },
   "Live published route snapshot changed: review and recapture before cutover");
 assert.equal(published.routes.length, 123, "Expected 123 distinct published WordPress routes");
-const toRoutePath = (url) => new URL(url).pathname.toLowerCase();
+const toRoutePath = (url) => decodeURIComponent(new URL(url).pathname).toLowerCase();
 assert.equal(new Set(published.routes.map((p) => toRoutePath(p.url))).size, 123,
   "Duplicate public route paths in WordPress inventory");
 assert.ok(published.routes.every((p) => {

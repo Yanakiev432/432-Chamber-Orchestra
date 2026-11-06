@@ -15,7 +15,8 @@ assert.ok(sitemap.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitem
 assert.ok(sitemap.includes("</urlset>"), "Missing sitemap closing element.");
 
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-assert.equal(sitemapUrls.length, 21, "Expected 21 sitemap URLs.");
+const importedCount = JSON.parse(readFileSync(resolve("src/content/legacyArchive.json"), "utf8")).items.length;
+assert.equal(sitemapUrls.length, 21 + importedCount, "Sitemap must enumerate every curated and historical page.");
 assert.equal(new Set(sitemapUrls).size, sitemapUrls.length, "Duplicate sitemap URLs.");
 assert.ok(sitemapUrls.every((url) => url.startsWith(origin + "/")), "Sitemap URLs must be absolute and use the configured origin.");
 
@@ -31,7 +32,7 @@ scan(dist);
 const htmlUrls = htmlFiles.map((file) => {
   const rel = relative(dist, file).split(sep).join("/");
   const path = rel === "index.html" ? "/" : "/" + rel.slice(0, -"index.html".length);
-  return origin + path;
+  return new URL(path, origin).href;
 });
 assert.deepEqual(new Set(sitemapUrls), new Set(htmlUrls), "Sitemap must match the actual static pages.");
 assert.ok(robots.includes("Sitemap: " + origin + "/sitemap.xml"), "Robots must advertise an absolute sitemap URL.");
@@ -51,4 +52,4 @@ for (const lang of ["bg", "en"]) {
   assert.equal(links.size, 12, "Expected exactly 12 distinct Bandcamp release links: " + lang);
 }
 
-console.log("SEO BUILD GATE PASS: 21 absolute sitemap URLs, robots, 2 canonical/hreflang pages, 12 links each, schema and OG image.");
+console.log("SEO BUILD GATE PASS: " + sitemapUrls.length + " sitemap URLs, robots, 2 canonical/hreflang pages, 12 links each, schema and OG image.");

@@ -1,4 +1,5 @@
 import type { APIRoute } from "astro";
+import legacy from "../content/legacyArchive.json";
 
 const routes = [
   "/",
@@ -21,7 +22,8 @@ const routes = [
   "/bg/sponsor-brief/",
   "/en/sponsor-brief/",
   "/bg/thank-you/",
-  "/en/thank-you/"
+  "/en/thank-you/",
+  ...legacy.items.map((item) => item.path)
 ];
 
 export const GET: APIRoute = ({ site }) => {

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import PhotoArchiveSection from "../../../components/PhotoArchiveSection.astro";
+import LegacyArchiveDirectory from "../../../components/LegacyArchiveDirectory.astro";
 import { siteContent } from "../../../content/siteContent";
 
 const content = {
@@ -15,4 +16,5 @@ const content = {
 
 <BaseLayout content={content} lang="en" canonicalHref="/en/archive/" alternateHref="/bg/archive/">
   <PhotoArchiveSection lang="en" />
+  <LegacyArchiveDirectory lang="en" />
 </BaseLayout>

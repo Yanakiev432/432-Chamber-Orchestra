@@ -1,0 +1,807 @@
+{
+    "source": "WordPress published Gmedia gallery, read-only",
+    "capturedUtc": "2026-11-05T23:30:20+00:00",
+    "images": [
+        {
+            "ID": "1",
+            "title": "Concert (4)",
+            "description": "",
+            "gmuid": "Concert-4.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:05",
+            "status": "publish"
+        },
+        {
+            "ID": "2",
+            "title": "Concert (3)",
+            "description": "",
+            "gmuid": "Concert-3.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:06",
+            "status": "publish"
+        },
+        {
+            "ID": "3",
+            "title": "Concert (2)",
+            "description": "",
+            "gmuid": "Concert-2.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:06",
+            "status": "publish"
+        },
+        {
+            "ID": "4",
+            "title": "Concert (1)",
+            "description": "",
+            "gmuid": "Concert-1.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:07",
+            "status": "publish"
+        },
+        {
+            "ID": "5",
+            "title": "Concert (22)",
+            "description": "",
+            "gmuid": "Concert-22.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:07",
+            "status": "publish"
+        },
+        {
+            "ID": "6",
+            "title": "Concert (21)",
+            "description": "",
+            "gmuid": "Concert-21.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:07",
+            "status": "publish"
+        },
+        {
+            "ID": "7",
+            "title": "Concert (20)",
+            "description": "",
+            "gmuid": "Concert-20.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:08",
+            "status": "publish"
+        },
+        {
+            "ID": "8",
+            "title": "Concert (19)",
+            "description": "",
+            "gmuid": "Concert-19.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:08",
+            "status": "publish"
+        },
+        {
+            "ID": "9",
+            "title": "Concert (18)",
+            "description": "",
+            "gmuid": "Concert-18.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:08",
+            "status": "publish"
+        },
+        {
+            "ID": "10",
+            "title": "Concert (17)",
+            "description": "",
+            "gmuid": "Concert-17.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:09",
+            "status": "publish"
+        },
+        {
+            "ID": "11",
+            "title": "Concert (16)",
+            "description": "",
+            "gmuid": "Concert-16.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:09",
+            "status": "publish"
+        },
+        {
+            "ID": "12",
+            "title": "Concert (15)",
+            "description": "",
+            "gmuid": "Concert-15.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:09",
+            "status": "publish"
+        },
+        {
+            "ID": "13",
+            "title": "Concert (14)",
+            "description": "",
+            "gmuid": "Concert-14.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:10",
+            "status": "publish"
+        },
+        {
+            "ID": "14",
+            "title": "Concert (13)",
+            "description": "",
+            "gmuid": "Concert-13.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:10",
+            "status": "publish"
+        },
+        {
+            "ID": "15",
+            "title": "Concert (12)",
+            "description": "",
+            "gmuid": "Concert-12.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:11",
+            "status": "publish"
+        },
+        {
+            "ID": "16",
+            "title": "Concert (11)",
+            "description": "",
+            "gmuid": "Concert-11.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:11",
+            "status": "publish"
+        },
+        {
+            "ID": "17",
+            "title": "Concert (10)CYMK",
+            "description": "",
+            "gmuid": "Concert-10CYMK.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:11",
+            "status": "publish"
+        },
+        {
+            "ID": "18",
+            "title": "Concert (10)",
+            "description": "",
+            "gmuid": "Concert-10.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:11",
+            "status": "publish"
+        },
+        {
+            "ID": "19",
+            "title": "Concert (9)",
+            "description": "",
+            "gmuid": "Concert-9.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:12",
+            "status": "publish"
+        },
+        {
+            "ID": "20",
+            "title": "Concert (8)",
+            "description": "",
+            "gmuid": "Concert-8.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:13",
+            "status": "publish"
+        },
+        {
+            "ID": "21",
+            "title": "Concert (7)",
+            "description": "",
+            "gmuid": "Concert-7.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:13",
+            "status": "publish"
+        },
+        {
+            "ID": "22",
+            "title": "Concert (6)",
+            "description": "",
+            "gmuid": "Concert-6.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:14",
+            "status": "publish"
+        },
+        {
+            "ID": "23",
+            "title": "Concert (5)",
+            "description": "",
+            "gmuid": "Concert-5.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2016-08-22 20:45:14",
+            "status": "publish"
+        },
+        {
+            "ID": "24",
+            "title": "VBAL6538",
+            "description": "",
+            "gmuid": "VBAL6538-1.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:13",
+            "status": "publish"
+        },
+        {
+            "ID": "25",
+            "title": "VBAL6537",
+            "description": "",
+            "gmuid": "VBAL6537-1.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:14",
+            "status": "publish"
+        },
+        {
+            "ID": "26",
+            "title": "VBAL6611",
+            "description": "",
+            "gmuid": "VBAL6611.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:15",
+            "status": "publish"
+        },
+        {
+            "ID": "27",
+            "title": "VBAL6610",
+            "description": "",
+            "gmuid": "VBAL6610.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:16",
+            "status": "publish"
+        },
+        {
+            "ID": "28",
+            "title": "VBAL6607",
+            "description": "",
+            "gmuid": "VBAL6607.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:17",
+            "status": "publish"
+        },
+        {
+            "ID": "29",
+            "title": "VBAL6605",
+            "description": "",
+            "gmuid": "VBAL6605.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:19",
+            "status": "publish"
+        },
+        {
+            "ID": "30",
+            "title": "VBAL6604",
+            "description": "",
+            "gmuid": "VBAL6604.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:20",
+            "status": "publish"
+        },
+        {
+            "ID": "31",
+            "title": "VBAL6603",
+            "description": "",
+            "gmuid": "VBAL6603.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:21",
+            "status": "publish"
+        },
+        {
+            "ID": "32",
+            "title": "VBAL6602",
+            "description": "",
+            "gmuid": "VBAL6602.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:22",
+            "status": "publish"
+        },
+        {
+            "ID": "33",
+            "title": "VBAL6600",
+            "description": "",
+            "gmuid": "VBAL6600.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:23",
+            "status": "publish"
+        },
+        {
+            "ID": "34",
+            "title": "VBAL6599",
+            "description": "",
+            "gmuid": "VBAL6599.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:24",
+            "status": "publish"
+        },
+        {
+            "ID": "35",
+            "title": "VBAL6598",
+            "description": "",
+            "gmuid": "VBAL6598.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:25",
+            "status": "publish"
+        },
+        {
+            "ID": "36",
+            "title": "VBAL6597",
+            "description": "",
+            "gmuid": "VBAL6597.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:26",
+            "status": "publish"
+        },
+        {
+            "ID": "37",
+            "title": "VBAL6596",
+            "description": "",
+            "gmuid": "VBAL6596.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:27",
+            "status": "publish"
+        },
+        {
+            "ID": "38",
+            "title": "VBAL6595",
+            "description": "",
+            "gmuid": "VBAL6595.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:28",
+            "status": "publish"
+        },
+        {
+            "ID": "39",
+            "title": "VBAL6594",
+            "description": "",
+            "gmuid": "VBAL6594.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:30",
+            "status": "publish"
+        },
+        {
+            "ID": "40",
+            "title": "VBAL6592",
+            "description": "",
+            "gmuid": "VBAL6592.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:31",
+            "status": "publish"
+        },
+        {
+            "ID": "41",
+            "title": "VBAL6591",
+            "description": "",
+            "gmuid": "VBAL6591.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:32",
+            "status": "publish"
+        },
+        {
+            "ID": "42",
+            "title": "VBAL6589",
+            "description": "",
+            "gmuid": "VBAL6589.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:33",
+            "status": "publish"
+        },
+        {
+            "ID": "43",
+            "title": "VBAL6582",
+            "description": "",
+            "gmuid": "VBAL6582.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:34",
+            "status": "publish"
+        },
+        {
+            "ID": "44",
+            "title": "VBAL6581",
+            "description": "",
+            "gmuid": "VBAL6581.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:35",
+            "status": "publish"
+        },
+        {
+            "ID": "45",
+            "title": "VBAL6579",
+            "description": "",
+            "gmuid": "VBAL6579.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:36",
+            "status": "publish"
+        },
+        {
+            "ID": "46",
+            "title": "VBAL6578",
+            "description": "",
+            "gmuid": "VBAL6578.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:37",
+            "status": "publish"
+        },
+        {
+            "ID": "47",
+            "title": "VBAL6577",
+            "description": "",
+            "gmuid": "VBAL6577.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:38",
+            "status": "publish"
+        },
+        {
+            "ID": "48",
+            "title": "VBAL6576",
+            "description": "",
+            "gmuid": "VBAL6576.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:40",
+            "status": "publish"
+        },
+        {
+            "ID": "49",
+            "title": "VBAL6575",
+            "description": "",
+            "gmuid": "VBAL6575.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:41",
+            "status": "publish"
+        },
+        {
+            "ID": "50",
+            "title": "VBAL6574",
+            "description": "",
+            "gmuid": "VBAL6574.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:42",
+            "status": "publish"
+        },
+        {
+            "ID": "51",
+            "title": "VBAL6573",
+            "description": "",
+            "gmuid": "VBAL6573.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:43",
+            "status": "publish"
+        },
+        {
+            "ID": "52",
+            "title": "VBAL6572",
+            "description": "",
+            "gmuid": "VBAL6572.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:44",
+            "status": "publish"
+        },
+        {
+            "ID": "53",
+            "title": "VBAL6571",
+            "description": "",
+            "gmuid": "VBAL6571.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:45",
+            "status": "publish"
+        },
+        {
+            "ID": "54",
+            "title": "VBAL6570",
+            "description": "",
+            "gmuid": "VBAL6570.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:46",
+            "status": "publish"
+        },
+        {
+            "ID": "55",
+            "title": "VBAL6569",
+            "description": "",
+            "gmuid": "VBAL6569.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:48",
+            "status": "publish"
+        },
+        {
+            "ID": "56",
+            "title": "VBAL6567",
+            "description": "",
+            "gmuid": "VBAL6567.jpg",
+            "mime_type": "image/jpeg",
+            "date": "2017-10-28 20:05:48",
+            "status": "publish"
+        }
+    ],
+    "albums": [
+        {
+            "term_id": "1",
+            "name": "Concert on 23.03.2016",
+            "description": "432 Chamber Orchestra during concert on 23. March 2016 in Studio 5 Club, National Palace of Culture, Sofia.",
+            "count": "23"
+        },
+        {
+            "term_id": "6",
+            "name": "Contemporary Bulgaran Composers in 432 Hz",
+            "description": "",
+            "count": "32"
+        },
+        {
+            "term_id": "7",
+            "name": "Concert 148 Years Bulgarian Academy of Sciences",
+            "description": "",
+            "count": "0"
+        }
+    ],
+    "relations": [
+        {
+            "gmedia_id": "4",
+            "gmedia_term_id": "1",
+            "gmedia_order": "1"
+        },
+        {
+            "gmedia_id": "1",
+            "gmedia_term_id": "1",
+            "gmedia_order": "2"
+        },
+        {
+            "gmedia_id": "23",
+            "gmedia_term_id": "1",
+            "gmedia_order": "3"
+        },
+        {
+            "gmedia_id": "21",
+            "gmedia_term_id": "1",
+            "gmedia_order": "4"
+        },
+        {
+            "gmedia_id": "6",
+            "gmedia_term_id": "1",
+            "gmedia_order": "5"
+        },
+        {
+            "gmedia_id": "22",
+            "gmedia_term_id": "1",
+            "gmedia_order": "6"
+        },
+        {
+            "gmedia_id": "14",
+            "gmedia_term_id": "1",
+            "gmedia_order": "7"
+        },
+        {
+            "gmedia_id": "20",
+            "gmedia_term_id": "1",
+            "gmedia_order": "8"
+        },
+        {
+            "gmedia_id": "18",
+            "gmedia_term_id": "1",
+            "gmedia_order": "9"
+        },
+        {
+            "gmedia_id": "17",
+            "gmedia_term_id": "1",
+            "gmedia_order": "10"
+        },
+        {
+            "gmedia_id": "16",
+            "gmedia_term_id": "1",
+            "gmedia_order": "11"
+        },
+        {
+            "gmedia_id": "15",
+            "gmedia_term_id": "1",
+            "gmedia_order": "12"
+        },
+        {
+            "gmedia_id": "19",
+            "gmedia_term_id": "1",
+            "gmedia_order": "13"
+        },
+        {
+            "gmedia_id": "13",
+            "gmedia_term_id": "1",
+            "gmedia_order": "14"
+        },
+        {
+            "gmedia_id": "12",
+            "gmedia_term_id": "1",
+            "gmedia_order": "15"
+        },
+        {
+            "gmedia_id": "11",
+            "gmedia_term_id": "1",
+            "gmedia_order": "16"
+        },
+        {
+            "gmedia_id": "10",
+            "gmedia_term_id": "1",
+            "gmedia_order": "17"
+        },
+        {
+            "gmedia_id": "9",
+            "gmedia_term_id": "1",
+            "gmedia_order": "18"
+        },
+        {
+            "gmedia_id": "8",
+            "gmedia_term_id": "1",
+            "gmedia_order": "19"
+        },
+        {
+            "gmedia_id": "7",
+            "gmedia_term_id": "1",
+            "gmedia_order": "20"
+        },
+        {
+            "gmedia_id": "5",
+            "gmedia_term_id": "1",
+            "gmedia_order": "21"
+        },
+        {
+            "gmedia_id": "3",
+            "gmedia_term_id": "1",
+            "gmedia_order": "22"
+        },
+        {
+            "gmedia_id": "2",
+            "gmedia_term_id": "1",
+            "gmedia_order": "23"
+        },
+        {
+            "gmedia_id": "32",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "43",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "54",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "33",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "44",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "55",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "34",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "45",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "24",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "35",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "46",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "25",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "36",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "47",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "26",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "37",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "48",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "27",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "38",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "49",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "28",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "39",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "50",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "29",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "40",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "51",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "30",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "41",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "52",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "31",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "42",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        },
+        {
+            "gmedia_id": "53",
+            "gmedia_term_id": "6",
+            "gmedia_order": "0"
+        }
+    ]
+}

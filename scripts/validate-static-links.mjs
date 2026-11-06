@@ -77,4 +77,5 @@ const result = {
   failureCount: failures.length
 };
 console.log(JSON.stringify(result, null, 2));
-if (pages.length !== 21 || failures.length) process.exitCode = 2;
+const migratedCount = JSON.parse(readFileSync(resolve("src/content/legacyArchive.json"), "utf8")).items.length;
+if (pages.length !== 21 + migratedCount || failures.length) process.exitCode = 2;

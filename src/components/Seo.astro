@@ -14,7 +14,7 @@ const {
   title: string;
   description: string;
   canonicalHref: string;
-  alternateHref: string;
+  alternateHref: string | null;
   lang: Language;
   type?: string;
   image?: string;
@@ -29,7 +29,7 @@ const toUrl = (path: string) => {
 };
 
 const canonical = toUrl(canonicalHref);
-const alternate = toUrl(alternateHref);
+const alternate = alternateHref ? toUrl(alternateHref) : null;
 const ogImage = toUrl(image);
 const structuredData = {
   "@context": "https://schema.org",
@@ -62,8 +62,8 @@ const structuredData = {
 <meta name="description" content={description} />
 {previewMode && <meta name="robots" content="noindex,nofollow" />}
 <link rel="canonical" href={canonical} />
-<link rel="alternate" hreflang="bg" href={lang === "bg" ? canonical : alternate} />
-<link rel="alternate" hreflang="en" href={lang === "en" ? canonical : alternate} />
+<link rel="alternate" hreflang={lang} href={canonical} />
+{alternate && <link rel="alternate" hreflang={lang === "bg" ? "en" : "bg"} href={alternate} />}
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content={type} />
