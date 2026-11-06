@@ -57,6 +57,22 @@ for (const path of ["/bg/", "/en/"]) {
   const html = readFileSync(file, "utf8");
   assert.ok(html.includes("a<sup>1</sup> = 432 Hz"), "Orchestra pitch must remain: " + path);
 }
+const approvedHero = [
+  {
+    lang: "bg",
+    text: "Камерен оркестър 432 съчетава изпълнението на струнния репертоар с интерес към концертния строй a¹ = 432 Hz и акустичните свойства на звука, като поставя особен акцент върху различията във възприятието и преживяването на музиката."
+  },
+  {
+    lang: "en",
+    text: "432 Chamber Orchestra combines performances of the string repertoire with an interest in concert pitch a¹ = 432 Hz and the acoustic properties of sound, placing particular emphasis on the different ways in which music is perceived and experienced."
+  }
+];
+for (const { lang, text } of approvedHero) {
+  assert.ok(source.includes(text), "The revised orchestra statement must remain exact: " + lang);
+  const html = readFileSync(join(root, lang, "index.html"), "utf8");
+  const rendered = text.replaceAll("a¹", "a<sup>1</sup>");
+  assert.ok(html.includes(rendered), "The public homepage must show the revised statement: " + lang);
+}
 const historicalSource = readFileSync("docs/wordpress-public-source-20261106.json", "utf8");
 assert.ok(/open fifths|отворени квинти/i.test(historicalSource),
   "Historical WordPress evidence must not be rewritten to conceal previous statements");
