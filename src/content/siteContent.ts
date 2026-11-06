@@ -274,7 +274,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Независим струнен оркестър · София",
       title: "432 Chamber Orchestra",
       text:
-        "Камерен оркестър 432 изпълнява струнния репертоар в концертен строй a¹ = 432 Hz. Със звученето си представяме акустичните особености на този строй и даваме възможност на слушателите да открият как възприемат и преживяват музиката при него. Елате и чуйте сами.",
+        "Камерен оркестър 432 изпълнява репертоара си в концертен строй a¹ = 432 Hz. Със звученето си той представя акустичните особености на този строй и дава възможност на слушателите сами да открият как възприемат и преживяват музиката при него. Елате и чуйте сами.",
       positioning: ["Камерна прецизност", "Историческа осведоменост", "Внимание към звученето"],
       finalLine:
         "Концерти, звукозаписи и архивни свидетелства за последователно музикално търсене.",
@@ -727,7 +727,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Independent String Orchestra · Sofia",
       title: "432 Chamber Orchestra",
       text:
-        "432 Chamber Orchestra performs the string repertoire at concert pitch a¹ = 432 Hz. Through our performances, we present the acoustic characteristics of this pitch and invite listeners to discover how they hear and experience the music. Come and listen for yourself.",
+        "432 Chamber Orchestra performs its repertoire at concert pitch a¹ = 432 Hz. Through its sound, the orchestra presents the acoustic characteristics of this pitch and invites listeners to discover how they hear and experience the music. Come and listen for yourself.",
       positioning: ["Chamber precision", "Historical perspective", "Attentive musicianship"],
       finalLine:
         "Concerts, recordings and archival testimony to a sustained musical enquiry.",
