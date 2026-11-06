@@ -366,7 +366,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       paragraphs: [
         "Иван Янакиев е основател на 432 Chamber Orchestra.",
         "Диригентската му работа е свързана с интерпретацията на струнния репертоар и с акустичните и музикално-теоретичните въпроси, които възникват в изпълнителската практика.",
-        "Работи в Института по механика на БАН. Научните му занимания са свързани с музикалната теория и изследването на музикалния звук; през 2020 г. защитава дисертация за концертния строй a¹ = 432 Hz и отворените квинти.",
+        "Работи в Института по механика на БАН. Научните му занимания са свързани с музикалната теория и изследването на музикалния звук; през 2020 г. защитава дисертация за концертния строй, музикалните темперации и възприятието на музиката.",
         "Оркестърът е създаден преди защитата на дисертацията. Неговата история е засвидетелствана от концертни програми, записи и публикации от предходните години."
       ]
     },
@@ -446,8 +446,8 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Акустична концепция",
       heading: "Концертен строй, темперация и интонация",
       paragraphs: [
-        "Референтната височина a¹ = 432 Hz не определя автоматично темперацията или интонацията в изпълнението. Това са различни понятия, разграничени и изследвани в дисертацията от 2020 г.",
-        "Практиката на оркестъра съществува отпреди изследването. В по-късната научна работа са разработени математически модели и сравнителни звукови примери, включително за темперациите на Мария Ренолд. Това не означава, че клавирната темперация „Отворени квинти“ е използвана във всеки оркестров концерт.",
+        "Първоначалната експериментална идея на оркестъра включва концертния строй и музикалната темперация. С развитието на художествената концепция a¹ = 432 Hz остава постоянният концертен строй на състава.",
+        "Интонацията и интервалните отношения се изграждат чрез слуха, майсторството и ансамбловото взаимодействие на инструменталистите, без предварително наложена единна темперация. Научната работа от 2020 г. разглежда тези въпроси отделно от изпълнителската практика на оркестъра.",
         "Участниците в някои експерименти описват осезаеми различия между a¹ = 432 Hz и a¹ = 440 Hz, но не показват единодушно предпочитание."
       ],
       disclaimer: "Не се твърдят универсални медицински, терапевтични или лечебни свойства на 432 Hz."
@@ -699,7 +699,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         { label: "Преса / Медии", href: "/bg/press/" },
         { label: "Спонсорско резюме", href: "/bg/sponsor-brief/" }
       ],
-      motto: "Независим · Утвърден · Самобитен"
+      motto: "Независим · Изискан · Разпознаваем"
     }
   },
   en: {
@@ -819,7 +819,7 @@ export const siteContent: Record<Language, SiteCopy> = {
       paragraphs: [
         "Ivan Yanakiev is the founder of 432 Chamber Orchestra.",
         "His conducting centres on the interpretation of string repertoire and on the acoustic and theoretical questions arising from musical performance.",
-        "He works at the Institute of Mechanics of the Bulgarian Academy of Sciences. His research addresses music theory and musical acoustics; in 2020 he defended a dissertation on the concert pitch a¹ = 432 Hz and open fifths.",
+        "He works at the Institute of Mechanics of the Bulgarian Academy of Sciences. His research addresses music theory and musical acoustics; in 2020 he defended a dissertation on concert pitch, musical temperament and music perception.",
         "The orchestra was founded before the dissertation was completed. Its earlier history is documented through concert programmes, recordings and contemporary publications."
       ]
     },
@@ -894,8 +894,8 @@ export const siteContent: Record<Language, SiteCopy> = {
       eyebrow: "Acoustic concept",
       heading: "Concert pitch, temperament and intonation",
       paragraphs: [
-        "a¹ = 432 Hz sets a reference pitch. It does not automatically determine the temperament or intonation of a performance. These concepts are distinguished in the 2020 dissertation.",
-        "The orchestra's practice existed before this research. The later dissertation develops mathematical models and comparative sound examples, including Maria Renold's temperaments. This does not mean that the Open Fifths keyboard temperament was applied to every orchestral concert.",
+        "The orchestra began as an experiment in concert pitch and musical temperament. As its artistic approach developed, a¹ = 432 Hz remained its consistent reference pitch.",
+        "Intonation and interval relationships are shaped by the musicians’ ears, technique and ensemble listening, rather than by a single prescribed temperament. The 2020 research examines related questions separately from the orchestra’s performance practice.",
         "Participants in some experiments reported perceptible differences between a¹ = 432 Hz and a¹ = 440 Hz, but not a unanimous preference."
       ],
       disclaimer: "No universal medical, therapeutic or healing properties of 432 Hz are claimed."
@@ -1147,7 +1147,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         { label: "Press / Media", href: "/en/press/" },
         { label: "Sponsor brief", href: "/en/sponsor-brief/" }
       ],
-      motto: "Independent · Established · Distinctive"
+      motto: "Independent · Refined · Remarkable"
     }
   }
 };

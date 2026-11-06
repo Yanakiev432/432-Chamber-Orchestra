@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs && node scripts/validate-public-audio-excerpts.mjs && node scripts/validate-footer-editorial.mjs",
+    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs && node scripts/validate-public-audio-excerpts.mjs && node scripts/validate-footer-editorial.mjs && node scripts/validate-orchestra-tuning-editorial.mjs",
     "pitch:validate": "node scripts/validate-concert-pitch.mjs",
     "audio:validate": "node scripts/validate-public-audio-excerpts.mjs",
     "footer:validate": "node scripts/validate-footer-editorial.mjs",
+    "tuning:validate": "node scripts/validate-orchestra-tuning-editorial.mjs",
     "preview": "astro preview",
     "typecheck": "astro check",
     "seo:validate": "node scripts/validate-seo-build.mjs",

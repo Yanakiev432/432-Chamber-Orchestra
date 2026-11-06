@@ -2,12 +2,12 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
 import { join, resolve } from "node:path";
 
-const bgMotto = "Независим · Утвърден · Самобитен";
-const enMotto = "Independent · Established · Distinctive";
+const bgMotto = "Независим · Изискан · Разпознаваем";
+const enMotto = "Independent · Refined · Remarkable";
 const source = readFileSync("src/content/siteContent.ts", "utf8");
 assert.ok(source.includes('motto: "' + bgMotto + '"'), "Bulgarian footer wording missing");
 assert.ok(source.includes('motto: "' + enMotto + '"'), "English footer wording missing");
-const rejected = /Независим\s*·\s*(?:Документиран\s*·\s*Отчетен|С история\s*·\s*С характер)|Independent\s*·\s*(?:Documented\s*·\s*Accountable|History\s*·\s*Character)/;
+const rejected = /Независим\s*·\s*(?:Документиран\s*·\s*Отчетен|С история\s*·\s*С характер|Утвърден\s*·\s*Самобитен)|Independent\s*·\s*(?:Documented\s*·\s*Accountable|History\s*·\s*Character|Established\s*·\s*Distinctive)/;
 let pages = 0;
 let bulgarian = 0;
 let english = 0;

@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { canonicalPitch } from "./concert-pitch-standard.mjs";
+import { applyOrchestraEditorial, revisedOrchestraArchiveRecords, revisedOrchestraArchiveParagraphCount } from "./orchestra-pitch-editorial.mjs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 // Export contains exclusively public WordPress posts, products and taxonomy records.
@@ -204,6 +205,11 @@ if (items.length !== 144 || new Set(items.map((r) => r.path.toLowerCase())).size
 for (const item of items) {
   item.title = canonicalPitch(item.title);
   item.paragraphs = item.paragraphs.map(canonicalPitch);
+  applyOrchestraEditorial(item);
+}
+if (revisedOrchestraArchiveParagraphCount !== 11 || revisedOrchestraArchiveRecords.length !== 7 ||
+    revisedOrchestraArchiveRecords.some((record) => !items.some((item) => item.id === record.id && item.path === record.path))) {
+  throw new Error("ORCHESTRA_WITHDRAWN_TUNING_EDITORIAL_NOT_APPLIED");
 }
 const target = resolve(base, "src/content/legacyArchive.json");
 writeFileSync(target, JSON.stringify({version:1, capturedUtc:snapshot.capturedUtc, items}, null, 2) + "\n", "utf8");
