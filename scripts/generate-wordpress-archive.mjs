@@ -41,11 +41,15 @@ function url(raw) {
   } catch { return null; }
 }
 const keyPath = (raw) => decodeURIComponent(new URL(raw).pathname).replace(/\/?$/, "/").toLowerCase();
+// Public editorial exclusions: preserve the read-only WordPress snapshot, but never
+// republish the withdrawn historical soloists paragraph in generated site content.
+const withdrawnSoloistsStatement = (p) =>
+  /until now soloists of the ensemble|до момента солисти на камерен оркестър\s*432/i.test(p);
 function sourceLinks(body) {
   const links = [];
   for (const m of String(body || "").matchAll(/<(?:a|iframe|video|source)\b[^>]*?\b(?:href|src)\s*=\s*["']([^"']+)["']/gi)) {
     const target = url(m[1]);
-    if (target && !links.includes(target)) links.push(target);
+    if (target && !/operamusica\.com\/artist\/miryana-?kalushkova/i.test(target) && !links.includes(target)) links.push(target);
   }
   return links.slice(0, 50);
 }
@@ -80,7 +84,7 @@ function paras(body) {
     .replace(/<br\s*\/?>/gi, "\n").replace(/<li\b[^>]*>/gi, "\n• ")
     .replace(/<\/(?:p|li|div|h[1-6]|blockquote|ul|ol|table|tr|section)\s*>/gi, "\n\n")
     .replace(/<[^>]*>/g, "").replace(/\r\n?/g, "\n"))).split(/\n{2,}/)
-      .map((s) => s.replace(/[ \t]+/g, " ").trim()).filter(Boolean);
+      .map((s) => s.replace(/[ \t]+/g, " ").trim()).filter((p) => Boolean(p) && !withdrawnSoloistsStatement(p));
 }
 const thumbs = new Map(snapshot.publicMeta.filter((m) => m.meta_key === "_thumbnail_id").map((m) => [Number(m.post_id), Number(m.meta_value)]));
 const relations = new Map();

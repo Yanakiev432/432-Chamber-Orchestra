@@ -24,6 +24,9 @@ assert.deepEqual(Object.fromEntries(["page","post","product","taxonomy","event",
   {page:33,post:13,product:46,taxonomy:29,event:2,event_category:13,event_view:8});
 assert.equal(imported.filter((x)=>x.kind==="product"&&x.bandcampUrl?.startsWith("https://432orchestra.bandcamp.com/")).length,46);
 assert.equal(imported.filter((x)=>x.dynamicWordPress).length,9);
+const withdrawnMaterial = /until now soloists of the ensemble|до момента солисти на камерен оркестър\s*432|ivaylo donkov|ивайло донков|operamusica\.com\/artist\/miryana-?kalushkova/i;
+assert.ok(!withdrawnMaterial.test(JSON.stringify(imported)),
+  "Withdrawn EN/BG historical soloists passage or its external source is present in the public archive");
 const audioEmbeds=imported.flatMap((x)=>x.audioEmbeds || []);
 assert.equal(audioEmbeds.length,10,"Expected ten historical audio player embeds");
 assert.equal(audioEmbeds.filter((x)=>x.service==="bandcamp").length,8);
@@ -56,6 +59,7 @@ for(const rec of [...manifest.routes,...addon.routes]){
  assert.ok(existsSync(file) && statSync(file).isFile(),"LEGACY_ADDRESS_MISSING "+path);
  const html=readFileSync(file,"utf8");
  assert.ok(html.includes("<h1") || ["/bg/","/en/"].includes(path),"No page heading "+path);
+ assert.ok(!withdrawnMaterial.test(html),"Withdrawn material leaked into generated HTML: "+path);
  if(process.env.PUBLIC_PREVIEW_MODE==="true")
   assert.ok(html.includes('content="noindex,nofollow"'),"No noindex "+path);
  hit++;
