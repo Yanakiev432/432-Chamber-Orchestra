@@ -13,12 +13,12 @@ const names: Record<number, { bg: string; en: string }> = {
   <div class="container">
     <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{bg ? "Исторически фотоархив" : "Historical photo archive"}</p>
     <h2 class="max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] md:text-5xl">
-      {bg ? "Мигове от концертите" : "Moments from the concerts"}
+      {bg ? "Кадри от концертите" : "Concert photographs"}
     </h2>
     <p class="mt-5 max-w-3xl text-base leading-8 text-[#D7CEBF]">
       {bg
-        ? "Фотографии от концертите и музикалните срещи на Камерен оркестър 432."
-        : "Photographs from the concerts and musical encounters of 432 Chamber Orchestra."}
+        ? "Фотографии от концертни изяви на Камерен оркестър 432."
+        : "Photographs from performances by 432 Chamber Orchestra."}
     </p>
     <div class="mt-12 space-y-14">
       {albums.map((album) => (
@@ -37,8 +37,8 @@ const names: Record<number, { bg: string; en: string }> = {
         </section>
       ))}
       {!albumId && gallery.unassigned.length > 0 && (
-        <section aria-label={bg ? "Още фотографии" : "Further photographs"}>
-          <h3 class="mb-5 border-b border-[#C7A76D]/30 pb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Още фотографии" : "Further photographs"}</h3>
+        <section aria-label={bg ? "Други фотографии" : "Additional photographs"}>
+          <h3 class="mb-5 border-b border-[#C7A76D]/30 pb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Други фотографии" : "Additional photographs"}</h3>
           <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
             {gallery.unassigned.map((photo) => (
               <a class="block overflow-hidden border border-[#C7A76D]/20" href={photo.src} target="_blank" rel="noopener noreferrer" title={photo.title}>

@@ -62,7 +62,7 @@ for(const source of chosen){
  const note=count===0
     ? (bg ? "В тази колекция няма публикувани материали." : "There are no published items in this collection.")
     : photoArchive
-      ? (bg ? "Моменти от концертния живот на Камерен оркестър 432." : "Moments from the concert life of 432 Chamber Orchestra.")
+      ? (bg ? "Фотографии от концерти на Камерен оркестър 432." : "Photographs from concerts by 432 Chamber Orchestra.")
       : musicArchive
         ? (bg ? "Музика от репертоара на Камерен оркестър 432." : "Music from the repertoire of 432 Chamber Orchestra.")
         : (bg ? "Публикации и материали, посветени на оркестъра и неговата музика." : "Articles and materials on the orchestra and its music.");

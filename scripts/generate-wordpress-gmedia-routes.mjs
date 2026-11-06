@@ -63,8 +63,8 @@ for(const [kind,urls] of sourcePairs){
     if(slug==="gmedia"){
       item(raw,"gmedia_index",bg?"Концертни фотографии":"Concert photographs",{
         paragraphs: [bg
-          ? "Мигове от концертите и творческите срещи на Камерен оркестър 432."
-          : "Moments from the concerts and artistic encounters of 432 Chamber Orchestra."]});
+          ? "Кадри от концертни изяви на Камерен оркестър 432."
+          : "Photographs from performances by 432 Chamber Orchestra."]});
       continue;
     }
     const image=byImageSlug.get(slug);
@@ -78,7 +78,7 @@ for(const [kind,urls] of sourcePairs){
       albumId===6?`Contemporary Bulgarian Composers · Photograph ${imageNumber}`:
       "From the orchestra’s photo collection";
     item(raw,"gmedia_photo",photoTitle,{photo:image,albumId,albumPath,
-      paragraphs:[albumId===1?"A moment from the concert at Studio 5 in Sofia.":
+      paragraphs:[albumId===1?"Photograph from the concert at Studio 5, Sofia.":
                   albumId===6?"From the orchestra’s collection of photographs devoted to contemporary Bulgarian composers.":
                   "A photograph from the orchestra’s collection."]});
   }else if(kind==="gmedia_album"){
@@ -93,17 +93,17 @@ for(const [kind,urls] of sourcePairs){
     const pars=record.id===1?[
       "Фотографии от концерта в Студио 5, НДК, София."
     ]:record.id===6?[
-      "Фотографии от срещата на оркестъра с музиката на българските съвременни композитори."
+      "Фотографии от концерт с произведения на съвременни български композитори."
     ]:[
       "Концерт, посветен на годишнината на Българската академия на науките. За това събитие в колекцията няма запазени фотографии."
     ];
     const enPars=record.id===1?["Photographs from the concert at Studio 5, National Palace of Culture, Sofia."]:
-      record.id===6?["Photographs celebrating the orchestra’s engagement with contemporary Bulgarian music."]:
+      record.id===6?["Photographs from a concert featuring works by contemporary Bulgarian composers."]:
       ["A concert marking the anniversary of the Bulgarian Academy of Sciences. No photographs are preserved in this collection."];
     item(raw,"gmedia_album",bg?record.bg:record.title,{albumId:record.id,paragraphs:bg?pars:enPars});
   }else if(kind==="gmedia_gallery"){
     item(raw,"gmedia_gallery",bg?"Концертна галерия":"Concert gallery",{
-      paragraphs:[bg?"Фотографски спомени от изявите на Камерен оркестър 432.":"A photographic journey through performances by 432 Chamber Orchestra."]});
+      paragraphs:[bg?"Кадри от концертните изяви на Камерен оркестър 432.":"Photographs documenting performances by 432 Chamber Orchestra."]});
   }
  }
 }
