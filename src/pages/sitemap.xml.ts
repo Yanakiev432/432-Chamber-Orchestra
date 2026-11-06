@@ -2,6 +2,7 @@ import type { APIRoute } from "astro";
 import legacy from "../content/legacyArchive.json";
 import gmedia from "../content/legacyGmediaRoutes.json";
 import taxonomy from "../content/legacyTaxonomyRoutes.json";
+import extended from "../content/legacyExtendedRoutes.json";
 
 const routes = [
   "/",
@@ -27,7 +28,8 @@ const routes = [
   "/en/thank-you/",
   ...legacy.items.map((item) => item.path),
   ...gmedia.items.map((item) => item.path),
-  ...taxonomy.items.map((item) => item.path)
+  ...taxonomy.items.map((item) => item.path),
+  ...extended.items.map((item) => item.path)
 ];
 
 export const GET: APIRoute = ({ site }) => {

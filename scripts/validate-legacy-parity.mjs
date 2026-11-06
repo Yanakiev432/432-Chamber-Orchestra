@@ -65,6 +65,15 @@ for(const rec of [...manifest.routes,...addon.routes]){
  hit++;
 }
 const allPages=(function walk(path){return readdirSync(path,{withFileTypes:true}).flatMap((e)=>e.isDirectory()?walk(join(path,e.name)):(e.name==="index.html"?[join(path,e.name)]:[]));})(root);
+for (const file of allPages) {
+  const raw=readFileSync(file,"utf8");
+  const visible=raw
+    .replace(/<(script|style|svg|noscript)\b[^>]*>[\s\S]*?<\/\1>/gi," ")
+    .replace(/<!--[\s\S]*?-->/g," ")
+    .replace(/<[^>]*>/g," ");
+  assert.ok(!/\bWordPress\b|\bplugin\b|\bmetadata\b|плъгин|метаданни|Until now soloists|До момента солисти/i.test(visible),
+    "Technical or withdrawn wording is visible to concert audiences: "+file);
+}
 const gmedia = read("src/content/legacyGmediaRoutes.json");
 assert.equal(gmedia.items.length,64,"Expected exactly 64 original Gmedia routes");
 assert.equal(new Set(gmedia.items.map(x=>x.path.toLowerCase())).size,64);
@@ -96,7 +105,18 @@ for (const item of taxonomyAddon.items) {
     assert.ok(related.some(x=>html.includes(x.path)),"No related article link on public taxonomy page: "+item.path);
   }
 }
-assert.equal(allPages.length,255,"Expected 21 curated, 144 prior archive, 64 Gmedia and 26 taxonomy routes");
+const extended = read("src/content/legacyExtendedRoutes.json");
+assert.equal(extended.items.length,61);
+assert.equal(new Set(extended.items.map(x=>x.path.toLowerCase())).size,61);
+assert.equal(extended.items.filter(x=>x.archivePage>1).length,45);
+for(const item of extended.items){
+ const file=join(root,item.path.slice(1),"index.html");
+ assert.ok(existsSync(file),"Missing archive page: "+item.path);
+ const html=readFileSync(file,"utf8");
+ assert.ok(html.includes(item.originalUrl),"Original attribution missing: "+item.path);
+ if(item.listingLinks.length) assert.ok(item.listingLinks.some(x=>html.includes(x.path)),"Archive list content missing: "+item.path);
+}
+assert.equal(allPages.length,316,"Expected 21 curated, 144 legacy, 64 Gmedia, 26 taxonomy and 61 collection pages");
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],
   ["en", "/en/about/432-chamber-orchestra/", "History"]

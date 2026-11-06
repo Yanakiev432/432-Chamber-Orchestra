@@ -5,7 +5,7 @@ const { lang, albumId } = Astro.props as { lang: Language; albumId?: number };
 const bg = lang === "bg";
 const albums = albumId ? gallery.albums.filter((a) => a.id === albumId) : gallery.albums;
 const names: Record<number, { bg: string; en: string }> = {
-  1: { bg: "Концерт — март 2016 г.", en: "Concert — March 2016" },
+  1: { bg: "Студио 5, НДК · 13 март 2016 г.", en: "Studio 5, Sofia · 13 March 2016" },
   6: { bg: "„Български съвременници в 432 Hz“", en: "Contemporary Bulgarian Composers in 432 Hz" }
 };
 ---
@@ -13,12 +13,12 @@ const names: Record<number, { bg: string; en: string }> = {
   <div class="container">
     <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{bg ? "Исторически фотоархив" : "Historical photo archive"}</p>
     <h2 class="max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] md:text-5xl">
-      {bg ? "Концертни фотографии от WordPress" : "Concert photographs from WordPress"}
+      {bg ? "Мигове от концертите" : "Moments from the concerts"}
     </h2>
     <p class="mt-5 max-w-3xl text-base leading-8 text-[#D7CEBF]">
       {bg
-        ? "Снимки от двата оригинални публични фотоалбума на оркестъра, запазени с техните архивни принадлежности."
-        : "Photographs from the orchestra’s two original public photo albums, preserved with their archival album associations."}
+        ? "Фотографии от концертите и музикалните срещи на Камерен оркестър 432."
+        : "Photographs from the concerts and musical encounters of 432 Chamber Orchestra."}
     </p>
     <div class="mt-12 space-y-14">
       {albums.map((album) => (
@@ -28,17 +28,17 @@ const names: Record<number, { bg: string; en: string }> = {
             <p class="text-sm text-[#D7CEBF]">{album.images.length} {bg ? "фотографии" : "photographs"}</p>
           </div>
           <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-            {album.images.map((item) => (
-              <a class="group block overflow-hidden border border-[#C7A76D]/20 bg-[#091F19] transition hover:border-[#C7A76D]" href={item.src} target="_blank" rel="noopener noreferrer" title={item.title}>
-                <img class="aspect-[4/3] w-full object-cover transition duration-300 group-hover:scale-[1.015]" src={item.src} alt={(names[album.id]?.[lang] || album.name) + " — " + item.title} loading="lazy" decoding="async" width="480" height="360" />
+            {album.images.map((item, photoIndex) => (
+              <a class="group block overflow-hidden border border-[#C7A76D]/20 bg-[#091F19] transition hover:border-[#C7A76D]" href={item.src} target="_blank" rel="noopener noreferrer" title={names[album.id]?.[lang] || album.name}>
+                <img class="aspect-[4/3] w-full object-cover transition duration-300 group-hover:scale-[1.015]" src={item.src} alt={(names[album.id]?.[lang] || album.name) + " — " + (bg ? "фотография " : "photograph ") + (photoIndex + 1)} loading="lazy" decoding="async" width="480" height="360" />
               </a>
             ))}
           </div>
         </section>
       ))}
       {!albumId && gallery.unassigned.length > 0 && (
-        <section aria-label={bg ? "Фотографии без посочен албум" : "Photographs without an album"}>
-          <h3 class="mb-5 border-b border-[#C7A76D]/30 pb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Фотографии без посочен албум" : "Photographs without an album"}</h3>
+        <section aria-label={bg ? "Още фотографии" : "Further photographs"}>
+          <h3 class="mb-5 border-b border-[#C7A76D]/30 pb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Още фотографии" : "Further photographs"}</h3>
           <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
             {gallery.unassigned.map((photo) => (
               <a class="block overflow-hidden border border-[#C7A76D]/20" href={photo.src} target="_blank" rel="noopener noreferrer" title={photo.title}>

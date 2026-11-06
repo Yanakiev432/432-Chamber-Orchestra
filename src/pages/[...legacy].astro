@@ -4,23 +4,25 @@ import LegacyWordPressPhotoGallery from "../components/LegacyWordPressPhotoGalle
 import LegacyWordPressVideoGallery from "../components/LegacyWordPressVideoGallery.astro";
 import LegacyMusicCatalogue from "../components/LegacyMusicCatalogue.astro";
 import LegacyAudioEmbeds from "../components/LegacyAudioEmbeds.astro";
+import LegacyExtendedArchiveListing from "../components/LegacyExtendedArchiveListing.astro";
 import { siteContent } from "../content/siteContent";
 import legacy from "../content/legacyArchive.json";
 import gmedia from "../content/legacyGmediaRoutes.json";
 import taxonomy from "../content/legacyTaxonomyRoutes.json";
+import extended from "../content/legacyExtendedRoutes.json";
 
 export function getStaticPaths() {
-  return [...legacy.items, ...gmedia.items, ...taxonomy.items].map((record) => ({
+  return [...legacy.items, ...gmedia.items, ...taxonomy.items, ...extended.items].map((record) => ({
     params: { legacy: record.path.replace(/^\/|\/$/g, "") },
     props: { record }
   }));
 }
-const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] | (typeof taxonomy.items)[number] };
+const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] | (typeof taxonomy.items)[number] | (typeof extended.items)[number] };
 const lang = record.language === "bg" ? "bg" as const : "en" as const;
 const bg = lang === "bg";
 const kind = bg
-  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар", gmedia_photo:"Архивна фотография", gmedia_index:"Фотоархив", gmedia_album:"Фотоалбум", gmedia_album_index:"Албуми", gmedia_gallery:"Галерия" } as const)[record.kind]
-  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar", gmedia_photo:"Historic photograph", gmedia_index:"Photo archive", gmedia_album:"Photo album", gmedia_album_index:"Albums", gmedia_gallery:"Gallery" } as const)[record.kind];
+  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар", gmedia_photo:"Архивна фотография", gmedia_index:"Фотоархив", gmedia_album:"Фотоалбум", gmedia_album_index:"Албуми", gmedia_gallery:"Галерия", archive_collection:"Колекция" } as const)[record.kind]
+  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar", gmedia_photo:"Historic photograph", gmedia_index:"Photo archive", gmedia_album:"Photo album", gmedia_album_index:"Albums", gmedia_gallery:"Gallery", archive_collection:"Collection" } as const)[record.kind];
 const copy = {
   ...siteContent[lang],
   meta: {
@@ -44,6 +46,9 @@ const displayed = record.paragraphs.filter((p) => p.trim().length);
 const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.date.slice(0, 10) : null;
 const photoAlbumPath = "albumPath" in record ? record.albumPath : null;
 const galleryAlbumId = "albumId" in record ? (record.albumId || undefined) : undefined;
+const listingLinks = "listingLinks" in record ? record.listingLinks : [];
+const paginationLinks = "paginationLinks" in record ? record.paginationLinks : [];
+const archivePage = "archivePage" in record ? record.archivePage : 1;
 ---
 <BaseLayout content={copy} lang={lang} canonicalHref={record.path} alternateHref={record.alternatePath}>
   <section class="border-b border-brand-border bg-[#122B22] py-12 md:py-20">
@@ -52,11 +57,6 @@ const galleryAlbumId = "albumId" in record ? (record.albumId || undefined) : und
       <h1 class="max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] sm:text-5xl">{record.title}</h1>
       {published && <p class="mt-5 text-sm text-[#D7CEBF]">{bg ? "Публикувано" : "Published"}: <time datetime={published}>{published}</time></p>}
       {record.eventDate && <p class="mt-3 text-sm text-[#D7CEBF]">{bg ? "Дата на концерта" : "Concert date"}: <time datetime={record.eventDate}>{record.eventDate}</time></p>}
-      <p class="mt-5 max-w-3xl text-sm leading-7 text-[#D7CEBF]">
-        {bg
-          ? "Материал от историческия архив на 432 Chamber Orchestra, съхранен при пренасянето от WordPress. Оригиналното съдържание е представено за документална справка."
-          : "A preserved item from the 432 Chamber Orchestra WordPress archive. Original material is retained here for historical reference."}
-      </p>
     </div>
   </section>
 
@@ -69,17 +69,18 @@ const galleryAlbumId = "albumId" in record ? (record.albumId || undefined) : und
           {record.dynamicWordPress ? (
             <div class="border-l-2 border-[#C7A76D] pl-6 text-base leading-8 text-[#D7CEBF]">
               {bg
-                ? "Този адрес е част от историческата система за покупки, профили или изтегляния. Съответната функция остава в WordPress; архивното копие не обработва плащания, поръчки или лични данни."
-                : "This address belongs to the historical purchases, accounts or downloads system. The corresponding service remains in WordPress; this archival page does not process payments, orders or personal data."}
+                ? "Записите и изданията на оркестъра могат да бъдат разгледани в раздел „Музика“. За поръчки, направени през предишния сайт, използвайте първоначалната страница."
+                : "Explore the orchestra’s recordings and releases in the Music section. For earlier orders, please use the original site."}
             </div>
           ) : (
             <>
               {displayed.map((paragraph) => <p class="whitespace-pre-line break-words text-base leading-8 text-[#D7CEBF]">{paragraph}</p>)}
               {displayed.length === 0 && <p class="text-base leading-8 text-[#D7CEBF]">{bg
-                ? "Оригиналната страница съдържа вграден WordPress модул или динамичен архив, а не самостоятелен текст. Свързаните материали са достъпни в съответните архивни раздели."
-                : "The original page uses a WordPress plugin or a dynamic archive rather than a standalone text. Related material is available in the archive sections."}</p>}
+                ? "Разгледайте свързаните публикации, фотографии и записи от историята на оркестъра."
+                : "Explore related articles, photographs and recordings from the orchestra’s history."}</p>}
             </>
           )}
+          {record.kind === "archive_collection" && <LegacyExtendedArchiveListing lang={lang} items={listingLinks} pages={paginationLinks} currentPage={archivePage} />}
           {record.audioEmbeds.length > 0 && <LegacyAudioEmbeds lang={lang} items={record.audioEmbeds} />}
           {record.bandcampUrl && (
             <a class="inline-flex border border-[#C7A76D] bg-[#C7A76D] px-6 py-3 font-semibold text-[#091F19] transition hover:bg-[#F0E8D9]" href={record.bandcampUrl} target="_blank" rel="noopener noreferrer">
@@ -91,7 +92,7 @@ const galleryAlbumId = "albumId" in record ? (record.albumId || undefined) : und
           )}
           {record.kind === "gmedia_album_index" && (
             <div class="border-t border-[#C7A76D]/30 pt-6">
-              <h2 class="mb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Оригинални албуми" : "Original albums"}</h2>
+              <h2 class="mb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Концертни албуми" : "Concert albums"}</h2>
               <ul class="grid gap-3">{gmedia.items.filter((entry) => entry.kind === "gmedia_album").map((entry) => (
                 <li><a class="underline decoration-[#C7A76D]/70 underline-offset-4" href={entry.path}>{entry.title}</a></li>
               ))}</ul>
@@ -99,7 +100,7 @@ const galleryAlbumId = "albumId" in record ? (record.albumId || undefined) : und
           )}
           {related.length > 0 && (
             <div class="border-t border-[#C7A76D]/30 pt-8">
-              <h2 class="mb-5 font-serif text-2xl text-[#F0E8D9]">{bg ? "Свързани архивни материали" : "Related archive items"}</h2>
+              <h2 class="mb-5 font-serif text-2xl text-[#F0E8D9]">{bg ? "Още от архива" : "More from the archive"}</h2>
               <ul class="grid gap-3">
                 {related.map((item) => <li class="flex flex-wrap items-baseline gap-3">{item.eventDate && <time class="text-sm text-[#C7A76D]" datetime={item.eventDate}>{item.eventDate}</time>}<a class="underline decoration-[#C7A76D]/70 underline-offset-4 hover:text-[#C7A76D]" href={item.path}>{item.title}</a></li>)}
               </ul>
@@ -109,7 +110,7 @@ const galleryAlbumId = "albumId" in record ? (record.albumId || undefined) : und
           {musicIndex && <a class="inline-flex border-b border-[#C7A76D] py-2 text-[#F0E8D9]" href={bg ? "/bg/recordings/" : "/en/recordings/"}>{bg ? "Към дискографията" : "Visit the discography"}</a>}
           {contentLinks.length > 0 && (
             <div class="border-t border-[#C7A76D]/30 pt-8">
-              <h2 class="mb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Връзки от оригиналния материал" : "Links from the original source"}</h2>
+              <h2 class="mb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Допълнителна информация" : "Further information"}</h2>
               <ul class="grid gap-2 break-all text-sm">
                 {contentLinks.map((link) => <li><a href={link} target="_blank" rel="noopener noreferrer" class="text-[#C7A76D] underline underline-offset-4">{link}</a></li>)}
               </ul>
@@ -117,9 +118,9 @@ const galleryAlbumId = "albumId" in record ? (record.albumId || undefined) : und
           )}
         </article>
         <aside class="h-fit border border-[#C7A76D]/25 bg-[#122B22] p-6 text-sm leading-7 text-[#D7CEBF]">
-          <h2 class="mb-4 font-serif text-xl text-[#F0E8D9]">{bg ? "Архив и източник" : "Archive and source"}</h2>
-          <p>{bg ? "Първоначален публичен адрес в WordPress:" : "Original WordPress public address:"}</p>
-          <a class="mt-2 block break-all text-[#C7A76D] underline underline-offset-4" href={record.originalUrl} target="_blank" rel="noopener noreferrer">{record.originalUrl}</a>
+          <h2 class="mb-4 font-serif text-xl text-[#F0E8D9]">{bg ? "Разгледайте още" : "Discover more"}</h2>
+          <p>{bg ? "Първоначална публикация:" : "Original publication:"}</p>
+          <a class="mt-2 block break-all text-[#C7A76D] underline underline-offset-4" href={record.originalUrl} target="_blank" rel="noopener noreferrer">{bg ? "Към първоначалната публикация" : "View the original publication"}</a>
           <div class="mt-7 flex flex-col gap-3 border-t border-[#C7A76D]/25 pt-6">
             <a href={bg ? "/bg/archive/" : "/en/archive/"} class="underline underline-offset-4 hover:text-[#C7A76D]">{bg ? "Фотоархив" : "Photo archive"}</a>
             <a href={bg ? "/bg/recordings/" : "/en/recordings/"} class="underline underline-offset-4 hover:text-[#C7A76D]">{bg ? "Записи" : "Recordings"}</a>

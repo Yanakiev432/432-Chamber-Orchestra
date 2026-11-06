@@ -189,8 +189,8 @@ for (const row of eventSource.routes) {
       title:bg ? "Архивен концертен календар" : "Historical concert calendar",originalUrl:row.url,
       date:null,eventDate:null,
       paragraphs:[bg
-        ? "Историческите концертни събития от WordPress са запазени по-долу. Календарните изгледи на стария плъгин са заменени с постоянен архив, без да се представят събития от 2016 г. като предстоящи."
-        : "The documented WordPress concert events are listed below. The historical calendar plugin's views are replaced by a permanent archive; concerts from 2016 are not represented as upcoming events."],
+        ? "Събития и концерти от историята на Камерен оркестър 432."
+        : "Concerts and events from the history of 432 Chamber Orchestra."],
       sourceLinks:[],thumbnail:null,inlineImages:[],audioEmbeds:[],relatedIds:[bg?316:322],
       bandcampUrl:null,dynamicWordPress:false,alternatePath:existsAlt?alternate:null
     };

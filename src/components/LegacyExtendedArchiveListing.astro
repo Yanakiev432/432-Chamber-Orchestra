@@ -1,0 +1,32 @@
+---
+import type { Language } from "../content/siteContent";
+const { lang, items, pages, currentPage } = Astro.props as {
+  lang: Language;
+  items: { path: string; title: string; thumbnail: string | null; kind: string }[];
+  pages: { path: string; page: number }[];
+  currentPage: number;
+};
+const bg = lang === "bg";
+---
+<div class="space-y-6 border-t border-[#C7A76D]/30 pt-8">
+  <h2 class="font-serif text-2xl text-[#F0E8D9]">{bg ? "В тази колекция" : "In this collection"}</h2>
+  {items.length ? (
+    <div class="grid gap-4 sm:grid-cols-2">
+      {items.map((item) => (
+        <a href={item.path} class="group block overflow-hidden border border-[#C7A76D]/25 bg-[#122B22] transition hover:border-[#C7A76D]">
+          {item.thumbnail && <img class="aspect-[4/3] w-full object-contain bg-[#091F19]" src={item.thumbnail} alt={item.title} loading="lazy" decoding="async" />}
+          <span class="block p-4 text-sm font-semibold leading-6 text-[#F0E8D9] group-hover:text-[#C7A76D]">{item.title}</span>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <p class="text-sm leading-7 text-[#D7CEBF]">{bg ? "Тук засега няма публикувани материали." : "There are no published materials here yet."}</p>
+  )}
+  {pages.length > 1 && (
+    <nav aria-label={bg ? "Страници на архива" : "Archive pages"} class="flex flex-wrap gap-2 border-t border-[#C7A76D]/20 pt-5">
+      {pages.map((page) => (
+        <a href={page.path} aria-current={page.page === currentPage ? "page" : undefined} class="inline-flex min-h-10 min-w-10 items-center justify-center border border-[#C7A76D]/40 px-3 text-sm hover:bg-[#C7A76D] hover:text-[#091F19]">{page.page}</a>
+      ))}
+    </nav>
+  )}
+</div>

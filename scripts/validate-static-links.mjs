@@ -80,4 +80,5 @@ console.log(JSON.stringify(result, null, 2));
 const migratedCount = JSON.parse(readFileSync(resolve("src/content/legacyArchive.json"), "utf8")).items.length;
 const gmediaCount = JSON.parse(readFileSync(resolve("src/content/legacyGmediaRoutes.json"), "utf8")).items.length;
 const taxonomyCount = JSON.parse(readFileSync(resolve("src/content/legacyTaxonomyRoutes.json"), "utf8")).items.length;
-if (pages.length !== 21 + migratedCount + gmediaCount + taxonomyCount || failures.length) process.exitCode = 2;
+const extendedCount = JSON.parse(readFileSync(resolve("src/content/legacyExtendedRoutes.json"), "utf8")).items.length;
+if (pages.length !== 21 + migratedCount + gmediaCount + taxonomyCount + extendedCount || failures.length) process.exitCode = 2;

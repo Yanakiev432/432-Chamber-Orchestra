@@ -21,9 +21,9 @@ for(const image of images){
 }
 if(byImageSlug.size!==56)throw Error("EXPECTED_56_PHOTOGRAPHS");
 const albumsBySlug=new Map([
-  ["concert-on-23-03-2016",{id:1,title:"Concert on 23.03.2016",bg:"Концерт в Студио 5 — архивен албум",imageCount:23}],
-  ["contemporary-bulgaran-composers-in-432-hz",{id:6,title:"Contemporary Bulgaran Composers in 432 Hz",bg:"Български съвременници в 432 Hz",imageCount:32}],
-  ["concert-148-years-bulgarian-academy-of-sciences",{id:null,title:"Concert 148 Years Bulgarian Academy of Sciences",bg:"Концерт „148 години БАН“",imageCount:0}]
+  ["concert-on-23-03-2016",{id:1,title:"Concert at Studio 5 · 13 March 2016",bg:"Концерт в Студио 5 · 13 март 2016 г.",imageCount:23}],
+  ["contemporary-bulgaran-composers-in-432-hz",{id:6,title:"Contemporary Bulgarian Composers in 432 Hz",bg:"Български съвременници в 432 Hz",imageCount:32}],
+  ["concert-148-years-bulgarian-academy-of-sciences",{id:null,title:"Concert marking 148 years of the Bulgarian Academy of Sciences",bg:"Концерт по случай 148 години БАН",imageCount:0}]
 ]);
 const sourcePairs=[
   ["gmedia",sitemap.sitemaps.gmedia.urls],
@@ -61,12 +61,10 @@ for(const [kind,urls] of sourcePairs){
   const bg=path.startsWith("/bg/");
   if(kind==="gmedia"){
     if(slug==="gmedia"){
-      item(raw,"gmedia_index",bg?"Архив на фотографиите":"Gmedia Posts Archive",{
-        paragraphs: bg?[
-          "Оригиналната българска Gmedia страница няма публикувани отделни записи. Тук са представени запазените публични концертни фотографии от оригиналния архив."
-        ]:[
-          "Public concert photographs from the original WordPress Gmedia archive, preserved with their original albums."
-        ]});
+      item(raw,"gmedia_index",bg?"Концертни фотографии":"Concert photographs",{
+        paragraphs: [bg
+          ? "Мигове от концертите и творческите срещи на Камерен оркестър 432."
+          : "Moments from the concerts and artistic encounters of 432 Chamber Orchestra."]});
       continue;
     }
     const image=byImageSlug.get(slug);
@@ -74,30 +72,38 @@ for(const [kind,urls] of sourcePairs){
     const albumId=albumForImage.get(image.id)||null;
     const albumPath=albumId===1?"/en/blog/gmedia-album/concert-on-23-03-2016/":
       albumId===6?"/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/":null;
-    item(raw,"gmedia_photo",image.title,{photo:image,albumId,albumPath,
-      paragraphs:[albumId===1?"Original photographic record from the concert archive in Studio 5, Sofia.":
-                  albumId===6?"Original photograph from the orchestra archive of Bulgarian contemporaries.":
-                  "Original standalone photograph from the WordPress gallery."]});
+    const album=gallery.albums.find(a=>a.id===albumId);
+    const imageNumber=album ? album.images.findIndex(a=>a.id===image.id)+1 : 1;
+    const photoTitle=albumId===1?`Concert at Studio 5 · Photograph ${imageNumber}`:
+      albumId===6?`Contemporary Bulgarian Composers · Photograph ${imageNumber}`:
+      "From the orchestra’s photo collection";
+    item(raw,"gmedia_photo",photoTitle,{photo:image,albumId,albumPath,
+      paragraphs:[albumId===1?"A moment from the concert at Studio 5 in Sofia.":
+                  albumId===6?"From the orchestra’s collection of photographs devoted to contemporary Bulgarian composers.":
+                  "A photograph from the orchestra’s collection."]});
   }else if(kind==="gmedia_album"){
     if(slug==="gmedia-album"){
-      item(raw,"gmedia_album_index",bg?"Албуми на оркестъра":"Gmedia Albums Archive",{
-        paragraphs:[bg?"Публичните фотоалбуми на Камерен оркестър 432 от WordPress.":
-          "The original publicly listed WordPress gallery albums."]});
+      item(raw,"gmedia_album_index",bg?"Концертни албуми":"Concert albums",{
+        paragraphs:[bg?"Фотографии от концертите и музикалния живот на Камерен оркестър 432.":
+          "Photographs from the concerts and musical life of 432 Chamber Orchestra."]});
       continue;
     }
     const record=albumsBySlug.get(slug);
     if(!record)throw Error("UNKNOWN_ALBUM "+slug);
     const pars=record.id===1?[
-      "Original WordPress album title: Concert on 23.03.2016. Its date conflicts with the orchestra history, which records the concert at Studio 5 on 13 March 2016. The discrepancy in original metadata is retained for verification."
+      "Фотографии от концерта в Студио 5, НДК, София."
     ]:record.id===6?[
-      "Photographs preserved from the original WordPress album. The album title is retained as published."
+      "Фотографии от срещата на оркестъра с музиката на българските съвременни композитори."
     ]:[
-      "The album was publicly listed in WordPress, but contained no registered photographs in the recovered Gmedia album data. The album title is retained without inventing images."
+      "Концерт, посветен на годишнината на Българската академия на науките. За това събитие в колекцията няма запазени фотографии."
     ];
-    item(raw,"gmedia_album",record.title,{albumId:record.id,paragraphs:pars});
+    const enPars=record.id===1?["Photographs from the concert at Studio 5, National Palace of Culture, Sofia."]:
+      record.id===6?["Photographs celebrating the orchestra’s engagement with contemporary Bulgarian music."]:
+      ["A concert marking the anniversary of the Bulgarian Academy of Sciences. No photographs are preserved in this collection."];
+    item(raw,"gmedia_album",bg?record.bg:record.title,{albumId:record.id,paragraphs:bg?pars:enPars});
   }else if(kind==="gmedia_gallery"){
-    item(raw,"gmedia_gallery","432 Chamber Orchestra Gallery",{
-      paragraphs:["Original public Gmedia gallery, restored from the two populated albums and one unassigned photograph."]});
+    item(raw,"gmedia_gallery",bg?"Концертна галерия":"Concert gallery",{
+      paragraphs:[bg?"Фотографски спомени от изявите на Камерен оркестър 432.":"A photographic journey through performances by 432 Chamber Orchestra."]});
   }
  }
 }

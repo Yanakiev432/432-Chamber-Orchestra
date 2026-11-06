@@ -14,7 +14,7 @@ const groups = [
 ] as const;
 const items = archive.items.filter((item) => item.language === lang && !item.dynamicWordPress && (item.kind !== "event_view" || item.path === "/"+lang+"/events/"));
 const sections = groups.map((group) => ({...group, items: items.filter((item) => item.kind === group.kind)})).filter((group) => group.items.length);
-const count = items.length;
+
 ---
 <section id="legacy-archive-directory" class="border-t border-[#C7A76D]/30 bg-[#091F19] py-16 md:py-24">
   <div class="container">
@@ -24,8 +24,8 @@ const count = items.length;
     </h2>
     <p class="mt-5 max-w-3xl text-base leading-8 text-[#D7CEBF]">
       {bg
-        ? "Оригиналните публични материали от WordPress са организирани по видове, със запазени заглавия и исторически адреси. Динамичните клиентски и платежни услуги не са включени в този публичен архив."
-        : "The original public WordPress materials are organised by type, with their titles and historical addresses preserved. Dynamic customer accounts and payment services are excluded from this public archive."}
+        ? "Страници от историята на оркестъра — концертни програми, музикални записи, фотографии и публикации."
+        : "Pages from the orchestra’s history — concert programmes, recordings, photographs and publications."}
     </p>
     <div class="mt-10 grid gap-5 md:grid-cols-2">
       {sections.map((group) => (
@@ -45,6 +45,5 @@ const count = items.length;
         </details>
       ))}
     </div>
-    <p class="mt-8 text-xs text-[#D7CEBF]">{bg ? count + " архивни адреса на български език." : count + " archival addresses in English."}</p>
   </div>
 </section>
