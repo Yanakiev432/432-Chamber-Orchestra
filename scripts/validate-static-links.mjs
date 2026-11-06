@@ -78,4 +78,5 @@ const result = {
 };
 console.log(JSON.stringify(result, null, 2));
 const migratedCount = JSON.parse(readFileSync(resolve("src/content/legacyArchive.json"), "utf8")).items.length;
-if (pages.length !== 21 + migratedCount || failures.length) process.exitCode = 2;
+const gmediaCount = JSON.parse(readFileSync(resolve("src/content/legacyGmediaRoutes.json"), "utf8")).items.length;
+if (pages.length !== 21 + migratedCount + gmediaCount || failures.length) process.exitCode = 2;

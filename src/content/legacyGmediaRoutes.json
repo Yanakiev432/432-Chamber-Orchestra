@@ -1,0 +1,1662 @@
+{
+  "version": 1,
+  "origin": "https://432hz-orchestra.com",
+  "galleryOriginalImageCount": 56,
+  "groups": {
+    "gmedia_index": 2,
+    "gmedia_photo": 56,
+    "gmedia_album_index": 2,
+    "gmedia_album": 3,
+    "gmedia_gallery": 1
+  },
+  "items": [
+    {
+      "id": null,
+      "kind": "gmedia_index",
+      "language": "en",
+      "path": "/en/blog/gmedia/",
+      "title": "Gmedia Posts Archive",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Public concert photographs from the original WordPress Gmedia archive, preserved with their original albums."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": null,
+      "albumPath": null,
+      "mediaSrc": null
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-4-jpg/",
+      "title": "Concert (4)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-4-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-4.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-4.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-3-jpg/",
+      "title": "Concert (3)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-3-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-3.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-3.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-2-jpg/",
+      "title": "Concert (2)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-2-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-2.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-2.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-1-jpg/",
+      "title": "Concert (1)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-1-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-1.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-1.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-22-jpg/",
+      "title": "Concert (22)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-22-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-22.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-22.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-21-jpg/",
+      "title": "Concert (21)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-21-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-21.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-21.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-18-jpg/",
+      "title": "Concert (18)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-18-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-18.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-18.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-19-jpg/",
+      "title": "Concert (19)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-19-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-19.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-19.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-20-jpg/",
+      "title": "Concert (20)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-20-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-20.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-20.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-17-jpg/",
+      "title": "Concert (17)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-17-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-17.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-17.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-16-jpg/",
+      "title": "Concert (16)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-16-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-16.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-16.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-15-jpg/",
+      "title": "Concert (15)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-15-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-15.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-15.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-14-jpg/",
+      "title": "Concert (14)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-14-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-14.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-14.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-13-jpg/",
+      "title": "Concert (13)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-13-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-13.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-13.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-10-jpg/",
+      "title": "Concert (10)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-10-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-10.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-10.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-10cymk-jpg/",
+      "title": "Concert (10)CYMK",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-10cymk-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-10CYMK.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-10CYMK.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-11-jpg/",
+      "title": "Concert (11)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-11-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-11.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-11.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-12-jpg/",
+      "title": "Concert (12)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-12-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-12.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-12.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-9-jpg/",
+      "title": "Concert (9)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-9-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-9.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-9.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-8-jpg/",
+      "title": "Concert (8)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-8-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-8.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-8.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-7-jpg/",
+      "title": "Concert (7)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-7-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-7.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-7.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-5-jpg/",
+      "title": "Concert (5)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-5-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-5.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-5.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/concert-6-jpg/",
+      "title": "Concert (6)",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/concert-6-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photographic record from the concert archive in Studio 5, Sofia."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/Concert-6.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "mediaSrc": "/legacy-gallery/Concert-6.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6538-1-jpg/",
+      "title": "VBAL6538",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6538-1-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6538-1.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6538-1.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6537-1-jpg/",
+      "title": "VBAL6537",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6537-1-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6537-1.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6537-1.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6611-jpg/",
+      "title": "VBAL6611",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6611-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6611.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6611.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6610-jpg/",
+      "title": "VBAL6610",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6610-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6610.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6610.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6607-jpg/",
+      "title": "VBAL6607",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6607-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6607.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6607.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6605-jpg/",
+      "title": "VBAL6605",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6605-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6605.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6605.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6604-jpg/",
+      "title": "VBAL6604",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6604-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6604.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6604.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6603-jpg/",
+      "title": "VBAL6603",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6603-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6603.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6603.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6602-jpg/",
+      "title": "VBAL6602",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6602-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6602.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6602.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6600-jpg/",
+      "title": "VBAL6600",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6600-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6600.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6600.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6599-jpg/",
+      "title": "VBAL6599",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6599-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6599.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6599.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6598-jpg/",
+      "title": "VBAL6598",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6598-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6598.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6598.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6597-jpg/",
+      "title": "VBAL6597",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6597-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6597.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6597.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6596-jpg/",
+      "title": "VBAL6596",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6596-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6596.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6596.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6595-jpg/",
+      "title": "VBAL6595",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6595-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6595.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6595.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6594-jpg/",
+      "title": "VBAL6594",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6594-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6594.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6594.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6592-jpg/",
+      "title": "VBAL6592",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6592-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6592.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6592.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6591-jpg/",
+      "title": "VBAL6591",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6591-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6591.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6591.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6589-jpg/",
+      "title": "VBAL6589",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6589-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6589.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6589.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6582-jpg/",
+      "title": "VBAL6582",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6582-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6582.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6582.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6581-jpg/",
+      "title": "VBAL6581",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6581-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6581.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6581.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6579-jpg/",
+      "title": "VBAL6579",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6579-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6579.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6579.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6578-jpg/",
+      "title": "VBAL6578",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6578-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6578.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6578.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6577-jpg/",
+      "title": "VBAL6577",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6577-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6577.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6577.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6576-jpg/",
+      "title": "VBAL6576",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6576-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6576.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6576.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6575-jpg/",
+      "title": "VBAL6575",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6575-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6575.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6575.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6574-jpg/",
+      "title": "VBAL6574",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6574-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6574.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6574.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6573-jpg/",
+      "title": "VBAL6573",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6573-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6573.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6573.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6572-jpg/",
+      "title": "VBAL6572",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6572-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6572.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6572.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6571-jpg/",
+      "title": "VBAL6571",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6571-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6571.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6571.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6570-jpg/",
+      "title": "VBAL6570",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6570-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6570.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6570.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/en/blog/gmedia/vbal6569-jpg/",
+      "title": "VBAL6569",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia/vbal6569-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original photograph from the orchestra archive of Bulgarian contemporaries."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6569.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "mediaSrc": "/legacy-gallery/VBAL6569.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_photo",
+      "language": "en",
+      "path": "/blog/gmedia/vbal6567-jpg/",
+      "title": "VBAL6567",
+      "originalUrl": "https://432hz-orchestra.com/blog/gmedia/vbal6567-jpg/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original standalone photograph from the WordPress gallery."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [
+        "/legacy-gallery/VBAL6567.jpg"
+      ],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": null,
+      "albumPath": null,
+      "mediaSrc": "/legacy-gallery/VBAL6567.jpg"
+    },
+    {
+      "id": null,
+      "kind": "gmedia_index",
+      "language": "bg",
+      "path": "/bg/blog/gmedia/",
+      "title": "Архив на фотографиите",
+      "originalUrl": "https://432hz-orchestra.com/bg/blog/gmedia/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Оригиналната българска Gmedia страница няма публикувани отделни записи. Тук са представени запазените публични концертни фотографии от оригиналния архив."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": null,
+      "albumPath": null,
+      "mediaSrc": null
+    },
+    {
+      "id": null,
+      "kind": "gmedia_album_index",
+      "language": "en",
+      "path": "/en/blog/gmedia-album/",
+      "title": "Gmedia Albums Archive",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia-album/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "The original publicly listed WordPress gallery albums."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": null,
+      "albumPath": null,
+      "mediaSrc": null
+    },
+    {
+      "id": null,
+      "kind": "gmedia_album",
+      "language": "en",
+      "path": "/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "title": "Concert on 23.03.2016",
+      "originalUrl": "https://432hz-orchestra.com/en/blog/gmedia-album/concert-on-23-03-2016/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original WordPress album title: Concert on 23.03.2016. Its date conflicts with the orchestra history, which records the concert at Studio 5 on 13 March 2016. The discrepancy in original metadata is retained for verification."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 1,
+      "albumPath": null,
+      "mediaSrc": null
+    },
+    {
+      "id": null,
+      "kind": "gmedia_album",
+      "language": "en",
+      "path": "/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "title": "Contemporary Bulgaran Composers in 432 Hz",
+      "originalUrl": "https://432hz-orchestra.com/blog/gmedia-album/contemporary-bulgaran-composers-in-432-hz/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Photographs preserved from the original WordPress album. The album title is retained as published."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": 6,
+      "albumPath": null,
+      "mediaSrc": null
+    },
+    {
+      "id": null,
+      "kind": "gmedia_album",
+      "language": "en",
+      "path": "/blog/gmedia-album/concert-148-years-bulgarian-academy-of-sciences/",
+      "title": "Concert 148 Years Bulgarian Academy of Sciences",
+      "originalUrl": "https://432hz-orchestra.com/blog/gmedia-album/concert-148-years-bulgarian-academy-of-sciences/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "The album was publicly listed in WordPress, but contained no registered photographs in the recovered Gmedia album data. The album title is retained without inventing images."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": null,
+      "albumPath": null,
+      "mediaSrc": null
+    },
+    {
+      "id": null,
+      "kind": "gmedia_album_index",
+      "language": "bg",
+      "path": "/bg/blog/gmedia-album/",
+      "title": "Албуми на оркестъра",
+      "originalUrl": "https://432hz-orchestra.com/bg/blog/gmedia-album/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Публичните фотоалбуми на Камерен оркестър 432 от WordPress."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": null,
+      "albumPath": null,
+      "mediaSrc": null
+    },
+    {
+      "id": null,
+      "kind": "gmedia_gallery",
+      "language": "en",
+      "path": "/blog/gmedia-gallery/432-chamber-orcehstra-gallery/",
+      "title": "432 Chamber Orchestra Gallery",
+      "originalUrl": "https://432hz-orchestra.com/blog/gmedia-gallery/432-chamber-orcehstra-gallery/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Original public Gmedia gallery, restored from the two populated albums and one unassigned photograph."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "relatedIds": [],
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null,
+      "albumId": null,
+      "albumPath": null,
+      "mediaSrc": null
+    }
+  ]
+}

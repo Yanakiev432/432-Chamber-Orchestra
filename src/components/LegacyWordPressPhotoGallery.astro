@@ -36,6 +36,18 @@ const names: Record<number, { bg: string; en: string }> = {
           </div>
         </section>
       ))}
+      {!albumId && gallery.unassigned.length > 0 && (
+        <section aria-label={bg ? "Фотографии без посочен албум" : "Photographs without an album"}>
+          <h3 class="mb-5 border-b border-[#C7A76D]/30 pb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Фотографии без посочен албум" : "Photographs without an album"}</h3>
+          <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+            {gallery.unassigned.map((photo) => (
+              <a class="block overflow-hidden border border-[#C7A76D]/20" href={photo.src} target="_blank" rel="noopener noreferrer" title={photo.title}>
+                <img class="aspect-[4/3] w-full object-cover" src={photo.src} alt={photo.title} loading="lazy" decoding="async" width="480" height="360" />
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   </div>
 </section>

@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import legacy from "../content/legacyArchive.json";
+import gmedia from "../content/legacyGmediaRoutes.json";
 
 const routes = [
   "/",
@@ -23,7 +24,8 @@ const routes = [
   "/en/sponsor-brief/",
   "/bg/thank-you/",
   "/en/thank-you/",
-  ...legacy.items.map((item) => item.path)
+  ...legacy.items.map((item) => item.path),
+  ...gmedia.items.map((item) => item.path)
 ];
 
 export const GET: APIRoute = ({ site }) => {

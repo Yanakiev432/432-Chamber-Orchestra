@@ -65,7 +65,21 @@ for(const rec of [...manifest.routes,...addon.routes]){
  hit++;
 }
 const allPages=(function walk(path){return readdirSync(path,{withFileTypes:true}).flatMap((e)=>e.isDirectory()?walk(join(path,e.name)):(e.name==="index.html"?[join(path,e.name)]:[]));})(root);
-assert.equal(allPages.length,165,"Expected 21 native and 144 legacy routes");
+const gmedia = read("src/content/legacyGmediaRoutes.json");
+assert.equal(gmedia.items.length,64,"Expected exactly 64 original Gmedia routes");
+assert.equal(new Set(gmedia.items.map(x=>x.path.toLowerCase())).size,64);
+assert.ok(gmedia.items.every(x=>!imported.some(i=>i.path.toLowerCase()===x.path.toLowerCase())), "Overlapping Gmedia and historical WordPress routes");
+for (const item of gmedia.items) {
+ const file = join(root,item.path.slice(1),"index.html");
+ assert.ok(existsSync(file), "Missing restored Gmedia address: "+item.path);
+ const html = readFileSync(file,"utf8");
+ assert.ok(html.includes(item.originalUrl),"Missing original source provenance: "+item.path);
+ if (item.kind==="gmedia_photo"){
+  assert.ok(html.includes(item.mediaSrc), "Missing local original photograph: "+item.path);
+  assert.ok(existsSync(join(root,item.mediaSrc.slice(1))), "Missing local photo source file: "+item.mediaSrc);
+ }
+}
+assert.equal(allPages.length,229,"Expected 21 curated, 144 prior archive and 64 Gmedia routes");
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],
   ["en", "/en/about/432-chamber-orchestra/", "History"]

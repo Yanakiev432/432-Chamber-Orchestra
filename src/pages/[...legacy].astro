@@ -6,19 +6,20 @@ import LegacyMusicCatalogue from "../components/LegacyMusicCatalogue.astro";
 import LegacyAudioEmbeds from "../components/LegacyAudioEmbeds.astro";
 import { siteContent } from "../content/siteContent";
 import legacy from "../content/legacyArchive.json";
+import gmedia from "../content/legacyGmediaRoutes.json";
 
 export function getStaticPaths() {
-  return legacy.items.map((record) => ({
+  return [...legacy.items, ...gmedia.items].map((record) => ({
     params: { legacy: record.path.replace(/^\/|\/$/g, "") },
     props: { record }
   }));
 }
-const { record } = Astro.props as { record: (typeof legacy.items)[number] };
+const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] };
 const lang = record.language === "bg" ? "bg" as const : "en" as const;
 const bg = lang === "bg";
 const kind = bg
-  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар" } as const)[record.kind]
-  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar" } as const)[record.kind];
+  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар", gmedia_photo:"Архивна фотография", gmedia_index:"Фотоархив", gmedia_album:"Фотоалбум", gmedia_album_index:"Албуми", gmedia_gallery:"Галерия" } as const)[record.kind]
+  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar", gmedia_photo:"Historic photograph", gmedia_index:"Photo archive", gmedia_album:"Photo album", gmedia_album_index:"Albums", gmedia_gallery:"Gallery" } as const)[record.kind];
 const copy = {
   ...siteContent[lang],
   meta: {
@@ -28,7 +29,8 @@ const copy = {
 };
 const itemById = new Map(legacy.items.filter((r) => r.kind === "post" || r.kind === "product" || r.kind === "event").map((r) => [r.id, r]));
 const related = record.relatedIds.map((id) => itemById.get(id)).filter((r): r is NonNullable<typeof r> => Boolean(r) && r?.language === lang);
-const gallery = record.kind === "page" && /\/(?:gallery|галерия)\/$/i.test(record.path);
+const gallery = (record.kind === "page" && /\/(?:gallery|галерия)\/$/i.test(record.path)) ||
+  ["gmedia_index","gmedia_album","gmedia_album_index","gmedia_gallery"].includes(record.kind);
 const concertPhotoPost = record.kind === "post" && /(?:photos-concert|снимки-концерт)/i.test(record.path);
 const musicIndex = record.kind === "page" && /(?:buy-our-music|купете-нашата-музика|магазин|shop)\/$/i.test(record.path);
 const video = record.kind === "page" && /(?:video|видео)/i.test(record.path);
@@ -39,6 +41,8 @@ const contentLinks = record.sourceLinks.filter((u) => {
 });
 const displayed = record.paragraphs.filter((p) => p.trim().length);
 const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.date.slice(0, 10) : null;
+const photoAlbumPath = "albumPath" in record ? record.albumPath : null;
+const galleryAlbumId = "albumId" in record ? (record.albumId || undefined) : undefined;
 ---
 <BaseLayout content={copy} lang={lang} canonicalHref={record.path} alternateHref={record.alternatePath}>
   <section class="border-b border-brand-border bg-[#122B22] py-12 md:py-20">
@@ -81,6 +85,17 @@ const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.d
               {bg ? "Слушайте и купете в Bandcamp" : "Listen and buy on Bandcamp"}
             </a>
           )}
+          {record.kind === "gmedia_photo" && photoAlbumPath && (
+            <a class="inline-flex border-b border-[#C7A76D] py-2 text-[#F0E8D9] hover:text-[#C7A76D]" href={photoAlbumPath}>{bg ? "Към оригиналния фотоалбум" : "View original photo album"}</a>
+          )}
+          {record.kind === "gmedia_album_index" && (
+            <div class="border-t border-[#C7A76D]/30 pt-6">
+              <h2 class="mb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Оригинални албуми" : "Original albums"}</h2>
+              <ul class="grid gap-3">{gmedia.items.filter((entry) => entry.kind === "gmedia_album").map((entry) => (
+                <li><a class="underline decoration-[#C7A76D]/70 underline-offset-4" href={entry.path}>{entry.title}</a></li>
+              ))}</ul>
+            </div>
+          )}
           {related.length > 0 && (
             <div class="border-t border-[#C7A76D]/30 pt-8">
               <h2 class="mb-5 font-serif text-2xl text-[#F0E8D9]">{bg ? "Свързани архивни материали" : "Related archive items"}</h2>
@@ -113,7 +128,7 @@ const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.d
       </div>
     </div>
   </section>
-  {(gallery || concertPhotoPost) && <LegacyWordPressPhotoGallery lang={lang} albumId={concertPhotoPost ? 1 : undefined} />}
+  {(gallery || concertPhotoPost) && (record.kind !== "gmedia_album" || galleryAlbumId !== undefined) && <LegacyWordPressPhotoGallery lang={lang} albumId={concertPhotoPost ? 1 : record.kind === "gmedia_album" ? galleryAlbumId : undefined} />}
   {video && <LegacyWordPressVideoGallery lang={lang} />}
   {musicIndex && <LegacyMusicCatalogue lang={lang} />}
 </BaseLayout>
