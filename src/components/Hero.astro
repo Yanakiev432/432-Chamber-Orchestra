@@ -34,7 +34,7 @@ const { hero, lang } = Astro.props;
       </h1>
       <p class="mt-6 max-w-xl border-l-2 border-[#C7A76D] pl-5 text-base leading-8 text-[#F0E8D9] sm:mt-8 sm:text-xl sm:leading-9">{hero.text}</p>
       <div class="mt-8 flex flex-wrap items-center gap-3">
-        <CTAButton href={lang === "bg" ? "/bg/recordings/" : "/en/recordings/"} label={lang === "bg" ? "Чуйте записите" : "Hear our recordings"} />
+        <CTAButton href={lang === "bg" ? "/bg/recordings/" : "/en/recordings/"} label={lang === "bg" ? "Чуйте записите" : "Hear the recordings"} />
         <CTAButton href={lang === "bg" ? "/bg/archive/" : "/en/archive/"} label={lang === "bg" ? "Фотоархив и концерти" : "Photos & concerts"} variant="secondary" />
         <CTAButton href={audioArchive.bandcampProfile} label="Bandcamp" variant="text" external />
       </div>

@@ -143,11 +143,11 @@ export const pathwayCopy = {
         "До свързване на външната форма можете да изпратите предложение по имейл."
     },
     sponsor: {
-      heading: "Свържете ни с правилния човек",
+      heading: "Представете оркестъра на подходящ партньор",
       text:
-        "Първата практическа цел е да отворим 3-5 сериозни разговора с компании, домакини или патрони, които могат да подкрепят първия камерен preview формат.",
-      button: "Свържете ни",
-      fallbackButton: "Свържете ни с правилния човек",
+        "Първата практическа цел на оркестъра е да започне между три и пет съдържателни разговора с компании, домакини или патрони за следващия камерен концертен етап.",
+      button: "Предложете контакт",
+      fallbackButton: "Предложете контакт за оркестъра",
       fallbackSubject: "Въведение към 432 Chamber Orchestra",
       fallback:
         "До свързване на външната форма можете да изпратите въведение по имейл."
@@ -175,9 +175,9 @@ export const pathwayCopy = {
         "Until the external form is connected, you can send a host or company suggestion by email."
     },
     sponsor: {
-      heading: "Connect us with the right person",
+      heading: "Introduce the orchestra to a potential partner",
       text:
-        "The first practical goal is to open 3-5 serious conversations with companies, hosts, or patrons who could support the first chamber preview.",
+        "The orchestra’s immediate goal is to begin three to five substantive conversations with companies, hosts or patrons about its next chamber programme.",
       button: "Make an introduction",
       fallbackButton: "Make an introduction",
       fallbackSubject: "Introduction for 432 Chamber Orchestra",

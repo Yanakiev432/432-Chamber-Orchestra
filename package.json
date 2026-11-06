@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs && node scripts/validate-public-audio-excerpts.mjs && node scripts/validate-footer-editorial.mjs && node scripts/validate-orchestra-tuning-editorial.mjs",
+    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs && node scripts/validate-public-audio-excerpts.mjs && node scripts/validate-footer-editorial.mjs && node scripts/validate-orchestra-tuning-editorial.mjs && node scripts/validate-third-person-voice.mjs",
     "pitch:validate": "node scripts/validate-concert-pitch.mjs",
     "audio:validate": "node scripts/validate-public-audio-excerpts.mjs",
     "footer:validate": "node scripts/validate-footer-editorial.mjs",
@@ -24,7 +24,8 @@
     "links:validate": "node scripts/validate-static-links.mjs",
     "photos:validate": "node scripts/validate-photo-selection.mjs",
     "legacy:generate": "node scripts/generate-wordpress-archive.mjs",
-    "legacy:validate": "node scripts/validate-legacy-parity.mjs"
+    "legacy:validate": "node scripts/validate-legacy-parity.mjs",
+    "voice:validate": "node scripts/validate-third-person-voice.mjs"
   },
   "dependencies": {
     "astro": "^5.13.8"

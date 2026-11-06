@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { canonicalPitch } from "./concert-pitch-standard.mjs";
 import { applyOrchestraEditorial, revisedOrchestraArchiveRecords, revisedOrchestraArchiveParagraphCount } from "./orchestra-pitch-editorial.mjs";
+import { applyThirdPersonEditorial, thirdPersonEditorialRoutes, thirdPersonEditorialParagraphRevisions, thirdPersonEditorialTitleRevisions, thirdPersonPatronBoilerplate } from "./orchestra-third-person-editorial.mjs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 // Export contains exclusively public WordPress posts, products and taxonomy records.
@@ -206,10 +207,21 @@ for (const item of items) {
   item.title = canonicalPitch(item.title);
   item.paragraphs = item.paragraphs.map(canonicalPitch);
   applyOrchestraEditorial(item);
+  applyThirdPersonEditorial(item);
 }
 if (revisedOrchestraArchiveParagraphCount !== 11 || revisedOrchestraArchiveRecords.length !== 7 ||
     revisedOrchestraArchiveRecords.some((record) => !items.some((item) => item.id === record.id && item.path === record.path))) {
   throw new Error("ORCHESTRA_WITHDRAWN_TUNING_EDITORIAL_NOT_APPLIED");
+}
+if (thirdPersonEditorialRoutes.length !== 10 || thirdPersonEditorialParagraphRevisions !== 21 || thirdPersonEditorialTitleRevisions !== 3) {
+  throw new Error("THIRD_PERSON_EDITORIAL_RULES_DRIFT");
+}
+for (const [index, rule] of thirdPersonPatronBoilerplate.entries()) {
+  const expected = 17;
+  if (items.filter((item) => item.kind === "product").flatMap((item) => item.paragraphs)
+    .filter((p) => p === rule.now).length !== expected) {
+    throw new Error("THIRD_PERSON_PATRON_COUNT_DRIFT_" + index);
+  }
 }
 const target = resolve(base, "src/content/legacyArchive.json");
 writeFileSync(target, JSON.stringify({version:1, capturedUtc:snapshot.capturedUtc, items}, null, 2) + "\n", "utf8");
