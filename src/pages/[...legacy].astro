@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LegacyWordPressPhotoGallery from "../components/LegacyWordPressPhotoGallery.astro";
 import LegacyWordPressVideoGallery from "../components/LegacyWordPressVideoGallery.astro";
+import LegacyMusicCatalogue from "../components/LegacyMusicCatalogue.astro";
+import LegacyAudioEmbeds from "../components/LegacyAudioEmbeds.astro";
 import { siteContent } from "../content/siteContent";
 import legacy from "../content/legacyArchive.json";
 
@@ -15,8 +17,8 @@ const { record } = Astro.props as { record: (typeof legacy.items)[number] };
 const lang = record.language === "bg" ? "bg" as const : "en" as const;
 const bg = lang === "bg";
 const kind = bg
-  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория" } as const)[record.kind]
-  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category" } as const)[record.kind];
+  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар" } as const)[record.kind]
+  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar" } as const)[record.kind];
 const copy = {
   ...siteContent[lang],
   meta: {
@@ -24,7 +26,7 @@ const copy = {
     description: (record.paragraphs[0] || record.title).slice(0, 155)
   }
 };
-const itemById = new Map(legacy.items.filter((r) => r.kind === "post" || r.kind === "product").map((r) => [r.id, r]));
+const itemById = new Map(legacy.items.filter((r) => r.kind === "post" || r.kind === "product" || r.kind === "event").map((r) => [r.id, r]));
 const related = record.relatedIds.map((id) => itemById.get(id)).filter((r): r is NonNullable<typeof r> => Boolean(r) && r?.language === lang);
 const gallery = record.kind === "page" && /\/(?:gallery|галерия)\/$/i.test(record.path);
 const concertPhotoPost = record.kind === "post" && /(?:photos-concert|снимки-концерт)/i.test(record.path);
@@ -44,6 +46,7 @@ const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.d
       <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{kind}</p>
       <h1 class="max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] sm:text-5xl">{record.title}</h1>
       {published && <p class="mt-5 text-sm text-[#D7CEBF]">{bg ? "Публикувано" : "Published"}: <time datetime={published}>{published}</time></p>}
+      {record.eventDate && <p class="mt-3 text-sm text-[#D7CEBF]">{bg ? "Дата на концерта" : "Concert date"}: <time datetime={record.eventDate}>{record.eventDate}</time></p>}
       <p class="mt-5 max-w-3xl text-sm leading-7 text-[#D7CEBF]">
         {bg
           ? "Материал от историческия архив на 432 Chamber Orchestra, съхранен при пренасянето от WordPress. Оригиналното съдържание е представено за документална справка."
@@ -72,6 +75,7 @@ const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.d
                 : "The original page uses a WordPress plugin or a dynamic archive rather than a standalone text. Related material is available in the archive sections."}</p>}
             </>
           )}
+          {record.audioEmbeds.length > 0 && <LegacyAudioEmbeds lang={lang} items={record.audioEmbeds} />}
           {record.bandcampUrl && (
             <a class="inline-flex border border-[#C7A76D] bg-[#C7A76D] px-6 py-3 font-semibold text-[#091F19] transition hover:bg-[#F0E8D9]" href={record.bandcampUrl} target="_blank" rel="noopener noreferrer">
               {bg ? "Слушайте и купете в Bandcamp" : "Listen and buy on Bandcamp"}
@@ -81,7 +85,7 @@ const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.d
             <div class="border-t border-[#C7A76D]/30 pt-8">
               <h2 class="mb-5 font-serif text-2xl text-[#F0E8D9]">{bg ? "Свързани архивни материали" : "Related archive items"}</h2>
               <ul class="grid gap-3">
-                {related.map((item) => <li><a class="underline decoration-[#C7A76D]/70 underline-offset-4 hover:text-[#C7A76D]" href={item.path}>{item.title}</a></li>)}
+                {related.map((item) => <li class="flex flex-wrap items-baseline gap-3">{item.eventDate && <time class="text-sm text-[#C7A76D]" datetime={item.eventDate}>{item.eventDate}</time>}<a class="underline decoration-[#C7A76D]/70 underline-offset-4 hover:text-[#C7A76D]" href={item.path}>{item.title}</a></li>)}
               </ul>
             </div>
           )}
@@ -111,4 +115,5 @@ const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.d
   </section>
   {(gallery || concertPhotoPost) && <LegacyWordPressPhotoGallery lang={lang} albumId={concertPhotoPost ? 1 : undefined} />}
   {video && <LegacyWordPressVideoGallery lang={lang} />}
+  {musicIndex && <LegacyMusicCatalogue lang={lang} />}
 </BaseLayout>

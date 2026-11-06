@@ -1,0 +1,20 @@
+---
+import type { Language } from "../content/siteContent";
+type AudioEmbed = { service: string; label: string; embedUrl: string; targetUrl: string | null };
+const { lang, items } = Astro.props as { lang: Language; items: AudioEmbed[] };
+const bg = lang === "bg";
+---
+<div class="mt-8 space-y-6 border-t border-[#C7A76D]/25 pt-8">
+  <h2 class="font-serif text-2xl text-[#F0E8D9]">{bg ? "Архивни звукозаписи" : "Historical audio recordings"}</h2>
+  <p class="text-sm leading-7 text-[#D7CEBF]">
+    {bg ? "Оригинални вградени музикални записи от страницата в WordPress. Плейърите се предоставят от Bandcamp или SoundCloud."
+      : "Original embedded recordings preserved from the WordPress page. Players are provided by Bandcamp or SoundCloud."}
+  </p>
+  {items.map((item) => (
+    <div class="min-w-0 border border-[#C7A76D]/25 bg-[#122B22] p-3 md:p-4">
+      <h3 class="mb-3 font-serif text-lg text-[#F0E8D9]">{item.label}</h3>
+      <iframe title={item.label} class={item.service === "soundcloud" ? "h-[320px] w-full border-0" : "h-[140px] w-full border-0"} src={item.embedUrl} loading="lazy" allow="encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      {item.targetUrl && <p class="mt-3 text-sm"><a href={item.targetUrl} class="text-[#C7A76D] underline underline-offset-4" target="_blank" rel="noopener noreferrer">{bg ? "Отворете записа в Bandcamp" : "Open the recording on Bandcamp"}</a></p>}
+    </div>
+  ))}
+</div>

@@ -4,12 +4,15 @@ import type { Language } from "../content/siteContent";
 const { lang } = Astro.props as { lang: Language };
 const bg = lang === "bg";
 const groups = [
+  { kind: "event", name: bg ? "Концерти" : "Concerts", note: bg ? "Документирани концертни събития" : "Documented concert events" },
+  { kind: "event_view", name: bg ? "Концертен календар" : "Concert calendar", note: bg ? "Историческият календар на оркестъра" : "The orchestra historical concert calendar" },
+  { kind: "event_category", name: bg ? "Концертни категории" : "Concert categories", note: bg ? "Историческите категории от календарния архив" : "Categories from the historical calendar" },
   { kind: "post", name: bg ? "Публикации" : "Articles and news", note: bg ? "Документирани концерти, записи и събития" : "Documented concerts, recordings and events" },
   { kind: "product", name: bg ? "Исторически каталог" : "Historical catalogue", note: bg ? "Публикуваните музикални записи, с препратка към Bandcamp" : "Original recording pages linked to Bandcamp" },
   { kind: "page", name: bg ? "Страници и история" : "Pages and history", note: bg ? "Биографии, концертни програми, видео и документи" : "Biographies, concert programmes, video and documents" },
   { kind: "taxonomy", name: bg ? "Категории и тематични архиви" : "Categories and topical archives", note: bg ? "Каталогизиране по жанрове и репертоар" : "Catalogue classifications by repertoire and genre" }
 ] as const;
-const items = archive.items.filter((item) => item.language === lang && !item.dynamicWordPress);
+const items = archive.items.filter((item) => item.language === lang && !item.dynamicWordPress && (item.kind !== "event_view" || item.path === "/"+lang+"/events/"));
 const sections = groups.map((group) => ({...group, items: items.filter((item) => item.kind === group.kind)})).filter((group) => group.items.length);
 const count = items.length;
 ---

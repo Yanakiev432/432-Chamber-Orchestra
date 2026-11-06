@@ -1,0 +1,365 @@
+{
+    "source": "Published WordPress Events Calendar records and public URL checks on 2026-11-06; no private RSVP/ticket/contact records",
+    "capturedUtc": "2026-11-06T07:30:57+00:00",
+    "events": [
+        {
+            "ID": "316",
+            "post_type": "tribe_events",
+            "post_status": "publish",
+            "post_title": "Концерт на квартет от Камерен оркестър 432",
+            "post_name": "%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-%d0%be%d1%82-%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a",
+            "post_content": "<img class=\"size-medium wp-image-319 aligncenter\" src=\"http://432hz-orchestra.com/wp-content/uploads/2016/12/fw-300x113.png\" alt=\"Concert - Tea House\" width=\"300\" height=\"113\" />\r\n\r\nКамерен оркестър 432 Ви кани на концерт, в който ще прозвучи музика, изпълнена от струнен квартет в концертния строй ла1 = 432 Hz.\r\n\r\nПрограмата ще започне със сравнително представяне на стандартизирания сторй ла1 = 440 Hz с избрания от нас строй ла1 = 432 Hz и ще продължи с „Малка нощна музика“ от Моцарт. Две кратки пиеси – Шуберт „Музикален момент“ и Сати „Гимнопедия“ № 1 ще бъдат интермедия преди завършека с сюита от операта „Кармен“ от Бизе.\r\nЗа музикалното изппълнение ще се погрижат инструменталистите Виделин Джеджев – първа цигулка, Йосиф Йософив – втора цигулка, Таня Спасова – виола, Анна Каралашева – виолончело.\r\nЗаповядайтe, за да преживеем заедно музиката в естественото звучене на строя ла1 = 432 Hz.\r\n\r\nВход за концерта: 10 лв.",
+            "post_date_gmt": "2016-12-14 10:30:58",
+            "post_modified_gmt": "2016-12-13 23:59:12"
+        },
+        {
+            "ID": "322",
+            "post_type": "tribe_events",
+            "post_status": "publish",
+            "post_title": "Concert of a Quartet from 432 Chamber Orchestra",
+            "post_name": "concert-quartet-432-chamber-orcehstra",
+            "post_content": "<img class=\"size-medium wp-image-313 aligncenter\" src=\"http://432hz-orchestra.com/wp-content/uploads/2016/12/fw-300x113.png\" alt=\"Concert - Tea House\" width=\"300\" height=\"113\" />\r\n\r\n432 Chamber Orchestra is happy to invite you to a concert with music played by the string quartet of the orchestra in a<sup>1</sup> = 432 Hz concert pitch.\r\n\r\nThe programme will begin with comparative presentation of the standardized concert pitch a<sup>1</sup> = 440 Hz with the chosen by us a<sup>1</sup> = 432 Hz concert pitch. It will continue with Mozart's „Serenade“ (\"Little night music\"). Two short pieces - Schubert's „Music moment“ №3 and Satie's „Gymnopedia“ № 1 will be an intermezzo to the finale of the concert with suite from the opera „Carmen“ by Bizet.\r\nThe musicians which will be on stage are Videli Djedjev – first violin, Yosif Yosifov – second violin, Tanya Spasova – viola, Anna Karalasheva – violoncello.\r\n\r\nYou are invinting you to experience together music in the natural sound of the a<sup>1</sup> = 432 Hz concert pitch.\r\n\r\nEntrance: 10 BGN",
+            "post_date_gmt": "2016-12-14 10:30:58",
+            "post_modified_gmt": "2016-12-13 23:52:07"
+        }
+    ],
+    "categories": [
+        {
+            "term_id": "41",
+            "slug": "concert",
+            "name": "Concert",
+            "term_taxonomy_id": "41",
+            "count": "1",
+            "description": "Concert ",
+            "parent": "0"
+        },
+        {
+            "term_id": "43",
+            "slug": "tour",
+            "name": "Tour",
+            "term_taxonomy_id": "43",
+            "count": "0",
+            "description": "A concert tour",
+            "parent": "0"
+        },
+        {
+            "term_id": "45",
+            "slug": "presentation",
+            "name": "Presentation",
+            "term_taxonomy_id": "45",
+            "count": "0",
+            "description": "Presentation of the 432 Hz concert pitch",
+            "parent": "0"
+        },
+        {
+            "term_id": "47",
+            "slug": "chamber-concert",
+            "name": "Chamber concert",
+            "term_taxonomy_id": "47",
+            "count": "1",
+            "description": "A concert with a small ensemble from the 432 Chamber Orchestra",
+            "parent": "41"
+        },
+        {
+            "term_id": "49",
+            "slug": "orchestra-concert",
+            "name": "Orchestra's concert",
+            "term_taxonomy_id": "49",
+            "count": "0",
+            "description": "A concert with the whole 432 Chamber Orchestra",
+            "parent": "41"
+        },
+        {
+            "term_id": "51",
+            "slug": "scientific-lecture",
+            "name": "Scientific lecture",
+            "term_taxonomy_id": "51",
+            "count": "0",
+            "description": "Scientific lecture",
+            "parent": "45"
+        },
+        {
+            "term_id": "53",
+            "slug": "popular-science-presentation",
+            "name": "Popular science presentation",
+            "term_taxonomy_id": "53",
+            "count": "0",
+            "description": "Presentation, designed to be understood by non-professionals.",
+            "parent": "45"
+        },
+        {
+            "term_id": "55",
+            "slug": "educational-concert",
+            "name": "Educational concert",
+            "term_taxonomy_id": "55",
+            "count": "0",
+            "description": "Concert for students and/or children.",
+            "parent": "41"
+        },
+        {
+            "term_id": "57",
+            "slug": "bulgarian-tour",
+            "name": "Bulgarian tour",
+            "term_taxonomy_id": "57",
+            "count": "0",
+            "description": "A concert tour in Bulgaria",
+            "parent": "43"
+        },
+        {
+            "term_id": "59",
+            "slug": "international-tour",
+            "name": "International tour",
+            "term_taxonomy_id": "59",
+            "count": "0",
+            "description": "Tour outer the Bulgarian borders.",
+            "parent": "43"
+        },
+        {
+            "term_id": "68",
+            "slug": "open-rehearsal",
+            "name": "Open rehearsal",
+            "term_taxonomy_id": "68",
+            "count": "0",
+            "description": "A rehearsal which is open for visitors.",
+            "parent": "41"
+        },
+        {
+            "term_id": "104",
+            "slug": "%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82",
+            "name": "Концерт",
+            "term_taxonomy_id": "104",
+            "count": "1",
+            "description": "",
+            "parent": "0"
+        },
+        {
+            "term_id": "106",
+            "slug": "%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82",
+            "name": "Камерен концерт",
+            "term_taxonomy_id": "106",
+            "count": "1",
+            "description": "",
+            "parent": "104"
+        }
+    ],
+    "relationships": [
+        {
+            "object_id": "316",
+            "term_taxonomy_id": "104"
+        },
+        {
+            "object_id": "316",
+            "term_taxonomy_id": "106"
+        },
+        {
+            "object_id": "322",
+            "term_taxonomy_id": "41"
+        },
+        {
+            "object_id": "322",
+            "term_taxonomy_id": "47"
+        }
+    ],
+    "metadata": [
+        {
+            "post_id": "316",
+            "meta_key": "_EventCost",
+            "meta_value": "0"
+        },
+        {
+            "post_id": "316",
+            "meta_key": "_EventEndDate",
+            "meta_value": "2016-12-27 21:30:00"
+        },
+        {
+            "post_id": "316",
+            "meta_key": "_EventOrganizerID",
+            "meta_value": "142"
+        },
+        {
+            "post_id": "316",
+            "meta_key": "_EventStartDate",
+            "meta_value": "2016-12-27 20:00:00"
+        },
+        {
+            "post_id": "316",
+            "meta_key": "_EventURL",
+            "meta_value": "https://www.facebook.com/events/1224805567602145/"
+        },
+        {
+            "post_id": "316",
+            "meta_key": "_EventVenueID",
+            "meta_value": "315"
+        },
+        {
+            "post_id": "322",
+            "meta_key": "_EventCost",
+            "meta_value": "0"
+        },
+        {
+            "post_id": "322",
+            "meta_key": "_EventEndDate",
+            "meta_value": "2016-12-27 23:59:59"
+        },
+        {
+            "post_id": "322",
+            "meta_key": "_EventOrganizerID",
+            "meta_value": "142"
+        },
+        {
+            "post_id": "322",
+            "meta_key": "_EventStartDate",
+            "meta_value": "2016-12-27 00:00:00"
+        },
+        {
+            "post_id": "322",
+            "meta_key": "_EventURL",
+            "meta_value": "https://www.facebook.com/events/1224805567602145/"
+        },
+        {
+            "post_id": "322",
+            "meta_key": "_EventVenueID",
+            "meta_value": "315"
+        }
+    ],
+    "routes": [
+        {
+            "kind": "event",
+            "id": 316,
+            "lang": "bg",
+            "url": "https://432hz-orchestra.com/bg/event/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-%d0%be%d1%82-%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a/"
+        },
+        {
+            "kind": "event",
+            "id": 322,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/event/concert-quartet-432-chamber-orcehstra/"
+        },
+        {
+            "kind": "event_category",
+            "id": 41,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/concert/"
+        },
+        {
+            "kind": "event_category",
+            "id": 43,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/tour/"
+        },
+        {
+            "kind": "event_category",
+            "id": 45,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/presentation/"
+        },
+        {
+            "kind": "event_category",
+            "id": 47,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/chamber-concert/"
+        },
+        {
+            "kind": "event_category",
+            "id": 49,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/orchestra-concert/"
+        },
+        {
+            "kind": "event_category",
+            "id": 51,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/scientific-lecture/"
+        },
+        {
+            "kind": "event_category",
+            "id": 53,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/popular-science-presentation/"
+        },
+        {
+            "kind": "event_category",
+            "id": 55,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/educational-concert/"
+        },
+        {
+            "kind": "event_category",
+            "id": 57,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/bulgarian-tour/"
+        },
+        {
+            "kind": "event_category",
+            "id": 59,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/international-tour/"
+        },
+        {
+            "kind": "event_category",
+            "id": 68,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/category/open-rehearsal/"
+        },
+        {
+            "kind": "event_category",
+            "id": 104,
+            "lang": "bg",
+            "url": "https://432hz-orchestra.com/bg/events/category/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82/"
+        },
+        {
+            "kind": "event_category",
+            "id": 106,
+            "lang": "bg",
+            "url": "https://432hz-orchestra.com/bg/events/category/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82/"
+        },
+        {
+            "kind": "event_view",
+            "id": null,
+            "lang": "bg",
+            "url": "https://432hz-orchestra.com/bg/events/"
+        },
+        {
+            "kind": "event_view",
+            "id": null,
+            "lang": "bg",
+            "url": "https://432hz-orchestra.com/bg/event/"
+        },
+        {
+            "kind": "event_view",
+            "id": null,
+            "lang": "bg",
+            "url": "https://432hz-orchestra.com/bg/events/list/"
+        },
+        {
+            "kind": "event_view",
+            "id": null,
+            "lang": "bg",
+            "url": "https://432hz-orchestra.com/bg/events/month/"
+        },
+        {
+            "kind": "event_view",
+            "id": null,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/"
+        },
+        {
+            "kind": "event_view",
+            "id": null,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/event/"
+        },
+        {
+            "kind": "event_view",
+            "id": null,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/list/"
+        },
+        {
+            "kind": "event_view",
+            "id": null,
+            "lang": "en",
+            "url": "https://432hz-orchestra.com/en/events/month/"
+        }
+    ]
+}

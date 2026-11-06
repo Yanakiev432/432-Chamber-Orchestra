@@ -49,6 +49,28 @@ function sourceLinks(body) {
   }
   return links.slice(0, 50);
 }
+const archivedBandcampTracks = new Map([
+  ["789550373", ["Bizet — Entr'acte from Carmen", "https://432orchestra.bandcamp.com/track/g-bizet-entracte-suite-carmen-432-hz"]],
+  ["1823013299", ["Satie — Gymnopédie No. 1", "https://432orchestra.bandcamp.com/track/e-satie-gymnopedie-no-1-432-hz"]],
+  ["2953827234", ["Schubert — Moment musical No. 3", "https://432orchestra.bandcamp.com/track/fr-schubert-moment-musicaux-no-3-d-780-432-hz"]],
+  ["3481191004", ["Bach — Air", "https://432orchestra.bandcamp.com/track/j-s-bach-2-air-orchestral-suite-no-3-432-hz"]]
+]);
+function historicAudioEmbeds(body) {
+  const content = String(body || "");
+  const out = [];
+  for (const hit of content.matchAll(/\[bandcamp[^\]]*?\btrack=(\d+)[^\]]*\]/gi)) {
+    const track = hit[1], source = archivedBandcampTracks.get(track);
+    if (!source) throw new Error("UNMAPPED_HISTORICAL_BANDCAMP_TRACK_" + track);
+    out.push({service:"bandcamp",label:source[0],targetUrl:source[1],
+      embedUrl:"https://bandcamp.com/EmbeddedPlayer/track="+track+"/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"});
+  }
+  for (const hit of content.matchAll(/\[soundcloud[^\]]*?playlists\/(\d+)[^\]]*\]/gi)) {
+    if (hit[1] !== "72673758") throw new Error("UNVERIFIED_HISTORICAL_SOUNDCLOUD_PLAYLIST");
+    out.push({service:"soundcloud",label:"432 Chamber Orchestra — archived SoundCloud playlist",targetUrl:null,
+      embedUrl:"https://w.soundcloud.com/player/?url="+encodeURIComponent("https://api.soundcloud.com/playlists/"+hit[1])+"&auto_play=false&hide_related=true&show_comments=false&show_user=true&visual=true"});
+  }
+  return out;
+}
 function paras(body) {
   return name(decode(String(body || "").replace(/<script\b[\s\S]*?<\/script\s*>/gi, "")
     .replace(/<style\b[\s\S]*?<\/style\s*>/gi, "")
@@ -82,6 +104,7 @@ for (const r of manifest.routes) {
   items.push({
     id: Number(r.id), kind: r.kind, language, path, title, originalUrl: r.url,
     date: r.kind === "taxonomy" ? null : source.post_date_gmt,
+    eventDate: null,
     paragraphs: paras(r.kind === "taxonomy" ? source.description : source.post_content),
     sourceLinks: r.kind === "taxonomy" ? [] : sourceLinks(source.post_content),
     thumbnail: thumbnailId ? (localThumbs.get(url(attachments.get(thumbnailId)?.guid || "")) || url(attachments.get(thumbnailId)?.guid || "")) : null,
@@ -89,6 +112,7 @@ for (const r of manifest.routes) {
     // WordPress BG founder biography pointed to an unavailable Foundation mirror of VBAL6546.
     // The identically named 300x209 image is recovered from this WordPress public uploads (2016/12).
     inlineImages: Number(r.id) === 95 ? ["/legacy-media/wp-inline-95.jpg"] : [],
+    audioEmbeds: r.kind === "taxonomy" ? [] : historicAudioEmbeds(source.post_content),
     bandcampUrl: r.kind === "product" ? productLinks.get(Number(r.id)) ?? null : null,
     dynamicWordPress: r.kind === "page" && /\/(?:cart|checkout|checkout-2|my-account|ms-download-page|purchase-history|purchase-confirmation|transaction-failed|кошница)\/?$/.test(path)
   });
@@ -104,6 +128,73 @@ for (const item of items) item.alternatePath = item.kind === "taxonomy" ? null :
 if (items.length !== 121 || items.filter((x) => x.kind === "product").length !== 46 ||
     items.filter((x) => x.kind === "product" && !x.bandcampUrl).length ||
     new Set(items.map((x) => x.path.toLowerCase())).size !== 121) throw new Error("MIGRATION_INVARIANT_FAILED");
+// The 2026-11-06 Events Calendar addendum covers publicly accessible custom post types,
+// taxonomies and stable calendar view URLs omitted by the original 123-route inventory.
+const eventSource = JSON.parse(readFileSync(resolve(base, "docs/wordpress-public-events-addendum-20261106.json"), "utf8"));
+if (eventSource.events.length !== 2 || eventSource.categories.length !== 13 || eventSource.routes.length !== 23)
+  throw new Error("WORDPRESS_EVENT_ADDENDUM_CHANGED");
+const eventsById = new Map(eventSource.events.map((e) => [Number(e.ID), e]));
+const catsById = new Map(eventSource.categories.map((t) => [Number(t.term_id), t]));
+const addonPaths = new Map(eventSource.routes.map((r) => [r.kind + ":" + r.id + ":" + r.lang, decodeURIComponent(new URL(r.url).pathname)]));
+const eventAlternate = new Map([[316, 322], [322, 316]]);
+const catAlternate = new Map([[41, 104], [104, 41], [47, 106], [106, 47]]);
+for (const row of eventSource.routes) {
+  const path = decodeURIComponent(new URL(row.url).pathname);
+  const bg = row.lang === "bg";
+  let item;
+  if (row.kind === "event") {
+    const ev = eventsById.get(Number(row.id));
+    if (!ev || ev.post_type !== "tribe_events") throw new Error("INVALID_EVENT_" + row.id);
+    const meta = eventSource.metadata.filter((m) => Number(m.post_id) === Number(row.id));
+    const start = meta.find((m) => m.meta_key === "_EventStartDate")?.meta_value;
+    const facebook = meta.find((m) => m.meta_key === "_EventURL")?.meta_value;
+    const altId = eventAlternate.get(Number(row.id));
+    item = {
+      id:Number(row.id),kind:"event",language:row.lang,path,
+      title:name(decode(ev.post_title)),originalUrl:row.url,date:ev.post_date_gmt,
+      eventDate:start ? String(start).slice(0,10) : null,
+      paragraphs:paras(ev.post_content),
+      sourceLinks:[...new Set([...sourceLinks(ev.post_content),...(facebook ? [facebook]:[])])],
+      thumbnail:null,inlineImages:["/legacy-media/wp-event-fw.png"],audioEmbeds:[],
+      relatedIds:[],bandcampUrl:null,dynamicWordPress:false,
+      alternatePath: addonPaths.get("event:"+altId+":"+(bg?"en":"bg")) || null
+    };
+  } else if (row.kind === "event_category") {
+    const cat = catsById.get(Number(row.id));
+    if (!cat) throw new Error("INVALID_EVENT_CATEGORY_" + row.id);
+    const matched = eventSource.relationships.filter((r) => Number(r.term_taxonomy_id) === Number(cat.term_taxonomy_id))
+      .map((r) => Number(r.object_id)).filter((id) => eventsById.has(id));
+    const altId = catAlternate.get(Number(row.id));
+    item = {
+      id:Number(row.id),kind:"event_category",language:row.lang,path,
+      title: name(decode(cat.name)), originalUrl:row.url,date:null,eventDate:null,
+      paragraphs: cat.description ? paras(cat.description) : [
+        bg ? "Категория от историческия концертен календар на оркестъра." : "A category from the orchestra's historical concert calendar."
+      ],
+      sourceLinks:[],thumbnail:null,inlineImages:[],audioEmbeds:[],relatedIds:matched,
+      bandcampUrl:null,dynamicWordPress:false,
+      alternatePath: altId ? addonPaths.get("event_category:"+altId+":"+(bg?"en":"bg")) || null : null
+    };
+  } else if (row.kind === "event_view") {
+    const suffix = path.replace(/^\/(bg|en)\//,"");
+    const alternate = "/"+(bg?"en":"bg")+"/"+suffix;
+    const existsAlt = eventSource.routes.some((r) => decodeURIComponent(new URL(r.url).pathname) === alternate);
+    item = {
+      id:null,kind:"event_view",language:row.lang,path,
+      title:bg ? "Архивен концертен календар" : "Historical concert calendar",originalUrl:row.url,
+      date:null,eventDate:null,
+      paragraphs:[bg
+        ? "Историческите концертни събития от WordPress са запазени по-долу. Календарните изгледи на стария плъгин са заменени с постоянен архив, без да се представят събития от 2016 г. като предстоящи."
+        : "The documented WordPress concert events are listed below. The historical calendar plugin's views are replaced by a permanent archive; concerts from 2016 are not represented as upcoming events."],
+      sourceLinks:[],thumbnail:null,inlineImages:[],audioEmbeds:[],relatedIds:[bg?316:322],
+      bandcampUrl:null,dynamicWordPress:false,alternatePath:existsAlt?alternate:null
+    };
+  } else throw new Error("UNKNOWN_EVENT_ARCHIVE_KIND");
+  if (!path.startsWith("/"+row.lang+"/")) throw new Error("LANGUAGE_PATH_MISMATCH");
+  items.push(item);
+}
+if (items.length !== 144 || new Set(items.map((r) => r.path.toLowerCase())).size !== 144)
+  throw new Error("FULL_PUBLIC_ARCHIVE_ROUTE_PARITY_FAILED");
 const target = resolve(base, "src/content/legacyArchive.json");
 writeFileSync(target, JSON.stringify({version:1, capturedUtc:snapshot.capturedUtc, items}, null, 2) + "\n", "utf8");
 const kinds = Object.fromEntries(["page","post","product","taxonomy"].map((k) => [k, items.filter((x) => x.kind === k).length]));

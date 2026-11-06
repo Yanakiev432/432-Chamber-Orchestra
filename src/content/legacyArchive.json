@@ -10,6 +10,7 @@
       "title": "Contact us",
       "originalUrl": "https://432hz-orchestra.com/en/contact-us/",
       "date": "2016-08-01 00:58:01",
+      "eventDate": null,
       "paragraphs": [
         "We are happy to hear from you."
       ],
@@ -17,6 +18,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/контакти/"
@@ -29,6 +31,7 @@
       "title": "Контакти",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d0%b8/",
       "date": "2016-08-01 00:58:01",
+      "eventDate": null,
       "paragraphs": [
         "Ще се радваме да ни пишете!"
       ],
@@ -36,6 +39,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/contact-us/"
@@ -48,6 +52,7 @@
       "title": "More about",
       "originalUrl": "https://432hz-orchestra.com/en/about/",
       "date": "2016-08-07 15:26:19",
+      "eventDate": null,
       "paragraphs": [
         "The 432 Chamber Orchestra is a chamber string orchestra of 13 string players and a conductor. It plays exclusively in a = 432 Hz concert pitch. It also tunes with so called by\nMaria Renold \"open fifths\"."
       ],
@@ -55,6 +60,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/относно/"
@@ -67,6 +73,7 @@
       "title": "Повече за",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be/",
       "date": "2016-08-07 15:26:19",
+      "eventDate": null,
       "paragraphs": [
         "Камерен оркестър 432 е камерен струнен ансамбъл от 13 инструменталиста и 1 диригент. Оркестърът свири изключително в концертен строй ла = 432 Hz. Също така инструментите се настройват на т.нар. от Мария Ренолд \"отворени квинти\""
       ],
@@ -74,6 +81,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/about/"
@@ -86,6 +94,7 @@
       "title": "432 Chamber Orchestra",
       "originalUrl": "https://432hz-orchestra.com/en/about/432-chamber-orchestra/",
       "date": "2016-08-08 08:12:36",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra",
         "Presentation",
@@ -115,6 +124,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "soundcloud",
+          "label": "432 Chamber Orchestra — archived SoundCloud playlist",
+          "targetUrl": null,
+          "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F72673758&auto_play=false&hide_related=true&show_comments=false&show_user=true&visual=true"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/относно/камерен-оркестър-432/"
@@ -127,6 +144,7 @@
       "title": "Камерен оркестър 432",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432/",
       "date": "2016-08-08 08:12:36",
+      "eventDate": null,
       "paragraphs": [
         "Камерен оркестър 432",
         "Резюме",
@@ -156,6 +174,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "soundcloud",
+          "label": "432 Chamber Orchestra — archived SoundCloud playlist",
+          "targetUrl": null,
+          "embedUrl": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F72673758&auto_play=false&hide_related=true&show_comments=false&show_user=true&visual=true"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/about/432-chamber-orchestra/"
@@ -168,6 +194,7 @@
       "title": "Ivan Yanakiev - conductor",
       "originalUrl": "https://432hz-orchestra.com/en/about/ivan-yanakiev/",
       "date": "2016-08-08 16:08:13",
+      "eventDate": null,
       "paragraphs": [
         "Resume",
         "The conductor Ivan Yanakiev (b. Sofia, 1987) graduated from the National Academy of Music, Sofia with major in orchestral conducting (MA). In July 2014, he began a postgraduate PhD programme at the Institute of Art Studies at the Bulgarian Academy of Sciences. His PhD thesis is focused on how the 432 concert pitch and the “open fifth” temperament are affecting the perception of music.",
@@ -182,6 +209,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/относно/иван-янакиев/"
@@ -194,6 +222,7 @@
       "title": "Иван Янакиев - диригент",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be/%d0%b8%d0%b2%d0%b0%d0%bd-%d1%8f%d0%bd%d0%b0%d0%ba%d0%b8%d0%b5%d0%b2/",
       "date": "2016-08-08 16:08:13",
+      "eventDate": null,
       "paragraphs": [
         "Резюме",
         "Иван Костадинов Янакиев (р. 1987 г.) е български диригент и музикален теоретик и основател на Камерен оркестър 432. През януари 2018 г. той учредява Фондация 432 Херца.",
@@ -250,6 +279,7 @@
       "inlineImages": [
         "/legacy-media/wp-inline-95.jpg"
       ],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/about/ivan-yanakiev/"
@@ -262,11 +292,13 @@
       "title": "Shop",
       "originalUrl": "https://432hz-orchestra.com/en/shop/",
       "date": "2016-08-12 07:44:53",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/магазин/"
@@ -279,11 +311,13 @@
       "title": "Basket",
       "originalUrl": "https://432hz-orchestra.com/en/cart/",
       "date": "2016-08-12 07:44:53",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": "/bg/кошница/"
@@ -296,11 +330,13 @@
       "title": "Checkout",
       "originalUrl": "https://432hz-orchestra.com/en/checkout/",
       "date": "2016-08-12 07:44:53",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": null
@@ -313,11 +349,13 @@
       "title": "My Account",
       "originalUrl": "https://432hz-orchestra.com/en/my-account/",
       "date": "2016-08-12 07:44:53",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": null
@@ -330,6 +368,7 @@
       "title": "Concerts and Tours",
       "originalUrl": "https://432hz-orchestra.com/en/concerts-and-tours/",
       "date": "2016-08-16 19:35:57",
+      "eventDate": null,
       "paragraphs": [
         "Concerts and Tours",
         "In this section you can find information about 432 Chamber Orchestra's upcoming concerts and tours."
@@ -338,6 +377,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/концерти-и-турнета/"
@@ -350,11 +390,13 @@
       "title": "a = 432 Hz concert pitch",
       "originalUrl": "https://432hz-orchestra.com/en/about/432-hz-concert-pitch/",
       "date": "2016-08-16 20:30:34",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/относно/ла-432-hz-концертен-строй/"
@@ -367,6 +409,7 @@
       "title": "Концерти и турнета",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%b8-%d0%b8-%d1%82%d1%83%d1%80%d0%bd%d0%b5%d1%82%d0%b0/",
       "date": "2016-08-16 19:35:57",
+      "eventDate": null,
       "paragraphs": [
         "Концерти и турнета",
         "В тази секция можете да намерите информация за предстоящи концерти и турнета на Камерен оркестър 432."
@@ -375,6 +418,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/concerts-and-tours/"
@@ -387,6 +431,7 @@
       "title": "ла = 432 Hz концертен строй",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%be%d1%82%d0%bd%d0%be%d1%81%d0%bd%d0%be/%d0%bb%d0%b0-432-hz-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%b5%d0%bd-%d1%81%d1%82%d1%80%d0%be%d0%b9/",
       "date": "2016-08-16 20:30:34",
+      "eventDate": null,
       "paragraphs": [
         "А = 432 Hz",
         "Бихме искали да Ви поканим да участвате в музикално-сравнителна анкета: Музикално-сравнителна анкета\nВсеки отговор е от голямо значение.",
@@ -426,6 +471,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/about/432-hz-concert-pitch/"
@@ -438,6 +484,7 @@
       "title": "News",
       "originalUrl": "https://432hz-orchestra.com/en/news/",
       "date": "2016-12-14 12:43:12",
+      "eventDate": null,
       "paragraphs": [
         "Current news"
       ],
@@ -459,6 +506,7 @@
         1070
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/новини/"
@@ -471,6 +519,7 @@
       "title": "Новини",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%bd%d0%be%d0%b2%d0%b8%d0%bd%d0%b8/",
       "date": "2016-12-14 12:43:12",
+      "eventDate": null,
       "paragraphs": [
         "Новини"
       ],
@@ -478,6 +527,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/news/"
@@ -490,6 +540,7 @@
       "title": "Checkout",
       "originalUrl": "https://432hz-orchestra.com/en/checkout-2/",
       "date": "2017-10-28 14:56:00",
+      "eventDate": null,
       "paragraphs": [
         "[download_checkout]"
       ],
@@ -497,6 +548,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": null
@@ -509,6 +561,7 @@
       "title": "Purchase Confirmation",
       "originalUrl": "https://432hz-orchestra.com/en/checkout-2/purchase-confirmation/",
       "date": "2017-10-28 14:56:00",
+      "eventDate": null,
       "paragraphs": [
         "Thank you for your purchase! [edd_receipt]"
       ],
@@ -516,6 +569,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": null
@@ -528,6 +582,7 @@
       "title": "Transaction Failed",
       "originalUrl": "https://432hz-orchestra.com/en/checkout-2/transaction-failed/",
       "date": "2017-10-28 14:56:00",
+      "eventDate": null,
       "paragraphs": [
         "Your transaction failed, please try again or contact site support."
       ],
@@ -535,6 +590,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": null
@@ -547,6 +603,7 @@
       "title": "Purchase History",
       "originalUrl": "https://432hz-orchestra.com/en/checkout-2/purchase-history/",
       "date": "2017-10-28 14:56:00",
+      "eventDate": null,
       "paragraphs": [
         "[purchase_history]"
       ],
@@ -554,6 +611,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": null
@@ -566,11 +624,13 @@
       "title": "Gallery",
       "originalUrl": "https://432hz-orchestra.com/en/gallery/",
       "date": "2017-10-28 18:40:18",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/галерия/"
@@ -583,11 +643,13 @@
       "title": "Галерия",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%b3%d0%b0%d0%bb%d0%b5%d1%80%d0%b8%d1%8f/",
       "date": "2017-10-28 18:40:18",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/gallery/"
@@ -600,11 +662,13 @@
       "title": "Download Page",
       "originalUrl": "https://432hz-orchestra.com/en/ms-download-page/",
       "date": "2017-10-28 21:26:37",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": null
@@ -617,11 +681,13 @@
       "title": "Buy our Music",
       "originalUrl": "https://432hz-orchestra.com/en/buy-our-music/",
       "date": "2017-11-02 00:20:28",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/купете-нашата-музика/"
@@ -634,11 +700,13 @@
       "title": "Купете нашата музика",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%ba%d1%83%d0%bf%d0%b5%d1%82%d0%b5-%d0%bd%d0%b0%d1%88%d0%b0%d1%82%d0%b0-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0/",
       "date": "2017-11-02 00:20:28",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/buy-our-music/"
@@ -651,11 +719,13 @@
       "title": "Кошница",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%ba%d0%be%d1%88%d0%bd%d0%b8%d1%86%d0%b0/",
       "date": "2016-08-12 07:44:53",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": true,
       "alternatePath": "/en/cart/"
@@ -668,11 +738,13 @@
       "title": "Магазин",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%bc%d0%b0%d0%b3%d0%b0%d0%b7%d0%b8%d0%bd/",
       "date": "2016-08-12 07:44:53",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/shop/"
@@ -685,11 +757,13 @@
       "title": "Video",
       "originalUrl": "https://432hz-orchestra.com/en/video/",
       "date": "2018-03-01 12:26:30",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/видео/"
@@ -702,11 +776,13 @@
       "title": "Видео",
       "originalUrl": "https://432hz-orchestra.com/bg/%d0%b2%d0%b8%d0%b4%d0%b5%d0%be/",
       "date": "2018-03-01 12:26:30",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/video/"
@@ -719,6 +795,7 @@
       "title": "Video Grid Gallery",
       "originalUrl": "https://432hz-orchestra.com/en/video-grid-gallery/",
       "date": "2018-03-01 13:20:01",
+      "eventDate": null,
       "paragraphs": [
         "[video_grid]"
       ],
@@ -726,6 +803,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -738,6 +816,7 @@
       "title": "Video Gallery",
       "originalUrl": "https://432hz-orchestra.com/en/video-gallery/",
       "date": "2018-03-01 13:20:01",
+      "eventDate": null,
       "paragraphs": [
         "[video_gallery]"
       ],
@@ -745,6 +824,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -757,11 +837,13 @@
       "title": "Photos Concert 13. March 2016",
       "originalUrl": "https://432hz-orchestra.com/en/blog/2016/08/22/photos-concert-13-march-2016/",
       "date": "2016-08-22 18:24:36",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/blog/2016/08/22/снимки-концерт-13-март-2016/"
@@ -774,11 +856,13 @@
       "title": "Снимки концерт 13 март 2016",
       "originalUrl": "https://432hz-orchestra.com/bg/blog/2016/08/22/%d1%81%d0%bd%d0%b8%d0%bc%d0%ba%d0%b8-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-13-%d0%bc%d0%b0%d1%80%d1%82-2016/",
       "date": "2016-08-22 18:24:36",
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/blog/2016/08/22/photos-concert-13-march-2016/"
@@ -791,6 +875,7 @@
       "title": "Анкета за концертната програма",
       "originalUrl": "https://432hz-orchestra.com/bg/blog/2016/12/05/%d0%b0%d0%bd%d0%ba%d0%b5%d1%82%d0%b0-%d0%b7%d0%b0-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82%d0%bd%d0%b0%d1%82%d0%b0-%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%b0/",
       "date": "2016-12-04 22:33:55",
+      "eventDate": null,
       "paragraphs": [
         "Анкета - концертна програма",
         "Здравейте,",
@@ -803,6 +888,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -815,6 +901,7 @@
       "title": "Bach - Air",
       "originalUrl": "https://432hz-orchestra.com/en/blog/2016/12/29/bach-air/",
       "date": "2016-12-29 08:00:35",
+      "eventDate": null,
       "paragraphs": [
         "Bach - Air in 432 Hz",
         "432 Chamber Orchestra's Quartet is playing \"Air\" from Orchestral Suite No. 3 by Johann Sebastian Bach."
@@ -823,6 +910,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "bandcamp",
+          "label": "Bach — Air",
+          "targetUrl": "https://432orchestra.bandcamp.com/track/j-s-bach-2-air-orchestral-suite-no-3-432-hz",
+          "embedUrl": "https://bandcamp.com/EmbeddedPlayer/track=3481191004/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/blog/2016/12/29/бах-ария/"
@@ -835,6 +930,7 @@
       "title": "Бах - \"Ария\"",
       "originalUrl": "https://432hz-orchestra.com/bg/blog/2016/12/29/%d0%b1%d0%b0%d1%85-%d0%b0%d1%80%d0%b8%d1%8f/",
       "date": "2016-12-29 08:00:35",
+      "eventDate": null,
       "paragraphs": [
         "Бах - \"Ария\" в 432 Hz",
         "Квартетът на Камерен оркестър 432 свири \"Ария\" от Баховата Оркестрова сюита №3."
@@ -843,6 +939,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "bandcamp",
+          "label": "Bach — Air",
+          "targetUrl": "https://432orchestra.bandcamp.com/track/j-s-bach-2-air-orchestral-suite-no-3-432-hz",
+          "embedUrl": "https://bandcamp.com/EmbeddedPlayer/track=3481191004/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/blog/2016/12/29/bach-air/"
@@ -855,6 +959,7 @@
       "title": "Schubert - Moment musicaux",
       "originalUrl": "https://432hz-orchestra.com/en/blog/2016/12/30/schubert-moment-musicaux/",
       "date": "2016-12-30 11:35:40",
+      "eventDate": null,
       "paragraphs": [
         "Schubert - \"Moment Musicaux\" No. 3 played by the 432 Chamber Orchestra's Quartet."
       ],
@@ -862,6 +967,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "bandcamp",
+          "label": "Schubert — Moment musical No. 3",
+          "targetUrl": "https://432orchestra.bandcamp.com/track/fr-schubert-moment-musicaux-no-3-d-780-432-hz",
+          "embedUrl": "https://bandcamp.com/EmbeddedPlayer/track=2953827234/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/blog/2016/12/30/шуберт-музикален-момент/"
@@ -874,6 +987,7 @@
       "title": "Шуберт - Музикален момент",
       "originalUrl": "https://432hz-orchestra.com/bg/blog/2016/12/30/%d1%88%d1%83%d0%b1%d0%b5%d1%80%d1%82-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0%d0%bb%d0%b5%d0%bd-%d0%bc%d0%be%d0%bc%d0%b5%d0%bd%d1%82/",
       "date": "2016-12-30 11:35:40",
+      "eventDate": null,
       "paragraphs": [
         "Шуберт - \"Музикален момент\" No. 3 в изпълнение на Квартета на Камерен оркестър 432."
       ],
@@ -881,6 +995,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "bandcamp",
+          "label": "Schubert — Moment musical No. 3",
+          "targetUrl": "https://432orchestra.bandcamp.com/track/fr-schubert-moment-musicaux-no-3-d-780-432-hz",
+          "embedUrl": "https://bandcamp.com/EmbeddedPlayer/track=2953827234/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/blog/2016/12/30/schubert-moment-musicaux/"
@@ -893,6 +1015,7 @@
       "title": "Bizet - \"Entr'acte\", Suite \"Carmen\"",
       "originalUrl": "https://432hz-orchestra.com/en/blog/2016/12/31/bizet-entracte-suite-carmen/",
       "date": "2016-12-31 08:00:50",
+      "eventDate": null,
       "paragraphs": [
         "The famous \"Entr'acte\" from George Bizet's suite \"Carmen\" played by the 432 Chamber Orchestra's Quartet."
       ],
@@ -900,6 +1023,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "bandcamp",
+          "label": "Bizet — Entr'acte from Carmen",
+          "targetUrl": "https://432orchestra.bandcamp.com/track/g-bizet-entracte-suite-carmen-432-hz",
+          "embedUrl": "https://bandcamp.com/EmbeddedPlayer/track=789550373/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/blog/2016/12/31/бизе-антракт-от-сюита-кармен/"
@@ -912,6 +1043,7 @@
       "title": "Бизе - \"Антракт\" от сюита \"Кармен\"",
       "originalUrl": "https://432hz-orchestra.com/bg/blog/2016/12/31/%d0%b1%d0%b8%d0%b7%d0%b5-%d0%b0%d0%bd%d1%82%d1%80%d0%b0%d0%ba%d1%82-%d0%be%d1%82-%d1%81%d1%8e%d0%b8%d1%82%d0%b0-%d0%ba%d0%b0%d1%80%d0%bc%d0%b5%d0%bd/",
       "date": "2016-12-31 08:00:50",
+      "eventDate": null,
       "paragraphs": [
         "Известния \"Антракт\" от сюитата \"Кармен\" на Жорж Бизе в изпълнение на Квартета на Камерен оркестър 432."
       ],
@@ -919,6 +1051,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "bandcamp",
+          "label": "Bizet — Entr'acte from Carmen",
+          "targetUrl": "https://432orchestra.bandcamp.com/track/g-bizet-entracte-suite-carmen-432-hz",
+          "embedUrl": "https://bandcamp.com/EmbeddedPlayer/track=789550373/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/blog/2016/12/31/bizet-entracte-suite-carmen/"
@@ -931,6 +1071,7 @@
       "title": "Satie - Gymnopedie No. 1",
       "originalUrl": "https://432hz-orchestra.com/en/blog/2017/01/01/satie-gymnopedie-no-1/",
       "date": "2017-01-01 08:30:19",
+      "eventDate": null,
       "paragraphs": [
         "The 432 Chamber Orchestra's Quartet playing Eric Satie's Gymnopedie No. 1."
       ],
@@ -938,6 +1079,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "bandcamp",
+          "label": "Satie — Gymnopédie No. 1",
+          "targetUrl": "https://432orchestra.bandcamp.com/track/e-satie-gymnopedie-no-1-432-hz",
+          "embedUrl": "https://bandcamp.com/EmbeddedPlayer/track=1823013299/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/blog/2017/01/01/сати-химнопедия-№-1/"
@@ -950,6 +1099,7 @@
       "title": "Сати - Химнопедия № 1",
       "originalUrl": "https://432hz-orchestra.com/bg/blog/2017/01/01/%d1%81%d0%b0%d1%82%d0%b8-%d1%85%d0%b8%d0%bc%d0%bd%d0%be%d0%bf%d0%b5%d0%b4%d0%b8%d1%8f-%e2%84%96-1/",
       "date": "2017-01-01 08:30:19",
+      "eventDate": null,
       "paragraphs": [
         "Квартетът на Камерен оркестър 432 изпълнява \"Химнопедия\" № 1 от Ерик Сати"
       ],
@@ -957,6 +1107,14 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [
+        {
+          "service": "bandcamp",
+          "label": "Satie — Gymnopédie No. 1",
+          "targetUrl": "https://432orchestra.bandcamp.com/track/e-satie-gymnopedie-no-1-432-hz",
+          "embedUrl": "https://bandcamp.com/EmbeddedPlayer/track=1823013299/size=large/bgcol=091f19/linkcol=c7a76d/artwork=small/transparent=true/"
+        }
+      ],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/blog/2017/01/01/satie-gymnopedie-no-1/"
@@ -969,6 +1127,7 @@
       "title": "Concert 148 Years Bulgarian Academy of Sciences",
       "originalUrl": "https://432hz-orchestra.com/en/blog/2018/04/11/concert-148-years-bulgarian-academy-of-sceiences/",
       "date": "2018-04-11 20:06:17",
+      "eventDate": null,
       "paragraphs": [
         "Concert 148 Years Bulgarian Academy of Sciences\nconductor Ivan Yanakiev\nsoloist Videlin Dzhedzhev - violin",
         "• Wolfgang Amadeus Mozart - Divertimento in D KV 136/125a",
@@ -981,6 +1140,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/bg/blog/2018/04/11/камерен-оркестър-432-концерт-моцарт-зла/"
@@ -993,6 +1153,7 @@
       "title": "Камерен оркестър 432 - Концерт - Моцарт - Златев-Черкин - Вивалди",
       "originalUrl": "https://432hz-orchestra.com/bg/blog/2018/04/11/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-%d0%bc%d0%be%d1%86%d0%b0%d1%80%d1%82-%d0%b7%d0%bb%d0%b0/",
       "date": "2018-04-11 20:06:17",
+      "eventDate": null,
       "paragraphs": [
         "Концерт по случай 148 години от основаването на Българската академия на науките",
         "Камерен оркестър 432\nдиригент Иван Янакиев\nсолист Виделин Джеджев - цигулка",
@@ -1006,6 +1167,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": "/en/blog/2018/04/11/concert-148-years-bulgarian-academy-of-sceiences/"
@@ -1018,6 +1180,7 @@
       "title": "432 Chamber Orchestra's Quartet - 432 Hz Music",
       "originalUrl": "https://432hz-orchestra.com/en/product/432-chamber-orchestras-quartet-432-hz-music/",
       "date": "2017-10-31 00:56:10",
+      "eventDate": null,
       "paragraphs": [
         "Ivan Yanakiev and the 432 Chamber Orchestra's Quartet have prepared a selection of 16 pieces, which span from the High Baroque to the contemporary evergreen Pop pieces. The music is recorded on instruments tuned in 432 Hz and no digital shifting has been used. Enjoy the natural sound.",
         "released October 30, 2017",
@@ -1034,6 +1197,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/album/432-hz-quartet-music",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/квартет-на-камерен-оркестър-432-музика-в-43/"
@@ -1046,6 +1210,7 @@
       "title": "Квартет на Камерен оркестър 432 - Музика в 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/bg/product/%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-%d0%bd%d0%b0-%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a%d1%80-432-%d0%bc%d1%83%d0%b7%d0%b8%d0%ba%d0%b0-%d0%b2-43/",
       "date": "2017-10-31 00:56:10",
+      "eventDate": null,
       "paragraphs": [
         "Иван Янакиев и квартетът на Камерен оркестър 432 са подготвили селекция от 16 произведения, които се обхваща музика от периода на високия барок до съвременните евъргрийн парчета. Музиката е записана на инструменти, настроен в 432 hz и не се използва цифрова промяна на строя. Насладете се на естествения звук.",
         "Публикуван на 30 октомври 2017 г.",
@@ -1062,6 +1227,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/album/432-hz-quartet-music",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/432-chamber-orchestras-quartet-432-hz-music/"
@@ -1074,6 +1240,7 @@
       "title": "Marc-Antoine Charpentier - Te Deum - Praelude - 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/en/product/mark-antonie-charpantier-te-deum-praelude-432-hz/",
       "date": "2017-11-01 08:00:59",
+      "eventDate": null,
       "paragraphs": [
         "Marc-Antoine Charpentier - Te Deum - Praelude - 432 Hz",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1090,6 +1257,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/01-432-chamber-orchestras-quartet-mark-antonie-charpantier-te-deum-praelude-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/mark-antonie-charpantier-te-deum-praelude-432-hz-2/"
@@ -1102,6 +1270,7 @@
       "title": "Marc-Antoine Charpentier - Te Deum - Praelude - 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/bg/product/mark-antonie-charpantier-te-deum-praelude-432-hz-2/",
       "date": "2017-11-01 08:00:59",
+      "eventDate": null,
       "paragraphs": [
         "Marc-Antoine Charpentier - Te Deum - Praelude - 432 Hz",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1119,6 +1288,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/01-432-chamber-orchestras-quartet-mark-antonie-charpantier-te-deum-praelude-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/mark-antonie-charpantier-te-deum-praelude-432-hz/"
@@ -1131,6 +1301,7 @@
       "title": "Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)",
       "originalUrl": "https://432hz-orchestra.com/en/product/georg-friedrich-handel-hornpie-watermusic-suite-d-dur-hw-349-part-ii/",
       "date": "2017-11-02 08:00:47",
+      "eventDate": null,
       "paragraphs": [
         "Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1147,6 +1318,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/02-432-chamber-orchestras-quartet-georg-friedrich-handel-all-hornpie-watermusic-suite-in-d-dur-hw-349-part-ii-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/georg-friedrich-handel-hornpie-watermusic-suite-d-dur-hw-349-part-ii-2/"
@@ -1159,6 +1331,7 @@
       "title": "Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)",
       "originalUrl": "https://432hz-orchestra.com/bg/product/georg-friedrich-handel-hornpie-watermusic-suite-d-dur-hw-349-part-ii-2/",
       "date": "2017-11-02 08:00:47",
+      "eventDate": null,
       "paragraphs": [
         "Georg Friedrich Handel - Alla Hornpipe - (Water Music suite in D dur HWV 349 - Part II)",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1176,6 +1349,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/02-432-chamber-orchestras-quartet-georg-friedrich-handel-all-hornpie-watermusic-suite-in-d-dur-hw-349-part-ii-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/georg-friedrich-handel-hornpie-watermusic-suite-d-dur-hw-349-part-ii/"
@@ -1188,6 +1362,7 @@
       "title": "Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)",
       "originalUrl": "https://432hz-orchestra.com/en/product/georg-friedrich-handel-arrival-queen-sheba-solomon-hw-67/",
       "date": "2017-11-03 08:00:18",
+      "eventDate": null,
       "paragraphs": [
         "Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1204,6 +1379,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/03-432-chamber-orchestras-quartet-georg-friedrich-handel-the-arrival-of-queen-of-sheba-solomon-hw-67-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/georg-friedrich-handel-arrival-queen-sheba-solomon-hw-67-2/"
@@ -1216,6 +1392,7 @@
       "title": "Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)",
       "originalUrl": "https://432hz-orchestra.com/bg/product/georg-friedrich-handel-arrival-queen-sheba-solomon-hw-67-2/",
       "date": "2017-11-03 08:00:18",
+      "eventDate": null,
       "paragraphs": [
         "Georg Friedrich Handel - The arrival of Queen of Sheba (Solomon HW 67)",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1233,6 +1410,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/03-432-chamber-orchestras-quartet-georg-friedrich-handel-the-arrival-of-queen-of-sheba-solomon-hw-67-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/georg-friedrich-handel-arrival-queen-sheba-solomon-hw-67/"
@@ -1245,6 +1423,7 @@
       "title": "Cesar Franck - Panis Angelicus (Messe solennelle)",
       "originalUrl": "https://432hz-orchestra.com/en/product/caesar-frank-panis-angelicus-messe-solennelle/",
       "date": "2017-11-04 08:00:50",
+      "eventDate": null,
       "paragraphs": [
         "Cesar Franck - Panis Angelicus (Messe solennelle)",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1261,6 +1440,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/04-432-chamber-orchestras-quartet-caesar-frank-panis-angelicus-messe-solennelle-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/caesar-frank-panis-angelicus-messe-solennelle-2/"
@@ -1273,6 +1453,7 @@
       "title": "Cesar Franck - Panis Angelicus (Messe solennelle)",
       "originalUrl": "https://432hz-orchestra.com/bg/product/caesar-frank-panis-angelicus-messe-solennelle-2/",
       "date": "2017-11-04 08:00:50",
+      "eventDate": null,
       "paragraphs": [
         "Cesar Franck - Panis Angelicus (Messe solennelle)",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1290,6 +1471,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/04-432-chamber-orchestras-quartet-caesar-frank-panis-angelicus-messe-solennelle-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/caesar-frank-panis-angelicus-messe-solennelle/"
@@ -1302,6 +1484,7 @@
       "title": "Alexander Borodin - Notturno (String Quartet No. 2 - Part III)",
       "originalUrl": "https://432hz-orchestra.com/en/product/alexander-borodin-notturno-string-quartet-no-2-part-iii/",
       "date": "2017-11-05 08:00:04",
+      "eventDate": null,
       "paragraphs": [
         "Alexander Borodin - Notturno (String Quartet No. 2 - Part III)",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1318,6 +1501,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/05-432-chamber-orchestras-quartet-al-borodin-notturno-string-quartet-no-2-part-iii-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/alexander-borodin-notturno-string-quartet-no-2-part-iii-2/"
@@ -1330,6 +1514,7 @@
       "title": "Alexander Borodin - Notturno (String Quartet No. 2 - Part III)",
       "originalUrl": "https://432hz-orchestra.com/bg/product/alexander-borodin-notturno-string-quartet-no-2-part-iii-2/",
       "date": "2017-11-05 08:00:04",
+      "eventDate": null,
       "paragraphs": [
         "Alexander Borodin - Notturno (String Quartet No. 2 - Part III)",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1347,6 +1532,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/05-432-chamber-orchestras-quartet-al-borodin-notturno-string-quartet-no-2-part-iii-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/alexander-borodin-notturno-string-quartet-no-2-part-iii/"
@@ -1359,6 +1545,7 @@
       "title": "Modest Mussorgsky - Gopak (Sorochins Fair)",
       "originalUrl": "https://432hz-orchestra.com/en/product/modest-mussorgsky-gopak-sorochins-fair/",
       "date": "2017-11-06 08:00:52",
+      "eventDate": null,
       "paragraphs": [
         "Modest Mussorgsky - Gopak (Sorochins Fair)",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1375,6 +1562,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/06-432-chamber-orchestras-quartet-modest-mussorgsky-hopak-sorochins-fair-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/modest-mussorgsky-gopak-sorochins-fair-2/"
@@ -1387,6 +1575,7 @@
       "title": "Modest Mussorgsky - Gopak (Sorochins Fair)",
       "originalUrl": "https://432hz-orchestra.com/bg/product/modest-mussorgsky-gopak-sorochins-fair-2/",
       "date": "2017-11-06 08:00:52",
+      "eventDate": null,
       "paragraphs": [
         "Modest Mussorgsky - Gopak (Sorochins Fair)",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1404,6 +1593,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/06-432-chamber-orchestras-quartet-modest-mussorgsky-hopak-sorochins-fair-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/modest-mussorgsky-gopak-sorochins-fair/"
@@ -1416,6 +1606,7 @@
       "title": "P. I. Tchaikovsky - Trepak (Nutcracker Suite)",
       "originalUrl": "https://432hz-orchestra.com/en/product/p-tchaikovsky-trepak-nutkracker-suite/",
       "date": "2017-11-07 08:00:30",
+      "eventDate": null,
       "paragraphs": [
         "P. I. Tchaikovsky - Trepak (Nutcracker Suite)",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1432,6 +1623,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/07-432-chamber-orchestras-quartet-peter-ilitch-tchaikovsky-trepak-nutkracker-suite-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/p-tchaikovsky-trepak-nutkracker-suite-2/"
@@ -1444,6 +1636,7 @@
       "title": "P. I. Tchaikovsky - Trepak (Nutcracker Suite)",
       "originalUrl": "https://432hz-orchestra.com/bg/product/p-tchaikovsky-trepak-nutkracker-suite-2/",
       "date": "2017-11-07 08:00:30",
+      "eventDate": null,
       "paragraphs": [
         "P. I. Tchaikovsky - Trepak (Nutcracker Suite)",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1461,6 +1654,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/07-432-chamber-orchestras-quartet-peter-ilitch-tchaikovsky-trepak-nutkracker-suite-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/p-tchaikovsky-trepak-nutkracker-suite/"
@@ -1473,6 +1667,7 @@
       "title": "Claude Debussy - Clair de lune",
       "originalUrl": "https://432hz-orchestra.com/en/product/claude-debussy-clair-de-lune/",
       "date": "2017-11-08 08:00:44",
+      "eventDate": null,
       "paragraphs": [
         "Claude Debussy - Clair de lune",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1489,6 +1684,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/08-432-chamber-orchestras-quartet-claude-debussy-clair-de-lune-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/claude-debussy-clair-de-lune-2/"
@@ -1501,6 +1697,7 @@
       "title": "Claude Debussy - Clair de lune",
       "originalUrl": "https://432hz-orchestra.com/bg/product/claude-debussy-clair-de-lune-2/",
       "date": "2017-11-08 08:00:44",
+      "eventDate": null,
       "paragraphs": [
         "Claude Debussy - Clair de lune",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1518,6 +1715,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/08-432-chamber-orchestras-quartet-claude-debussy-clair-de-lune-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/claude-debussy-clair-de-lune/"
@@ -1530,6 +1728,7 @@
       "title": "Bizet - Entr'acte - Carmen Suite - 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/en/product/bizet-entracte-suite-carmen-432-hz/",
       "date": "2016-12-26 08:00:15",
+      "eventDate": null,
       "paragraphs": [
         "Georges Bizet - Entr'acte - Carmen Suite - 432 Hz",
         "This recording is of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.",
@@ -1540,6 +1739,7 @@
       "thumbnail": "/legacy-media/wp-905.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/g-bizet-entracte-suite-carmen-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/bizet-entracte-suite-carmen-432-hz-2/"
@@ -1552,6 +1752,7 @@
       "title": "Bizet - Entr'acte - Carmen Suite - 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/bg/product/bizet-entracte-suite-carmen-432-hz-2/",
       "date": "2016-12-26 08:00:15",
+      "eventDate": null,
       "paragraphs": [
         "Georges Bizet - Entr'acte - Carmen Suite - 432 Hz",
         "Този запис е част от записите, които квартетът на Камерен оркестър 432 направи през декември 2016 г.",
@@ -1562,6 +1763,7 @@
       "thumbnail": "/legacy-media/wp-905.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/g-bizet-entracte-suite-carmen-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/bizet-entracte-suite-carmen-432-hz/"
@@ -1574,6 +1776,7 @@
       "title": "432 Chamber Orchestra - W. A. Mozart - Divertimento in D dur KV 136 (Yanakiev) Recording from rehearsal",
       "originalUrl": "https://432hz-orchestra.com/en/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal/",
       "date": "2017-11-02 12:00:08",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra - W. A. Mozart - Divertimento in D dur KV 136",
         "This recording was made during a dress rehearsal for a concert.",
@@ -1585,6 +1788,7 @@
       "thumbnail": "/legacy-media/wp-522.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/432-chamber-orchestra-w-a-mozart-divertimento-in-d-dur-kv-136-yanakiev-recording-from-rehearsal",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal-2/"
@@ -1597,6 +1801,7 @@
       "title": "432 Chamber Orchestra - W. A. Mozart - Divertimento in D dur KV 136 (Yanakiev) Recording from rehearsal",
       "originalUrl": "https://432hz-orchestra.com/bg/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal-2/",
       "date": "2017-11-02 12:00:08",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra - W. A. Mozart - Divertimento in D dur KV 136",
         "Запис от генерална репетиция за концерт.",
@@ -1608,6 +1813,7 @@
       "thumbnail": "/legacy-media/wp-522.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/432-chamber-orchestra-w-a-mozart-divertimento-in-d-dur-kv-136-yanakiev-recording-from-rehearsal",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal/"
@@ -1620,6 +1826,7 @@
       "title": "432 Chamber Orchestra - Antonio Vivaldi - Concerto Alla Rustica in G RV 151 - 432 Hz (Yanakiev) - Recording from rehearsal",
       "originalUrl": "https://432hz-orchestra.com/en/product/432-chamber-orchestra-antonio-vivaldi-concerto-alla-rustica-g-rv-151-432-hz-yanakiev-recording-rehearsal/",
       "date": "2017-11-02 14:00:50",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra - Antonio Vivaldi - Concerto Alla Rustica in G RV 151 - 432 Hz (Yanakiev) - Recording from rehearsal",
         "These recordings were made during a dress rehearsal for a concert.",
@@ -1631,6 +1838,7 @@
       "thumbnail": "/legacy-media/wp-526.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/album/432-chamber-orchestra-antonio-vivaldi-concerto-alla-ristica-in-g-rv-151-432-hz-yanakiev-recording-from-rehearsal",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/432-chamber-orchestra-antonio-vivaldi-concerto-alla-rustica-g-rv-151-432-hz-yanakiev-recording-rehearsal-2/"
@@ -1643,6 +1851,7 @@
       "title": "432 Chamber Orchestra - Antonio Vivaldi - Concerto Alla Rustica in G RV 151 - 432 Hz (Yanakiev) - Recording from rehearsal",
       "originalUrl": "https://432hz-orchestra.com/bg/product/432-chamber-orchestra-antonio-vivaldi-concerto-alla-rustica-g-rv-151-432-hz-yanakiev-recording-rehearsal-2/",
       "date": "2017-11-02 14:00:50",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra - Antonio Vivaldi - Concerto Alla Rustica in G RV 151 - 432 Hz (Yanakiev) - Recording from rehearsal",
         "Записи от генерална репетиция за концерт.",
@@ -1654,6 +1863,7 @@
       "thumbnail": "/legacy-media/wp-526.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/album/432-chamber-orchestra-antonio-vivaldi-concerto-alla-ristica-in-g-rv-151-432-hz-yanakiev-recording-from-rehearsal",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/432-chamber-orchestra-antonio-vivaldi-concerto-alla-rustica-g-rv-151-432-hz-yanakiev-recording-rehearsal/"
@@ -1666,6 +1876,7 @@
       "title": "432 Chamber Orchestra Quartet - E. Satie - Gymnopedie No. 1 - 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/en/product/432-chamber-orchestra-quartet-e-satie-gymnopedie-no-1-432-hz/",
       "date": "2016-12-26 08:00:05",
+      "eventDate": null,
       "paragraphs": [
         "This recording is part of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.",
         "Artistic Director - Ivan Yanakiev",
@@ -1675,6 +1886,7 @@
       "thumbnail": "/legacy-media/wp-927.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/e-satie-gymnopedie-no-1-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/432-chamber-orchestra-quartet-e-satie-gymnopedie-no-1-432-hz-2/"
@@ -1687,6 +1899,7 @@
       "title": "432 Chamber Orchestra Quartet - E. Satie - Gymnopedie No. 1 - 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/bg/product/432-chamber-orchestra-quartet-e-satie-gymnopedie-no-1-432-hz-2/",
       "date": "2016-12-26 08:00:05",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra Quartet - E. Satie - Gymnopedie No. 1 - 432 Hz",
         "Този запис е част от записите, които квартетът на Камерен оркестър 432 направи през декември 2016 г.",
@@ -1697,6 +1910,7 @@
       "thumbnail": "/legacy-media/wp-927.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/e-satie-gymnopedie-no-1-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/432-chamber-orchestra-quartet-e-satie-gymnopedie-no-1-432-hz/"
@@ -1709,6 +1923,7 @@
       "title": "432 Chamber Orchestra Quartet - Fr. Schubert - Moment musical No. 3 - 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/en/product/432-chamber-orchestra-quartet-fr-schubert-moment-musicaux-no-3-432-hz/",
       "date": "2017-11-02 14:14:18",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra Quartet - Fr. Schubert - Moment musical No. 3 - 432 Hz",
         "This recording is of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.",
@@ -1719,6 +1934,7 @@
       "thumbnail": "/legacy-media/wp-934.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/fr-schubert-moment-musicaux-no-3-d-780-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/432-chamber-orchestra-quartet-fr-schubert-moment-musicaux-no-3-432-hz-2/"
@@ -1731,6 +1947,7 @@
       "title": "432 Chamber Orchestra Quartet - Fr. Schubert - Moment musical No. 3 - 432 Hz",
       "originalUrl": "https://432hz-orchestra.com/bg/product/432-chamber-orchestra-quartet-fr-schubert-moment-musicaux-no-3-432-hz-2/",
       "date": "2017-11-02 14:14:18",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra Quartet - Fr. Schubert - Moment musical No. 3 - 432 Hz",
         "Този запис е част от записите, които квартетът на Камерен оркестър 432 направи през декември 2016 г.",
@@ -1741,6 +1958,7 @@
       "thumbnail": "/legacy-media/wp-934.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/fr-schubert-moment-musicaux-no-3-d-780-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/432-chamber-orchestra-quartet-fr-schubert-moment-musicaux-no-3-432-hz/"
@@ -1753,6 +1971,7 @@
       "title": "Bach  - Air - Orchestral Suite No. 3 in D dur BWV 1068",
       "originalUrl": "https://432hz-orchestra.com/en/product/bach-air-orchestral-sutite-no-3-d-dur-bwv-1068/",
       "date": "2017-11-02 15:51:53",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra Quartet - Bach - Air - Orchestral Suite No. 3 in D dur BWV 1068 - 432 Hz",
         "This recording is part of the first four recordings of the 432 Chamber Orchestra String Quartet made in December 2016.",
@@ -1763,6 +1982,7 @@
       "thumbnail": "/legacy-media/wp-939.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/j-s-bach-2-air-orchestral-suite-no-3-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/bach-air-orchestral-sutite-no-3-d-dur-bwv-1068-2/"
@@ -1775,6 +1995,7 @@
       "title": "Bach  - Air - Orchestral Suite No. 3 in D dur BWV 1068",
       "originalUrl": "https://432hz-orchestra.com/bg/product/bach-air-orchestral-sutite-no-3-d-dur-bwv-1068-2/",
       "date": "2017-11-02 15:51:53",
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra Quartet - Bach - Air - Orchestral Suite No. 3 in D dur BWV 1068 - 432 Hz",
         "Този запис е част от записите, които квартетът на Камерен оркестър 432 направи през декември 2016 г.",
@@ -1785,6 +2006,7 @@
       "thumbnail": "/legacy-media/wp-939.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/j-s-bach-2-air-orchestral-suite-no-3-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/bach-air-orchestral-sutite-no-3-d-dur-bwv-1068/"
@@ -1797,6 +2019,7 @@
       "title": "Pietro Mascagni - Intermezzo (Cavalleria Rusticana)",
       "originalUrl": "https://432hz-orchestra.com/en/product/pietro-mascagni-intermezzo-cavalleria-rusticana/",
       "date": "2017-11-09 08:00:08",
+      "eventDate": null,
       "paragraphs": [
         "Pietro Mascagni - Intermezzo (Cavalleria Rusticana)",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1813,6 +2036,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/09-432-chamber-orchestras-quartet-pietro-mascagni-intermezzo-cavalleria-rusticana-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/pietro-mascagni-intermezzo-cavalleria-rusticana-2/"
@@ -1825,6 +2049,7 @@
       "title": "Pietro Mascagni - Intermezzo (Cavalleria Rusticana)",
       "originalUrl": "https://432hz-orchestra.com/bg/product/pietro-mascagni-intermezzo-cavalleria-rusticana-2/",
       "date": "2017-11-09 08:00:08",
+      "eventDate": null,
       "paragraphs": [
         "Pietro Mascagni - Intermezzo (Cavalleria Rusticana)",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1842,6 +2067,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/09-432-chamber-orchestras-quartet-pietro-mascagni-intermezzo-cavalleria-rusticana-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/pietro-mascagni-intermezzo-cavalleria-rusticana/"
@@ -1854,6 +2080,7 @@
       "title": "Scott Joplin - The Entertainer",
       "originalUrl": "https://432hz-orchestra.com/en/product/scot-jopplinl-entertainer/",
       "date": "2017-11-10 08:00:36",
+      "eventDate": null,
       "paragraphs": [
         "Scott Joplin - The Entertainer",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1870,6 +2097,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/10-432-chamber-orchestras-quartet-scot-jopplinl-the-entertainer-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/scot-jopplinl-entertainer-2/"
@@ -1882,6 +2110,7 @@
       "title": "Scott Joplin - The Entertainer",
       "originalUrl": "https://432hz-orchestra.com/bg/product/scot-jopplinl-entertainer-2/",
       "date": "2017-11-10 08:00:36",
+      "eventDate": null,
       "paragraphs": [
         "Scott Joplin - The Entertainer",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1899,6 +2128,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/10-432-chamber-orchestras-quartet-scot-jopplinl-the-entertainer-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/scot-jopplinl-entertainer/"
@@ -1911,6 +2141,7 @@
       "title": "Carlos Gardel - Por Una Cabeza",
       "originalUrl": "https://432hz-orchestra.com/en/product/carlos-gardel-por-una-cabeza/",
       "date": "2017-11-11 08:00:48",
+      "eventDate": null,
       "paragraphs": [
         "Carlos Gardel - Por Una Cabeza",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1927,6 +2158,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/11-432-chamber-orchestras-quartet-carlos-gardel-pou-una-cabeza-432-hz-2",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/carlos-gardel-por-una-cabeza-2/"
@@ -1939,6 +2171,7 @@
       "title": "Carlos Gardel - Por Una Cabeza",
       "originalUrl": "https://432hz-orchestra.com/bg/product/carlos-gardel-por-una-cabeza-2/",
       "date": "2017-11-11 08:00:48",
+      "eventDate": null,
       "paragraphs": [
         "Carlos Gardel - Por Una Cabeza",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -1956,6 +2189,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/11-432-chamber-orchestras-quartet-carlos-gardel-pou-una-cabeza-432-hz-2",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/carlos-gardel-por-una-cabeza/"
@@ -1968,6 +2202,7 @@
       "title": "Giovanni Capurro - O Sole Mio",
       "originalUrl": "https://432hz-orchestra.com/en/product/giovanni-capurro-o-sole-mio/",
       "date": "2017-11-12 08:00:26",
+      "eventDate": null,
       "paragraphs": [
         "Giovanni Capurro - O Sole Mio",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -1984,6 +2219,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/12-432-chamber-orchestras-quartet-giovanni-capurro-o-sole-mio-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/giovanni-capurro-o-sole-mio-2/"
@@ -1996,6 +2232,7 @@
       "title": "Giovanni Capurro - O Sole Mio",
       "originalUrl": "https://432hz-orchestra.com/bg/product/giovanni-capurro-o-sole-mio-2/",
       "date": "2017-11-12 08:00:26",
+      "eventDate": null,
       "paragraphs": [
         "Giovanni Capurro - O Sole Mio",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -2013,6 +2250,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/12-432-chamber-orchestras-quartet-giovanni-capurro-o-sole-mio-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/giovanni-capurro-o-sole-mio/"
@@ -2025,6 +2263,7 @@
       "title": "Armstrong - What a Wonderful World",
       "originalUrl": "https://432hz-orchestra.com/en/product/armstrong-wonderful-world/",
       "date": "2017-11-13 08:00:26",
+      "eventDate": null,
       "paragraphs": [
         "Armstrong - What a Wonderful World",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -2041,6 +2280,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/13-432-chamber-orchestras-quartet-armstrong-thiele-and-weiss-what-a-wonderful-world-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/armstrong-wonderful-world-2/"
@@ -2053,6 +2293,7 @@
       "title": "Armstrong - What a Wonderful World",
       "originalUrl": "https://432hz-orchestra.com/bg/product/armstrong-wonderful-world-2/",
       "date": "2017-11-13 08:00:26",
+      "eventDate": null,
       "paragraphs": [
         "Armstrong - What a Wonderful World",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -2070,6 +2311,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/13-432-chamber-orchestras-quartet-armstrong-thiele-and-weiss-what-a-wonderful-world-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/armstrong-wonderful-world/"
@@ -2082,6 +2324,7 @@
       "title": "The Beatles - Yesterday",
       "originalUrl": "https://432hz-orchestra.com/en/product/the-beetles-yesterday/",
       "date": "2017-11-14 08:00:59",
+      "eventDate": null,
       "paragraphs": [
         "The Beatles - Yesterday",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -2098,6 +2341,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/14-432-chamber-orchestras-quartet-the-beetles-yesterday-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/the-beetles-yesterday-2/"
@@ -2110,6 +2354,7 @@
       "title": "The Beatles - Yesterday",
       "originalUrl": "https://432hz-orchestra.com/bg/product/the-beetles-yesterday-2/",
       "date": "2017-11-14 08:00:59",
+      "eventDate": null,
       "paragraphs": [
         "The Beatles - Yesterday",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -2127,6 +2372,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/14-432-chamber-orchestras-quartet-the-beetles-yesterday-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/the-beetles-yesterday/"
@@ -2139,6 +2385,7 @@
       "title": "Matvey Blanter - Katyusha",
       "originalUrl": "https://432hz-orchestra.com/en/product/matvey-blanter-katyusha/",
       "date": "2017-11-15 08:00:38",
+      "eventDate": null,
       "paragraphs": [
         "Matvey Blanter - Katyusha",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -2155,6 +2402,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/15-432-chamber-orchestras-quartet-matvey-blanter-katyusha-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/matvey-blanter-katyusha-2/"
@@ -2167,6 +2415,7 @@
       "title": "Matvey Blanter - Katyusha",
       "originalUrl": "https://432hz-orchestra.com/bg/product/matvey-blanter-katyusha-2/",
       "date": "2017-11-15 08:00:38",
+      "eventDate": null,
       "paragraphs": [
         "Матвей Блантер - Катюша",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -2184,6 +2433,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/15-432-chamber-orchestras-quartet-matvey-blanter-katyusha-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/matvey-blanter-katyusha/"
@@ -2196,6 +2446,7 @@
       "title": "Vasily Solovyov-Sedoi - Podmoskovniye vechera",
       "originalUrl": "https://432hz-orchestra.com/en/product/vasily-solovyov-sedoi-podmoskovniye-vechera/",
       "date": "2017-11-16 08:00:01",
+      "eventDate": null,
       "paragraphs": [
         "Vasily Solovyov-Sedoi - Podmoskovniye vechera",
         "This track is part of the Album \"432 Hz Quartet Music\"",
@@ -2212,6 +2463,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/16-432-chamber-orchestras-quartet-vasily-solovyov-sedoi-podmoskovniye-vechera-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/bg/product/vasily-solovyov-sedoi-podmoskovniye-vechera-2/"
@@ -2224,6 +2476,7 @@
       "title": "Vasily Solovyov-Sedoi - Podmoskovniye vechera",
       "originalUrl": "https://432hz-orchestra.com/bg/product/vasily-solovyov-sedoi-podmoskovniye-vechera-2/",
       "date": "2017-11-16 08:00:01",
+      "eventDate": null,
       "paragraphs": [
         "Василий Павлович Соловьёв-Седой - Подмосковные вечера",
         "Този запис е част от албума \"Музика за квартет в 432 Hz\"",
@@ -2241,6 +2494,7 @@
       "thumbnail": "/legacy-media/wp-760.jpg",
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": "https://432orchestra.bandcamp.com/track/16-432-chamber-orchestras-quartet-vasily-solovyov-sedoi-podmoskovniye-vechera-432-hz",
       "dynamicWordPress": false,
       "alternatePath": "/en/product/vasily-solovyov-sedoi-podmoskovniye-vechera/"
@@ -2253,11 +2507,13 @@
       "title": "Uncategorized",
       "originalUrl": "https://432hz-orchestra.com/en/blog/category/uncategorized/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2270,11 +2526,13 @@
       "title": "432 Hz",
       "originalUrl": "https://432hz-orchestra.com/en/blog/tag/432hz/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2287,6 +2545,7 @@
       "title": "432 music",
       "originalUrl": "https://432hz-orchestra.com/en/blog/tag/432-music/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [
         "Music played in 432 Hz"
       ],
@@ -2294,6 +2553,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2306,6 +2566,7 @@
       "title": "432 Chamber Orchestra",
       "originalUrl": "https://432hz-orchestra.com/en/blog/tag/432-chamber-orchestra/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [
         "432 Chamber Orchestra participated."
       ],
@@ -2316,6 +2577,7 @@
         1067
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2328,6 +2590,7 @@
       "title": "a = 432 Hz concert pitch",
       "originalUrl": "https://432hz-orchestra.com/en/blog/category/a-432-hz-concert-pitch/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [
         "Concert pitch a = 432 Hz"
       ],
@@ -2335,6 +2598,7 @@
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2347,6 +2611,7 @@
       "title": "Concert",
       "originalUrl": "https://432hz-orchestra.com/en/blog/category/concert/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2354,6 +2619,7 @@
         1067
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2366,6 +2632,7 @@
       "title": "Gallery",
       "originalUrl": "https://432hz-orchestra.com/en/blog/category/gallery/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2373,6 +2640,7 @@
         224
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2385,6 +2653,7 @@
       "title": "Ivan Yanakiev",
       "originalUrl": "https://432hz-orchestra.com/en/blog/tag/ivan-yanakiev/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2393,6 +2662,7 @@
         1067
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2405,6 +2675,7 @@
       "title": "Miryana Kalushkova",
       "originalUrl": "https://432hz-orchestra.com/en/blog/tag/miryana-kalushkova/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2412,6 +2683,7 @@
         224
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2424,6 +2696,7 @@
       "title": "Music",
       "originalUrl": "https://432hz-orchestra.com/en/blog/category/music/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2435,6 +2708,7 @@
         1067
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2447,6 +2721,7 @@
       "title": "Audio",
       "originalUrl": "https://432hz-orchestra.com/en/product-category/audio/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2476,6 +2751,7 @@
         956
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2488,6 +2764,7 @@
       "title": "String quartet",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/string-quartet/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2515,6 +2792,7 @@
         956
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2527,6 +2805,7 @@
       "title": "Quartet",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/quartet/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2554,6 +2833,7 @@
         956
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2566,6 +2846,7 @@
       "title": "String orchestra",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/string-orchestra/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2574,6 +2855,7 @@
         922
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2586,11 +2868,13 @@
       "title": "Solo violin",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/solo-violin/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2603,6 +2887,7 @@
       "title": "Classical",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/classical/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2611,6 +2896,7 @@
         922
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2623,11 +2909,13 @@
       "title": "Pop",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/pop/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2640,6 +2928,7 @@
       "title": "Russian",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/russian/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2650,6 +2939,7 @@
         953
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2662,11 +2952,13 @@
       "title": "Bulgarian",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/bulgarian/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2679,6 +2971,7 @@
       "title": "Baroque",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/baroque/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2690,6 +2983,7 @@
         937
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2702,6 +2996,7 @@
       "title": "Classicism",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/classicism/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2709,6 +3004,7 @@
         919
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2721,6 +3017,7 @@
       "title": "Romantic",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/romantic/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2734,6 +3031,7 @@
         941
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2746,6 +3044,7 @@
       "title": "XX Century",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/xx-century/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2759,6 +3058,7 @@
         956
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2771,11 +3071,13 @@
       "title": "Contemporary",
       "originalUrl": "https://432hz-orchestra.com/en/product-tag/contemporary/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2788,6 +3090,7 @@
       "title": "String quartet music",
       "originalUrl": "https://432hz-orchestra.com/en/product-category/audio/string-quartet-music/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2815,6 +3118,7 @@
         956
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2827,6 +3131,7 @@
       "title": "String orchestra music",
       "originalUrl": "https://432hz-orchestra.com/en/product-category/audio/string-orchestra/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2835,6 +3140,7 @@
         922
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2847,11 +3153,13 @@
       "title": "Uncategorized",
       "originalUrl": "https://432hz-orchestra.com/en/product-category/uncategorized/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
       "relatedIds": [],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2864,6 +3172,7 @@
       "title": "Audio",
       "originalUrl": "https://432hz-orchestra.com/en/blog/category/music/audio/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2874,6 +3183,7 @@
         371
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
@@ -2886,6 +3196,7 @@
       "title": "Video",
       "originalUrl": "https://432hz-orchestra.com/en/blog/category/music/video/",
       "date": null,
+      "eventDate": null,
       "paragraphs": [],
       "sourceLinks": [],
       "thumbnail": null,
@@ -2893,9 +3204,530 @@
         1067
       ],
       "inlineImages": [],
+      "audioEmbeds": [],
       "bandcampUrl": null,
       "dynamicWordPress": false,
       "alternatePath": null
+    },
+    {
+      "id": 316,
+      "kind": "event",
+      "language": "bg",
+      "path": "/bg/event/концерт-на-квартет-от-камерен-оркестъ/",
+      "title": "Концерт на квартет от Камерен оркестър 432",
+      "originalUrl": "https://432hz-orchestra.com/bg/event/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b5%d1%82-%d0%be%d1%82-%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%be%d1%80%d0%ba%d0%b5%d1%81%d1%82%d1%8a/",
+      "date": "2016-12-14 10:30:58",
+      "eventDate": "2016-12-27",
+      "paragraphs": [
+        "Камерен оркестър 432 Ви кани на концерт, в който ще прозвучи музика, изпълнена от струнен квартет в концертния строй ла1 = 432 Hz.",
+        "Програмата ще започне със сравнително представяне на стандартизирания сторй ла1 = 440 Hz с избрания от нас строй ла1 = 432 Hz и ще продължи с „Малка нощна музика“ от Моцарт. Две кратки пиеси – Шуберт „Музикален момент“ и Сати „Гимнопедия“ № 1 ще бъдат интермедия преди завършека с сюита от операта „Кармен“ от Бизе.\nЗа музикалното изппълнение ще се погрижат инструменталистите Виделин Джеджев – първа цигулка, Йосиф Йософив – втора цигулка, Таня Спасова – виола, Анна Каралашева – виолончело.\nЗаповядайтe, за да преживеем заедно музиката в естественото звучене на строя ла1 = 432 Hz.",
+        "Вход за концерта: 10 лв."
+      ],
+      "sourceLinks": [
+        "https://www.facebook.com/events/1224805567602145/"
+      ],
+      "thumbnail": null,
+      "inlineImages": [
+        "/legacy-media/wp-event-fw.png"
+      ],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/en/event/concert-quartet-432-chamber-orcehstra/"
+    },
+    {
+      "id": 322,
+      "kind": "event",
+      "language": "en",
+      "path": "/en/event/concert-quartet-432-chamber-orcehstra/",
+      "title": "Concert of a Quartet from 432 Chamber Orchestra",
+      "originalUrl": "https://432hz-orchestra.com/en/event/concert-quartet-432-chamber-orcehstra/",
+      "date": "2016-12-14 10:30:58",
+      "eventDate": "2016-12-27",
+      "paragraphs": [
+        "432 Chamber Orchestra is happy to invite you to a concert with music played by the string quartet of the orchestra in a1 = 432 Hz concert pitch.",
+        "The programme will begin with comparative presentation of the standardized concert pitch a1 = 440 Hz with the chosen by us a1 = 432 Hz concert pitch. It will continue with Mozart's „Serenade“ (\"Little night music\"). Two short pieces - Schubert's „Music moment“ №3 and Satie's „Gymnopedia“ № 1 will be an intermezzo to the finale of the concert with suite from the opera „Carmen“ by Bizet.\nThe musicians which will be on stage are Videli Djedjev – first violin, Yosif Yosifov – second violin, Tanya Spasova – viola, Anna Karalasheva – violoncello.",
+        "You are invinting you to experience together music in the natural sound of the a1 = 432 Hz concert pitch.",
+        "Entrance: 10 BGN"
+      ],
+      "sourceLinks": [
+        "https://www.facebook.com/events/1224805567602145/"
+      ],
+      "thumbnail": null,
+      "inlineImages": [
+        "/legacy-media/wp-event-fw.png"
+      ],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/bg/event/концерт-на-квартет-от-камерен-оркестъ/"
+    },
+    {
+      "id": 41,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/concert/",
+      "title": "Concert",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/concert/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Concert"
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        322
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/bg/events/category/концерт/"
+    },
+    {
+      "id": 43,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/tour/",
+      "title": "Tour",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/tour/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "A concert tour"
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 45,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/presentation/",
+      "title": "Presentation",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/presentation/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Presentation of the 432 Hz concert pitch"
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 47,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/chamber-concert/",
+      "title": "Chamber concert",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/chamber-concert/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "A concert with a small ensemble from the 432 Chamber Orchestra"
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        322
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/bg/events/category/камерен-концерт/"
+    },
+    {
+      "id": 49,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/orchestra-concert/",
+      "title": "Orchestra's concert",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/orchestra-concert/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "A concert with the whole 432 Chamber Orchestra"
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 51,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/scientific-lecture/",
+      "title": "Scientific lecture",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/scientific-lecture/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Scientific lecture"
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 53,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/popular-science-presentation/",
+      "title": "Popular science presentation",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/popular-science-presentation/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Presentation, designed to be understood by non-professionals."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 55,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/educational-concert/",
+      "title": "Educational concert",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/educational-concert/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Concert for students and/or children."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 57,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/bulgarian-tour/",
+      "title": "Bulgarian tour",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/bulgarian-tour/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "A concert tour in Bulgaria"
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 59,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/international-tour/",
+      "title": "International tour",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/international-tour/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Tour outer the Bulgarian borders."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 68,
+      "kind": "event_category",
+      "language": "en",
+      "path": "/en/events/category/open-rehearsal/",
+      "title": "Open rehearsal",
+      "originalUrl": "https://432hz-orchestra.com/en/events/category/open-rehearsal/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "A rehearsal which is open for visitors."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": null
+    },
+    {
+      "id": 104,
+      "kind": "event_category",
+      "language": "bg",
+      "path": "/bg/events/category/концерт/",
+      "title": "Концерт",
+      "originalUrl": "https://432hz-orchestra.com/bg/events/category/%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Категория от историческия концертен календар на оркестъра."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        316
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/en/events/category/concert/"
+    },
+    {
+      "id": 106,
+      "kind": "event_category",
+      "language": "bg",
+      "path": "/bg/events/category/камерен-концерт/",
+      "title": "Камерен концерт",
+      "originalUrl": "https://432hz-orchestra.com/bg/events/category/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b5%d0%bd-%d0%ba%d0%be%d0%bd%d1%86%d0%b5%d1%80%d1%82/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Категория от историческия концертен календар на оркестъра."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        316
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/en/events/category/chamber-concert/"
+    },
+    {
+      "id": null,
+      "kind": "event_view",
+      "language": "bg",
+      "path": "/bg/events/",
+      "title": "Архивен концертен календар",
+      "originalUrl": "https://432hz-orchestra.com/bg/events/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Историческите концертни събития от WordPress са запазени по-долу. Календарните изгледи на стария плъгин са заменени с постоянен архив, без да се представят събития от 2016 г. като предстоящи."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        316
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/en/events/"
+    },
+    {
+      "id": null,
+      "kind": "event_view",
+      "language": "bg",
+      "path": "/bg/event/",
+      "title": "Архивен концертен календар",
+      "originalUrl": "https://432hz-orchestra.com/bg/event/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Историческите концертни събития от WordPress са запазени по-долу. Календарните изгледи на стария плъгин са заменени с постоянен архив, без да се представят събития от 2016 г. като предстоящи."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        316
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/en/event/"
+    },
+    {
+      "id": null,
+      "kind": "event_view",
+      "language": "bg",
+      "path": "/bg/events/list/",
+      "title": "Архивен концертен календар",
+      "originalUrl": "https://432hz-orchestra.com/bg/events/list/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Историческите концертни събития от WordPress са запазени по-долу. Календарните изгледи на стария плъгин са заменени с постоянен архив, без да се представят събития от 2016 г. като предстоящи."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        316
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/en/events/list/"
+    },
+    {
+      "id": null,
+      "kind": "event_view",
+      "language": "bg",
+      "path": "/bg/events/month/",
+      "title": "Архивен концертен календар",
+      "originalUrl": "https://432hz-orchestra.com/bg/events/month/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "Историческите концертни събития от WordPress са запазени по-долу. Календарните изгледи на стария плъгин са заменени с постоянен архив, без да се представят събития от 2016 г. като предстоящи."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        316
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/en/events/month/"
+    },
+    {
+      "id": null,
+      "kind": "event_view",
+      "language": "en",
+      "path": "/en/events/",
+      "title": "Historical concert calendar",
+      "originalUrl": "https://432hz-orchestra.com/en/events/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "The documented WordPress concert events are listed below. The historical calendar plugin's views are replaced by a permanent archive; concerts from 2016 are not represented as upcoming events."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        322
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/bg/events/"
+    },
+    {
+      "id": null,
+      "kind": "event_view",
+      "language": "en",
+      "path": "/en/event/",
+      "title": "Historical concert calendar",
+      "originalUrl": "https://432hz-orchestra.com/en/event/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "The documented WordPress concert events are listed below. The historical calendar plugin's views are replaced by a permanent archive; concerts from 2016 are not represented as upcoming events."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        322
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/bg/event/"
+    },
+    {
+      "id": null,
+      "kind": "event_view",
+      "language": "en",
+      "path": "/en/events/list/",
+      "title": "Historical concert calendar",
+      "originalUrl": "https://432hz-orchestra.com/en/events/list/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "The documented WordPress concert events are listed below. The historical calendar plugin's views are replaced by a permanent archive; concerts from 2016 are not represented as upcoming events."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        322
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/bg/events/list/"
+    },
+    {
+      "id": null,
+      "kind": "event_view",
+      "language": "en",
+      "path": "/en/events/month/",
+      "title": "Historical concert calendar",
+      "originalUrl": "https://432hz-orchestra.com/en/events/month/",
+      "date": null,
+      "eventDate": null,
+      "paragraphs": [
+        "The documented WordPress concert events are listed below. The historical calendar plugin's views are replaced by a permanent archive; concerts from 2016 are not represented as upcoming events."
+      ],
+      "sourceLinks": [],
+      "thumbnail": null,
+      "inlineImages": [],
+      "audioEmbeds": [],
+      "relatedIds": [
+        322
+      ],
+      "bandcampUrl": null,
+      "dynamicWordPress": false,
+      "alternatePath": "/bg/events/month/"
     }
   ]
 }

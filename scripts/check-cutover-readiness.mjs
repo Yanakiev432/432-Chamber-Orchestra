@@ -37,6 +37,13 @@ assert.ok(published.routes.filter((p) => p.kind === "product").every((p) =>
   productIds.get(p.id) === toRoutePath(p.url)
 ), "Product URL mismatch between 46-product QA manifest and full WordPress route inventory");
 
+const eventAddon = JSON.parse(readFileSync("docs/wordpress-public-events-addendum-20261106.json", "utf8"));
+assert.equal(eventAddon.routes.length, 23, "Expected 23 verified Events Calendar public routes");
+const allPublished = [...published.routes, ...eventAddon.routes];
+assert.equal(allPublished.length, 146, "Expected 146 WordPress public routes after Events Calendar audit");
+assert.equal(new Set(allPublished.map((p) => toRoutePath(p.url))).size, 146, "Duplicate canonical public routes after addendum");
+assert.ok(eventAddon.routes.every((p) => { const u = new URL(p.url); return u.protocol === "https:" && u.hostname === manifest.root_domain && !u.username && !u.password && !u.search && !u.hash; }), "Invalid event addendum URL");
+const fullCounts = {...counts, event: 2, event_category: 13, event_view: 8};
 assert.ok(existsSync(dist), "Build Astro first: pnpm build");
 const built = [];
 function walk(folder) {
@@ -52,8 +59,8 @@ function walk(folder) {
 walk(dist);
 const paths = new Set(built.map((p) => p.toLowerCase()));
 const unmapped = products.filter((p) => !paths.has(toRoutePath(p.url)));
-const legacyMissing = published.routes.filter((p) => !paths.has(toRoutePath(p.url)));
-const legacyCollisions = published.routes.filter((p) => paths.has(toRoutePath(p.url)));
+const legacyMissing = allPublished.filter((p) => !paths.has(toRoutePath(p.url)));
+const legacyCollisions = allPublished.filter((p) => paths.has(toRoutePath(p.url)));
 const modeArg = process.argv.find((v) => v.startsWith("--mode="));
 const mode = modeArg?.split("=")[1] || "report";
 assert.ok(["report", "replace", "preview"].includes(mode), "Unknown --mode; use report, replace or preview");
@@ -61,8 +68,8 @@ assert.ok(["report", "replace", "preview"].includes(mode), "Unknown --mode; use 
 const report = {
   mode,
   totalLegacyProductRoutes: products.length,
-  legacyPublishedRoutes: published.routes.length,
-  legacyPublishedBreakdown: counts,
+  legacyPublishedRoutes: allPublished.length,
+  legacyPublishedBreakdown: fullCounts,
   distinctAstroStaticRoutes: paths.size,
   legacyProductRoutesAbsentFromAstro: unmapped.length,
   legacyPublishedRoutesAbsentFromAstro: legacyMissing.length,

@@ -1,0 +1,34 @@
+---
+import archive from "../content/legacyArchive.json";
+import type { Language } from "../content/siteContent";
+const { lang } = Astro.props as { lang: Language };
+const bg = lang === "bg";
+const products = archive.items.filter((x) => x.kind === "product" && x.language === lang);
+---
+<section id="historical-music-catalogue" class="border-t border-[#C7A76D]/30 bg-[#122B22] py-14 md:py-20">
+  <div class="container">
+    <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{bg ? "Исторически музикален каталог" : "Historical music catalogue"}</p>
+    <h2 class="max-w-4xl font-serif text-3xl leading-tight text-[#F0E8D9] md:text-5xl">
+      {bg ? "Записи от каталога на оркестъра" : "Recordings from the orchestra catalogue"}
+    </h2>
+    <p class="mt-5 max-w-3xl text-base leading-8 text-[#D7CEBF]">
+      {bg
+        ? "Двадесет и три оригинални музикални продукта, съхранени с историческите си описания. За слушане и покупка използвайте официалните страници в Bandcamp."
+        : "Twenty-three original music products, retained with their historical descriptions. Listening and purchases are handled through the official Bandcamp pages."}
+    </p>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {products.map((item) => (
+        <article class="flex min-w-0 flex-col border border-[#C7A76D]/25 bg-[#091F19]">
+          {item.thumbnail && <a href={item.path}><img class="aspect-[16/10] w-full object-contain" src={item.thumbnail} alt={item.title} loading="lazy" decoding="async" width="420" height="263" /></a>}
+          <div class="flex flex-1 flex-col gap-4 p-5">
+            <h3 class="font-serif text-lg leading-7 text-[#F0E8D9]"><a href={item.path} class="hover:text-[#C7A76D]">{item.title}</a></h3>
+            <div class="mt-auto flex flex-wrap gap-4 border-t border-[#C7A76D]/20 pt-4 text-sm">
+              <a class="text-[#F0E8D9] underline underline-offset-4" href={item.path}>{bg ? "Подробности" : "Details"}</a>
+              {item.bandcampUrl && <a class="text-[#C7A76D] underline underline-offset-4" href={item.bandcampUrl} target="_blank" rel="noopener noreferrer">Bandcamp</a>}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
