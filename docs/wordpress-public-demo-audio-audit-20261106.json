@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "auditedDate": "2026-11-06",
+  "collection": "Historic promotional MP3 excerpts from 432 Chamber Orchestra Quartet",
+  "sourcePublicDemoFiles": 17,
+  "alreadyPublishedShortMP3": 11,
+  "oldWordPressAttachmentPermalinksMatched": 22,
+  "publicAudioBytes": 14930244,
+  "excerptDurationSeconds": {
+    "min": 24.25,
+    "max": 52.28
+  },
+  "excludedUnreviewedFiles": 6,
+  "excludedByReason": {
+    "protectedWooCommerce": 2,
+    "invalidTruncated": 1,
+    "over60Seconds": 4,
+    "overlapProtectedAndLong": 1
+  },
+  "safety": "Whitelisted original MP3 files verified by SHA-256 and HTTP 200; no protected WooCommerce SHA matches; all unrestricted WAV masters remain unpublished.",
+  "sourceWordPressChanged": false,
+  "paidDownloadsPublished": false,
+  "productionCutover": false,
+  "sourceCoverageUnchanged": true
+}

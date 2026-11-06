@@ -4,7 +4,7 @@
   "mode": "observed read-only public URL inventory; not exhaustive dynamic URL enumeration",
   "source": "WordPress sitemap + verified public HTML graph + attachment permalinks",
   "verifiedSourcePaths": 636,
-  "staticAstroPages": 316,
+  "staticAstroPages": 318,
   "sourcePathsMatched": 276,
   "sourcePathsStillMissing": 360,
   "newHistoricalRoutes": 145,
@@ -67,12 +67,20 @@
     "existingStaticAttachmentPages": 7,
     "redirectCandidates": 346,
     "targetsFoundInAstro": 353,
-    "humanReviewRequired": 248,
+    "humanReviewRequired": 226,
     "redirectsDeployed": 0,
     "productionCutoverAuthorized": false,
-    "privateAudit": "Stored in the restricted local audit directory; not published or committed."
+    "privateAudit": "Stored in the restricted local audit directory; not published or committed.",
+    "highConfidencePublicDemoLinks": 22
   },
   "historicOrphanPosterPageRestored": 1,
   "remainingMissingLinks": 1,
-  "migrationNote": "The last remaining non-attachment HTML link is an account password-recovery route that stays on the original WordPress, where the account backend operates."
+  "migrationNote": "The last remaining non-attachment HTML link is an account password-recovery route that stays on the original WordPress, where the account backend operates.",
+  "newNativeAudioExcerptPages": 2,
+  "publicDemoAudioAssets": 11,
+  "publicDemoAudioBytes": 14930244,
+  "publicDemoAuditedUniqueFiles": 17,
+  "publicDemoExcludedFiles": 6,
+  "protectedAudioFilesCopied": 0,
+  "publicDemoHistoricalPermalinksClassified": 22
 }

@@ -23,7 +23,9 @@ const sources=[
   "src/content/audioArchive.ts",
   "src/content/legacyArchive.json",
   "src/content/legacyVideos.json",
-  "src/components/PressPage.astro"
+  "src/components/PressPage.astro",
+  "src/content/publicAudioExcerpts.json",
+  "src/components/PublicAudioExcerptsPage.astro"
 ];
 for (const file of sources) {
   const content=readFileSync(file,"utf8");
@@ -50,6 +52,6 @@ function scan(dir) {
   }
 }
 scan(root);
-if(pages!==316 || semanticSuperscripts<40)
+if(pages!==318 || semanticSuperscripts<40)
   throw new Error("PITCH_RENDER_INCOMPLETE "+JSON.stringify({pages,semanticSuperscripts,metaSuperscripts}));
 console.log(JSON.stringify({gate:"LATIN_A_SUPERSCRIPT_PITCH_PASS",pages,semanticSuperscripts,metaSuperscripts,sources:sources.length}));

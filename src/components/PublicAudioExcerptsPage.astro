@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteContent } from "../content/siteContent";
+import audio from "../content/publicAudioExcerpts.json";
+import { bandcampCatalogueUrl } from "../content/bandcampCatalog";
+import type { Language } from "../content/siteContent";
+
+const { lang } = Astro.props as { lang: Language };
+const bg = lang === "bg";
+const path = `/${lang}/recordings/excerpts/`;
+const alternate = `/${bg ? "en" : "bg"}/recordings/excerpts/`;
+const copy = {
+  ...siteContent[lang],
+  meta: {
+    title: bg ? "Звукови откъси · Квартет на Камерен оркестър 432" : "Audio excerpts · Quartet of 432 Chamber Orchestra",
+    description: bg
+      ? "Единадесет кратки архивни звукозаписа на квартета при концертен строй a¹ = 432 Hz."
+      : "Eleven short archival recordings by the orchestra's quartet at concert pitch a¹ = 432 Hz."
+  }
+};
+const tracks = audio.tracks;
+---
+<BaseLayout content={copy} lang={lang} canonicalHref={path} alternateHref={alternate}>
+  <section class="border-b border-brand-border bg-brand-bg py-14 md:py-20">
+    <div class="container max-w-6xl">
+      <a href={`/${lang}/recordings/`} class="text-sm text-brand-accent underline underline-offset-4">
+        {bg ? "Към дискографията" : "Discography"}
+      </a>
+      <p class="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">
+        {bg ? "Музикален архив" : "Music archive"}
+      </p>
+      <h1 class="mt-4 max-w-4xl font-serif text-3xl leading-tight text-brand-primary md:text-5xl">
+        {bg ? "Квартет на Камерен оркестър 432 — звукови откъси" : "432 Chamber Orchestra Quartet — audio excerpts"}
+      </h1>
+      <p class="mt-6 max-w-3xl text-base leading-8 text-brand-muted">
+        {bg
+          ? "Единадесет откъса от ранния звукозаписен каталог на квартета. Концертен строй: a¹ = 432 Hz."
+          : "Eleven excerpts from the quartet’s early recording catalogue. Concert pitch: a¹ = 432 Hz."}
+      </p>
+      <a class="mt-7 inline-flex border-b border-brand-accent pb-1 text-sm text-brand-accent hover:text-brand-primary"
+        href={bandcampCatalogueUrl} target="_blank" rel="noopener noreferrer">
+        {bg ? "Издания на оркестъра в Bandcamp" : "Orchestra releases on Bandcamp"}
+      </a>
+    </div>
+  </section>
+  <section class="bg-brand-bg py-12 md:py-20">
+    <div class="container max-w-6xl">
+      <div class="grid gap-4 md:grid-cols-2">
+        {tracks.map((track) => (
+          <article class="min-w-0 border border-brand-border bg-brand-surface p-5 md:p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent">
+              {bg ? "Откъс" : "Excerpt"} {String(track.number).padStart(2,"0")} · {Math.round(track.durationSeconds)} {bg ? "сек." : "sec"}
+            </p>
+            <h2 class="mb-5 mt-3 min-h-[3.2rem] font-serif text-lg leading-7 text-brand-primary">
+              {track.title[lang]}
+            </h2>
+            <audio class="w-full" controls preload="none">
+              <source src={track.src} type="audio/mpeg" />
+              {bg ? "Аудиозаписът не се поддържа от този браузър." : "This browser cannot play the recording."}
+            </audio>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

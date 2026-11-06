@@ -20,6 +20,8 @@ const routes = [
   "/en/афиш-чайната-fw/",
   "/bg/recordings/",
   "/en/recordings/",
+  "/bg/recordings/excerpts/",
+  "/en/recordings/excerpts/",
   "/bg/donation-certificate/",
   "/en/donation-certificate/",
   "/bg/donation-policy/",

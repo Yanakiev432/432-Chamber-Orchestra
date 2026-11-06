@@ -16,6 +16,9 @@ const products = archive.items.filter((x) => x.kind === "product" && x.language 
         ? "Двадесет и три оригинални музикални продукта, съхранени с историческите си описания. За слушане и покупка използвайте официалните страници в Bandcamp."
         : "Twenty-three original music products, retained with their historical descriptions. Listening and purchases are handled through the official Bandcamp pages."}
     </p>
+    <a href={`/${lang}/recordings/excerpts/`} class="mt-7 inline-flex border-b border-[#C7A76D] pb-1 text-sm text-[#F0E8D9] hover:text-[#C7A76D]">
+      {bg ? "Ранни звукозаписни откъси" : "Early recording excerpts"}
+    </a>
     <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {products.map((item) => (
         <article class="flex min-w-0 flex-col border border-[#C7A76D]/25 bg-[#091F19]">

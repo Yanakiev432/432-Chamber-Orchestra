@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "source": "Eleven previously public, unmodified short promotional MP3 excerpts from the 432 Chamber Orchestra historical WordPress",
+  "tuning": "a¹ = 432 Hz",
+  "protectedWooCommerceFilesIncluded": false,
+  "excludedUnreviewedAudio": 6,
+  "tracks": [
+    {
+      "number": 1,
+      "title": {
+        "bg": "Марк-Антоан Шарпантие — Te Deum: Prélude",
+        "en": "Marc-Antoine Charpentier — Te Deum: Prélude"
+      },
+      "src": "/audio-excerpts/demo-01.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 26.02,
+      "sizeBytes": 1040868,
+      "sha256": "3594ba65454c97aa6b1b5031bb0e3c228ba02dc1e5fecba79d7123a67011c964",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-01-432-Chamber-Orchestras-Quartet-Mark-Antonie-Charpantier-Te-Deum-Praelude-432-Hz.mp3"
+    },
+    {
+      "number": 2,
+      "title": {
+        "bg": "Георг Фридрих Хендел — Музика на водата: Alla Hornpipe",
+        "en": "George Frideric Handel — Water Music: Alla Hornpipe"
+      },
+      "src": "/audio-excerpts/demo-02.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 39.72,
+      "sizeBytes": 1588968,
+      "sha256": "7d3780942c6d78b38e4f70f2117cdbe9e6f4efeb05804fbf13f1ef05bf3bd628",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-02-432-Chamber-Orchestras-Quartet-Georg-Friedrich-Handel-All-Hornpie-Watermusic-suite-in-D-dur-HW-349-Part-II-432-Hz.mp3"
+    },
+    {
+      "number": 7,
+      "title": {
+        "bg": "П. И. Чайковски — Лешникотрошачката: Трепак",
+        "en": "Pyotr Ilyich Tchaikovsky — The Nutcracker: Trepak"
+      },
+      "src": "/audio-excerpts/demo-07.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 26.83,
+      "sizeBytes": 1073232,
+      "sha256": "4607a55ce9f5e36add81410509de5eca85544171ebeb63421a2b8d65c0d65a4a",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-07-432-Chamber-Orchestras-Quartet-P.-I.-Tchaikovsky-Trepak-Nutkracker-Suite-432-Hz.mp3"
+    },
+    {
+      "number": 8,
+      "title": {
+        "bg": "Клод Дебюси — Clair de lune",
+        "en": "Claude Debussy — Clair de lune"
+      },
+      "src": "/audio-excerpts/demo-08.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 35.52,
+      "sizeBytes": 1420884,
+      "sha256": "052a0dc1a7fdfeecc9d102b0a1fe0806efb8e3bdc68fc3a588e5cfb46a1ae09a",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-08-432-Chamber-Orchestras-Quartet-Claude-Debussy-Clair-de-lune-432-Hz.mp3"
+    },
+    {
+      "number": 9,
+      "title": {
+        "bg": "Пиетро Маскани — Селска чест: Интермецо",
+        "en": "Pietro Mascagni — Cavalleria rusticana: Intermezzo"
+      },
+      "src": "/audio-excerpts/demo-09.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 42.49,
+      "sizeBytes": 1699632,
+      "sha256": "60786e726a4aa7e83653f7f6cb8e096d5b7046f1873f15cfb2d9e64a12d3fcb6",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-09-432-Chamber-Orchestras-Quartet-Pietro-Mascagni-Intermezzo-Cavalleria-Rusticana-432-Hz.mp3"
+    },
+    {
+      "number": 10,
+      "title": {
+        "bg": "Скот Джоплин — The Entertainer",
+        "en": "Scott Joplin — The Entertainer"
+      },
+      "src": "/audio-excerpts/demo-10.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 52.28,
+      "sizeBytes": 2091132,
+      "sha256": "69592a19f14825da8f15b0bf7f46bb6467c9010f27973dbc6e5cc9006facd34e",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-10-432-Chamber-Orchestras-Quartet-Scot-Jopplinl-The-Entertainer-432-Hz.mp3"
+    },
+    {
+      "number": 11,
+      "title": {
+        "bg": "Карлос Гардел — Por una cabeza",
+        "en": "Carlos Gardel — Por una cabeza"
+      },
+      "src": "/audio-excerpts/demo-11.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 34.97,
+      "sizeBytes": 1398960,
+      "sha256": "3284d4ba9422d23f408ee031a7d9dd556b51b877c7a7d293b572af3377f7b5dd",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-11-432-Chamber-Orchestras-Quartet-Carlos-Gardel-Por-Una-Cabeza-432-Hz.mp3"
+    },
+    {
+      "number": 13,
+      "title": {
+        "bg": "What a Wonderful World",
+        "en": "What a Wonderful World"
+      },
+      "src": "/audio-excerpts/demo-13.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 30.04,
+      "sizeBytes": 1201644,
+      "sha256": "815b0fd5d2c1eba00a885554955b87cd427fb28817f29d7faa71982a5f2cef71",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-13-432-Chamber-Orchestras-Quartet-Armstrong-Thiele-and-Weiss-What-a-Wonderful-World-432-Hz.mp3"
+    },
+    {
+      "number": 14,
+      "title": {
+        "bg": "Yesterday",
+        "en": "Yesterday"
+      },
+      "src": "/audio-excerpts/demo-14.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 30.46,
+      "sizeBytes": 1218348,
+      "sha256": "3dcf3fbaf2ad61c953be679fea066d111b6c409e1a33fac027ff5b6a8e21d187",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-14-432-Chamber-Orchestras-Quartet-The-Beetles-Yesterday-432-Hz.mp3"
+    },
+    {
+      "number": 15,
+      "title": {
+        "bg": "Матвей Блантер — Катюша",
+        "en": "Matvey Blanter — Katyusha"
+      },
+      "src": "/audio-excerpts/demo-15.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 24.25,
+      "sizeBytes": 969876,
+      "sha256": "10faedb357aa40e9217301f70550f9ea46fc487b78f115b0886c43d516aa4126",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-15-432-Chamber-Orchestras-Quartet-Matvey-Blanter-Katyusha-432-Hz.mp3"
+    },
+    {
+      "number": 16,
+      "title": {
+        "bg": "Василий Соловьов-Седой — Подмосковни вечери",
+        "en": "Vasily Solovyov-Sedoi — Moscow Nights"
+      },
+      "src": "/audio-excerpts/demo-16.mp3",
+      "mime": "audio/mpeg",
+      "durationSeconds": 30.67,
+      "sizeBytes": 1226700,
+      "sha256": "3842efe5d952d35a3551d74c6ca50b97632b870151bb3966e48c7b74b62b0696",
+      "originalPublicUrl": "https://432hz-orchestra.com/wp-content/uploads/2016/12/DEMO-16-432-Chamber-Orchestras-Quartet-Vasily-Solovyov-Sedoi-Podmoskovniye-vechera-432-Hz.mp3"
+    }
+  ]
+}
