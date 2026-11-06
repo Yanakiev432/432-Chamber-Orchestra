@@ -60,11 +60,11 @@ for (const path of ["/bg/", "/en/"]) {
 const approvedHero = [
   {
     lang: "bg",
-    text: "Камерен оркестър 432 съчетава изпълнението на струнния репертоар с интерес към концертния строй a¹ = 432 Hz и акустичните свойства на звука, като поставя особен акцент върху различията във възприятието и преживяването на музиката."
+    text: "Камерен оркестър 432 изпълнява струнния репертоар в концертен строй a¹ = 432 Hz. Интересуват ни акустичните свойства на звука и начинът, по който музиката се възприема и преживява при този строй. Елате и чуйте сами."
   },
   {
     lang: "en",
-    text: "432 Chamber Orchestra combines performances of the string repertoire with an interest in concert pitch a¹ = 432 Hz and the acoustic properties of sound, placing particular emphasis on the different ways in which music is perceived and experienced."
+    text: "432 Chamber Orchestra performs the string repertoire at concert pitch a¹ = 432 Hz. We are interested in the acoustic properties of sound and in how music is heard and experienced at this pitch. Come and listen for yourself."
   }
 ];
 for (const { lang, text } of approvedHero) {
