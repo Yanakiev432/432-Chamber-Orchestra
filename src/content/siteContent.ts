@@ -699,7 +699,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         { label: "Преса / Медии", href: "/bg/press/" },
         { label: "Спонсорско резюме", href: "/bg/sponsor-brief/" }
       ],
-      motto: "Независим · С история · С характер"
+      motto: "Независим · Утвърден · Самобитен"
     }
   },
   en: {
@@ -1147,7 +1147,7 @@ export const siteContent: Record<Language, SiteCopy> = {
         { label: "Press / Media", href: "/en/press/" },
         { label: "Sponsor brief", href: "/en/sponsor-brief/" }
       ],
-      motto: "Independent · History · Character"
+      motto: "Independent · Established · Distinctive"
     }
   }
 };
