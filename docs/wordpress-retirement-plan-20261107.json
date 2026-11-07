@@ -38,7 +38,7 @@
     "newDbGzipTestPassed": true,
     "privateBackupOutsideWebRoot": true,
     "encryptedOffHostCopyCompleted": false,
-    "databaseRestoreDrillPassed": false,
+    "databaseRestoreDrillPassed": true,
     "freshPrecutoverMediaArchiveCompleted": false,
     "existingFileArchive11PartsRecheckedSha256": true,
     "newDbSnapshotSqlCreateTableCountVerified": 116,
@@ -82,6 +82,35 @@
       "cpanelDisplayedDiskQuotaGB": 50,
       "causeOfQuotaDiscrepancyUnverified": true,
       "noResidualIncompleteLargeRestore": true
+    },
+    "isolatedMariaDbRestore": {
+      "observedDate": "2026-11-07",
+      "sourceSnapshotSha256": "cf8a047c4312328906a1553206ca4e97457a53358248687491e14723b38f3c91",
+      "sourceServer": "MariaDB 10.11.19",
+      "isolatedImage": "mariadb:10.11.18",
+      "restoredTables": 116,
+      "engineCheckPass": true,
+      "downloadPermissions": 188,
+      "ordersWithPermissions": 12,
+      "productsWithPermissions": 19,
+      "publishedPricedDownloadableProducts": 46,
+      "orderStatuses": {
+        "completed": 14,
+        "onHold": 7,
+        "pending": 7
+      },
+      "dockerNetworkNone": true,
+      "dockerLogDriverNone": true,
+      "tmpfsDatabase": true,
+      "cgroupSwapMaxBytes": 0,
+      "asymmetricEncryptedTransport": true,
+      "plaintextSqlNotPersistedOnWindowsC": true,
+      "ephemeralContainerDestroyed": true,
+      "transportFilesDeletedFromBothHosts": true,
+      "privateReceiptSha256": "8d52f5d90b2e08569fa76a52ef7a61deb71a4ed6b9b55ab8e899247b0f3b5d8d",
+      "fullWordPressRuntimeRestoreCompleted": false,
+      "fullPhysicalFileRestoreCompleted": false,
+      "durableOffhostBackupCompleted": false
     }
   },
   "cutoverReadiness": {
@@ -97,7 +126,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "Target is independent Astro. Preview 394/394 HTTPS PASS; 23 Bandcamp destinations HEAD 200. 11-part backup streamed completely (30642 files, 6576778451 decoded bytes), all 26 original paid media SHA256 match, three privately restored core files match; incomplete full extraction cleaned after quota refusal. Current 116-table SQL dump structural PASS, NOT restored to MySQL. 16 cPanel docroots mapped; 2 nested sites protected. No encrypted off-host backup, database restore, owner-approved customer rights policy, or production cutover.",
+  "note": "SQL restore PASS in no-network no-swap RAM-only MariaDB: all 116 tables, 188 permission rows, 46 priced products and order aggregates validated. Production Astro 618-file artifact / 394 HTML / 384 SEO entries privately extracted and verified on Everest. Full physical WordPress restore, encrypted off-host durable backup, customer fulfillment/retention decision, Apache/rollback test and explicit production approval remain outstanding. Original WordPress unchanged.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -142,7 +171,17 @@
       "cPanelMainDocrootEditCapabilityAudited": false
     },
     "allOtherCpanelDomainsPreserved": true,
-    "exactDeletionAllowlistApproved": false
+    "exactDeletionAllowlistApproved": false,
+    "productionOverlapDryRun": {
+      "candidateFiles": 618,
+      "newFiles": 616,
+      "existingFiles": 2,
+      "symlinkConflicts": 0,
+      "directoryFileConflicts": 0,
+      "nestedSiteCollisions": 0,
+      "productionChanges": 0,
+      "approvedFileMoveAllowlist": false
+    }
   },
   "previewRelease": {
     "releaseDate": "2026-11-07",
@@ -167,5 +206,28 @@
     "productionWordPressModified": false,
     "uploadMediaCssHtaccessModified": false,
     "productionCutoverAuthorized": false
+  },
+  "productionCandidate": {
+    "sourceCommit": "240dc6919e189481de8d54c74bbc70de6f0c0f73",
+    "productionOrigin": "https://432hz-orchestra.com",
+    "archiveSha256": "9112131bc719c3e80e68d5632a7836c83158d9e06143d66778d07cf51bb30a2a",
+    "archiveBytes": 129488633,
+    "allowlistedFiles": 618,
+    "withheldSourceConfigFiles": 5,
+    "htmlPages": 394,
+    "indexableSitemapUrls": 384,
+    "retiredStoreNoticesNoindex": 9,
+    "rootRedirectNoindex": 1,
+    "audioFilesApprovedBySourceManifest": 15,
+    "uncompressedBytes": 155597213,
+    "privatelyUploadedAndReconstructed": true,
+    "allFilesExtractedInPrivateStaging": true,
+    "allExtractedFileHashesVerified": true,
+    "stagingOutsideWebroots": true,
+    "productionWordPressIndexPhpUnchanged": true,
+    "productionHtaccessUnchanged": true,
+    "approvedForProductionCutover": false,
+    "privateStagingReceiptSha256": "59b78218070be55ab419ca99862e94b903b7e331ad94ebafd4ee8635d4f16f8a",
+    "privateZipReceiptSha256": "d30420b4fdcc6581346a0d082329c65ee0bed2d2d5b5c3e1b91e0db0d97a0c5e"
   }
 }
