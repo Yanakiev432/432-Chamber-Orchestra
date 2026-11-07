@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs && node scripts/validate-public-audio-excerpts.mjs && node scripts/validate-footer-editorial.mjs && node scripts/validate-orchestra-tuning-editorial.mjs && node scripts/validate-third-person-voice.mjs && node scripts/validate-public-demo-attachment-routes.mjs && node scripts/validate-public-photo-attachment-routes.mjs",
+    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs && node scripts/validate-public-audio-excerpts.mjs && node scripts/validate-footer-editorial.mjs && node scripts/validate-orchestra-tuning-editorial.mjs && node scripts/validate-third-person-voice.mjs && node scripts/validate-public-demo-attachment-routes.mjs && node scripts/validate-public-photo-attachment-routes.mjs && node scripts/validate-remaining-attachment-quarantine.mjs",
     "pitch:validate": "node scripts/validate-concert-pitch.mjs",
     "audio:validate": "node scripts/validate-public-audio-excerpts.mjs",
     "footer:validate": "node scripts/validate-footer-editorial.mjs",
@@ -27,7 +27,8 @@
     "legacy:validate": "node scripts/validate-legacy-parity.mjs",
     "voice:validate": "node scripts/validate-third-person-voice.mjs",
     "demo-attachments:validate": "node scripts/validate-public-demo-attachment-routes.mjs",
-    "photo-attachments:validate": "node scripts/validate-public-photo-attachment-routes.mjs"
+    "photo-attachments:validate": "node scripts/validate-public-photo-attachment-routes.mjs",
+    "attachments:quarantine:validate": "node scripts/validate-remaining-attachment-quarantine.mjs"
   },
   "dependencies": {
     "astro": "^5.13.8"

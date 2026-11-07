@@ -1,0 +1,2476 @@
+{
+  "version": 1,
+  "asOf": "2026-11-07",
+  "kind": "WordPress public attachment detail-page backlog, source URL read-only metadata",
+  "sourceAttachments": 353,
+  "publicAttachmentPagesAlreadyRestored": 83,
+  "remaining": 270,
+  "classificationCounts": {
+    "woo-protected-wave": 8,
+    "unreviewed-wave": 100,
+    "unapproved-demo-mp3": 12,
+    "editorially-excluded-studio5": 13,
+    "studio5-other-variant": 1,
+    "additional-vbal": 22,
+    "additional-dsc": 42,
+    "branding-layout-review": 38,
+    "uncurated-visual-review": 34
+  },
+  "protectedSourceMediaFiles": 4,
+  "protectedMediaAnonymousHeadStatus": "403 (all 4)",
+  "publicWordPressProductionModified": false,
+  "redirectsDeployed": 0,
+  "reviewOnly": true,
+  "notes": "All entries are fail-closed review decisions, not approved redirects. Direct original media URLs and WooCommerce filenames are deliberately omitted. File-based groups for images are preliminary; editorial/rights review remains required. The six excluded distinct MP3 files have independently verified risk subclasses: two WooCommerce SHA matches (four EN/BG permalinks), one 2088-byte truncated file (two permalinks), and three other recordings (six permalinks) requiring further rights/duration review. Historical attachment page paths of the four SHA-matched protected MP3 entries are redacted in addition to all eight files in protected WooCommerce storage.",
+  "items": [
+    {
+      "id": 8,
+      "mime": "image/png",
+      "sourcePagePath": "/en/logo_-432_bg/",
+      "sourceMediaFilename": "logo_-432_bg.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 9,
+      "mime": "image/png",
+      "sourcePagePath": "/en/logo432/",
+      "sourceMediaFilename": "logo432-e1470050488705.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 10,
+      "mime": "image/png",
+      "sourcePagePath": "/bg/logo432_bg/",
+      "sourceMediaFilename": "logo432_bg-e1471352921748.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 11,
+      "mime": "image/png",
+      "sourcePagePath": "/en/logo432_small/",
+      "sourceMediaFilename": "logo432_small.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 20,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/432_chamber_orchestra_2015/",
+      "sourceMediaFilename": "432_chamber_orchestra_2015.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 34,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/favico-20x20/",
+      "sourceMediaFilename": "favico-20x20.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 41,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/10492293_968937179848632_6256823488075422381_n1/",
+      "sourceMediaFilename": "10492293_968937179848632_6256823488075422381_n1.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 43,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/1917052_968937173181966_1466292003366250467_n1/",
+      "sourceMediaFilename": "1917052_968937173181966_1466292003366250467_n1.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 45,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/10409322_968937169848633_946849759512170362_n1/",
+      "sourceMediaFilename": "10409322_968937169848633_946849759512170362_n1.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 128,
+      "mime": "image/png",
+      "sourcePagePath": "/en/logo432_bg-2/",
+      "sourceMediaFilename": "logo432_bg-e1471352921748.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 129,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-10409322_968937169848633_946849759512170362_n1-jpg/",
+      "sourceMediaFilename": "cropped-10409322_968937169848633_946849759512170362_n1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 130,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-1917052_968937173181966_1466292003366250467_n1-jpg/",
+      "sourceMediaFilename": "cropped-1917052_968937173181966_1466292003366250467_n1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 131,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-10492293_968937179848632_6256823488075422381_n1-jpg/",
+      "sourceMediaFilename": "cropped-10492293_968937179848632_6256823488075422381_n1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 132,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/cropped-10409322_968937169848633_946849759512170362_n1-jpg-2/",
+      "sourceMediaFilename": "cropped-10409322_968937169848633_946849759512170362_n1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 133,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/cropped-1917052_968937173181966_1466292003366250467_n1-jpg-2/",
+      "sourceMediaFilename": "cropped-1917052_968937173181966_1466292003366250467_n1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 134,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/cropped-10492293_968937179848632_6256823488075422381_n1-jpg-2/",
+      "sourceMediaFilename": "cropped-10492293_968937179848632_6256823488075422381_n1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 172,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-6/",
+      "sourceMediaFilename": "Concert-6.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 175,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-9/",
+      "sourceMediaFilename": "Concert-9.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 179,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-12/",
+      "sourceMediaFilename": "Concert-12.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 181,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-14/",
+      "sourceMediaFilename": "Concert-14.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 182,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-15/",
+      "sourceMediaFilename": "Concert-15.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 184,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-17/",
+      "sourceMediaFilename": "Concert-17.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 185,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-18/",
+      "sourceMediaFilename": "Concert-18.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 186,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-19/",
+      "sourceMediaFilename": "Concert-19.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 187,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-20/",
+      "sourceMediaFilename": "Concert-20.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 188,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-21/",
+      "sourceMediaFilename": "Concert-21.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 190,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-1/",
+      "sourceMediaFilename": "Concert-1.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 191,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-2/",
+      "sourceMediaFilename": "Concert-2.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 193,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-4/",
+      "sourceMediaFilename": "Concert-4.jpg",
+      "classification": "editorially-excluded-studio5",
+      "decision": "BLOCK_USER_EXCLUDED",
+      "evidence": "Not in ten specifically approved Studio 5 frames"
+    },
+    {
+      "id": 231,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/concert-1-1/",
+      "sourceMediaFilename": "Concert-1-1.jpg",
+      "classification": "studio5-other-variant",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Concert-series variant outside exact approved list"
+    },
+    {
+      "id": 255,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/02-liszt-liebestraume-432et/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 256,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/03-liszt-liebestraume-432oft/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 466,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0432/",
+      "sourceMediaFilename": "DSC_0432.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 467,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0433/",
+      "sourceMediaFilename": "DSC_0433.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 468,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0434/",
+      "sourceMediaFilename": "DSC_0434.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 469,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0435/",
+      "sourceMediaFilename": "DSC_0435.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 470,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0436/",
+      "sourceMediaFilename": "DSC_0436.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 471,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0437/",
+      "sourceMediaFilename": "DSC_0437.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 472,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0438/",
+      "sourceMediaFilename": "DSC_0438.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 474,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0440/",
+      "sourceMediaFilename": "DSC_0440.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 475,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0441/",
+      "sourceMediaFilename": "DSC_0441.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 476,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0442/",
+      "sourceMediaFilename": "DSC_0442.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 478,
+      "mime": "image/png",
+      "sourcePagePath": "/en/dsc_0488-2/",
+      "sourceMediaFilename": "DSC_0488.png",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 479,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0443/",
+      "sourceMediaFilename": "DSC_0443.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 481,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0445/",
+      "sourceMediaFilename": "DSC_0445.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 482,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0446/",
+      "sourceMediaFilename": "DSC_0446.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 483,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0447/",
+      "sourceMediaFilename": "DSC_0447.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 484,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0448/",
+      "sourceMediaFilename": "DSC_0448.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 485,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0449/",
+      "sourceMediaFilename": "DSC_0449.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 486,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0451/",
+      "sourceMediaFilename": "DSC_0451.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 488,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0453/",
+      "sourceMediaFilename": "DSC_0453.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 489,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0454/",
+      "sourceMediaFilename": "DSC_0454.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 490,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0455/",
+      "sourceMediaFilename": "DSC_0455.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 492,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0458/",
+      "sourceMediaFilename": "DSC_0458.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 493,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0459/",
+      "sourceMediaFilename": "DSC_0459.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 495,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0461/",
+      "sourceMediaFilename": "DSC_0461.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 496,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0462/",
+      "sourceMediaFilename": "DSC_0462.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 497,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0463/",
+      "sourceMediaFilename": "DSC_0463.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 498,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0464/",
+      "sourceMediaFilename": "DSC_0464.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 499,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0465/",
+      "sourceMediaFilename": "DSC_0465.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 500,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0466/",
+      "sourceMediaFilename": "DSC_0466.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 502,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0468/",
+      "sourceMediaFilename": "DSC_0468.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 503,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0469/",
+      "sourceMediaFilename": "DSC_0469.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 505,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0471/",
+      "sourceMediaFilename": "DSC_0471.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 506,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0472/",
+      "sourceMediaFilename": "DSC_0472.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 507,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0473/",
+      "sourceMediaFilename": "DSC_0473.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 509,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0475/",
+      "sourceMediaFilename": "DSC_0475.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 510,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0476/",
+      "sourceMediaFilename": "DSC_0476.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 511,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0477/",
+      "sourceMediaFilename": "DSC_0477.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 513,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0479/",
+      "sourceMediaFilename": "DSC_0479.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 514,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0480/",
+      "sourceMediaFilename": "DSC_0480.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 515,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0481/",
+      "sourceMediaFilename": "DSC_0481.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 516,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0482/",
+      "sourceMediaFilename": "DSC_0482.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 517,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/dsc_0483/",
+      "sourceMediaFilename": "DSC_0483.jpg",
+      "classification": "additional-dsc",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 12-image curated concert selection; visually distinct status not yet established"
+    },
+    {
+      "id": 519,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6537/",
+      "sourceMediaFilename": "VBAL6537.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 520,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6538/",
+      "sourceMediaFilename": "VBAL6538.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 521,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6539/",
+      "sourceMediaFilename": "VBAL6539.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 522,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6540/",
+      "sourceMediaFilename": "VBAL6540.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 523,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6541/",
+      "sourceMediaFilename": "VBAL6541.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 524,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6542/",
+      "sourceMediaFilename": "VBAL6542.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 525,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6543/",
+      "sourceMediaFilename": "VBAL6543.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 526,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6544/",
+      "sourceMediaFilename": "VBAL6544.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 527,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6545/",
+      "sourceMediaFilename": "VBAL6545.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 528,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6546/",
+      "sourceMediaFilename": "VBAL6546.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 529,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6550/",
+      "sourceMediaFilename": "VBAL6550.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 530,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6552/",
+      "sourceMediaFilename": "VBAL6552.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 531,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6553/",
+      "sourceMediaFilename": "VBAL6553.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 532,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6554/",
+      "sourceMediaFilename": "VBAL6554.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 533,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6555/",
+      "sourceMediaFilename": "VBAL6555.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 534,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6558/",
+      "sourceMediaFilename": "VBAL6558.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 535,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6559/",
+      "sourceMediaFilename": "VBAL6559.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 536,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6560/",
+      "sourceMediaFilename": "VBAL6560.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 537,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6563/",
+      "sourceMediaFilename": "VBAL6563.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 538,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6564/",
+      "sourceMediaFilename": "VBAL6564.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 539,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6565/",
+      "sourceMediaFilename": "VBAL6565.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 540,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/vbal6567/",
+      "sourceMediaFilename": "VBAL6567.jpg",
+      "classification": "additional-vbal",
+      "decision": "HOLD_CURATORIAL_REVIEW",
+      "evidence": "Filename outside the 32-image curated collection; visual identity, crop and provenance not yet reviewed"
+    },
+    {
+      "id": 573,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6543-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6543.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 575,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6560-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6560.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 576,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6537-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6537.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 577,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6573-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6573.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 578,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6540-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6540.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 579,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/cropped-vbal6540-jpg-2/",
+      "sourceMediaFilename": "cropped-VBAL6540.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 580,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/cropped-vbal6573-jpg-2/",
+      "sourceMediaFilename": "cropped-VBAL6573.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 581,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/cropped-vbal6537-jpg-2/",
+      "sourceMediaFilename": "cropped-VBAL6537.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 582,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/cropped-vbal6560-jpg-2/",
+      "sourceMediaFilename": "cropped-VBAL6560.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 583,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/cropped-vbal6543-jpg-2/",
+      "sourceMediaFilename": "cropped-VBAL6543.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 584,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-cropped-vbal6540-jpg/",
+      "sourceMediaFilename": "cropped-cropped-VBAL6540.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 585,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-cropped-vbal6573-jpg/",
+      "sourceMediaFilename": "cropped-cropped-VBAL6573.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 587,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-cropped-vbal6537-jpg/",
+      "sourceMediaFilename": "cropped-cropped-VBAL6537.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 588,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-cropped-vbal6560-jpg/",
+      "sourceMediaFilename": "cropped-cropped-VBAL6560.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 589,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-cropped-vbal6543-jpg/",
+      "sourceMediaFilename": "cropped-cropped-VBAL6543.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 635,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/14-432-chamber-orchestras-quartet-the-beetles-yesterday-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 636,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/13-432-chamber-orchestras-quartet-armstrong-thiele-and-weiss-what-a-wonderful-world-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 637,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/12-432-chamber-orchestras-quartet-giovanni-capurro-o-sole-mio-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 638,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/11-432-chamber-orchestras-quartet-carlos-gardel-pou-una-cabeza-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 639,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/10-432-chamber-orchestras-quartet-scot-jopplinl-the-entertainer-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 640,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/09-432-chamber-orchestras-quartet-pietro-mascagni-intermezzo-cavalleria-rusticana-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 641,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/08-432-chamber-orchestras-quartet-claude-debussy-clair-de-lune-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 642,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/07-432-chamber-orchestras-quartet-p-i-tchaikovsky-trepak-nutkracker-suite-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 643,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/06-432-chamber-orchestras-quartet-modest-mussorgsky-hopak-sorochins-fair-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 644,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/05-432-chamber-orchestras-quartet-al-borodin-notturno-string-quartet-no-2-part-iii-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 645,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/04-432-chamber-orchestras-quartet-caesar-frank-panis-angelicus-messe-solennelle-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 646,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/03-432-chamber-orchestras-quartet-georg-friedrich-handel-the-arrival-of-queen-of-sheba-solomon-hw-67-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 647,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/02-432-chamber-orchestras-quartet-georg-friedrich-handel-all-hornpie-watermusic-suite-in-d-dur-hw-349-part-ii-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 648,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/01-432-chamber-orchestras-quartet-mark-antonie-charpantier-te-deum-praelude-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 649,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/16-432-chamber-orchestras-quartet-vasily-solovyov-sedoi-podmoskovniye-vechera-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 650,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/15-432-chamber-orchestras-quartet-matvey-blanter-katyusha-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 659,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/15-432-chamber-orchestras-quartet-matvey-blanter-katyusha-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 660,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/16-432-chamber-orchestras-quartet-vasily-solovyov-sedoi-podmoskovniye-vechera-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 661,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/01-432-chamber-orchestras-quartet-mark-antonie-charpantier-te-deum-praelude-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 662,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/02-432-chamber-orchestras-quartet-georg-friedrich-handel-all-hornpie-watermusic-suite-in-d-dur-hw-349-part-ii-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 663,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/06-432-chamber-orchestras-quartet-modest-mussorgsky-hopak-sorochins-fair-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 664,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/04-432-chamber-orchestras-quartet-caesar-frank-panis-angelicus-messe-solennelle-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 665,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/03-432-chamber-orchestras-quartet-georg-friedrich-handel-the-arrival-of-queen-of-sheba-solomon-hw-67-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 666,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/05-432-chamber-orchestras-quartet-al-borodin-notturno-string-quartet-no-2-part-iii-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 667,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/07-432-chamber-orchestras-quartet-p-i-tchaikovsky-trepak-nutkracker-suite-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 668,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/08-432-chamber-orchestras-quartet-claude-debussy-clair-de-lune-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 669,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/11-432-chamber-orchestras-quartet-carlos-gardel-pou-una-cabeza-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 670,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/09-432-chamber-orchestras-quartet-pietro-mascagni-intermezzo-cavalleria-rusticana-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 671,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/10-432-chamber-orchestras-quartet-scot-jopplinl-the-entertainer-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 672,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/12-432-chamber-orchestras-quartet-giovanni-capurro-o-sole-mio-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 673,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/14-432-chamber-orchestras-quartet-the-beetles-yesterday-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 674,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/13-432-chamber-orchestras-quartet-armstrong-thiele-and-weiss-what-a-wonderful-world-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 680,
+      "mime": "audio/mpeg",
+      "sourcePagePath": "/en/demo-03-432-chamber-orchestras-quartet-georg-friedrich-handel-the-arrival-of-queen-of-sheba-solomon-hw-67-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "HOLD_DURATION_AND_RIGHTS_REVIEW",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "Not part of approved 11 public clips; duration, integrity and usage rights require per-file verification."
+    },
+    {
+      "id": 681,
+      "mime": "audio/mpeg",
+      "sourcePagePath": "/en/demo-04-432-chamber-orchestras-quartet-caesar-frank-panis-angelicus-messe-solennelle-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "HOLD_DURATION_AND_RIGHTS_REVIEW",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "Not part of approved 11 public clips; duration, integrity and usage rights require per-file verification."
+    },
+    {
+      "id": 682,
+      "mime": "audio/mpeg",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "BLOCK_PROTECTED_DOWNLOAD_HASH",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "SHA-256 of source MP3 exactly matches a file in the private 26-file WooCommerce protected-download integrity manifest; never copy to public Astro."
+    },
+    {
+      "id": 683,
+      "mime": "audio/mpeg",
+      "sourcePagePath": "/en/demo-06-432-chamber-orchestras-quartet-modest-mussorgsky-hopak-sorochins-fair-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "HOLD_DURATION_AND_RIGHTS_REVIEW",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "Not part of approved 11 public clips; duration, integrity and usage rights require per-file verification."
+    },
+    {
+      "id": 689,
+      "mime": "audio/mpeg",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "BLOCK_PROTECTED_DOWNLOAD_HASH",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "SHA-256 of source MP3 exactly matches a file in the private 26-file WooCommerce protected-download integrity manifest; never copy to public Astro."
+    },
+    {
+      "id": 690,
+      "mime": "audio/mpeg",
+      "sourcePagePath": "/en/demo-12-432-chamber-orchestras-quartet-giovanni-capurro-o-sole-mio-432-hz-01/",
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "BLOCK_TRUNCATED_MP3",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "Historic source MP3 is 2088 bytes and failed the prior public clip integrity audit."
+    },
+    {
+      "id": 697,
+      "mime": "audio/mpeg",
+      "sourcePagePath": "/bg/demo-12-432-chamber-orchestras-quartet-giovanni-capurro-o-sole-mio-432-hz-01-2/",
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "BLOCK_TRUNCATED_MP3",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "Historic source MP3 is 2088 bytes and failed the prior public clip integrity audit."
+    },
+    {
+      "id": 698,
+      "mime": "audio/mpeg",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "BLOCK_PROTECTED_DOWNLOAD_HASH",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "SHA-256 of source MP3 exactly matches a file in the private 26-file WooCommerce protected-download integrity manifest; never copy to public Astro."
+    },
+    {
+      "id": 704,
+      "mime": "audio/mpeg",
+      "sourcePagePath": "/bg/demo-06-432-chamber-orchestras-quartet-modest-mussorgsky-hopak-sorochins-fair-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "HOLD_DURATION_AND_RIGHTS_REVIEW",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "Not part of approved 11 public clips; duration, integrity and usage rights require per-file verification."
+    },
+    {
+      "id": 705,
+      "mime": "audio/mpeg",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "BLOCK_PROTECTED_DOWNLOAD_HASH",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "SHA-256 of source MP3 exactly matches a file in the private 26-file WooCommerce protected-download integrity manifest; never copy to public Astro."
+    },
+    {
+      "id": 706,
+      "mime": "audio/mpeg",
+      "sourcePagePath": "/bg/demo-04-432-chamber-orchestras-quartet-caesar-frank-panis-angelicus-messe-solennelle-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "HOLD_DURATION_AND_RIGHTS_REVIEW",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "Not part of approved 11 public clips; duration, integrity and usage rights require per-file verification."
+    },
+    {
+      "id": 707,
+      "mime": "audio/mpeg",
+      "sourcePagePath": "/bg/demo-03-432-chamber-orchestras-quartet-georg-friedrich-handel-the-arrival-of-queen-of-sheba-solomon-hw-67-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unapproved-demo-mp3",
+      "decision": "HOLD_DURATION_AND_RIGHTS_REVIEW",
+      "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
+      "exclusionEvidence": "Not part of approved 11 public clips; duration, integrity and usage rights require per-file verification."
+    },
+    {
+      "id": 714,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-01-432-chamber-orchestras-quartet-mark-antonie-charpantier-te-deum-praelude-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 715,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-02-432-chamber-orchestras-quartet-georg-friedrich-handel-all-hornpie-watermusic-suite-in-d-dur-hw-349-part-ii-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 716,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-03-432-chamber-orchestras-quartet-georg-friedrich-handel-the-arrival-of-queen-of-sheba-solomon-hw-67-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 717,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-04-432-chamber-orchestras-quartet-caesar-frank-panis-angelicus-messe-solennelle-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 718,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-05-432-chamber-orchestras-quartet-al-borodin-notturno-string-quartet-no-2-part-iii-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 719,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-06-432-chamber-orchestras-quartet-modest-mussorgsky-gopak-sorochins-fair-432-hz/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 720,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-07-432-chamber-orchestras-quartet-p-i-tchaikovsky-trepak-nutkracker-suite-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 721,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-08-432-chamber-orchestras-quartet-claude-debussy-clair-de-lune-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 722,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-09-432-chamber-orchestras-quartet-pietro-mascagni-intermezzo-cavalleria-rusticana-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 723,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-10-432-chamber-orchestras-quartet-scot-jopplinl-the-entertainer-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 724,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-11-432-chamber-orchestras-quartet-carlos-gardel-por-una-cabeza-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 725,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-12-432-chamber-orchestras-quartet-giovanni-capurro-o-sole-mio-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 726,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-13-432-chamber-orchestras-quartet-armstrong-thiele-and-weiss-what-a-wonderful-world-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 727,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-14-432-chamber-orchestras-quartet-the-beetles-yesterday-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 728,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-15-432-chamber-orchestras-quartet-matvey-blanter-katyusha-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 729,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/demo-16-432-chamber-orchestras-quartet-vasily-solovyov-sedoi-podmoskovniye-vechera-432-hz-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 730,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8521web/",
+      "sourceMediaFilename": "MG_8521web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 731,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8490web/",
+      "sourceMediaFilename": "MG_8490web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 732,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8511web/",
+      "sourceMediaFilename": "MG_8511web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 733,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8377web/",
+      "sourceMediaFilename": "MG_8377web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 734,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8374web/",
+      "sourceMediaFilename": "MG_8374web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 735,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8387-1web/",
+      "sourceMediaFilename": "MG_8387-1web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 736,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8439web/",
+      "sourceMediaFilename": "MG_8439web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 737,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8521bwweb/",
+      "sourceMediaFilename": "MG_8521bwWeb.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 738,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8490bwweb/",
+      "sourceMediaFilename": "MG_8490bwweb.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 739,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8511bwweb/",
+      "sourceMediaFilename": "MG_8511bwWeb.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 740,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/_mg_8433web/",
+      "sourceMediaFilename": "MG_8433web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 741,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-01-432-chamber-orchestras-quartet-mark-antonie-charpantier-te-deum-praelude-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 742,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-02-432-chamber-orchestras-quartet-georg-friedrich-handel-all-hornpie-watermusic-suite-in-d-dur-hw-349-part-ii-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 743,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-03-432-chamber-orchestras-quartet-georg-friedrich-handel-the-arrival-of-queen-of-sheba-solomon-hw-67-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 744,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-05-432-chamber-orchestras-quartet-al-borodin-notturno-string-quartet-no-2-part-iii-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 745,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-04-432-chamber-orchestras-quartet-caesar-frank-panis-angelicus-messe-solennelle-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 746,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-07-432-chamber-orchestras-quartet-p-i-tchaikovsky-trepak-nutkracker-suite-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 747,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-09-432-chamber-orchestras-quartet-pietro-mascagni-intermezzo-cavalleria-rusticana-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 748,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-06-432-chamber-orchestras-quartet-modest-mussorgsky-gopak-sorochins-fair-432-hz-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 749,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-08-432-chamber-orchestras-quartet-claude-debussy-clair-de-lune-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 750,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-10-432-chamber-orchestras-quartet-scot-jopplinl-the-entertainer-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 751,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-12-432-chamber-orchestras-quartet-giovanni-capurro-o-sole-mio-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 752,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-11-432-chamber-orchestras-quartet-carlos-gardel-por-una-cabeza-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 753,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-14-432-chamber-orchestras-quartet-the-beetles-yesterday-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 754,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-15-432-chamber-orchestras-quartet-matvey-blanter-katyusha-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 755,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-16-432-chamber-orchestras-quartet-vasily-solovyov-sedoi-podmoskovniye-vechera-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 756,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8521web-2/",
+      "sourceMediaFilename": "MG_8521web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 757,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8490web-2/",
+      "sourceMediaFilename": "MG_8490web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 758,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8377web-2/",
+      "sourceMediaFilename": "MG_8377web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 759,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8374web-2/",
+      "sourceMediaFilename": "MG_8374web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 760,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8511web-2/",
+      "sourceMediaFilename": "MG_8511web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 761,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8439web-2/",
+      "sourceMediaFilename": "MG_8439web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 762,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8521bwweb-2/",
+      "sourceMediaFilename": "MG_8521bwWeb.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 763,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8387-1web-2/",
+      "sourceMediaFilename": "MG_8387-1web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 764,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8433web-2/",
+      "sourceMediaFilename": "MG_8433web.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 765,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8511bwweb-2/",
+      "sourceMediaFilename": "MG_8511bwWeb.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 766,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/_mg_8490bwweb-2/",
+      "sourceMediaFilename": "MG_8490bwweb.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 767,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/demo-13-432-chamber-orchestras-quartet-armstrong-thiele-and-weiss-what-a-wonderful-world-432-hz-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 826,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-cropped-vbal6560-1-jpg/",
+      "sourceMediaFilename": "cropped-cropped-VBAL6560-1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 832,
+      "mime": "image/png",
+      "sourcePagePath": "/en/artboard-1/",
+      "sourceMediaFilename": "Artboard-1.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 833,
+      "mime": "image/png",
+      "sourcePagePath": "/en/cropped-artboard-1-png/",
+      "sourceMediaFilename": "cropped-Artboard-1.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 848,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6540-1-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6540-1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 850,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6560-1-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6560-1.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 851,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6572-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6572.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 852,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/cropped-vbal6544-jpg/",
+      "sourceMediaFilename": "cropped-VBAL6544.jpg",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 856,
+      "mime": "image/png",
+      "sourcePagePath": "/en/cropped-artboard-1-1-png/",
+      "sourceMediaFilename": "cropped-Artboard-1-1.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 899,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/carmen-tall1/",
+      "sourceMediaFilename": "carmen-tall1.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 900,
+      "mime": "audio/wav",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "woo-protected-wave",
+      "decision": "BLOCK_PRIVATE_MEDIA",
+      "evidence": "woocommerce_uploads storage, anonymous HEAD 403 on four unique files"
+    },
+    {
+      "id": 901,
+      "mime": "audio/wav",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "woo-protected-wave",
+      "decision": "BLOCK_PRIVATE_MEDIA",
+      "evidence": "woocommerce_uploads storage, anonymous HEAD 403 on four unique files"
+    },
+    {
+      "id": 902,
+      "mime": "audio/wav",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "woo-protected-wave",
+      "decision": "BLOCK_PRIVATE_MEDIA",
+      "evidence": "woocommerce_uploads storage, anonymous HEAD 403 on four unique files"
+    },
+    {
+      "id": 903,
+      "mime": "audio/wav",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "woo-protected-wave",
+      "decision": "BLOCK_PRIVATE_MEDIA",
+      "evidence": "woocommerce_uploads storage, anonymous HEAD 403 on four unique files"
+    },
+    {
+      "id": 905,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/carmen-tall1-2/",
+      "sourceMediaFilename": "carmen-tall1.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 906,
+      "mime": "audio/wav",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "woo-protected-wave",
+      "decision": "BLOCK_PRIVATE_MEDIA",
+      "evidence": "woocommerce_uploads storage, anonymous HEAD 403 on four unique files"
+    },
+    {
+      "id": 907,
+      "mime": "audio/wav",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "woo-protected-wave",
+      "decision": "BLOCK_PRIVATE_MEDIA",
+      "evidence": "woocommerce_uploads storage, anonymous HEAD 403 on four unique files"
+    },
+    {
+      "id": 908,
+      "mime": "audio/wav",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "woo-protected-wave",
+      "decision": "BLOCK_PRIVATE_MEDIA",
+      "evidence": "woocommerce_uploads storage, anonymous HEAD 403 on four unique files"
+    },
+    {
+      "id": 909,
+      "mime": "audio/wav",
+      "sourcePagePath": null,
+      "sourceMediaFilename": null,
+      "classification": "woo-protected-wave",
+      "decision": "BLOCK_PRIVATE_MEDIA",
+      "evidence": "woocommerce_uploads storage, anonymous HEAD 403 on four unique files"
+    },
+    {
+      "id": 910,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-antonio-vivaldi-concerto-alla-ristica-in-g-rv-151-part-i-432-hz-yanakiev-recording-from-rehearsal/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 911,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-antonio-vivaldi-concerto-alla-ristica-in-g-rv-151-part-ii-432-hz-yanakiev-recording-from-rehearsal/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 912,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-antonio-vivaldi-concerto-alla-ristica-in-g-rv-151-part-iii-432-hz-yanakiev-recording-from-rehearsal/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 913,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-w-a-mozart-divertimento-in-d-dur-kv-136-yanakiev-recording-from-rehearsal/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 914,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-antonio-vivaldi-concerto-alla-ristica-in-g-rv-151-part-i-432-hz-yanakiev-recording-from-rehearsal-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 915,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-antonio-vivaldi-concerto-alla-ristica-in-g-rv-151-part-ii-432-hz-yanakiev-recording-from-rehearsal-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 916,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-w-a-mozart-divertimento-in-d-dur-kv-136-yanakiev-recording-from-rehearsal-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 917,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-antonio-vivaldi-concerto-alla-ristica-in-g-rv-151-part-iii-432-hz-yanakiev-recording-from-rehearsal-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 926,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/gustave_caillebotte_-_paris_street_rainy_day_-_google_art_project1/",
+      "sourceMediaFilename": "Gustave_Caillebotte_-_Paris_Street_Rainy_Day_-_Google_Art_Project1.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 927,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/gustave_caillebotte_-_paris_street_rainy_day_-_google_art_project1-2/",
+      "sourceMediaFilename": "Gustave_Caillebotte_-_Paris_Street_Rainy_Day_-_Google_Art_Project1.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 933,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/schubertiade-980x5201/",
+      "sourceMediaFilename": "Schubertiade-980x5201.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 934,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/schubertiade-980x5201-2/",
+      "sourceMediaFilename": "Schubertiade-980x5201.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 938,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/en/240px-young_bach21/",
+      "sourceMediaFilename": "240px-Young_Bach21.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 939,
+      "mime": "image/jpeg",
+      "sourcePagePath": "/bg/240px-young_bach21-2/",
+      "sourceMediaFilename": "240px-Young_Bach21.jpg",
+      "classification": "uncurated-visual-review",
+      "decision": "HOLD_RIGHTS_AND_SUBJECT_REVIEW",
+      "evidence": "Unverified visual provenance and consent/context"
+    },
+    {
+      "id": 1177,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-johann-and-joseph-strauss-pizzicato-polka/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1178,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-marc-antoine-charpantier-te-deum-praelude/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1179,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-pyotr-ilych-tchaikovsky-the-nutcracker-suite-trepak/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1180,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-strauss-vater-radetzky-march/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1181,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-strauss-vater-radetzky-march-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1183,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-pyotr-ilych-tchaikovsky-the-nutcracker-suite-trepak-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1225,
+      "mime": "image/png",
+      "sourcePagePath": "/en/woocommerce-placeholder/",
+      "sourceMediaFilename": "woocommerce-placeholder.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 1274,
+      "mime": "image/png",
+      "sourcePagePath": "/en/logo432-e1470050488705/",
+      "sourceMediaFilename": "logo432-e1470050488705.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    },
+    {
+      "id": 1761,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-antonio-vivaldi-la-primavera-allegro/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1762,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-antonio-vivaldi-la-primavera-allegro-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1763,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-marc-antoine-charpantier-te-deum-praelude-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1764,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-johann-and-joseph-strauss-pizzicato-polka-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1765,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-bach-gouunod-ave-maria/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1766,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-johann-and-joseph-strauss-pizzicato-polka-3/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1767,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-johann-strauss-an-den-schoenen-blauen-donau/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1768,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-johann-strauss-geschichten-aus-dem-wienerwald/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1769,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-jules-massenet-thais-meditation/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1770,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-luigi-boccherinni-string-quintet-in-e-minuet/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1771,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-pachelbel-canon-in-d/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1772,
+      "mime": "audio/wav",
+      "sourcePagePath": "/en/432-chamber-orchestra-concert-12-12-2018-pyotr-ilych-tchaikovsky-the-nutcracker-suite-waltz-of-the-flowers/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1773,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-bach-gouunod-ave-maria-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1774,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-johann-and-joseph-strauss-pizzicato-polka-3-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1775,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-johann-strauss-an-den-schoenen-blauen-donau-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1776,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-johann-strauss-geschichten-aus-dem-wienerwald-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1777,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-jules-massenet-thais-meditation-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1778,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-luigi-boccherinni-string-quintet-in-e-minuet-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1779,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-pachelbel-canon-in-d-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 1780,
+      "mime": "audio/wav",
+      "sourcePagePath": "/bg/432-chamber-orchestra-concert-12-12-2018-pyotr-ilych-tchaikovsky-the-nutcracker-suite-waltz-of-the-flowers-2/",
+      "sourceMediaFilename": null,
+      "classification": "unreviewed-wave",
+      "decision": "HOLD_RIGHTS_AND_PURCHASE_AUDIT",
+      "evidence": "WAV unreviewed; master and commerce rights must be verified"
+    },
+    {
+      "id": 3616,
+      "mime": "image/png",
+      "sourcePagePath": "/en/432-hertz-foundation-approved-dark-header-identity/",
+      "sourceMediaFilename": "432-foundation-approved-dark-header-20261105.png",
+      "classification": "branding-layout-review",
+      "decision": "HOLD_BRAND_AND_CONTEXT_REVIEW",
+      "evidence": "Old logo, crop, stock/layout element or alternate visual, not approved for current identity"
+    }
+  ],
+  "mp3Subclasses": {
+    "protectedDownloadHashMatches": 4,
+    "truncatedOriginalMp3": 2,
+    "holdForRightsDuration": 6,
+    "distinctOriginalMp3": 6
+  },
+  "highRiskSourcePagePathsRedacted": 4
+}

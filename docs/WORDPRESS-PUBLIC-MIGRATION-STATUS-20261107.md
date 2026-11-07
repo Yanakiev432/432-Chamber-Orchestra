@@ -24,7 +24,9 @@ The isolated Astro preview builds **394 static HTML pages**, all `noindex,nofoll
 | Account-recovery route retained in WordPress | 1 |
 | **Remaining without an Astro counterpart** | **284** |
 
-Of 353 WordPress attachment URLs, **83 now have an Astro page**: seven previously restored, 22 public demo-audio and 54 curated-photo. The remaining 270 are not automatically equivalent to missing editorial publications. Some are unreviewed photographs or audio with different rights/access status. They must not be republished or redirected without exact source and context verification.
+Of 353 WordPress attachment URLs, **83 now have an Astro page**: seven previously restored, 22 public demo-audio and 54 curated-photo. The remaining **270 have a fail-closed, source-ID-specific review registry** in `docs/wordpress-remaining-media-review-20261107.json`. All 270 are held or blocked, not missing editorial articles.
+
+**Critical original-site security finding (7 November 2026):** two original public DEMO MP3 files have SHA-256 checksums identical to protected WooCommerce downloadable files. The protected-directory paths return anonymous 403, but the two public duplicates return 200 on HEAD and 206 on one-byte Range GET. They are not in Astro's eleven allowed public samples. The detailed evidence with exact filenames is deliberately **not** in Git; the private SHA-256-verified incident receipt is identified in `docs/WORDPRESS-ATTACHMENT-QUARANTINE-AND-HYBRID-20261107.md`. Original WordPress has not been modified; a surgical rights/access decision is required.
 
 ## Code and regression controls
 
@@ -40,7 +42,7 @@ Of 353 WordPress attachment URLs, **83 now have an Astro page**: seven previousl
 
 ## Next work, without overclaiming
 
-1. Finish provenance and rights review for the **270 remaining WordPress attachment page URLs**. Keep low-confidence, guest-soloist or person-specific and restricted audio under human review.
+1. **Resolve the two externally downloadable byte-identical protected media copies**, preserving legitimate promotional excerpts and existing paid entitlements, with explicit owner approval and a tested rollback. Then continue image provenance and rights review for the remaining media URLs.
 2. Design and rehearse hybrid routing so WordPress remains responsible for purchases, entitlements, login, download URLs, callbacks and order history.
 3. Run mobile Safari, desktop keyboard/accessibility and real CRM-form configuration QA before any production-domain transition.
 
