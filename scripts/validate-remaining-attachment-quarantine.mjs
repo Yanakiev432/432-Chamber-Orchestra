@@ -51,10 +51,10 @@ for(const row of manifest.items){
    "Review item was silently authorized: "+row.id);
  assert.ok(row.evidence.length>=24,"Missing evidence label");
  observed[row.classification]=(observed[row.classification]||0)+1;
- if(row.decision==="BLOCK_PRIVATE_MEDIA"||row.decision==="BLOCK_PROTECTED_DOWNLOAD_HASH"){
+ if(row.decision==="BLOCK_PRIVATE_MEDIA"||row.decision==="BLOCK_PUBLIC_PRICED_PRODUCT_MEDIA"){
   assert.equal(row.mime,row.decision==="BLOCK_PRIVATE_MEDIA"?"audio/wav":"audio/mpeg");
-  assert.equal(row.sourcePagePath,null,"Protected or byte-identical media page URL must never enter tracked manifest");
-  assert.equal(row.sourceMediaFilename,null,"Protected media filename must remain private");
+  assert.equal(row.sourcePagePath,null,"Protected or priced-product-linked media page URL must never enter tracked manifest");
+  assert.equal(row.sourceMediaFilename,null,"Sensitive product media filenames must remain private");
  }else{
   assert.ok(row.sourcePagePath.startsWith("/bg/")||row.sourcePagePath.startsWith("/en/"),
     "Missing source permalink in audit");
@@ -94,11 +94,11 @@ for(const item of mp3Items){
 }
 assert.deepEqual(mp3Counts,{
   HOLD_DURATION_AND_RIGHTS_REVIEW:6,
-  BLOCK_PROTECTED_DOWNLOAD_HASH:4,
+  BLOCK_PUBLIC_PRICED_PRODUCT_MEDIA:4,
   BLOCK_TRUNCATED_MP3:2
 },"MP3 risk subclasses must not silently change");
 assert.deepEqual(manifest.mp3Subclasses,{
-  protectedDownloadHashMatches:4,
+  publicPricedProductMp3Pages:4,
   truncatedOriginalMp3:2,
   holdForRightsDuration:6,
   distinctOriginalMp3:6
@@ -112,7 +112,7 @@ const gate={
  uniqueProtectedFilesAnonymousHead403:manifest.protectedSourceMediaFiles,
  reviewOnlyWav:counts["unreviewed-wave"],
  excludedDemoPermalinks:counts["unapproved-demo-mp3"],
- demoProtectedHashMatchedUrls:mp3Counts.BLOCK_PROTECTED_DOWNLOAD_HASH,
+ demoPublicPricedProductUrls:mp3Counts.BLOCK_PUBLIC_PRICED_PRODUCT_MEDIA,
  demoTruncatedUrls:mp3Counts.BLOCK_TRUNCATED_MP3,
  excludedStudio5Photos:rejectedActual.size,
  otherVisualReview:counts["studio5-other-variant"]+counts["additional-vbal"]+counts["additional-dsc"]+counts["branding-layout-review"]+counts["uncurated-visual-review"],

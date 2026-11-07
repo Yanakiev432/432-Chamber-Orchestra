@@ -21,7 +21,7 @@
   "publicWordPressProductionModified": false,
   "redirectsDeployed": 0,
   "reviewOnly": true,
-  "notes": "All entries are fail-closed review decisions, not approved redirects. Direct original media URLs and WooCommerce filenames are deliberately omitted. File-based groups for images are preliminary; editorial/rights review remains required. The six excluded distinct MP3 files have independently verified risk subclasses: two WooCommerce SHA matches (four EN/BG permalinks), one 2088-byte truncated file (two permalinks), and three other recordings (six permalinks) requiring further rights/duration review. Historical attachment page paths of the four SHA-matched protected MP3 entries are redacted in addition to all eight files in protected WooCommerce storage.",
+  "notes": "All 270 remaining WordPress attachment-page addresses are fail-closed. Direct paid-media download paths are deliberately omitted. Eight protected WooCommerce WAV attachments and four public DEMO MP3 attachment records linked to positive-price downloadable products have their source URLs/filenames redacted. The previous 'two copies of protected files' characterization was incorrect. Six other DEMO attachment pages remain held for rights/duration review and two are blocked due to a truncated 2088-byte original. Image groups are filename-based provisional classifications, not an authorization to publish.",
   "items": [
     {
       "id": 8,
@@ -1336,9 +1336,9 @@
       "sourcePagePath": null,
       "sourceMediaFilename": null,
       "classification": "unapproved-demo-mp3",
-      "decision": "BLOCK_PROTECTED_DOWNLOAD_HASH",
+      "decision": "BLOCK_PUBLIC_PRICED_PRODUCT_MEDIA",
       "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
-      "exclusionEvidence": "SHA-256 of source MP3 exactly matches a file in the private 26-file WooCommerce protected-download integrity manifest; never copy to public Astro."
+      "exclusionEvidence": "The original public media file itself is referenced as a download for a published positive-price WooCommerce product. It is not a copy of a file within the protected woocommerce_uploads directory. Intent of promotional distribution requires review."
     },
     {
       "id": 683,
@@ -1356,9 +1356,9 @@
       "sourcePagePath": null,
       "sourceMediaFilename": null,
       "classification": "unapproved-demo-mp3",
-      "decision": "BLOCK_PROTECTED_DOWNLOAD_HASH",
+      "decision": "BLOCK_PUBLIC_PRICED_PRODUCT_MEDIA",
       "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
-      "exclusionEvidence": "SHA-256 of source MP3 exactly matches a file in the private 26-file WooCommerce protected-download integrity manifest; never copy to public Astro."
+      "exclusionEvidence": "The original public media file itself is referenced as a download for a published positive-price WooCommerce product. It is not a copy of a file within the protected woocommerce_uploads directory. Intent of promotional distribution requires review."
     },
     {
       "id": 690,
@@ -1386,9 +1386,9 @@
       "sourcePagePath": null,
       "sourceMediaFilename": null,
       "classification": "unapproved-demo-mp3",
-      "decision": "BLOCK_PROTECTED_DOWNLOAD_HASH",
+      "decision": "BLOCK_PUBLIC_PRICED_PRODUCT_MEDIA",
       "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
-      "exclusionEvidence": "SHA-256 of source MP3 exactly matches a file in the private 26-file WooCommerce protected-download integrity manifest; never copy to public Astro."
+      "exclusionEvidence": "The original public media file itself is referenced as a download for a published positive-price WooCommerce product. It is not a copy of a file within the protected woocommerce_uploads directory. Intent of promotional distribution requires review."
     },
     {
       "id": 704,
@@ -1406,9 +1406,9 @@
       "sourcePagePath": null,
       "sourceMediaFilename": null,
       "classification": "unapproved-demo-mp3",
-      "decision": "BLOCK_PROTECTED_DOWNLOAD_HASH",
+      "decision": "BLOCK_PUBLIC_PRICED_PRODUCT_MEDIA",
       "evidence": "MP3 not on eleven-item public whitelist; six unique excluded DEMOs; original per-file review required",
-      "exclusionEvidence": "SHA-256 of source MP3 exactly matches a file in the private 26-file WooCommerce protected-download integrity manifest; never copy to public Astro."
+      "exclusionEvidence": "The original public media file itself is referenced as a download for a published positive-price WooCommerce product. It is not a copy of a file within the protected woocommerce_uploads directory. Intent of promotional distribution requires review."
     },
     {
       "id": 706,
@@ -2467,10 +2467,11 @@
     }
   ],
   "mp3Subclasses": {
-    "protectedDownloadHashMatches": 4,
+    "publicPricedProductMp3Pages": 4,
     "truncatedOriginalMp3": 2,
     "holdForRightsDuration": 6,
     "distinctOriginalMp3": 6
   },
-  "highRiskSourcePagePathsRedacted": 4
+  "highRiskSourcePagePathsRedacted": 4,
+  "previousProtectedDuplicateInterpretationSuperseded": true
 }

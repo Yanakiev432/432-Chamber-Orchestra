@@ -10,7 +10,7 @@ The original site exposes **353 WordPress attachment detail-page URLs**, each ob
 | --- | ---: | --- |
 | WordPress `woocommerce_uploads` WAV attachment pages | 8 (4 distinct files) | **BLOCK**: protected products |
 | Other original WAV attachment pages | 100 | Hold: rights, provenance, purchase-status, and media-length review |
-| Other DEMO MP3 attachment pages | 12 (6 distinct files) | **BLOCK 6** URLs (protected-hash match or truncated content); hold 6 for rights/duration review |
+| Other DEMO MP3 attachment pages | 12 (6 distinct files) | **BLOCK 4** paid-product-linked public demos, **BLOCK 2** truncated URLs; hold 6 for rights/duration review |
 | Specifically rejected Studio 5 photograph attachment pages | 13 | **BLOCK**: previously explicit editorial exclusion |
 | Other variant of the Studio 5 Concert series | 1 | Hold: crop/content and editorial review |
 | Additional VBAL image variants | 22 | Hold: compare actual visual content and approvals |
@@ -19,27 +19,26 @@ The original site exposes **353 WordPress attachment detail-page URLs**, each ob
 | Other uncurated historical images | 34 | Hold: rights, person-specific content, context |
 | **Total** | **270** | **No automatic redirect or publication** |
 
-All 270 item-level decisions and their public historical attachment permalink IDs are in `docs/wordpress-remaining-media-review-20261107.json`. Direct media download URLs are omitted. Media filenames and historic page paths are additionally suppressed for **all 12 high-risk records**: eight WooCommerce-protected WAV attachments and four MP3 attachment URLs whose bytes exactly match protected WooCommerce downloads. Filename-based image groups are *preliminary* and are not evidence of identical visual content, ownership or permission.
+All 270 item-level decisions and their public historical attachment permalink IDs are in `docs/wordpress-remaining-media-review-20261107.json`. Direct media download URLs are omitted. Media filenames and historic page paths are additionally suppressed for **all 12 high-risk records**: eight WooCommerce-protected WAV attachments and four public MP3 attachment URLs also referenced by positive-price WooCommerce products. Filename-based image groups are *preliminary* and are not evidence of identical visual content, ownership or permission.
 
 The 13 rejected Studio 5 WordPress attachment pages are **different original routes** from the 13 excluded Gmedia photograph URLs in the broader source-path comparison. Do not double count them as a new editorial omission or publish either class.
 
-## Verified WooCommerce access boundary
+## Verified WooCommerce delivery boundary — corrected forensic finding
 
-- The eight remaining WooCommerce WAV attachment records reference **four distinct protected source files**.
-- The actual protected uploads directory contains a case-insensitive Apache `deny from all` rule.
-- Four *anonymous* HTTPS `HEAD` requests to the **direct protected media URLs** all returned **403 Forbidden**, without authenticating or downloading media.
-- A path-redacted, non-public receipt was written in the owner's private server staging directory:
-  `/home/hzorche/ra-core-deploy-staging/orchestra-woocommerce-anonymous-access-guard-20261107.json`
-- Receipt SHA-256:
-  `ea93a4a641c78700448d98a0ab6645f9c92458e649e2bc2179543accfc2918f0`
-- Anonymous **GET with a one-byte Range request** also returned HTTP **403 for all four protected-directory source files**, without downloading their bodies.
-- **HIGH-PRIORITY ACCESS CONTROL GAP:** two other original WordPress files are *byte-for-byte identical* to content listed in the private WooCommerce protected-download manifest (SHA-256 exact). Those two copies reside outside the protected uploads directory; anonymous `HEAD` returned **200**, and one-byte anonymous `Range GET` returned **206** for both. They are publicly downloadable by anyone knowing their original media URLs even though the protected copies deny anonymous requests.
-- A separate **private, mode 0600** incident receipt identifies exactly which two source copies and which protected entries are duplicates:
-  `/home/hzorche/ra-core-deploy-staging/orchestra-wordpress-protected-content-public-duplicate-20261107.json`
-- Private incident receipt SHA-256:
-  `ade2328d74c7fed9454c0eb7cd70c5ece6c1aa8c72245764fae2c8d95b5bf2a9`
-- No vulnerable media URLs, direct filenames, hashes or protected paths are recorded in the public review manifest. **The precise remediation is owner-gated**: determine whether these files were intentionally promoted for free; retain a private backup; replace each publicly accessible byte-identical copy with an approved short excerpt *or* restrict the exact original URL; update affected legacy players; and separately verify authorized purchased downloads, rollback and redirects.
-- These findings do **not** verify valid customer download grants, expired links, checkout callbacks, stored historical orders, or the safety of any future routing changes.
+The earlier assertion of **two duplicates of protected WooCommerce files** was incorrect. The two DEMO MP3s are the original *publicly stored* files, and the same public file paths appear in the product-download manifest. The full **26-file, 46-product** read-only audit found:
+
+| File storage and format | Files | Anonymous `HEAD` | One-byte anonymous `Range GET` | Published priced products |
+| --- | ---: | --- | --- | ---: |
+| Standard public uploads, WAV | 20 | 20 × 200 | 20 × 206 | 36 |
+| Standard public uploads, MP3 | 2 | 2 × 200 | 2 × 206 | 2 |
+| Protected `woocommerce_uploads`, WAV | 4 | 4 × 403 | 4 × 403 | 8 |
+| **Total** | **26** | **22 accessible** | **22 accessible** | **46** |
+
+The original download manifest contains **80 references**. All 46 associated products were verified through a **read-only WordPress database transaction** to have positive prices, published status and downloadable-product metadata. Directly accessible files total approximately **2.02 GB**; 20 WAV files last between **58.6 and 481.8 seconds** (14 last over two minutes). The protected `woocommerce_uploads` directory has a functioning Apache denial rule, but it does not protect the 22 files stored elsewhere.
+
+The previous private incident receipt is retained for traceability, but its *duplicate of private files* interpretation is superseded. It is not the definitive inventory. This audit did not change the production site or retrieve full paid recordings. Source paths and sensitive download URLs remain outside Git.
+
+See [WooCommerce's official downloadable product guide](https://woocommerce.com/document/digital-downloadable-product-handling/) and [Approved Download Directories](https://woocommerce.com/document/approved-download-directories/). Media Library files are public by default. Changing a WooCommerce download-method setting does **not** by itself restrict an existing public direct URL. The currently configured delivery method, redirect fallback and real purchaser entitlement flow have **not yet been checked**.
 
 ## Fail-closed regression control
 
@@ -47,9 +46,9 @@ The 13 rejected Studio 5 WordPress attachment pages are **different original rou
 
 - The 353 WordPress attachment IDs are partitioned into **83 approved/restored** versus **270 held/blocked** without duplicates or omissions.
 - None of the 270 held/blocked original attachment page URLs exists in the Astro preview output.
-- All twelve high-risk protected-content records (eight WAV entries under protected WooCommerce storage plus four MP3 entries proven byte-identical to protected purchases) lack direct media filenames and historical attachment-page paths in the tracked review manifest.
+- All twelve high-risk protected-content records (eight WAV entries in protected WooCommerce storage plus four original public MP3 files referenced by paid products) lack direct media filenames and historical attachment-page paths in the tracked review manifest.
 - All 13 excluded Studio 5 image filenames remain quarantined, regardless of similar filenames or variants.
-- None of the 12 unapproved DEMO attachment URLs is silently authorized: **4 are blocked by protected WooCommerce SHA match**, **2 by truncated 2088-byte media**, and **6 remain on hold for duration/rights review**. No pending item has been published as a placeholder.
+- None of the 12 unapproved DEMO attachment URLs is silently authorized: **4 are held/blocked because they are original public files linked to priced downloads**, **2 by truncated 2088-byte media**, and **6 remain on hold for duration/rights review**. No pending item has been published as a placeholder.
 - The source WordPress and its protected order/download infrastructure remain outside this static build.
 
 **Change-control rule:** a genuine new editorial approval must move an item from the queue to an explicit allowlist and update this gate, with its original source, exact preview destination, rights and curatorial evidence, verified hashes or image-equivalence proof, and new regression checks. Do not bypass the gate by weakening count assertions.
@@ -67,6 +66,8 @@ The standalone Astro preview is not a replacement for a functioning store. Produ
 
 **Cutover status remains BLOCKED.** Replacing the WordPress production root with the Astro `dist` folder would break business-critical functions and is not authorized.
 
-## Next work
+## Next work — no live changes without authorization
 
-**Priority 1:** resolve the two public copies that exactly match WooCommerce protected-download content, under an explicit owner-approved surgical change plan. **Priority 2:** verify permitted purchased-download behavior and hybrid WordPress commerce routing without changing historical orders or charging real customers. **Priority 3:** further review only the three distinct DEMO MP3 files whose six public-page URLs remain on hold, followed by historical visual assets. No mass redirect or production cutover is approved.
+First verify the real WooCommerce File download method and insecure redirect fallback. Privately preserve every affected file hash, source path, product reference and backup. Rehearse moving/restricting **all 22 original publicly reachable product files**, repointing downloadable-product metadata and delivering through Force Downloads or correctly configured X-Sendfile/X-Accel. Audit legacy audio players first to keep authorized samples working. Test guest denial, valid purchase, expired grants, download byte hashes, historical orders, and rollback before requesting a surgical production change.
+
+**Cutover BLOCKED. No production changes performed.**

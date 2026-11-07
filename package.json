@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs && node scripts/validate-public-audio-excerpts.mjs && node scripts/validate-footer-editorial.mjs && node scripts/validate-orchestra-tuning-editorial.mjs && node scripts/validate-third-person-voice.mjs && node scripts/validate-public-demo-attachment-routes.mjs && node scripts/validate-public-photo-attachment-routes.mjs && node scripts/validate-remaining-attachment-quarantine.mjs",
+    "build": "astro build && node scripts/curate-public-gallery.mjs && node scripts/render-concert-pitch-superscript.mjs && node scripts/validate-public-audio-excerpts.mjs && node scripts/validate-footer-editorial.mjs && node scripts/validate-orchestra-tuning-editorial.mjs && node scripts/validate-third-person-voice.mjs && node scripts/validate-public-demo-attachment-routes.mjs && node scripts/validate-public-photo-attachment-routes.mjs && node scripts/validate-remaining-attachment-quarantine.mjs && node scripts/validate-woocommerce-commerce-surface.mjs --mode=report",
     "pitch:validate": "node scripts/validate-concert-pitch.mjs",
     "audio:validate": "node scripts/validate-public-audio-excerpts.mjs",
     "footer:validate": "node scripts/validate-footer-editorial.mjs",
@@ -19,7 +19,7 @@
     "bandcamp:audit": "node scripts/audit-bandcamp-live.mjs",
     "bandcamp:test": "node --test scripts/audit-bandcamp-live.test.mjs",
     "cutover:report": "node scripts/check-cutover-readiness.mjs --mode=report",
-    "cutover:gate": "node scripts/check-cutover-readiness.mjs --mode=replace",
+    "cutover:gate": "node scripts/validate-woocommerce-commerce-surface.mjs --mode=cutover && node scripts/check-cutover-readiness.mjs --mode=replace",
     "preview:gate": "node scripts/check-cutover-readiness.mjs --mode=preview",
     "links:validate": "node scripts/validate-static-links.mjs",
     "photos:validate": "node scripts/validate-photo-selection.mjs",
@@ -28,7 +28,9 @@
     "voice:validate": "node scripts/validate-third-person-voice.mjs",
     "demo-attachments:validate": "node scripts/validate-public-demo-attachment-routes.mjs",
     "photo-attachments:validate": "node scripts/validate-public-photo-attachment-routes.mjs",
-    "attachments:quarantine:validate": "node scripts/validate-remaining-attachment-quarantine.mjs"
+    "attachments:quarantine:validate": "node scripts/validate-remaining-attachment-quarantine.mjs",
+    "commerce:security:report": "node scripts/validate-woocommerce-commerce-surface.mjs --mode=report",
+    "commerce:cutover:gate": "node scripts/validate-woocommerce-commerce-surface.mjs --mode=cutover"
   },
   "dependencies": {
     "astro": "^5.13.8"

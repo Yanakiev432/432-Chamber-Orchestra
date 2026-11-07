@@ -26,7 +26,7 @@ The isolated Astro preview builds **394 static HTML pages**, all `noindex,nofoll
 
 Of 353 WordPress attachment URLs, **83 now have an Astro page**: seven previously restored, 22 public demo-audio and 54 curated-photo. The remaining **270 have a fail-closed, source-ID-specific review registry** in `docs/wordpress-remaining-media-review-20261107.json`. All 270 are held or blocked, not missing editorial articles.
 
-**Critical original-site security finding (7 November 2026):** two original public DEMO MP3 files have SHA-256 checksums identical to protected WooCommerce downloadable files. The protected-directory paths return anonymous 403, but the two public duplicates return 200 on HEAD and 206 on one-byte Range GET. They are not in Astro's eleven allowed public samples. The detailed evidence with exact filenames is deliberately **not** in Git; the private SHA-256-verified incident receipt is identified in `docs/WORDPRESS-ATTACHMENT-QUARANTINE-AND-HYBRID-20261107.md`. Original WordPress has not been modified; a surgical rights/access decision is required.
+**Corrected production security finding (7 November 2026):** of the **26 distinct files** linked to **46 published positive-price downloadable WooCommerce products**, **20 WAV + 2 MP3** reside in standard public uploads and respond to anonymous requests (HTTP 200 HEAD and 206 one-byte GET). Four WAV files under `woocommerce_uploads` correctly respond 403. The former claim about two duplicate protected-directory files was mistaken: those MP3s are original public files referenced by priced products. Details and a tested-remediation checklist are in `docs/WORDPRESS-COMMERCE-DOWNLOAD-EXPOSURE-20261107.md`.
 
 ## Code and regression controls
 
@@ -37,12 +37,12 @@ Of 353 WordPress attachment URLs, **83 now have an Astro page**: seven previousl
   - `scripts/validate-public-demo-attachment-routes.mjs`
   - `scripts/validate-public-photo-attachment-routes.mjs`
 - Both are part of `pnpm build`. All prior checks for historic routes, audio SHA-256, gallery image selections, 432 Hz pitch notation, editorial voice, footer, internal links and preview `noindex` remain mandatory.
-- The original WordPress public snapshots, private 2.18 GB of protected historical downloadable media, source images and WordPress user data remain untouched.
+- The original WordPress public snapshots, approximately 2.18 GB of historical downloadable-product media, of which most is currently stored at directly accessible original public URLs, source images and WordPress user data remain untouched.
 - The preview is deployed separately under `preview.432hz-orchestra.com`; no production root replacement, automatic WordPress redirect or purchase migration is authorized.
 
 ## Next work, without overclaiming
 
-1. **Resolve the two externally downloadable byte-identical protected media copies**, preserving legitimate promotional excerpts and existing paid entitlements, with explicit owner approval and a tested rollback. Then continue image provenance and rights review for the remaining media URLs.
+1. **Resolve the 22 original directly accessible paid-product files** under an explicitly approved, rollback-tested protected delivery design. Preserve public short promotional clips and verify customer entitlements before altering original URLs.
 2. Design and rehearse hybrid routing so WordPress remains responsible for purchases, entitlements, login, download URLs, callbacks and order history.
 3. Run mobile Safari, desktop keyboard/accessibility and real CRM-form configuration QA before any production-domain transition.
 

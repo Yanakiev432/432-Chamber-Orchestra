@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-07",
+  "auditType": "Read-only production WordPress catalog metadata and unauthenticated one-byte HTTPS media requests",
+  "downloadReferences": 80,
+  "distinctDownloadFiles": 26,
+  "publishedPositivePriceDownloadableProducts": 46,
+  "storage": {
+    "publicWav": {
+      "files": 20,
+      "sizeApproxMB": 2010.64,
+      "head200": 20,
+      "rangeGet206": 20,
+      "linkedPaidProducts": 36,
+      "durationMinSeconds": 58.6,
+      "durationMaxSeconds": 481.8,
+      "longerThanTwoMinutes": 14
+    },
+    "publicMp3": {
+      "files": 2,
+      "sizeBytes": 5840136,
+      "head200": 2,
+      "rangeGet206": 2,
+      "linkedPaidProducts": 2
+    },
+    "protectedWav": {
+      "files": 4,
+      "sizeApproxMB": 163.62,
+      "head403": 4,
+      "rangeGet403": 4,
+      "linkedPaidProducts": 8
+    }
+  },
+  "publicFiles": 22,
+  "publicSizeApproxMB": 2016.48,
+  "protectedFiles": 4,
+  "deliveryMethodVerified": false,
+  "redirectFallbackVerified": false,
+  "validPurchaserFlowVerified": false,
+  "expiredGrantFlowVerified": false,
+  "productionChanged": false,
+  "productionCutoverApproved": false,
+  "earlierDuplicateClaimSuperseded": true,
+  "sourceDownloadUrlsIncluded": false,
+  "sourceDownloadFileHashesIncluded": false,
+  "report": "docs/WORDPRESS-COMMERCE-DOWNLOAD-EXPOSURE-20261107.md"
+}
