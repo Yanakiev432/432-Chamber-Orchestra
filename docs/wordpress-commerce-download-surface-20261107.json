@@ -35,7 +35,7 @@
   "publicSizeApproxMB": 2016.48,
   "protectedFiles": 4,
   "deliveryMethodVerified": true,
-  "redirectFallbackVerified": false,
+  "redirectFallbackVerified": true,
   "validPurchaserFlowVerified": false,
   "expiredGrantFlowVerified": false,
   "productionChanged": false,
@@ -69,5 +69,22 @@
     "testDirectoryDeleted": true,
     "productionMediaOrRulesModified": false,
     "authenticatedBuyerDownloadNotTested": true
-  }
+  },
+  "redirectFallbackEnabled": false,
+  "downloadsRequireLogin": false,
+  "grantDownloadsAfterPayment": true,
+  "permissionTableAggregates": {
+    "tablePresent": true,
+    "totalPermissionRows": 188,
+    "distinctOrderIdsWithPermissions": 12,
+    "distinctProductIdsWithPermissions": 19,
+    "unlimitedOrBlankPermissionCount": 6,
+    "noCustomerPIIRead": true
+  },
+  "legacyShopOrderStatusCounts": {
+    "completed": 14,
+    "onHold": 7,
+    "pending": 7
+  },
+  "permissionsOrCustomerRecordsModified": false
 }

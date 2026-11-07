@@ -17,6 +17,16 @@ assert.equal(snapshot.earlierDuplicateClaimSuperseded,true);
 assert.equal(snapshot.deliveryMethodVerified,true);
 assert.equal(snapshot.deliveryMethod,"force");
 assert.equal(snapshot.hashNewUploadFilenamesEnabled,true);
+assert.equal(snapshot.redirectFallbackVerified,true);
+assert.equal(snapshot.redirectFallbackEnabled,false);
+assert.equal(snapshot.downloadsRequireLogin,false);
+assert.equal(snapshot.grantDownloadsAfterPayment,true);
+assert.deepEqual(snapshot.permissionTableAggregates,{
+  tablePresent:true,totalPermissionRows:188,distinctOrderIdsWithPermissions:12,
+  distinctProductIdsWithPermissions:19,unlimitedOrBlankPermissionCount:6,noCustomerPIIRead:true
+});
+assert.deepEqual(snapshot.legacyShopOrderStatusCounts,{completed:14,onHold:7,pending:7});
+assert.equal(snapshot.permissionsOrCustomerRecordsModified,false);
 assert.deepEqual([snapshot.exactDenyRuleDryRun.fileCount,snapshot.exactDenyRuleDryRun.uploadDirectories,snapshot.exactDenyRuleDryRun.additionalFileMatches],[22,2,0]);
 assert.equal(snapshot.exactDenyRuleDryRun.productionHtaccessModified,false);
 assert.equal(snapshot.isolatedWebServerDenyTest.exactMatchingDummyWavHttpStatus,403);
@@ -29,5 +39,5 @@ const quarantine=JSON.parse(readFileSync("docs/wordpress-remaining-media-review-
 assert.equal(quarantine.remaining,270);assert.equal(quarantine.mp3Subclasses.publicPricedProductMp3Pages,4);
 console.log(JSON.stringify({gate:mode==="report"?"WOOCOMMERCE_PAID_MEDIA_SURFACE_SNAPSHOT_PASS":"WOOCOMMERCE_CUTOVER_BLOCKED",
   products:46,publiclyAccessiblePaidMedia:22,protectedMedia:4,downloadMethodVerified:snapshot.deliveryMethodVerified,downloadMethod:snapshot.deliveryMethod,
-  buyerEntitlementQA:snapshot.validPurchaserFlowVerified,originalProductionModified:false}));
-if(mode==="cutover"){console.error("CUTOVER BLOCKED: 22 original paid-product files are still directly reachable; valid-buyer entitlements and any insecure fallback are still unverified.");process.exitCode=2;}
+  buyerEntitlementQA:snapshot.validPurchaserFlowVerified,permissionsRows:snapshot.permissionTableAggregates.totalPermissionRows,redirectFallbackEnabled:snapshot.redirectFallbackEnabled,originalProductionModified:false}));
+if(mode==="cutover"){console.error("CUTOVER BLOCKED: 22 original paid-product files are still directly reachable; valid-buyer entitlements remain unverified although redirect fallback is disabled.");process.exitCode=2;}
