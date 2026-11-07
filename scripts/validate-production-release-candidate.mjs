@@ -71,7 +71,7 @@ for(const file of html){
  const data=readFileSync(file,"utf8");
  const match=data.match(/<link rel="canonical" href="([^"]+)"/);
  assert.ok(match,"Missing HTML canonical: "+route);
- assert.equal(match[1],new URL(route,expectedOrigin).href,"Wrong canonical in production HTML: "+route);
+ assert.equal(new URL(match[1]).href,new URL(route,expectedOrigin).href,"Wrong canonical in production HTML: "+route);
  assert.ok(!data.includes("https://preview.432hz-orchestra.com"),"Preview origin in production output");
  const retired=data.includes('data-legacy-store-retired="true"');
  const unindexed=data.includes('<meta name="robots" content="noindex,nofollow"');
