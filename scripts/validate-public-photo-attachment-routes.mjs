@@ -5,6 +5,7 @@ import { resolve, join } from "node:path";
 
 const read=(f)=>JSON.parse(readFileSync(f,"utf8"));
 const manifest=read("src/content/publicPhotoAttachmentRoutes.json");
+const previewMode=process.env.PUBLIC_PREVIEW_MODE==="true";
 const routes=manifest.items;
 const gallery=read("src/content/legacyGallery.json");
 const selected=read("src/content/studio5PhotoSelection.json");
@@ -64,7 +65,7 @@ for(const route of routes){
  assert.ok(html.includes('src="'+route.photoSrc+'"'),"Wrong image in historical page");
  assert.ok(html.includes('href="'+route.albumPath+'"'),"Album link missing");
  assert.ok(html.includes(route.originalUrl),"Original source permalink missing");
- assert.ok(html.includes('content="noindex,nofollow"'),"Historical photo page is indexable");
+ assert.equal(html.includes('content="noindex,nofollow"'),previewMode,"Historical photo robots policy must match preview/production mode");
  assert.ok(html.includes("<figure"),"Image is not semantically presented");
  assert.ok(existsSync(join(resolve("dist"),route.albumPath.slice(1),"index.html")),"Album missing");
 }

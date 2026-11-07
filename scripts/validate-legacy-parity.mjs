@@ -221,7 +221,7 @@ for(const lang of ["bg","en"]){
   const htmlFile=join(root,lang,"gallery",album,"index.html");
   assert.ok(existsSync(htmlFile),"Localized album page is missing: "+path);
   const html=readFileSync(htmlFile,"utf8");
-  assert.ok(html.includes('content="noindex,nofollow"'),"Curated album must not index preview: "+path);
+  assert.equal(html.includes('content="noindex,nofollow"'),process.env.PUBLIC_PREVIEW_MODE==="true","Curated album indexing must match preview or production mode: "+path);
  }
  const concert=readFileSync(join(root,lang,"gallery","orchestra-concert","index.html"),"utf8");
  assert.equal(curatedConcert.photos.filter(x=>concert.includes('src="'+x.src+'"')).length,12,"Concert photos not all visible: "+lang);

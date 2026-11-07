@@ -4,6 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 
 const routes = JSON.parse(readFileSync("src/content/publicDemoAttachmentRoutes.json", "utf8")).items;
+const previewMode = process.env.PUBLIC_PREVIEW_MODE === "true";
 const tracks = JSON.parse(readFileSync("src/content/publicAudioExcerpts.json", "utf8")).tracks;
 const demoAudit = JSON.parse(readFileSync("docs/wordpress-public-demo-audio-audit-20261106.json", "utf8"));
 const others = [
@@ -54,7 +55,7 @@ for (const route of routes) {
   const html=readFileSync(file,"utf8");
   assert.ok(html.includes('src="'+track.src+'"'),"Wrong audio in historic media page: "+route.path);
   assert.ok(html.includes('href="'+route.excerptPath+'"'),"Specific excerpt anchor link missing");
-  assert.ok(html.includes('content="noindex,nofollow"'),"Demo attachment is indexable on preview");
+  assert.equal(html.includes('content="noindex,nofollow"'),previewMode,"Demo attachment robots policy must match preview/production mode");
   assert.ok(html.includes(route.originalUrl),"Original source URL not credited");
   assert.ok(html.includes('<audio '),"No actual audio player on historical page");
   seen.set(track.number,(seen.get(track.number)||0)+1);
