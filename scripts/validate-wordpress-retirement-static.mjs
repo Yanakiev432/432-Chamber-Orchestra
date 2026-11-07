@@ -16,6 +16,14 @@ assert.equal(plan.retainedHistoricalProductData.oldCustomerDownloadPermissionRow
 assert.equal(plan.retainedHistoricalProductData.ordersAssociatedWithDownloadPermissions,12);
 assert.equal(plan.hostingRootBoundary.neverRecursivelyDeleteWholePublicHtml,true);
 assert.equal(plan.hostingRootBoundary.separateApplicationsDetected,true);
+assert.equal(plan.hostingRootBoundary.cpanelVerifiedDomains,16);
+assert.equal(plan.hostingRootBoundary.readOnlyCutoverRootScope.candidateCoreDirectoryTotalFiles,30611);
+assert.equal(plan.hostingRootBoundary.exactDeletionAllowlistApproved,false);
+assert.equal(plan.backupEvidence.fullArchiveStreamVerification.regularFilesStreamed,30642);
+assert.equal(plan.backupEvidence.fullArchiveStreamVerification.originalWooCommerceDownloadMediaSha256Matched,26);
+assert.equal(plan.backupEvidence.fullArchiveStreamVerification.independentSmallSampleFilesRestoredAndCompared,3);
+assert.equal(plan.backupEvidence.fullArchiveStreamVerification.fullPhysicalRestoreCompleted,false);
+assert.equal(plan.backupEvidence.hostQuotaComplication.temporaryRestoreDirectoryCleaned,true);
 assert.equal(plan.hostingRootBoundary.scopedTargetFileAllowlistApproved,false);
 assert.ok(plan.hostingRootBoundary.preservedDirectoriesBeforeAndAfterRetirement.includes("432project.432hz-orchestra.com"));
 assert.equal(plan.productionWordPressRemoved,false);

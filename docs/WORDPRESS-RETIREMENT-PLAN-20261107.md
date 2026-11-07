@@ -38,6 +38,16 @@ A private **19-file supplemental archive** includes 15 files modified since 4 No
 
 A local security check found **BitLocker protection OFF for Lenovo C:** at the time of inspection. Do not move customer-containing SQL or WordPress archives there in plaintext; perform an encrypted export to a physically separate backup medium or approved encrypted storage, with the key held separately. An encrypted off-host backup has **not** yet been completed.
 
+## Forensic archive and cPanel verification — continued 7 November
+
+**Full-file archive verified without a second 6+ GiB on-disk copy.** All **30,642 regular files** in the 11-part backup were decompressed and SHA-256-streamed, totaling **6,576,778,451 bytes (6.125 GiB)**. The manifest includes 3,883 directory entries. **All 26 historical WooCommerce media files** matched their independent private SHA-256 manifest. Three selected WordPress/WooCommerce files were extracted to a private directory and byte-for-byte hash-compared to the current production copies (**3/3 PASS**); the temporary extracted copies, including credentials, were then deleted. The sanitized evidence receipt remains private.
+
+An initial attempt at complete file extraction into the private staging folder was stopped by the host with `EDQUOT` after about 24,000 temporary files. The **24,239** files created by that failed test were removed without touching the source archive or production. cPanel currently reports **28.62 GB used of a 50 GB disk allotment**, so the precise cause of the quota refusal (such as a separate file-count limit) has **not** been established. It is incorrect to mark a complete physical file restore as done.
+
+**Actual virtual-host boundaries:** read-only cPanel UAPI inspection confirmed **16 registered domains**, with only two other domains nested under the main document root: `432hz-foundation.com` and `432project.432hz-orchestra.com`. The latter has a separate WordPress installation. A dry-run audit identified the main orchestra WordPress core folders (`wp-admin`: 568 files; `wp-content`: 28,241; `wp-includes`: 1,802), plus 18 root-level WordPress/config candidates. No source files, document roots, DNS records or `.htaccess` files were changed. These are **review candidates, not an authorized deletion list**. The ability to change the main-domain document root in place has not been established.
+
+**Remaining hard gates:** independent encrypted backup outside Superhosting, validated *full* WordPress and SQL restoration in a suitable isolated environment, customer download entitlements/retention service policy, host-safe file migration dry-run with rollback, and explicit approval. The Lenovo C: volume was not BitLocker-protected; private backups must not be downloaded there as plaintext.
+
 ## Must-pass requirements before shutting down production WordPress
 
 1. **Fresh encrypted, off-host backup:** verify a complete current media tree and database; check checksums; restore the database and required media to an isolated environment. Keep the decryption key outside the shared host and repository.

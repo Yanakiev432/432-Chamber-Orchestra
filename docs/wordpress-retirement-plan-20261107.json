@@ -56,7 +56,33 @@
       "restoreDrillPassed": false,
       "supplementalOnly": true
     },
-    "localLenovoSystemDriveBitlockerProtection": false
+    "localLenovoSystemDriveBitlockerProtection": false,
+    "fullArchiveStreamVerification": {
+      "status": "PASS",
+      "backupDate": "2026-11-04",
+      "verifiedOn": "2026-11-07",
+      "originalArchiveParts": 11,
+      "regularFilesStreamed": 30642,
+      "originalDirectoryEntries": 3883,
+      "decodedBytes": 6576778451,
+      "originalWooCommerceDownloadMediaSha256Matched": 26,
+      "independentSmallSampleFilesRestoredAndCompared": 3,
+      "sampleRestoreContentsRemovedAfterVerification": true,
+      "fullPhysicalRestoreCompleted": false,
+      "databaseLogicalRestoreCompleted": false,
+      "offHostBackupCompleted": false,
+      "privateProofReceipt": "/home/hzorche/ra-core-deploy-staging/432-wordpress-private-sample-restore-20261107/receipt.json",
+      "note": "Full stream tar integrity and three selected file restorations are verified, but this is NOT a complete WordPress/MySQL restore."
+    },
+    "hostQuotaComplication": {
+      "event": "Full private file extraction stopped with EDQUOT after approximately 24000 files and less than 1 GiB of staged content.",
+      "temporaryRestoreDirectoryCleaned": true,
+      "temporaryFilesDeleted": 24239,
+      "cpanelDisplayedDiskUsageGB": 28.62,
+      "cpanelDisplayedDiskQuotaGB": 50,
+      "causeOfQuotaDiscrepancyUnverified": true,
+      "noResidualIncompleteLargeRestore": true
+    }
   },
   "cutoverReadiness": {
     "oldCustomersFulfillmentDecisionApproved": false,
@@ -71,7 +97,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "Astro-only preview is independently HTTPS verified at 394/394, nine historic-store notices and 385 sitemap URLs. Original WordPress remains production, not yet deleted. Private 116-table DB archive and 11 full-media file chunks are integrity verified; 19-file time-based incremental supplement is private and cannot replace off-host encrypted backup plus restore drill. Old buyer downloads require an approved fulfilment and data retention policy. Never remove unrelated nested websites.",
+  "note": "Target is independent Astro. Preview 394/394 HTTPS PASS; 23 Bandcamp destinations HEAD 200. 11-part backup streamed completely (30642 files, 6576778451 decoded bytes), all 26 original paid media SHA256 match, three privately restored core files match; incomplete full extraction cleaned after quota refusal. Current 116-table SQL dump structural PASS, NOT restored to MySQL. 16 cPanel docroots mapped; 2 nested sites protected. No encrypted off-host backup, database restore, owner-approved customer rights policy, or production cutover.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -90,7 +116,33 @@
     "currentOriginalWebTreeTotalGiBApprox": 13.87,
     "scopedTargetFileAllowlistApproved": false,
     "separateNestedWordPressConfirmed": true,
-    "freshIncrementalBackupExcludesSeparateSites": true
+    "freshIncrementalBackupExcludesSeparateSites": true,
+    "cpanelVerifiedDomains": 16,
+    "cpanelNestedDomainDocroots": {
+      "432hz-foundation.com": "/home/hzorche/public_html/432hz-foundation.com",
+      "432project.432hz-orchestra.com": "/home/hzorche/public_html/432project.432hz-orchestra.com"
+    },
+    "readOnlyCutoverRootScope": {
+      "candidateWordPressCoreDirectories": [
+        "wp-admin",
+        "wp-content",
+        "wp-includes"
+      ],
+      "candidateCoreDirectoryFileCounts": [
+        568,
+        28241,
+        1802
+      ],
+      "candidateCoreDirectoryTotalFiles": 30611,
+      "candidateRootLevelWordPressAndHtaccessFiles": 18,
+      "privateReceiptSha256": "1fdab3fae1d63e4adf7de8f9aae232431b36416481e0af44ef3a2b11f1d941c9",
+      "proposedOnly": true,
+      "fileOperationsPerformed": false,
+      "mainDomainDocrootReconfigurationPossible": null,
+      "cPanelMainDocrootEditCapabilityAudited": false
+    },
+    "allOtherCpanelDomainsPreserved": true,
+    "exactDeletionAllowlistApproved": false
   },
   "previewRelease": {
     "releaseDate": "2026-11-07",
