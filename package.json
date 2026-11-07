@@ -32,7 +32,9 @@
     "commerce:security:report": "node scripts/validate-woocommerce-commerce-surface.mjs --mode=report",
     "commerce:cutover:gate": "node scripts/validate-woocommerce-commerce-surface.mjs --mode=cutover",
     "retirement:report": "node scripts/validate-wordpress-retirement-static.mjs --mode=report",
-    "retirement:cutover:gate": "node scripts/validate-wordpress-retirement-static.mjs --mode=cutover"
+    "retirement:cutover:gate": "node scripts/validate-wordpress-retirement-static.mjs --mode=cutover",
+    "production:build:qa": "node scripts/build-production-candidate.mjs",
+    "production:artifact:validate": "node scripts/validate-production-release-candidate.mjs"
   },
   "dependencies": {
     "astro": "^5.13.8"
