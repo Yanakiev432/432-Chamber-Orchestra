@@ -20,13 +20,18 @@ Read-only catalog and permissions findings: **46 originally published paid produ
 
 A WXR/XML WordPress export is **not** a substitute for database and file backups: WordPress documents that WXR does not include the configuration or actual attachment files. See <https://developer.wordpress.org/cli/commands/export/>. Full database exports are separately documented at <https://developer.wordpress.org/cli/commands/db/export/>. WooCommerce confirms removing the plugin alone does not delete its orders, while intentional data purging is a distinct operation: <https://woocommerce.com/document/installing-uninstalling-woocommerce/>.
 
+## Shared hosting boundary — irreversible deletion hazard
+
+**Critical shared-webroot boundary:** `/home/hzorche/public_html` includes additional directories for `432hz-foundation.com` and `432project.432hz-orchestra.com` (the latter has its own WordPress core and `wp-config.php`). Other directories include `cgi-bin`, `old`, `wordpress`, and historical assets. **Never delete or replace the entire `public_html` directory.** Use a reviewed, explicit manifest of the orchestra-root WordPress files and leave every unrelated nested application untouched. A read-only audit found 17 original files changed since 4 November (around 4 MB), so a final incremental pre-cutover capture is still necessary.
+
 ## Must-pass requirements before shutting down production WordPress
 
 1. **Fresh encrypted, off-host backup:** verify a complete current media tree and database; check checksums; restore the database and required media to an isolated environment. Keep the decryption key outside the shared host and repository.
 2. **Previous customer access:** explicitly choose whether the orchestra will reissue purchased files manually from protected storage, retain a secured purchase-support portal elsewhere, or take another compliant route. Review contract, refund and personal-data retention obligations before any deletion.
 3. **Static routes and SEO:** preserve 394 existing pages, 146 editorial routes, and 46 products; classify the remaining **270 unapproved attachment-detail addresses**, 13 intentionally excluded Studio 5 gallery URLs and old login/checkout paths. Provide intentional 301/410/404 outcomes; do not bulk-redirect unrelated attachment pages to the homepage or publish withheld media.
 4. **Hosting and safety:** stage a full Astro public-domain replacement, verify TLS, redirect canonicalization, security headers, `robots.txt`, sitemap, BG/EN localization and protected legacy media URL denial, then rehearse rollback to WordPress without touching existing email or unrelated subdomains.
-5. **Explicit approval:** approve the precise cutover/deletion target and a recovery strategy before changing `/home/hzorche/public_html`, DNS, database tables or live file permissions.
+5. **Directory isolation:** prove that the standalone project WordPress and foundation site are preserved; make an explicit allowlist for the orchestra-root files and confirm the new site does not override unrelated vhosts or nested directories.
+6. **Explicit approval:** approve the precise cutover/deletion target and a recovery strategy before changing `/home/hzorche/public_html`, DNS, database tables or live file permissions.
 
 ## Deterministic staging controls
 

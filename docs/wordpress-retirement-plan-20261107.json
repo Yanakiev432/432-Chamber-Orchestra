@@ -48,10 +48,29 @@
     "excludedMediaAndUnreviewedFilesDenylistValidated": false,
     "productionStaticHostAndTlsSmokeTestPassed": false,
     "productionRollbackDryRunPassed": false,
-    "finalWrittenOwnerApproval": false
+    "finalWrittenOwnerApproval": false,
+    "nonTargetSitesIsolationAuditApproved": false
   },
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "This is a proposed retirement, not authorization to disable WordPress or purge customer records. Astro pages should not contain live WooCommerce cart/account/order links. Previously purchased downloads need a supported replacement or an approved and documented discontinuation policy."
+  "note": "This is a proposed retirement, not authorization to disable WordPress or purge customer records. Astro pages should not contain live WooCommerce cart/account/order links. Previously purchased downloads need a supported replacement or an approved and documented discontinuation policy.",
+  "hostingRootBoundary": {
+    "root": "/home/hzorche/public_html",
+    "separateApplicationsDetected": true,
+    "distinctNestedWordPressInstallationAt": "432project.432hz-orchestra.com",
+    "preservedDirectoriesBeforeAndAfterRetirement": [
+      "432hz-foundation.com",
+      "432project.432hz-orchestra.com",
+      "cgi-bin",
+      "huge-it-google-map-custom-icons",
+      "old",
+      "wordpress"
+    ],
+    "neverRecursivelyDeleteWholePublicHtml": true,
+    "filesChangedAfter2026Nov04Audit": 17,
+    "latestNewFilesTotalChangedBytesApproxMB": 4,
+    "currentOriginalWebTreeTotalGiBApprox": 13.87,
+    "scopedTargetFileAllowlistApproved": false
+  }
 }
