@@ -86,5 +86,16 @@
     "onHold": 7,
     "pending": 7
   },
-  "permissionsOrCustomerRecordsModified": false
+  "permissionsOrCustomerRecordsModified": false,
+  "anonymousProductPageInspection": {
+    "historicalProductUrls": 46,
+    "http200": 46,
+    "priceRelatedMarkup": 46,
+    "standardCartForms": 0,
+    "standardAddToCartButtons": 0,
+    "errors": 0,
+    "checkoutGloballyDisabledProven": false,
+    "newSalesCurrentlyEnabledProven": false,
+    "productionModified": false
+  }
 }

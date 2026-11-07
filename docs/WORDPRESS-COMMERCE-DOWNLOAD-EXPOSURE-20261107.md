@@ -22,6 +22,10 @@ Per [WooCommerce Digital/Downloadable Product Guide](https://woocommerce.com/doc
 
 **The current WordPress setting is `woocommerce_file_download_method = force`**, independently verified in a read-only database transaction. The option to append a hash to new download filenames is enabled. These settings do not retroactively restrict public Media Library URLs. **The insecure redirect fallback is confirmed disabled** (`woocommerce_downloads_redirect_fallback_allowed = no`). Download login is **not required**, while grant-after-payment is enabled. Guest purchasing can legitimately work without login, but must still enforce a valid, purchase-linked download grant. Valid-customer delivery, expired grants, historic order continuation and payment callbacks remain **unverified**.
 
+## Public product-page functional surface (read-only)
+
+All **46 historical product URLs** were checked anonymously via HTTPS, with controlled request concurrency. Every page returned **HTTP 200**, and the rendered HTML contained price-related markup. However, **none** included the standard WooCommerce cart form or `single_add_to_cart_button` in its public HTML. This suggests that purchase controls are not exposed through these historical product pages, but is **not** sufficient to prove checkout is globally disabled or that no alternative purchase pathway exists. The earlier metadata result means the products remain priced and downloadable in WordPress; it does not establish active new sales. Preserve historical download entitlements.
+
 ## Owner-gated remediation — exact order
 
 1. Preserve an offline/private SHA-256 inventory, full file backups, current prices, product-to-file mapping and a reversible deployment receipt. Do not publish direct media paths.

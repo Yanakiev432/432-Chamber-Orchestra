@@ -27,6 +27,11 @@ assert.deepEqual(snapshot.permissionTableAggregates,{
 });
 assert.deepEqual(snapshot.legacyShopOrderStatusCounts,{completed:14,onHold:7,pending:7});
 assert.equal(snapshot.permissionsOrCustomerRecordsModified,false);
+assert.deepEqual(snapshot.anonymousProductPageInspection,{
+  historicalProductUrls:46,http200:46,priceRelatedMarkup:46,
+  standardCartForms:0,standardAddToCartButtons:0,errors:0,
+  checkoutGloballyDisabledProven:false,newSalesCurrentlyEnabledProven:false,productionModified:false
+});
 assert.deepEqual([snapshot.exactDenyRuleDryRun.fileCount,snapshot.exactDenyRuleDryRun.uploadDirectories,snapshot.exactDenyRuleDryRun.additionalFileMatches],[22,2,0]);
 assert.equal(snapshot.exactDenyRuleDryRun.productionHtaccessModified,false);
 assert.equal(snapshot.isolatedWebServerDenyTest.exactMatchingDummyWavHttpStatus,403);
