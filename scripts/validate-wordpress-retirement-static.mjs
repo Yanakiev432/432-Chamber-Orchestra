@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join, resolve } from "node:path";
 const read=(path)=>JSON.parse(readFileSync(path,"utf8"));
 const plan=read("docs/wordpress-retirement-plan-20261107.json");
@@ -49,7 +49,7 @@ function auditAnchorLinks(folder) {
   if (entry.isDirectory()) auditAnchorLinks(file);
   else if(entry.isFile()&&entry.name==="index.html") {
    const html=readFileSync(file,"utf8");
-   oldPrimaryWordPressLinks += [...html.matchAll(/<a\\b[^>]*\\bhref=["']https:\/\/432hz-orchestra\\.com\//gi)].length;
+   oldPrimaryWordPressLinks += [...html.matchAll(/<a\b[^>]*\bhref=["']https:\/\/432hz-orchestra\.com\//gi)].length;
   }
  }
 }
