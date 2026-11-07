@@ -62,3 +62,13 @@ An initial attempt at complete file extraction into the private staging folder w
 `pnpm run retirement:report` validates nine static former-store notices and the 46 product archive pages. `pnpm run retirement:cutover:gate` and the primary `pnpm run cutover:gate` stay **blocked** until all retirement safeguards are independently evidenced; a successful Astro preview build is not permission to delete WordPress.
 
 The original hybrid WooCommerce cutover gate remains available as `commerce:cutover:gate` only for historical comparison. It is no longer the target architecture. No production WordPress removal, live redirect, payment, login, or order change is authorized by this checkpoint.
+
+## 7 November — SQL restore PASS and privately staged production candidate
+
+The full November 7 WordPress SQL backup was **actually restored** into an isolated MariaDB 10.11 Docker container, with no network, no disk logs, a tmpfs database and cgroup swap disabled. **All 116 tables** were restored and MariaDB table checks passed. Aggregates matched the source: **188 WooCommerce download permissions**, **12 orders with permission grants**, **19 entitled products**, **46 published priced downloadable products**, and **14 completed / 7 on-hold / 7 pending** orders. Transport was encrypted asymmetrically; no plaintext SQL was stored on the unencrypted Lenovo C: drive. After verification the container, temporary decryption key and ciphertext were removed. The private receipt SHA-256 is `8d52f5d90b2e08569fa76a52ef7a61deb71a4ed6b9b55ab8e899247b0f3b5d8d`.
+
+Astro's **production-only** candidate is also complete and strictly staged **outside all public document roots** on Everest. It contains **618 allowlisted files**, **394 HTML pages**, a **384-URL canonical sitemap**, nine noindex retired-shop notices and one noindex root redirect to `/bg/`. ZIP SHA-256: `9112131bc719c3e80e68d5632a7836c83158d9e06143d66778d07cf51bb30a2a` (129,488,633 compressed bytes). The ZIP was reconstructed from eight checksum-verified parts, decompressed to 155,597,213 bytes and all 618 extracted files hashed and retained privately. Source commit: `240dc6919e189481de8d54c74bbc70de6f0c0f73`.
+
+Read-only comparison against the live WordPress root found 616 new file paths and two existing-file collisions. No candidate file touches the foundation or project domain. The main WordPress `index.php` and `.htaccess` are unchanged and require an owner-approved cutover/rollback procedure.
+
+**Important distinction:** the **SQL database restoration is now PASS**. This is *not* full WordPress runtime restoration, an off-host recoverable backup, or approval to discontinue fulfillment of historical downloads. All remaining safeguards remain mandatory.

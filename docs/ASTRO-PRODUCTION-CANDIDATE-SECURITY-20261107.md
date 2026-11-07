@@ -4,7 +4,7 @@ This stage prepares the independent static replacement for `https://432hz-orches
 
 ## Dual SEO modes
 
-The Astro preview must remain `noindex,nofollow` for all 394 pages. The production candidate uses `PUBLIC_SITE_URL=https://432hz-orchestra.com` and `PUBLIC_PREVIEW_MODE=false`, and must have **385 indexable pages** and **9 former-store information pages with `noindex,nofollow`**. The former WooCommerce checkout/account routes stay available as static help pages but are absent from the 385-URL XML sitemap.
+The Astro preview must remain `noindex,nofollow` for all 394 pages. The production candidate uses `PUBLIC_SITE_URL=https://432hz-orchestra.com` and `PUBLIC_PREVIEW_MODE=false`, and must have **384 indexable pages** and **9 former-store information pages with `noindex,nofollow`**. The former WooCommerce checkout/account routes stay available as static help pages but are absent from the 384-URL XML sitemap.
 
 The demo-audio attachment, historical photo attachment, and curated-album QA scripts now explicitly distinguish preview from production. A new independent production artifact gate checks page-by-page canonical URLs, the nine historical-store noindex pages, production robots/sitemap, full output inventory, audio whitelist and withheld files.
 
@@ -21,3 +21,10 @@ The default build and content validation are unchanged. `pnpm run production:bui
 ## Remaining release blockers
 
 An encrypted, recoverable, durable backup off Superhosting; a documented historical-purchase support and personal-data retention policy; a verified full restore/rollback rehearsal; reviewed static Apache rules and a precise allowlist that protects the separately hosted foundation and project sites; and explicit approval for the live domain change.
+
+## Latest server acceptance evidence
+
+The guarded main-domain release comprises 618 files (394 HTML plus static assets), not the 623 generated source-output files. Five source/config files are excluded. SEO produces **384 indexable pages**, nine retired-store help pages with `noindex,nofollow`, and one root redirect marked `noindex,follow`, canonicalized absolutely to `/bg/` and absent from the sitemap. The production build passed all fourteen inherited QA gates plus the new exhaustive artifact gate.
+
+The validated 129,488,633-byte ZIP (SHA-256 `9112131bc719c3e80e68d5632a7836c83158d9e06143d66778d07cf51bb30a2a`) was split into eight checksum-verified transfers, reassembled under Everest's private non-webroot staging, and fully extracted. All 618 output files were hashed. Of 618 intended production paths, 616 do not yet exist and two currently exist in the WordPress root; no nested foundation or project document-root path is touched. **No production files or settings were changed.**
+
