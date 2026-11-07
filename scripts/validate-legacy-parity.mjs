@@ -255,5 +255,5 @@ console.log(JSON.stringify({gate:"FULL_LEGACY_PUBLIC_ROUTE_PARITY_PASS",historic
   allStaticPages:allPages.length,sourcePosts:source.posts.length,archivePages:imported.length,
   originalGalleryImages:galleryAssets.images.length,publicGalleryImages:visibleGalleryAssets.length,studio5ApprovedPositions:studio5.keptPositions,productImages:productAssets.images.length,
   originalVideoReferences:videos.items.length,historicAudioEmbeds:audioEmbeds.length,bandcampMappedProducts:46,
-  sensitiveWordPressFunctionalRoutesRetainedExternally:9,
-  caveat:"Static parity does not replace WordPress order and account backend; production cutover remains blocked"},null,2));
+  historicalWordPressCommerceRoutesConvertedToStaticNotices:9,
+  caveat:"Static parity preserves public editorial routes; WordPress and WooCommerce retirement requires a verified private backup, legacy customer-fulfilment decision and explicit production authorization."},null,2));

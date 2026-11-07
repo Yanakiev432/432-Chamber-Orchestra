@@ -15,14 +15,17 @@ assert.ok(sitemap.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitem
 assert.ok(sitemap.includes("</urlset>"), "Missing sitemap closing element.");
 
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-const importedCount = JSON.parse(readFileSync(resolve("src/content/legacyArchive.json"), "utf8")).items.length;
+const legacyRecords = JSON.parse(readFileSync(resolve("src/content/legacyArchive.json"), "utf8")).items;
+const importedCount = legacyRecords.length;
+const retiredShopPaths = legacyRecords.filter((item) => item.dynamicWordPress).map((item) => item.path);
+assert.equal(retiredShopPaths.length, 9, "Expected nine non-indexable former-store notices");
 const gmediaCount = JSON.parse(readFileSync(resolve("src/content/legacyGmediaRoutes.json"), "utf8")).items.length;
 const taxonomyCount = JSON.parse(readFileSync(resolve("src/content/legacyTaxonomyRoutes.json"), "utf8")).items.length;
 const extendedCount = JSON.parse(readFileSync(resolve("src/content/legacyExtendedRoutes.json"), "utf8")).items.length;
 const attachmentCount = JSON.parse(readFileSync(resolve("src/content/legacyFeaturedAttachments.json"), "utf8")).items.length;
 const demoAttachmentCount = JSON.parse(readFileSync(resolve("src/content/publicDemoAttachmentRoutes.json"), "utf8")).items.length;
 const photoAttachmentCount = JSON.parse(readFileSync(resolve("src/content/publicPhotoAttachmentRoutes.json"), "utf8")).items.length;
-assert.equal(sitemapUrls.length, 30 + importedCount + gmediaCount + taxonomyCount + extendedCount + attachmentCount + demoAttachmentCount + photoAttachmentCount, "Sitemap must enumerate every curated and historical page.");
+assert.equal(sitemapUrls.length, 30 + importedCount - retiredShopPaths.length + gmediaCount + taxonomyCount + extendedCount + attachmentCount + demoAttachmentCount + photoAttachmentCount, "Sitemap must enumerate every curated and historical page.");
 assert.equal(new Set(sitemapUrls).size, sitemapUrls.length, "Duplicate sitemap URLs.");
 assert.ok(sitemapUrls.every((url) => url.startsWith(origin + "/")), "Sitemap URLs must be absolute and use the configured origin.");
 
@@ -40,7 +43,13 @@ const htmlUrls = htmlFiles.map((file) => {
   const path = rel === "index.html" ? "/" : "/" + rel.slice(0, -"index.html".length);
   return new URL(path, origin).href;
 });
-assert.deepEqual(new Set(sitemapUrls), new Set(htmlUrls), "Sitemap must match the actual static pages.");
+const excluded = new Set(retiredShopPaths.map((path) => new URL(path, origin).href));
+const indexableHtmlUrls = htmlUrls.filter((url) => !excluded.has(url));
+assert.deepEqual(new Set(sitemapUrls), new Set(indexableHtmlUrls), "Sitemap must contain all static pages EXCEPT nine retired commerce notices.");
+for (const legacyPath of retiredShopPaths) {
+  const page = load(legacyPath.slice(1)+"index.html");
+  assert.ok(page.includes('<meta name="robots" content="noindex,nofollow"'),"Retired commerce page must stay noindex: "+legacyPath);
+}
 const previewMode = process.env.PUBLIC_PREVIEW_MODE === "true";
 if (previewMode) {
   assert.ok(robots.includes("Disallow: /"), "Preview robots must disallow crawling.");

@@ -20,6 +20,7 @@ const pages=legacy.items.filter(x=>x.dynamicWordPress===true);
 const products=legacy.items.filter(x=>x.kind==="product");
 assert.equal(pages.length,9,"Unexpected number of historical dynamic WooCommerce URLs");
 assert.equal(products.length,46,"Expected 46 archival products");
+const sitemap=readFileSync(join(root,"sitemap.xml"),"utf8");
 for(const record of [...pages,...products]){
  const target=join(root,record.path.slice(1),"index.html");
  assert.ok(existsSync(target),"Missing historical static route: "+record.path);
@@ -29,6 +30,8 @@ for(const record of [...pages,...products]){
  if(record.dynamicWordPress){
   assert.ok(html.includes('data-legacy-store-retired="true"'),"Missing historical store notice: "+record.path);
   assert.ok(html.includes("mailto:info@432hz-foundation.com"),"Missing official contact for historical order: "+record.path);
+  assert.ok(html.includes('<meta name="robots" content="noindex,nofollow"'),"Former checkout/account URL must be noindex: "+record.path);
+  assert.ok(!sitemap.includes("<loc>"+new URL(record.path,"https://preview.432hz-orchestra.com").href+"</loc>"),"Former checkout/account URL included in sitemap: "+record.path);
  }
  assert.ok(!html.includes("View the original publication")&&!html.includes("Към първоначалната публикация"),"Dead original-site CTA preserved in archive");
 }

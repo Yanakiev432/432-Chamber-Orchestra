@@ -61,7 +61,7 @@ const showPitchComparison = record.path === "/en/about/432-hz-concert-pitch/";
 const pitchComparisonSamples = featured.items.filter((item) => item.kind === "audio_attachment" && item.mediaMime === "audio/mpeg");
 const historicConcertPoster = record.kind === "event" && record.id === 316;
 ---
-<BaseLayout content={copy} lang={lang} canonicalHref={record.path} alternateHref={record.alternatePath}>
+<BaseLayout content={copy} lang={lang} canonicalHref={record.path} alternateHref={record.alternatePath} noindex={record.dynamicWordPress === true}>
   <section class="border-b border-brand-border bg-[#122B22] py-12 md:py-20">
     <div class="container max-w-5xl">
       <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7A76D]">{kind}</p>

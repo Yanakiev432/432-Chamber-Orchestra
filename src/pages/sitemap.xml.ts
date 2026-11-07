@@ -38,7 +38,7 @@ const routes = [
   "/en/sponsor-brief/",
   "/bg/thank-you/",
   "/en/thank-you/",
-  ...legacy.items.map((item) => item.path),
+  ...legacy.items.filter((item) => !item.dynamicWordPress).map((item) => item.path),
   ...gmedia.items.map((item) => item.path),
   ...taxonomy.items.map((item) => item.path),
   ...extended.items.map((item) => item.path),
