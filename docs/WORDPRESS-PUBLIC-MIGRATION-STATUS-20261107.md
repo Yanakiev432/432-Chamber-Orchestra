@@ -1,5 +1,8 @@
 # 432 Chamber Orchestra — public migration checkpoint, 7 November 2026
 
+
+> **Architecture superseded on 7 November 2026:** the intended release is now an independent Astro-only public site, not an indefinitely hybrid WordPress/WooCommerce operation. The original WordPress still serves production *until* separately authorized retirement. For the current target architecture and verified preview rollout, refer to `docs/WORDPRESS-RETIREMENT-PLAN-20261107.md` and `docs/wordpress-retirement-plan-20261107.json`.
+
 ## Completed public-only Astro archival work
 
 The isolated Astro preview builds **394 static HTML pages**, all `noindex,nofollow`, without changing the original WordPress production site.

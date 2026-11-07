@@ -24,6 +24,20 @@ A WXR/XML WordPress export is **not** a substitute for database and file backups
 
 **Critical shared-webroot boundary:** `/home/hzorche/public_html` includes additional directories for `432hz-foundation.com` and `432project.432hz-orchestra.com` (the latter has its own WordPress core and `wp-config.php`). Other directories include `cgi-bin`, `old`, `wordpress`, and historical assets. **Never delete or replace the entire `public_html` directory.** Use a reviewed, explicit manifest of the orchestra-root WordPress files and leave every unrelated nested application untouched. A read-only audit found 17 original files changed since 4 November (around 4 MB), so a final incremental pre-cutover capture is still necessary.
 
+## Verified standalone preview release (7 November)
+
+The preview has been deployed and independently verified at **394/394 exact HTTPS HTML parity**, including nine former-store help notices. The **385-entry sitemap** excludes the old checkout/account routes, while all 394 preview pages remain `noindex,nofollow`. The **22 historical short-demo attachment URLs**, **54 vetted photo attachment URLs**, and **11 approved short audio excerpts** are still live. The 46 historic BG/EN product records have **23 unique Bandcamp destinations**, each of which returned HTTPS HEAD 200 in a bounded read-only check; that does *not* verify active pricing or sales.
+
+The latest deployed HTML comes from Git commit `7832cea5fb5bf04c883e792efc8e0fc07755eddf`. A full 396-file preview-only release was followed by a one-HTML-page patch to replace the final active link back to the retiring WordPress root with the local `/bg/контакти/` route. The final one-page ZIP SHA-256 is `744fd3ac3dd4ce1985c70266968f07ac0008cb28246b3d5bd35fa95c741db05f`. Both preview deployments have independent rollback receipts. **No WordPress production files or databases were changed.**
+
+## Additional backup verification and operator safety
+
+The **11 file-archive parts** from 4 November were rechecked using their existing SHA-256 manifest (PASS). The new 7 November SQL dump was checked by SHA-256, gzip integrity, `CREATE TABLE` count (**116**), WooCommerce permission table and logical dump footer. This is a *structural* check, not a test restoration.
+
+A private **19-file supplemental archive** includes 15 files modified since 4 November inside the orchestra WordPress `wp-content` and four current root configuration files. It excludes all other nested sites. SHA-256: `2af9de3c69d67f1b49f8956f62d2ff981e880f3c739ff4b615de1b62b1cf8dac`; size 79,119 bytes. Its path and sensitive contents remain outside the webroot under `/home/hzorche/ra-core-deploy-staging/432-retirement-readiness-20261107/`. This is **not** a replacement for a full updated file-tree backup or a restore drill.
+
+A local security check found **BitLocker protection OFF for Lenovo C:** at the time of inspection. Do not move customer-containing SQL or WordPress archives there in plaintext; perform an encrypted export to a physically separate backup medium or approved encrypted storage, with the key held separately. An encrypted off-host backup has **not** yet been completed.
+
 ## Must-pass requirements before shutting down production WordPress
 
 1. **Fresh encrypted, off-host backup:** verify a complete current media tree and database; check checksums; restore the database and required media to an isolated environment. Keep the decryption key outside the shared host and repository.

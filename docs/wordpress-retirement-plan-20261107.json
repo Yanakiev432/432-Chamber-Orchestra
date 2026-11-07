@@ -39,7 +39,24 @@
     "privateBackupOutsideWebRoot": true,
     "encryptedOffHostCopyCompleted": false,
     "databaseRestoreDrillPassed": false,
-    "freshPrecutoverMediaArchiveCompleted": false
+    "freshPrecutoverMediaArchiveCompleted": false,
+    "existingFileArchive11PartsRecheckedSha256": true,
+    "newDbSnapshotSqlCreateTableCountVerified": 116,
+    "newDbSnapshotContainsHistoricalPermissions": true,
+    "newDbSnapshotStructuralReadbackPassed": true,
+    "privateIncrementalArchive": {
+      "date": "2026-11-07",
+      "file": "/home/hzorche/ra-core-deploy-staging/432-retirement-readiness-20261107/wordpress-incremental-and-config-20261107.tar.gz",
+      "sha256": "2af9de3c69d67f1b49f8956f62d2ff981e880f3c739ff4b615de1b62b1cf8dac",
+      "archivedFiles": 19,
+      "modifiedWpContentFiles": 15,
+      "essentialRootConfigFiles": 4,
+      "noNestedSitesIncluded": true,
+      "offHost": false,
+      "restoreDrillPassed": false,
+      "supplementalOnly": true
+    },
+    "localLenovoSystemDriveBitlockerProtection": false
   },
   "cutoverReadiness": {
     "oldCustomersFulfillmentDecisionApproved": false,
@@ -54,7 +71,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "This is a proposed retirement, not authorization to disable WordPress or purge customer records. Astro pages should not contain live WooCommerce cart/account/order links. Previously purchased downloads need a supported replacement or an approved and documented discontinuation policy.",
+  "note": "Astro-only preview is independently HTTPS verified at 394/394, nine historic-store notices and 385 sitemap URLs. Original WordPress remains production, not yet deleted. Private 116-table DB archive and 11 full-media file chunks are integrity verified; 19-file time-based incremental supplement is private and cannot replace off-host encrypted backup plus restore drill. Old buyer downloads require an approved fulfilment and data retention policy. Never remove unrelated nested websites.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -71,6 +88,32 @@
     "filesChangedAfter2026Nov04Audit": 17,
     "latestNewFilesTotalChangedBytesApproxMB": 4,
     "currentOriginalWebTreeTotalGiBApprox": 13.87,
-    "scopedTargetFileAllowlistApproved": false
+    "scopedTargetFileAllowlistApproved": false,
+    "separateNestedWordPressConfirmed": true,
+    "freshIncrementalBackupExcludesSeparateSites": true
+  },
+  "previewRelease": {
+    "releaseDate": "2026-11-07",
+    "htmlSourceGitCommit": "7832cea5fb5bf04c883e792efc8e0fc07755eddf",
+    "previousMainStandaloneReleaseCommit": "d7430a0c0da31bc9442a918d51250c83c3e5bee3",
+    "previewOrigin": "https://preview.432hz-orchestra.com",
+    "htmlRoutes": 394,
+    "exactLiveHttpsMatches": 394,
+    "noindexHtmlRoutes": 394,
+    "retiredWooCommerceNoticesVerified": 9,
+    "sitemapUrls": 385,
+    "restoredHistoricalAudioPermalinks": 22,
+    "restoredHistoricalPhotoPermalinks": 54,
+    "shortPublicSamplesVerified": 11,
+    "verifiedBandcampUniqueDestinationHead200": 23,
+    "localSourceLinksToRetiredPrimaryWordPress": 0,
+    "originalPublicHtmlLinkMappingFinalCheck": true,
+    "finalPatchZipSha256": "744fd3ac3dd4ce1985c70266968f07ac0008cb28246b3d5bd35fa95c741db05f",
+    "originalFullReleaseZipSha256": "2c4ac34f0bc33c686b18466f08c21aa5d149a41abd9f0a970306fd8ee19944d9",
+    "serverRollbackForFullReleaseSha256": "57e03462e9e5faae6632d8b29dc182cdb5a97c7adabf88cf531059552141107d",
+    "stageOnly": true,
+    "productionWordPressModified": false,
+    "uploadMediaCssHtaccessModified": false,
+    "productionCutoverAuthorized": false
   }
 }
