@@ -34,7 +34,8 @@
     "retirement:report": "node scripts/validate-wordpress-retirement-static.mjs --mode=report",
     "retirement:cutover:gate": "node scripts/validate-wordpress-retirement-static.mjs --mode=cutover",
     "production:build:qa": "node scripts/build-production-candidate.mjs",
-    "production:artifact:validate": "node scripts/validate-production-release-candidate.mjs"
+    "production:artifact:validate": "node scripts/validate-production-release-candidate.mjs",
+    "apache:cutover:qa": "node scripts/qa-apache-main-domain-cutover.mjs"
   },
   "dependencies": {
     "astro": "^5.13.8"

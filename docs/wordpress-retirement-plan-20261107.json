@@ -181,6 +181,28 @@
       "nestedSiteCollisions": 0,
       "productionChanges": 0,
       "approvedFileMoveAllowlist": false
+    },
+    "apacheCutoverRehearsal": {
+      "testedDate": "2026-11-07",
+      "status": "ISOLATED_REHEARSAL_PASS",
+      "version": "V4",
+      "apacheDockerImage": "php:8.4-apache",
+      "apacheTestVersion": "2.4.69",
+      "testedCandidatePrivatePath": "/home/hzorche/ra-core-deploy-staging/432-main-domain-astro-apache-v4-inheritance-tested-20261107.txt",
+      "candidateSha256": "8fbb14f21ec3df1444f8203508181008e81f69f9b382b6b41370d902139142ae",
+      "liveHtaccessStillSha256": "add4747dda78b4663a4db7deb815243754b0ab7f884c1ca265a439dc216e06cb",
+      "securityCases": 40,
+      "securityCasesPassed": 40,
+      "initialNestedProjectDirectoryBypassFoundAndFixed": true,
+      "fix": "RewriteOptions InheritDownBefore",
+      "preservedNativeProjectAccess": true,
+      "preservedNativeFoundationAccess": true,
+      "noNetworkDockerFixture": true,
+      "noDockerPortsPublished": true,
+      "realProductionApacheAcceptancePerformed": false,
+      "ownerApproved": false,
+      "appliedToProduction": false,
+      "privateReceiptSha256": "b95df657dcb333933a06a0f3d0766e4496de0958c069d63ecd6c14f56b324ad1"
     }
   },
   "previewRelease": {
