@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync, existsSync, readdirSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join, resolve } from "node:path";
 const read=(path)=>JSON.parse(readFileSync(path,"utf8"));
 const plan=read("docs/wordpress-retirement-plan-20261107.json");
@@ -24,7 +24,7 @@ for(const record of [...pages,...products]){
  const target=join(root,record.path.slice(1),"index.html");
  assert.ok(existsSync(target),"Missing historical static route: "+record.path);
  const html=readFileSync(target,"utf8");
- assert.ok(!/<form\\b[^>]*class=["'][^"']*(?:woocommerce|cart|checkout)/i.test(html),"Active checkout form in a retired route: "+record.path);
+ assert.ok(!/<form\b[^>]*class=["'][^"']*(?:woocommerce|cart|checkout)/i.test(html),"Active checkout form in a retired route: "+record.path);
  assert.ok(!/name=["']add-to-cart["']|single_add_to_cart_button|wc-add-to-cart/i.test(html),"Active cart mechanism in archive: "+record.path);
  if(record.dynamicWordPress){
   assert.ok(html.includes('data-legacy-store-retired="true"'),"Missing historical store notice: "+record.path);
