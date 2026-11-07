@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-07",
+  "targetArchitecture": "static Astro-only public website; historical WordPress and WooCommerce removed after authorized retirement",
+  "editorialSourceInventory": {
+    "observedOriginalPaths": 636,
+    "matchedByAstro": 352,
+    "staticHtmlPages": 394,
+    "verifiedHistoricalProductArchiveRoutes": 46,
+    "legacyDynamicStoreRoutesWithHistoricalNotice": 9,
+    "pendingOriginalAttachmentDetailRoutes": 270,
+    "intentionallyExcludedStudio5PublicGalleryRoutes": 13,
+    "passwordRecoveryWorkflowEndsOnRetirement": 1
+  },
+  "retainedHistoricalProductData": {
+    "productsInOldWordPress": 46,
+    "originalDownloadReferences": 80,
+    "distinctFiles": 26,
+    "oldCustomerDownloadPermissionRows": 188,
+    "ordersAssociatedWithDownloadPermissions": 12,
+    "oldShopOrderStatuses": {
+      "completed": 14,
+      "onHold": 7,
+      "pending": 7
+    },
+    "publicMediaSourceFilesNotToCopyIntoAstro": 22,
+    "accessDeniedOriginalWooCommerceFiles": 4,
+    "legacyCustomersMustHaveSupportPolicy": true
+  },
+  "backupEvidence": {
+    "existingWordPressMediaAndDatabaseBackupDate": "2026-11-04",
+    "earlierFullFileArchiveParts": 11,
+    "earlierFileArchiveValidated": true,
+    "newWordPressDbSnapshotDate": "2026-11-07",
+    "newWordPressDbSnapshotTables": 116,
+    "newWordPressDbSnapshotCompressedBytes": 1953562,
+    "newWordPressDbSnapshotSha256": "cf8a047c4312328906a1553206ca4e97457a53358248687491e14723b38f3c91",
+    "newDbGzipTestPassed": true,
+    "privateBackupOutsideWebRoot": true,
+    "encryptedOffHostCopyCompleted": false,
+    "databaseRestoreDrillPassed": false,
+    "freshPrecutoverMediaArchiveCompleted": false
+  },
+  "cutoverReadiness": {
+    "oldCustomersFulfillmentDecisionApproved": false,
+    "privacyRetentionAndDeletionPolicyApproved": false,
+    "allPublicLegacyLinksAndRedirectsReviewed": false,
+    "excludedMediaAndUnreviewedFilesDenylistValidated": false,
+    "productionStaticHostAndTlsSmokeTestPassed": false,
+    "productionRollbackDryRunPassed": false,
+    "finalWrittenOwnerApproval": false
+  },
+  "productionWordPressRemoved": false,
+  "productionWordPressChanged": false,
+  "provisionalStatus": "BLOCKED",
+  "note": "This is a proposed retirement, not authorization to disable WordPress or purge customer records. Astro pages should not contain live WooCommerce cart/account/order links. Previously purchased downloads need a supported replacement or an approved and documented discontinuation policy."
+}

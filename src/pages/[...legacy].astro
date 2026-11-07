@@ -6,7 +6,7 @@ import LegacyMusicCatalogue from "../components/LegacyMusicCatalogue.astro";
 import LegacyAudioEmbeds from "../components/LegacyAudioEmbeds.astro";
 import LegacyExtendedArchiveListing from "../components/LegacyExtendedArchiveListing.astro";
 import LegacyPublicListeningExamples from "../components/LegacyPublicListeningExamples.astro";
-import { siteContent } from "../content/siteContent";
+import { siteContent, foundationData } from "../content/siteContent";
 import legacy from "../content/legacyArchive.json";
 import gmedia from "../content/legacyGmediaRoutes.json";
 import taxonomy from "../content/legacyTaxonomyRoutes.json";
@@ -90,11 +90,24 @@ const historicConcertPoster = record.kind === "event" && record.id === 316;
             </figure>
           )}
           {record.dynamicWordPress ? (
-            <div class="border-l-2 border-[#C7A76D] pl-6 text-base leading-8 text-[#D7CEBF]">
-              {bg
-                ? "Записите и изданията на оркестъра могат да бъдат разгледани в раздел „Музика“. За поръчки, направени през предишния сайт, използвайте първоначалната страница."
-                : "Explore the orchestra’s recordings and releases in the Music section. For earlier orders, please use the original site."}
-            </div>
+            <section data-legacy-store-retired="true" aria-label={bg ? "Исторически поръчки" : "Historical purchases"} class="border-l-2 border-[#C7A76D] pl-6 text-base leading-8 text-[#D7CEBF]">
+              <h2 class="mb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Информация за стария магазин" : "Previous-store information"}</h2>
+              <p>{bg
+                ? "Този нов архивен сайт не предоставя кошница, плащане, потребителски акаунти или автоматично изтегляне от предишния магазин."
+                : "This archival website does not provide the previous store’s cart, checkout, customer accounts or automatic downloads."}</p>
+              <p class="mt-4">{bg
+                ? "При въпрос за запис, закупен през предишния сайт, изпратете запитване до официалния контакт. Посочете приблизителна дата или потвърждение на поръчката, ако разполагате с тях. Не изпращайте пароли или данни за банкова карта."
+                : "For questions about a recording purchased from the previous store, contact the official address. Include the approximate order date or confirmation, if available. Do not send passwords or payment-card details."}</p>
+              <div class="mt-6 flex flex-wrap gap-5 text-sm">
+                <a class="border-b border-[#C7A76D] pb-1 text-[#F0E8D9] hover:text-[#C7A76D]"
+                  href={`mailto:${foundationData[lang].email}?subject=${encodeURIComponent(bg ? "Запитване за стара поръчка – Камерен оркестър 432" : "Previous order enquiry – 432 Chamber Orchestra")}`}>
+                  {bg ? "Запитване за предишна покупка" : "Enquire about a previous purchase"}
+                </a>
+                <a class="border-b border-[#C7A76D] pb-1 text-[#F0E8D9] hover:text-[#C7A76D]" href={`/${lang}/recordings/`}>
+                  {bg ? "Към дискографията" : "Browse recordings"}
+                </a>
+              </div>
+            </section>
           ) : (
             <>
               {displayed.map((paragraph) => <p class="whitespace-pre-line break-words text-base leading-8 text-[#D7CEBF]">{paragraph}</p>)}
@@ -160,8 +173,9 @@ const historicConcertPoster = record.kind === "event" && record.id === 316;
         </article>
         <aside class="h-fit border border-[#C7A76D]/25 bg-[#122B22] p-6 text-sm leading-7 text-[#D7CEBF]">
           <h2 class="mb-4 font-serif text-xl text-[#F0E8D9]">{bg ? "Разгледайте още" : "Discover more"}</h2>
-          <p>{bg ? "Първоначална публикация:" : "Original publication:"}</p>
-          <a class="mt-2 block break-all text-[#C7A76D] underline underline-offset-4" href={record.originalUrl} target="_blank" rel="noopener noreferrer">{bg ? "Към първоначалната публикация" : "View the original publication"}</a>
+          <p class="leading-7">{bg
+            ? "Тази страница е възстановена от историческия архив на предишния сайт на Камерен оркестър 432."
+            : "This page is preserved from the historical archive of the orchestra’s previous website."}</p>
           <div class="mt-7 flex flex-col gap-3 border-t border-[#C7A76D]/25 pt-6">
             <a href={bg ? "/bg/archive/" : "/en/archive/"} class="underline underline-offset-4 hover:text-[#C7A76D]">{bg ? "Фотоархив" : "Photo archive"}</a>
             <a href={bg ? "/bg/recordings/" : "/en/recordings/"} class="underline underline-offset-4 hover:text-[#C7A76D]">{bg ? "Записи" : "Recordings"}</a>
