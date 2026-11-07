@@ -83,4 +83,5 @@ const taxonomyCount = JSON.parse(readFileSync(resolve("src/content/legacyTaxonom
 const extendedCount = JSON.parse(readFileSync(resolve("src/content/legacyExtendedRoutes.json"), "utf8")).items.length;
 const attachmentCount = JSON.parse(readFileSync(resolve("src/content/legacyFeaturedAttachments.json"), "utf8")).items.length;
 const demoAttachmentCount = JSON.parse(readFileSync(resolve("src/content/publicDemoAttachmentRoutes.json"), "utf8")).items.length;
-if (pages.length !== 30 + migratedCount + gmediaCount + taxonomyCount + extendedCount + attachmentCount + demoAttachmentCount || failures.length) process.exitCode = 2;
+const photoAttachmentCount = JSON.parse(readFileSync(resolve("src/content/publicPhotoAttachmentRoutes.json"), "utf8")).items.length;
+if (pages.length !== 30 + migratedCount + gmediaCount + taxonomyCount + extendedCount + attachmentCount + demoAttachmentCount + photoAttachmentCount || failures.length) process.exitCode = 2;

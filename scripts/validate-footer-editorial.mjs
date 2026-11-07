@@ -37,6 +37,7 @@ function visit(dir) {
 }
 visit(resolve("dist"));
 const demoCount=JSON.parse(readFileSync("src/content/publicDemoAttachmentRoutes.json","utf8")).items.length;
-assert.equal(pages, 318 + demoCount, "Unexpected page count");
+const photoCount=JSON.parse(readFileSync("src/content/publicPhotoAttachmentRoutes.json","utf8")).items.length;
+assert.equal(pages, 318 + demoCount + photoCount, "Unexpected page count");
 assert.ok(bulgarian > 50 && english > 50, "Both languages must be checked");
 console.log(JSON.stringify({ gate: "ORCHESTRA_EDITORIAL_FOOTER_PASS", pages, bulgarian, english }));

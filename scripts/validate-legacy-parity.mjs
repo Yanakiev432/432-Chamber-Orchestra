@@ -235,7 +235,8 @@ const posterHtml=readFileSync(historicEnglishPoster,"utf8");
 assert.ok(posterHtml.includes("src=\"/legacy-media/wp-event-fw.png\""),"Concert poster image missing");
 assert.ok(posterHtml.includes('href="/en/event/concert-quartet-432-chamber-orcehstra/"'),"Poster not linked to English concert");
 const demoCount=read("src/content/publicDemoAttachmentRoutes.json").items.length;
-assert.equal(allPages.length,318+demoCount,"Expected 318 existing pages plus reviewed public demo attachment pages");
+const photoCount=read("src/content/publicPhotoAttachmentRoutes.json").items.length;
+assert.equal(allPages.length,318+demoCount+photoCount,"Expected 318 prior pages plus reviewed public demo and photograph attachments");
 
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],

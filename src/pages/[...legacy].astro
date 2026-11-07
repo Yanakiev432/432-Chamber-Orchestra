@@ -13,19 +13,20 @@ import taxonomy from "../content/legacyTaxonomyRoutes.json";
 import extended from "../content/legacyExtendedRoutes.json";
 import featured from "../content/legacyFeaturedAttachments.json";
 import demoAttachments from "../content/publicDemoAttachmentRoutes.json";
+import photoAttachments from "../content/publicPhotoAttachmentRoutes.json";
 
 export function getStaticPaths() {
-  return [...legacy.items, ...gmedia.items, ...taxonomy.items, ...extended.items, ...featured.items, ...demoAttachments.items].map((record) => ({
+  return [...legacy.items, ...gmedia.items, ...taxonomy.items, ...extended.items, ...featured.items, ...demoAttachments.items, ...photoAttachments.items].map((record) => ({
     params: { legacy: record.path.replace(/^\/|\/$/g, "") },
     props: { record }
   }));
 }
-const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] | (typeof taxonomy.items)[number] | (typeof extended.items)[number] | (typeof featured.items)[number] | (typeof demoAttachments.items)[number] };
+const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] | (typeof taxonomy.items)[number] | (typeof extended.items)[number] | (typeof featured.items)[number] | (typeof demoAttachments.items)[number] | (typeof photoAttachments.items)[number] };
 const lang = record.language === "bg" ? "bg" as const : "en" as const;
 const bg = lang === "bg";
 const kind = bg
-  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар", gmedia_photo:"Архивна фотография", gmedia_index:"Фотоархив", gmedia_album:"Фотоалбум", gmedia_album_index:"Албуми", gmedia_gallery:"Галерия", archive_collection:"Колекция",audio_attachment:"Звукозапис",image_attachment:"Изображение",demo_attachment:"Архивен звуков откъс" } as const)[record.kind]
-  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar", gmedia_photo:"Historic photograph", gmedia_index:"Photo archive", gmedia_album:"Photo album", gmedia_album_index:"Albums", gmedia_gallery:"Gallery", archive_collection:"Collection",audio_attachment:"Audio recording",image_attachment:"Image",demo_attachment:"Historic audio excerpt" } as const)[record.kind];
+  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар", gmedia_photo:"Архивна фотография", gmedia_index:"Фотоархив", gmedia_album:"Фотоалбум", gmedia_album_index:"Албуми", gmedia_gallery:"Галерия", archive_collection:"Колекция",audio_attachment:"Звукозапис",image_attachment:"Изображение",demo_attachment:"Архивен звуков откъс",photo_attachment:"Архивна фотография" } as const)[record.kind]
+  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar", gmedia_photo:"Historic photograph", gmedia_index:"Photo archive", gmedia_album:"Photo album", gmedia_album_index:"Albums", gmedia_gallery:"Gallery", archive_collection:"Collection",audio_attachment:"Audio recording",image_attachment:"Image",demo_attachment:"Historic audio excerpt",photo_attachment:"Archive photograph" } as const)[record.kind];
 const copy = {
   ...siteContent[lang],
   meta: {
@@ -54,6 +55,7 @@ const paginationLinks = "paginationLinks" in record ? record.paginationLinks : [
 const archivePage = "archivePage" in record ? record.archivePage : 1;
 const legacyAudioSample = record.kind === "audio_attachment" ? record : null;
 const demoAttachment = record.kind === "demo_attachment" && "demoNumber" in record ? record : null;
+const reviewedPhoto = record.kind === "photo_attachment" && "photoSrc" in record ? record : null;
 const parentMediaPath = "parentPath" in record ? record.parentPath : null;
 const showPitchComparison = record.path === "/en/about/432-hz-concert-pitch/";
 const pitchComparisonSamples = featured.items.filter((item) => item.kind === "audio_attachment" && item.mediaMime === "audio/mpeg");
@@ -75,6 +77,18 @@ const historicConcertPoster = record.kind === "event" && record.id === 316;
         <article class="min-w-0 space-y-6">
           {record.thumbnail && <img class="max-h-[500px] w-full object-contain" src={record.thumbnail} alt={record.title} loading="lazy" />}
           {record.inlineImages.map((image) => <img class="max-h-[500px] w-full object-contain" src={image} alt={record.title} loading="lazy" />)}
+          {reviewedPhoto && (
+            <figure class="space-y-5 border border-[#C7A76D]/30 bg-[#122B22] p-5 md:p-7">
+              <img class="mx-auto max-h-[760px] w-full object-contain" src={reviewedPhoto.photoSrc}
+                alt={reviewedPhoto.photoAlt} width="1600" height="1000" loading="lazy" decoding="async" />
+              <figcaption class="text-sm leading-7 text-[#D7CEBF]">
+                {bg ? "Фотография от документалния архив на Камерен оркестър 432." : "Photograph from the documentary archive of 432 Chamber Orchestra."}
+              </figcaption>
+              <a class="inline-flex border-b border-[#C7A76D] py-2 text-[#F0E8D9] hover:text-[#C7A76D]" href={reviewedPhoto.albumPath}>
+                {bg ? "Разгледайте одобрения концертен албум" : "Explore the curated concert album"}
+              </a>
+            </figure>
+          )}
           {record.dynamicWordPress ? (
             <div class="border-l-2 border-[#C7A76D] pl-6 text-base leading-8 text-[#D7CEBF]">
               {bg
@@ -84,7 +98,7 @@ const historicConcertPoster = record.kind === "event" && record.id === 316;
           ) : (
             <>
               {displayed.map((paragraph) => <p class="whitespace-pre-line break-words text-base leading-8 text-[#D7CEBF]">{paragraph}</p>)}
-              {displayed.length === 0 && !video && !demoAttachment && <p class="text-base leading-8 text-[#D7CEBF]">{bg
+              {displayed.length === 0 && !video && !demoAttachment && !reviewedPhoto && <p class="text-base leading-8 text-[#D7CEBF]">{bg
                 ? "Разгледайте свързаните публикации, фотографии и записи от историята на оркестъра."
                 : "Explore related articles, photographs and recordings from the orchestra’s history."}</p>}
             </>

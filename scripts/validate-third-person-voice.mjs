@@ -74,7 +74,8 @@ function scan(dir) {
 }
 scan(dist);
 const demoCount=JSON.parse(readFileSync("src/content/publicDemoAttachmentRoutes.json","utf8")).items.length;
-assert.equal(htmlPages, 318+demoCount, "Built page count changed");
+const photoCount=JSON.parse(readFileSync("src/content/publicPhotoAttachmentRoutes.json","utf8")).items.length;
+assert.equal(htmlPages, 318+demoCount+photoCount, "Built page count changed");
 assert.deepEqual(violations, [], "First-person orchestra copy persists in public preview");
 for (const lang of ["bg", "en"]) {
   const html = readFileSync(join(dist, lang, "index.html"), "utf8");

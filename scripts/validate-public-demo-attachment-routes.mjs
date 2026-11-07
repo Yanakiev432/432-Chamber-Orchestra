@@ -14,7 +14,8 @@ const others = [
   "src/content/legacyFeaturedAttachments.json"
 ].flatMap((file) => JSON.parse(readFileSync(file, "utf8")).items);
 const existingPaths = new Set(others.map((item) => item.path.toLowerCase()));
-const totalPages = 318 + routes.length;
+const photos = JSON.parse(readFileSync("src/content/publicPhotoAttachmentRoutes.json", "utf8")).items;
+const totalPages = 318 + routes.length + photos.length;
 assert.equal(routes.length,22,"Expected 22 source attachment permalinks");
 assert.equal(tracks.length,11,"Expected eleven pre-reviewed public MP3s");
 assert.equal(demoAudit.oldWordPressAttachmentPermalinksMatched,22);
