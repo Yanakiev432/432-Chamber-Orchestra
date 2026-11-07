@@ -234,7 +234,8 @@ assert.ok(existsSync(historicEnglishPoster),"Public historic concert poster page
 const posterHtml=readFileSync(historicEnglishPoster,"utf8");
 assert.ok(posterHtml.includes("src=\"/legacy-media/wp-event-fw.png\""),"Concert poster image missing");
 assert.ok(posterHtml.includes('href="/en/event/concert-quartet-432-chamber-orcehstra/"'),"Poster not linked to English concert");
-assert.equal(allPages.length,318,"Expected 30 native, 144 legacy, 51 Gmedia, 26 taxonomy, 61 collection and 6 media pages");
+const demoCount=read("src/content/publicDemoAttachmentRoutes.json").items.length;
+assert.equal(allPages.length,318+demoCount,"Expected 318 existing pages plus reviewed public demo attachment pages");
 
 for (const [lang, path, label] of [
   ["bg", "/bg/относно/камерен-оркестър-432/", "История"],

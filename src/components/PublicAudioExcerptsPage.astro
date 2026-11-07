@@ -47,7 +47,7 @@ const tracks = audio.tracks;
     <div class="container max-w-6xl">
       <div class="grid gap-4 md:grid-cols-2">
         {tracks.map((track) => (
-          <article class="min-w-0 border border-brand-border bg-brand-surface p-5 md:p-6">
+          <article id={"excerpt-" + String(track.number).padStart(2, "0")} class="min-w-0 scroll-mt-20 border border-brand-border bg-brand-surface p-5 md:p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent">
               {bg ? "Откъс" : "Excerpt"} {String(track.number).padStart(2,"0")} · {Math.round(track.durationSeconds)} {bg ? "сек." : "sec"}
             </p>

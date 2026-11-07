@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "asOf": "2026-11-07",
+  "mode": "Verified public WordPress sitemap+link graph+attachment permalinks, not dynamic URL exhaustiveness",
+  "baseline": "docs/wordpress-coverage-checkpoint-20261106.json",
+  "sourcePathsVerified": 636,
+  "astroStaticPages": 340,
+  "sourcePathsMatched": 298,
+  "sourcePathsWithoutAstroPage": 338,
+  "remainingByClass": {
+    "studio5PhotosIntentionallyExcluded": 13,
+    "accountPasswordRecoveryHandledByWordPress": 1,
+    "wordPressAttachmentPermalinksWithoutAstroPage": 324
+  },
+  "originalAttachmentPagesVerifiedHttp200": 353,
+  "restoredAttachmentPagesPreviously": 7,
+  "restoredShortPublicAudioAttachmentPagesNew": 22,
+  "restoredAttachmentPagesTotal": 29,
+  "attachmentPagesRemaining": 324,
+  "demoSourcePairing": {
+    "oldWordPressPermalinks": 22,
+    "distinctAuditedShortMP3s": 11,
+    "languagePairs": 11,
+    "excludedOtherMpegAttachmentPermalinks": 15,
+    "additionalMP3sPublished": 0,
+    "protectedWooCommerceWavMp3Published": 0
+  },
+  "physicalAssetsPreserved": {
+    "publicAudioShortExcerpts": 11,
+    "studio5ApprovedImages": 10,
+    "studio5ExcludedImages": 13,
+    "curatedBulgarianComposersPhotos": 32,
+    "curatedConcertDocumentaryPhotos": 12
+  },
+  "sourceWordPressUnchanged": true,
+  "productionCutoverApproved": false,
+  "productionRedirectsDeployed": 0,
+  "importantCaveat": "The 338 remaining source URL discrepancies are dominated by automatically generated WordPress attachment detail URLs, not 338 missing substantive articles. The password-reset workflow intentionally stays on the WordPress backend. High/medium-confidence remaining attachment destinations require rights and contextual review.",
+  "safety": "All 22 new detail pages reference precisely the previously published 11 audited short MP3 clips, with no additional audio bytes in Astro.",
+  "next": "Review visual attachments for unambiguous curated-album membership; keep uncurated images and protected/long audio under manual review; continue hybrid WordPress backend QA before cutover."
+}

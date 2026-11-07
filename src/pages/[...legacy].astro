@@ -12,19 +12,20 @@ import gmedia from "../content/legacyGmediaRoutes.json";
 import taxonomy from "../content/legacyTaxonomyRoutes.json";
 import extended from "../content/legacyExtendedRoutes.json";
 import featured from "../content/legacyFeaturedAttachments.json";
+import demoAttachments from "../content/publicDemoAttachmentRoutes.json";
 
 export function getStaticPaths() {
-  return [...legacy.items, ...gmedia.items, ...taxonomy.items, ...extended.items, ...featured.items].map((record) => ({
+  return [...legacy.items, ...gmedia.items, ...taxonomy.items, ...extended.items, ...featured.items, ...demoAttachments.items].map((record) => ({
     params: { legacy: record.path.replace(/^\/|\/$/g, "") },
     props: { record }
   }));
 }
-const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] | (typeof taxonomy.items)[number] | (typeof extended.items)[number] | (typeof featured.items)[number] };
+const { record } = Astro.props as { record: (typeof legacy.items)[number] | (typeof gmedia.items)[number] | (typeof taxonomy.items)[number] | (typeof extended.items)[number] | (typeof featured.items)[number] | (typeof demoAttachments.items)[number] };
 const lang = record.language === "bg" ? "bg" as const : "en" as const;
 const bg = lang === "bg";
 const kind = bg
-  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар", gmedia_photo:"Архивна фотография", gmedia_index:"Фотоархив", gmedia_album:"Фотоалбум", gmedia_album_index:"Албуми", gmedia_gallery:"Галерия", archive_collection:"Колекция",audio_attachment:"Звукозапис",image_attachment:"Изображение" } as const)[record.kind]
-  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar", gmedia_photo:"Historic photograph", gmedia_index:"Photo archive", gmedia_album:"Photo album", gmedia_album_index:"Albums", gmedia_gallery:"Gallery", archive_collection:"Collection",audio_attachment:"Audio recording",image_attachment:"Image" } as const)[record.kind];
+  ? ({ page: "Историческа страница", post: "Публикация", product: "Архивен запис", taxonomy: "Категория", event: "Концерт", event_category: "Концертна категория", event_view: "Концертен календар", gmedia_photo:"Архивна фотография", gmedia_index:"Фотоархив", gmedia_album:"Фотоалбум", gmedia_album_index:"Албуми", gmedia_gallery:"Галерия", archive_collection:"Колекция",audio_attachment:"Звукозапис",image_attachment:"Изображение",demo_attachment:"Архивен звуков откъс" } as const)[record.kind]
+  : ({ page: "Historical page", post: "Publication", product: "Archive recording", taxonomy: "Category", event: "Concert", event_category: "Concert category", event_view: "Concert calendar", gmedia_photo:"Historic photograph", gmedia_index:"Photo archive", gmedia_album:"Photo album", gmedia_album_index:"Albums", gmedia_gallery:"Gallery", archive_collection:"Collection",audio_attachment:"Audio recording",image_attachment:"Image",demo_attachment:"Historic audio excerpt" } as const)[record.kind];
 const copy = {
   ...siteContent[lang],
   meta: {
@@ -52,6 +53,7 @@ const listingLinks = "listingLinks" in record ? record.listingLinks : [];
 const paginationLinks = "paginationLinks" in record ? record.paginationLinks : [];
 const archivePage = "archivePage" in record ? record.archivePage : 1;
 const legacyAudioSample = record.kind === "audio_attachment" ? record : null;
+const demoAttachment = record.kind === "demo_attachment" && "demoNumber" in record ? record : null;
 const parentMediaPath = "parentPath" in record ? record.parentPath : null;
 const showPitchComparison = record.path === "/en/about/432-hz-concert-pitch/";
 const pitchComparisonSamples = featured.items.filter((item) => item.kind === "audio_attachment" && item.mediaMime === "audio/mpeg");
@@ -82,7 +84,7 @@ const historicConcertPoster = record.kind === "event" && record.id === 316;
           ) : (
             <>
               {displayed.map((paragraph) => <p class="whitespace-pre-line break-words text-base leading-8 text-[#D7CEBF]">{paragraph}</p>)}
-              {displayed.length === 0 && !video && <p class="text-base leading-8 text-[#D7CEBF]">{bg
+              {displayed.length === 0 && !video && !demoAttachment && <p class="text-base leading-8 text-[#D7CEBF]">{bg
                 ? "Разгледайте свързаните публикации, фотографии и записи от историята на оркестъра."
                 : "Explore related articles, photographs and recordings from the orchestra’s history."}</p>}
             </>
@@ -90,6 +92,20 @@ const historicConcertPoster = record.kind === "event" && record.id === 316;
           {record.kind === "archive_collection" && <LegacyExtendedArchiveListing lang={lang} items={listingLinks} pages={paginationLinks} currentPage={archivePage} />}
           {showPitchComparison && <LegacyPublicListeningExamples lang={lang} items={pitchComparisonSamples} />}
           {legacyAudioSample && <LegacyPublicListeningExamples lang={lang} items={[legacyAudioSample]} heading={false} />}
+          {demoAttachment && (
+            <section class="border border-[#C7A76D]/30 bg-[#122B22] p-5 md:p-7" aria-label={bg ? "Прослушване на откъса" : "Listen to the excerpt"}>
+              <p class="mb-4 text-sm text-[#D7CEBF]">
+                {bg ? "Одобрен кратък промоционален откъс от историческия каталог на квартета." : "A verified short promotional excerpt from the quartet's historical catalogue."}
+              </p>
+              <audio class="w-full" controls preload="none">
+                <source src={demoAttachment.mediaSrc} type="audio/mpeg" />
+                {bg ? "Браузърът не поддържа възпроизвеждането." : "This browser cannot play the recording."}
+              </audio>
+              <a class="mt-5 inline-flex border-b border-[#C7A76D] py-2 text-[#F0E8D9] hover:text-[#C7A76D]" href={demoAttachment.excerptPath}>
+                {bg ? "Към откъса в дискографията" : "View the excerpt in the recordings catalogue"}
+              </a>
+            </section>
+          )}
           {historicConcertPoster && <a class="inline-flex border-b border-[#C7A76D] py-2 text-[#F0E8D9] hover:text-[#C7A76D]" href="/bg/event/концерт-на-квартет-от-камерен-оркестъ/афиш-чайната-fw-2/">Афиш на концерта</a>}
           {parentMediaPath && <a class="inline-flex border-b border-[#C7A76D] py-2 text-[#F0E8D9] hover:text-[#C7A76D]" href={parentMediaPath}>{bg ? "Към концерта" : "Related page"}</a>}
           {record.audioEmbeds.length > 0 && <LegacyAudioEmbeds lang={lang} items={record.audioEmbeds} />}

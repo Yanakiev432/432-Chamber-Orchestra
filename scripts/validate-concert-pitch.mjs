@@ -52,6 +52,7 @@ function scan(dir) {
   }
 }
 scan(root);
-if(pages!==318 || semanticSuperscripts<40)
+const demoCount=JSON.parse(readFileSync("src/content/publicDemoAttachmentRoutes.json","utf8")).items.length;
+if(pages!==318+demoCount || semanticSuperscripts<40)
   throw new Error("PITCH_RENDER_INCOMPLETE "+JSON.stringify({pages,semanticSuperscripts,metaSuperscripts}));
 console.log(JSON.stringify({gate:"LATIN_A_SUPERSCRIPT_PITCH_PASS",pages,semanticSuperscripts,metaSuperscripts,sources:sources.length}));

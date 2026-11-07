@@ -4,6 +4,7 @@ import gmedia from "../content/legacyGmediaRoutes.json";
 import taxonomy from "../content/legacyTaxonomyRoutes.json";
 import extended from "../content/legacyExtendedRoutes.json";
 import featured from "../content/legacyFeaturedAttachments.json";
+import demoAttachments from "../content/publicDemoAttachmentRoutes.json";
 
 const routes = [
   "/",
@@ -40,7 +41,8 @@ const routes = [
   ...gmedia.items.map((item) => item.path),
   ...taxonomy.items.map((item) => item.path),
   ...extended.items.map((item) => item.path),
-  ...featured.items.map((item) => item.path)
+  ...featured.items.map((item) => item.path),
+  ...demoAttachments.items.map((item) => item.path)
 ];
 
 export const GET: APIRoute = ({ site }) => {

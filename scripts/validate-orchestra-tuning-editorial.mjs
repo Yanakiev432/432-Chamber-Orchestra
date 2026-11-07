@@ -50,7 +50,8 @@ function walk(dir) {
   }
 }
 walk(root);
-assert.equal(htmlPages, 318, "Published page count drift");
+const demoCount=JSON.parse(readFileSync("src/content/publicDemoAttachmentRoutes.json","utf8")).items.length;
+assert.equal(htmlPages, 318+demoCount, "Published page count drift");
 assert.deepEqual(violations, [], "Withdrawn tuning still present in compiled public pages");
 for (const path of ["/bg/", "/en/"]) {
   const file = join(root, path.slice(1), "index.html");
