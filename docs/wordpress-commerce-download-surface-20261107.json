@@ -34,7 +34,7 @@
   "publicFiles": 22,
   "publicSizeApproxMB": 2016.48,
   "protectedFiles": 4,
-  "deliveryMethodVerified": false,
+  "deliveryMethodVerified": true,
   "redirectFallbackVerified": false,
   "validPurchaserFlowVerified": false,
   "expiredGrantFlowVerified": false,
@@ -43,5 +43,31 @@
   "earlierDuplicateClaimSuperseded": true,
   "sourceDownloadUrlsIncluded": false,
   "sourceDownloadFileHashesIncluded": false,
-  "report": "docs/WORDPRESS-COMMERCE-DOWNLOAD-EXPOSURE-20261107.md"
+  "report": "docs/WORDPRESS-COMMERCE-DOWNLOAD-EXPOSURE-20261107.md",
+  "deliveryMethod": "force",
+  "hashNewUploadFilenamesEnabled": true,
+  "publicBodyReadOnlyScan": {
+    "postPageProductBodies": 94,
+    "literalOriginalMediaFileReferences": 0,
+    "dynamicPluginGeneratedMediaReferencesNotExcluded": true
+  },
+  "exactDenyRuleDryRun": {
+    "fileCount": 22,
+    "uploadDirectories": 2,
+    "firstDirectoryFiles": 6,
+    "secondDirectoryFiles": 16,
+    "additionalFileMatches": 0,
+    "onlyPrivateStaging": true,
+    "productionHtaccessModified": false,
+    "privateReceiptSha256": "08a2553ed6339b68229d498c760fa2b59e9b24885db639db00b314d755498e98"
+  },
+  "isolatedWebServerDenyTest": {
+    "target": "preview.432hz-orchestra.com",
+    "testUsedOnlyHarmlessDummyMedia": true,
+    "exactMatchingDummyWavHttpStatus": 403,
+    "unrelatedDummyTextHttpStatus": 200,
+    "testDirectoryDeleted": true,
+    "productionMediaOrRulesModified": false,
+    "authenticatedBuyerDownloadNotTested": true
+  }
 }

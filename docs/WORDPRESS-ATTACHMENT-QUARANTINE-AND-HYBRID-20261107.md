@@ -38,7 +38,7 @@ The original download manifest contains **80 references**. All 46 associated pro
 
 The previous private incident receipt is retained for traceability, but its *duplicate of private files* interpretation is superseded. It is not the definitive inventory. This audit did not change the production site or retrieve full paid recordings. Source paths and sensitive download URLs remain outside Git.
 
-See [WooCommerce's official downloadable product guide](https://woocommerce.com/document/digital-downloadable-product-handling/) and [Approved Download Directories](https://woocommerce.com/document/approved-download-directories/). Media Library files are public by default. Changing a WooCommerce download-method setting does **not** by itself restrict an existing public direct URL. The currently configured delivery method, redirect fallback and real purchaser entitlement flow have **not yet been checked**.
+See [WooCommerce's official downloadable product guide](https://woocommerce.com/document/digital-downloadable-product-handling/) and [Approved Download Directories](https://woocommerce.com/document/approved-download-directories/). Media Library files are public by default. Changing a WooCommerce download-method setting does **not** by itself restrict an existing public direct URL. Read-only WooCommerce options inspection confirms **`Force downloads` (`force`)**, with hashing of new filenames enabled. That does not restrict the 22 already public media file URLs. Redirect fallback and actual authorized customer delivery **remain unverified**.
 
 ## Fail-closed regression control
 
@@ -68,6 +68,6 @@ The standalone Astro preview is not a replacement for a functioning store. Produ
 
 ## Next work — no live changes without authorization
 
-First verify the real WooCommerce File download method and insecure redirect fallback. Privately preserve every affected file hash, source path, product reference and backup. Rehearse moving/restricting **all 22 original publicly reachable product files**, repointing downloadable-product metadata and delivering through Force Downloads or correctly configured X-Sendfile/X-Accel. Audit legacy audio players first to keep authorized samples working. Test guest denial, valid purchase, expired grants, download byte hashes, historical orders, and rollback before requesting a surgical production change.
+Live WooCommerce already uses `Force downloads`. Next verify any insecure redirect fallback and authorized purchase grants. Privately preserve every affected file hash, source path, product reference and backup. Rehearse moving/restricting **all 22 original publicly reachable product files**, repointing downloadable-product metadata and delivering through Force Downloads or correctly configured X-Sendfile/X-Accel. Audit legacy audio players first to keep authorized samples working. The two proposed exact-match denial files exist only in non-webroot private staging (6 + 16 intended files, zero additional matches). The same Apache denial syntax successfully returned 403 for a harmless dummy WAV and 200 for a neighboring test file on the isolated preview; that temporary test was removed. Still test legitimate WooCommerce buyers, expired grants, original WAV hashes, historical orders and rollback before requesting a production change.
 
 **Cutover BLOCKED. No production changes performed.**
