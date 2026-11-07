@@ -40,6 +40,21 @@ for(const record of [...pages,...products]){
  }
  assert.ok(!html.includes("View the original publication")&&!html.includes("Към първоначалната публикация"),"Dead original-site CTA preserved in archive");
 }
+// Retiring the source WordPress origin must leave zero active primary-origin anchors.
+// Historical provenance in data attributes is intentionally retained.
+let oldPrimaryWordPressLinks=0;
+function auditAnchorLinks(folder) {
+ for (const entry of readdirSync(folder,{withFileTypes:true})) {
+  const file=join(folder,entry.name);
+  if (entry.isDirectory()) auditAnchorLinks(file);
+  else if(entry.isFile()&&entry.name==="index.html") {
+   const html=readFileSync(file,"utf8");
+   oldPrimaryWordPressLinks += [...html.matchAll(/<a\\b[^>]*\\bhref=["']https:\/\/432hz-orchestra\\.com\//gi)].length;
+  }
+ }
+}
+auditAnchorLinks(root);
+assert.equal(oldPrimaryWordPressLinks,0,"Live anchors still point to retiring WordPress root domain");
 const conditions={
   encryptedOffHostCopyCompleted:plan.backupEvidence.encryptedOffHostCopyCompleted,
   databaseRestoreDrillPassed:plan.backupEvidence.databaseRestoreDrillPassed,

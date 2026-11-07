@@ -41,11 +41,11 @@ const gallery = (record.kind === "page" && /\/(?:gallery|галерия)\/$/i.te
 const concertPhotoPost = record.kind === "post" && /(?:photos-concert|снимки-концерт)/i.test(record.path);
 const musicIndex = record.kind === "page" && /(?:buy-our-music|купете-нашата-музика|магазин|shop)\/$/i.test(record.path);
 const video = record.kind === "page" && /(?:video|видео)/i.test(record.path);
-const contentLinks = record.sourceLinks.filter((u) => {
-  try {
-    return !(/432hz-orchestra\.com\/wp-content\//i.test(u));
-  } catch { return false; }
-});
+const contentLinks = record.sourceLinks
+  .filter((u) => !(/432hz-orchestra\.com\/wp-content\//i.test(u)))
+  .map((u) => u === "https://432hz-orchestra.com/bg/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d0%b8/"
+    ? "/bg/контакти/"
+    : u);
 const displayed = record.paragraphs.filter((p) => p.trim().length);
 const published = record.date && /^\d{4}-\d\d-\d\d/.test(record.date) ? record.date.slice(0, 10) : null;
 const photoAlbumPath = "albumPath" in record ? record.albumPath : null;
@@ -166,7 +166,7 @@ const historicConcertPoster = record.kind === "event" && record.id === 316;
             <div class="border-t border-[#C7A76D]/30 pt-8">
               <h2 class="mb-4 font-serif text-2xl text-[#F0E8D9]">{bg ? "Допълнителна информация" : "Further information"}</h2>
               <ul class="grid gap-2 break-all text-sm">
-                {contentLinks.map((link) => <li><a href={link} target="_blank" rel="noopener noreferrer" class="text-[#C7A76D] underline underline-offset-4">{link}</a></li>)}
+                {contentLinks.map((link) => <li><a href={link} target={link.startsWith("/") ? undefined : "_blank"} rel={link.startsWith("/") ? undefined : "noopener noreferrer"} class="text-[#C7A76D] underline underline-offset-4">{link}</a></li>)}
               </ul>
             </div>
           )}
