@@ -8,7 +8,6 @@ import demoAttachments from "../content/publicDemoAttachmentRoutes.json";
 import photoAttachments from "../content/publicPhotoAttachmentRoutes.json";
 
 const routes = [
-  "/",
   "/bg/",
   "/en/",
   "/bg/archive/",

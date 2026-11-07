@@ -1,6 +1,7 @@
 ---
 const title = "432 Chamber Orchestra · Redirecting to Bulgarian";
 const previewMode = import.meta.env.PUBLIC_PREVIEW_MODE === "true";
+const canonicalHome = new URL("/bg/",Astro.site ?? new URL("https://432hz-orchestra.com/")).href;
 ---
 
 <!doctype html>
@@ -10,7 +11,7 @@ const previewMode = import.meta.env.PUBLIC_PREVIEW_MODE === "true";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="robots" content={previewMode ? "noindex,nofollow" : "noindex,follow"} />
-    <link rel="canonical" href="/bg/" />
+    <link rel="canonical" href={canonicalHome} />
     <meta http-equiv="refresh" content="0; url=/bg/" />
     <script is:inline>
       window.location.replace("/bg/");

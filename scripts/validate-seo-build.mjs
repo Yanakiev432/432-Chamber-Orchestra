@@ -25,7 +25,7 @@ const extendedCount = JSON.parse(readFileSync(resolve("src/content/legacyExtende
 const attachmentCount = JSON.parse(readFileSync(resolve("src/content/legacyFeaturedAttachments.json"), "utf8")).items.length;
 const demoAttachmentCount = JSON.parse(readFileSync(resolve("src/content/publicDemoAttachmentRoutes.json"), "utf8")).items.length;
 const photoAttachmentCount = JSON.parse(readFileSync(resolve("src/content/publicPhotoAttachmentRoutes.json"), "utf8")).items.length;
-assert.equal(sitemapUrls.length, 30 + importedCount - retiredShopPaths.length + gmediaCount + taxonomyCount + extendedCount + attachmentCount + demoAttachmentCount + photoAttachmentCount, "Sitemap must enumerate every curated and historical page.");
+assert.equal(sitemapUrls.length, 29 + importedCount - retiredShopPaths.length + gmediaCount + taxonomyCount + extendedCount + attachmentCount + demoAttachmentCount + photoAttachmentCount, "Sitemap must enumerate every curated and historical page.");
 assert.equal(new Set(sitemapUrls).size, sitemapUrls.length, "Duplicate sitemap URLs.");
 assert.ok(sitemapUrls.every((url) => url.startsWith(origin + "/")), "Sitemap URLs must be absolute and use the configured origin.");
 
@@ -43,9 +43,9 @@ const htmlUrls = htmlFiles.map((file) => {
   const path = rel === "index.html" ? "/" : "/" + rel.slice(0, -"index.html".length);
   return new URL(path, origin).href;
 });
-const excluded = new Set(retiredShopPaths.map((path) => new URL(path, origin).href));
+const excluded = new Set([new URL("/",origin).href,...retiredShopPaths.map((path)=>new URL(path,origin).href)]);
 const indexableHtmlUrls = htmlUrls.filter((url) => !excluded.has(url));
-assert.deepEqual(new Set(sitemapUrls), new Set(indexableHtmlUrls), "Sitemap must contain all static pages EXCEPT nine retired commerce notices.");
+assert.deepEqual(new Set(sitemapUrls), new Set(indexableHtmlUrls), "Sitemap must contain only canonical content, excluding root redirect and nine retired-commerce notices.");
 for (const legacyPath of retiredShopPaths) {
   const page = load(legacyPath.slice(1)+"index.html");
   assert.ok(page.includes('<meta name="robots" content="noindex,nofollow"'),"Retired commerce page must stay noindex: "+legacyPath);

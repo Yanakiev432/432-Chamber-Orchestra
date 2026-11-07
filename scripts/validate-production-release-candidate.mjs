@@ -71,7 +71,13 @@ for(const file of html){
  const data=readFileSync(file,"utf8");
  const match=data.match(/<link rel="canonical" href="([^"]+)"/);
  assert.ok(match,"Missing HTML canonical: "+route);
- assert.equal(new URL(match[1]).href,new URL(route,expectedOrigin).href,"Wrong canonical in production HTML: "+route);
+ if(route==="/"){
+  assert.equal(new URL(match[1]).href,expectedOrigin+"/bg/","Redirect root must canonicalize to the Bulgarian homepage");
+  assert.ok(data.includes('<meta name="robots" content="noindex,follow"'),"Root redirect must be noindex,follow");
+ } else {
+  assert.equal(new URL(match[1]).href,new URL(route,expectedOrigin).href,"Wrong canonical in production HTML: "+route);
+  assert.ok(!data.includes('content="noindex,follow"'),"Only root redirect may use noindex,follow");
+ }
  assert.ok(!data.includes("https://preview.432hz-orchestra.com"),"Preview origin in production output");
  const retired=data.includes('data-legacy-store-retired="true"');
  const unindexed=data.includes('<meta name="robots" content="noindex,nofollow"');
@@ -87,7 +93,8 @@ assert.ok(!robots.includes("Disallow: /"));
 assert.ok(robots.includes("Sitemap: "+expectedOrigin+"/sitemap.xml"));
 const sitemap=readFileSync(join(root,"sitemap.xml"),"utf8");
 const urls=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m)=>m[1]);
-assert.equal(urls.length,385);
+assert.equal(urls.length,384);
+assert.ok(!urls.includes(expectedOrigin+"/"),"Root redirect must not appear in sitemap");
 assert.ok(urls.every((u)=>u.startsWith(expectedOrigin+"/")));
 const plan=JSON.parse(readFileSync("docs/wordpress-retirement-plan-20261107.json","utf8"));
 assert.equal(plan.productionWordPressRemoved,false);
@@ -98,7 +105,7 @@ console.log(JSON.stringify({
  gate:"MAIN_DOMAIN_ASTRO_STATIC_ARTIFACT_ALLOWLIST_PASS",
  releaseOrigin:expectedOrigin,generatedFiles:files.length,allowedReleaseFiles:included.length,
  withheldSourceAndConfigFiles:withheld.length,htmlPages:html.length,
- indexablePages:html.length-noindex,retiredStoreNoindexPages:noindex,
+ indexablePages:html.length-noindex-1,rootRedirectNoindexPages:1,retiredStoreNoindexPages:noindex,
  curatedShortMp3s:tracks.length,verifiedHistoricalPublicLisztAssets:historic.length,
  approvedAudioCount:audio,unapprovedAudioCount:0,
  approvedMainDomainCutover:false,productionWordPressChanged:false
