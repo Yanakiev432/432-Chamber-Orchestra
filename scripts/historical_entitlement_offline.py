@@ -5,7 +5,6 @@ Never run this in the public website or publish the underlying SQL, customer dat
 order keys, original media paths, entitlement records, or raw lookup results.
 Uses only Python stdlib; the SQL input must be an independently verified export.
 """
-from __future__ import annotations
 
 import argparse
 import collections
@@ -67,11 +66,11 @@ def verified_source(path: Path, expected_sha256: str) -> Path:
     return absolute
 
 
-def parse_dump(path: Path) -> dict[str, list[dict[str, str | None]]]:
+def parse_dump(path: Path) -> dict:
     """Read relevant mysqldump INSERT rows without persisting any customer data."""
     csv.field_size_limit(LIMIT_ROW_BYTES)
-    data: dict[str, list[dict[str, str | None]]] = {key: [] for key in SCHEMAS}
-    inside: str | None = None
+    data = {key: [] for key in SCHEMAS}
+    inside = None
     blocks = collections.Counter()
     with gzip.open(path, "rt", encoding="utf-8", errors="strict") as source:
         for line in source:
@@ -109,12 +108,12 @@ def parse_dump(path: Path) -> dict[str, list[dict[str, str | None]]]:
     return data
 
 
-def build_index(data: dict) -> tuple[dict, dict, list]:
+def build_index(data: dict) -> tuple:
     posts = {row["ID"]: row for row in data[PREFIX + "posts"]}
     if len(posts) != len(data[PREFIX + "posts"]):
         raise ValueError("Duplicate WordPress post IDs")
     accepted_keys = {"_billing_email", "_order_key", "_downloadable_files", "_downloadable"}
-    metadata: dict[str, dict[str, str | None]] = collections.defaultdict(dict)
+    metadata = collections.defaultdict(dict)
     for row in data[PREFIX + "postmeta"]:
         if row["meta_key"] in accepted_keys:
             metadata[row["post_id"]][row["meta_key"]] = row["meta_value"]
@@ -161,8 +160,8 @@ def audit(data: dict, at: dt.datetime) -> dict:
     if len(permissions) != 188:
         raise ValueError("This audited snapshot must contain exactly 188 permissions")
     states = [permission_state(p, posts, meta, at) for p in permissions]
-    by_order: dict[str, list[bool]] = collections.defaultdict(list)
-    emails: set[str] = set()
+    by_order = collections.defaultdict(list)
+    emails = set()
     for row, st in zip(permissions, states):
         by_order[row["order_id"]].append(st["eligible_for_manual_review"])
         if row["user_email"]:

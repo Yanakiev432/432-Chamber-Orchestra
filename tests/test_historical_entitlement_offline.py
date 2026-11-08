@@ -20,7 +20,7 @@ def snapshot():
     }
     meta={
       order:{"_billing_email":"test@example.invalid","_order_key":"wc_test_key"},
-      pid:{"_downloadable":"yes","_downloadable_files":"a:1:{s:32:\\""+file_id+"\\";}"}
+      pid:{"_downloadable":"yes","_downloadable_files":'a:1:{s:32:"'+file_id+'";}'}
     }
     row={
       "permission_id":"1","download_id":file_id,"product_id":pid,"order_id":order,

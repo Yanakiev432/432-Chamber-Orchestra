@@ -12,7 +12,7 @@ The original media integrity check previously verified the 26 distinct protected
 
 ## Offline operator-only verifier
 
-`scripts/historical_entitlement_offline.py` is a read-only Python standard-library tool that reads the **SHA-256-pinned** original compressed SQL backup, checks order status, billing-email and order-key consistency, published/downloadable product, file ID in product metadata, expiry and remaining download quota. It does not write customer records, export mailing lists, send email, or generate public download URLs.
+`scripts/historical_entitlement_offline.py` is a read-only Python standard-library tool (also compatible with Python 3.6 on the existing host for this bounded read-only audit; a supported Python runtime is preferable for routine operation) that reads the **SHA-256-pinned** original compressed SQL backup, checks order status, billing-email and order-key consistency, published/downloadable product, file ID in product metadata, expiry and remaining download quota. It does not write customer records, export mailing lists, send email, or generate public download URLs.
 
 From a **private server terminal or protected offline machine** with the independently checked SQL snapshot:
 
