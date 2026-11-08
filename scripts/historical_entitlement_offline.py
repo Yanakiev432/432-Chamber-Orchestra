@@ -48,6 +48,9 @@ DB_TIME = "%Y-%m-%d %H:%M:%S"
 def verified_source(path: Path, expected_sha256: str) -> Path:
     """Require a private regular file, SHA-pinned, not under a webroot."""
     absolute = path.absolute()
+    resolved = absolute.resolve()
+    if "public_html" in resolved.parts or "htdocs" in resolved.parts or "www" in resolved.parts:
+        raise ValueError("SQL backup resolves inside a public document root")
     if not re.fullmatch(r"[a-fA-F0-9]{64}", expected_sha256):
         raise ValueError("Expected SHA-256 is not valid")
     if "public_html" in absolute.parts or any(p in absolute.parts for p in ("www", "htdocs")):
@@ -55,8 +58,8 @@ def verified_source(path: Path, expected_sha256: str) -> Path:
     st = os.lstat(absolute)
     if not stat.S_ISREG(st.st_mode) or st.st_size > LIMIT_GZIP_BYTES:
         raise ValueError("Private SQL source is not a bounded regular file")
-    if st.st_mode & stat.S_IROTH:
-        raise ValueError("The SQL backup must not be world-readable")
+    if st.st_mode & 0o077:
+        raise ValueError("The private SQL backup must not grant group or world access")
     digest = hashlib.sha256()
     with absolute.open("rb") as source:
         for block in iter(lambda: source.read(1024 * 1024), b""):

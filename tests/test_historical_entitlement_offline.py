@@ -1,6 +1,9 @@
 """Synthetic, no-PII regression tests for the historical support verifier."""
 import datetime as dt
+import hashlib
 import importlib.util
+import os
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -38,6 +41,26 @@ class EntitlementTest(unittest.TestCase):
 
     def check(self):
         return entitlement.permission_state(self.row,self.posts,self.meta,self.at)
+
+    @unittest.skipUnless(os.name == "posix", "POSIX mode checks require Unix permissions")
+    def test_reject_group_readable_sql_source(self):
+        with tempfile.TemporaryDirectory() as folder:
+            target=Path(folder)/"private-export.sql.gz"
+            source=b"not real customer data"
+            target.write_bytes(source)
+            os.chmod(str(target),0o640)
+            with self.assertRaises(ValueError):
+                entitlement.verified_source(target,hashlib.sha256(source).hexdigest())
+
+    def test_no_public_document_root_sql_source(self):
+        with tempfile.TemporaryDirectory() as folder:
+            public=Path(folder)/"public_html"
+            public.mkdir()
+            target=public/"old-export.sql.gz"
+            source=b"mock-data"
+            target.write_bytes(source)
+            with self.assertRaises(ValueError):
+                entitlement.verified_source(target,hashlib.sha256(source).hexdigest())
 
     def test_valid(self):
         self.assertTrue(self.check()["eligible_for_manual_review"])
