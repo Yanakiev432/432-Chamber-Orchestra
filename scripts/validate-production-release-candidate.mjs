@@ -65,7 +65,7 @@ for(const f of included){
 assert.equal(audio,15,"Public audio whitelist no longer matches generated files");
 const html=included.filter((f)=>f.endsWith("index.html"));
 assert.equal(html.length,394);
-let notices=0,noindex=0;
+let notices=0,noindex=0,activeMainWordPressAssetReferences=0,externalWpContentLinks=0;
 for(const file of html){
  const name=rel(file), route=name==="index.html"?"/":"/"+name.slice(0,-"index.html".length);
  const data=readFileSync(file,"utf8");
@@ -79,6 +79,24 @@ for(const file of html){
   assert.ok(!data.includes('content="noindex,follow"'),"Only root redirect may use noindex,follow");
  }
  assert.ok(!data.includes("https://preview.432hz-orchestra.com"),"Preview origin in production output");
+ // Only the non-orchestra third-party PDF URLs may reference another site's WordPress.
+ // Read the rendered HTML attributes, not historical provenance data-* annotations.
+ for(const attr of data.matchAll(/\\b(?:href|src|srcset|poster|action)\\s*=\\s*(["'])(.*?)\\1/gi)){
+   const raw=attr[2].replaceAll("&amp;","&");
+   if(!/wp-content|wp-admin|wp-json|wp-login|wp-includes|wc-api|wc-ajax|download_file/i.test(raw))continue;
+   let target;
+   try{target=new URL(raw,expectedOrigin);}catch{throw new Error("Malformed archive resource URL");}
+   if(target.hostname==="432hz-orchestra.com"||target.hostname==="www.432hz-orchestra.com"){
+     const path=decodeURIComponent(target.pathname);
+     if(/\\/(?:wp-content|wp-admin|wp-json|wp-includes)(?:\\/|$)|\\/wp-login\\.php$/i.test(path)||
+        /(?:wc-api|wc-ajax|download_file)/i.test(target.search)){
+       activeMainWordPressAssetReferences++;
+       throw new Error("Generated static page still depends on retired WordPress asset or endpoint: "+name);
+     }
+   } else if(/\\/wp-content\\//i.test(target.pathname)){
+     externalWpContentLinks++;
+   }
+ }
  const retired=data.includes('data-legacy-store-retired="true"');
  const unindexed=data.includes('<meta name="robots" content="noindex,nofollow"');
  assert.equal(unindexed,retired,"Only retired WooCommerce routes may be excluded from indexing");
@@ -87,6 +105,8 @@ for(const file of html){
 }
 assert.equal(notices,9);
 assert.equal(noindex,9);
+assert.equal(activeMainWordPressAssetReferences,0,"Standalone Astro must not refer to the retired self-hosted WordPress");
+assert.equal(externalWpContentLinks,2,"Only the two previously vetted third-party PDF links remain");
 const robots=readFileSync(join(root,"robots.txt"),"utf8");
 assert.ok(robots.includes("User-agent: *")&&robots.includes("Allow: /"));
 assert.ok(!robots.includes("Disallow: /"));
@@ -107,6 +127,6 @@ console.log(JSON.stringify({
  withheldSourceAndConfigFiles:withheld.length,htmlPages:html.length,
  indexablePages:html.length-noindex-1,rootRedirectNoindexPages:1,retiredStoreNoindexPages:noindex,
  curatedShortMp3s:tracks.length,verifiedHistoricalPublicLisztAssets:historic.length,
- approvedAudioCount:audio,unapprovedAudioCount:0,
+ approvedAudioCount:audio,unapprovedAudioCount:0,mainOriginWordPressAssetReferences:activeMainWordPressAssetReferences,externalWordPressPdfLinks:externalWpContentLinks,
  approvedMainDomainCutover:false,productionWordPressChanged:false
 }));

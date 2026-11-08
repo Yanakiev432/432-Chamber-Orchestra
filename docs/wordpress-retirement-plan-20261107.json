@@ -126,7 +126,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "SQL restore PASS in no-network no-swap RAM-only MariaDB: all 116 tables, 188 permission rows, 46 priced products and order aggregates validated. Production Astro 618-file artifact / 394 HTML / 384 SEO entries privately extracted and verified on Everest. Full physical WordPress restore, encrypted off-host durable backup, customer fulfillment/retention decision, Apache/rollback test and explicit production approval remain outstanding. Original WordPress unchanged.",
+  "note": "As of 2026-11-08 the old customer entitlement audit found 188 matched grants across 12 completed orders and 12 email addresses; 124 rows across 8 orders remain unexpired with quota, provisional only. Offline private CLI passed 11 synthetic tests and rejects webroot/group-readable SQL and non-TTY lookups. Isolated mock transaction deployed/rolled back all 618 static files with exact restoration, but not a real production rollback. Static Astro references no self-hosted WP assets (two external artstudies.bg PDFs are not dependencies). Original WP remains live, encrypted offhost copy/real rollback/customer fulfilment approval are outstanding.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -203,6 +203,26 @@
       "ownerApproved": false,
       "appliedToProduction": false,
       "privateReceiptSha256": "b95df657dcb333933a06a0f3d0766e4496de0958c069d63ecd6c14f56b324ad1"
+    },
+    "transactionalRollbackFixture": {
+      "rehearsalDate": "2026-11-08",
+      "gate": "MAIN_DOMAIN_618_FILE_TRANSACTION_SIMULATION_AND_BYTE_IDENTICAL_ROLLBACK_PASS",
+      "privateReceiptSha256": "23a43060882f151380d1a816bbc15d33be22fe609907d06bfcbe86031daf267f",
+      "stagedStaticFiles": 618,
+      "newStaticPaths": 616,
+      "existingLivePathCollisionCount": 2,
+      "parkedAndRestoredMockWordPressCoreDirs": 3,
+      "parkedAndRestoredMockWordPressIndexPhp": true,
+      "oldHtaccessRestoredExactly": true,
+      "originalMockFilesAllRestoredWithSameSha256": 13,
+      "protectedMockDirectoriesUnchanged": 6,
+      "realNestedSitesModified": false,
+      "sourceStaticInodesUnchanged": true,
+      "realProductionFilesModified": false,
+      "fullRealWordPressMediaAndRuntimeRollbackProven": false,
+      "hostApacheProductionAcceptancePassed": false,
+      "cutoverAuthorizationGranted": false,
+      "note": "Fixture only, using dummy WordPress files and hardlinked Astro stage. Do not set productionRollbackDryRunPassed true."
     }
   },
   "previewRelease": {
@@ -250,6 +270,47 @@
     "productionHtaccessUnchanged": true,
     "approvedForProductionCutover": false,
     "privateStagingReceiptSha256": "59b78218070be55ab419ca99862e94b903b7e331ad94ebafd4ee8635d4f16f8a",
-    "privateZipReceiptSha256": "d30420b4fdcc6581346a0d082329c65ee0bed2d2d5b5c3e1b91e0db0d97a0c5e"
+    "privateZipReceiptSha256": "d30420b4fdcc6581346a0d082329c65ee0bed2d2d5b5c3e1b91e0db0d97a0c5e",
+    "remainingOriginWordPressActiveMediaDependencies": 0,
+    "externalThirdPartyWpContentPdfLinks": 2,
+    "staticTextAssetScanExtensionTypes": [
+      ".html",
+      ".css",
+      ".svg",
+      ".xml",
+      ".txt"
+    ]
+  },
+  "historicalBuyerOfflineSupport": {
+    "evidenceDate": "2026-11-08",
+    "sourceSqlBackupSha256": "cf8a047c4312328906a1553206ca4e97457a53358248687491e14723b38f3c91",
+    "codeCommit": "7739d6acb6b74e9b9a6210473e7311663803d3e6",
+    "operatorCliPath": "scripts/historical_entitlement_offline.py",
+    "privateAuditReceiptSha256": "7def4cc2ce9359fcf246ae0e04e0786659832007f2f6ec9602a9b4c3d71e18d1",
+    "cliPrivateSourceSha256": "c3f6f68de130a19e98eeef7de8d7704cedc61c1d36803b1a25bd6fe577ea52f4",
+    "privateServerPythonVersion": "3.6.8",
+    "staticSyntheticTestsPassing": 11,
+    "nonTtyLookupRefusalPassed": true,
+    "rawCustomerDataExported": false,
+    "uniqueHistoricalBuyerEmails": 12,
+    "archivedCompletedOrdersWithDownloadPermissions": 12,
+    "permissionRows": 188,
+    "usableByArchiveDateQuotaAndMetadata": 124,
+    "ordersWithUsableRows": 8,
+    "expiredPermissionRows": 5,
+    "quotaExhaustedPermissionRows": 59,
+    "unlimitedDownloadLimitRows": 6,
+    "eligibleProducts": 19,
+    "distinctDownloadIDs": 26,
+    "uniqueProductFilePairs": 36,
+    "billingEmailAndOrderKeyMismatches": 0,
+    "orphanOrUncompletedOrderLinks": 0,
+    "productOrDownloadMetadataMismatches": 0,
+    "allOriginalPaidMediaByteHashesIndependentlyVerifiedPreviously": true,
+    "privateOfflineOperatorVerificationAvailable": true,
+    "automatedBuyerDeliveryAvailable": false,
+    "humanVerifiedBuyerSupportPolicyApproved": false,
+    "archivalSourceMustBeRefreshedImmediatelyBeforeCutover": true,
+    "note": "Offline tool only establishes potential archival grants; identity, payment terms and current distribution rights need human approval. No buyer details were printed or exported."
   }
 }

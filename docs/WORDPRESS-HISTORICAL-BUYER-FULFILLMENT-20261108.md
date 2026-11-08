@@ -42,3 +42,9 @@ python3 -m unittest discover -s tests -p 'test_historical_entitlement_offline.py
 6. Obtain a qualified local accounting/privacy assessment on retention of receipts, invoices and account personal data before deleting the retired WooCommerce database.
 
 **Until the owner approves this human-reviewed fulfilment process, the production cutover remains blocked.** Do not remove the live customer service while it remains the only verified fulfilment mechanism.
+
+## Additional 8 November verification
+
+The offline program passed **11/11 synthetic tests**, including denial for group-readable and publicly located SQL source files, and refused non-interactive lookup without revealing a buyer identifier. The real private 7 November database snapshot passed independent cross-reference checks for all 188 permission rows. Its only current output is a privacy-safe count, not a customer or download-token export. Evidence receipt SHA-256: `7def4cc2ce9359fcf246ae0e04e0786659832007f2f6ec9602a9b4c3d71e18d1`.
+
+Historical storefront messages already offer a bilingual official contact link and warn customers not to send payment-card details or passwords. Those pages must **not** be presented as an automated fulfilment service. The last snapshot must be refreshed immediately before shutdown to include any new purchases after 7 November.
