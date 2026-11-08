@@ -37,7 +37,7 @@
     "newWordPressDbSnapshotSha256": "cf8a047c4312328906a1553206ca4e97457a53358248687491e14723b38f3c91",
     "newDbGzipTestPassed": true,
     "privateBackupOutsideWebRoot": true,
-    "encryptedOffHostCopyCompleted": false,
+    "encryptedOffHostCopyCompleted": true,
     "databaseRestoreDrillPassed": true,
     "freshPrecutoverMediaArchiveCompleted": false,
     "existingFileArchive11PartsRecheckedSha256": true,
@@ -111,7 +111,40 @@
       "fullWordPressRuntimeRestoreCompleted": false,
       "fullPhysicalFileRestoreCompleted": false,
       "durableOffhostBackupCompleted": false
-    }
+    },
+    "encryptedOffHostFullFileArchive": {
+      "checkpointDate": "2026-11-08",
+      "fileArchiveSnapshotDate": "2026-11-04",
+      "sqlSnapshotDate": "2026-11-07",
+      "privateSupplementSnapshotDate": "2026-11-07",
+      "sourceMediaArchiveOriginalParts": 11,
+      "allEncryptedArchivePartsOnLenovo": true,
+      "allElevenCipherSha256IndependentlyVerified": true,
+      "sourceOriginalTarGzipStreamParsed": true,
+      "sourceArchiveUncompressedMembers": 34525,
+      "sourceArchiveRegularFiles": 30642,
+      "sourceArchiveDirectories": 3883,
+      "sourceArchiveDeclaredRegularFileBytes": 6576778451,
+      "originalCompressedFileArchiveBytes": 5645511107,
+      "ciphertextFileArchiveBytes": 5651030680,
+      "sourceArchiveUnsafePathCount": 0,
+      "coreAndPluginsThemesUploadsWooOriginalDirectoryPresent": true,
+      "encryptedSqlAndIncrementalConfigOffhostVerified": true,
+      "sqlCmsDecryptionVerifiedInMemory": true,
+      "supplementalConfigCmsDecryptionVerifiedInMemory": true,
+      "smallEncryptedMediaSampleCmsDecryptionVerifiedInMemory": true,
+      "encryptedPfxPresentOnLenovo": true,
+      "localLenovoReceiptSha256": "df6368d41b118380405f275abf0f12a186f1b03c9d2ff1fb417944c0a9a19809",
+      "sourcePrivateIntegrityReceiptSha256": "ba07dd13146e8cd95bc022a4fa269e9ad7a8b9859f31c93f5080910429143fd1",
+      "manualRecoveryPasswordPortableEscrowCompleted": false,
+      "secondaryIndependentCopyCompleted": false,
+      "largeCmsFileDecryptionFromLenovoPassed": false,
+      "largeCmsLimitation": "Legacy Windows EnvelopedCms could not decode a 277 MB DER CMS envelope (ASN1 value too large). Source archive and ciphertext match SHA256, but no full plaintext recovery from the Lenovo ciphertext has been demonstrated.",
+      "isolatedFullWordPressFilesystemRestoreFromOffhostCipherPassed": false,
+      "productionBackupAtFinalCutoverRefreshed": false,
+      "productionWordPressUnchanged": true
+    },
+    "durableOffhostBackupCompleted": false
   },
   "cutoverReadiness": {
     "oldCustomersFulfillmentDecisionApproved": false,
@@ -121,12 +154,16 @@
     "productionStaticHostAndTlsSmokeTestPassed": false,
     "productionRollbackDryRunPassed": false,
     "finalWrittenOwnerApproval": false,
-    "nonTargetSitesIsolationAuditApproved": false
+    "nonTargetSitesIsolationAuditApproved": false,
+    "portableBackupKeyEscrowVerified": false,
+    "fullEncryptedArchiveOffhostRestoreDrillPassed": false,
+    "secondIndependentBackupCopyVerified": false,
+    "finalFreshBackupAfterOrdersStopped": false
   },
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "2026-11-08: all 618 release files locally rebuilt under main-domain production mode are byte-identical to the private Everest staged release (sorted-path SHA256 root d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965). New fail-closed dependency gate: 0 live self-origin WordPress assets/API endpoints, 2 external artstudies.bg PDF links. 11 synthetic offline buyer tests PASS; 188 grants tied to 12 completed orders, 124 provisional rows across 8 orders. Synthetic transaction + exact rollback of 618 static files PASS, no live root changes. Production cutover still blocked for customer fulfilment approval, encrypted durable offhost backup and real production rollback/acceptance.",
+  "note": "8 November: encrypted offhosting of 11/11 original WordPress file parts PASS on Lenovo (5,651,030,680 cipher bytes). All local cipher SHA256 matched source. Source concatenated tar.gz stream read-only PASS: 34,525 members (30,642 files, 3,883 dirs), 0 unsafe traversal; WordPress core, wp-config, plugins, themes and protected WooCommerce media present. SQL + supplemental snapshot CMS decrypted and hash-verified in RAM. Large CMS archive cannot yet be fully decrypted from offhost copy via legacy Windows EnvelopedCms (ASN1 size limit). Portable PFX password escrow, independent second copy, full filesystem restore and fresh final order-capture backup NOT complete. WordPress remains online and unchanged. Production cutover BLOCKED.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -331,8 +368,11 @@
     "historicalBuyerSecureOperatorCliTestsPassed": 11,
     "publicProductionSiteStillWordPress": true,
     "ownerApprovalGranted": false,
-    "encryptedOffhostCopyCompleted": false,
+    "encryptedOffhostCopyCompleted": true,
     "originalBuyerFulfillmentDecisionApproved": false,
-    "fullRealRuntimeRollbackProven": false
+    "fullRealRuntimeRollbackProven": false,
+    "portableRecoverySecretEscrowCompleted": false,
+    "largeFileCiphertextRestoreDrillPassed": false,
+    "secondaryBackupCopyCompleted": false
   }
 }
