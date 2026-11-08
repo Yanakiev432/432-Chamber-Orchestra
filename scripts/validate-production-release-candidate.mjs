@@ -120,7 +120,13 @@ const plan=JSON.parse(readFileSync("docs/wordpress-retirement-plan-20261107.json
 assert.equal(plan.productionWordPressRemoved,false);
 assert.equal(plan.productionWordPressChanged,false);
 assert.equal(plan.cutoverReadiness.finalWrittenOwnerApproval,false);
-assert.equal(plan.backupEvidence.encryptedOffHostCopyCompleted,false);
+assert.equal(plan.backupEvidence.encryptedOffHostCopyCompleted,true);
+assert.equal(plan.backupEvidence.encryptedOffHostFullFileArchive.sourceMediaArchiveOriginalParts,11);
+assert.equal(plan.backupEvidence.encryptedOffHostFullFileArchive.allElevenCipherSha256IndependentlyVerified,true);
+assert.equal(plan.backupEvidence.encryptedOffHostFullFileArchive.isolatedFullWordPressFilesystemRestoreFromOffhostCipherPassed,false);
+assert.equal(plan.cutoverReadiness.portableBackupKeyEscrowVerified,false);
+assert.equal(plan.cutoverReadiness.fullEncryptedArchiveOffhostRestoreDrillPassed,false);
+assert.equal(plan.cutoverReadiness.finalWrittenOwnerApproval,false);
 console.log(JSON.stringify({
  gate:"MAIN_DOMAIN_ASTRO_STATIC_ARTIFACT_ALLOWLIST_PASS",
  releaseOrigin:expectedOrigin,generatedFiles:files.length,allowedReleaseFiles:included.length,
