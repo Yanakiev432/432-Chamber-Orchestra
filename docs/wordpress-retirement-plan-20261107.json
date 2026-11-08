@@ -126,7 +126,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "As of 2026-11-08 the old customer entitlement audit found 188 matched grants across 12 completed orders and 12 email addresses; 124 rows across 8 orders remain unexpired with quota, provisional only. Offline private CLI passed 11 synthetic tests and rejects webroot/group-readable SQL and non-TTY lookups. Isolated mock transaction deployed/rolled back all 618 static files with exact restoration, but not a real production rollback. Static Astro references no self-hosted WP assets (two external artstudies.bg PDFs are not dependencies). Original WP remains live, encrypted offhost copy/real rollback/customer fulfilment approval are outstanding.",
+  "note": "2026-11-08: all 618 release files locally rebuilt under main-domain production mode are byte-identical to the private Everest staged release (sorted-path SHA256 root d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965). New fail-closed dependency gate: 0 live self-origin WordPress assets/API endpoints, 2 external artstudies.bg PDF links. 11 synthetic offline buyer tests PASS; 188 grants tied to 12 completed orders, 124 provisional rows across 8 orders. Synthetic transaction + exact rollback of 618 static files PASS, no live root changes. Production cutover still blocked for customer fulfilment approval, encrypted durable offhost backup and real production rollback/acceptance.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -279,7 +279,15 @@
       ".svg",
       ".xml",
       ".txt"
-    ]
+    ],
+    "independentlyRebuiltOn": "2026-11-08",
+    "independentlyRebuiltGitHead": "b0faaa26b95be819eaa82dac707126aa4625721d",
+    "entire618FilesSortedPathSha256ManifestRoot": "d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965",
+    "latestRebuildIdenticalToPrivatelyStagedEverestRelease": true,
+    "newDependencyRegressionGatePassed": true,
+    "currentlyActiveSelfHostedWordPressDependencies": 0,
+    "externalWpContentPdfLinksOnlyFrom": "artstudies.bg",
+    "externalWpContentPdfLinksCount": 2
   },
   "historicalBuyerOfflineSupport": {
     "evidenceDate": "2026-11-08",
@@ -312,5 +320,19 @@
     "humanVerifiedBuyerSupportPolicyApproved": false,
     "archivalSourceMustBeRefreshedImmediatelyBeforeCutover": true,
     "note": "Offline tool only establishes potential archival grants; identity, payment terms and current distribution rights need human approval. No buyer details were printed or exported."
+  },
+  "integrated20261108ReleaseEvidence": {
+    "source": "PRIVATE_READONLY_CHECKPOINT",
+    "receiptSha256": "55af03805fd6e52ac0ddb21b82dbc70db68fd87fe52d6a86347307592699fd78",
+    "releaseManifestSha256": "d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965",
+    "syntheticFull618FileTransactionAndRollbackPassed": true,
+    "archived116TableDatabaseRestorePassed": true,
+    "historicalBuyerEntitlementAuditPassed": true,
+    "historicalBuyerSecureOperatorCliTestsPassed": 11,
+    "publicProductionSiteStillWordPress": true,
+    "ownerApprovalGranted": false,
+    "encryptedOffhostCopyCompleted": false,
+    "originalBuyerFulfillmentDecisionApproved": false,
+    "fullRealRuntimeRollbackProven": false
   }
 }
