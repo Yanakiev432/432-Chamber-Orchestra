@@ -81,19 +81,19 @@ for(const file of html){
  assert.ok(!data.includes("https://preview.432hz-orchestra.com"),"Preview origin in production output");
  // Only the non-orchestra third-party PDF URLs may reference another site's WordPress.
  // Read the rendered HTML attributes, not historical provenance data-* annotations.
- for(const attr of data.matchAll(/\\b(?:href|src|srcset|poster|action)\\s*=\\s*(["'])(.*?)\\1/gi)){
+ for(const attr of data.matchAll(/\b(?:href|src|srcset|poster|action)\s*=\s*(["'])(.*?)\1/gi)){
    const raw=attr[2].replaceAll("&amp;","&");
    if(!/wp-content|wp-admin|wp-json|wp-login|wp-includes|wc-api|wc-ajax|download_file/i.test(raw))continue;
    let target;
    try{target=new URL(raw,expectedOrigin);}catch{throw new Error("Malformed archive resource URL");}
    if(target.hostname==="432hz-orchestra.com"||target.hostname==="www.432hz-orchestra.com"){
      const path=decodeURIComponent(target.pathname);
-     if(/\\/(?:wp-content|wp-admin|wp-json|wp-includes)(?:\\/|$)|\\/wp-login\\.php$/i.test(path)||
+     if(/\/(?:wp-content|wp-admin|wp-json|wp-includes)(?:\/|$)|\/wp-login\.php$/i.test(path)||
         /(?:wc-api|wc-ajax|download_file)/i.test(target.search)){
        activeMainWordPressAssetReferences++;
        throw new Error("Generated static page still depends on retired WordPress asset or endpoint: "+name);
      }
-   } else if(/\\/wp-content\\//i.test(target.pathname)){
+   } else if(/\/wp-content\//i.test(target.pathname)){
      externalWpContentLinks++;
    }
  }
