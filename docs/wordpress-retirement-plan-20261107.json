@@ -138,11 +138,29 @@
       "sourcePrivateIntegrityReceiptSha256": "ba07dd13146e8cd95bc022a4fa269e9ad7a8b9859f31c93f5080910429143fd1",
       "manualRecoveryPasswordPortableEscrowCompleted": false,
       "secondaryIndependentCopyCompleted": false,
-      "largeCmsFileDecryptionFromLenovoPassed": false,
-      "largeCmsLimitation": "Legacy Windows EnvelopedCms could not decode a 277 MB DER CMS envelope (ASN1 value too large). Source archive and ciphertext match SHA256, but no full plaintext recovery from the Lenovo ciphertext has been demonstrated.",
+      "largeCmsFileDecryptionFromLenovoPassed": true,
+      "largeCmsLimitation": "Resolved for audited encrypted volumes: a private, bounded-memory CMS streaming verifier used the installed Windows certificate, decrypted all 11 Lenovo ciphertext volumes and matched their independently pinned source SHA-256 hashes. Legacy Windows EnvelopedCms.Decode had previously failed for large CMS files.",
       "isolatedFullWordPressFilesystemRestoreFromOffhostCipherPassed": false,
       "productionBackupAtFinalCutoverRefreshed": false,
-      "productionWordPressUnchanged": true
+      "productionWordPressUnchanged": true,
+      "all11CiphertextVolumesDecryptedAndOriginalSHA256VerifiedOnLenovo": true,
+      "originalTargzStreamRebuiltAndParsedFromLocalCiphertext": true,
+      "localEncryptedTarStructureAuditDate": "2026-11-09",
+      "localEncryptedTarStructureReceiptSha256": "4fd227f9e0c5c57831efd4f0a86627e40ad4cb0155300de39a26c75237b740bd",
+      "localEncryptedTarStructureJobId": "job_3fd75a05b895",
+      "decryptedLocalArchiveExpectedSourceBytes": 5645511107,
+      "localTarHeaderCount": 38754,
+      "localTarMetadataRecords": 4229,
+      "localTarMembersExcludingMetadata": 34525,
+      "localTarRegularFileCount": 30642,
+      "localTarDirectoryCount": 3883,
+      "localTarDeclaredPlainFileBytes": 6576778451,
+      "localTarUnsafePaths": 0,
+      "localTarAndGzipFullyConsumed": true,
+      "privateCmsReaderSourceSha256": "40a4e4c86ef9f3b906570b55b496490f204ffb00f2dc62a8479239e9cca07b94",
+      "privateTarReaderSourceSha256": "684ac6cc94dc2e4bdc1e3e31eaebb6a4cdc5378cd1279b550ec60fe36ee0ace4",
+      "plainFilesExtractedOnLenovo": 0,
+      "originalPrivateKeysExported": 0
     },
     "durableOffhostBackupCompleted": false
   },
@@ -158,12 +176,14 @@
     "portableBackupKeyEscrowVerified": false,
     "fullEncryptedArchiveOffhostRestoreDrillPassed": false,
     "secondIndependentBackupCopyVerified": false,
-    "finalFreshBackupAfterOrdersStopped": false
+    "finalFreshBackupAfterOrdersStopped": false,
+    "offhostAll11OriginalVolumesDecryptedAndShaVerified": true,
+    "localEncryptedGzipTarStructureAuditPassed": true
   },
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "8 November: encrypted offhosting of 11/11 original WordPress file parts PASS on Lenovo (5,651,030,680 cipher bytes). All local cipher SHA256 matched source. Source concatenated tar.gz stream read-only PASS: 34,525 members (30,642 files, 3,883 dirs), 0 unsafe traversal; WordPress core, wp-config, plugins, themes and protected WooCommerce media present. SQL + supplemental snapshot CMS decrypted and hash-verified in RAM. Large CMS archive cannot yet be fully decrypted from offhost copy via legacy Windows EnvelopedCms (ASN1 size limit). Portable PFX password escrow, independent second copy, full filesystem restore and fresh final order-capture backup NOT complete. WordPress remains online and unchanged. Production cutover BLOCKED.",
+  "note": "9 November 2026: the entire original 11-volume (5,645,511,107 bytes) WordPress tar.gz was reconstructed entirely in bounded RAM from the Lenovo encrypted CMS copy; gzip consumed through trailer, all 38,754 tar headers were checksum checked, producing 30,642 regular files, 3,883 directories, 4,229 TAR metadata headers and zero unsafe paths, exactly matching independent Everest source counts and regular file total (6,576,778,451 bytes). All per-volume original source SHA256 and ciphertext SHA256 also passed. No plaintext archive or paid media written to Lenovo. Full isolated WordPress runtime restore still not performed, owner-held portable password escrow still absent, second independently synced cloud backup absent, and production cutover remains blocked.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -373,6 +393,10 @@
     "fullRealRuntimeRollbackProven": false,
     "portableRecoverySecretEscrowCompleted": false,
     "largeFileCiphertextRestoreDrillPassed": false,
-    "secondaryBackupCopyCompleted": false
+    "secondaryBackupCopyCompleted": false,
+    "all11OriginalEncryptedVolumesRestoredOnLenovo": true,
+    "independentLocalCipherTarStructureParsed": true,
+    "independentLocalTarReceiptSha256": "4fd227f9e0c5c57831efd4f0a86627e40ad4cb0155300de39a26c75237b740bd",
+    "privateRecoveryPasswordSeparatelyEscrowed": false
   }
 }
