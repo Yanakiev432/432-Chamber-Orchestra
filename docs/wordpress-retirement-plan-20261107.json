@@ -211,7 +211,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked.",
+  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked. The Nov 11 portable Astro route/media audit verified 146/146 published routes, 46/46 products, 203/216 sitemap paths with 13 deliberately held gmedia routes, 16 candidate aliases, 270 held records including 12 without a public page URL, zero held pages published and no nested private assets. All related cutover approval flags remain false.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -455,5 +455,33 @@
     "reversionAvailable": true,
     "secretOrPhpinfoBodyContentLogged": false,
     "note": "Targeted production security maintenance only. The preexisting productionWordPressChanged=false is a legacy cutover-status flag; it does not mean zero security maintenance occurred."
+  },
+  "staticRouteMediaHostPrecutoverProof20261111": {
+    "gate": "432_PRECUTOVER_LEGACY_ROUTE_MEDIA_STATIC_INVENTORY_PASS_CUTOVER_BLOCKED",
+    "routePlanFile": "docs/wordpress-route-disposition-20261111.json",
+    "routePlanSha256": "5a1d41ac70b717959908912613c4cb63363ed9ab04aacc8ae767a8899ff6b36a",
+    "validationReceiptFile": "docs/wordpress-route-media-isolation-validation-20261111.json",
+    "validationReceiptSha256": "803ece26e8edc96b2bbc82fdc606d8803e8926e6fad3b63bf391c28d4059eb7a",
+    "validatorFile": "scripts/validate-wordpress-route-media-isolation-20261111.py",
+    "compiledAstroHtmlPages": 394,
+    "mainLegacyRoutesCovered": 146,
+    "historicalProductRoutesCovered": 46,
+    "sitemapStatic": 203,
+    "sitemapDistinct": 216,
+    "intentionallyHeldSitemapGmediaRoutes": 13,
+    "proposedUndeployedLegacyAliases": 16,
+    "heldMediaSourceRecords": 270,
+    "heldUniquePublicPagePaths": 258,
+    "heldSourceRecordsWithoutPublicPath": 12,
+    "heldMediaRoutesUnexpectedlyPublished": 0,
+    "prohibitedWordPressAndNestedHostFilesInAstroBuild": 0,
+    "protectedHostReadOnlyDirectories": 6,
+    "protectedHostSha256SentinelsVerified": 5,
+    "protectedHostSha256Differences": 0,
+    "publicProtectedMediaApacheGateAfterCutoverValidated": false,
+    "redirectDispositionsApproved": false,
+    "approvedNonTargetSitesProductionCutover": false,
+    "productionChanged": false,
+    "note": "Precutover static inventory/rehearsal evidence only. It does not sign off the three canonical production gates."
   }
 }

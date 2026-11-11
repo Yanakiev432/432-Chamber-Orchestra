@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-11",
+  "gate": "432_LEGACY_ROUTE_CANDIDATE_REVIEW_PREPARED_NOT_DEPLOYED",
+  "origin": "https://432hz-orchestra.com",
+  "sourceEvidence": {
+    "sitemap": {
+      "path": "docs/wordpress-all-sitemaps-audit-20261106.json",
+      "sha256": "765d07d2e2c855feb348dcefdc313654107881962f1e9dce7409ae3502cd0570"
+    },
+    "untrackedReadOnlyGraph": {
+      "sha256": "942715e2cbf17e6cc4a6fc854d6adedcc9f505cc44e89203951cbdfed40f599a",
+      "note": "Original analysis document remains untracked; this derived, reviewed list makes the candidate plan portable."
+    },
+    "untrackedPaginationAudit": {
+      "sha256": "1833c1106d1aeabe1f0f2d51a581613ea15b45acbb12f15d588aab7c83ea9fcc"
+    },
+    "attachmentReview": {
+      "path": "docs/wordpress-remaining-media-review-20261107.json",
+      "sha256": "dc5e0c3b3f58e94142eae76fe5de07b9904ee4d771792ee0d37d3f257902c4cd"
+    }
+  },
+  "baseline": {
+    "legacyPublishedRoutes": 146,
+    "legacyProductRoutes": 46,
+    "compiledAstroPages": 394,
+    "uniqueSitemapUrls": 216,
+    "compiledSitemapRoutes": 203,
+    "missingSitemapRoutes": 13,
+    "excludedGmediaRoutes": 13,
+    "additionalObservedPublicAliases": 16,
+    "heldMediaRecords": 270,
+    "uniqueHeldMediaPaths": 258,
+    "heldMediaRecordsWithoutPublicPagePath": 12
+  },
+  "proposals": [
+    {
+      "source": "/",
+      "target": "/bg/",
+      "reason": "root-language-landing",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/bg/blog/author/admin/",
+      "target": "/en/",
+      "reason": "legacy-author-redirect-observed",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/en/blog/author/admin/",
+      "target": "/en/",
+      "reason": "legacy-author-redirect-observed",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/bg/events/категория/концерт/",
+      "target": "/bg/концерти-и-турнета/",
+      "reason": "legacy-event-category-to-curated",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/en/events/категория/concert/",
+      "target": "/en/concerts-and-tours/",
+      "reason": "legacy-event-category-avoid-excluded-gallery",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/en/my-account/lost-password/",
+      "target": "/en/my-account/",
+      "reason": "retired-auth-to-static-notice",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/bg/product-category/аудио/page/1/",
+      "target": "/bg/product-category/аудио/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/bg/product-category/аудио/музика-за-струнен-квартет/page/1/",
+      "target": "/bg/product-category/аудио/музика-за-струнен-квартет/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/bg/product-tag/квартет-bg/page/1/",
+      "target": "/bg/product-tag/квартет-bg/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/bg/product-tag/струнен-квартет-bg/page/1/",
+      "target": "/bg/product-tag/струнен-квартет-bg/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/bg/shop/page/1/",
+      "target": "/bg/shop/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/en/product-category/audio/page/1/",
+      "target": "/en/product-category/audio/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/en/product-category/audio/string-quartet-music/page/1/",
+      "target": "/en/product-category/audio/string-quartet-music/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/en/product-tag/quartet/page/1/",
+      "target": "/en/product-tag/quartet/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/en/product-tag/string-quartet/page/1/",
+      "target": "/en/product-tag/string-quartet/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    },
+    {
+      "source": "/en/shop/page/1/",
+      "target": "/en/shop/",
+      "reason": "canonical-first-page",
+      "approved": false,
+      "deployed": false
+    }
+  ],
+  "exclusions": {
+    "class": "intentional-excluded-Studio5-gallery-route",
+    "sources": [
+      "/en/blog/gmedia/concert-1-jpg/",
+      "/en/blog/gmedia/concert-12-jpg/",
+      "/en/blog/gmedia/concert-14-jpg/",
+      "/en/blog/gmedia/concert-15-jpg/",
+      "/en/blog/gmedia/concert-17-jpg/",
+      "/en/blog/gmedia/concert-18-jpg/",
+      "/en/blog/gmedia/concert-19-jpg/",
+      "/en/blog/gmedia/concert-2-jpg/",
+      "/en/blog/gmedia/concert-20-jpg/",
+      "/en/blog/gmedia/concert-21-jpg/",
+      "/en/blog/gmedia/concert-4-jpg/",
+      "/en/blog/gmedia/concert-6-jpg/",
+      "/en/blog/gmedia/concert-9-jpg/"
+    ],
+    "approvedForRedirect": false,
+    "approvedForPublication": false,
+    "targetBehavior": "HOLD_FOR_EDITORIAL_DECISION; no new public page; no redirect to unapproved media"
+  },
+  "protectedMedia": {
+    "heldMediaRecords": 270,
+    "heldUniquePaths": 258,
+    "noHeldPathsAsCompiledAstroPages": true,
+    "staticQuarantineValidatorsPassedPreviously": true,
+    "productionApacheProtectedMedia403TestAfterCutover": false,
+    "allHistoricalPaidMediaHashScanAgainstFinalBuildCompleted": false,
+    "note": "270 held source records: 258 distinct public page paths, 12 redacted or missing public paths. The 12 are intentionally not inferred or exposed. Neither holds nor protected masters may be published.",
+    "heldRowsWithoutPublicPath": 12
+  },
+  "nestedDomainSafety": {
+    "originalReadOnlyScopeAuditDone": true,
+    "protectedDirectories": 6,
+    "protectedSentinelsConfirmedAfterPhpinfoMitigation": 5,
+    "fullProductionApacheVhostCutoverIsolationAccepted": false,
+    "ownerFileMoveAllowlistApproved": false
+  },
+  "productionCutoverApproved": false,
+  "migrationGateAllPublicLegacyLinksAndRedirectsReviewed": false,
+  "migrationGateExcludedMediaAndUnreviewedFilesDenylistValidated": false,
+  "migrationGateNonTargetSitesIsolationAuditApproved": false,
+  "caveat": "This is a proposed file-by-file route disposition audit. Neither Apache rewrites nor redirects have been deployed."
+}

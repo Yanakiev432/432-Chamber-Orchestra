@@ -1,0 +1,43 @@
+{
+  "build": {
+    "compiledAstroPages": 394,
+    "historicalProductRoutesCovered": 46,
+    "legacyPublishedRoutes": 146,
+    "legacyPublishedRoutesCovered": 146,
+    "sitemapDistinct": 216,
+    "sitemapIntentionallyExcluded": 13,
+    "sitemapStatic": 203,
+    "sitemapUnexpectedlyMissing": 0
+  },
+  "gate": "432_PRECUTOVER_LEGACY_ROUTE_MEDIA_STATIC_INVENTORY_PASS_CUTOVER_BLOCKED",
+  "legacyAliases": {
+    "approved": 0,
+    "deployed": 0,
+    "observedNotCompiledCount": 16,
+    "policyApprovalPending": true,
+    "proposedTargetsPresent": 16
+  },
+  "media": {
+    "heldRecordCount": 270,
+    "heldRecordsWithoutPublicRoute": 12,
+    "heldRoutesUnexpectedlyInAstro": 0,
+    "heldUniquePaths": 258,
+    "privateOrNestedForbiddenFilesInDist": 0,
+    "retirementLiveApacheAccessControlsVerified": false
+  },
+  "nestedSites": {
+    "forbiddenPhysicalNestedDirectoriesBundled": false,
+    "liveCutoverHostIsolationApproval": false,
+    "privateHostSentinelsPreviouslyVerified": 5
+  },
+  "noCustomerPIIOrPaidMediaExported": true,
+  "productionChanged": false,
+  "sourceSnapshot": "2026-11-06..2026-11-07",
+  "stillBlocked": {
+    "legacyRedirectOwnerApproval": true,
+    "nestedHostCutoverApproval": true,
+    "paidMediaRuntimeTestAfterCutover": true,
+    "productionWordPressRetirementAllowed": false
+  },
+  "verifiedOn": "2026-11-11"
+}
