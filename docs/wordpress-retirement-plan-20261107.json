@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-07",
+  "asOf": "2026-11-11",
   "targetArchitecture": "static Astro-only public website; historical WordPress and WooCommerce removed after authorized retirement",
   "editorialSourceInventory": {
     "observedOriginalPaths": 636,
@@ -140,7 +140,7 @@
       "secondaryIndependentCopyCompleted": false,
       "largeCmsFileDecryptionFromLenovoPassed": true,
       "largeCmsLimitation": "Resolved for audited encrypted volumes: a private, bounded-memory CMS streaming verifier used the installed Windows certificate, decrypted all 11 Lenovo ciphertext volumes and matched their independently pinned source SHA-256 hashes. Legacy Windows EnvelopedCms.Decode had previously failed for large CMS files.",
-      "isolatedFullWordPressFilesystemRestoreFromOffhostCipherPassed": false,
+      "isolatedFullWordPressFilesystemRestoreFromOffhostCipherPassed": true,
       "productionBackupAtFinalCutoverRefreshed": false,
       "productionWordPressUnchanged": true,
       "all11CiphertextVolumesDecryptedAndOriginalSHA256VerifiedOnLenovo": true,
@@ -162,7 +162,35 @@
       "plainFilesExtractedOnLenovo": 0,
       "originalPrivateKeysExported": 0
     },
-    "durableOffhostBackupCompleted": false
+    "durableOffhostBackupCompleted": false,
+    "isolatedRuntimeRestore20261111": {
+      "gate": "432_ISOLATED_WP_WOO_FILES_DB_RUNTIME_RESTORE_PASS",
+      "privateReceiptSha256": "7fe1d297370a0de724851aac1098716a17f6d337646e32736a187c9998a9efa1",
+      "sourceFullFiles": "2026-11-04",
+      "sourceCurrentSql": "2026-11-11",
+      "sourceWpContentDelta": "2026-11-11",
+      "originalFileVolumeCount": 11,
+      "originalFullArchiveFiles": 30642,
+      "originalFullArchiveDirs": 3883,
+      "originalFileBytes": 6576778451,
+      "interimDeltaFilesApplied": 71,
+      "mariadbTablesRestored": 116,
+      "wooDownloadPermissions": 188,
+      "ordersWithPermissions": 12,
+      "wordpressPhpCliBootstrapPassed": true,
+      "woocommercePhpCliBootstrapPassed": true,
+      "multisiteDomainRewrittenInIsolatedDbOnly": true,
+      "externalNetworkDisabled": true,
+      "encryptedLinuxFilesystem": true,
+      "temporaryVaultDestroyedAfterTest": true,
+      "productionDatabaseOrFilesChanged": false,
+      "fullHttpUiOrHistoricalDownloadsRehearsed": false,
+      "independentlyEscrowedPortablePfxPassword": false,
+      "oneDriveCloudRehydrationFilesVerified": 20,
+      "oneDriveCloudRehydrationPrivateReceiptSha256": "79140ea5fea982b8f4b30553a8358b0356aadb2f123f953665c8b5aeb3dbfd29",
+      "finalProductionSnapshotAfterCheckoutStops": false,
+      "scope": "Technical recovery from Nov 4 source files and Nov 11 database/delta; not a complete current production checkout cutoff or authorization for deletion."
+    }
   },
   "cutoverReadiness": {
     "oldCustomersFulfillmentDecisionApproved": false,
@@ -174,7 +202,7 @@
     "finalWrittenOwnerApproval": false,
     "nonTargetSitesIsolationAuditApproved": false,
     "portableBackupKeyEscrowVerified": false,
-    "fullEncryptedArchiveOffhostRestoreDrillPassed": false,
+    "fullEncryptedArchiveOffhostRestoreDrillPassed": true,
     "secondIndependentBackupCopyVerified": false,
     "finalFreshBackupAfterOrdersStopped": false,
     "offhostAll11OriginalVolumesDecryptedAndShaVerified": true,
@@ -183,7 +211,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "9 November 2026: the entire original 11-volume (5,645,511,107 bytes) WordPress tar.gz was reconstructed entirely in bounded RAM from the Lenovo encrypted CMS copy; gzip consumed through trailer, all 38,754 tar headers were checksum checked, producing 30,642 regular files, 3,883 directories, 4,229 TAR metadata headers and zero unsafe paths, exactly matching independent Everest source counts and regular file total (6,576,778,451 bytes). All per-volume original source SHA256 and ciphertext SHA256 also passed. No plaintext archive or paid media written to Lenovo. Full isolated WordPress runtime restore still not performed, owner-held portable password escrow still absent, second independently synced cloud backup absent, and production cutover remains blocked.",
+  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -398,5 +426,7 @@
     "independentLocalCipherTarStructureParsed": true,
     "independentLocalTarReceiptSha256": "4fd227f9e0c5c57831efd4f0a86627e40ad4cb0155300de39a26c75237b740bd",
     "privateRecoveryPasswordSeparatelyEscrowed": false
-  }
+  },
+  "originalPlanDate": "2026-11-07",
+  "historicalNote20261109": "9 November 2026: the entire original 11-volume (5,645,511,107 bytes) WordPress tar.gz was reconstructed entirely in bounded RAM from the Lenovo encrypted CMS copy; gzip consumed through trailer, all 38,754 tar headers were checksum checked, producing 30,642 regular files, 3,883 directories, 4,229 TAR metadata headers and zero unsafe paths, exactly matching independent Everest source counts and regular file total (6,576,778,451 bytes). All per-volume original source SHA256 and ciphertext SHA256 also passed. No plaintext archive or paid media written to Lenovo. Full isolated WordPress runtime restore still not performed, owner-held portable password escrow still absent, second independently synced cloud backup absent, and production cutover remains blocked."
 }
