@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync, openSync, readSync, closeSync } from "node:fs";
 import { join, relative, resolve, extname, sep } from "node:path";
 
 const expectedOrigin="https://432hz-orchestra.com";
@@ -39,6 +39,31 @@ for(const f of files){
 }
 assert.equal(withheld.length,5,"Five source/config files must be withheld");
 assert.equal(included.length,618,"Static production package allowlist count drift");
+// Compare the ACTUAL bytes of all 618 included assets to the previously
+// audited, privately staged main-domain archive. This manifest excludes all
+// five withheld files, particularly the unsafe generic .htaccess template.
+// Hash with a bounded 1 MiB buffer to avoid a large-RAM packaging operation.
+const pinnedProductionManifest="d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965";
+const manifestDigest=createHash("sha256");
+const hashBuffer=Buffer.allocUnsafe(1024*1024);
+const sortedReleaseFiles=[...included].sort((a,b)=>{
+ const aa=rel(a),bb=rel(b);
+ return aa<bb?-1:aa>bb?1:0;
+});
+for(const releaseFile of sortedReleaseFiles){
+ const fd=openSync(releaseFile,"r");
+ const fileDigest=createHash("sha256");
+ try{
+   let size;
+   while((size=readSync(fd,hashBuffer,0,hashBuffer.length,null))>0){
+     fileDigest.update(hashBuffer.subarray(0,size));
+   }
+ } finally {closeSync(fd);}
+ manifestDigest.update(rel(releaseFile)+"\t"+fileDigest.digest("hex")+"\n","utf8");
+}
+assert.equal(manifestDigest.digest("hex"),pinnedProductionManifest,
+ "618-file production release differs from the independently verified Everest archive");
+
 const tracks=JSON.parse(readFileSync("src/content/publicAudioExcerpts.json","utf8")).tracks;
 const historic=JSON.parse(readFileSync("src/content/legacyFeaturedAttachments.json","utf8")).items
  .filter((row)=>row.kind==="audio_attachment");
@@ -123,13 +148,18 @@ assert.equal(plan.cutoverReadiness.finalWrittenOwnerApproval,false);
 assert.equal(plan.backupEvidence.encryptedOffHostCopyCompleted,true);
 assert.equal(plan.backupEvidence.encryptedOffHostFullFileArchive.sourceMediaArchiveOriginalParts,11);
 assert.equal(plan.backupEvidence.encryptedOffHostFullFileArchive.allElevenCipherSha256IndependentlyVerified,true);
-assert.equal(plan.backupEvidence.encryptedOffHostFullFileArchive.isolatedFullWordPressFilesystemRestoreFromOffhostCipherPassed,false);
+assert.equal(plan.backupEvidence.encryptedOffHostFullFileArchive.isolatedFullWordPressFilesystemRestoreFromOffhostCipherPassed,true);
 assert.equal(plan.cutoverReadiness.portableBackupKeyEscrowVerified,false);
-assert.equal(plan.cutoverReadiness.fullEncryptedArchiveOffhostRestoreDrillPassed,false);
+assert.equal(plan.cutoverReadiness.fullEncryptedArchiveOffhostRestoreDrillPassed,true);
+assert.equal(plan.backupEvidence.isolatedRuntimeRestore20261111.gate,"432_ISOLATED_WP_WOO_FILES_DB_RUNTIME_RESTORE_PASS");
+assert.equal(plan.backupEvidence.isolatedRuntimeRestore20261111.wordpressPhpCliBootstrapPassed,true);
+assert.equal(plan.backupEvidence.isolatedRuntimeRestore20261111.woocommercePhpCliBootstrapPassed,true);
+assert.equal(plan.backupEvidence.isolatedRuntimeRestore20261111.temporaryVaultDestroyedAfterTest,true);
 assert.equal(plan.cutoverReadiness.finalWrittenOwnerApproval,false);
 console.log(JSON.stringify({
  gate:"MAIN_DOMAIN_ASTRO_STATIC_ARTIFACT_ALLOWLIST_PASS",
  releaseOrigin:expectedOrigin,generatedFiles:files.length,allowedReleaseFiles:included.length,
+ pinnedProduction618ManifestSha256:pinnedProductionManifest,
  withheldSourceAndConfigFiles:withheld.length,htmlPages:html.length,
  indexablePages:html.length-noindex-1,rootRedirectNoindexPages:1,retiredStoreNoindexPages:noindex,
  curatedShortMp3s:tracks.length,verifiedHistoricalPublicLisztAssets:historic.length,

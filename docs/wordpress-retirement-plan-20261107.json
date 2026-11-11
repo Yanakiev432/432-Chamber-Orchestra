@@ -211,7 +211,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked. The Nov 11 portable Astro route/media audit verified 146/146 published routes, 46/46 products, 203/216 sitemap paths with 13 deliberately held gmedia routes, 16 candidate aliases, 270 held records including 12 without a public page URL, zero held pages published and no nested private assets. All related cutover approval flags remain false.",
+  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked. The Nov 11 portable Astro route/media audit verified 146/146 published routes, 46/46 products, 203/216 sitemap paths with 13 deliberately held gmedia routes, 16 candidate aliases, 270 held records including 12 without a public page URL, zero held pages published and no nested private assets. All related cutover approval flags remain false. A fresh 11 Nov production Astro build passed the full candidate QA including 16,993 links, 394 pages and 618 SHA256-pinned release assets. The 623-file dist retains five intentionally withheld config/source files; the new private 618-file ZIP passed complete member readback. Public cutover remains blocked.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -483,5 +483,26 @@
     "approvedNonTargetSitesProductionCutover": false,
     "productionChanged": false,
     "note": "Precutover static inventory/rehearsal evidence only. It does not sign off the three canonical production gates."
+  },
+  "staticAstro618ProductionCandidate20261111": {
+    "gate": "432_ASTRO_REPRODUCIBLE_618_FILE_RELEASE_AND_PRIVATE_ZIP_VERIFIED_CUTOVER_BLOCKED",
+    "candidateBuildAllGatesPassed": true,
+    "generatedLocalDistFiles": 623,
+    "intentionallyWithheldNonPublicFiles": 5,
+    "allowedPublicReleaseFiles": 618,
+    "releaseContentManifestSha256": "d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965",
+    "manifestMatchesHistoricalEverestZip618Members": true,
+    "newPrivateReleaseZipName": "432-astro-main-domain-approved-618-20261111.zip",
+    "newPrivateReleaseZipBytes": 129500993,
+    "newPrivateReleaseZipSha256": "0d61a113da31cc2a8dcf1a891d6f9f20224e7ab49bda31f72bd8e1e5ec156274",
+    "independentNewZipPerMemberReadbackCount": 618,
+    "repeatUploadOrOverwriteRefused": true,
+    "rootGenericHtaccessNotShipped": true,
+    "apachConfigSeparateFromPublicZip": true,
+    "mainProductionStaticCutoverPerformed": false,
+    "ownerApprovalForCutover": false,
+    "requiresRealProtectedMediaAndNestedVirtualhostTest": true,
+    "noProductionChanges": true,
+    "publicEvidenceFile": "docs/astro-production-reproducible-618-20261111.json"
   }
 }
