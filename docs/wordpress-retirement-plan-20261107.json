@@ -211,7 +211,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked. The Nov 11 portable Astro route/media audit verified 146/146 published routes, 46/46 products, 203/216 sitemap paths with 13 deliberately held gmedia routes, 16 candidate aliases, 270 held records including 12 without a public page URL, zero held pages published and no nested private assets. All related cutover approval flags remain false. A fresh 11 Nov production Astro build passed the full candidate QA including 16,993 links, 394 pages and 618 SHA256-pinned release assets. The 623-file dist retains five intentionally withheld config/source files; the new private 618-file ZIP passed complete member readback. Public cutover remains blocked.",
+  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked. The Nov 11 portable Astro route/media audit verified 146/146 published routes, 46/46 products, 203/216 sitemap paths with 13 deliberately held gmedia routes, 16 candidate aliases, 270 held records including 12 without a public page URL, zero held pages published and no nested private assets. All related cutover approval flags remain false. A fresh 11 Nov production Astro build passed the full candidate QA including 16,993 links, 394 pages and 618 SHA256-pinned release assets. The 623-file dist retains five intentionally withheld config/source files; the new private 618-file ZIP passed complete member readback. Public cutover remains blocked. The 11 Nov WSL2 Ubuntu private historical-entitlement regression passed all 11 tests (including POSIX group/world-readable SQL source rejection), zero skips; customer fulfillment and retention policies remain unapproved.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -504,5 +504,21 @@
     "requiresRealProtectedMediaAndNestedVirtualhostTest": true,
     "noProductionChanges": true,
     "publicEvidenceFile": "docs/astro-production-reproducible-618-20261111.json"
+  },
+  "historicalBuyerEntitlementPosixQA20261111": {
+    "gate": "432_HISTORICAL_BUYER_OFFLINE_ENTITLEMENT_LINUX_POSIX_11OF11_PASS_NOT_DEPLOYED",
+    "source": "tests/test_historical_entitlement_offline.py",
+    "code": "scripts/historical_entitlement_offline.py",
+    "environment": "Ubuntu 24.04 WSL2 Linux on Lenovo",
+    "testsRan": 11,
+    "testsPassed": 11,
+    "testsFailed": 0,
+    "testsSkipped": 0,
+    "syntheticOnly": true,
+    "privateFilePermissionGateNowVerified": true,
+    "realBuyerLookupPerformed": false,
+    "buyerDeliveryPerformed": false,
+    "historicalPolicyApproved": false,
+    "reportFile": "docs/historical-woo-entitlement-linux-posix-qa-20261111.json"
   }
 }
