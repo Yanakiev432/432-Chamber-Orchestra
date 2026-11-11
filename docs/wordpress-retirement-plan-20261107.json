@@ -211,7 +211,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified.",
+  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -428,5 +428,32 @@
     "privateRecoveryPasswordSeparatelyEscrowed": false
   },
   "originalPlanDate": "2026-11-07",
-  "historicalNote20261109": "9 November 2026: the entire original 11-volume (5,645,511,107 bytes) WordPress tar.gz was reconstructed entirely in bounded RAM from the Lenovo encrypted CMS copy; gzip consumed through trailer, all 38,754 tar headers were checksum checked, producing 30,642 regular files, 3,883 directories, 4,229 TAR metadata headers and zero unsafe paths, exactly matching independent Everest source counts and regular file total (6,576,778,451 bytes). All per-volume original source SHA256 and ciphertext SHA256 also passed. No plaintext archive or paid media written to Lenovo. Full isolated WordPress runtime restore still not performed, owner-held portable password escrow still absent, second independently synced cloud backup absent, and production cutover remains blocked."
+  "historicalNote20261109": "9 November 2026: the entire original 11-volume (5,645,511,107 bytes) WordPress tar.gz was reconstructed entirely in bounded RAM from the Lenovo encrypted CMS copy; gzip consumed through trailer, all 38,754 tar headers were checksum checked, producing 30,642 regular files, 3,883 directories, 4,229 TAR metadata headers and zero unsafe paths, exactly matching independent Everest source counts and regular file total (6,576,778,451 bytes). All per-volume original source SHA256 and ciphertext SHA256 also passed. No plaintext archive or paid media written to Lenovo. Full isolated WordPress runtime restore still not performed, owner-held portable password escrow still absent, second independently synced cloud backup absent, and production cutover remains blocked.",
+  "productionSecurityMitigation20261111": {
+    "kind": "PUBLIC_PHPINFO_CONFIGURATION_EXPOSURE",
+    "scope": "432hz-orchestra.com/i.php and www alias",
+    "sourceFileSha256": "9c187470da5b287bf03552bcc36ef74d3a636125aa7e8492f64c3ef89c046ee3",
+    "sourceBytes": 20,
+    "publiclyAccessibleBefore": true,
+    "applied": true,
+    "appliedDate": "2026-11-11",
+    "method": "Pinned-original single-file atomic move from public_html into private, non-webroot quarantine; original preserved",
+    "externalHttpStatusesAfter": {
+      "432hz-orchestra.com": 404,
+      "www.432hz-orchestra.com": 404
+    },
+    "anonymousPhpinfoExposedAfter": false,
+    "mainHomepageStatusAfter": 200,
+    "mainBgStatusAfter": 200,
+    "foundationHomepageStatusAfter": 200,
+    "projectHomepageStatusAfter": 200,
+    "protectedNeighborSentinelsRechecked": 5,
+    "protectedNeighborSentinelsChanged": 0,
+    "apacheHtaccessOrDnsChanged": false,
+    "mysqlOrCheckoutChanged": false,
+    "wordpressStaticCutoverOccurred": false,
+    "reversionAvailable": true,
+    "secretOrPhpinfoBodyContentLogged": false,
+    "note": "Targeted production security maintenance only. The preexisting productionWordPressChanged=false is a legacy cutover-status flag; it does not mean zero security maintenance occurred."
+  }
 }
