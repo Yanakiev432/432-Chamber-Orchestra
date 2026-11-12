@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "gate": "432_WOO_HISTORICAL_BUYER_RETENTION_POLICY_DRAFT_RESEARCHED_NOT_APPROVED",
+  "legalReferences": [
+    {
+      "topic": "BG Accounting Act Art 12",
+      "url": "https://justice.government.bg/home/normdoc/2136697598",
+      "accountingRegistersYears": 10,
+      "otherAccountingCarriersYears": 3,
+      "statutoryClassificationMustBeReviewed": true
+    },
+    {
+      "topic": "BG VAT Act Art 121",
+      "url": "https://lex.caselaw.bg/n/zdds/chl-121/",
+      "fixedAllRecordsYears": null,
+      "periodDependsOnTaxLimitation": true,
+      "vatStatusUnverified": true
+    },
+    {
+      "topic": "GDPR 2016/679 Articles 5,6,13-17,32",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng/",
+      "universalRetentionPeriod": false,
+      "minimizationRequired": true
+    }
+  ],
+  "historicalPermissionRows": 188,
+  "ordersWithPermissions": 12,
+  "productsWithPermissions": 19,
+  "sourceDbTables": 116,
+  "paidFileIdentifiers": 26,
+  "syntheticPosixUnitTestsPassed": 11,
+  "groups": [
+    "accountingTaxOriginals",
+    "purchaseEntitlementEvidence",
+    "siteAuthenticationAndProfiles",
+    "marketingAndAnalyticsMetadata",
+    "customerSupportDecisionLog",
+    "securityAuditLogs",
+    "encryptedDisasterRecovery",
+    "publicEditorialAssets"
+  ],
+  "exactDeletionDatesApproved": false,
+  "buyerClaimsPolicyApproved": false,
+  "dataControllerIdentityConfirmed": false,
+  "ownerApproved": false,
+  "automaticDeletionImplemented": false,
+  "customerDataOrPaidAudioExported": false,
+  "gitContainsOnlyNoPiiDraft": true,
+  "currentCanonicalGatesRemainFalse": [
+    "oldCustomersFulfillmentDecisionApproved",
+    "privacyRetentionAndDeletionPolicyApproved",
+    "finalWrittenOwnerApproval"
+  ]
+}

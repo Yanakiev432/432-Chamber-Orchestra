@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-11",
+  "asOf": "2026-11-12",
   "targetArchitecture": "static Astro-only public website; historical WordPress and WooCommerce removed after authorized retirement",
   "editorialSourceInventory": {
     "observedOriginalPaths": 636,
@@ -211,7 +211,7 @@
   "productionWordPressRemoved": false,
   "productionWordPressChanged": false,
   "provisionalStatus": "BLOCKED",
-  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked. The Nov 11 portable Astro route/media audit verified 146/146 published routes, 46/46 products, 203/216 sitemap paths with 13 deliberately held gmedia routes, 16 candidate aliases, 270 held records including 12 without a public page URL, zero held pages published and no nested private assets. All related cutover approval flags remain false. A fresh 11 Nov production Astro build passed the full candidate QA including 16,993 links, 394 pages and 618 SHA256-pinned release assets. The 623-file dist retains five intentionally withheld config/source files; the new private 618-file ZIP passed complete member readback. Public cutover remains blocked. The 11 Nov WSL2 Ubuntu private historical-entitlement regression passed all 11 tests (including POSIX group/world-readable SQL source rejection), zero skips; customer fulfillment and retention policies remain unapproved.",
+  "note": "2026-11-11: isolated, encrypted complete WordPress/WooCommerce restore from Nov 4 files and Nov 11 SQL/delta PASS, including WordPress and WooCommerce PHP CLI bootstrap. Independent PFX password custody, separately controlled redundant backup, final post-order-cutoff snapshot, historical buyer service, real HTTP and rollback tests, owner-approved file allowlist and written cutover approval remain blocked. Live WordPress unmodified. On 11 November, subsequently, a separate owner-approved production security mitigation moved the original 20-byte /i.php phpinfo() diagnostic file into private quarantine. Both main hostnames now returned HTTP 404; homepage, /bg/, Foundation and Project returned HTTP 200. Five protected neighbor sentinels unchanged. This was not a WordPress retirement cutover. All retirement gating remains blocked. The Nov 11 portable Astro route/media audit verified 146/146 published routes, 46/46 products, 203/216 sitemap paths with 13 deliberately held gmedia routes, 16 candidate aliases, 270 held records including 12 without a public page URL, zero held pages published and no nested private assets. All related cutover approval flags remain false. A fresh 11 Nov production Astro build passed the full candidate QA including 16,993 links, 394 pages and 618 SHA256-pinned release assets. The 623-file dist retains five intentionally withheld config/source files; the new private 618-file ZIP passed complete member readback. Public cutover remains blocked. The 11 Nov WSL2 Ubuntu private historical-entitlement regression passed all 11 tests (including POSIX group/world-readable SQL source rejection), zero skips; customer fulfillment and retention policies remain unapproved. On 12 November, the original RSA-3072 encrypted PFX SHA-256 was verified in OneDrive, but the 384-bit recovery password remains Lenovo-DPAPI-only. Two owner-only scripts and a SHA-256 pinned 23-item 5.65GB external-backup manifest were prepared; no external USB is connected and no owner escrow or second-backup verification is claimed. iCloud canaries remain unsynced; one old closed debug log was safely removed without modifying CloudKit/DB. Buyer privacy/retention policy was researched and drafted, not approved.",
   "hostingRootBoundary": {
     "root": "/home/hzorche/public_html",
     "separateApplicationsDetected": true,
@@ -520,5 +520,37 @@
     "buyerDeliveryPerformed": false,
     "historicalPolicyApproved": false,
     "reportFile": "docs/historical-woo-entitlement-linux-posix-qa-20261111.json"
+  },
+  "ownerEscrowAndIndependentBackupPreparation20261112": {
+    "gate": "432_OFFDEVICE_BACKUP_AND_OWNER_PFX_ESCROW_PREPARATION_COMPLETE_EXECUTION_PENDING",
+    "encryptedPfxInExistingOneDriveSet": true,
+    "encryptedPfxSha256": "96b575abbda907d9e96d0e90a801877ed85a2a3e6b71592c9146f32e4b44b343",
+    "portablePfxPasswordGeneratedBits": 384,
+    "independentOwnerPasswordCustodyConfirmed": false,
+    "ownerLocalEscrowToolPrepared": true,
+    "ownerLocalEscrowToolParsePassed": true,
+    "ownerEscrowRealRunPerformed": false,
+    "ownerVerificationReceiptExists": false,
+    "secondPhysicalUsbCopyPrepared": true,
+    "secondPhysicalUsbCopyPerformed": false,
+    "physicalUsbManifestItems": 23,
+    "physicalUsbManifestTotalBytes": 5650548844,
+    "physicalUsbManifestSha256": "5076f391adce0803be5944d078bad9fbd9789b6a0bc43ed1e3779a0dc51f97d9",
+    "copyScriptAstParsePassed": true,
+    "noExternalDriveNegativeTestFailedClosed": true,
+    "secondIndependentDeviceAttached": false,
+    "iCloudSync20261112FailedTwoCanaries": true,
+    "oldSealedICloudDiagnosticLogBytesSafelyPruned": 1402102057,
+    "iCloudDbCloudKitCacheUntouched": true,
+    "originalFullRuntimeRestore20261111Passed": true,
+    "finalAfterCheckoutSnapshotPending": true,
+    "privacyRetentionPolicyDraftCompleted": true,
+    "privacyControllerAccountantApproval": false,
+    "sourceDocumentation": [
+      "docs/WORDPRESS-INDEPENDENT-BACKUP-OWNER-ACTIONS-20261112.md",
+      "docs/WORDPRESS-HISTORICAL-BUYER-DATA-RETENTION-DRAFT-20261112.md"
+    ],
+    "productionModified": false,
+    "note": "Prepares verified 23-item encrypted off-device copy set and local owner-only PFX recovery procedure. Owner action and independent physical-media verification remain mandatory."
   }
 }
