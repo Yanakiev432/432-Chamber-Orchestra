@@ -24,7 +24,16 @@
       "approvedPublishedAssetCount": 618,
       "currentDeploymentToMainDomain": false
     },
-    "ownerLegalApprovals": false
+    "ownerLegalApprovals": false,
+    "historicalBuyerPrivateService": {
+      "privateAudioVaultOriginals": 26,
+      "bytes": 2180093616,
+      "catalogProductFileRelationships": 80,
+      "oneUseTokenEngineSyntheticTestsPassed": 15,
+      "realBuyerDeliveryDeployed": false,
+      "ownerReissuePolicyApproved": false,
+      "authenticatedRealBuyerEndToEndVerified": false
+    }
   },
   "phases": [
     {
@@ -50,12 +59,17 @@
       "id": "CUSTOMER-P2",
       "priority": 1,
       "task": "Implement approved human-assisted order lookup and protected expiring delivery; validate real buyer entitlement path without publishing any paid original",
-      "status": "PLANNED",
+      "status": "PRIVATE_ENGINE_AND_26_MEDIA_VAULT_PREPARED_NOT_DEPLOYED",
       "owner": "assistant_after_policy",
       "dependencies": [
         "CUSTOMER-P1"
       ],
-      "goNoGo": "No production customer credentials or new automatic grants."
+      "goNoGo": "No production customer credentials or new automatic grants.",
+      "technicalImplementationCompleted": true,
+      "realBuyerAuthenticatedAccessVerified": false,
+      "ownerApprovalBlocked": true,
+      "evidence": "docs/wordpress-historical-buyer-service-implementation-20261112.json",
+      "requiresSupportedServiceRuntime": true
     },
     {
       "id": "BACKUP-P1",

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "checkedLocalDate": "2026-11-12",
+  "gate": "432_PRIVATE_BUYER_DELIVERY_IMPLEMENTED_PRIVATE_26_MEDIA_VAULT_COPIED_CUTOVER_BLOCKED",
+  "phases": {
+    "CUSTOMER-P1": "WAIT_OWNER_ACCOUNTANT_POLICY_AND_MANUAL_OPERATOR",
+    "CUSTOMER-P2": "PRIVATE_ENGINE_AND_CATALOG_READY_NOT_DEPLOYED"
+  },
+  "historicalSource": {
+    "permissionRows": 188,
+    "ordersWithPerms": 12,
+    "distinctPaidMedia": 26,
+    "productDownloadReferences": 80,
+    "productsWithDownloadables": 46,
+    "fromActualWooMetadataAsOf": "2026-11-12",
+    "originalPaidDirectHttpAccessBlocked": true
+  },
+  "privateEverestVault": {
+    "gate": "432_WOO_26_ORIGINAL_AUDIO_PRIVATE_VAULT_COPY_SHA256_PASS",
+    "privateOriginalFiles": 26,
+    "totalBytes": 2180093616,
+    "privateVaultNotInWebroot": true,
+    "directoryMode": "0700",
+    "mediaModes": "0600",
+    "sourceAndDestinationSha256MatchedAll": true,
+    "originalFilesNotModified": true,
+    "privateSourceMapSha256": "32c4fcce702fb93815e252b21a227f70fb9c114143d9f42bf3e4f8e92845540a",
+    "vaultReceiptSha256": null,
+    "independentBackupProvided": false
+  },
+  "privateCatalog": {
+    "gate": "432_80_PRODUCT_FILE_REFERENCES_MAPPED_TO_PRIVATE_26_ORIGINALS_PASS",
+    "productFileRelationships": 80,
+    "products": 46,
+    "downloadIds": 26,
+    "mediaFiles": 26,
+    "privateCatalogSha256": "1b6b24428b6321fa683f00f34597b2a74b7c53c2732c6a9bbb111aa965644c12",
+    "privateReceiptSha256": "c6cf693e62df7bb2292a417fd9ae72c224e477228d13cad671aeda844dc839f7",
+    "buyerPIIIncluded": false
+  },
+  "privateHandoffEngine": {
+    "source": "scripts/historical_buyer_private_delivery.py",
+    "securityTests": "tests/test_historical_buyer_private_delivery.py",
+    "syntheticLinuxTestsPassed": 15,
+    "sourceFilesProtected": true,
+    "needsOwnerSignedOrApprovedPolicy": true,
+    "needsIndividualOrderAndMailboxVerification": true,
+    "requiresExactProductIdAndDownloadIdInPrivateCatalog": true,
+    "refusesExpiredExhaustedRefundedUnverifiedClaims": true,
+    "tokenRandomBits": 256,
+    "tokenMaxSeconds": 3600,
+    "tokenSingleUse": true,
+    "consumedOrRevokedTokenDeleted": true,
+    "bearerTokenNotStoredInLedgerPlaintext": true,
+    "privateLedgerRestricted0600": true,
+    "localReferenceHttpBindsLoopbackOnly": true,
+    "publicEndpointDeployed": false,
+    "realHistoricalBuyerFlowTested": false,
+    "runtimeRequirement": "Supported Linux Python 3.10+; Everest shared host only had Python 3.6 at last check",
+    "noRealBuyerOrderLookupPerformed": true,
+    "noRealPaidAudioExposedToPublicEndpoint": true
+  },
+  "approvalsStillRequired": [
+    "OWNER_BUYER_REISSUE_AND_RETENTION_POLICY",
+    "AUTHENTICATED_REAL_BUYER_DELIVERY_FLOW_QA",
+    "SECURE_PRIVATE_MEDIA_TRANSPORT_TO_SUPPORTED_SERVICE_RUNTIME",
+    "SUPPORTED_PUBLIC_TLS_REVERSE_PROXY_SECURITY_AND_LOG_REDACTION",
+    "INDEPENDENT_PFX_PASSWORD_ESCROW",
+    "SECOND_INDEPENDENT_ENCRYPTED_BACKUP",
+    "FINAL_CUTOVER_AND_ORDER_FREEZE_WRITTEN_APPROVAL"
+  ],
+  "cutoverApproved": false,
+  "productionWordPressChangedByThisPhase": false,
+  "historicalCustomerRecordsChanged": false,
+  "confidentialMediaOrPIIInGit": false
+}
