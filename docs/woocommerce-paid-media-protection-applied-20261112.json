@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dateUtc": "2026-11-12T09:35:22.085267+00:00",
+  "gate": "432_WOO_DIRECT_22_PAID_SOURCE_FILES_HTTP_403_LOCKDOWN_APPLIED",
+  "productionScope": "exactly two previously absent .htaccess files in two WordPress uploads media folders",
+  "protectedOriginalPaidMediaFiles": 22,
+  "originalPaidMediaAlreadyProtected": 4,
+  "finalOriginalPaidMediaDeniedDirectly": 26,
+  "twoHostnameDirectRequestsChecked": 44,
+  "HTTP403Results": 44,
+  "mediaSourceFilesChanged": 0,
+  "customerOrdersChanged": 0,
+  "wooSettingsChanged": false,
+  "mainWordPressApacheRootChanged": false,
+  "noOriginalFilesDeleted": true,
+  "ecommerceForceMethod": "force",
+  "wooRedirectFallbackEnabled": false,
+  "localWooPhpForceReadabilityPreviouslyConfirmedFor26": true,
+  "authenticatedHistoricalBuyerDeliveryEndToEnd": false,
+  "otherSiteAndNestedHomepageHTTPStatusAfter": {
+    "main": 200,
+    "bg": 200,
+    "foundation": 200,
+    "project": 200
+  },
+  "exactRuleSha256": [
+    "54fef38c84bb8d68cc8a6161d629c07f8efb300ab4b05bf85077ba831a2c6664",
+    "f31fad742a200b4e412038c88d62e3130fcb5c6dde1acd62f6306cea9a537f4b"
+  ],
+  "sourceGuardSha256": "b776d7e0d48cfbaabe1d28b60bb1f742946f43011dba4699faeef7f9904b01d1",
+  "unauthorizedApplyFailedClosed": true,
+  "sanitizedNoSourceURLsOrBuyerPII": true,
+  "rollbackRequiresExplicitOwnerApproval": true,
+  "notAWordPressToAstroCutover": true,
+  "fullCutoverApproved": false
+}

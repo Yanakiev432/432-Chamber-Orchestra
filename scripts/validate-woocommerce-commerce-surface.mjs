@@ -2,6 +2,17 @@ import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 const snapshot=JSON.parse(readFileSync("docs/wordpress-commerce-download-surface-20261107.json","utf8"));
 const live=JSON.parse(readFileSync("docs/woocommerce-paid-media-live-exposure-20261112.json","utf8"));
+const hardened=JSON.parse(readFileSync("docs/woocommerce-paid-media-protection-applied-20261112.json","utf8"));
+assert.equal(hardened.gate,"432_WOO_DIRECT_22_PAID_SOURCE_FILES_HTTP_403_LOCKDOWN_APPLIED");
+assert.deepEqual([hardened.protectedOriginalPaidMediaFiles,hardened.originalPaidMediaAlreadyProtected,hardened.finalOriginalPaidMediaDeniedDirectly],[22,4,26]);
+assert.deepEqual([hardened.twoHostnameDirectRequestsChecked,hardened.HTTP403Results],[44,44]);
+assert.equal(hardened.mediaSourceFilesChanged,0);
+assert.equal(hardened.customerOrdersChanged,0);
+assert.equal(hardened.ecommerceForceMethod,"force");
+assert.equal(hardened.wooRedirectFallbackEnabled,false);
+assert.equal(hardened.authenticatedHistoricalBuyerDeliveryEndToEnd,false);
+assert.equal(hardened.notAWordPressToAstroCutover,true);
+
 assert.equal(live.gate,"432_WOO_22_ORIGINAL_PAID_MEDIA_ANONYMOUS_HTTP_EXPOSURE_CONFIRMED_REMEDIATION_DRY_RUN_PASS_NOT_APPLIED");
 assert.equal(live.checkedLocalDate,"2026-11-12");
 assert.deepEqual([live.rawProductDownloadReferences,live.distinctOriginalPaidMediaFiles],[80,26]);
@@ -58,7 +69,7 @@ assert.equal(snapshot.productionChanged,false);assert.equal(snapshot.productionC
 assert.equal(snapshot.sourceDownloadUrlsIncluded,false);
 const quarantine=JSON.parse(readFileSync("docs/wordpress-remaining-media-review-20261107.json","utf8"));
 assert.equal(quarantine.remaining,270);assert.equal(quarantine.mp3Subclasses.publicPricedProductMp3Pages,4);
-console.log(JSON.stringify({gate:mode==="report"?"WOOCOMMERCE_PAID_MEDIA_SURFACE_SNAPSHOT_PASS":"WOOCOMMERCE_CUTOVER_BLOCKED",
-  products:46,publiclyAccessiblePaidMedia:22,protectedMedia:4,downloadMethodVerified:snapshot.deliveryMethodVerified,downloadMethod:snapshot.deliveryMethod,
-  buyerEntitlementQA:snapshot.validPurchaserFlowVerified,permissionsRows:snapshot.permissionTableAggregates.totalPermissionRows,redirectFallbackEnabled:snapshot.redirectFallbackEnabled,originalProductionModified:false,liveSnapshotDate:live.checkedLocalDate,liveTwoHostnameAnonymousSourceFileProbes:live.bothCanonicalAndWwwHostMediaProbes.count,liveRemediationApplied:false}));
-if(mode==="cutover"){console.error("CUTOVER BLOCKED: 22 original paid-product files are still directly reachable; valid-buyer entitlements remain unverified although redirect fallback is disabled.");process.exitCode=2;}
+console.log(JSON.stringify({gate:mode==="report"?"WOOCOMMERCE_PAID_MEDIA_DIRECT_ACCESS_BLOCKED":"WOOCOMMERCE_CUTOVER_BLOCKED",
+  products:46,beforeFixAnonymouslyAccessiblePaidMedia:22,currentlyProtectedPaidMedia:26,downloadMethodVerified:snapshot.deliveryMethodVerified,downloadMethod:snapshot.deliveryMethod,
+  buyerEntitlementQA:snapshot.validPurchaserFlowVerified,permissionsRows:snapshot.permissionTableAggregates.totalPermissionRows,redirectFallbackEnabled:snapshot.redirectFallbackEnabled,originalProductionModified:false,preFixPublicFiles:live.exposedOriginalWav+live.exposedOriginalMp3,currentPublicDirectPaidFiles:0,currentPaidMediaDirectHttp403:hardened.finalOriginalPaidMediaDeniedDirectly,postFixTwoHostnameHttp403:hardened.HTTP403Results,liveRemediationApplied:true,realBuyerEntitlementDeliveryVerified:hardened.authenticatedHistoricalBuyerDeliveryEndToEnd}));
+if(mode==="cutover"){console.error("CUTOVER BLOCKED: exact 22-file direct-media lockdown applied, but historical buyer authenticated entitlements and post-Astro shared-host file isolation remain unverified.");process.exitCode=2;}

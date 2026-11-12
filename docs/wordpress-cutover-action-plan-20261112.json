@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "gate": "432_WORDPRESS_RETIREMENT_EXECUTION_PLAN_PRODUCTION_CUTOVER_PENDING",
+  "current": {
+    "productionWooCommerceActive": true,
+    "directSourceMediaProtection": {
+      "status": "COMPLETE",
+      "exposedBefore": 22,
+      "nowHttp403": 26,
+      "verifiedPairRequests": 44,
+      "realBuyerTokenFlowStatus": "NOT_PROVEN"
+    },
+    "recovery": {
+      "isolatedFullRestore": "PASS",
+      "fullBackupOriginalVolumes": 11,
+      "originalFiles": 30642,
+      "sqlTables": 116,
+      "offDevicePfxEscrow": "PENDING_OWNER",
+      "secondIndependentBackup": "PENDING_EXTERNAL_DEVICE_OR_PROVIDER"
+    },
+    "astro": {
+      "fullBuild": "PASS",
+      "approvedPublishedAssetCount": 618,
+      "currentDeploymentToMainDomain": false
+    },
+    "ownerLegalApprovals": false
+  },
+  "phases": [
+    {
+      "id": "SEC-P0",
+      "priority": 0,
+      "task": "Block anonymous access to all 26 paid original media",
+      "status": "DONE",
+      "owner": "assistant",
+      "evidence": "docs/woocommerce-paid-media-protection-applied-20261112.json",
+      "dependencies": [],
+      "productionChanged": true
+    },
+    {
+      "id": "CUSTOMER-P1",
+      "priority": 1,
+      "task": "Approve historical buyer reissue limits and privacy retention categories; appoint operator",
+      "status": "WAIT_OWNER_AND_ACCOUNTANT",
+      "owner": "owner",
+      "dependencies": [],
+      "goNoGo": "No automatic reissue or deletion before explicit signed policy."
+    },
+    {
+      "id": "CUSTOMER-P2",
+      "priority": 1,
+      "task": "Implement approved human-assisted order lookup and protected expiring delivery; validate real buyer entitlement path without publishing any paid original",
+      "status": "PLANNED",
+      "owner": "assistant_after_policy",
+      "dependencies": [
+        "CUSTOMER-P1"
+      ],
+      "goNoGo": "No production customer credentials or new automatic grants."
+    },
+    {
+      "id": "BACKUP-P1",
+      "priority": 1,
+      "task": "Store 384-bit PFX password in independent off-Lenovo custody and perform local reentry proof",
+      "status": "WAIT_OWNER",
+      "owner": "owner",
+      "dependencies": [],
+      "existingOwnerTool": "OWNER-432-PFX-OFF-DEVICE-ESCROW-20261112.ps1",
+      "secretNeverInChat": true
+    },
+    {
+      "id": "BACKUP-P2",
+      "priority": 1,
+      "task": "Make 23-item ~5.65GB encrypted archive copy to independent USB/SD or independent cloud and re-read all SHA256",
+      "status": "WAIT_EXTERNAL_STORAGE",
+      "owner": "owner_to_attach_device_then_assistant",
+      "dependencies": [],
+      "existingOwnerTool": "COPY-VERIFY-432-RECOVERY-TO-INDEPENDENT-USB-20261112.ps1"
+    },
+    {
+      "id": "RELEASE-P1",
+      "priority": 2,
+      "task": "Approve 16 explicit legacy redirects and 13 gallery exclusions; package reviewed Apache denylist and allowlist with neighboring vhost isolation",
+      "status": "PREPARED_NOT_APPROVED",
+      "owner": "owner_and_assistant",
+      "dependencies": [],
+      "evidence": "docs/wordpress-route-disposition-20261111.json"
+    },
+    {
+      "id": "RELEASE-P2",
+      "priority": 2,
+      "task": "Rehearse exact main-domain Apache cutover and rollback while keeping foundation and 432project unchanged",
+      "status": "PLANNED",
+      "owner": "assistant",
+      "dependencies": [
+        "RELEASE-P1"
+      ],
+      "goNoGo": "Main and nested vhosts, mail and media must remain recoverable."
+    },
+    {
+      "id": "RELEASE-P3",
+      "priority": 3,
+      "task": "Obtain written owner approval for exact change scope, rollback, downtime policy, orders stop and final archive",
+      "status": "WAIT_OWNER",
+      "owner": "owner",
+      "dependencies": [
+        "CUSTOMER-P2",
+        "BACKUP-P1",
+        "BACKUP-P2",
+        "RELEASE-P2"
+      ]
+    },
+    {
+      "id": "RELEASE-P4",
+      "priority": 3,
+      "task": "Freeze WooCommerce new orders, verify zero post-freeze transactions, create final encrypted SQL and wp-content snapshot",
+      "status": "PENDING_NOT_PERFORMED",
+      "owner": "assistant",
+      "dependencies": [
+        "RELEASE-P3"
+      ],
+      "goNoGo": "Final hash and rehydration required before changing main site."
+    },
+    {
+      "id": "RELEASE-P5",
+      "priority": 4,
+      "task": "Replace only explicit orchestra-root allowlist with 618 verified Astro assets and owner-reviewed Apache config; live TLS/SEO/redirect/paid-media tests; rollback immediately if unexpected",
+      "status": "PENDING_NOT_PERFORMED",
+      "owner": "assistant",
+      "dependencies": [
+        "RELEASE-P4"
+      ]
+    },
+    {
+      "id": "RETENTION-P1",
+      "priority": 5,
+      "task": "Preserve required accounting and historic buyer encrypted records in restricted archive; remove WordPress only after independent restore, buyer-support and legal retention accepted",
+      "status": "PENDING_NOT_PERFORMED",
+      "owner": "owner_and_assistant",
+      "dependencies": [
+        "RELEASE-P5"
+      ],
+      "goNoGo": "Never delete shared public_html or nested foundation/432project directories."
+    }
+  ],
+  "cutoverConditionsRemain": 12,
+  "cutoverApproved": false,
+  "protectedMediaSourceFileNamesOrUrlsIncluded": false,
+  "privateKeyMaterialOrPIIIncluded": false
+}
