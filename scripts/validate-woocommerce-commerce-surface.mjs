@@ -1,6 +1,22 @@
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 const snapshot=JSON.parse(readFileSync("docs/wordpress-commerce-download-surface-20261107.json","utf8"));
+const live=JSON.parse(readFileSync("docs/woocommerce-paid-media-live-exposure-20261112.json","utf8"));
+assert.equal(live.gate,"432_WOO_22_ORIGINAL_PAID_MEDIA_ANONYMOUS_HTTP_EXPOSURE_CONFIRMED_REMEDIATION_DRY_RUN_PASS_NOT_APPLIED");
+assert.equal(live.checkedLocalDate,"2026-11-12");
+assert.deepEqual([live.rawProductDownloadReferences,live.distinctOriginalPaidMediaFiles],[80,26]);
+assert.deepEqual([live.exposedOriginalWav,live.exposedOriginalMp3,live.alreadyDeniedOriginalWav],[20,2,4]);
+assert.deepEqual([live.bothCanonicalAndWwwHostMediaProbes.count,live.bothCanonicalAndWwwHostMediaProbes.status206],[44,44]);
+assert.equal(live.forceDownload.method,"force");
+assert.equal(live.forceDownload.redirectFallback,"no");
+assert.equal(live.forceDownload.localPhysicalOriginalMediaReadableByPhp,26);
+assert.equal(live.forceDownload.authenticatedRealBuyerDeliveryFlowTested,false);
+assert.equal(live.privateMitigationDraft.exactFiles,22);
+assert.equal(live.privateMitigationDraft.unrelatedFilesCheckedWithPhpPCRE,1451);
+assert.equal(live.privateMitigationDraft.appliedToProduction,false);
+assert.equal(live.privateMitigationDraft.unauthorizedApplyWithoutExactAuthorizationFailedClosed,true);
+assert.equal(live.productionWordPressModified,false);
+
 const mode=process.argv.find(x=>x.startsWith("--mode="))?.split("=")[1]||"report";
 assert.ok(["report","cutover"].includes(mode),"Only report and cutover modes are supported");
 assert.equal(snapshot.schemaVersion,1);
@@ -44,5 +60,5 @@ const quarantine=JSON.parse(readFileSync("docs/wordpress-remaining-media-review-
 assert.equal(quarantine.remaining,270);assert.equal(quarantine.mp3Subclasses.publicPricedProductMp3Pages,4);
 console.log(JSON.stringify({gate:mode==="report"?"WOOCOMMERCE_PAID_MEDIA_SURFACE_SNAPSHOT_PASS":"WOOCOMMERCE_CUTOVER_BLOCKED",
   products:46,publiclyAccessiblePaidMedia:22,protectedMedia:4,downloadMethodVerified:snapshot.deliveryMethodVerified,downloadMethod:snapshot.deliveryMethod,
-  buyerEntitlementQA:snapshot.validPurchaserFlowVerified,permissionsRows:snapshot.permissionTableAggregates.totalPermissionRows,redirectFallbackEnabled:snapshot.redirectFallbackEnabled,originalProductionModified:false}));
+  buyerEntitlementQA:snapshot.validPurchaserFlowVerified,permissionsRows:snapshot.permissionTableAggregates.totalPermissionRows,redirectFallbackEnabled:snapshot.redirectFallbackEnabled,originalProductionModified:false,liveSnapshotDate:live.checkedLocalDate,liveTwoHostnameAnonymousSourceFileProbes:live.bothCanonicalAndWwwHostMediaProbes.count,liveRemediationApplied:false}));
 if(mode==="cutover"){console.error("CUTOVER BLOCKED: 22 original paid-product files are still directly reachable; valid-buyer entitlements remain unverified although redirect fallback is disabled.");process.exitCode=2;}

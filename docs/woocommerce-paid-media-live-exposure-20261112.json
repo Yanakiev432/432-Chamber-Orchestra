@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "checkedLocalDate": "2026-11-12",
+  "gate": "432_WOO_22_ORIGINAL_PAID_MEDIA_ANONYMOUS_HTTP_EXPOSURE_CONFIRMED_REMEDIATION_DRY_RUN_PASS_NOT_APPLIED",
+  "source": "Read-only current WooCommerce 7.0.2 product _downloadable_files metadata and independent 1-byte anonymous HTTPS probes",
+  "publishedProductMetaRows": 46,
+  "rawProductDownloadReferences": 80,
+  "distinctOriginalPaidMediaFiles": 26,
+  "exposedOriginalWav": 20,
+  "exposedOriginalMp3": 2,
+  "alreadyDeniedOriginalWav": 4,
+  "originalPaidMediaAnonHeadResults": {
+    "200": 22,
+    "403": 4
+  },
+  "originalPaidMediaAnonRangeGetResults": {
+    "206": 22,
+    "403": 4
+  },
+  "bothCanonicalAndWwwHostMediaProbes": {
+    "count": 44,
+    "status206": 44,
+    "status403": 0
+  },
+  "forceDownload": {
+    "currentLiveWooCommerceVersion": "7.0.2",
+    "method": "force",
+    "redirectFallback": "no",
+    "originalMediaReferencesResolvedByWordPressWooPhpHandler": 80,
+    "localPhysicalOriginalMediaReadableByPhp": 26,
+    "remoteFilesUnexpected": 0,
+    "localFilesMissing": 0,
+    "localFilesUnreadable": 0,
+    "authenticatedRealBuyerDeliveryFlowTested": false
+  },
+  "privateMitigationDraft": {
+    "exactFiles": 22,
+    "uploadDirectories": 2,
+    "targetFilesPerDirectory": [
+      6,
+      16
+    ],
+    "existingHtaccessInTargetDirectories": 0,
+    "unrelatedExistingFilesMatchedByRules": 0,
+    "unrelatedFilesCheckedWithPhpPCRE": 1451,
+    "apacheRuleCandidateKind": "FilesMatch anchored to precisely listed original paid-media filenames",
+    "privateCandidateFiles": 2,
+    "privateCandidateReceiptSha256": "3e9426c0713444274a69c41270fa55746572eceda3608f8f53de3eacd61b2a29",
+    "privatePCREVerificationReceiptSha256": "cd0acaeefbe59cc05d470593f209ad16bc41b38ad436529dec30665832209b16",
+    "privateWooLocalParseReceiptSha256": "a3882eca6e0700f64a3e54c45a4726d0837f4ad66fdb761d5569cc9f8ea81fa2",
+    "privatePublicSurfaceReceiptSha256": "a4bc96f8901a19db189abdb716d125c4cf183e477aeddabbcac94e099bc36ff9",
+    "privateGuardScriptSha256": "b776d7e0d48cfbaabe1d28b60bb1f742946f43011dba4699faeef7f9904b01d1",
+    "privateGuardDryRunPassed": true,
+    "unauthorizedApplyWithoutExactAuthorizationFailedClosed": true,
+    "appliedToProduction": false,
+    "originalPaidMediaOrCustomerRecordsModified": false,
+    "ownerExplicitApprovalRequired": true
+  },
+  "officialWooReference": "https://woocommerce.com/document/digital-downloadable-product-handling/",
+  "sourceProductPathsOrFilesIncluded": false,
+  "originalPaidAudioIncluded": false,
+  "buyerPIIIncluded": false,
+  "productionWordPressModified": false,
+  "cutoverApproved": false,
+  "remainingProductionCutoverGatesDoNotChange": true
+}
