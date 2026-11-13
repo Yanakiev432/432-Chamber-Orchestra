@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "gate": "432_RELEASE_P1_PRIVATE_V6_LOCKED_P2_REAL_ISOLATED_HTTPS_ROLLBACK_PASS_CUTOVER_BLOCKED",
+  "rejectedV5": {
+    "sha256": "18faf2bc41dddaeb9d332a986dfa6322cb5201fdd9ba1e0c7ed6cbcfaafb3826",
+    "reason": "Apache mod_rewrite percent expansion damaged pre-encoded Cyrillic destinations",
+    "privateQuarantine": true,
+    "neverDeploy": true
+  },
+  "apacheV6": {
+    "sha256": "ae9148bec5c7b701d6699c191c37d2f5505766c208f2836d75f73c7d29eee907",
+    "bytes": 4864,
+    "sourceV4Sha256": "8fbb14f21ec3df1444f8203508181008e81f69f9b382b6b41370d902139142ae",
+    "sourceLegacyRoutesSha256": "5a1d41ac70b717959908912613c4cb63363ed9ab04aacc8ae767a8899ff6b36a",
+    "legacyRouteCount": 16,
+    "newRuleCount": 15,
+    "excludedGalleries": 13,
+    "temporaryRedirectCode": 302,
+    "ownerRedirectApproval": false,
+    "privateOnly": true
+  },
+  "realIsolatedHttpsRehearsal": {
+    "apache": "Apache/2.4.58",
+    "protocol": "HTTPS",
+    "localhostOnly": true,
+    "switch": "V4->V6->V4",
+    "totalHttpRequests": 152,
+    "correctRedirects": 32,
+    "excludedGallery404": 26,
+    "forbiddenMediaPhp403": 16,
+    "neighborSiteChecks": 9,
+    "baselineAndRollbackChecks": 62,
+    "originalV4RestoredByteIdentical": true,
+    "receiptSha256": "606c2f1f86d37c8939689d815e546a2e0f03106e884645abc0337e39f2aad1f7",
+    "actualProductionRollbackVerified": false
+  },
+  "privateEverestRelease": {
+    "astroFiles": 618,
+    "zipSha256": "9112131bc719c3e80e68d5632a7836c83158d9e06143d66778d07cf51bb30a2a",
+    "zipBytes": 129488633,
+    "sortedAssetManifestSha256": "d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965",
+    "privatePacketReceiptSha256": "7d9a36598dc99f561d3cbdb812573ba018bfa1177218d873540a00411a08b27b",
+    "liveWordPressHtaccessSha256": "add4747dda78b4663a4db7deb815243754b0ab7f884c1ca265a439dc216e06cb",
+    "liveWordPressIndexPhpSha256": "eea9347b1e266ca5407b92633958c148dbfebea307e511a3a226ea61828e2eba",
+    "sixNeighborDirectoriesPresent": true
+  },
+  "status": {
+    "RELEASE-P1": "PRIVATE_PACKAGE_READY_ROUTE_OWNER_APPROVAL_PENDING",
+    "RELEASE-P2": "REAL_ISOLATED_HTTPS_APACHE_REHEARSAL_PASS_LIVE_SERVER_PENDING",
+    "RELEASE-P3": "DEPENDENCIES_PENDING",
+    "RELEASE-P4": "NOT_PERFORMED",
+    "RELEASE-P5": "NOT_PERFORMED"
+  },
+  "actualProductionWordPressChanged": false,
+  "ownerCutoverApproved": false,
+  "remainingCutoverConditions": 12,
+  "sourceMediaOrBuyerDataIncluded": false
+}

@@ -52,6 +52,20 @@ assert.equal(plan.hostingRootBoundary.apacheCutoverRehearsal.securityCases,40);
 assert.equal(plan.hostingRootBoundary.apacheCutoverRehearsal.securityCasesPassed,40);
 assert.equal(plan.hostingRootBoundary.apacheCutoverRehearsal.candidateSha256,"8fbb14f21ec3df1444f8203508181008e81f69f9b382b6b41370d902139142ae");
 assert.equal(plan.hostingRootBoundary.apacheCutoverRehearsal.appliedToProduction,false);
+
+const v6=read("docs/wordpress-apache-v6-private-release-packet-20261113.json");
+assert.equal(v6.gate,"432_RELEASE_P1_PRIVATE_V6_LOCKED_P2_REAL_ISOLATED_HTTPS_ROLLBACK_PASS_CUTOVER_BLOCKED");
+assert.equal(v6.apacheV6.sha256,"ae9148bec5c7b701d6699c191c37d2f5505766c208f2836d75f73c7d29eee907");
+assert.equal(v6.apacheV6.ownerRedirectApproval,false);
+assert.equal(v6.realIsolatedHttpsRehearsal.totalHttpRequests,152);
+assert.equal(v6.realIsolatedHttpsRehearsal.originalV4RestoredByteIdentical,true);
+assert.equal(v6.realIsolatedHttpsRehearsal.actualProductionRollbackVerified,false);
+assert.equal(v6.privateEverestRelease.astroFiles,618);
+assert.equal(v6.privateEverestRelease.sortedAssetManifestSha256,"d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965");
+assert.equal(plan.apacheV6ReleaseAndRehearsal20261113.realMainDomainApacheReplaced,false);
+assert.equal(plan.apacheV6ReleaseAndRehearsal20261113.ownerApprovedAllRedirects,false);
+assert.equal(plan.apacheV6ReleaseAndRehearsal20261113.ownerApprovedExactProductionFileMoveAllowlist,false);
+
 assert.equal(plan.hostingRootBoundary.apacheCutoverRehearsal.realProductionApacheAcceptancePerformed,false);
 assert.equal(plan.historicalBuyerOfflineSupport.permissionRows,188);
 assert.equal(plan.historicalBuyerOfflineSupport.archivedCompletedOrdersWithDownloadPermissions,12);

@@ -33,6 +33,16 @@
       "realBuyerDeliveryDeployed": false,
       "ownerReissuePolicyApproved": false,
       "authenticatedRealBuyerEndToEndVerified": false
+    },
+    "apacheV6Release": {
+      "privateBundleOnEverest": true,
+      "approvedAstroStaticAssets": 618,
+      "exactRedirectsPrepared": 16,
+      "correctRealApacheHttpsRequests": 152,
+      "temporaryRedirectStatus": 302,
+      "actualProductionCutover": false,
+      "ownerApprovalForRedirects": false,
+      "nextPrecondition": "OWNER_REVIEW_ALIAS_DESTINATIONS_AND_PROTECTED_SCOPE"
     }
   },
   "phases": [
@@ -94,21 +104,32 @@
       "id": "RELEASE-P1",
       "priority": 2,
       "task": "Approve 16 explicit legacy redirects and 13 gallery exclusions; package reviewed Apache denylist and allowlist with neighboring vhost isolation",
-      "status": "PREPARED_NOT_APPROVED",
+      "status": "PRIVATE_V6_AND_618_RELEASE_PACKET_READY_OWNER_APPROVAL_PENDING",
       "owner": "owner_and_assistant",
       "dependencies": [],
-      "evidence": "docs/wordpress-route-disposition-20261111.json"
+      "evidence": "docs/wordpress-apache-v6-private-release-packet-20261113.json",
+      "privatePackageOnEverestReady": true,
+      "exactLegacyRedirectsPrepared": 16,
+      "excludedGalleriesRetained": 13,
+      "privateV6Sha256": "ae9148bec5c7b701d6699c191c37d2f5505766c208f2836d75f73c7d29eee907",
+      "ownerApproved": false
     },
     {
       "id": "RELEASE-P2",
       "priority": 2,
       "task": "Rehearse exact main-domain Apache cutover and rollback while keeping foundation and 432project unchanged",
-      "status": "PLANNED",
+      "status": "REAL_ISOLATED_APACHE_152_HTTPS_SWITCH_AND_ROLLBACK_PASS_REAL_HOST_PENDING",
       "owner": "assistant",
       "dependencies": [
         "RELEASE-P1"
       ],
-      "goNoGo": "Main and nested vhosts, mail and media must remain recoverable."
+      "goNoGo": "Main and nested vhosts, mail and media must remain recoverable.",
+      "localRealApacheVersion": "2.4.58",
+      "httpRequestsPassed": 152,
+      "exactV4RestoredAfterRollback": true,
+      "productionVhostTransactionRehearsed": false,
+      "privateProofSha256": "606c2f1f86d37c8939689d815e546a2e0f03106e884645abc0337e39f2aad1f7",
+      "ownerCutoverApprovalPending": true
     },
     {
       "id": "RELEASE-P3",

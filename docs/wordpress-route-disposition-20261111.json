@@ -189,5 +189,19 @@
   "migrationGateAllPublicLegacyLinksAndRedirectsReviewed": false,
   "migrationGateExcludedMediaAndUnreviewedFilesDenylistValidated": false,
   "migrationGateNonTargetSitesIsolationAuditApproved": false,
-  "caveat": "This is a proposed file-by-file route disposition audit. Neither Apache rewrites nor redirects have been deployed."
+  "caveat": "This is a proposed file-by-file route disposition audit. Neither Apache rewrites nor redirects have been deployed. 13 Nov V6 corrects Cyrillic redirect encoding; real isolated Apache 2.4 HTTPS fixture passed 152/152 switch+rollback requests, but neither owner-approved redirects nor live cPanel change was performed.",
+  "technicalApacheV6_20261113": {
+    "gate": "432_16_LEGACY_ALIASES_REAL_APACHE_HTTPS_REHEARSAL_PASS_OWNER_APPROVAL_PENDING",
+    "candidateV6Sha256": "ae9148bec5c7b701d6699c191c37d2f5505766c208f2836d75f73c7d29eee907",
+    "rejectedV5Sha256": "18faf2bc41dddaeb9d332a986dfa6322cb5201fdd9ba1e0c7ed6cbcfaafb3826",
+    "rejectedV5Reason": "Pre-percent-encoded Cyrillic redirect destinations were corrupted by mod_rewrite",
+    "realIsolatedApacheHttpsTests": 152,
+    "temporaryRedirects302": 16,
+    "newRedirects": 15,
+    "exclusionsRetained404": 13,
+    "ownerApprovalsStillMissing": true,
+    "sharedHostProductionDeployed": false,
+    "privateReleasePacketReceiptSha256": "7d9a36598dc99f561d3cbdb812573ba018bfa1177218d873540a00411a08b27b",
+    "report": "docs/wordpress-apache-v6-private-release-packet-20261113.json"
+  }
 }
