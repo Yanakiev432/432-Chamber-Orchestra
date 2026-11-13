@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "gate": "432_OWNER_P4_FINAL_POSTFREEZE_CAPTURE_APPROVAL",
+  "approvedByOwner": false,
+  "allCheckoutChannelsBlocked": false,
+  "inflightPaymentsReconciled": false,
+  "paymentWebhooksDrained": false,
+  "historicalBuyersPolicyApproved": false,
+  "independentFullEncryptedBackupVerified": false,
+  "offLenovoPfxPasswordEscrowVerified": false,
+  "exactWebrootScopeAndRollbackApproved": false,
+  "finalP4CaptureApproved": false,
+  "approvedAtUtc": null,
+  "frozenRootHtaccessSha256": null,
+  "note": "TEMPLATE ONLY. NEVER PUT AN APPROVED OR SIGNED VERSION IN GIT. Owner and operator must independently check real preconditions and store actual attestation 0600 in private Everest staging. Boolean fields are human declarations, not cryptographic verification."
+}

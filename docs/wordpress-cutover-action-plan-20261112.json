@@ -71,6 +71,19 @@
       "previewCheckpointNotFinal": true,
       "ownerOrderFreezeStillBlocked": true,
       "currentFinalBackupGatePass": false
+    },
+    "finalP4ArchiveOwnerGate20261113": {
+      "gate": "432_FINAL_ARCHIVE_PREPARED_NOT_AUTHORIZED",
+      "preflightPass": true,
+      "productionSourceReadOnly": true,
+      "sourceFullArchiveScriptReady": true,
+      "scopeRootEntries": 22,
+      "protectedNeighborDirsExcluded": 6,
+      "liveShopOrderCount": 28,
+      "originalHistoricalDownloadPermissions": 188,
+      "finalSnapshotCreated": false,
+      "ownerConsentOrEvidenceProvided": false,
+      "postFreezeActivityProvedStable": false
     }
   },
   "phases": [
@@ -192,7 +205,7 @@
       "id": "RELEASE-P4",
       "priority": 3,
       "task": "Freeze WooCommerce new orders, verify zero post-freeze transactions, create final encrypted SQL and wp-content snapshot",
-      "status": "PARTIAL_PREFREEZE_ENCRYPTED_CHECKPOINT_OFFHOST_PASS_FINAL_FREEZE_AND_CAPTURE_PENDING",
+      "status": "PREFREEZE_CMS_SNAPSHOT_OFFHOST_PASS_FULL_FINAL_CMS_RUNNER_GUARDED_READY_OWNER_FREEZE_PENDING",
       "owner": "assistant",
       "dependencies": [
         "RELEASE-P3"
@@ -207,7 +220,17 @@
       "ordersFrozen": false,
       "ownerFinalCutoverApprovalGranted": false,
       "independentKeyEscrowAndSecondFullArchiveVerified": false,
-      "evidence": "docs/wordpress-prefreeze-cms-checkpoint-20261113.json"
+      "evidence": "docs/wordpress-prefreeze-cms-checkpoint-20261113.json",
+      "finalEncryptedCmsCaptureRunnerInstalled": true,
+      "finalEncryptedCmsCaptureSource": "scripts/capture-final-after-freeze-cms-20261113.sh",
+      "preflightReadOnlyPassed": true,
+      "liveShopOrderPostsAtPreflight": 28,
+      "liveHistoricalDownloadGrantsAtPreflight": 188,
+      "manualOwnerApprovalReceived": false,
+      "postFreezeOrderSnapshotCaptured": false,
+      "fullEncryptedFilesCapturedAfterFreeze": false,
+      "ownerPermissionsAndEscrowStillBlocked": true,
+      "operatorInstructions": "docs/WORDPRESS-RELEASE-P4-FINAL-CAPTURE-OPERATOR-RUNBOOK-20261113.md"
     },
     {
       "id": "RELEASE-P5",
