@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-11-13",
+  "gate": "432_20261113_ENCRYPTED_SQL_AND_WPCONTENT_DELTA_PREFREEZE_COPIED_OFFHOST_SHA256_PASS",
+  "sourceHost": "Everest/SuperHosting shared-host WordPress",
+  "backupScope": "PRE-FREEZE SQL plus wp-content files changed since 2026-11-07, not a full independent archive",
+  "originalFullArchiveRequiredForRestore": true,
+  "encryptedCMS": {
+    "algorithm": "AES-256-CBC via CMS EnvelopedData",
+    "recipientCertificateSHA256Fingerprint": "F7:54:9D:58:1C:91:D4:E1:20:64:91:A1:64:4F:2F:CE:1F:69:DC:E7:96:B4:F5:B0:02:D0:F7:02:00:47:25:47",
+    "sql": {
+      "name": "432-SQL-20261113-PREFREEZE.cms.bin",
+      "bytes": 2624977,
+      "sha256": "33523218cae6b657457a4477b972a22d3c4a0c20af18ea14a26e8b12b078bae2"
+    },
+    "changedWpContent": {
+      "name": "432-WPCONTENT-20261113-PREFREEZE.cms.bin",
+      "bytes": 1018961,
+      "sha256": "9314c3407e9ac79043ffef52ffff102646173e42ccde8f093c83d371d89efdf0"
+    },
+    "allEncryptedFilesDownloadedEverestToLenovoWithSHA256Verified": true,
+    "SQLPlaintextNeverWrittenToBackupDirectory": true,
+    "originalMediaPlaintextNeverWrittenToBackupDirectory": true,
+    "opensslCMSStructuresVerified": true,
+    "recipientPrivateKeyTransferredToHost": false,
+    "credentialOrBuyerDataInRepo": false,
+    "CMSDecryptionOfThisNewCheckpointNotPerformed": true
+  },
+  "liveSourceCounters": {
+    "shopOrderPostsBefore": 28,
+    "shopOrderPostsAfter": 28,
+    "changedWpContentFilesBefore": 76,
+    "changedWpContentFilesAfter": 76,
+    "ordersIntakeEnabledAtCapture": true,
+    "observationDoesNotProveNoInFlightOrders": true
+  },
+  "privateSourceReceipt": {
+    "gate": "432_20261113_ENCRYPTED_SQL_AND_WPCONTENT_DELTA_PREFREEZE_ONLY",
+    "sha256": "ca30dad043a290efbbb474878bae30d950981da42d6547e0d6b023d4b31dee7c",
+    "sourceStoredNonWebrootOnEverest": true,
+    "encryptedFilesAndReceiptCopiedToLenovo": true
+  },
+  "script": "scripts/create-prefreeze-cms-checkpoint-20261113.sh",
+  "finalCutoverGateStatus": {
+    "finalFreshBackupAfterOrdersStopped": false,
+    "independentFullEncryptedArchiveBackupVerified": false,
+    "portablePasswordIndependentEscrowVerified": false,
+    "oldBuyerRetentionAndServiceOwnerApproved": false,
+    "allCutoverConditionsPass": false,
+    "canonicalRemainingCutoverBlockers": 12
+  },
+  "productionWordPressFilesOrDBModifiedByCheckpoint": false,
+  "productionAstroCutoverPerformed": false
+}

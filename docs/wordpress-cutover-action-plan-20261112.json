@@ -63,6 +63,14 @@
       "hardSigkillIndependentProcessRecoveryScenariosPassed": 7,
       "simulatedOnly": true,
       "liveCutoverAuthorized": false
+    },
+    "prefreezeCmsCheckpoint20261113": {
+      "encryptedSqlAndMediaDeltaCopiedToLenovo": true,
+      "sourceCmsRecipientPinned": true,
+      "originalSqlAndAudioNotCopiedUnencrypted": true,
+      "previewCheckpointNotFinal": true,
+      "ownerOrderFreezeStillBlocked": true,
+      "currentFinalBackupGatePass": false
     }
   },
   "phases": [
@@ -184,12 +192,22 @@
       "id": "RELEASE-P4",
       "priority": 3,
       "task": "Freeze WooCommerce new orders, verify zero post-freeze transactions, create final encrypted SQL and wp-content snapshot",
-      "status": "PENDING_NOT_PERFORMED",
+      "status": "PARTIAL_PREFREEZE_ENCRYPTED_CHECKPOINT_OFFHOST_PASS_FINAL_FREEZE_AND_CAPTURE_PENDING",
       "owner": "assistant",
       "dependencies": [
         "RELEASE-P3"
       ],
-      "goNoGo": "Final hash and rehydration required before changing main site."
+      "goNoGo": "Final hash and rehydration required before changing main site.",
+      "prefreezeCmsCheckpointCompleted": true,
+      "encryptedSqlBytes": 2624977,
+      "encryptedWpContentDeltaBytes": 1018961,
+      "changedWpContentFiles": 76,
+      "encryptedCheckpointOffHostLenovoVerified": true,
+      "afterOrdersStoppedFinalBackupCompleted": false,
+      "ordersFrozen": false,
+      "ownerFinalCutoverApprovalGranted": false,
+      "independentKeyEscrowAndSecondFullArchiveVerified": false,
+      "evidence": "docs/wordpress-prefreeze-cms-checkpoint-20261113.json"
     },
     {
       "id": "RELEASE-P5",
