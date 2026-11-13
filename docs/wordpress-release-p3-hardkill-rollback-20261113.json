@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "gate": "432_RELEASE_P3_51_ROOT_618_OVERLAY_SEVEN_HARDKILL_ROLLBACK_FIXTURE_PASS_OWNER_CUTOVER_BLOCKED",
+  "actualPrivateEvidence": {
+    "liveRootTopEntries": 51,
+    "staticReleaseFiles": 618,
+    "newAstroFiles": 616,
+    "existingOverlapFiles": 2,
+    "exactParkOrBackupCandidates": 22,
+    "protectedSiblingDirectories": 6,
+    "otherExistingRootEntries": 23,
+    "realRootInventoryV2Sha256": "1a35bcfcf117b704d98e4cb931f1fdce7fd28862e8e59cde5a38207a192b370c",
+    "ownerExactPrivateDecisionsSha256": "e7beb75016c9cb15b1b90f9faeabf7e262d42ef97e611e68d5618ccb33964ebb"
+  },
+  "threeRemainingUnknownsTriage": {
+    "privateReportSha256": "9855d4334a11e5c52632dfc8f757cda734855291b315870a6fb3304263bf790e",
+    "emptyLegacyMapIconsDirectory": 1,
+    "zeroByteUnidentifiedPhpFile": 1,
+    "parseableLegacyRssXmlWith26Links": 1,
+    "ownerDecisionsStillPending": 3,
+    "filesRemovedOrRenamedOnLiveHost": 0
+  },
+  "isolatedRehearsals": {
+    "priorRealApacheHttpsSwitchAndRollbackRequests": 152,
+    "controlledExceptionRollbackScenarios": 7,
+    "controlledExceptionRollbackReceiptSha256": "e9b38595758a6c821f91405689d6cfff6651d735e576ebd7ca94a248b4d2ebf8",
+    "actualSIGKILLWorkerScenarios": 7,
+    "separateRestartedRecoveryProcesses": 7,
+    "allSyntheticRealRootLayoutsRestoredByteIdentically": true,
+    "syntheticDataOnly": true,
+    "journalFsyncBeforeChangingFixture": true,
+    "crashScenarios": [
+      "kill-after-first-rename",
+      "kill-after-all-renames",
+      "kill-inside-partial-file",
+      "kill-after-first-static",
+      "kill-after-half-static",
+      "kill-after-all-static",
+      "kill-after-apache-v6"
+    ],
+    "independentRecoveryReceiptSha256": "907052bd7536c86edf71634925bdccde2df68789a8892833f0b07cc48fa90a52",
+    "script": "scripts/rehearse-hardkill-journal-recovery-20261113.py",
+    "publicProductionCutoverRunnerImplemented": false,
+    "realSuperhostingProductionRollbackProven": false,
+    "diskFailureOrPowerLossDuringHostOperationProven": false,
+    "noProductionChange": true
+  },
+  "remainingHardGates": {
+    "exactFileMoveAnd23OtherRootDecisionsOwnerApproved": false,
+    "sixteenLegacyRedirectsAndThirteenGalleryExclusionsApproved": false,
+    "buyerSupportAndRetentionApproved": false,
+    "portablePfxPasswordIndependentlyEscrowed": false,
+    "secondIndependentEncryptedBackupVerified": false,
+    "signedProductionCutoverScopeAndRollbackApproved": false,
+    "finalArchiveAfterOrderFreezeCaptured": false,
+    "canonicalCutoverBlockingConditions": 12
+  },
+  "productionWordPressModified": false,
+  "productionWooCommerceCheckoutStopped": false,
+  "productionAstroCutoverPerformed": false,
+  "sourceAudioOrBuyerPIIIncluded": false
+}
