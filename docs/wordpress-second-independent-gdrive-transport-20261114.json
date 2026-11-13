@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-14",
+  "gate": "432_SECOND_INDEPENDENT_GDRIVE_DESTINATION_PRIVATE_AND_20FILE_TRANSFER_READY_OAUTH_REQUIRED",
+  "source": {
+    "localOneDriveSourcePinned": true,
+    "encryptedFileCount": 20,
+    "exactEncryptedBytes": 5647581099,
+    "fullCipherVolumesWithExistingSHA256": 13,
+    "smallSupportingFilesNewSHA256": 7,
+    "localSourceManifestSha256": "dde4cf3b26ffecf32dcc2f39c9c103e1b67372397ae39ce4667f8c700b763152",
+    "fullCurrentLocalSourceRehashPendingOnUpload": true,
+    "sourceOnedriveProviderPreviouslySynced20of20": true
+  },
+  "transfer": {
+    "tools": "rclone portable v1.76.0",
+    "officialWindowsZipSha256": "8b4fd2737ade4e70c057ef4a49deb7cffe94b0fb9d7587c189d149823f21a1dc",
+    "localVerifiedRcloneExeSha256": "acd80683e23151e93bbe0d6ffa74d26e542ec510332f630beecb9944f8d1a623",
+    "rclonePortableNoSystemInstall": true,
+    "privateLenovoTransferScriptSha256": "32bac7b0db9718f8a04b7bf99e94d28acccae82883b51d4cc5dc1f5c3872bcf3",
+    "ownerOauthLaunchScriptSha256": "3ce5a726c4b09d24818204a1c9e16d33a76aa1640571c3dd8198b2694a458804",
+    "ownerOauthConfigured": false,
+    "encryptedSourceBytesUploadedToGoogleDrive": 0,
+    "independentDestinationDownloadReadbackCompleted": false
+  },
+  "destination": {
+    "provider": "Google Drive",
+    "folderUrl": "https://drive.google.com/drive/folders/1gMGcKervBB0fDcwdFTjJIOM5Y6Yki6Km",
+    "folderName": "432-Orchestra-Encrypted-Disaster-Recovery-20261114",
+    "folderOwnerOnlyAndNotSharedVerified": true,
+    "providerCanaryPresent": true,
+    "providerCanaryBytes": 60,
+    "canarySensitive": false,
+    "expectedCipherArchiveCountAtDestination": 0
+  },
+  "verification": {
+    "currentGoogleCloudQuotaNotRetrieved": true,
+    "futureCopyMustRemainNondestructive": true,
+    "ownerMustCompleteOAuthWithoutChatCredentialTransfer": true,
+    "futurePostTransferRcloneDownloadCheckRequired": true,
+    "offLenovoPfxPasswordEscrowStillFalse": true,
+    "secondIndependentEncryptedFullBackupVerified": false,
+    "productionWordPressModified": false,
+    "checkoutFrozen": false,
+    "finalAstroCutoverCompleted": false,
+    "canonicalCutoverBlockingConditions": 12
+  }
+}

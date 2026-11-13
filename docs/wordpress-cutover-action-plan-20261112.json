@@ -84,6 +84,15 @@
       "finalSnapshotCreated": false,
       "ownerConsentOrEvidenceProvided": false,
       "postFreezeActivityProvedStable": false
+    },
+    "secondIndependentCloudBackup20261114": {
+      "privateDriveFolderCreated": true,
+      "privateFolderCanaryVerified": true,
+      "cipherFilesSourceReady": 20,
+      "actualCipherFilesOffsiteUploaded": 0,
+      "ownerRcloneOauthRequired": true,
+      "ownerOffDevicePfxPasswordStillMissing": true,
+      "secondIndependentCopyGatePassed": false
     }
   },
   "phases": [
@@ -136,10 +145,21 @@
       "id": "BACKUP-P2",
       "priority": 1,
       "task": "Make 23-item ~5.65GB encrypted archive copy to independent USB/SD or independent cloud and re-read all SHA256",
-      "status": "WAIT_EXTERNAL_STORAGE",
+      "status": "DEDICATED_PRIVATE_GDRIVE_DESTINATION_CANARY_PASS_OWNER_OAUTH_REQUIRED_NO_ARCHIVE_COPY",
       "owner": "owner_to_attach_device_then_assistant",
       "dependencies": [],
-      "existingOwnerTool": "COPY-VERIFY-432-RECOVERY-TO-INDEPENDENT-USB-20261112.ps1"
+      "existingOwnerTool": "COPY-VERIFY-432-RECOVERY-TO-INDEPENDENT-USB-20261112.ps1",
+      "providerDestinationVerified": true,
+      "sensitiveCanaryUploaded": false,
+      "cipherArchiveFilesSourceReady": 20,
+      "cipherArchiveTotalBytes": 5647581099,
+      "googleDriveCanaryProviderReadbackPass": true,
+      "rclonePortableInstalledVerified": true,
+      "ownerRcloneOAuthConnected": false,
+      "actualEncryptedBackupUploaded": false,
+      "independentCloudRestoreVerified": false,
+      "privateOwnerAuthInstructionsPath": "C:\\Users\\User\\Documents\\432-Orchestra-Security-QA\\WordPress-Recovery-Rekey-20261110\\OWNER-432-GDRIVE-ONE-TIME-AUTH-20261114.txt",
+      "evidence": "docs/wordpress-second-independent-gdrive-transport-20261114.json"
     },
     {
       "id": "RELEASE-P1",
