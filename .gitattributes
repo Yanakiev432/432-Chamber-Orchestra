@@ -1,0 +1,2 @@
+# Keep POSIX deployment scripts runnable on Linux when checked out on Windows.
+scripts/*.sh text eol=lf
