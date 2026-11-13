@@ -43,6 +43,16 @@
       "actualProductionCutover": false,
       "ownerApprovalForRedirects": false,
       "nextPrecondition": "OWNER_REVIEW_ALIAS_DESTINATIONS_AND_PROTECTED_SCOPE"
+    },
+    "realProductionRootScopedTransaction": {
+      "manifestPreparedOnEverest": true,
+      "completeTopLevelEntries": 51,
+      "exactMoveOrBackupCandidates": 22,
+      "protectedNestedDirectories": 6,
+      "ownerReviewRootItems": 23,
+      "restoredOriginalWebrootInProduction": false,
+      "ownerSignedAllowlistApproved": false,
+      "cutoverDone": false
     }
   },
   "phases": [
@@ -135,14 +145,24 @@
       "id": "RELEASE-P3",
       "priority": 3,
       "task": "Obtain written owner approval for exact change scope, rollback, downtime policy, orders stop and final archive",
-      "status": "WAIT_OWNER",
+      "status": "EXACT_REAL_ROOT_SCOPE_AND_OWNER_FILE_DECISION_SHEET_PREPARED_WAIT_OWNER",
       "owner": "owner",
       "dependencies": [
         "CUSTOMER-P2",
         "BACKUP-P1",
         "BACKUP-P2",
         "RELEASE-P2"
-      ]
+      ],
+      "realRootTopLevelEntries": 51,
+      "exactParkOrBackupCandidates": 22,
+      "untouchableNestedDirectories": 6,
+      "otherRootEntriesWithOwnerDispositionPending": 23,
+      "ownerPrivateDecisionSheetPrepared": true,
+      "ownerExactFileMoveAllowlistApproved": false,
+      "pfxEscrowAndSecondaryBackupStillPending": true,
+      "historicalBuyerPolicyStillPending": true,
+      "privateRootManifestSha256": "1a35bcfcf117b704d98e4cb931f1fdce7fd28862e8e59cde5a38207a192b370c",
+      "sourceDocument": "docs/WORDPRESS-PRODUCTION-CUTOVER-ROOT-SCOPE-20261113.md"
     },
     {
       "id": "RELEASE-P4",

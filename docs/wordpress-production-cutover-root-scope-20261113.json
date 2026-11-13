@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "gate": "432_REAL_PRODUCTION_51_ROOT_SCOPED_TRANSACTION_AND_OWNER_FILE_DISPOSITION_PREPARED_NOT_APPROVED",
+  "phase": "RELEASE-P3",
+  "realWebRootReadOnlyInventory": {
+    "topLevelEntryCount": 51,
+    "protectedNestedDirectories": 6,
+    "wordpressCoreDirectoriesToParkAfterApproval": 3,
+    "wordpressCorePhpAndRootFilesToParkAfterApproval": 15,
+    "wordpressIndexPhpToParkAfterApproval": 1,
+    "wordpressRootHtaccessToBackupReplaceAfterApproval": 1,
+    "existingRobotsSitemapToBackupReplaceAfterApproval": 2,
+    "otherRootEntriesWithExplicitDecisionPending": 23,
+    "exactParkOrBackupCandidateCount": 22,
+    "sourceManifestPrivateSha256": "1a35bcfcf117b704d98e4cb931f1fdce7fd28862e8e59cde5a38207a192b370c",
+    "supersededV1InventoryQuarantined": true,
+    "previousRootPhpRegexBugCorrected": true,
+    "allSixProtectedSiblingFoldersUntouched": true
+  },
+  "knownUnclassifiedDispositionProposals": {
+    "hostingRuntimeKeepUntilSupplierReview": 7,
+    "seoVerificationAndErrorPagesProposedPreserve": 7,
+    "legacyBackupFilesProposedPrivateParking": 6,
+    "uncertainAssetAndPhpFilesNeedsHumanReview": 3,
+    "all23DecisionsOwnerApproved": false,
+    "privateOwnerExactFileDecisionSheetSha256": "e7beb75016c9cb15b1b90f9faeabf7e262d42ef97e611e68d5618ccb33964ebb",
+    "privateOwnerDecisionSheetLocalOnLenovo": true
+  },
+  "releaseAssets": {
+    "astroFiles": 618,
+    "newOnlyPaths": 616,
+    "existingPathsToBackupAndReplace": 2,
+    "existingPaths": [
+      "robots.txt",
+      "sitemap.xml"
+    ],
+    "stagedOnSamePhysicalHostFilesystem": true,
+    "privateApacheV6Sha256": "ae9148bec5c7b701d6699c191c37d2f5505766c208f2836d75f73c7d29eee907",
+    "isolatedApacheSwitchRollbackHttpsPass": 152,
+    "everestPrivateReleaseZipSha256": "9112131bc719c3e80e68d5632a7836c83158d9e06143d66778d07cf51bb30a2a",
+    "releaseBundle618ManifestSha256": "d5f5137b22fa67870eab5ffabc5aa5c0819696286535bd0a86c2c30980b0c965"
+  },
+  "constraintsAndDecisionStates": {
+    "ownerExact22MoveAllowlistApproved": false,
+    "owner23RootDispositionDecisionsApproved": false,
+    "owner16HistoricalRedirectsApproved": false,
+    "owner13GalleryExclusionsApproved": false,
+    "ownerSignedProductionScopeAndRollbackApproved": false,
+    "ownerPfxOffDeviceEscrowCompleted": false,
+    "secondIndependentEncryptedBackupCompleted": false,
+    "realBuyerServiceDeliveryApproved": false,
+    "lastAfterCheckoutFreezeEncryptedSnapshotCompleted": false,
+    "productionSiteOrWooCommerceModifiedInThisPhase": false,
+    "cutoverAllowed": false,
+    "remainingCanonicalRetirementGates": 12
+  },
+  "privateDetailsNotCommitted": [
+    "originalAudioPaths",
+    "buyerPII",
+    "rootFileFullPrivateInventory",
+    "sourcePfx",
+    "password",
+    "bearerTokens"
+  ],
+  "nextAction": "Complete owner decisions and independent recovery requirements before production transaction execution."
+}
