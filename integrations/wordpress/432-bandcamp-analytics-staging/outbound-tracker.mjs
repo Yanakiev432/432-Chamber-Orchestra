@@ -21,7 +21,18 @@ export function installBandcampOutboundTracking(options) {
             ? "shop_banner"
             : "other";
       const payload = { placement };
-      const productId = String(anchor.dataset?.c432ProductId || "");
+      // The live WooCommerce bridge emits no data-c432-product-id attributes.
+      // Its nearest li.product or div.product carries the stable post-ID class.
+      let productId = String(anchor.dataset?.c432ProductId || "");
+      if (!/^[1-9][0-9]{0,7}$/.test(productId)) {
+        const productContainer = anchor.closest?.("li.product, div.product");
+        if (productContainer) {
+          const className = String(productContainer.className || "");
+          const fromClass = className.match(/(?:^|\s)post-([1-9][0-9]{0,7})(?=\s|$)/);
+          const fromElementId = String(productContainer.id || "").match(/^product-([1-9][0-9]{0,7})$/);
+          productId = fromClass?.[1] || fromElementId?.[1] || "";
+        }
+      }
       if (/^[1-9][0-9]{0,7}$/.test(productId)) payload.product_id = productId;
       const search = String(doc.location?.search || "");
       const campaign = search.match(/(?:^\?|&)utm_campaign=([a-z0-9_-]{1,64})(?:&|$)/);
