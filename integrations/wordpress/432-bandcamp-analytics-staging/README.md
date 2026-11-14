@@ -32,3 +32,12 @@
 - https://www.edpb.europa.eu/system/files/documents/2021-06/edpb_aar_2020_final_27.05.21.pdf
 
 **Blocking gate**: legal/privacy validation and explicit user authorization are required before attaching this code to production or installing new third-party tags.
+
+## Live evidence update — 2026-11-14 (G3 audit)
+
+- Windsor.ai GA4 reporting verified the **existing** property 397059277 web stream ID **5843252803** and measurement ID **G-YMLKYY9HGT**, with hostname 432hz-orchestra.com. The measurement ID is confirmed by reporting metadata; do not create a second stream.
+- WordPress public HTML showed only **UA-43283273-2**; site-local ExactMetrics profile options also contain only UA-43283273-2. The UA ID can potentially be connected to a GA4 destination at the **Google tag account** level, which this audit cannot read. Verify native Google tag destinations before changing tracking.
+- Network-wide active plugins: `google-analyticator/google-analyticator.php`, `google-analytics-dashboard-for-wp/gadwp.php`, `cookie-notice/cookie-notice.php`. This is a **multisite**: avoid deactivating a network-wide plugin without a full network blast-radius review.
+- Cookie Notice options (blog 1): `app_blocking=1`, `refuse_opt` empty, `accept_text=Ok`, `refuse_text=No`, `on_click` and `on_scroll` empty. Anonymous banner showed only OK and close; presence of script tags does **not** by itself prove network requests fired before consent because app blocking can intervene. Perform real network QA in an authorized browser before a compliance finding.
+- Current live WooCommerce links do **not** contain `data-c432-product-id`; shop cards contain e.g. `li.product.post-919`, and the single-product page has `div#product-769.product.post-769`. Staging tracker now derives an **optional numeric product ID** from the nearest WooCommerce product wrapper, only after analytics consent and stream readiness; shop-wide CTA sends placement only.
+- Test validation must be recorded from the actual Node runner with explicit pass count; do not call declared tests “executed” unless the command exits 0. All modifications are isolated to **draft PR #8**, with no production deployment.
