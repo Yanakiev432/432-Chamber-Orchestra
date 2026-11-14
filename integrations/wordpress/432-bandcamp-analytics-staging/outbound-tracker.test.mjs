@@ -47,3 +47,59 @@ test("consent adapter exception fails closed without breaking navigation", () =>
   installBandcampOutboundTracking({ document: d, isAnalyticsConsentGranted: () => { throw Error("CMP unavailable"); }, isGa4Ready: () => true, sendEvent: () => { invoked = true; } });
   assert.doesNotThrow(() => d.click(link())); assert.equal(invoked, false);
 });
+
+const liveWooAnchor = (placement, className, id = "") => ({
+  protocol: "https:",
+  hostname: "432orchestra.bandcamp.com",
+  port: "",
+  dataset: {},
+  classList: { contains: (selector) => selector === (placement === "shop_grid" ? "c432-bandcamp-loop-button" : "c432-bandcamp-button") },
+  closest(selector) {
+    if (selector === "li.product, div.product") return placement === "shop_banner" ? null : { className, id };
+    if (selector === ".c432-bandcamp-single") return placement === "product_page" ? {} : null;
+    if (selector === ".c432-bandcamp-shop") return placement === "shop_banner" ? {} : null;
+    return null;
+  },
+});
+
+test("production shop markup uses post-919 class without data attribute", () => {
+  const d = doc(); const sent = [];
+  installBandcampOutboundTracking({ document: d, isAnalyticsConsentGranted: () => true, isGa4Ready: () => true, sendEvent: (_name, args) => sent.push(args) });
+  d.click(liveWooAnchor("shop_grid", "product type-product post-919 status-publish"));
+  assert.deepEqual(sent, [{ placement: "shop_grid", product_id: "919" }]);
+});
+
+test("production single page recovers post-769 from product wrapper", () => {
+  const d = doc(); const sent = [];
+  installBandcampOutboundTracking({ document: d, isAnalyticsConsentGranted: () => true, isGa4Ready: () => true, sendEvent: (_name, args) => sent.push(args) });
+  d.click(liveWooAnchor("product_page", "product type-product post-769 status-publish", "product-769"));
+  assert.deepEqual(sent, [{ placement: "product_page", product_id: "769" }]);
+});
+
+test("shop banner emits placement but no fabricated product id", () => {
+  const d = doc(); const sent = [];
+  installBandcampOutboundTracking({ document: d, isAnalyticsConsentGranted: () => true, isGa4Ready: () => true, sendEvent: (_name, args) => sent.push(args) });
+  d.click(liveWooAnchor("shop_banner", ""));
+  assert.deepEqual(sent, [{ placement: "shop_banner" }]);
+});
+
+test("invalid WP post class does not leak arbitrary id", () => {
+  const d = doc(); const sent = [];
+  installBandcampOutboundTracking({ document: d, isAnalyticsConsentGranted: () => true, isGa4Ready: () => true, sendEvent: (_name, args) => sent.push(args) });
+  d.click(liveWooAnchor("shop_grid", "product post-0 attacker fake-1234", "bad-1"));
+  assert.deepEqual(sent, [{ placement: "shop_grid" }]);
+});
+
+test("revoking consent stops later events and keeps links working", () => {
+  const d = doc(); const sent = []; let consent = true;
+  installBandcampOutboundTracking({ document: d, isAnalyticsConsentGranted: () => consent, isGa4Ready: () => true, sendEvent: (_name, args) => sent.push(args) });
+  d.click(liveWooAnchor("shop_grid", "post-919")); consent = false;
+  assert.doesNotThrow(() => d.click(liveWooAnchor("shop_grid", "post-919")));
+  assert.equal(sent.length, 1);
+});
+
+test("sender exception never breaks navigation", () => {
+  const d = doc();
+  installBandcampOutboundTracking({ document: d, isAnalyticsConsentGranted: () => true, isGa4Ready: () => true, sendEvent: () => { throw new Error("GA4 offline"); } });
+  assert.doesNotThrow(() => d.click(liveWooAnchor("shop_grid", "post-919")));
+});
