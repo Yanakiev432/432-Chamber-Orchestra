@@ -8,6 +8,8 @@ const good = () => ({
   measurementId: "G-YMLKYY9HGT",
   nativeDestinationVerified: true,
   legacyTagPlanApproved: true,
+  legacyBandcampEventMapped: true,
+  legacyAndNewOutboundDeduped: true,
   acceptAndRejectVisible: true,
   withdrawalAvailable: true,
   initialNoGoogleRequests: true,
@@ -69,4 +71,17 @@ test("malformed, empty and missing data fail closed", () => {
   for (const e of [null, undefined, [], "", {}, 123]) {
     assert.equal(evaluatePreflight(e).status, "NO_GO");
   }
+});
+
+test("unidentified existing GA4 Bandcamp host event blocks deploy", () => {
+  const e = good(); e.legacyBandcampEventMapped = false;
+  const r = evaluatePreflight(e);
+  assert.equal(r.status, "NO_GO");
+  assert.ok(r.blockers.some(x => x.includes("existing GA4 event")));
+});
+test("potential double-counted outbound link clicks block deploy", () => {
+  const e = good(); e.legacyAndNewOutboundDeduped = false;
+  const r = evaluatePreflight(e);
+  assert.equal(r.status, "NO_GO");
+  assert.ok(r.blockers.some(x => x.includes("same click twice")));
 });
