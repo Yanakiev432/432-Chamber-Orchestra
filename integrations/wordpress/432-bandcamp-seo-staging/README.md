@@ -65,3 +65,17 @@ The third Yoast hook rewrites only URL strings equal to the erroneous English sh
 **Test evidence:** \`20 PASS / 0 FAIL\` PHP 7.4.34 isolated tests on the actual hosting PHP binary; candidate source and GitHub blob hashes matched. A separate read-only \`wp()\` bootstrap for the exact BG page2 route resolved \`is_shop()=true\` and \`is_paged()=true\`. Because CLI starts with language \`en\` even for that route, test code set Polylang \`curlang=bg\` *only in process memory*. With three filters registered, \`apply_filters()\` corrected canonical, OpenGraph URL and a Schema.org fixture to their intended BG page2 values. This is a scoped WP integration test of hook registration and behavior, **not** a live HTML render or an installed plugin test.
 
 **Remaining:** exact live post-install anonymous HTML verification with consent unchanged, real rollback plan, 23 Bandcamp destinations and 46 WP mappings, and separate owner authorization before any production write.
+
+
+## Public outbound and Polylang mapping baseline (15 November, before deployment)
+
+A fresh **read-only** crawl of all four Woo archive pages checked 16 + 7 English product cards and 16 + 7 Bulgarian product cards. Results:
+
+- **46/46** cards have exactly one mapped official Bandcamp destination.
+- **23/23** distinct Bandcamp destinations returned HTTPS HTTP **200**.
+- **23/23** destination pairs consist of one English and one Bulgarian Woo product.
+- A separate read-only WP/Polylang query confirmed **23/23** pair mappings using `pll_get_post_translations`, with 0 mismatches.
+- No public page, cart state or redirect was edited. Checks did not submit a purchase.
+- Evidence JSON on the authorized Lenovo Documents root: `G4_WordPress_SEO_Bridge_Regressions_20261115.json`, SHA-256 `568ff93bf877ec513555d5a0b9c0e690fef42a2a1656af154ba6eeb11a0ea8de`.
+
+These results are a **before-change baseline**, not a post-deployment pass. Re-run the identical 46/23 checks after any explicitly authorized deployment. The private Bandcamp export and consent-related browser QA remain separate tasks.
