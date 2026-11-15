@@ -113,6 +113,23 @@
       "portableBackupKeyEscrowVerified": false,
       "ownerFinalCutoverApproval": false,
       "reconciliation": "docs/WORDPRESS-BACKUP-P2-RECOVERY-SET-RECONCILIATION-20261115.md"
+    },
+    "backupP2CompleteSource20261115": {
+      "gate": "432_SECOND_PROVIDER_RECOVERY_26_ITEM_SOURCE_AND_TRANSPORT_PREPARED_GOOGLE_OAUTH_REQUIRED",
+      "sourceFiles": 26,
+      "expectedBytes": 5654193990,
+      "source23ItemPortableManifestSha256": "5076f391adce0803be5944d078bad9fbd9789b6a0bc43ed1e3779a0dc51f97d9",
+      "newUnion26ItemPrivateManifestSha256": "79fd8ea9908ad3ca281e06bd379caba2b5c7b2c9af37fb4c6524a0eda5d60de5",
+      "newUploaderPrivateScriptSha256": "356e471a508d28408e4c8731246969f07bb5e8232d85ef0c1ac6e45f0c9b485f",
+      "sourceFilePathsPresentOnLenovo": true,
+      "sourceFileNameSizeSubsetPass": true,
+      "privateRclonePreflightPass": true,
+      "actualGoogleOAuthCredentialPresent": false,
+      "actualGoogleDriveRecoveryFilesUploaded": 0,
+      "externalUSBDevicesPresent": 0,
+      "secondIndependentBackupVerified": false,
+      "finalAfterOrderFreezeBackupVerified": false,
+      "productionCutoverPerformed": false
     }
   },
   "phases": [
@@ -165,7 +182,7 @@
       "id": "BACKUP-P2",
       "priority": 1,
       "task": "Make 23-item ~5.65GB encrypted archive copy to independent USB/SD or independent cloud and re-read all SHA256",
-      "status": "CORE20_GDRIVE_CANARY_ONLY_FULL_PORTABLE23_AND_NOV13_DELTAS_NOT_UPLOADED_LENOVO_OFFLINE",
+      "status": "PRIVATE_26_ITEM_RECOVERY_SOURCE_AND_TRANSPORT_READY_GOOGLE_OAUTH_PENDING",
       "owner": "owner_to_attach_device_then_assistant",
       "dependencies": [],
       "existingOwnerTool": "COPY-VERIFY-432-RECOVERY-TO-INDEPENDENT-USB-20261112.ps1",
@@ -179,12 +196,23 @@
       "actualEncryptedBackupUploaded": false,
       "independentCloudRestoreVerified": false,
       "privateOwnerAuthInstructionsPath": "C:\\Users\\User\\Documents\\432-Orchestra-Security-QA\\WordPress-Recovery-Rekey-20261110\\OWNER-432-GDRIVE-ONE-TIME-AUTH-20261114.txt",
-      "evidence": "docs/wordpress-second-independent-gdrive-transport-20261114.json",
+      "evidence": "docs/WORDPRESS-BACKUP-P2-26-ITEM-TRANSFER-READY-20261115.md",
       "transportScopeReconciliation": "INDEPENDENT_BACKUP_REQUIRES_23_PORTABLE_FILES_PLUS_NOV13_TWO_CIPHERTEXTS_AND_RECEIPT",
       "uploadedActualRecoveryFiles": 0,
       "ownerOauthAuthorizationNotConfirmed": true,
       "backupGateApproved": false,
-      "evidenceForReconciliation": "docs/WORDPRESS-BACKUP-P2-RECOVERY-SET-RECONCILIATION-20261115.md"
+      "evidenceForReconciliation": "docs/WORDPRESS-BACKUP-P2-RECOVERY-SET-RECONCILIATION-20261115.md",
+      "portable23SourceItemsVerified": 23,
+      "prefreezeNov13AdditionalCipherAndReceipt": 3,
+      "canonicalFullRecoveryFileCount": 26,
+      "canonicalFullRecoveryBytes": 5654193990,
+      "privateManifestSha256": "79fd8ea9908ad3ca281e06bd379caba2b5c7b2c9af37fb4c6524a0eda5d60de5",
+      "privateTransferRunnerSha256": "356e471a508d28408e4c8731246969f07bb5e8232d85ef0c1ac6e45f0c9b485f",
+      "ownerOauthLauncherSha256": "e3372835616141993674d49b1e5505b6ece9142920abf8443380cc62da0eb73b",
+      "ownerOAuthConnected": false,
+      "currentCloudArchiveFilesUploaded": 0,
+      "independentRemoteByteReadbackPassed": false,
+      "ownerKeyEscrowVerified": false
     },
     {
       "id": "RELEASE-P1",
