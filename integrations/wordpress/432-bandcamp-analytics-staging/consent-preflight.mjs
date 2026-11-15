@@ -7,6 +7,8 @@ const EXPECTED = Object.freeze({
 const BOOLEAN_GATES = Object.freeze([
   ["nativeDestinationVerified", "native GA4 destination must be inspected"],
   ["legacyTagPlanApproved", "legacy ExactMetrics/Analyticator migration plan and rollback must be reviewed"],
+  ["legacyBandcampEventMapped", "existing GA4 event named 432orchestra.bandcamp.com must be traced to the actual legacy sender"],
+  ["legacyAndNewOutboundDeduped", "existing and proposed Bandcamp click events must not count the same click twice"],
   ["acceptAndRejectVisible", "equal Accept/Reject choices must be visible"],
   ["withdrawalAvailable", "withdraw/change consent control must be available"],
   ["initialNoGoogleRequests", "no analytics requests before consent"],
