@@ -1,0 +1,146 @@
+{
+  "schema": "432-g3-cookie-notice-classic-and-legacy-hooks/1.0",
+  "observed_on": "2026-11-15",
+  "scope": "LIVE_READONLY_WORDPRESS_PHP74_SOURCE_AND_PUBLISHED_ANONYMOUS_HTML_PLUS_IN_MEMORY_ONLY_HOOK_TESTS",
+  "wordPressSite": "https://432hz-orchestra.com",
+  "cookieNotice": {
+    "plugin_version": "2.4.1",
+    "get_status_actual": "",
+    "cookie_compliance_mode_active": false,
+    "app_blocking_option": true,
+    "app_id_present": false,
+    "app_key_present": false,
+    "actual_frontend_callback_registered": "Cookie_Notice_Frontend::add_cookie_notice on wp_footer",
+    "compliance_callback_registered": false,
+    "source_fact": "includes/frontend.php::init registers add_cookie_compliance (with app_blocking argument) only when get_status()==='active'; otherwise registers legacy add_cookie_notice, not the automatic Cookie Compliance blocker.",
+    "public_html_has_hu_banner": false,
+    "public_html_has_huOptions": false,
+    "consequence": "The app_blocking=true option is not evidence of active automatic third-party blocking on this site.",
+    "caveat": "Another independent blocker might still exist; no network HAR captured; do not claim analytics requests or cookies were definitely sent preconsent."
+  },
+  "actual_anonymous_en_html": {
+    "script_order": [
+      {
+        "source": "//www.googletagmanager.com/gtag/js?id=UA-43283273-2",
+        "async": true,
+        "script_type": "executable"
+      },
+      {
+        "source": "ExactMetrics inline __gtagTracker('config', 'UA-43283273-2')",
+        "async": false,
+        "script_type": "executable"
+      },
+      {
+        "source": "/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.js?ver=7.12.1",
+        "async": false,
+        "script_type": "executable"
+      },
+      {
+        "source": "Cookie Notice inline cnArgs",
+        "async": false,
+        "script_type": "executable"
+      },
+      {
+        "source": "/wp-content/plugins/cookie-notice/js/front.min.js?ver=2.4.1",
+        "async": true,
+        "script_type": "executable"
+      }
+    ],
+    "static_risk": "Google gtag/js is an ordinary executable async tag positioned before legacy Cookie Notice JavaScript; browser may request it before notice handling. Requires real anonymous HAR to verify actual network transmission.",
+    "ga4_data_flow": "UNKNOWN",
+    "cookie_storage_flow": "UNKNOWN"
+  },
+  "known_legacy_hooks": {
+    "exactmetrics_head": {
+      "hook": "wp_head",
+      "callback": "exactmetrics_tracking_script",
+      "priority": 6
+    },
+    "exactmetrics_outbound": {
+      "hook": "template_redirect",
+      "callback": "exactmetrics_events_tracking",
+      "priority": 9
+    },
+    "analyticator_head": {
+      "hook": "wp_head",
+      "callback": "add_google_analytics",
+      "priority": 99
+    },
+    "analyticator_outbound": {
+      "hook": "wp_print_scripts",
+      "callback": "ga_external_tracking_js",
+      "priority": 99999
+    }
+  },
+  "guard_candidate": {
+    "file": "C:\\Users\\User\\Documents\\432 Chamber Orchestra\\Marketing\\Bandcamp\\G3-node-validation\\orch432-g3-legacy-guard.preview.php",
+    "sha256": "cb94460e503ee38bb3ed52cb6c56b43c11554f36e1d10d327f7e85e21b5c0737",
+    "state": "STAGING_PREVIEW_NOT_INSTALLED",
+    "feature_flag": "ORCH432_G3_STAGING_LEGACY_GUARD_ENABLED",
+    "default_enabled": false,
+    "safe_scope": "WP blog_id == 1, home_url hostname 432hz-orchestra.com, not wp admin",
+    "code_effect": "When explicitly enabled in a test, remove four known hooks and dequeue exactmetrics-frontend-script and ga-external-tracking; do not change WordPress options or other blog/plugin states.",
+    "wordpress_real_process_test": {
+      "php": "7.4.34",
+      "blog_id": 1,
+      "scope": true,
+      "registered_before": {
+        "exactmetrics_head": 6,
+        "exactmetrics_outbound": 9,
+        "analyticator_head": 99,
+        "analyticator_outbound": 99999
+      },
+      "registered_after": {
+        "exactmetrics_head": false,
+        "exactmetrics_outbound": false,
+        "analyticator_head": false,
+        "analyticator_outbound": false
+      },
+      "passed": true,
+      "no_public_writes": true
+    },
+    "isolated_php74_scope_tests": [
+      {
+        "case": "blog1 front",
+        "expected_mutation_calls": 6,
+        "actual_mutation_calls": 6,
+        "pass": true
+      },
+      {
+        "case": "other blog",
+        "expected_mutation_calls": 0,
+        "actual_mutation_calls": 0,
+        "pass": true
+      },
+      {
+        "case": "admin",
+        "expected_mutation_calls": 0,
+        "actual_mutation_calls": 0,
+        "pass": true
+      },
+      {
+        "case": "other host",
+        "expected_mutation_calls": 0,
+        "actual_mutation_calls": 0,
+        "pass": true
+      },
+      {
+        "case": "flag absent",
+        "expected_registered_actions": 0,
+        "actual_registered_actions": 0,
+        "pass": true
+      }
+    ],
+    "not_ready_because": [
+      "No EN/BG Reject/Withdraw compliant interface implemented",
+      "No evidence of a browser network trace, cookie effects or actual script-free initial HTML under approved rollout",
+      "No consent-aware single GA4 loader and no native Google tag Destinations confirmed",
+      "Additional theme or Jetpack tracking paths are not exhaustively audited",
+      "Code is guarded, staged and uninstalled; never mark production safe or ready from PHP-only tests"
+    ],
+    "explicit_owner_go": false,
+    "public_edits": 0,
+    "spent_eur": 0
+  },
+  "official_basic_consent_mode": "https://support.google.com/analytics/answer/14009635?hl=en"
+}
