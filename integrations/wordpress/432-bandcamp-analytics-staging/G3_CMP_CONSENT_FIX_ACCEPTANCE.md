@@ -54,3 +54,14 @@ The actual runtime of Cookie Notice 2.4.1 on 432hz-orchestra.com reports `Cookie
 - [Google Basic Consent Mode](https://support.google.com/analytics/answer/14009635?hl=en): fully block Google tag loading until valid consent; advanced mode's cookieless pings are **not** this project's chosen no-request acceptance.
 
 **Current deployment decision: NO-GO**. Secure actual EN/BG consent UI, native tag destinations, one opted-in GA4 sender and real anonymous network QA before any explicit live approval.
+
+
+## Native classic Cookie Notice choices already available (verified PHP7.4 memory-only, 15 Nov)
+
+**Important correction:** The close icon's source HTML includes `data-cookie-set="accept"`, but installed Cookie Notice 2.4.1 `front.js` attaches a distinct `cn-close-notice` click listener which explicitly executes `setStatus('reject')`. **Closing with X is NOT an implicit acceptance bug in the actual source**; do not conflate an unused DOM attribute with the handler. Browser accessibility/runtime QA remains required.
+
+Using the real WordPress PHP7.4 bootstrap, changing Cookie Notice `refuse_opt=true` and `revoke_cookies=true` in **process memory only** and supplying language-specific EN/BG messages produced **Accept, Reject, Change-choice** controls on both languages; 2/2 rendering tests PASS, zero DOM parser warnings, zero DB writes. This demonstrates that a separate paid CMP is **not required just to render these controls**.
+
+The built-in revoke button **reopens the choices**; it does not itself record a `reject` until the visitor chooses Reject. Verify this flow and consider whether withdrawal is sufficiently easy; do not claim regulatory compliance from PHP rendering alone. `setStatus('reject')` writes `cookie_notice_accepted=false` and signals a `setCookieNotice` event, but the legacy Google tag requires separate server-side gating and cookies after revocation need a real browser check.
+
+Evidence: `G3_Classic_CMP_EN_BG_UI_InMemory_20261115.json` SHA-256 `06068560963f9733520d8d60c8aa4950992036d0d27f694cf30f1000c2b21cb4`. Updated `consent-preflight.test.mjs` **19/19 PASS** on Node 22.23.2. The live Accept-only banner is unchanged; **G3 remains NO-GO**.
