@@ -50,22 +50,72 @@ function c432_bg_shop_canonical_target($request_uri, $is_shop, $language, $blog_
  * Read-only for all other routes. Preserve native Yoast output unless every
  * environment guard and an exact Bulgarian shop archive path match.
  */
-function c432_bg_shop_filter_yoast_url($url)
+function c432_bg_shop_runtime_target()
 {
     if (is_admin() || !function_exists('is_shop') || !function_exists('pll_current_language')) {
-        return $url;
+        return null;
     }
-    $target = c432_bg_shop_canonical_target(
+    return c432_bg_shop_canonical_target(
         isset($_SERVER['REQUEST_URI']) ? (string) $_SERVER['REQUEST_URI'] : '',
         (bool) is_shop(),
         (string) pll_current_language('slug'),
         (int) get_current_blog_id(),
         (string) home_url('/')
     );
+}
+
+function c432_bg_shop_filter_yoast_url($url)
+{
+    $target = c432_bg_shop_runtime_target();
     return $target === null ? $url : $target;
+}
+
+/**
+ * Yoast 19.8 also emits a linked Schema.org JSON-LD graph.
+ * On the Bulgarian Woo archive, WebPage, ImageObject and BreadcrumbList
+ * references may still point to the English archive. Repair only URLs
+ * that equal the incorrectly emitted English shop URL, have its fragment,
+ * or match the English page-2 route of this same archive.
+ *
+ * Never rewrite general /en/ links, website/organization identifiers,
+ * media URLs, product permalinks or an unrelated schema graph.
+ */
+function c432_bg_shop_rewrite_schema_refs($value, $target)
+{
+    if (is_array($value)) {
+        foreach ($value as $key => $entry) {
+            $value[$key] = c432_bg_shop_rewrite_schema_refs($entry, $target);
+        }
+        return $value;
+    }
+    if (!is_string($value)) {
+        return $value;
+    }
+
+    $english_root = 'https://432hz-orchestra.com/en/shop/';
+    if ($value === $english_root || strpos($value, $english_root . '#') === 0) {
+        return $target . substr($value, strlen($english_root));
+    }
+
+    // Yoast may also use the English paginated URL on archive page 2.
+    if (preg_match('#^https://432hz-orchestra\.com/en/shop/page/[2-9][0-9]*/(\#.*)?$#D', $value)) {
+        $fragment_pos = strpos($value, '#');
+        return $target . ($fragment_pos === false ? '' : substr($value, $fragment_pos));
+    }
+    return $value;
+}
+
+function c432_bg_shop_filter_schema_graph($graph)
+{
+    $target = c432_bg_shop_runtime_target();
+    if ($target === null || !is_array($graph)) {
+        return $graph;
+    }
+    return c432_bg_shop_rewrite_schema_refs($graph, $target);
 }
 
 if (function_exists('add_filter')) {
     add_filter('wpseo_canonical', 'c432_bg_shop_filter_yoast_url', 99);
     add_filter('wpseo_opengraph_url', 'c432_bg_shop_filter_yoast_url', 99);
+    add_filter('wpseo_schema_graph', 'c432_bg_shop_filter_schema_graph', 99);
 }
