@@ -27,7 +27,8 @@
     "Legacy UA-43283273-2 appears twice in WordPress HTML; destination mapping and duplicate tag behavior not yet proven",
     "Sampled Cookie Notice refuse_opt is blank and public banner lacks visible Reject",
     "GA4 contains one legacy Bandcamp host-named event. Google Analyticator 6.5.4 statically has exact hostname category click emitter enabled and script loaded; ExactMetrics also has outbound click listener (no own GA4 v4_id configured). Actual GA4 delivery and double dispatch require network proof.",
-    "G3 15 Nov: Cookie Notice 2.4.1 WP refuse_opt=false, runtime refuse=0 and revokeCookies=0, and only an English 'Ok' link rendered on /en/, /bg/ and product page; Accept/Reject and easy withdrawal cannot be approved."
+    "G3 15 Nov: Cookie Notice 2.4.1 WP refuse_opt=false, runtime refuse=0 and revokeCookies=0, and only an English 'Ok' link rendered on /en/, /bg/ and product page; Accept/Reject and easy withdrawal cannot be approved.",
+    "Cookie Notice 2.4.1 is in CLASSIC get_status='' mode: app_blocking=true is inert for auto Cookie Compliance blocking. The normal executable Google gtag.js appears before legacy notice JS in public EN HTML."
   ],
   "unknowns": [
     "Whether initial page load triggers Google requests/cookies prior to explicit consent",
@@ -35,7 +36,8 @@
     "Complete multisite coverage and anonymous consent state tests",
     "Precise rollback plan for production release",
     "Static Google Analyticator hostname emitter matches observed GA4 name, but actual network transport and Google tag destination routing into GA4 are still UNKNOWN; duplicate GA4 delivery not proven.",
-    "Real visitor Google request/cookie behavior before/after consent still untested; public tag script tags do not imply actual network transmission."
+    "Real visitor Google request/cookie behavior before/after consent still untested; public tag script tags do not imply actual network transmission.",
+    "Whether an independent third-party blocker prevents actual Google requests despite classic mode and executable tag is unverified."
   ],
   "sources": {
     "ga4": "Connected Windsor.ai GA4 reporting property 397059277, stream 5843252803, G-YMLKYY9HGT",
@@ -117,5 +119,33 @@
     "ecommerce_purchases_data_rows": 0,
     "no_purchase_event_in_reported_1_to_15_nov_rows": true,
     "interpretation": "No external Bandcamp purchase attribution; do not interpret as no actual sales."
+  },
+  "cookieNoticeClassicModeSourceAudit": {
+    "verified_date": "2026-11-15",
+    "get_status": "",
+    "cookieComplianceActive": false,
+    "appBlockingTrueButInactiveInClassicMode": true,
+    "cookieNoticeAppIdConfigured": false,
+    "cookieNoticeAppKeyConfigured": false,
+    "legacyBannerCallbackRegistered": true,
+    "complianceBlockerCallbackRegistered": false,
+    "googleScriptBeforeConsentScript": true,
+    "anonymous_async_google_tag": "//www.googletagmanager.com/gtag/js?id=UA-43283273-2",
+    "anonymous_async_cookie_notice": "/wp-content/plugins/cookie-notice/js/front.min.js?ver=2.4.1",
+    "harCaptured": false,
+    "actualPreconsentGoogleTransmission": "UNKNOWN",
+    "source_receipt": "G3_CookieNotice_ClassicMode_And_LegacyHook_Preflight_20261115.json",
+    "source_receipt_sha256": "c905adc8a1bb60d0a21b247ded71d0f2f9d55ea774150d7c20ac7912d569fabe",
+    "google_basic_consent_mode_reference": "https://support.google.com/analytics/answer/14009635?hl=en"
+  },
+  "legacySuppressionCandidate": {
+    "file": "orch432-g3-legacy-guard.preview.php",
+    "sha256": "cb94460e503ee38bb3ed52cb6c56b43c11554f36e1d10d327f7e85e21b5c0737",
+    "state": "STAGED_NOT_INSTALLED_DISABLED_BY_DEFAULT",
+    "wordpress_in_memory_hooks_4_removed": true,
+    "php74_negative_scope_tests_pass": 5,
+    "effective_analytics_consent_guard_proven": false,
+    "productionEnabled": false,
+    "caveats": "Only removes four legacy emitter hooks; does not provide consent UI or an approved GA4 loader. Not a complete privacy fix."
   }
 }
