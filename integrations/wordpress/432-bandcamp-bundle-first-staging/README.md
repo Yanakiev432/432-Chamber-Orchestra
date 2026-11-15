@@ -61,3 +61,11 @@ Listen to orchestral and chamber performances at A = 432 Hz, including live conc
 5. Record actual change result and rollback receipt. Publishing social posts, emailing followers, changing Bandcamp discount or any paid action require separate permission.
 
 **Changes performed:** GitHub draft and Lenovo local staging only. **Public updates:** 0. **Spend:** €0.
+
+## In-memory WordPress preflight passed (15 November 2026)
+
+The actual **published WordPress post_content** was independently re-read on Everest via PHP 7.4.34 and `wp-load.php`, with **no database changes**. For both EN ID47 and BG ID61, the source SHA-256 matched the staged manifest, the original fragment occurred exactly once, Polylang language matched, all four audio shortcodes remained byte-identical after replacing only the specified paragraph, and DOMDocument found zero parser warnings. Both verified Bandcamp CTA URLs appeared in each proposed text. **2/2 PASS_NO_WRITE**.
+
+An initial CLI invocation with an artificially low `128M` PHP memory limit failed at Jetpack bootstrap (no changes); repeated under `512M` completed successfully. This is **not** a production frontend/browser visual test; the PR remains Draft and requires separate approval before any public edit.
+
+Read-only machine receipt: `C:\Users\User\Documents\432 Chamber Orchestra\Marketing\Bandcamp\G4_Homepage_WP_InMemory_Preflight_20261115.json`, SHA-256 `15b6aa9e6b045c345b0e3d00f89928114559c633808b173f4de796f1f0adcc5f`.
