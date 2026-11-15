@@ -98,7 +98,7 @@ function c432_bg_shop_rewrite_schema_refs($value, $target)
     }
 
     // Yoast may also use the English paginated URL on archive page 2.
-    if (preg_match('#^https://432hz-orchestra\.com/en/shop/page/[2-9][0-9]*/(\#.*)?$#D', $value)) {
+    if (preg_match('#^https://432hz-orchestra\.com/en/shop/page/([2-9]|[1-9][0-9]{1,3})/(\#.*)?$#D', $value)) {
         $fragment_pos = strpos($value, '#');
         return $target . ($fragment_pos === false ? '' : substr($value, $fragment_pos));
     }
