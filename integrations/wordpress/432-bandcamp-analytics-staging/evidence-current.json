@@ -22,16 +22,18 @@
   "rollbackReady": false,
   "productionChangeExplicitlyApproved": false,
   "checkedAtUtc": null,
-  "unresolvedFindings": 2,
+  "unresolvedFindings": 3,
   "knownIssues": [
     "Legacy UA-43283273-2 appears twice in WordPress HTML; destination mapping and duplicate tag behavior not yet proven",
-    "Sampled Cookie Notice refuse_opt is blank and public banner lacks visible Reject"
+    "Sampled Cookie Notice refuse_opt is blank and public banner lacks visible Reject",
+    "GA4 already contains one event whose name is the Bandcamp hostname; legacy tracking must be mapped and outbound deduplicated before a second tracker is installed."
   ],
   "unknowns": [
     "Whether initial page load triggers Google requests/cookies prior to explicit consent",
     "Actual native GA4 tag Destinations configuration",
     "Complete multisite coverage and anonymous consent state tests",
-    "Precise rollback plan for production release"
+    "Precise rollback plan for production release",
+    "Whether old host-named event is emitted from ExactMetrics, Google Analyticator or another legacy script, and whether any new event duplicates it."
   ],
   "sources": {
     "ga4": "Connected Windsor.ai GA4 reporting property 397059277, stream 5843252803, G-YMLKYY9HGT",
@@ -39,5 +41,15 @@
     "consentDocs": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
     "implementation": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8"
   },
-  "note": "null = untested/unverified, not false; true values are reserved for backed evidence. NO_GO is mandatory with missing consent checks or missing production authorization."
+  "note": "null = untested/unverified, not false; true values are reserved for backed evidence. NO_GO is mandatory with missing consent checks or missing production authorization.",
+  "legacyBandcampEventMapped": null,
+  "legacyAndNewOutboundDeduped": null,
+  "legacyHostEventObservation": {
+    "date_range": "2026-10-25 to 2026-11-14",
+    "ga4_event_name": "432orchestra.bandcamp.com",
+    "event_count": 1,
+    "measurement_id": "G-YMLKYY9HGT",
+    "page_path": "/bg/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal-2/",
+    "interpretation": "Possible existing link tracking; source and consent status NOT proven; not a Bandcamp purchase."
+  }
 }
