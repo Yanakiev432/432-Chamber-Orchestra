@@ -152,3 +152,26 @@ test("PHP guard is staging-only, source-hashed and not a substitute for CMP or G
   assert.equal(g.effective_analytics_consent_guard_proven,false);
   assert.equal(evaluatePreflight(current).status,"NO_GO");
 });
+
+
+test("classic Cookie Notice candidate can render both-language choice UI only in process memory", () => {
+  const d = JSON.parse(readFileSync(new URL("./evidence-current.json",import.meta.url),"utf8"));
+  const en=d.classicCmpBilingualUiDryRun.en;
+  const bg=d.classicCmpBilingualUiDryRun.bg;
+  for (const a of [en,bg]) {
+    assert.deepEqual([a.accept,a.reject,a.revoke],[true,true,true]);
+    assert.equal(a.html_errors,0);
+  }
+  assert.equal(d.classicCmpBilingualUiDryRun.status,"IN_MEMORY_ONLY_NOT_LIVE");
+  assert.equal(d.classicCmpBilingualUiDryRun.no_browser_network_proof,true);
+  assert.equal(evaluatePreflight(d).status,"NO_GO");
+});
+
+test("the X close HTML attribute does not override actual installed JavaScript reject handler", () => {
+  const d=JSON.parse(readFileSync(new URL("./evidence-current.json",import.meta.url),"utf8"));
+  const a=d.classicCmpBilingualUiDryRun;
+  assert.equal(a.close_attr_data_cookie_set,"accept");
+  assert.equal(a.close_actual_front_js_click_handler,"setStatus('reject')");
+  assert.equal(a.close_is_implicit_acceptance_bug,false);
+  assert.equal(a.revoke_action,"Opens consent banner; subsequent Reject needed to record withdrawal");
+});
