@@ -1,0 +1,43 @@
+{
+  "schema": "432-g3-consent-readiness-evidence/1.0",
+  "observedAtDate": "2026-11-15",
+  "evidenceScope": "OWNED_SITE_GA4_CONSENT_PREVIEW_NO_PRODUCTION_MUTATION",
+  "propertyId": "397059277",
+  "streamId": "5843252803",
+  "measurementId": "G-YMLKYY9HGT",
+  "nativeDestinationVerified": null,
+  "legacyTagPlanApproved": false,
+  "acceptAndRejectVisible": false,
+  "withdrawalAvailable": null,
+  "initialNoGoogleRequests": null,
+  "initialNoAnalyticsCookies": null,
+  "rejectNoGoogleRequests": null,
+  "revokeStopsGoogleRequests": null,
+  "revokeClearsAnalyticsCookies": null,
+  "acceptedExactlyOneGa4PageView": null,
+  "acceptedOutboundClickWorks": false,
+  "deniedOutboundClickSilent": null,
+  "allNetworkSitesConsentTested": false,
+  "destinationRegressionPassed": null,
+  "rollbackReady": false,
+  "productionChangeExplicitlyApproved": false,
+  "checkedAtUtc": null,
+  "unresolvedFindings": 2,
+  "knownIssues": [
+    "Legacy UA-43283273-2 appears twice in WordPress HTML; destination mapping and duplicate tag behavior not yet proven",
+    "Sampled Cookie Notice refuse_opt is blank and public banner lacks visible Reject"
+  ],
+  "unknowns": [
+    "Whether initial page load triggers Google requests/cookies prior to explicit consent",
+    "Actual native GA4 tag Destinations configuration",
+    "Complete multisite coverage and anonymous consent state tests",
+    "Precise rollback plan for production release"
+  ],
+  "sources": {
+    "ga4": "Connected Windsor.ai GA4 reporting property 397059277, stream 5843252803, G-YMLKYY9HGT",
+    "wordpress": "Read-only WordPress PHP options and anonymous page HTML 2026-11-14",
+    "consentDocs": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
+    "implementation": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8"
+  },
+  "note": "null = untested/unverified, not false; true values are reserved for backed evidence. NO_GO is mandatory with missing consent checks or missing production authorization."
+}
