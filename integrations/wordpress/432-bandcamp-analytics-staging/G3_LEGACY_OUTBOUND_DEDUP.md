@@ -18,3 +18,15 @@ The `consent-preflight.mjs` evaluator now checks both conditions. `evidence-curr
 **Never activate or install** the new tracker merely to obtain its event, since GA4 already contains a potential legacy counterpart. No live WordPress changes, consent UI changes or advertising spend are authorized.
 
 See the canonical Notion G3 page for follow-up and full visitor-network audit.
+
+
+## Source-level attribution completed, transport-level attribution still open (15 November 2026)
+
+Read-only inspection of the actual installed and publicly loaded plugin code confirms **two legacy outbound-click handlers**.
+
+1. **Google Analyticator 6.5.4** — anonymous Bulgarian Mozart product page loads `external-tracking.min.js?ver=6.5.4`. WordPress `ga_status=enabled`, `ga_outbound=enabled`, `ga_event=enabled`, `ga_analytic_snippet=disabled`. The 1,190-byte minified JS registers `jQuery("a").click` and on an HTTP(S) link outside `document.domain` calls `ga("send","event","Outbound Traffic",<URL-hostname>,<full URL>)`. This **statically explains the exact string** `432orchestra.bandcamp.com` found as a GA4 event name, but does not prove the Google tag bridge routing or actual network delivery.
+2. **ExactMetrics 7.12.1** — same public page loads `frontend-gtag.js?ver=7.12.1`. Actual HTML local configuration shows `ua` set and **`v4_id` blank**. Its source can turn `outbound-link` into a GA4 `click` when a `v4_id` exists; it is **not** directly configured with a GA4 v4 ID on this page. A second outbound handler exists, but not proof of a duplicate GA4 request.
+
+**Decision:** source tracing is verified, but `legacyBandcampEventMapped` and `legacyAndNewOutboundDeduped` stay **null**, until native Google tag Destinations and a visitor-network Accept/Reject/Revoke/one-click capture are checked. Do not auto-disable network-activated plugins or introduce a third outbound listener. `evidence-current.json` records evidence and uncertainty separately. **No production mutation, browser launch or paid service.**
+
+The expanded preflight test suite requires static proof to **still return NO_GO** without real network/dedup proof.
