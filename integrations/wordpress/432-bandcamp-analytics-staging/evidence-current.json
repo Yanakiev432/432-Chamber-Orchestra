@@ -29,7 +29,8 @@
     "GA4 contains one legacy Bandcamp host-named event. Google Analyticator 6.5.4 statically has exact hostname category click emitter enabled and script loaded; ExactMetrics also has outbound click listener (no own GA4 v4_id configured). Actual GA4 delivery and double dispatch require network proof.",
     "G3 15 Nov: Cookie Notice 2.4.1 WP refuse_opt=false, runtime refuse=0 and revokeCookies=0, and only an English 'Ok' link rendered on /en/, /bg/ and product page; Accept/Reject and easy withdrawal cannot be approved.",
     "Cookie Notice 2.4.1 is in CLASSIC get_status='' mode: app_blocking=true is inert for auto Cookie Compliance blocking. The normal executable Google gtag.js appears before legacy notice JS in public EN HTML.",
-    "Built-in Accept/Reject/Revoke can be rendered by site-local classic Cookie Notice options IN MEMORY, but settings are NOT active on public site; real network and accessibility tests are pending. Close icon source JS explicitly calls reject despite its misleading accept HTML data attr."
+    "Built-in Accept/Reject/Revoke can be rendered by site-local classic Cookie Notice options IN MEMORY, but settings are NOT active on public site; real network and accessibility tests are pending. Close icon source JS explicitly calls reject despite its misleading accept HTML data attr.",
+    "G3 single consent-first GA4 sender and site-scoped WP bridge now staged with 54/54 Node tests and EN/BG WordPress PHP in-memory tests. These are NOT installed; Basic Mode real network and consent QA still unknown."
   ],
   "unknowns": [
     "Whether initial page load triggers Google requests/cookies prior to explicit consent",
@@ -38,7 +39,8 @@
     "Precise rollback plan for production release",
     "Static Google Analyticator hostname emitter matches observed GA4 name, but actual network transport and Google tag destination routing into GA4 are still UNKNOWN; duplicate GA4 delivery not proven.",
     "Real visitor Google request/cookie behavior before/after consent still untested; public tag script tags do not imply actual network transmission.",
-    "Whether an independent third-party blocker prevents actual Google requests despite classic mode and executable tag is unverified."
+    "Whether an independent third-party blocker prevents actual Google requests despite classic mode and executable tag is unverified.",
+    "The configured WSL anonymous guest profile is not live-ready, so no safe approved anonymous browser HAR was captured; Windows Chromium lockout HOLD remains."
   ],
   "sources": {
     "ga4": "Connected Windsor.ai GA4 reporting property 397059277, stream 5843252803, G-YMLKYY9HGT",
@@ -173,5 +175,41 @@
     "no_site_mutations": true,
     "no_browser_network_proof": true,
     "relevant_source": "Cookie Notice 2.4.1 includes/frontend.php and js/front.js"
+  },
+  "stagedConsentFirstGA4": {
+    "as_of": "2026-11-16",
+    "status": "DRAFT_ONLY_NO_PRODUCTION_INSTALLATION",
+    "receipt": "G3_ConsentFirst_GA4_Bridge_Staging_20261116.json",
+    "receipt_sha256": "3af5ea5993ed55913c1af8c2d01a833da3e0adfc065f95f8d19807290aba14d2",
+    "files": [
+      "consent-first-ga4.mjs",
+      "consent-first-ga4.test.mjs",
+      "consent-first-entry.preview.mjs",
+      "orch432-g3-consent-bridge.preview.php",
+      "G3_ConsentFirst_GA4_Staging_README.md"
+    ],
+    "wordpress_php74_languages_inmemory_pass": [
+      "en",
+      "bg"
+    ],
+    "wordpress_php74_known_tracking_hooks_disabled_inmemory": 4,
+    "node22_new_loader_tests_pass": 25,
+    "node22_old_consent_tests_pass": 19,
+    "node22_outbound_tests_pass": 10,
+    "total_node_tests_pass": 54,
+    "total_node_tests_fail": 0,
+    "ga4_id": "G-YMLKYY9HGT",
+    "only_new_versioned_consent_enables": true,
+    "old_cookie_alone_not_enough": true,
+    "custom_bandcamp_events_enabled": false,
+    "native_google_tag_destinations_verified": false,
+    "anonymous_browser_network_har_available": false,
+    "isolated_wsl_guest_profile_live_ready": false,
+    "real_revoke_cookie_cleanup_verified": false,
+    "real_browser_ga4_pageview_verified": false,
+    "real_wp_site_running_candidate": false,
+    "consentUiApprovedForProduction": false,
+    "explicitOwnerGo": false,
+    "no_network_or_analytics_calls_executed_by_unit_tests": true
   }
 }
