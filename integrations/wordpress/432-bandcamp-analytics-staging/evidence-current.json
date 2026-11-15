@@ -26,31 +26,37 @@
   "knownIssues": [
     "Legacy UA-43283273-2 appears twice in WordPress HTML; destination mapping and duplicate tag behavior not yet proven",
     "Sampled Cookie Notice refuse_opt is blank and public banner lacks visible Reject",
-    "GA4 contains one legacy Bandcamp host-named event. Google Analyticator 6.5.4 statically has exact hostname category click emitter enabled and script loaded; ExactMetrics also has outbound click listener (no own GA4 v4_id configured). Actual GA4 delivery and double dispatch require network proof."
+    "GA4 contains one legacy Bandcamp host-named event. Google Analyticator 6.5.4 statically has exact hostname category click emitter enabled and script loaded; ExactMetrics also has outbound click listener (no own GA4 v4_id configured). Actual GA4 delivery and double dispatch require network proof.",
+    "G3 15 Nov: Cookie Notice 2.4.1 WP refuse_opt=false, runtime refuse=0 and revokeCookies=0, and only an English 'Ok' link rendered on /en/, /bg/ and product page; Accept/Reject and easy withdrawal cannot be approved."
   ],
   "unknowns": [
     "Whether initial page load triggers Google requests/cookies prior to explicit consent",
     "Actual native GA4 tag Destinations configuration",
     "Complete multisite coverage and anonymous consent state tests",
     "Precise rollback plan for production release",
-    "Static Google Analyticator hostname emitter matches observed GA4 name, but actual network transport and Google tag destination routing into GA4 are still UNKNOWN; duplicate GA4 delivery not proven."
+    "Static Google Analyticator hostname emitter matches observed GA4 name, but actual network transport and Google tag destination routing into GA4 are still UNKNOWN; duplicate GA4 delivery not proven.",
+    "Real visitor Google request/cookie behavior before/after consent still untested; public tag script tags do not imply actual network transmission."
   ],
   "sources": {
     "ga4": "Connected Windsor.ai GA4 reporting property 397059277, stream 5843252803, G-YMLKYY9HGT",
     "wordpress": "Read-only WordPress PHP options and anonymous page HTML 2026-11-14",
     "consentDocs": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
-    "implementation": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8"
+    "implementation": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8",
+    "cmpAudit": "G3_CMP_GA4_Static_ReadOnly_Audit_20261115.json",
+    "edpb": "https://www.edpb.europa.eu/documents/task-force-report/report-of-the-work-undertaken-by-the-cookie-banner-taskforce_en",
+    "ec": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/legal-grounds-processing-data_en"
   },
   "note": "null = untested/unverified, not false; true values are reserved for backed evidence. NO_GO is mandatory with missing consent checks or missing production authorization.",
   "legacyBandcampEventMapped": null,
   "legacyAndNewOutboundDeduped": null,
   "legacyHostEventObservation": {
-    "date_range": "2026-10-25 to 2026-11-14",
+    "date_range": "2026-11-01 to 2026-11-15",
     "ga4_event_name": "432orchestra.bandcamp.com",
     "event_count": 1,
     "measurement_id": "G-YMLKYY9HGT",
     "page_path": "/bg/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal-2/",
-    "interpretation": "Possible existing link tracking; source and consent status NOT proven; not a Bandcamp purchase."
+    "interpretation": "Possible existing link tracking; source and consent status NOT proven; not a Bandcamp purchase.",
+    "date": "2026-11-05"
   },
   "legacyTrackerStaticAudit": {
     "source_date": "2026-11-15",
@@ -86,5 +92,30 @@
     "no_authenticated_session_started": true,
     "no_windows_chromium_started": true,
     "no_production_mutation": true
+  },
+  "consentUiStaticAudit": {
+    "document": "C:\\Users\\User\\Documents\\432 Chamber Orchestra\\Marketing\\Bandcamp\\G3_CMP_GA4_Static_ReadOnly_Audit_20261115.json",
+    "document_sha256": "c1473912f8b6a3fcf8b82e85ecffe6acd82b815760e1cd2fcd1cb4f9664acff3",
+    "evidence_date": "2026-11-15",
+    "scope": "Three anonymous pages EN/BG/product, WordPress blog1 Cookie Notice 2.4.1 options and public cnArgs",
+    "accept_link_only_on_sampled_pages": true,
+    "reject_option_configured": false,
+    "revoke_option_configured": false,
+    "bg_notice_translated": false,
+    "analytics_script_tags_present": true,
+    "nonconsent_analytics_network_requests": "UNKNOWN",
+    "native_tag_destination": "UNKNOWN",
+    "preserves_go_gate": "NO_GO",
+    "risk_classification": "STATIC_CONSENT_USER_INTERFACE_GAP_CONFIRMED__NETWORK_FLOW_UNTESTED"
+  },
+  "ga4RecentReportingReadOnly": {
+    "range": "2026-11-07 to 2026-11-15",
+    "sessions": 26,
+    "page_view_count": 30,
+    "bandcamp_host_named_event_on_2026_11_05": 1,
+    "date_scoped_event_referrer": "/bg/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal-2/",
+    "ecommerce_purchases_data_rows": 0,
+    "no_purchase_event_in_reported_1_to_15_nov_rows": true,
+    "interpretation": "No external Bandcamp purchase attribution; do not interpret as no actual sales."
   }
 }
