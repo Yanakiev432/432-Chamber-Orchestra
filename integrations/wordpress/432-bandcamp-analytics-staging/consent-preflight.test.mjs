@@ -123,3 +123,32 @@ test("static script presence and lack of reported purchase events must not grant
   assert.equal(result.status, "NO_GO");
   assert.ok(result.blockers.some(x => x.includes("no analytics requests before consent")));
 });
+
+
+test("Cookie Compliance autoblocking is not active in the observed classic plugin mode", () => {
+  const current = JSON.parse(readFileSync(new URL("./evidence-current.json",import.meta.url),"utf8"));
+  const a = current.cookieNoticeClassicModeSourceAudit;
+  assert.equal(a.get_status,"");
+  assert.equal(a.cookieComplianceActive,false);
+  assert.equal(a.appBlockingTrueButInactiveInClassicMode,true);
+  assert.equal(a.googleScriptBeforeConsentScript,true);
+  assert.equal(a.actualPreconsentGoogleTransmission,"UNKNOWN");
+  assert.equal(evaluatePreflight(current).status,"NO_GO");
+});
+
+test("PHP guard is staging-only, source-hashed and not a substitute for CMP or GA4 network proof", () => {
+  const current = JSON.parse(readFileSync(new URL("./evidence-current.json",import.meta.url),"utf8"));
+  const source = readFileSync(new URL("./orch432-g3-legacy-guard.preview.php",import.meta.url),"utf8");
+  const g = current.legacySuppressionCandidate;
+  assert.ok(source.includes("ORCH432_G3_STAGING_LEGACY_GUARD_ENABLED"));
+  assert.ok(source.includes("get_current_blog_id() !== 1"));
+  assert.ok(source.includes("432hz-orchestra.com"));
+  assert.ok(source.includes("exactmetrics_tracking_script"));
+  assert.ok(source.includes("ga_external_tracking_js"));
+  assert.ok(!source.includes("update_option("));
+  assert.ok(!source.includes("deactivate_plugins("));
+  assert.equal(g.state,"STAGED_NOT_INSTALLED_DISABLED_BY_DEFAULT");
+  assert.equal(g.productionEnabled,false);
+  assert.equal(g.effective_analytics_consent_guard_proven,false);
+  assert.equal(evaluatePreflight(current).status,"NO_GO");
+});
