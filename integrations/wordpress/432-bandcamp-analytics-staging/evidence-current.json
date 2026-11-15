@@ -26,14 +26,14 @@
   "knownIssues": [
     "Legacy UA-43283273-2 appears twice in WordPress HTML; destination mapping and duplicate tag behavior not yet proven",
     "Sampled Cookie Notice refuse_opt is blank and public banner lacks visible Reject",
-    "GA4 already contains one event whose name is the Bandcamp hostname; legacy tracking must be mapped and outbound deduplicated before a second tracker is installed."
+    "GA4 contains one legacy Bandcamp host-named event. Google Analyticator 6.5.4 statically has exact hostname category click emitter enabled and script loaded; ExactMetrics also has outbound click listener (no own GA4 v4_id configured). Actual GA4 delivery and double dispatch require network proof."
   ],
   "unknowns": [
     "Whether initial page load triggers Google requests/cookies prior to explicit consent",
     "Actual native GA4 tag Destinations configuration",
     "Complete multisite coverage and anonymous consent state tests",
     "Precise rollback plan for production release",
-    "Whether old host-named event is emitted from ExactMetrics, Google Analyticator or another legacy script, and whether any new event duplicates it."
+    "Static Google Analyticator hostname emitter matches observed GA4 name, but actual network transport and Google tag destination routing into GA4 are still UNKNOWN; duplicate GA4 delivery not proven."
   ],
   "sources": {
     "ga4": "Connected Windsor.ai GA4 reporting property 397059277, stream 5843252803, G-YMLKYY9HGT",
@@ -51,5 +51,40 @@
     "measurement_id": "G-YMLKYY9HGT",
     "page_path": "/bg/product/432-chamber-orchestra-w-mozart-divertimento-d-dur-kv-136-yanakiev-recording-rehearsal-2/",
     "interpretation": "Possible existing link tracking; source and consent status NOT proven; not a Bandcamp purchase."
+  },
+  "legacyTrackerStaticAudit": {
+    "source_date": "2026-11-15",
+    "level": "STATIC_CODE_PLUS_ACTUAL_PUBLIC_SCRIPT_LOADING_CONFIRMED__GA4_DELIVERY_UNVERIFIED",
+    "site_blog_id": 1,
+    "plugin_one": {
+      "name": "Google Analyticator",
+      "version": "6.5.4",
+      "script": "wp-content/plugins/google-analyticator/external-tracking.min.js",
+      "loaded_on_anonymous_200_product_page": true,
+      "ga_status": "enabled",
+      "ga_outbound": "enabled",
+      "ga_event": "enabled",
+      "ga_analytic_snippet": "disabled",
+      "snippet_behavior": "jQuery(a).click; external http(s) URL not matching document.domain => ga('send','event','Outbound Traffic', host, href). This precisely generates the observed GA4 hostname-shaped event label, but does not prove a GA4 delivery path."
+    },
+    "plugin_two": {
+      "name": "ExactMetrics",
+      "version": "7.12.1",
+      "script": "wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend-gtag.js",
+      "loaded_on_anonymous_200_product_page": true,
+      "ua_id_configured": true,
+      "v4_id_configured": false,
+      "source_behavior": "When outbound-link event occurs, v4_id present => GA4 click; v4_id absent => no direct v4_id targeting from this script. UA event path may still execute.",
+      "implication": "Two outbound listeners can run but this alone does not prove two GA4 events."
+    },
+    "runtime_open_items": [
+      "Identify native Google tag Destinations linking UA to GA4 if any",
+      "Capture actual network requests pre-consent and after Accept/Reject/Revoke",
+      "Click exactly one Bandcamp CTA in approved anonymous browser and measure outgoing events only",
+      "Confirm event deduplication and no pre-consent traffic; sitewide QA"
+    ],
+    "no_authenticated_session_started": true,
+    "no_windows_chromium_started": true,
+    "no_production_mutation": true
   }
 }
