@@ -85,3 +85,16 @@ test("potential double-counted outbound link clicks block deploy", () => {
   assert.equal(r.status, "NO_GO");
   assert.ok(r.blockers.some(x => x.includes("same click twice")));
 });
+
+test("static legacy event emitter identification cannot authorize unknown GA4 network delivery", () => {
+  const e = good();
+  e.legacyBandcampEventMapped = null;
+  e.legacyAndNewOutboundDeduped = null;
+  e.legacyTrackerStaticAudit = {
+    level: "STATIC_CODE_PLUS_ACTUAL_PUBLIC_SCRIPT_LOADING_CONFIRMED__GA4_DELIVERY_UNVERIFIED"
+  };
+  const r = evaluatePreflight(e);
+  assert.equal(r.status, "NO_GO");
+  assert.ok(r.blockers.some(b => b.includes("existing GA4 event")));
+  assert.ok(r.blockers.some(b => b.includes("same click twice")));
+});
