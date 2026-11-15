@@ -40,3 +40,17 @@ On owner's Lenovo:
 **Do not start Windows Chromium during the account-lockout HOLD**. An isolated anonymous browser, if reliably available, must never attach to the Windows owner profile and must capture network data before anyone may claim network proof.
 
 **Current result: G3 STATIC CONSENT UI FAIL / NETWORK UNKNOWN / NO DEPLOY / €0.**
+
+
+## Follow-up 15 November: the `app_blocking=true` trap
+
+The actual runtime of Cookie Notice 2.4.1 on 432hz-orchestra.com reports `Cookie_Notice()->get_status() === ''`, **not** `active`. Installed `includes/frontend.php::init()` registers `add_cookie_compliance()` / Cookie Compliance automatic blocking only for `get_status() === 'active'`. The live site instead registers the classic `add_cookie_notice()` footer banner. **Therefore the option `app_blocking=true` does not make the Cookie Compliance automatic blocker active**. The public HTML confirms no Hu Banner widget, while ordinary executable Google `gtag/js?id=UA-43283273-2` is emitted ahead of the async classic notice JS. It is **a source-proven missing gating mechanism**, not a browser HAR proof of actual preconsent network delivery.
+
+**Staging-only mitigation component:** `orch432-g3-legacy-guard.preview.php` (PHP 7.4) is default-off unless the exact `ORCH432_G3_STAGING_LEGACY_GUARD_ENABLED` constant is set true. Read-only WordPress CLI integration proved all **4 of 4 real plugin tracking hooks** are present before and removed **in the CLI process only**. Mocked tests proved no unregistration/dequeue effects on other blog IDs, admin mode, or another hostname; with the flag absent, **0 actions registered**. This candidate **does not implement consent choices, GA4 pageviews, purchases or network-level verification**, and is expressly **not to be deployed on its own**. It does not switch off network plugins.
+
+- On Lenovo `G3_CookieNotice_ClassicMode_And_LegacyHook_Preflight_20261115.json`: SHA256 `c905adc8a1bb60d0a21b247ded71d0f2f9d55ea774150d7c20ac7912d569fabe`.
+- Preview PHP SHA256 `cb94460e503ee38bb3ed52cb6c56b43c11554f36e1d10d327f7e85e21b5c0737`.
+- Updated local `consent-preflight.test.mjs`: **17/17 Node 22.23.2 tests PASS**.
+- [Google Basic Consent Mode](https://support.google.com/analytics/answer/14009635?hl=en): fully block Google tag loading until valid consent; advanced mode's cookieless pings are **not** this project's chosen no-request acceptance.
+
+**Current deployment decision: NO-GO**. Secure actual EN/BG consent UI, native tag destinations, one opted-in GA4 sender and real anonymous network QA before any explicit live approval.
