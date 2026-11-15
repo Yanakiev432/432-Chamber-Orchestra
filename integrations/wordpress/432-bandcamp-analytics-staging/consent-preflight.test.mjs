@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { evaluatePreflight } from "./consent-preflight.mjs";
 
 const good = () => ({
@@ -97,4 +98,28 @@ test("static legacy event emitter identification cannot authorize unknown GA4 ne
   assert.equal(r.status, "NO_GO");
   assert.ok(r.blockers.some(b => b.includes("existing GA4 event")));
   assert.ok(r.blockers.some(b => b.includes("same click twice")));
+});
+
+
+test("observed live Cookie Notice only renders Accept and cannot be considered consent-compliant", () => {
+  const current = JSON.parse(readFileSync(new URL("./evidence-current.json", import.meta.url), "utf8"));
+  assert.equal(current.consentUiStaticAudit.accept_link_only_on_sampled_pages, true);
+  assert.equal(current.consentUiStaticAudit.reject_option_configured, false);
+  assert.equal(current.consentUiStaticAudit.revoke_option_configured, false);
+  assert.equal(current.consentUiStaticAudit.bg_notice_translated, false);
+  assert.equal(current.acceptAndRejectVisible, false);
+  assert.equal(current.withdrawalAvailable, null);
+  assert.equal(evaluatePreflight(current).status, "NO_GO");
+});
+
+test("static script presence and lack of reported purchase events must not grant GA4 tracking GO", () => {
+  const e = good();
+  const current = JSON.parse(readFileSync(new URL("./evidence-current.json", import.meta.url), "utf8"));
+  e.initialNoGoogleRequests = current.consentUiStaticAudit.nonconsent_analytics_network_requests === "PROVEN_NO_REQUESTS";
+  e.nativeDestinationVerified = current.nativeDestinationVerified;
+  e.legacyBandcampEventMapped = current.legacyBandcampEventMapped;
+  e.legacyAndNewOutboundDeduped = current.legacyAndNewOutboundDeduped;
+  const result = evaluatePreflight(e);
+  assert.equal(result.status, "NO_GO");
+  assert.ok(result.blockers.some(x => x.includes("no analytics requests before consent")));
 });
