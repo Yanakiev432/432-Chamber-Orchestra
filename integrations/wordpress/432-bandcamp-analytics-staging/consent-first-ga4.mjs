@@ -39,7 +39,7 @@ export function clearFirstPartyAnalyticsCookies(doc, hostname) {
   const names = String(doc.cookie || "")
     .split(";")
     .map((item) => item.trim().split("=")[0])
-    .filter((name) => /^(_ga(?:_[A-Z0-9]+)?|_gid|_gat(?:_[A-Za-z0-9]+)?|_gac_[A-Za-z0-9]+)$/.test(name));
+    .filter((name) => /^(_ga(?:_[A-Za-z0-9]+)?|_gid|_gat(?:_[A-Za-z0-9]+)?|_gac_[A-Za-z0-9]+|_gcl_[A-Za-z0-9]+)$/.test(name));
   for (const name of [...new Set(names)]) {
     const suffixes = ["", "; Domain=" + host];
     if (host === SITE_HOST) suffixes.push("; Domain=." + SITE_HOST);
@@ -104,6 +104,7 @@ export function installConsentFirstGA4({
     script: null,
     cleanupOutbound: null,
     disposed: false,
+    channel: null,
   };
 
   const host = String(win.location?.hostname ?? "").toLowerCase();
@@ -198,11 +199,14 @@ export function installConsentFirstGA4({
     }
   }
 
-  function rejectConsent() {
+  function rejectConsent({ broadcast = false } = {}) {
     const previouslyInitialized = state.initialized;
     stop();
     clearMarker(doc);
     clearFirstPartyAnalyticsCookies(doc, host);
+    if (broadcast && state.channel) {
+      try { state.channel.postMessage("reject"); } catch (_error) { /* browser unavailable */ }
+    }
     // Already loaded Google JavaScript cannot be truly unloaded from the
     // current document. Reload under denied/marker-absent consent to remove it.
     // We never send another Google event or consent ping after rejection.
@@ -219,11 +223,27 @@ export function installConsentFirstGA4({
       setMarker(doc);
       initializeTag();
     } else if (choice === "false") {
-      rejectConsent();
+      rejectConsent({ broadcast: true });
     }
   }
 
+  function recheckConsentAfterResume() {
+    if (state.disposed || !state.initialized) return;
+    if (!hasVersionedAnalyticsConsent(doc)) rejectConsent();
+  }
+
   if (allowed) {
+    // Same-origin cross-tab withdrawal signal; never grants consent across tabs.
+    try {
+      if (typeof win.BroadcastChannel === "function") {
+        state.channel = new win.BroadcastChannel("orch432-ga4-consent-v1");
+        state.channel.onmessage = (event) => {
+          if (event?.data === "reject") rejectConsent();
+        };
+      }
+    } catch (_error) { state.channel = null; }
+    doc.addEventListener("visibilitychange", recheckConsentAfterResume, false);
+    win.addEventListener?.("pageshow", recheckConsentAfterResume, false);
     doc.addEventListener("setCookieNotice", onConsentEvent, false);
     if (hasVersionedAnalyticsConsent(doc)) initializeTag();
   }
@@ -240,7 +260,13 @@ export function installConsentFirstGA4({
     dispose: () => {
       stop();
       state.disposed = true;
-      if (allowed) doc.removeEventListener("setCookieNotice", onConsentEvent, false);
+      if (allowed) {
+        doc.removeEventListener("setCookieNotice", onConsentEvent, false);
+        doc.removeEventListener("visibilitychange", recheckConsentAfterResume, false);
+        win.removeEventListener?.("pageshow", recheckConsentAfterResume, false);
+      }
+      try { state.channel?.close(); } catch (_error) { /* safe fallback */ }
+      state.channel = null;
     },
   });
 }
