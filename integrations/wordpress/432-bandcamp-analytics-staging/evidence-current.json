@@ -31,7 +31,9 @@
     "Cookie Notice 2.4.1 is in CLASSIC get_status='' mode: app_blocking=true is inert for auto Cookie Compliance blocking. The normal executable Google gtag.js appears before legacy notice JS in public EN HTML.",
     "Built-in Accept/Reject/Revoke can be rendered by site-local classic Cookie Notice options IN MEMORY, but settings are NOT active on public site; real network and accessibility tests are pending. Close icon source JS explicitly calls reject despite its misleading accept HTML data attr.",
     "G3 single consent-first GA4 sender and site-scoped WP bridge now staged with 54/54 Node tests and EN/BG WordPress PHP in-memory tests. These are NOT installed; Basic Mode real network and consent QA still unknown.",
-    "Cross-tab withdrawal was not handled by the original JS; BroadcastChannel reject + visibilitychange/pageshow fallback are now unit-tested in staging. Live browser cross-tab delivery and network no-request guarantees remain unverified."
+    "Cross-tab withdrawal was not handled by the original JS; BroadcastChannel reject + visibilitychange/pageshow fallback are now unit-tested in staging. Live browser cross-tab delivery and network no-request guarantees remain unverified.",
+    "Public Google gtag.js for UA-43283273-2 names GA4 G-YMLKYY9HGT as a child container with inherited parent config; actual Admin Destinations/GA4 network transmission remain unverified.",
+    "WordPress preview previously trusted canonical home_url only for site scope; staged guard now also checks incoming HTTP_HOST exactly. 5/5 real WP PHP7.4 negative/positive host cases pass."
   ],
   "unknowns": [
     "Whether initial page load triggers Google requests/cookies prior to explicit consent",
@@ -42,7 +44,8 @@
     "Real visitor Google request/cookie behavior before/after consent still untested; public tag script tags do not imply actual network transmission.",
     "Whether an independent third-party blocker prevents actual Google requests despite classic mode and executable tag is unverified.",
     "The configured WSL anonymous guest profile is not live-ready, so no safe approved anonymous browser HAR was captured; Windows Chromium lockout HOLD remains.",
-    "Anonymous cross-tab browser proof, legacy _gcl_* cookie deletion across domain/path contexts and in-flight GA4 network stop remain unverified."
+    "Anonymous cross-tab browser proof, legacy _gcl_* cookie deletion across domain/path contexts and in-flight GA4 network stop remain unverified.",
+    "New .js browser module copies have exact source parity and existing site serves .js as text/javascript, but real installed future plugin path, imports, MIME, CSP and cache have not been tested."
   ],
   "sources": {
     "ga4": "Connected Windsor.ai GA4 reporting property 397059277, stream 5843252803, G-YMLKYY9HGT",
@@ -198,7 +201,7 @@
     "node22_new_loader_tests_pass": 30,
     "node22_old_consent_tests_pass": 19,
     "node22_outbound_tests_pass": 10,
-    "total_node_tests_pass": 59,
+    "total_node_tests_pass": 67,
     "total_node_tests_fail": 0,
     "ga4_id": "G-YMLKYY9HGT",
     "only_new_versioned_consent_enables": true,
@@ -214,7 +217,10 @@
     "explicitOwnerGo": false,
     "no_network_or_analytics_calls_executed_by_unit_tests": true,
     "cross_tab_revocation_covered_by_unit_tests": true,
-    "browser_cross_tab_verification_complete": false
+    "browser_cross_tab_verification_complete": false,
+    "node22_browser_parity_tests_pass": 8,
+    "browser_js_entry_filename": "consent-first-entry.preview.js",
+    "real_installed_file_load_proven": false
   },
   "crossTabWithdrawalStaging": {
     "date": "2026-11-16",
@@ -246,5 +252,48 @@
     },
     "production_changes": 0,
     "github_pr": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8"
+  },
+  "publicGoogleTagChildContainer": {
+    "verified_on": "2026-11-16",
+    "parent_tag": "UA-43283273-2",
+    "child_ga4_id": "G-YMLKYY9HGT",
+    "parent_gtag_js_http": 200,
+    "observed_parent_config": {
+      "function": "__zone",
+      "vtp_childContainers_publicId": "G-YMLKYY9HGT",
+      "vtp_inheritParentConfig": true,
+      "vtp_enableConfiguration": false
+    },
+    "google_tag_admin_destinations_verified": false,
+    "ga4_actual_http_event_delivery_verified": false,
+    "ga4_double_event_free_verified": false,
+    "receipt": "G3_GoogleTag_ParentChild_PublicConfig_20261116.json",
+    "receipt_sha256": "65e44845a0b27bec3f38808009a2c0c3a6049990cacdec667e45c8533488635f",
+    "interpretation": "Official Google public gtag.js embeds child-container reference; this does not establish Admin destination settings, exact GA4 network delivery or dedup."
+  },
+  "hostScopeAndBrowserJsPreview": {
+    "date": "2026-11-16",
+    "status": "STAGING_CODE_ONLY",
+    "guard_file": "orch432-g3-legacy-guard.preview.php",
+    "guard_sha256": "1c4d721389698eb609aa78c8bb0610bf612c1adc97e66094516551be0f06d0c4",
+    "actual_HTTP_HOST_required": "432hz-orchestra.com",
+    "actual_WP_PHP74_host_scope_cases_pass": 5,
+    "actual_WP_PHP74_old_tracking_hooks_removed": 4,
+    "browser_entry": "consent-first-entry.preview.js",
+    "browser_loader": "consent-first-ga4.browser.js",
+    "browser_outbound": "outbound-tracker.browser.js",
+    "bridge_file": "orch432-g3-consent-bridge.preview.php",
+    "bridge_sha256": "4399e87e5dd025f87d7902bf3c8c9fdbb185d7f7c38b02a7f6c3c81816ddbdb9",
+    "node_22_parity_tests_pass": 8,
+    "total_node_tests_pass": 67,
+    "total_node_tests_fail": 0,
+    "wordpress_php74_en_bg_in_memory_preview_pass": 2,
+    "browser_installed_asset_mime_csp_cache_proven": false,
+    "browser_real_consent_network_har_proven": false,
+    "receipt": "G3_Browser_JS_Module_Parity_And_Host_QA_20261116.json",
+    "receipt_sha256": "ad7755a30ea5db90a86eba01314b4567d07d81d0c1a3e608d6acd2dc89eade9e",
+    "domain_guard_receipt": "G3_WordPress_ActualHost_Guard_Preflight_20261116.json",
+    "domain_guard_sha256": "91060d172a3c542f493e9399b214d18b46a5ade9330f677db2337824d7b63d14",
+    "live_wp_changes": 0
   }
 }
