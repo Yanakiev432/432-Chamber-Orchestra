@@ -105,6 +105,7 @@ export function installConsentFirstGA4({
     cleanupOutbound: null,
     disposed: false,
     channel: null,
+    lastTrustedAcceptAt: 0,
   };
 
   const host = String(win.location?.hostname ?? "").toLowerCase();
@@ -216,13 +217,37 @@ export function installConsentFirstGA4({
     }
   }
 
+  // Cookie Notice's setCookieNotice is a synthetic CustomEvent fired by JS.
+  // It cannot alone distinguish a real user's choice from programmatic calls.
+  // The installed front.js dispatches it synchronously inside the click
+  // handler, after a trusted browser click on #cn-accept-cookie. Capture the
+  // user click first, and consume this short-lived intent exactly once.
+  // This is defense against accidental/programmatic grants, not a sandbox
+  // against malicious same-origin JavaScript.
+  function onTrustedAcceptClick(event) {
+    if (event?.isTrusted !== true || !allowed || state.disposed) return;
+    const acceptButton = event.target?.closest?.("#cn-accept-cookie");
+    if (!acceptButton) return;
+    state.lastTrustedAcceptAt = Date.now();
+  }
+
   function onConsentEvent(event) {
     if (!allowed || state.disposed) return;
     const choice = event?.detail?.value;
-    if (choice === "true" && readCookie(doc, NOTICE_COOKIE) === "true") {
+    if (choice === "true") {
+      const ageMs = Date.now() - state.lastTrustedAcceptAt;
+      const fromRecentTrustedClick = state.lastTrustedAcceptAt > 0 &&
+        ageMs >= 0 && ageMs <= 1500;
+      // Consume intent even if the notice cookie is not yet set.
+      state.lastTrustedAcceptAt = 0;
+      if (!fromRecentTrustedClick || readCookie(doc, NOTICE_COOKIE) !== "true") {
+        diagnostic("ignored-untrusted-or-unmatched-consent-grant");
+        return;
+      }
       setMarker(doc);
       initializeTag();
     } else if (choice === "false") {
+      state.lastTrustedAcceptAt = 0;
       rejectConsent({ broadcast: true });
     }
   }
@@ -244,6 +269,7 @@ export function installConsentFirstGA4({
     } catch (_error) { state.channel = null; }
     doc.addEventListener("visibilitychange", recheckConsentAfterResume, false);
     win.addEventListener?.("pageshow", recheckConsentAfterResume, false);
+    doc.addEventListener("click", onTrustedAcceptClick, true);
     doc.addEventListener("setCookieNotice", onConsentEvent, false);
     if (hasVersionedAnalyticsConsent(doc)) initializeTag();
   }
@@ -261,6 +287,7 @@ export function installConsentFirstGA4({
       stop();
       state.disposed = true;
       if (allowed) {
+        doc.removeEventListener("click", onTrustedAcceptClick, true);
         doc.removeEventListener("setCookieNotice", onConsentEvent, false);
         doc.removeEventListener("visibilitychange", recheckConsentAfterResume, false);
         win.removeEventListener?.("pageshow", recheckConsentAfterResume, false);
