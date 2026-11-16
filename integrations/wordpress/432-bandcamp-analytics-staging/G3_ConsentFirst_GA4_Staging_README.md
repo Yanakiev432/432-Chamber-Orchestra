@@ -25,7 +25,7 @@ Installed Cookie Notice front.js sets status REJECT upon clicking the close X de
 
 ## Evidence
 
-Lenovo Windows, Node 22.23.2 aggregate: 54 PASS / 0 FAIL across consent-first-ga4.test.mjs (25), consent-preflight.test.mjs (19), and outbound-tracker.test.mjs (10).
+Lenovo Windows, Node 22.23.2 aggregate: 59 PASS / 0 FAIL across consent-first-ga4.test.mjs (30), consent-preflight.test.mjs (19), and outbound-tracker.test.mjs (10).
 
 Read-only Everest WordPress PHP7.4.34 eval: for BOTH EN and BG, the four legacy hooks were removed in disposable process memory, 3/3 choices rendered, zero DOM warnings, module enqueued and approved config registered before it. No DB or file writes. This is not a deployed browser integration test.
 
