@@ -25,7 +25,7 @@ Installed Cookie Notice front.js sets status REJECT upon clicking the close X de
 
 ## Evidence
 
-Lenovo Windows, Node 22.23.2 aggregate: 59 PASS / 0 FAIL across consent-first-ga4.test.mjs (30), consent-preflight.test.mjs (19), and outbound-tracker.test.mjs (10).
+Lenovo Windows, Node 22.23.2 aggregate: 67 PASS / 0 FAIL across consent-first-ga4.test.mjs (30), consent-preflight.test.mjs (19), outbound-tracker.test.mjs (10) and G3_Browser_JS_Asset_Parity_20261116.test.mjs (8).
 
 Read-only Everest WordPress PHP7.4.34 eval: for BOTH EN and BG, the four legacy hooks were removed in disposable process memory, 3/3 choices rendered, zero DOM warnings, module enqueued and approved config registered before it. No DB or file writes. This is not a deployed browser integration test.
 
@@ -58,3 +58,14 @@ On Lenovo Node 22.23.2: **59 PASS / 0 FAIL** across 30 new GA4 tests + 19 consen
 An isolated Linux Chromium exists, but its environment blocks navigation even to local loopback fixtures with `ERR_BLOCKED_BY_ADMINISTRATOR`; WSL guest on Lenovo is still `universal_https_live_ready=false`. **No real-browser HAR or cross-tab browser proof was obtained.** Windows Chromium remains on account-lockout HOLD.
 
 Machine receipt `G3_CrossTab_Consent_Withdrawal_Audit_20261116.json` SHA256 `e811f1e7a56aafcec7b1b075c0d662035acfe8f4a9d584aeaefab7711bf84024`. Staging changes only. Production **NO-GO**, owner GO required.
+
+
+## 16 November: public Google tag child reference, exact request host, and browser JS MIME
+
+**Public Google tag routing evidence (read-only):** An HTTPS 200 `gtag/js?id=UA-43283273-2` response returned JavaScript containing a literal `__zone.vtp_childContainers` reference with `publicId="G-YMLKYY9HGT"`, `vtp_inheritParentConfig=true` and `vtp_enableConfiguration=false`. This materially strengthens the evidence that legacy UA and target GA4 identifiers are related, but **does NOT verify Google Analytics Admin Tag Destinations, an actual GA4 hit or the absence of duplicate hits**. A separate HTTPS 200 fetch of `gtag/js?id=G-YMLKYY9HGT` returned GA4 script without the old UA identifier. The JS is dynamically served; SHA is one observation only. See `G3_GoogleTag_ParentChild_PublicConfig_20261116.json` (SHA256 `65e44845a0b27bec3f38808009a2c0c3a6049990cacdec667e45c8533488635f`).
+
+**Real incoming Host is now scoped:** `orch432-g3-legacy-guard.preview.php` previously checked WordPress `home_url()` but not `$_SERVER['HTTP_HOST']`. Read-only PHP7.4 WP bootstrapping showed an `other.example` request Host could pass the guard because the canonical WP home URL stayed `432hz-orchestra.com`. Source now requires BOTH canonical home URL and actual HTTP_HOST to be exactly `432hz-orchestra.com`; 5/5 real WP read-only host cases PASS, and 4/4 original plugin tracking hooks are still correctly removed in process memory. See `G3_WordPress_ActualHost_Guard_Preflight_20261116.json` SHA256 `91060d172a3c542f493e9399b214d18b46a5ade9330f677db2337824d7b63d14`.
+
+**Browser module package now uses `.js` (not unverified `.mjs` MIME):** The three browser-loaded copies `outbound-tracker.browser.js`, `consent-first-ga4.browser.js`, `consent-first-entry.preview.js` are byte-identical to audited `.mjs` sources apart from the two relative import extensions. The PHP bridge now enqueues `consent-first-entry.preview.js` as `type="module"`. Existing public Cookie Notice `.js` on the same site returned `text/javascript`; the **future installed asset** still needs its actual HTTP MIME/cache/CSP verified. A PHP eval preview of the bridge produced a synthetic `wp-content/plugins/consent-first-entry.preview.js` URL; **it does not prove a file exists at that URL**. New `G3_Browser_JS_Asset_Parity_20261116.test.mjs` checks byte parity, ESM imports, inert entry, scope flags and Host guard. **67/67 combined Node22 tests PASS** (30 GA4, 19 preflight, 10 outbound and 8 parity/host checks). Real WP PHP7.4 EN/BG in-memory test again PASSED with both three-choice banners, module registered, zero DOM warnings and zero WordPress writes. See `G3_Browser_JS_Module_Parity_And_Host_QA_20261116.json` SHA256 `ad7755a30ea5db90a86eba01314b4567d07d81d0c1a3e608d6acd2dc89eade9e`.
+
+**Unchanged production gate:** PR #8 is still DRAFT/NO-GO. A safe browser network HAR, installed plugin path and MIME validation, Google Tag Admin Destinations, consent lifecycle and one outbound click real delivery, rollback and explicit owner GO remain required. No owner Windows Chromium is launched during lockout HOLD. No live edits.
