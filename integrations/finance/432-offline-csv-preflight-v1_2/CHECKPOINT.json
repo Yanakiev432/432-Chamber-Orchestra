@@ -1,0 +1,43 @@
+{
+  "schema": "432-digital-revenue-finance-staging-checkpoint/1.2",
+  "date": "2026-11-17",
+  "canonical_plan": "1.1.18",
+  "branch": "agent/432-g1-g5-g8-offline-reconcile-v1_2-20261117",
+  "privacy": "SYNTHETIC_TEST_CODE_ONLY__NO_PRIVATE_CSV_OR_FINANCIAL_ACCOUNTS",
+  "tests": {
+    "python_version": "3.13.5",
+    "total_pass": 49,
+    "total_fail": 0,
+    "previous_baseline": 38,
+    "new_regression_tests": 11,
+    "test_log": "LOCAL_UNIT_TESTS_ONLY"
+  },
+  "controls": [
+    "Bandcamp exact sale-item identity uniqueness within transaction",
+    "Bandcamp supports multi-item cart without double counting order IDs",
+    "Bandcamp rejects negative sale subtotal/contribution/tax until reversal classified",
+    "Bandcamp UTC GMT and explicit ISO timezone offset parsing",
+    "Patreon exact duplicate transaction rows rejected in temporary SHA-256 memory state",
+    "Patreon identical sums for distinct member identities not falsely treated as duplicates",
+    "Do not log or export customer identifiers or member details"
+  ],
+  "actual_evidence": {
+    "bandcamp_private_export_loaded": false,
+    "patreon_private_csv_loaded": false,
+    "bank_settlement_verified": false,
+    "real_data_authorized": false,
+    "official_origin_authenticated": false
+  },
+  "approval": {
+    "public_deploy": false,
+    "ads_spend_eur": 0,
+    "changes_to_platform_accounts": false
+  },
+  "files_sha256": {
+    "reconcile_bandcamp_2026.py": "5a239e3226d8cadc2024d7c01110a04216c2db7bd25628be7e71543a228f741a",
+    "reconcile_patreon_2026.py": "85e1733340c862bc68e02433ca2adb86aca86dcf64d0b7e3a7a013c0ed3287f1",
+    "test_reconcile_bandcamp_2026.py": "14b40c21f9b6442cbc6f17d7005407f12cf129f4d5ede744ce47668589a14d6d",
+    "test_reconcile_patreon_2026.py": "fc12b16486ebfb8c466c1596ccb8ac6f9dd0ff909215791358afc278955ba73d",
+    "README.md": "7b7dd6172e5f0561456b02188affd4d278285bd12c2e9f274e16d3bfed876df6"
+  }
+}
