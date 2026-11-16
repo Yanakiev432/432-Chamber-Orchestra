@@ -28,8 +28,13 @@ function orch432_g3_legacy_scope() {
     if ( ! function_exists( 'home_url' ) ) {
         return false;
     }
-    $host = parse_url( home_url( '/' ), PHP_URL_HOST );
-    return is_string( $host ) && strtolower( $host ) === '432hz-orchestra.com';
+    $home_host = parse_url( home_url( '/' ), PHP_URL_HOST );
+    $request_host = isset( $_SERVER['HTTP_HOST'] ) ? strtolower( trim( (string) $_SERVER['HTTP_HOST'] ) ) : '';
+    // home_url() alone is not sufficient: another Host header can route to
+    // this same WordPress blog while home_url() remains canonical.
+    return is_string( $home_host ) &&
+           strtolower( $home_host ) === '432hz-orchestra.com' &&
+           $request_host === '432hz-orchestra.com';
 }
 
 /**
