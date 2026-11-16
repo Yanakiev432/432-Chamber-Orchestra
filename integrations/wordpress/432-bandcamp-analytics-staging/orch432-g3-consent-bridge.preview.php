@@ -103,7 +103,7 @@ function orch432_g3_bridge_enqueue() {
     $handle = 'orch432-g3-consent-first-entry';
     wp_enqueue_script(
         $handle,
-        plugins_url( 'consent-first-entry.preview.mjs', __FILE__ ),
+        plugins_url( 'consent-first-entry.preview.js', __FILE__ ),
         array(),
         '20261116-preview',
         true
