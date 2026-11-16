@@ -364,3 +364,94 @@ test("disposing the pre-consent module removes the trusted-choice click listener
   setAccepted(c);
   assert.equal(c.scripts.length,0);
 });
+
+function attachWindowStorageSupport(contexts) {
+  const store = new Map();
+  for (const c of contexts) {
+    const listeners = new Map();
+    c.win.addEventListener = (n,fn) => {
+      if (!listeners.has(n)) listeners.set(n,new Set());
+      listeners.get(n).add(fn);
+    };
+    c.win.removeEventListener = (n,fn) => listeners.get(n)?.delete(fn);
+    c.win.emitWindow = (n,event) => {
+      for (const fn of [...(listeners.get(n)||[])]) fn(event);
+    };
+    c.win.listenerCount = n => listeners.get(n)?.size||0;
+    c.win.localStorage = {
+      setItem(k,v) {
+        store.set(k,v);
+        for(const other of contexts) if(other!==c) other.win.emitWindow("storage",{key:k,newValue:v});
+      },
+      removeItem(k) {
+        store.delete(k);
+        for(const other of contexts) if(other!==c) other.win.emitWindow("storage",{key:k,newValue:null});
+      },
+    };
+  }
+  return store;
+}
+
+test("repeated reject requests after opt-in trigger only one reload",()=>{
+  const c=fakeEnvironment();configured(c);setAccepted(c);c.scripts[0].onload();
+  setRejected(c);setRejected(c);
+  assert.equal(c.reloadCount,1);
+});
+
+test("storage fallback revokes same-origin visible second tab with BroadcastChannel absent",()=>{
+  const a=fakeEnvironment(),b=fakeEnvironment();
+  const storage=attachWindowStorageSupport([a,b]);
+  const ax=configured(a),bx=configured(b);
+  setAccepted(a);setAccepted(b);a.scripts[0].onload();b.scripts[0].onload();
+  assert.equal(bx.getStatus().ready,true);
+  setRejected(a);
+  assert.equal(a.reloadCount,1);assert.equal(b.reloadCount,1);
+  assert.equal(bx.getStatus().ready,false);
+  assert.equal(readCookie(b.doc,CONSENT_MARKER),null);
+  assert.equal(storage.size,0);
+  ax.dispose();bx.dispose();
+});
+
+test("BroadcastChannel and storage double delivery never double reload",()=>{
+  const a=fakeEnvironment(),b=fakeEnvironment();
+  attachWindowStorageSupport([a,b]);
+  const members=new Set();
+  class Channel {
+    constructor(name){this.name=name;members.add(this);}
+    postMessage(data){for(const m of members)if(m!==this&&m.name===this.name)m.onmessage?.({data});}
+    close(){members.delete(this);}
+  }
+  a.win.BroadcastChannel=Channel;b.win.BroadcastChannel=Channel;
+  const ax=configured(a), bx=configured(b);
+  setAccepted(a);setAccepted(b);a.scripts[0].onload();b.scripts[0].onload();
+  setRejected(a);
+  assert.equal(a.reloadCount,1);assert.equal(b.reloadCount,1);
+  assert.equal(bx.getStatus().ready,false);
+  ax.dispose();bx.dispose();
+});
+
+test("localStorage access errors leave rejection fail closed",()=>{
+  const c=fakeEnvironment();
+  Object.defineProperty(c.win,"localStorage",{get(){throw Error("Denied")}});
+  configured(c);setAccepted(c);c.scripts[0].onload();
+  assert.doesNotThrow(()=>setRejected(c));
+  assert.equal(c.reloadCount,1);
+  assert.equal(readCookie(c.doc,CONSENT_MARKER),null);
+});
+
+test("storage event cannot ever grant consent and ignores unrelated keys",()=>{
+  const c=fakeEnvironment();attachWindowStorageSupport([c]);
+  const x=configured(c);
+  c.win.emitWindow("storage",{key:"orch432-ga4-revoke-v1",newValue:"grant"});
+  c.win.emitWindow("storage",{key:"other-key",newValue:"reject"});
+  assert.equal(c.scripts.length,0);assert.equal(x.getStatus().ready,false);
+});
+
+test("dispose releases storage listener and never authorizes analytics",()=>{
+  const c=fakeEnvironment();attachWindowStorageSupport([c]);
+  const x=configured(c);
+  assert.equal(c.win.listenerCount("storage"),1);
+  x.dispose();assert.equal(c.win.listenerCount("storage"),0);
+  c.win.emitWindow("storage",{key:"orch432-ga4-revoke-v1",newValue:"reject"});
+  assert.equal(c.scripts.length,0);
+});
