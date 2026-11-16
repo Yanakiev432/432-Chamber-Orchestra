@@ -33,7 +33,8 @@
     "G3 single consent-first GA4 sender and site-scoped WP bridge now staged with 54/54 Node tests and EN/BG WordPress PHP in-memory tests. These are NOT installed; Basic Mode real network and consent QA still unknown.",
     "Cross-tab withdrawal was not handled by the original JS; BroadcastChannel reject + visibilitychange/pageshow fallback are now unit-tested in staging. Live browser cross-tab delivery and network no-request guarantees remain unverified.",
     "Public Google gtag.js for UA-43283273-2 names GA4 G-YMLKYY9HGT as a child container with inherited parent config; actual Admin Destinations/GA4 network transmission remain unverified.",
-    "WordPress preview previously trusted canonical home_url only for site scope; staged guard now also checks incoming HTTP_HOST exactly. 5/5 real WP PHP7.4 negative/positive host cases pass."
+    "WordPress preview previously trusted canonical home_url only for site scope; staged guard now also checks incoming HTTP_HOST exactly. 5/5 real WP PHP7.4 negative/positive host cases pass.",
+    "Staged GA4 previously allowed synthetic Cookie Notice acceptance event+cookie to set fresh marker. Now requires recent trusted Accept click and consumes intent once. 75/75 Node tests, no production browser validation."
   ],
   "unknowns": [
     "Whether initial page load triggers Google requests/cookies prior to explicit consent",
@@ -45,7 +46,8 @@
     "Whether an independent third-party blocker prevents actual Google requests despite classic mode and executable tag is unverified.",
     "The configured WSL anonymous guest profile is not live-ready, so no safe approved anonymous browser HAR was captured; Windows Chromium lockout HOLD remains.",
     "Anonymous cross-tab browser proof, legacy _gcl_* cookie deletion across domain/path contexts and in-flight GA4 network stop remain unverified.",
-    "New .js browser module copies have exact source parity and existing site serves .js as text/javascript, but real installed future plugin path, imports, MIME, CSP and cache have not been tested."
+    "New .js browser module copies have exact source parity and existing site serves .js as text/javascript, but real installed future plugin path, imports, MIME, CSP and cache have not been tested.",
+    "New trusted click capture ordering and keyboard/assistive technology activation have not yet been verified in a real safe browser. Synthetic event unit-test protection is not malicious same-origin script isolation."
   ],
   "sources": {
     "ga4": "Connected Windsor.ai GA4 reporting property 397059277, stream 5843252803, G-YMLKYY9HGT",
@@ -198,10 +200,10 @@
       "bg"
     ],
     "wordpress_php74_known_tracking_hooks_disabled_inmemory": 4,
-    "node22_new_loader_tests_pass": 30,
+    "node22_new_loader_tests_pass": 38,
     "node22_old_consent_tests_pass": 19,
     "node22_outbound_tests_pass": 10,
-    "total_node_tests_pass": 67,
+    "total_node_tests_pass": 75,
     "total_node_tests_fail": 0,
     "ga4_id": "G-YMLKYY9HGT",
     "only_new_versioned_consent_enables": true,
@@ -220,7 +222,8 @@
     "browser_cross_tab_verification_complete": false,
     "node22_browser_parity_tests_pass": 8,
     "browser_js_entry_filename": "consent-first-entry.preview.js",
-    "real_installed_file_load_proven": false
+    "real_installed_file_load_proven": false,
+    "new_explicit_trusted_click_gate": true
   },
   "crossTabWithdrawalStaging": {
     "date": "2026-11-16",
@@ -295,5 +298,32 @@
     "domain_guard_receipt": "G3_WordPress_ActualHost_Guard_Preflight_20261116.json",
     "domain_guard_sha256": "91060d172a3c542f493e9399b214d18b46a5ade9330f677db2337824d7b63d14",
     "live_wp_changes": 0
+  },
+  "trustedChoiceGateStaging": {
+    "date": "2026-11-16",
+    "status": "STAGING_ONLY_TESTED_NO_HAR",
+    "receipt": "G3_Trusted_Consent_Click_Gate_20261116.json",
+    "receipt_sha256": "d8e42c262cfbfbc525e1d626462e525e7622d2a30b6a9f06a2319efe8d3010e2",
+    "trusted_click_selector": "#cn-accept-cookie",
+    "browser_event_requirement": "isTrusted===true on click",
+    "accept_notice_event": "setCookieNotice('true') dispatched synchronously by installed Cookie Notice 2.4.1 after cookie write",
+    "max_click_to_notice_event_age_ms": 1500,
+    "consumes_intent_once": true,
+    "untrusted_programmatic_grant_rejected": true,
+    "rejection_remains_fail_closed": true,
+    "browser_accessibility_and_real_network_not_tested": true,
+    "node22_tests": {
+      "ga4": 38,
+      "consent_preflight": 19,
+      "outbound": 10,
+      "browser_asset_parity": 8,
+      "total_pass": 75,
+      "total_fail": 0
+    },
+    "source_sha256": "bdc10fa7a840e5fceeaf35e6ca3324a1c65b67ff1f4489c759e28ac98ec64735",
+    "browser_bundle_sha256": "8c6fec4f3ebe7d46a7b653e01787c48690bb765dbe798f1b37538c592a7ac1ae",
+    "test_sha256": "842812685523592bde91f9e576ee7de889534a01f6cb025da897657f06b97426",
+    "github_pr": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8",
+    "productionChanges": 0
   }
 }
