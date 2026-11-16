@@ -211,3 +211,82 @@ test("consent becomes active on a new session only with both current cookies",()
   c.scripts[0].onload();
   assert.equal(x.getStatus().pageviewSent,true);
 });
+
+
+test("revocation broadcasts to another opted-in tab and stops its old GA4 session", () => {
+  const connections = new Set();
+  const messages = [];
+  class TestBroadcastChannel {
+    constructor(name) { this.name = name; this.onmessage = null; this.closed = false; connections.add(this); }
+    postMessage(data) {
+      messages.push(data);
+      for (const subscriber of connections) {
+        if (subscriber !== this && !subscriber.closed && subscriber.name === this.name) subscriber.onmessage?.({data});
+      }
+    }
+    close() { this.closed = true; connections.delete(this); }
+  }
+  const a=fakeEnvironment(), b=fakeEnvironment();
+  a.win.BroadcastChannel=TestBroadcastChannel;
+  b.win.BroadcastChannel=TestBroadcastChannel;
+  const first=configured(a), second=configured(b);
+  setAccepted(a);setAccepted(b);
+  a.scripts[0].onload();b.scripts[0].onload();
+  assert.equal(first.getStatus().ready,true);
+  assert.equal(second.getStatus().ready,true);
+  setRejected(a);
+  assert.deepEqual(messages,["reject"]); // receiving tab must not re-broadcast indefinitely
+  assert.equal(a.reloadCount,1);
+  assert.equal(b.reloadCount,1);
+  assert.equal(first.getStatus().ready,false);
+  assert.equal(second.getStatus().ready,false);
+  assert.equal(readCookie(b.doc,CONSENT_MARKER),null);
+  first.dispose();second.dispose();
+  assert.equal(connections.size,0);
+});
+
+test("visibilitychange revocation fallback fails closed when cross-tab signals unavailable", () => {
+  const c=fakeEnvironment();
+  configured(c);
+  setAccepted(c);c.scripts[0].onload();
+  assert.equal(c.doc.listeners("visibilitychange").length,1);
+  c.doc.cookie="cookie_notice_accepted=false";
+  c.doc.emit("visibilitychange");
+  assert.equal(c.reloadCount,1);
+  assert.equal(readCookie(c.doc,CONSENT_MARKER),null);
+});
+
+test("unrelated cross-tab broadcast messages cannot grant analytics consent", () => {
+  let instance;
+  class TestChannel{
+    constructor() { instance=this; }
+    postMessage() {}
+    close() {}
+  }
+  const c=fakeEnvironment();
+  c.win.BroadcastChannel=TestChannel;
+  const x=configured(c);
+  instance.onmessage({data:"grant"});
+  instance.onmessage({data:{consent:"true"}});
+  assert.equal(x.getStatus().tagInjected,false);
+  assert.equal(readCookie(c.doc,CONSENT_MARKER),null);
+});
+
+test("preconsent cross-tab reject message does not create any Google tag", () => {
+  let instance;
+  class TestChannel { constructor(){ instance=this; } postMessage(){} close(){} }
+  const c=fakeEnvironment();c.win.BroadcastChannel=TestChannel;
+  const x=configured(c);
+  instance.onmessage({data:"reject"});
+  assert.equal(x.getStatus().ready,false);
+  assert.equal(c.scripts.length,0);
+  assert.equal(c.reloadCount,0);
+});
+
+
+test("withdrawal cleans nonessential legacy Google _gcl cookies without deleting auth cookies",()=>{
+  const c=fakeEnvironment({initial:{"_ga":"a","_ga_X1":"b","_gcl_au":"c","_gcl_aw":"d","_gac_UA12":"e","session_auth":"preserve"}});
+  clearFirstPartyAnalyticsCookies(c.doc,"432hz-orchestra.com");
+  for(const name of ["_ga","_ga_X1","_gcl_au","_gcl_aw","_gac_UA12"])assert.equal(readCookie(c.doc,name),null);
+  assert.equal(readCookie(c.doc,"session_auth"),"preserve");
+});
