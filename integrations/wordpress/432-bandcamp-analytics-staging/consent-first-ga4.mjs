@@ -11,6 +11,7 @@ export const GA4_MEASUREMENT_ID = "G-YMLKYY9HGT";
 export const CONSENT_MARKER = "__Host-orch432-ga4-v1";
 const SITE_HOST = "432hz-orchestra.com";
 const NOTICE_COOKIE = "cookie_notice_accepted";
+const STORAGE_REVOKE_KEY = "orch432-ga4-revoke-v1";
 
 export function readCookie(doc, name) {
   const items = String(doc?.cookie ?? "").split(";");
@@ -201,17 +202,29 @@ export function installConsentFirstGA4({
   }
 
   function rejectConsent({ broadcast = false } = {}) {
-    const previouslyInitialized = state.initialized;
+    const needsReload = state.initialized && !state.disabled;
     stop();
     clearMarker(doc);
     clearFirstPartyAnalyticsCookies(doc, host);
-    if (broadcast && state.channel) {
-      try { state.channel.postMessage("reject"); } catch (_error) { /* browser unavailable */ }
+    if (broadcast) {
+      if (state.channel) {
+        try { state.channel.postMessage("reject"); } catch (_error) { /* unavailable */ }
+      }
+      // Same-origin fallback for other visible tabs without BroadcastChannel.
+      // This is a transient, non-identifying literal, not a consent grant.
+      try {
+        const storage = win.localStorage;
+        if (storage && typeof storage.setItem === "function" &&
+            typeof storage.removeItem === "function") {
+          storage.setItem(STORAGE_REVOKE_KEY, "reject");
+          storage.removeItem(STORAGE_REVOKE_KEY);
+        }
+      } catch (_error) { /* unavailable: visibility/pageshow fallback remains */ }
     }
     // Already loaded Google JavaScript cannot be truly unloaded from the
     // current document. Reload under denied/marker-absent consent to remove it.
     // We never send another Google event or consent ping after rejection.
-    if (previouslyInitialized && !state.disposed) {
+    if (needsReload && !state.disposed) {
       diagnostic("reload-to-unload-tag-after-revocation");
       if (typeof win.location?.reload === "function") win.location.reload();
     }
@@ -252,6 +265,12 @@ export function installConsentFirstGA4({
     }
   }
 
+  function onStorageRevocation(event) {
+    if (event?.key === STORAGE_REVOKE_KEY && event?.newValue === "reject") {
+      rejectConsent();
+    }
+  }
+
   function recheckConsentAfterResume() {
     if (state.disposed || !state.initialized) return;
     if (!hasVersionedAnalyticsConsent(doc)) rejectConsent();
@@ -269,6 +288,7 @@ export function installConsentFirstGA4({
     } catch (_error) { state.channel = null; }
     doc.addEventListener("visibilitychange", recheckConsentAfterResume, false);
     win.addEventListener?.("pageshow", recheckConsentAfterResume, false);
+    win.addEventListener?.("storage", onStorageRevocation, false);
     doc.addEventListener("click", onTrustedAcceptClick, true);
     doc.addEventListener("setCookieNotice", onConsentEvent, false);
     if (hasVersionedAnalyticsConsent(doc)) initializeTag();
@@ -291,6 +311,7 @@ export function installConsentFirstGA4({
         doc.removeEventListener("setCookieNotice", onConsentEvent, false);
         doc.removeEventListener("visibilitychange", recheckConsentAfterResume, false);
         win.removeEventListener?.("pageshow", recheckConsentAfterResume, false);
+        win.removeEventListener?.("storage", onStorageRevocation, false);
       }
       try { state.channel?.close(); } catch (_error) { /* safe fallback */ }
       state.channel = null;
