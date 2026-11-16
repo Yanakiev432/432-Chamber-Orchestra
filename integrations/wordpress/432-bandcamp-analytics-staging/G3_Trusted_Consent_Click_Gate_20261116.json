@@ -1,0 +1,70 @@
+{
+  "schema": "432-g3-explicit-trusted-consent-interaction-audit/1.0",
+  "date": "2026-11-16",
+  "scope": "DRAFT_STAGING_ONLY_WITH_REAL_INSTALLED_COOKIE_NOTICE_SOURCE_VERIFICATION",
+  "reason": "Staged first-party GA4 loader previously accepted Cookie Notice setCookieNotice('true') when the notice cookie was true; a synthetic CustomEvent plus cookie write could enable a fresh versioned consent marker without a user clicking Accept.",
+  "installed_plugin_evidence": {
+    "plugin": "Cookie Notice 2.4.1",
+    "source_path": "/home/hzorche/public_html/wp-content/plugins/cookie-notice/js/front.js",
+    "observed_behavior": "Cookie Notice attaches click listeners to .cn-set-cookie links; handler calls setStatus(this.dataset.cookieSet); setStatus writes cookie_notice_accepted=true or false first and immediately dispatches synthetic CustomEvent('setCookieNotice', { detail: {value, time, expires, data:cnArgs} }).",
+    "consequence": "The custom setCookieNotice event is not a trusted browser event; gating on event.isTrusted would wrongly block legitimate user consent."
+  },
+  "mitigation": {
+    "name": "Trusted click intent verification and consume-once",
+    "mechanism": "Capture a browser-trusted click (event.isTrusted===true) on exact #cn-accept-cookie before Cookie Notice's synchronous setStatus/event dispatch. On setCookieNotice('true') require a new trusted-intent timestamp no older than 1500ms and cookie_notice_accepted=true. Consume the click intent before marking accepted, even on validation failure. Reject still fails closed without proof-of-click requirement.",
+    "limitation": "A same-origin malicious script with full page execution can still manipulate cookies, event handlers or Google tags; this is defense-in-depth against accidental programmatic acceptance and not cryptographic attestation of the visitor's will.",
+    "keyboard": "Enter/Space activating the browser's accessible Accept link produces a trusted click event and follows the same path; actual assistive technology/browser behavior remains untested.",
+    "scope": "Only the separately approved GA4 adapter in the approved site; no public Cookie Notice plugin or WordPress changes.",
+    "files": [
+      {
+        "file": "consent-first-ga4.mjs",
+        "sha": "bdc10fa7a840e5fceeaf35e6ca3324a1c65b67ff1f4489c759e28ac98ec64735"
+      },
+      {
+        "file": "consent-first-ga4.test.mjs",
+        "sha": "842812685523592bde91f9e576ee7de889534a01f6cb025da897657f06b97426"
+      },
+      {
+        "file": "consent-first-ga4.browser.js",
+        "sha": "8c6fec4f3ebe7d46a7b653e01787c48690bb765dbe798f1b37538c592a7ac1ae"
+      },
+      {
+        "file": "G3_Browser_JS_Asset_Parity_20261116.test.mjs",
+        "sha": "6605f52df835aa63f428c1fa6ccbd09e0c1a5ce68c32eb69447936eb2713b3af"
+      },
+      {
+        "file": "orch432-g3-legacy-guard.preview.php",
+        "sha": "1c4d721389698eb609aa78c8bb0610bf612c1adc97e66094516551be0f06d0c4"
+      }
+    ]
+  },
+  "test_results": {
+    "node_version": "22.23.2",
+    "ga4_module": 38,
+    "consent_preflight": 19,
+    "outbound": 10,
+    "browser_asset_parity": 8,
+    "aggregate_pass": 75,
+    "aggregate_fail": 0,
+    "new_cases": 8,
+    "new_case_topics": [
+      "synthetic accept event without trusted click",
+      "untrusted synthetic click with true cookie",
+      "trusted unrelated click",
+      "trusted click but missing notice cookie",
+      "single-use click intent",
+      "reject then fake accept",
+      "keyboard equivalent browser-trusted click",
+      "cleanup of trusted click listener on dispose"
+    ],
+    "browser_real_capture": false,
+    "WordPress_php74_host_guard_prior": true,
+    "source_parity_browser_mjs_to_js": true
+  },
+  "current_readiness": "NO_GO_NO_BROWSER_HAR_OR_PRODUCTION_OWNER_APPROVAL",
+  "legacy_script_auto_blocking_live": "INACTIVE_COOKIE_NOTICE_CLASSIC_MODE",
+  "native_google_admin_destinations": "NOT_VERIFIED",
+  "public_site_mutations": 0,
+  "paid_eur": 0,
+  "github_draft_pr": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8"
+}

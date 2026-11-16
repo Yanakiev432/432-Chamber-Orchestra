@@ -1,0 +1,65 @@
+{
+  "schema": "432-g3-classic-cookie-notice-candidate-ui-inmemory/1.0",
+  "date": "2026-11-15",
+  "mode": "REAL_PHP74_WORDPRESS_BOOTSTRAP_IN_MEMORY_ONLY_NO_DB_OR_SITE_WRITES",
+  "php_version": "7.4.34",
+  "wp_blog_id": 1,
+  "plugin": "Cookie Notice 2.4.1",
+  "runtime_status": "",
+  "cookie_compliance_active": false,
+  "tested_only_in_process_options": {
+    "refuse_opt": true,
+    "revoke_cookies": true,
+    "revoke_cookies_opt": "automatic",
+    "on_click": false,
+    "on_scroll": false
+  },
+  "localization_prototypes": {
+    "en": {
+      "message": "Optional analytics cookies are used only with consent. Choose Accept or Reject.",
+      "accept": "Accept optional",
+      "reject": "Reject optional",
+      "change": "Change choice",
+      "rendered_accept": true,
+      "rendered_reject": true,
+      "rendered_revoke": true,
+      "translated_message_present": true,
+      "dom_warnings": 0
+    },
+    "bg": {
+      "message": "Незадължителните аналитични бисквитки се използват само със съгласие. Изберете Приемам или Отказвам.",
+      "accept": "Приемам незадължителните",
+      "reject": "Отказвам незадължителните",
+      "change": "Промяна на избора",
+      "rendered_accept": true,
+      "rendered_reject": true,
+      "rendered_revoke": true,
+      "translated_message_present": true,
+      "dom_warnings": 0
+    }
+  },
+  "critical_html_js_distinction": {
+    "close_element_has_data_cookie_set_accept": true,
+    "actual_close_click_handler_in_installed_front_js": "_this.setStatus('reject')",
+    "verified_click_handler_source": "/home/hzorche/public_html/wp-content/plugins/cookie-notice/js/front.js approx lines 458-466",
+    "actual_close_action_in_code": "REJECT",
+    "source_based_conclusion": "The close icon's HTML attribute is misleading, but the installed click handler explicitly rejects. Do NOT report the X icon as an accidental acceptance bug without browser-level contrary evidence.",
+    "other_handlers": {
+      "accept": "setStatus(this.dataset.cookieSet) -> accept",
+      "reject": "setStatus(this.dataset.cookieSet) -> reject",
+      "revoke": "opens selection banner; a subsequent Reject selection sets cookie_notice_accepted=false"
+    },
+    "browser_behavior_verified": false
+  },
+  "implications": [
+    "Built-in classic Cookie Notice can render EN/BG Accept, Reject and Change-choice elements without replacing plugin.",
+    "Need real browser keyboard/mobile and preference-state QA, including whether manual revoke interaction is sufficiently accessible.",
+    "Built-in UI controls alone do not block legacy GA scripts: Cookie Compliance autoblocking inactive in current classic mode.",
+    "HTML data-cookie-set on close does not govern close action; actual JavaScript listener takes precedence.",
+    "Modeled event lifecycles are not a HAR/cookie capture and cannot prove GDPR compliance."
+  ],
+  "owner_approval_to_change_wordpress": false,
+  "live_options_changed": 0,
+  "live_plugin_files_changed": 0,
+  "paid_spend_eur": 0
+}

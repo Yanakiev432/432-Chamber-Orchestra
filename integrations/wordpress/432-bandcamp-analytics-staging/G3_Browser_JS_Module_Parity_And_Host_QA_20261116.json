@@ -1,0 +1,93 @@
+{
+  "schema": "432-g3-browser-js-assets-and-php-host-preflight/1.0",
+  "date": "2026-11-16",
+  "status": "STAGING_ONLY_PHP_MEMORY_PREVIEW_PASS_NO_BROWSER_NETWORK_HAR",
+  "reason": "No proof shared hosting serves .mjs with correct JS MIME; replace browser-delivered .mjs URLs with ordinary .js ES modules while retaining audited .mjs source and Node tests.",
+  "source_to_browser_modules": [
+    {
+      "source": "G3-node-validation\\outbound-tracker.mjs",
+      "source_sha256": "65e1973c2bd8202d02a21bfa30478dbe8ed8bdcd061cd5421e2ac8d7f5bd0dcc",
+      "target": "G3-node-validation\\outbound-tracker.browser.js",
+      "target_sha256": "65e1973c2bd8202d02a21bfa30478dbe8ed8bdcd061cd5421e2ac8d7f5bd0dcc",
+      "change": "No change"
+    },
+    {
+      "source": "G3-node-validation\\consent-first-ga4.mjs",
+      "source_sha256": "714de9693c7eca508a1bbfa8670d77974ec88312328257df9be2db8a0def4de3",
+      "target": "G3-node-validation\\consent-first-ga4.browser.js",
+      "target_sha256": "c07666ebd34438d17579c5aaaebdf196a2f5cc86a3ff540dbbc58949beb80251",
+      "change": "Only local import from ./outbound-tracker.mjs to ./outbound-tracker.browser.js"
+    },
+    {
+      "source": "G3-node-validation\\consent-first-entry.preview.mjs",
+      "source_sha256": "5a6fc3968f891d9be9cf88159a029785a640e93579ec088b8aa8ae65b63a5c77",
+      "target": "G3-node-validation\\consent-first-entry.preview.js",
+      "target_sha256": "aa83db0fdb76aba58aef61d70e38efb47c5d5ea6bbcd8f84cc9dc10865320e8d",
+      "change": "Only local import from ./consent-first-ga4.mjs to ./consent-first-ga4.browser.js"
+    }
+  ],
+  "wp_bridge": {
+    "file": "G3-node-validation\\orch432-g3-consent-bridge.preview.php",
+    "sha256": "4399e87e5dd025f87d7902bf3c8c9fdbb185d7f7c38b02a7f6c3c81816ddbdb9",
+    "enqueued_asset": "consent-first-entry.preview.js",
+    "browser_script_attribute": "type=module",
+    "approval_feature_flag": "ORCH432_G3_STAGING_BRIDGE_ENABLED",
+    "still_disabled_by_default": true
+  },
+  "actual_wordpress_php74_preview": {
+    "test_mode": "READ_ONLY_EVAL_IN_WP_LOAD_PHP_CLI_PROCESS",
+    "php_version": "7.4.34",
+    "en": {
+      "scope": true,
+      "ready": true,
+      "accept": 1,
+      "reject": 1,
+      "revoke": 1,
+      "dom_warnings": 0,
+      "js_asset_ext_correct": true,
+      "inline_config_registered_before": true
+    },
+    "bg": {
+      "scope": true,
+      "ready": true,
+      "accept": 1,
+      "reject": 1,
+      "revoke": 1,
+      "dom_warnings": 0,
+      "js_asset_ext_correct": true,
+      "inline_config_registered_before": true
+    },
+    "host_alias_rejected": true,
+    "new_asset_preview_url_observed": "https://432hz-orchestra.com/wp-content/plugins/consent-first-entry.preview.js",
+    "preview_url_caveat": "PHP eval uses a synthetic __FILE__ context, so the preview URL has no actual plugin directory. This is NOT evidence that the file exists/loads in production. Real future plugin ZIP/layout and Apache HTTP GET QA required.",
+    "site_options_modified": 0,
+    "site_files_modified": 0
+  },
+  "static_mime_evidence": {
+    "existing_wp_cookie_notice_js_http": 200,
+    "existing_wp_cookie_notice_js_content_type": "text/javascript",
+    "note": "Shows existing .js files on site are served as JS; does not certify future installed location. No .mjs resources currently installed to test."
+  },
+  "node": {
+    "version": "22.23.2",
+    "combined_tests_pass": 67,
+    "combined_tests_fail": 0,
+    "prior_ga4_consent_outbound_tests": 59,
+    "new_asset_and_host_tests": 8,
+    "tests_file": "G3-node-validation\\G3_Browser_JS_Asset_Parity_20261116.test.mjs",
+    "tests_sha256": "6605f52df835aa63f428c1fa6ccbd09e0c1a5ce68c32eb69447936eb2713b3af"
+  },
+  "related_public_google_configuration_receipt": {
+    "file": "G3_GoogleTag_ParentChild_PublicConfig_20261116.json",
+    "sha256": "65e44845a0b27bec3f38808009a2c0c3a6049990cacdec667e45c8533488635f"
+  },
+  "remain_blocked": [
+    "Unknown Google tag admin Destinations and Enhanced Measurement settings; public child container alone not actual GA4 delivery evidence",
+    "No real anonymous browser HAR Accept/Reject/Revoke and cross-tab cookie network QA",
+    "Windows Chromium account lockout HOLD and WSL guest not live-ready",
+    "Production plugin ZIP installation paths, Apache MIME, caching, script module imports and CSP must be tested in approved staging",
+    "No explicit owner authorization for production WordPress changes"
+  ],
+  "production_changes": 0,
+  "paid_eur": 0
+}

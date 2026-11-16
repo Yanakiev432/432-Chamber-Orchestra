@@ -1,0 +1,58 @@
+{
+  "schema": "432-g3-consent-first-ga4-site-bridge-staging/1.0",
+  "date": "2026-11-16",
+  "status": "STAGING_TESTED_PRODUCTION_NO_GO",
+  "production_changes": 0,
+  "staging_files": [
+    "orch432-g3-legacy-guard.preview.php",
+    "orch432-g3-consent-bridge.preview.php",
+    "consent-first-entry.preview.mjs",
+    "consent-first-ga4.mjs",
+    "consent-first-ga4.test.mjs",
+    "outbound-tracker.mjs",
+    "consent-preflight.test.mjs"
+  ],
+  "invariants": {
+    "wordpress_blog_id": 1,
+    "required_host": "432hz-orchestra.com",
+    "bridge_and_guard_disabled_by_default": true,
+    "legacy_hooks_removed_in_memory": 4,
+    "wp_php74_lang_previews_pass": [
+      "en",
+      "bg"
+    ],
+    "accept_reject_revoke_each_language": true,
+    "old_notice_accept_cookie_alone_insufficient": true,
+    "marker": "__Host-orch432-ga4-v1",
+    "actual_google_tag_before_consent_in_module": false,
+    "measurement_id": "G-YMLKYY9HGT",
+    "manual_ga4_pageview_once_after_script_load": true,
+    "auto_pageview_disabled": true,
+    "outbound_click_instrumentation_disabled_by_default": true,
+    "ad_storage_default_denied": true,
+    "revocation_strategy": "disable event sender, clear known first-party GA cookies and marker, reload browser if tag already loaded"
+  },
+  "test_results": {
+    "node": "22.23.2",
+    "ga4_client": 25,
+    "consent_preflight": 19,
+    "outbound_existing": 10,
+    "total_pass": 54,
+    "total_fail": 0,
+    "php74_wordpress": "2/2 EN/BG in-memory previews: four legacy hooks absent, three choices, 0 DOM parser warnings, enqueued module and inline config, zero WordPress writes",
+    "php74_negative_scope_cases": "5/5 PASS from earlier legacy guard audit"
+  },
+  "limitations": [
+    "No real browser HAR/cookie/storage inspection; neither preconsent network activity nor revocation cleanup proved",
+    "WordPress real hook process and script registration tested only in CLI memory; final installed asset paths, CSP and cache not tested",
+    "GA4 native Tag Destinations/old event route/enhanced outbound detection unverified",
+    "Live site still has old Accept-only classic Cookie Notice and executable UA tag",
+    "No validated consent copy/legal review, no live client integration or production authorization",
+    "Reload after revocation may race an inflight GA tag; requires real network test",
+    "Other unknown injected Google tags might exist beyond the two known legacy plugins"
+  ],
+  "official_basic_consent_mode": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
+  "github_draft_pr": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8",
+  "approved_live_changes": false,
+  "ads_spend_eur": 0
+}

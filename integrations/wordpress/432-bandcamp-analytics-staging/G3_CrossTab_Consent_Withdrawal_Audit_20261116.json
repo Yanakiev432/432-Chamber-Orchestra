@@ -1,0 +1,63 @@
+{
+  "schema": "432-g3-cross-tab-consent-withdrawal-audit/1.0",
+  "date": "2026-11-16",
+  "scope": "OWNED_G3_STAGING_ONLY_NO_WORDPRESS_PRODUCTION_MUTATIONS",
+  "finding": "Previous consent-first JS isolated each tab. Revocation in tab A could leave already-loaded GA4 script in tab B until the tab resumed or its own consent check ran; browser network behavior unproven.",
+  "fixed_in_staging": {
+    "js": "G3-node-validation\\consent-first-ga4.mjs",
+    "js_sha256": "714de9693c7eca508a1bbfa8670d77974ec88312328257df9be2db8a0def4de3",
+    "test": "G3-node-validation\\consent-first-ga4.test.mjs",
+    "test_sha256": "3c12f55ff564e159b1e3b78e4325e8f6c8f259f7b78b1410e9e8a69696b7b056",
+    "broadcast_channel": "orch432-ga4-consent-v1",
+    "message_only": "reject",
+    "behavior": "On explicit reject of an opted-in tab, stop local GA sender, clear versioned marker and known analytics cookies, broadcast 'reject' to same-origin tabs, then reload if tag was initialized. Receiving tabs stop/reload but never echo; only rejection signals travel, no acceptance grant.",
+    "fallback": "On visibilitychange or pageshow a tab with an initialized GA4 tag checks consent cookies; if stale/withdrawn, rejects locally, clears cookies and reloads if needed.",
+    "cleanup": "Legacy first-party Google _gcl_* as well as _ga, _ga_*, _gid, _gat*, _gac_* cookies now deleted on revoke, across host-only and site domain variants to the extent supported by browser cookie rules. Unrelated session_auth cookie preserved.",
+    "privacy": "No cross-tab personal identifier or user payload. Broadcast is same origin. No localStorage identifier is introduced. Channel closed on dispose.",
+    "invariants": [
+      "No Google tag loaded without explicit new consent marker",
+      "Old Cookie Notice accept-only cookie alone never grants analytics",
+      "No positive cross-tab consent message exists",
+      "Native GA4 outbound click tracking remains OFF by default",
+      "Other-site/admin PHP gate unmodified",
+      "No WordPress plugin or database writes"
+    ]
+  },
+  "test_results": {
+    "environment": "Lenovo Windows Node 22.23.2",
+    "suite_new_ga4": 30,
+    "suite_existing_preflight": 19,
+    "suite_existing_outbound": 10,
+    "aggregate_pass": 59,
+    "aggregate_fail": 0,
+    "new_cases": 5,
+    "cases": [
+      "Broadcast reject from opted-in tab A causes opted-in tab B to stop, remove marker and reload, no rebroadcast loops",
+      "Visibility change detects stale cookie and revokes without BroadcastChannel",
+      "Unrelated BroadcastChannel message cannot grant consent",
+      "Reject signal before consent does not load Google tag",
+      "Clean _gcl_au and _gcl_aw plus _ga/_gac cookies, preserve session_auth"
+    ],
+    "server_side_php74_preview": "Previously verified 2/2 EN/BG WordPress in-memory only; no change to PHP bridge this turn"
+  },
+  "browser_status": {
+    "wsl_guest_profile": "ra-allweb-wsl",
+    "wsl_guest_live_ready": false,
+    "windows_chromium_launch_allowed": false,
+    "windows_account_lockout_hold": true,
+    "isolated_container_linux_chromium_attempt": "Network navigation blocked by administrator even for loopback; no public site HAR or cookie capture obtained.",
+    "browser_passed": false
+  },
+  "still_no_go": [
+    "Actual browser cross-tab event delivery and cookie expiry/domain deletion not verified",
+    "Post-revoke in-flight Google tag network requests cannot be guaranteed stopped by JS unit tests",
+    "Actual installed WP asset URL, CSP/cache and native Google tag Destinations unverified",
+    "Live site still has classic Ok-only Cookie Notice and legacy UA tag; preview not activated",
+    "Owner has not approved production consent/analytics change",
+    "Real explicit Accept/Reject/Revoke and outbound dedup browser HAR required"
+  ],
+  "github_pr": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8",
+  "production_changes": 0,
+  "site_files_changed": 0,
+  "paid_eur": 0
+}

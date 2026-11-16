@@ -1,0 +1,59 @@
+{
+  "schema": "432-g3-google-gtag-public-child-container-audit/1.0",
+  "date": "2026-11-16",
+  "method": "READ_ONLY_PHP_CURL_FROM_AUTHORIZED_EVEREST_SSH",
+  "scope": "Public Google tag JavaScript response only; no Google Analytics admin access, no browser HAR, no data sent or campaign created",
+  "parent_url": "https://www.googletagmanager.com/gtag/js?id=UA-43283273-2",
+  "parent_id": "UA-43283273-2",
+  "child_ga4_id": "G-YMLKYY9HGT",
+  "child_url": "https://www.googletagmanager.com/gtag/js?id=G-YMLKYY9HGT",
+  "responses": [
+    {
+      "requested_id": "UA-43283273-2",
+      "http": 200,
+      "mime": "application/javascript; charset=UTF-8",
+      "bytes": 384654,
+      "sha256": "216b8a2e055754c946826ddfe815a0ad6c966f7aca92a2db717e14a997834380",
+      "parent_id_occurrences": 8,
+      "child_id_occurrences": 1,
+      "child_container_public_id": "G-YMLKYY9HGT"
+    },
+    {
+      "requested_id": "G-YMLKYY9HGT",
+      "http": 200,
+      "mime": "application/javascript; charset=UTF-8",
+      "bytes": 482473,
+      "sha256": "ed3106eb87ee4517fa776863bc6a23414b863d4ea551f1a7975c78e89af58746",
+      "parent_id_occurrences": 0,
+      "child_id_occurrences": 13
+    }
+  ],
+  "direct_parent_fragment": {
+    "function": "__zone",
+    "vtp_childContainers": [
+      "list",
+      [
+        "map",
+        "publicId",
+        "G-YMLKYY9HGT"
+      ]
+    ],
+    "vtp_inheritParentConfig": true,
+    "vtp_enableConfiguration": false
+  },
+  "finding": "The old public UA gtag.js response contains a concrete Google child-container reference to the target GA4 measurement ID. It is not a coincidental isolated identifier; this is static routing/configuration evidence.",
+  "confidence": "SOURCE_CONFIRMED_CHILD_CONTAINER_NOT_ADMIN_DESTINATIONS_OR_NETWORK_PROOF",
+  "next_test": "After safe consent and tag replacement, capture real HAR and Google DebugView/Realtime one-click delivery, and verify native Google tag Destinations and GA4 enhanced measurement in authenticated admin.",
+  "limits": [
+    "Google may return dynamically different script bytes between reads; SHA-256 and byte counts are one read, not permanent asset integrity guarantees.",
+    "vtp_enableConfiguration=false in the child mapping is present; do not infer automatic GA4 config, pageview or outbound event from the child reference alone.",
+    "No browser consent/network request trace; do not claim pre-consent Google requests were sent or blocked.",
+    "Google Analytics admin Destinations and enhanced-measurement settings were not accessed.",
+    "Existing Google Analyticator and ExactMetrics can still produce additional events; duplication requires real consent-aware network testing."
+  ],
+  "authorizations": {
+    "production_changes": false,
+    "ads": false,
+    "paid_eur": 0
+  }
+}
