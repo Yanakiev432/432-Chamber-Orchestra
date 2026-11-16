@@ -1,0 +1,89 @@
+{
+  "schema": "432-g3-wordpress-host-scope-mitigation/1.0",
+  "date": "2026-11-16",
+  "method": "ACTUAL_INSTALLED_WORDPRESS_PHP_7_4_34_BOOTSTRAP_IN_DISPOSABLE_CLI_PROCESS",
+  "scope": "STAGING_CODE_ONLY_NO_SITE_FILES_OPTIONS_OR_DATABASE_MUTATIONS",
+  "before_fix": {
+    "guard_file": "G3-node-validation\\orch432-g3-legacy-guard.preview.php",
+    "source_sha256": "cb94460e503ee38bb3ed52cb6c56b43c11554f36e1d10d327f7e85e21b5c0737",
+    "test_host_canonical": true,
+    "test_host_other_example": true,
+    "risk": "Checking only home_url() canonical hostname allowed noncanonical incoming Host requests routed to WordPress blog ID 1 to pass intended blog-and-host scope."
+  },
+  "after_fix": {
+    "guard_file": "G3-node-validation\\orch432-g3-legacy-guard.preview.php",
+    "source_sha256": "1c4d721389698eb609aa78c8bb0610bf612c1adc97e66094516551be0f06d0c4",
+    "checks": [
+      "get_current_blog_id() === 1",
+      "!is_admin()",
+      "home_url hostname === 432hz-orchestra.com",
+      "actual $_SERVER['HTTP_HOST'] exactly 432hz-orchestra.com"
+    ],
+    "strict_no_www": true,
+    "strict_no_port": true,
+    "bridge_scope_function_respects_updated_guard": true
+  },
+  "tests": {
+    "language": "PHP 7.4.34",
+    "real_wp_home_url": "https://432hz-orchestra.com/",
+    "blog_id": 1,
+    "request_host_cases": [
+      {
+        "request_host": "432hz-orchestra.com",
+        "guard": true,
+        "bridge": true,
+        "pass": true
+      },
+      {
+        "request_host": "other.example",
+        "guard": false,
+        "bridge": false,
+        "pass": true
+      },
+      {
+        "request_host": "www.432hz-orchestra.com",
+        "guard": false,
+        "bridge": false,
+        "pass": true
+      },
+      {
+        "request_host": "432hz-orchestra.com:443",
+        "guard": false,
+        "bridge": false,
+        "pass": true
+      },
+      {
+        "request_host": "",
+        "guard": false,
+        "bridge": false,
+        "pass": true
+      }
+    ],
+    "cases_pass": 5,
+    "cases_fail": 0,
+    "legacy_hook_priorities_before": {
+      "exactmetrics_tracking_script": 6,
+      "exactmetrics_events_tracking": 9,
+      "add_google_analytics": 99,
+      "ga_external_tracking_js": 99999
+    },
+    "legacy_hooks_after_inmemory": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "bridge_ready_after_canonical_host_process": true,
+    "test_pass": true,
+    "site_mutations": 0
+  },
+  "remaining_risks": [
+    "HTTP Host alias could be canonicalized by web server or WordPress; this patch intentionally fails closed on unapproved hostnames.",
+    "Source-only PHP exec does not prove behavior of installed JS bundles; .mjs MIME, browser CSP/caching and real Google tag destination still require live-safe tests.",
+    "Browser WSL guest remains not live ready, Windows Chromium lockout HOLD and no actual HAR or real cookie clearing proof."
+  ],
+  "approval_required": true,
+  "production_changes": 0,
+  "paid_spend_eur": 0,
+  "github_draft_pr": "https://github.com/Yanakiev432/432-Chamber-Orchestra/pull/8"
+}
