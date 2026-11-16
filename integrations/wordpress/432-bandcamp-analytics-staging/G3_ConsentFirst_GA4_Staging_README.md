@@ -43,3 +43,18 @@ Machine receipt: G3_ConsentFirst_GA4_Bridge_Staging_20261116.json in C:\Users\Us
 Official references: https://developers.google.com/tag-platform/security/concepts/consent-mode and https://developers.google.com/tag-platform/security/guides/consent?consentmode=basic
 
 No publishing, advertising, fan messages, paid services or production changes.
+
+
+## Follow-up 16 Nov: consent withdrawal across multiple tabs
+
+The first staging module handled rejection only in the current tab. A second already-open tab could retain a loaded Google tag even after the shared consent cookie was revoked elsewhere. This is a genuine **cross-tab lifecycle gap**.
+
+`consent-first-ga4.mjs` now uses `BroadcastChannel("orch432-ga4-consent-v1")`, when supported, to send **only** the literal `reject` to same-origin tabs (never granting consent remotely). Recipient tabs stop the client sender, clear versioned and known first-party analytics cookies, and reload if the tag was initialized. Receivers do **not** rebroadcast, preventing message loops. On `visibilitychange` or `pageshow` a fallback compares the live consent cookies with the in-tab state and fails closed if the consent was revoked. The channel is disposed with the module; it creates no identifying token.
+
+The cookie-cleanup allowlist now also recognizes legacy first-party Google `_gcl_*` cookies such as `_gcl_au` and `_gcl_aw`, in addition to `_ga*`, `_gid`, `_gat*`, `_gac_*`. The test confirms unrelated session cookies survive. This is still only best-effort first-party cookie deletion; third-party cookies, partitioned storage and inflight network requests are **not proved cleared**.
+
+On Lenovo Node 22.23.2: **59 PASS / 0 FAIL** across 30 new GA4 tests + 19 consent preflight + 10 outbound tests. Five new cases cover two-tab reject, no rebroadcast, resumes, invalid messages, and legacy cookie cleanup. The actual WordPress PHP bridge remains unchanged.
+
+An isolated Linux Chromium exists, but its environment blocks navigation even to local loopback fixtures with `ERR_BLOCKED_BY_ADMINISTRATOR`; WSL guest on Lenovo is still `universal_https_live_ready=false`. **No real-browser HAR or cross-tab browser proof was obtained.** Windows Chromium remains on account-lockout HOLD.
+
+Machine receipt `G3_CrossTab_Consent_Withdrawal_Audit_20261116.json` SHA256 `e811f1e7a56aafcec7b1b075c0d662035acfe8f4a9d584aeaefab7711bf84024`. Staging changes only. Production **NO-GO**, owner GO required.
