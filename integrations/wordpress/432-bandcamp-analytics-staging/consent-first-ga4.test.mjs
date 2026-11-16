@@ -24,7 +24,7 @@ function fakeEnvironment({ host="432hz-orchestra.com", protocol="https:", initia
     querySelector(selector){return scriptNodes.find(s=>selector.includes("gtag/js")&&s.src.includes("gtag/js"))??null;},
     addEventListener(name,fn){const a=listeners.get(name)||[];a.push(fn);listeners.set(name,a);},
     removeEventListener(name,fn){const a=listeners.get(name)||[];const i=a.indexOf(fn);if(i!==-1)a.splice(i,1);},
-    emit(name,value){for(const fn of [...(listeners.get(name)||[])])fn({detail:{value}});},
+    emit(name,value){const event=name==="click"&&typeof value==="object"?value:{detail:{value}};for(const fn of [...(listeners.get(name)||[])])fn(event);},
     listeners(name){return listeners.get(name)||[];},
     location:{search:"?utm_campaign=archive_q4"},
     click(anchor){for(const fn of [...(listeners.get("click")||[])])fn({target:{closest:(s)=>s==="a[href]"?anchor:null}});},
@@ -37,7 +37,8 @@ const configured = (ctx,options={})=> installConsentFirstGA4({
   document:ctx.doc, window:ctx.win,consentUiApproved:true,
   legacyEmittersSuppressed:true,...options,
 });
-function setAccepted(ctx){ctx.doc.cookie="cookie_notice_accepted=true; Path=/";ctx.doc.emit("setCookieNotice","true");}
+function trustedAcceptClick(ctx) { ctx.doc.emit("click",{isTrusted:true,target:{closest:(selector)=>selector==="#cn-accept-cookie"?{id:"cn-accept-cookie"}:null}}); }
+function setAccepted(ctx){trustedAcceptClick(ctx);ctx.doc.cookie="cookie_notice_accepted=true; Path=/";ctx.doc.emit("setCookieNotice","true");}
 function setRejected(ctx){ctx.doc.cookie="cookie_notice_accepted=false; Path=/";ctx.doc.emit("setCookieNotice","false");}
 function names(ctx){return (ctx.win.dataLayer||[]).map(args=>[...args][0]+"_"+[...args][1]);}
 function bandcampLink(){
@@ -155,7 +156,7 @@ test("an invalid or absent onload never emits pageview",()=>{
 });
 test("outbound custom tracking OFF by default even after GA4 is ready",()=>{
   const c=fakeEnvironment();const x=configured(c);setAccepted(c);c.scripts[0].onload();
-  assert.equal(x.getStatus().outboundEnabled,false);assert.equal(c.doc.listeners("click").length,0);
+  assert.equal(x.getStatus().outboundEnabled,false);assert.equal(c.doc.listeners("click").length,1);
 });
 test("native outbound mode unknown => no custom click tracking",()=>{
   const c=fakeEnvironment();const x=configured(c,{captureBandcampOutbound:true});setAccepted(c);c.scripts[0].onload();
@@ -166,17 +167,17 @@ test("approved outbound click sends once, sanitizes payload, never link URL",()=
   const x=configured(c,{captureBandcampOutbound:true,nativeOutboundSettingsVerified:true,allowedCampaigns:["archive_q4"]});
   setAccepted(c);c.scripts[0].onload();
   assert.equal(x.getStatus().outboundEnabled,true);
-  assert.equal(c.doc.listeners("click").length,1);
+  assert.equal(c.doc.listeners("click").length,2);
   c.doc.click(bandcampLink());
   const events=c.win.dataLayer.map(a=>[...a]).filter(a=>a[0]==="event"&&a[1]==="bandcamp_outbound_click");
   assert.deepEqual(events,[["event","bandcamp_outbound_click",{placement:"shop_grid",product_id:"919",utm_campaign:"archive_q4"}]]);
   setRejected(c);
-  assert.equal(c.doc.listeners("click").length,0);
+  assert.equal(c.doc.listeners("click").length,1);
 });
 test("dispose removes consent listener and outbound listener",()=>{
   const c=fakeEnvironment();
   const x=configured(c,{captureBandcampOutbound:true,nativeOutboundSettingsVerified:true});
-  setAccepted(c);c.scripts[0].onload();assert.equal(c.doc.listeners("click").length,1);
+  setAccepted(c);c.scripts[0].onload();assert.equal(c.doc.listeners("click").length,2);
   x.dispose();assert.equal(c.doc.listeners("click").length,0);assert.equal(c.doc.listeners("setCookieNotice").length,0);
 });
 test("analytics-cookie cleanup never erases unrelated first-party session",()=>{
@@ -289,4 +290,77 @@ test("withdrawal cleans nonessential legacy Google _gcl cookies without deleting
   clearFirstPartyAnalyticsCookies(c.doc,"432hz-orchestra.com");
   for(const name of ["_ga","_ga_X1","_gcl_au","_gcl_aw","_gac_UA12"])assert.equal(readCookie(c.doc,name),null);
   assert.equal(readCookie(c.doc,"session_auth"),"preserve");
+});
+
+
+test("synthetic Cookie Notice acceptance event alone never creates a consent marker or GA tag",()=>{
+  const c=fakeEnvironment(), issues=[];
+  configured(c,{onDiagnostic:x=>issues.push(x)});
+  c.doc.cookie="cookie_notice_accepted=true";
+  c.doc.emit("setCookieNotice","true");
+  assert.equal(readCookie(c.doc,CONSENT_MARKER),null);
+  assert.equal(c.scripts.length,0);
+  assert.deepEqual(issues,["ignored-untrusted-or-unmatched-consent-grant"]);
+});
+
+test("script-dispatched untrusted click on Accept followed by event is rejected",()=>{
+  const c=fakeEnvironment();configured(c);
+  c.doc.emit("click",{isTrusted:false,target:{closest:s=>s==="#cn-accept-cookie"?{}:null}});
+  c.doc.cookie="cookie_notice_accepted=true";
+  c.doc.emit("setCookieNotice","true");
+  assert.equal(c.scripts.length,0);
+});
+
+test("trusted click elsewhere followed by synthetic acceptance is rejected",()=>{
+  const c=fakeEnvironment();configured(c);
+  c.doc.emit("click",{isTrusted:true,target:{closest:()=>null}});
+  c.doc.cookie="cookie_notice_accepted=true";
+  c.doc.emit("setCookieNotice","true");
+  assert.equal(c.scripts.length,0);
+});
+
+test("trusted Accept click without notice consent cookie does not authorize",()=>{
+  const c=fakeEnvironment();configured(c);
+  trustedAcceptClick(c);
+  c.doc.emit("setCookieNotice","true");
+  assert.equal(c.scripts.length,0);
+  assert.equal(readCookie(c.doc,CONSENT_MARKER),null);
+});
+
+test("trusted user click intent is single-use, subsequent unsolicited event is denied",()=>{
+  const c=fakeEnvironment(),messages=[];
+  configured(c,{onDiagnostic:x=>messages.push(x)});
+  setAccepted(c);
+  assert.equal(c.scripts.length,1);
+  c.doc.emit("setCookieNotice","true");
+  assert.equal(c.scripts.length,1);
+  assert.ok(messages.includes("ignored-untrusted-or-unmatched-consent-grant"));
+});
+
+test("trusted click and false Cookie Notice event never creates new consent",()=>{
+  const c=fakeEnvironment();configured(c);
+  trustedAcceptClick(c);
+  c.doc.cookie="cookie_notice_accepted=false";
+  c.doc.emit("setCookieNotice","false");
+  c.doc.cookie="cookie_notice_accepted=true";
+  c.doc.emit("setCookieNotice","true");
+  assert.equal(c.scripts.length,0);
+});
+
+test("normal keyboard-activated trusted click follows the same Accept gate",()=>{
+  const c=fakeEnvironment();configured(c);
+  // Browser activation of a focused anchor with Enter dispatches a trusted click.
+  trustedAcceptClick(c);
+  c.doc.cookie="cookie_notice_accepted=true";
+  c.doc.emit("setCookieNotice","true");
+  assert.equal(c.scripts.length,1);
+});
+
+test("disposing the pre-consent module removes the trusted-choice click listener",()=>{
+  const c=fakeEnvironment();const x=configured(c);
+  assert.equal(c.doc.listeners("click").length,1);
+  x.dispose();
+  assert.equal(c.doc.listeners("click").length,0);
+  setAccepted(c);
+  assert.equal(c.scripts.length,0);
 });
