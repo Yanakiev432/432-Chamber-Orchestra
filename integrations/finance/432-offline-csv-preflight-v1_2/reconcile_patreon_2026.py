@@ -17,7 +17,7 @@ from pathlib import Path
 import re
 import sys
 
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 CENT = Decimal("0.01")
 SCHEMAS = {
     "payouts": {
@@ -57,7 +57,11 @@ def money(raw: str, row_num: int, column: str, *, blank_zero: bool = True) -> De
     # would turn a European 1,23 into 123.00, inflating revenue 100-fold.
     # Bandcamp/Patreon CSV exports use a period for decimals. Permit only
     # conventional, correctly grouped thousands separators (e.g. 1,234.56).
-    s = s.replace(" ", "")
+    # Removing arbitrary internal whitespace turns malformed "1 23" into
+    # 123.00 and may silently inflate financial totals. No guessing about
+    # locale conventions: official numeric CSV fields must be unambiguous.
+    if any(ch.isspace() for ch in s):
+        raise ValueError(f"row {row_num}: internal whitespace in amount in {column}")
     if "," in s:
         if not re.fullmatch(r"[+-]?\d{1,3}(?:,\d{3})+(?:\.\d{1,2})?", s):
             raise ValueError(f"row {row_num}: ambiguous amount separators in {column}")
@@ -241,14 +245,32 @@ def reconcile(payouts: list[dict], earnings: list[dict], transactions: list[dict
                           "finalization_difference":format(diff,".2f") if diff is not None else None})
     if sorted(p_months)!=sorted(e_months):
         warnings.append("Payout and earnings report month/currency coverage differs; do not compare cross-period totals")
+    # A transaction month outside the exported earnings or payout rows must
+    # not disappear merely because report loops enumerate report months only.
+    missing_earnings_months = sorted(set(tx_success) - set(e_months))
+    missing_payout_months = sorted(set(tx_finalized) - set(p_months))
+    if missing_earnings_months:
+        warnings.append("Successful member transaction months absent from earnings export: " +
+                        ", ".join(f"{m}/{c}" for m,c in missing_earnings_months))
+    if missing_payout_months:
+        warnings.append("Finalized member transaction months absent from payout export: " +
+                        ", ".join(f"{m}/{c}" for m,c in missing_payout_months))
     return {
-        "schema":"432-patreon-csv-structure-preflight/1.2",
+        "schema":"432-patreon-csv-structure-preflight/1.3",
         "version":VERSION,
         "status":"CSV_STRUCTURE_ONLY_SOURCE_AUTHENTICITY_AND_BANK_UNVERIFIED",
         "timezone":"America/Los_Angeles (Patreon reporting calendar; no timezone conversion)",
         "privacy":"Aggregated by month/currency only; member name, email and ID never emitted",
         "earnings_by_month":e_compare,
         "payouts_by_month":p_compare,
+        "unmatched_transaction_coverage": {
+            "successful_month_currency_not_in_earnings": [
+                {"month_pt":m,"currency":c,"net":format(tx_success[(m,c)],".2f"),
+                 "rows":tx_count[(m,c)]} for m,c in missing_earnings_months],
+            "finalized_month_currency_not_in_payouts": [
+                {"month_pt":m,"currency":c,"finalized":format(tx_finalized[(m,c)],".2f")}
+                for m,c in missing_payout_months],
+        },
         "warnings":warnings,
         "limits":[
             "Gross earnings, finalized earnings, initiated payouts and bank receipts are distinct",
@@ -257,6 +279,7 @@ def reconcile(payouts: list[dict], earnings: list[dict], transactions: list[dict
             "Monthly export date ranges must be aligned, complete and may include different transaction timing",
             "Bandcamp data and PayPal notices are not represented in these reports",
             "Exact duplicate transaction rows are rejected; partial overlap and unverified provenance still need independent review",
+            "Transaction months not represented in earnings/payout reports are explicitly reported, not silently dropped",
             "Not a license to spend, publish, withdraw, or change account settings"
         ]
     }
