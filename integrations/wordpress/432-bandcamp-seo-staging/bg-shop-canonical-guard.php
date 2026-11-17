@@ -55,6 +55,10 @@ function c432_bg_shop_runtime_target()
     if (is_admin() || !function_exists('is_shop') || !function_exists('pll_current_language')) {
         return null;
     }
+    // Refuse incoming host aliases; WordPress home_url alone does not prove the actual request host.
+    if (!isset($_SERVER['HTTP_HOST']) || $_SERVER['HTTP_HOST'] !== '432hz-orchestra.com') {
+        return null;
+    }
     return c432_bg_shop_canonical_target(
         isset($_SERVER['REQUEST_URI']) ? (string) $_SERVER['REQUEST_URI'] : '',
         (bool) is_shop(),
