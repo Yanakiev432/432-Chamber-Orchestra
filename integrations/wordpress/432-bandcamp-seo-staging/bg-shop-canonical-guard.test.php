@@ -55,6 +55,7 @@ $GLOBALS['test_is_shop'] = true;
 $GLOBALS['test_language'] = 'bg';
 $GLOBALS['test_blog_id'] = 1;
 $_SERVER['REQUEST_URI'] = '/bg/shop/';
+$_SERVER['HTTP_HOST'] = '432hz-orchestra.com';
 
 $en = 'https://432hz-orchestra.com/en/shop/';
 $bg = 'https://432hz-orchestra.com/bg/shop/';
@@ -128,6 +129,30 @@ if ($no_change !== $original) {
 }
 echo "PASS: non-archive page unchanged\n";
 $count++;
+
+
+/** v9: exact HTTP_HOST scope tests; no WordPress state or network. */
+$GLOBALS['test_is_shop'] = true;
+$GLOBALS['test_language'] = 'bg';
+$GLOBALS['test_blog_id'] = 1;
+$_SERVER['REQUEST_URI'] = '/bg/shop/';
+foreach (['evil.invalid', 'www.432hz-orchestra.com', '432hz-orchestra.com:443', ''] as $noncanonical) {
+    $_SERVER['HTTP_HOST'] = $noncanonical;
+    if (c432_bg_shop_runtime_target() !== null) {
+        fwrite(STDERR, "FAIL: unexpected HTTP_HOST accepted\n"); exit(1);
+    }
+    echo "PASS: unexpected HTTP_HOST rejected\n"; $count++;
+}
+unset($_SERVER['HTTP_HOST']);
+if (c432_bg_shop_runtime_target() !== null) {
+    fwrite(STDERR, "FAIL: absent HTTP_HOST accepted\n"); exit(1);
+}
+echo "PASS: absent HTTP_HOST rejected\n"; $count++;
+$_SERVER['HTTP_HOST'] = '432hz-orchestra.com';
+if (c432_bg_shop_runtime_target() !== 'https://432hz-orchestra.com/bg/shop/') {
+    fwrite(STDERR, "FAIL: exact canonical HTTP_HOST rejected\n"); exit(1);
+}
+echo "PASS: exact canonical HTTP_HOST accepted\n"; $count++;
 
 echo "FULL RESULT: $count PASS / 0 FAIL\n";
 
