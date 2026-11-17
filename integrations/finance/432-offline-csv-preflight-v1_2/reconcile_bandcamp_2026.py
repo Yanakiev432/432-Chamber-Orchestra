@@ -146,7 +146,7 @@ def summarize(raw):
         report.append({"month_utc":mon,"currency":cur,
             **{k:format(v,'.2f') if isinstance(v,Decimal) else len(v) if isinstance(v,set) else v for k,v in d.items() if k!='order_ids'},
             "distinct_known_order_ids":len(d['order_ids'])})
-    return {"schema":"432-bandcamp-raw-pii-safe-preflight/1.2",
+    return {"schema":"432-bandcamp-raw-pii-safe-preflight/1.3",
       "status":"RAW_ONLY_NOT_OFFICIAL_PAYOUT_STATEMENT_OR_BANK_VERIFIED",
       "calendar":"UTC transaction date from Bandcamp raw data",
       "privacy":"No item names, transaction identifiers, purchaser details, addresses, or raw CSV rows emitted",
