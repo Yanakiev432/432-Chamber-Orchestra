@@ -167,4 +167,53 @@ class PatreonCSVPreflightTests(unittest.TestCase):
             items,info=read_report(tx,'transactions')
             self.assertEqual(info['rows'],2)
             self.assertNotIn('private@example.com',str(info))
+    def test_20_reject_internal_ascii_whitespace_in_amount(self):
+        with self.assertRaisesRegex(ValueError, 'internal whitespace'):
+            money('1 23',2,'Net earnings')
+
+    def test_21_reject_unicode_internal_whitespace_in_amount(self):
+        with self.assertRaisesRegex(ValueError, 'internal whitespace'):
+            money('1\u00a023.45',2,'Net earnings')
+
+    def test_22_whitespace_edge_allowed_but_not_in_middle(self):
+        self.assertEqual(money(' 123.45 ',2,'Net earnings'),Decimal('123.45'))
+        with self.assertRaisesRegex(ValueError, 'internal whitespace'):
+            money('1 234.56',2,'Net earnings')
+
+    def test_23_success_month_outside_earnings_report_flagged_and_exposed(self):
+        p=[dict(month='2026-10',currency='USD',finalized='0',withdrawn='0',fees='0',received='0')]
+        e=[dict(month='2026-10',currency='USD',gross='10',net='10')]
+        t=[dict(charge_date='2026-11-12',success_date='2026-11-12',finalized_date='',type='membership',currency='USD',net='7')]
+        r=reconcile(p,e,t)
+        self.assertEqual(r['unmatched_transaction_coverage']['successful_month_currency_not_in_earnings'],
+                         [{'month_pt':'2026-11','currency':'USD','net':'7.00','rows':1}])
+        self.assertTrue(any('absent from earnings export' in w for w in r['warnings']))
+
+    def test_24_finalization_month_outside_payout_report_flagged(self):
+        p=[dict(month='2026-10',currency='USD',finalized='0',withdrawn='0',fees='0',received='0')]
+        t=[dict(charge_date='2026-11-12',success_date='2026-11-12',finalized_date='2026-11-14',
+                finalized='7',type='membership',currency='USD',net='7')]
+        r=reconcile(p,[],t)
+        self.assertEqual(r['unmatched_transaction_coverage']['finalized_month_currency_not_in_payouts'],
+                         [{'month_pt':'2026-11','currency':'USD','finalized':'7.00'}])
+        self.assertTrue(any('absent from payout export' in w for w in r['warnings']))
+
+    def test_25_multicurrency_unmatched_coverage_does_not_mix_currency(self):
+        p=[dict(month='2026-11',currency='EUR',finalized='0',withdrawn='0',fees='0',received='0')]
+        e=[dict(month='2026-11',currency='EUR',gross='10',net='10')]
+        t=[dict(charge_date='2026-11-12',success_date='2026-11-12',finalized_date='2026-11-14',
+                finalized='12',type='membership',currency='USD',net='12')]
+        r=reconcile(p,e,t)
+        self.assertEqual(r['unmatched_transaction_coverage']['successful_month_currency_not_in_earnings'][0]['currency'],'USD')
+        self.assertEqual(r['unmatched_transaction_coverage']['finalized_month_currency_not_in_payouts'][0]['currency'],'USD')
+
+    def test_26_existing_covered_months_create_no_unmatched_coverage(self):
+        p=[dict(month='2026-11',currency='USD',finalized='7',withdrawn='7',fees='0',received='7')]
+        e=[dict(month='2026-11',currency='USD',gross='7',net='7')]
+        t=[dict(charge_date='2026-11-12',success_date='2026-11-12',finalized_date='2026-11-14',
+                finalized='7',type='membership',currency='USD',net='7')]
+        r=reconcile(p,e,t)
+        self.assertEqual(r['unmatched_transaction_coverage']['successful_month_currency_not_in_earnings'],[])
+        self.assertEqual(r['unmatched_transaction_coverage']['finalized_month_currency_not_in_payouts'],[])
+
 if __name__ == '__main__': unittest.main(verbosity=2)
