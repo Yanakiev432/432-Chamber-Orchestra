@@ -1,0 +1,37 @@
+{
+  "schema": "432-digital-revenue-finance-staging-checkpoint/1.3",
+  "date_local": "2026-11-17",
+  "canonical_plan": "1.1.18",
+  "github_pr": 11,
+  "github_staging_path": "integrations/finance/432-offline-csv-preflight-v1_2 (historical path retained for PR continuity)",
+  "code_version": "1.3.0",
+  "privacy": "SYNTHETIC_TEST_CODE_ONLY__NO_PRIVATE_CSV_OR_FINANCIAL_ACCOUNTS",
+  "tests": {
+    "python_version": "3.13.5",
+    "pass": 56,
+    "fail": 0,
+    "prior_v1_2_pass": 49,
+    "new_regression_tests": 7,
+    "note": "ISOLATED_LOCAL_UNITTTEST_ONLY"
+  },
+  "fixed_bugs": [
+    "Numeric input with interior ASCII or Unicode whitespace is rejected instead of silently concatenating digits (1 23 no longer 123.00)",
+    "Patreon successful transaction month/currency without matching Earnings monthly row is explicitly surfaced",
+    "Patreon finalized transaction month/currency without matching Payout monthly row is explicitly surfaced",
+    "Cross-currency unmatched transaction cohorts remain separated; no fake reconciliation"
+  ],
+  "gates": {
+    "bandcamp_official_export_loaded": false,
+    "patreon_official_export_loaded": false,
+    "bank_settlement_verified": false,
+    "production_deployment": false,
+    "paid_spend_eur": 0
+  },
+  "files_sha256": {
+    "reconcile_patreon_2026.py": "794bac18c1f72d7232777982e0372025c85df8cfdbde859a71b5e2d72a3c4a20",
+    "reconcile_bandcamp_2026.py": "9792076c60d08e7e383382bca1fc49815023f53f62be2341d9d3efc231596ecf",
+    "test_reconcile_patreon_2026.py": "c9fdd3cf96839b8dc8ac51b5e151e3da18f8583972d342cc0f15389f882b2b2f",
+    "README.md": "98d3c44cab29e14238608ed8ce3fa532aa5061e9ba0926c0a73bfe6f621cb176",
+    "test_reconcile_bandcamp_2026.py": "14b40c21f9b6442cbc6f17d7005407f12cf129f4d5ede744ce47668589a14d6d"
+  }
+}
