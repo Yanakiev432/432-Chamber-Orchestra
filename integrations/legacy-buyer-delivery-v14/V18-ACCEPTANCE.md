@@ -1,0 +1,14 @@
+# V18 — actual Apache/TLS staging acceptance, 2026-11-25
+
+Candidate v18 adds a private filesystem advisory-lock pool to bound expensive confirmation and download work. A separately gated, time-limited synthetic-only HTTPS preview mode requires an ephemeral header credential; production mode is not enabled by this test. No real entitlement data or media involved.
+
+Executed a short-lived test route on the actual Astro preview host using Apache, PHP 8.4 and SQLite. Initial HTTP 403 was caused by directory permissions under restrictive umask; explicitly setting the temporary public directory to 0755 resolved it. Revised run 17/17; final extended run 19/19. TLS certificate validation used the client's default trust context. Tested route rewriting, secure cookie attributes, no bearer token in URL, exactly one same-origin referrer policy on clean confirmation, foreign Origin rejection, 503 Retry-After on exhausted slots before consuming quota and before streaming, two concurrent 64 KiB range requests, 416, complete 16 MiB transfer with exact SHA-256, and preservation of one download quota. Public synthetic route removed in finally. Private synthetic fixtures are temporary. Actual browser cookie handling was not tested.
+
+## Reproduce only with authorized staging access
+Use a newly created 0700 private QA directory outside all served document roots. Copy the three core modules and v18 adapter and test runner there. Run python3 buyer-https-v18.test.py /path/to/authorized/preview /path/to/php8.4. The runner creates an authenticated temporary route and synthetic data, and removes the public route when finished. Remove private QA directory after verifying scope and evidence. Never point it at production or copy actual data. No hardcoded production deployment.
+
+## Critical release blocker
+Harmless canary query parameters appeared in both preview and main-site access logs. PHP redirects cannot prevent upstream request logging. Actual host-level log format/redaction/exclusion (including reverse proxy and error logs) must be verified with harmless canaries before handling historical buyer credentials. The production config attestation is not sufficient evidence. Do not enable production mode or migrate live entitlements until the logging gate closes.
+
+## Remaining
+Actual browser HTTPS behavior, host log protection, scheduled cleanup, sustained and cross-process resource acceptance, secure private configuration/key custody, final exact WooCommerce state reconciliation and approved independent recovery, import, rollback and cutover. Two advisory lock slots are a candidate capacity limit, not a benchmark or universal hosting recommendation. Prior 132 v14–v17 assertions are historical evidence from the previous batch; they were not rerun here. No production changes or real customer downloads.
